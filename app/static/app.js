@@ -432,7 +432,9 @@ async function initialiser() {
   try {
     const meta = await (await fetch("/api/meta")).json();
     if (meta.prix_max) {
-      const plafond = Math.ceil(meta.prix_max / 50000) * 50000;
+      // plafonné pour qu'une valeur extrême (données réelles imparfaites) ne
+      // casse pas le curseur.
+      const plafond = Math.min(Math.ceil(meta.prix_max / 50000) * 50000, 2000000);
       $("#f-prix").max = plafond;
       $("#f-prix").value = plafond;
     }

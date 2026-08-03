@@ -122,13 +122,12 @@ def _liens_page(page, base: str) -> list[str]:
     return urls
 
 
-def _geocoder(commune, cp):
-    if not commune or requests is None:
+def _ban(params: dict):
+    """Interroge la Base Adresse Nationale ; renvoie (lat, lon, ville, cp) ou None."""
+    if requests is None:
         return None
     try:
-        r = requests.get("https://api-adresse.data.gouv.fr/search/",
-                         params={"q": f"{commune} {cp or ''}".strip(),
-                                 "type": "municipality", "limit": 1},
+        r = requests.get("https://api-adresse.data.gouv.fr/search/", params=params,
                          timeout=8, headers={"User-Agent": "RefugeImmo-POC"})
         r.raise_for_status()
         feats = r.json().get("features") or []
@@ -136,8 +135,22 @@ def _geocoder(commune, cp):
         return None
     if not feats:
         return None
+    pr = feats[0]["properties"]
     lon, lat = feats[0]["geometry"]["coordinates"]
-    return lat, lon, feats[0]["properties"].get("postcode")
+    return lat, lon, (pr.get("city") or pr.get("name")), pr.get("postcode")
+
+
+def _geocoder(commune, cp):
+    if not commune:
+        return None
+    return _ban({"q": f"{commune} {cp or ''}".strip(), "type": "municipality", "limit": 1})
+
+
+def _geocoder_texte(texte):
+    """Repli : trouve la commune citée dans le titre (ex. « … BELLÊME »)."""
+    if not texte:
+        return None
+    return _ban({"q": texte[:80], "limit": 1})
 
 
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
@@ -202,12 +215,15 @@ def main() -> None:
                     continue
                 brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                         hashlib.sha1(u.encode()).hexdigest()[:12])
-                if brut.get("lat") is None and brut.get("commune"):
-                    geo = _geocoder(brut.get("commune"), brut.get("code_postal"))
+                if brut.get("lat") is None:
+                    geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
+                           or _geocoder_texte(brut.get("titre")))
                     if geo:
-                        brut["lat"], brut["lon"], cp = geo
-                        brut.setdefault("code_postal", cp)
+                        brut["lat"], brut["lon"], ville, cp = geo
+                        if ville and not brut.get("commune"):
+                            brut["commune"] = ville
                         if cp:
+                            brut["code_postal"] = brut.get("code_postal") or cp
                             brut["departement"] = cp[:2]
                 db.upsert_annonce(conn, preparer_annonce(brut))
                 n += 1

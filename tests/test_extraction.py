@@ -107,3 +107,16 @@ def test_repli_opengraph_et_texte():
 def test_page_non_annonce_ignoree():
     html = "<html><head><title>Contact</title></head><body>Nos agences</body></html>"
     assert extraire_annonce(html, "https://x.fr/contact", source="x") is None
+
+
+def test_valeurs_aberrantes_ecartees():
+    # Prix aberrant (n° de référence) et « surface » qui est en fait le terrain.
+    html = """<html><head>
+    <meta property="og:title" content="&nbsp;Maison de caractère">
+    </head><body><p>Réf 387487600 € — habitable, terrain 6000 m². Prix : 250 000 €.</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/12-maison", source="x")
+    assert a is not None
+    assert a["titre"] == "Maison de caractère"          # &nbsp; nettoyé
+    assert a["prix"] == 250000                            # le vrai prix, pas 387 M
+    assert a.get("surface_m2") in (None, )                # 6000 m² écarté (aberrant)
