@@ -1,0 +1,75 @@
+{
+  "_note": [
+    "Annuaire de départ pour la collecte 'via les agences'. Deux familles :",
+    "1) des RÉSEAUX NATIONAUX à décliner localement (chaque agence locale a",
+    "   son propre site, souvent bâti sur le même logiciel — un seul robot les",
+    "   couvre tous) ; 2) des SPÉCIALISTES du bien de caractère / rural, qui",
+    "   correspondent au public 'refuge'.",
+    "'verifie' est à false partout : les adresses et la couverture sont à",
+    "confirmer au premier lancement (le robot lit robots.txt et sitemap.xml).",
+    "Complétez cet annuaire automatiquement avec scripts/decouvrir_agences.py,",
+    "qui récupère les agences ayant des biens intéressants sur Bien'ici."
+  ],
+  "agences": [
+    {
+      "nom": "Patrice Besse",
+      "site": "https://www.patrice-besse.com",
+      "reseau": "indépendant",
+      "categorie": "biens de caractère",
+      "zone": "France entière (moulins, fermes, demeures)",
+      "specialite": "moulins, corps de ferme, demeures de caractère",
+      "sitemap": null,
+      "verifie": false
+    },
+    {
+      "nom": "Groupe Mercure",
+      "site": "https://www.groupe-mercure.fr",
+      "reseau": "indépendant",
+      "categorie": "propriétés de prestige et de caractère",
+      "zone": "France entière",
+      "specialite": "propriétés, domaines, biens de caractère",
+      "sitemap": null,
+      "verifie": false
+    },
+    {
+      "nom": "Nestenn",
+      "site": "https://www.nestenn.com",
+      "reseau": "national (franchise)",
+      "categorie": "généraliste",
+      "zone": "réseau national — décliner par agence locale",
+      "specialite": "maisons et propriétés en zones rurales et périurbaines",
+      "sitemap": null,
+      "verifie": false
+    },
+    {
+      "nom": "Guy Hoquet",
+      "site": "https://www.guy-hoquet.com",
+      "reseau": "national (franchise)",
+      "categorie": "généraliste",
+      "zone": "réseau national — décliner par agence locale",
+      "specialite": "généraliste, forte présence en villes moyennes",
+      "sitemap": null,
+      "verifie": false
+    },
+    {
+      "nom": "ORPI",
+      "site": "https://www.orpi.com",
+      "reseau": "national (coopérative)",
+      "categorie": "généraliste",
+      "zone": "réseau national — décliner par agence locale",
+      "specialite": "généraliste, maillage rural dense",
+      "sitemap": null,
+      "verifie": false
+    },
+    {
+      "nom": "Century 21 France",
+      "site": "https://www.century21.fr",
+      "reseau": "national (franchise)",
+      "categorie": "généraliste",
+      "zone": "réseau national — décliner par agence locale",
+      "specialite": "généraliste",
+      "sitemap": null,
+      "verifie": false
+    }
+  ]
+}

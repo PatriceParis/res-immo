@@ -21,11 +21,33 @@ partenariats directs avec des agences. Voir `docs/LEGAL.md`.
 
 ## Robots disponibles
 
-| Robot | Site | Commande |
+| Robot | Cible | Commande |
 |-------|------|----------|
+| `agence` | **sites d'agences** (générique, sitemap + schema.org) | `bash scripts/collecter.sh agence` |
 | `bienici` | bienici.com (API JSON) | `bash scripts/collecter.sh bienici` |
 | `pap` | pap.fr | `bash scripts/collecter.sh pap` |
 | `iep` | immo-entre-particuliers.com | `bash scripts/collecter.sh iep` |
+
+### Le robot `agence` (recommandé) — voir `docs/STRATEGIE_COLLECTE.md`
+
+C'est le cœur de la stratégie : au lieu de forcer les portails, on collecte
+directement chez les agences, qui publient leurs annonces en `schema.org`
+(données structurées pour Google) et listent leurs pages dans `sitemap.xml`.
+Un seul robot couvre donc tous les sites, quel que soit leur logiciel.
+
+```bash
+# 1. découvrir les agences d'une zone (complète scraper/refuge_scraper/agences.json)
+python scripts/decouvrir_agences.py --lieux "orne, yonne, nievre" --prix-max 300000
+# 2. collecter chez elles
+bash scripts/collecter.sh agence                          # tout l'annuaire
+bash scripts/collecter.sh agence -a agence="Patrice Besse"
+bash scripts/collecter.sh agence -a site=https://une-agence-locale.fr
+```
+
+L'annuaire `refuge_scraper/agences.json` liste les agences visées (réseaux
+nationaux à décliner localement + spécialistes du bien de caractère/rural).
+L'extraction schema.org est dans `app/extraction.py` (couverte par
+`tests/test_extraction.py`).
 
 ### Le cas Bien'ici
 

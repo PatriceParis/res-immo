@@ -145,6 +145,17 @@ ETATS = [
 
 DPE_PONDERATION = [("B", 1), ("C", 2), ("D", 4), ("E", 4), ("F", 2), ("G", 1)]
 
+# Agences FICTIVES (suffixe « démo ») pour illustrer l'attribution par agence :
+# dans la vraie collecte, ces noms viennent des sites d'agences réels.
+AGENCES_DEMO = {
+    "Normandie": "Terres du Perche · démo",
+    "Centre-Val de Loire": "Sologne & Beauce Immobilier · démo",
+    "Bourgogne-Franche-Comté": "Morvan Propriétés · démo",
+    "Grand Est": "Champagne Rurale Immo · démo",
+    "Hauts-de-France": "Oise Campagne · démo",
+    "Île-de-France": "Brie & Vexin Immobilier · démo",
+}
+
 
 def _choix_dpe(equipements: set, rng: random.Random) -> str:
     dpe = rng.choices([d for d, _ in DPE_PONDERATION],
@@ -215,6 +226,8 @@ def generer_annonce(i: int, rng: random.Random) -> dict:
         "id": f"demo-{i:03d}",
         "source": "démo",
         "url": "",
+        "agence": AGENCES_DEMO.get(region, "Agence locale · démo"),
+        "agence_url": "",
         "titre": titre,
         "description": " ".join(phrases),
         "type_bien": type_bien,
@@ -239,6 +252,7 @@ def generer_annonce(i: int, rng: random.Random) -> dict:
 VITRINES = [
     {
         "id": "demo-901", "source": "démo", "url": "",
+        "agence": "Terres du Perche · démo", "agence_url": "",
         "titre": "Fermette autonome avec cave, puits et verger — Bellême (61)",
         "description": (
             "Fermette percheronne rénovée de 140 m² sur un terrain clos de "
@@ -257,6 +271,7 @@ VITRINES = [
     },
     {
         "id": "demo-902", "source": "démo", "url": "",
+        "agence": "Morvan Propriétés · démo", "agence_url": "",
         "titre": "Ancien moulin au bord de l'eau — Joigny (89)",
         "description": (
             "Ancien moulin de 210 m² sur 9 000 m² traversés par la rivière. "
@@ -273,6 +288,7 @@ VITRINES = [
     },
     {
         "id": "demo-903", "source": "démo", "url": "",
+        "agence": "Sologne & Beauce Immobilier · démo", "agence_url": "",
         "titre": "Pavillon des années 80 — Bonneval (28)",
         "description": (
             "Pavillon de plain-pied de 95 m² sur une parcelle de 450 m² en "

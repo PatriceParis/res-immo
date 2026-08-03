@@ -53,20 +53,29 @@ Le barème complet du score est expliqué dans **[docs/CRITERES.md](docs/CRITERE
 
 ## 📦 D'où viennent les annonces ?
 
+**La stratégie du POC : passer par les agences, pas par les portails.**
+Les grands portails (Leboncoin, SeLoger, Bien'ici) interdisent et bloquent la
+collecte. Mais derrière chaque annonce, une **agence** détient le mandat — et
+son propre site, lui, est *fait pour être trouvé par Google*. On récupère donc
+les biens **à la source, chez les agences**, en lisant les données structurées
+(`schema.org`) et le `sitemap.xml` que ces sites publient pour le
+référencement. Un seul collecteur couvre ainsi des centaines de sites. Tout
+est expliqué dans **[docs/STRATEGIE_COLLECTE.md](docs/STRATEGIE_COLLECTE.md)**.
+
 | Source | État |
 |---|---|
-| **Jeu de démonstration** (75 biens fictifs mais réalistes, communes et prix plausibles) | ✅ chargé automatiquement |
-| **Bien'ici** (API JSON du site — position GPS et DPE inclus) | ⚙️ `bash scripts/collecter.sh bienici` — usage personnel, voir `scraper/README.md` |
-| **Robots de collecte** (sites d'annonces entre particuliers : PAP, immo-entre-particuliers) | ⚙️ fournis, à lancer soi-même : `bash scripts/collecter.sh pap` |
-| **Risques officiels Géorisques** (État) | ⚙️ `python scripts/enrichir_risques.py` (nécessite internet) |
-| SeLoger, Leboncoin… | ❌ volontairement absents du POC |
+| **Jeu de démonstration** (75 biens fictifs mais réalistes, attribués à des agences fictives) | ✅ chargé automatiquement |
+| **① Découverte d'agences** via Bien'ici (« qui a des biens dans ma zone ? ») | ⚙️ `python scripts/decouvrir_agences.py` |
+| **② Collecte chez les agences** (sitemap + schema.org, tout logiciel) | ⚙️ `bash scripts/collecter.sh agence` |
+| **Bien'ici** (API JSON directe — position GPS et DPE inclus) | ⚙️ `bash scripts/collecter.sh bienici` |
+| **Annonces entre particuliers** (PAP, immo-entre-particuliers) | ⚙️ `bash scripts/collecter.sh pap` |
+| **Risques officiels Géorisques** (État) | ⚙️ `python scripts/enrichir_risques.py` |
+| SeLoger, Leboncoin (scraping direct) | ❌ volontairement absents (CGU + anti-robots) |
 
-Pourquoi pas les grands portails ? Leurs conditions d'utilisation
-**interdisent la collecte automatisée** et ils la bloquent techniquement.
-Les détails et les alternatives propres (flux partenaires, agrégateurs sous
-licence) sont dans **[docs/LEGAL.md](docs/LEGAL.md)** — à lire avant toute
-collecte réelle. Les robots fournis respectent d'office le fichier
-`robots.txt` des sites et une cadence lente.
+Les alternatives propres (flux partenaires, agrégateurs sous licence) et le
+cadre légal sont dans **[docs/LEGAL.md](docs/LEGAL.md)** — à lire avant toute
+collecte réelle. Tous les robots respectent d'office le `robots.txt` des sites
+et une cadence lente.
 
 ---
 
@@ -78,8 +87,11 @@ collecte réelle. Les robots fournis respectent d'office le fichier
   rappelle) ;
 - les risques du jeu de démonstration sont plausibles mais simplifiés ; la
   vraie donnée s'obtient via le script Géorisques ;
-- les robots de collecte dépendent de la mise en page des sites : voir
-  `scraper/README.md` si l'un d'eux ne trouve plus rien.
+- le collecteur « agences » est **testé hors-ligne** (l'extraction schema.org
+  a ses tests) mais pas encore lancé sur de vrais sites depuis cet
+  environnement sans internet : au premier lancement chez vous, le journal du
+  robot indique pour chaque agence ce qu'il a trouvé. Voir
+  `docs/STRATEGIE_COLLECTE.md` et `scraper/README.md`.
 
 ---
 

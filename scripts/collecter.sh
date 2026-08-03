@@ -4,8 +4,11 @@ set -e
 cd "$(dirname "$0")/.."
 if [ -z "$1" ]; then
     echo "Usage : bash scripts/collecter.sh <robot> [options]"
-    echo "Robots disponibles : bienici, pap, iep   (voir scraper/README.md)"
-    echo "Exemple : bash scripts/collecter.sh bienici -a \"lieux=orne, yonne\" -a prix_max=300000"
+    echo "Robots disponibles : agence, bienici, pap, iep   (voir scraper/README.md)"
+    echo "Exemples :"
+    echo "  bash scripts/collecter.sh agence                          # tout l'annuaire d'agences"
+    echo "  bash scripts/collecter.sh agence -a site=https://une-agence-locale.fr"
+    echo "  bash scripts/collecter.sh bienici -a \"lieux=orne, yonne\" -a prix_max=300000"
     exit 1
 fi
 if [ -d .venv ]; then source .venv/bin/activate; fi
