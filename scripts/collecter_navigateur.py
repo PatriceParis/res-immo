@@ -40,6 +40,7 @@ sys.path.insert(0, str(RACINE))
 from app import db  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
+from app.qualite import est_bien_valide  # noqa: E402
 
 try:
     from playwright.sync_api import sync_playwright
@@ -235,6 +236,10 @@ def main() -> None:
                 titre_bas = (brut.get("titre") or "").strip().lower()
                 hote = urlparse(base).netloc.replace("www.", "")
                 if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
+                    continue
+                # Filtre qualité : vrai logement de type refuge uniquement
+                # (écarte blog, catalogue, appartement, parking, terrain nu…).
+                if not est_bien_valide(brut):
                     continue
                 brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                         hashlib.sha1(u.encode()).hexdigest()[:12])
