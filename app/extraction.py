@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import json
 import re
+from collections import Counter
 
 # Types schema.org qui désignent un bien immobilier ou une offre de vente.
 TYPES_IMMO = {
@@ -64,6 +65,19 @@ RE_TERRAIN = re.compile(
 RE_TERRAIN_HA = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:ha|hectares?)\b", re.IGNORECASE)
 RE_PIECES = re.compile(r"(\d{1,2})\s*pi[eè]ces?", re.IGNORECASE)
 RE_DPE = re.compile(r"\b([A-G])\b")
+# Code postal de France métropolitaine (01000–95999, Corse comprise).
+RE_CP = re.compile(r"\b((?:0[1-9]|[1-8]\d|9[0-5])\d{3})\b")
+
+
+def _code_postal(titre: str, texte: str) -> str | None:
+    """Repère le code postal du bien : priorité au titre (souvent « Ville
+    (61130) »), sinon le CP le plus fréquent du texte — c'est celui du bien,
+    pas une adresse d'agence en pied de page."""
+    m = RE_CP.search(titre or "")
+    if m:
+        return m.group(1)
+    trouves = RE_CP.findall(texte or "")
+    return Counter(trouves).most_common(1)[0][0] if trouves else None
 
 
 def _num(x):
@@ -327,9 +341,18 @@ def extraire_annonce(html: str, url: str, source: str,
     if not annonce.get("prix") and not annonce.get("surface_m2"):
         return None
 
-    # Texte complet de la page (tronqué) pour la détection des critères de
-    # résilience : les descriptions schema.org sont souvent trop courtes.
-    annonce["texte"] = (texte or _texte_visible(html))[:3000]
+    # Texte complet de la page pour la détection des critères de résilience
+    # (les descriptions schema.org sont souvent trop courtes) et pour repérer
+    # le code postal quand schema.org ne fournit pas l'adresse.
+    texte_complet = texte or _texte_visible(html)
+    annonce["texte"] = texte_complet[:3000]
+
+    if not annonce.get("code_postal"):
+        cp = _code_postal(annonce.get("titre", ""), texte_complet)
+        if cp:
+            annonce["code_postal"] = cp
+    if annonce.get("code_postal") and not annonce.get("departement"):
+        annonce["departement"] = str(annonce["code_postal"])[:2]
 
     annonce["source"] = source
     annonce["url"] = url

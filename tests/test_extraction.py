@@ -105,6 +105,27 @@ def test_repli_opengraph_et_texte():
     assert a["photo"] == "https://agence-yonne.fr/img/toucy.jpg"
 
 
+def test_code_postal_depuis_titre():
+    # Titre « Ville (CP) » sans adresse schema.org : le CP doit être repéré.
+    html = """<html><head>
+    <meta property="og:title" content="Maison 5 pièces 130 m² Breteuil (60120)">
+    </head><body><p>Belle maison. Prix : 245 000 €. Surface 130 m².</p></body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/42-maison", source="x")
+    assert a["code_postal"] == "60120"
+    assert a["departement"] == "60"
+
+
+def test_code_postal_depuis_texte():
+    # CP absent du titre mais présent (et dominant) dans le texte de la page.
+    html = """<html><head>
+    <meta property="og:title" content="Corps de ferme à rénover">
+    </head><body><p>Prix : 189 000 €. Surface 160 m². Secteur Bellême 61130,
+    proche forêt. Réf. 61130-A. Contact agence 61130.</p></body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/7-ferme", source="x")
+    assert a["code_postal"] == "61130"
+    assert a["departement"] == "61"
+
+
 def test_page_non_annonce_ignoree():
     html = "<html><head><title>Contact</title></head><body>Nos agences</body></html>"
     assert extraire_annonce(html, "https://x.fr/contact", source="x") is None
