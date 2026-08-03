@@ -72,6 +72,7 @@ def liste_annonces(
     potager: int = 0,
     hors_inondation: int = 0,
     type_bien: str | None = None,
+    agence: str | None = None,
     q: str | None = Query(None, description="Recherche texte (titre, description, commune)"),
     tri: str = "score",
     limit: int = 200,
@@ -106,6 +107,17 @@ def meta():
     conn = db.connexion()
     try:
         return db.meta(conn)
+    finally:
+        conn.close()
+
+
+@app.get("/api/agences")
+def agences():
+    """Agences présentes en base (nom, site, nombre de biens, score moyen)."""
+    assurer_demo()
+    conn = db.connexion()
+    try:
+        return {"agences": db.agences(conn)}
     finally:
         conn.close()
 

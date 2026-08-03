@@ -55,6 +55,7 @@ function lireFiltres() {
     ["#f-solaire", "solaire"], ["#f-dependances", "dependances"],
     ["#f-potager", "potager"], ["#f-hors-inondation", "hors_inondation"],
   ]) if ($(id).checked) p.set(cle, "1");
+  if ($("#f-agence").value) p.set("agence", $("#f-agence").value);
   p.set("tri", $("#f-tri").value);
   return p;
 }
@@ -72,6 +73,7 @@ function reinitialiser() {
   $("#f-temps").value = $("#f-temps").max;
   $("#f-score").value = 0;
   $("#f-terrain").value = "0";
+  $("#f-agence").value = "";
   $("#f-tri").value = "score";
   document.querySelectorAll(".atouts input").forEach((c) => (c.checked = false));
   majAffichagesFiltres();
@@ -99,6 +101,7 @@ function ficheAnnonce(a) {
         <h3>${echap(a.titre)}</h3>
         <div class="lieu">${echap(a.commune || "")} · ${echap(a.departement || "")} · 🚗 ${fmtTemps(a.temps_voiture_min)} de Paris</div>
         <div class="classe">${echap((a.score_detail && a.score_detail.classe) || "")}</div>
+        ${a.agence ? `<div class="agence-ligne">🏢 ${echap(a.agence)}</div>` : ""}
       </div>
     </div>
     <div class="chiffres">
@@ -224,6 +227,7 @@ function ouvrirFiche(id) {
       <div>
         <h2 id="modale-titre">${echap(a.titre)}</h2>
         <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""} · ${echap(a.departement || "")}</div>
+        ${a.agence ? `<div class="agence-ligne">🏢 ${echap(a.agence)}</div>` : ""}
         <div class="classe-grande">${echap(detail.classe || "")}</div>
       </div>
     </header>
@@ -261,6 +265,7 @@ function ouvrirFiche(id) {
     <section>
       <h4>L'annonce</h4>
       <p class="description">${echap(a.description)}</p>
+      ${a.agence_url ? `<p class="source-ligne">Mandat : <b>${echap(a.agence)}</b> — <a href="${echap(a.agence_url)}" target="_blank" rel="noopener">voir chez l'agence</a></p>` : ""}
       <p class="source-ligne">Source : ${echap(a.source)}${a.url
         ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
         : " (bien fictif, jeu de démonstration)"}</p>
@@ -298,6 +303,14 @@ async function initialiser() {
     if (sources.length && !(sources.length === 1 && sources[0] === "démo")) {
       $("#bandeau-source").textContent = "sources : " + sources.join(", ");
     }
+    const agences = ((await (await fetch("/api/agences")).json()).agences) || [];
+    const sel = $("#f-agence");
+    for (const ag of agences) {
+      const opt = document.createElement("option");
+      opt.value = ag.agence;
+      opt.textContent = `${ag.agence} (${ag.nb})`;
+      sel.appendChild(opt);
+    }
   } catch (e) { /* la page reste utilisable avec les valeurs par défaut */ }
   majAffichagesFiltres();
   await rafraichir();
@@ -309,7 +322,7 @@ const rafraichirDoucement = attenuer(rafraichir);
 for (const id of ["#f-prix", "#f-temps", "#f-score"]) {
   $(id).addEventListener("input", () => { majAffichagesFiltres(); rafraichirDoucement(); });
 }
-for (const id of ["#f-terrain", "#f-tri"]) $(id).addEventListener("change", rafraichir);
+for (const id of ["#f-terrain", "#f-agence", "#f-tri"]) $(id).addEventListener("change", rafraichir);
 document.querySelectorAll(".atouts input").forEach((c) => c.addEventListener("change", rafraichir));
 $("#f-reinit").addEventListener("click", reinitialiser);
 

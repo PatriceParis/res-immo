@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS annonces (
     code_postal       TEXT,
     departement       TEXT,
     region            TEXT,
+    agence            TEXT,
+    agence_url        TEXT DEFAULT '',
     lat               REAL,
     lon               REAL,
     altitude          REAL,
@@ -91,7 +93,16 @@ def connexion() -> sqlite3.Connection:
     conn = sqlite3.connect(chemin)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    _migrer(conn)
     return conn
+
+
+def _migrer(conn: sqlite3.Connection) -> None:
+    """Ajoute les colonnes récentes à une base créée par une version antérieure."""
+    existantes = {r[1] for r in conn.execute("PRAGMA table_info(annonces)").fetchall()}
+    for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''")):
+        if colonne not in existantes:
+            conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
 
 def nb_annonces(conn: sqlite3.Connection) -> int:
@@ -115,6 +126,8 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "code_postal": a.get("code_postal"),
         "departement": a.get("departement"),
         "region": a.get("region"),
+        "agence": a.get("agence"),
+        "agence_url": a.get("agence_url", ""),
         "lat": a.get("lat"),
         "lon": a.get("lon"),
         "altitude": a.get("altitude"),
@@ -190,6 +203,10 @@ def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
         clauses.append("type_bien = ?")
         params.append(filtres["type_bien"])
 
+    if filtres.get("agence"):
+        clauses.append("agence = ?")
+        params.append(filtres["agence"])
+
     if filtres.get("q"):
         clauses.append("(titre LIKE ? OR description LIKE ? OR commune LIKE ?)")
         motif = f"%{filtres['q']}%"
@@ -231,3 +248,20 @@ def meta(conn: sqlite3.Connection) -> dict:
     sources = [r[0] for r in conn.execute(
         "SELECT DISTINCT source FROM annonces ORDER BY source").fetchall()]
     return {**dict(row), "types": types, "sources": sources}
+
+
+def agences(conn: sqlite3.Connection) -> list[dict]:
+    """Liste des agences présentes en base, avec le nombre de biens et le score moyen."""
+    rows = conn.execute(
+        """
+        SELECT agence,
+               MAX(agence_url)     AS agence_url,
+               COUNT(*)            AS nb,
+               ROUND(AVG(score_total)) AS score_moyen
+        FROM annonces
+        WHERE agence IS NOT NULL AND agence <> ''
+        GROUP BY agence
+        ORDER BY nb DESC, agence
+        """
+    ).fetchall()
+    return [dict(r) for r in rows]
