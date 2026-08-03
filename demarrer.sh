@@ -16,7 +16,7 @@ source .venv/bin/activate
 
 echo "• Vérification des dépendances…"
 pip install --quiet --upgrade pip
-pip install --quiet -r requirements.txt
+pip install --quiet -r requirements-local.txt
 
 echo ""
 echo "──────────────────────────────────────────────────────"

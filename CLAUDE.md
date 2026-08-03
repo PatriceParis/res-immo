@@ -8,7 +8,7 @@ et la documentation en français simple, et le démarrage en un clic.
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-local.txt   # requirements.txt = serveur seul (Vercel)
 python scripts/generer_demo.py      # régénère data/annonces_demo.json (seed fixe)
 python scripts/charger_demo.py      # (re)charge la base + recalcule les scores
 python -m pytest tests/ -q          # 14 tests
