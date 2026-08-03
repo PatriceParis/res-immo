@@ -87,8 +87,24 @@ function batiment(type) {
     <rect x='240' y='150' width='16' height='16' fill='${vitre}'/>`;
 }
 
-function visuelBien(a) {
-  if (a.photo) return a.photo;
+function photoReelle(a) {
+  const u = (a.photo || "").trim();
+  if (u.startsWith("//")) return "https:" + u;         // protocol-relative
+  if (u.startsWith("http://")) return "https://" + u.slice(7);
+  if (u.startsWith("https://")) return u;
+  return "";
+}
+
+// Balise <img> de la vraie photo, posée sur l'illustration : referrerpolicy
+// "no-referrer" contourne les blocages anti-hotlink, et onerror bascule sur
+// l'illustration si l'image ne charge pas (jamais d'image cassée).
+function imgPhoto(a) {
+  const u = photoReelle(a);
+  return u ? `<img class="vraie-photo" src="${u}" alt="" loading="lazy"
+    decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : "";
+}
+
+function illustration(a) {
   const h = empreinte(a.id || a.titre || "x");
   const ciel = CIELS[h % CIELS.length], colline = COLLINES[(h >> 3) % COLLINES.length];
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'>
@@ -192,7 +208,8 @@ function ficheAnnonce(a) {
   return `
   <article class="fiche" data-id="${echap(a.id)}" tabindex="0" role="button"
            aria-label="Voir le détail : ${echap(a.titre)}">
-    <div class="photo" style="background-image:url('${visuelBien(a)}')">
+    <div class="photo" style="background-image:url('${illustration(a)}')">
+      ${imgPhoto(a)}
       <span class="photo-compte">📷 1 / ${nbPhotos(a)}</span>
     </div>
     <div class="fiche-haut">
@@ -322,7 +339,8 @@ function ouvrirFiche(id) {
     ? `Centrale nucléaire la plus proche : ${echap(risques.nucleaire_nom || "")} à ${Math.round(risques.nucleaire_km)} km.` : "";
 
   $("#modale-contenu").innerHTML = `
-    <div class="photo-grande" style="background-image:url('${visuelBien(a)}')">
+    <div class="photo-grande" style="background-image:url('${illustration(a)}')">
+      ${imgPhoto(a)}
       <span class="photo-compte">📷 1 / ${nbPhotos(a)} photos</span>
     </div>
     <header class="fiche-entete">
@@ -349,7 +367,7 @@ function ouvrirFiche(id) {
 
     <div class="mise-en-relation">
       <div class="galerie" aria-hidden="true">
-        <div class="vignette" style="background-image:url('${visuelBien(a)}')"></div>
+        <div class="vignette" style="background-image:url('${photoReelle(a) || illustration(a)}')"></div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">＋${Math.max(1, nbPhotos(a) - 4)}</div>
@@ -386,7 +404,7 @@ function ouvrirFiche(id) {
       ${a.agence_url ? `<p class="source-ligne">Mandat : <b>${echap(a.agence)}</b> — <a href="${echap(a.agence_url)}" target="_blank" rel="noopener">voir chez l'agence</a></p>` : ""}
       <p class="source-ligne">Source : ${echap(a.source)}${a.url
         ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
-        : " (bien fictif, jeu de démonstration)"}</p>
+        : ""}</p>
     </section>`;
 
   const btn = $("#btn-mer");
@@ -438,11 +456,11 @@ async function initialiser() {
       $("#f-prix").max = plafond;
       $("#f-prix").value = plafond;
     }
-    const sources = (meta.sources || []).filter(Boolean);
-    if (sources.length && !(sources.length === 1 && sources[0] === "démo")) {
-      $("#bandeau-source").textContent = "sources : " + sources.join(", ");
-    }
     const agences = ((await (await fetch("/api/agences")).json()).agences) || [];
+    if (agences.length) {
+      $("#bandeau-source").textContent =
+        `${agences.length} agence${agences.length > 1 ? "s" : ""} · annonces réelles`;
+    }
     const sel = $("#f-agence");
     for (const ag of agences) {
       const opt = document.createElement("option");

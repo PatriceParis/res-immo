@@ -11,13 +11,22 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from . import db, geo, scoring
+from . import db, geo, regions, scoring
 
 
 def preparer_annonce(brut: dict) -> dict:
     annonce = dict(brut)
     titre = annonce.get("titre", "")
     description = annonce.get("description", "")
+
+    # Région : déduite du département (les annonces d'agences ne la donnent pas).
+    if not annonce.get("region"):
+        dept = annonce.get("departement") or (str(annonce["code_postal"])[:2]
+                                              if annonce.get("code_postal") else None)
+        region = regions.region_du_departement(dept)
+        if region:
+            annonce["region"] = region
+            annonce.setdefault("departement", dept)
 
     lat, lon = annonce.get("lat"), annonce.get("lon")
     if lat is not None and lon is not None:

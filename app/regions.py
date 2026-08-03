@@ -111,3 +111,21 @@ def classement() -> list[dict]:
 def regions_cibles() -> list[str]:
     """Noms des 5 régions les plus résilientes (celles que le POC cible)."""
     return [r["region"] for r in classement() if r["cible"]]
+
+
+# Rattachement département → région administrative (pour situer les biens réels,
+# dont la région n'est pas fournie par les annonces d'agences).
+_DEPTS_PAR_REGION = {
+    "Normandie": ["14", "27", "50", "61", "76"],
+    "Centre-Val de Loire": ["18", "28", "36", "37", "41", "45"],
+    "Bourgogne-Franche-Comté": ["21", "25", "39", "58", "70", "71", "89", "90"],
+    "Grand Est": ["08", "10", "51", "52", "54", "55", "57", "67", "68", "88"],
+    "Hauts-de-France": ["02", "59", "60", "62", "80"],
+    "Île-de-France": ["75", "77", "78", "91", "92", "93", "94", "95"],
+}
+REGION_PAR_DEPT = {d: reg for reg, depts in _DEPTS_PAR_REGION.items() for d in depts}
+
+
+def region_du_departement(dept) -> str | None:
+    """Renvoie la région d'un code département ('61' → 'Normandie'), ou None."""
+    return REGION_PAR_DEPT.get(str(dept).zfill(2)) if dept else None

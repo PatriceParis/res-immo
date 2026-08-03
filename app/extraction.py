@@ -158,6 +158,20 @@ def _adresse(noeud: dict) -> dict:
     return adr if isinstance(adr, dict) else {}
 
 
+def _url_img(u) -> str | None:
+    """Normalise une URL d'image en absolu https (gère le protocol-relative //)."""
+    if not isinstance(u, str):
+        return None
+    u = u.strip()
+    if u.startswith("//"):        # ex. //cdn.agence.fr/photo.jpg
+        return "https:" + u
+    if u.startswith("http://"):   # force https quand c'est possible
+        return "https://" + u[len("http://"):]
+    if u.startswith("https://"):
+        return u
+    return None
+
+
 def _image(noeud: dict) -> str | None:
     """Première photo : schema.org `image` (URL, liste, ou ImageObject)."""
     img = noeud.get("image") or noeud.get("photo")
@@ -165,7 +179,7 @@ def _image(noeud: dict) -> str | None:
         img = img[0] if img else None
     if isinstance(img, dict):
         img = img.get("url") or img.get("contentUrl")
-    return img if isinstance(img, str) and img.startswith("http") else None
+    return _url_img(img)
 
 
 def _geo(noeud: dict):
@@ -256,7 +270,7 @@ def extraire_annonce(html: str, url: str, source: str,
     annonce.setdefault("titre", metas.get("og:title") or "")
     annonce.setdefault("description", metas.get("og:description") or "")
     if not annonce.get("photo") and metas.get("og:image"):
-        annonce["photo"] = metas["og:image"]
+        annonce["photo"] = _url_img(metas["og:image"])
     if "prix" not in annonce:
         prix_meta = metas.get("product:price:amount") or metas.get("og:price:amount")
         if prix_meta:

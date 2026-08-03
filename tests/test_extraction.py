@@ -59,7 +59,7 @@ PAGE_OG = """
 <html><head>
 <meta property="og:title" content="Maison de campagne à Toucy">
 <meta property="og:description" content="Maison avec cave et verger.">
-<meta property="og:image" content="https://agence-yonne.fr/img/toucy.jpg">
+<meta property="og:image" content="//agence-yonne.fr/img/toucy.jpg">
 </head><body>
 <h1>Maison de campagne</h1>
 <p>Prix : 176 000 €. Surface habitable 130 m². Terrain de 2 500 m². 5 pièces.</p>
@@ -101,6 +101,7 @@ def test_repli_opengraph_et_texte():
     assert a["surface_m2"] == 130
     assert a["terrain_m2"] == 2500
     assert a["pieces"] == 5
+    # URL protocol-relative (//…) normalisée en https absolu.
     assert a["photo"] == "https://agence-yonne.fr/img/toucy.jpg"
 
 

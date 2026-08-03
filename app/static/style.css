@@ -259,6 +259,10 @@ body {
 }
 .photo-grande .photo-compte { bottom: 10px; left: 10px; }
 
+/* vraie photo de l'agence, posée sur l'illustration (repli si échec de chargement) */
+.vraie-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; }
+.photo-compte { z-index: 2; }
+
 /* ---------- mise en relation (modèle : photos + contact agence) ---------- */
 .mise-en-relation {
   display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
