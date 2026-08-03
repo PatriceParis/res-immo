@@ -22,7 +22,7 @@ from app import db  # noqa: E402
 CHAMPS = [
     "id", "source", "url", "titre", "description", "type_bien", "prix",
     "surface_m2", "terrain_m2", "pieces", "commune", "code_postal",
-    "departement", "region", "agence", "agence_url", "photo",
+    "departement", "region", "agence", "agence_url", "photo", "texte",
     "lat", "lon", "altitude", "densite_hab_km2", "dpe",
 ]
 

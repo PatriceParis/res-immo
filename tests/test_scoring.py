@@ -64,3 +64,25 @@ def test_zone_inondable_penalise_et_alerte():
 
 def test_somme_des_maximums_fait_100():
     assert sum(scoring.MAX_PILIERS.values()) == 100
+
+
+def test_troglodyte_et_nouveaux_criteres():
+    f = scoring.extraire_criteres(
+        "Maison troglodyte",
+        "Troglodyte en tuffeau, source, poulailler, prairie, vigne, ruches, "
+        "pompe à chaleur, en hameau.")
+    for cle in ("troglodyte", "source", "poulailler", "prairie", "vigne",
+                "ruches", "pompe_chaleur", "pierre", "isolement"):
+        assert f[cle], cle
+    detail = scoring.calculer_score({"features": f, "risques": {}, "terrain_m2": 0})
+    assert "Habitat troglodyte" in detail["badges"]
+    assert detail["piliers"]["abri"]["points"] >= 7           # troglodyte seul
+    assert detail["piliers"]["alimentation"]["points"] >= 6   # mots-clés, sans terrain
+
+
+def test_autonomie_alimentaire_sans_terrain():
+    # Un petit terrain bien équipé marque des points (nouveau comportement).
+    f = scoring.extraire_criteres("Maison", "Potager, poulailler et quelques ruches.")
+    pts = scoring.calculer_score({"features": f, "risques": {}, "terrain_m2": 0}
+                                 )["piliers"]["alimentation"]["points"]
+    assert pts >= 8  # verger/potager 4 + poulailler 2 + ruches 2
