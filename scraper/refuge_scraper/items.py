@@ -15,3 +15,6 @@ class AnnonceItem(scrapy.Item):
     type_bien = scrapy.Field()
     commune = scrapy.Field()
     code_postal = scrapy.Field()
+    dpe = scrapy.Field()             # classe énergie A…G si fournie par le site
+    lat = scrapy.Field()             # position si fournie par le site
+    lon = scrapy.Field()

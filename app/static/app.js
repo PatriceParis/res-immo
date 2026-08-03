@@ -180,24 +180,38 @@ function rendreCarte() {
 
 /* ---------------- fiche détaillée ---------------- */
 
+const ICONES_PILIERS = {
+  eau: "💧", abri: "📦", energie: "🔥",
+  alimentation: "🥕", risques: "🛡️", situation: "🚗",
+};
+
 function jaugesPiliers(detail) {
   if (!detail || !detail.piliers) return "";
-  return Object.values(detail.piliers).map((p) => `
+  return Object.entries(detail.piliers).map(([cle, p]) => `
     <div class="pilier">
-      <span class="nom">${echap(p.libelle)}</span>
+      <span class="nom">${ICONES_PILIERS[cle] || ""} ${echap(p.libelle)}</span>
       <div class="jauge" role="meter" aria-valuemin="0" aria-valuemax="${p.max}"
            aria-valuenow="${p.points}" aria-label="${echap(p.libelle)}">
         <div style="width:${Math.min(100, (p.points / p.max) * 100)}%"></div>
       </div>
-      <span class="valeur">${p.points}/${p.max}</span>
+      <span class="valeur"><b>${p.points}</b>/${p.max}</span>
     </div>`).join("");
+}
+
+function tuile(etiquette, valeur, sous) {
+  if (valeur == null || valeur === "") return "";
+  return `<div class="stat"><span class="etiquette">${etiquette}</span>
+    <span class="valeur">${valeur}</span>
+    ${sous ? `<span class="sous">${sous}</span>` : ""}</div>`;
 }
 
 function ouvrirFiche(id) {
   const a = etat.annonces.find((x) => x.id === id);
   if (!a) return;
   const niveau = niveauScore(a.score_total);
-  const badges = (a.badges || []).map((b) => `<span class="badge">✓ ${echap(b)}</span>`).join("");
+  const detail = a.score_detail || {};
+  const listeBadges = a.badges || [];
+  const badges = listeBadges.map((b) => `<span class="badge">✓ ${echap(b)}</span>`).join("");
   const alertes = (a.alertes || []).map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
   const risques = a.risques || {};
@@ -205,34 +219,52 @@ function ouvrirFiche(id) {
     ? `Centrale nucléaire la plus proche : ${echap(risques.nucleaire_nom || "")} à ${Math.round(risques.nucleaire_km)} km.` : "";
 
   $("#modale-contenu").innerHTML = `
-    <div class="fiche-haut">
-      <div class="score-jeton ${niveau}">${Math.round(a.score_total)}<small>/100</small></div>
+    <header class="fiche-entete">
+      <div class="score-jeton grand ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
       <div>
         <h2 id="modale-titre">${echap(a.titre)}</h2>
-        <div class="lieu">${echap(a.commune || "")} (${echap(a.code_postal || "")}) · ${echap(a.departement || "")}
-          · 🚗 ${fmtTemps(a.temps_voiture_min)} de Paris (~${a.distance_km ? Math.round(a.distance_km * 1.25) : "?"} km)</div>
+        <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""} · ${echap(a.departement || "")}</div>
+        <div class="classe-grande">${echap(detail.classe || "")}</div>
       </div>
+    </header>
+
+    <div class="stats">
+      ${tuile("Prix", a.prix ? fmtEuros.format(a.prix) : "n.c.",
+              prixM2 ? fmtNombre.format(prixM2) + " €/m²" : "")}
+      ${tuile("Surface", a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : null)}
+      ${tuile("Terrain", a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : null)}
+      ${tuile("Pièces", a.pieces)}
+      ${tuile("Depuis Paris", fmtTemps(a.temps_voiture_min),
+              a.distance_km ? "~" + Math.round(a.distance_km * 1.25) + " km · estimé" : "estimé")}
+      ${tuile("Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}
+      ${tuile("DPE", a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>` : "n.c.")}
     </div>
-    <div class="rangee-prix">
-      <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix n.c."}</span>
-      ${prixM2 ? `<span>${fmtNombre.format(prixM2)} €/m²</span>` : ""}
-      <span>${a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m² habitables" : ""}</span>
-      <span>${a.terrain_m2 ? "terrain de " + fmtNombre.format(a.terrain_m2) + " m²" : ""}</span>
-      <span>${a.dpe ? "DPE " + echap(a.dpe) : ""}</span>
-    </div>
 
-    <h4>Score de résilience — ${echap((a.score_detail && a.score_detail.classe) || "")}</h4>
-    ${jaugesPiliers(a.score_detail)}
+    <section class="panneau">
+      <h4>Le score en détail · ${Math.round(a.score_total)}/100</h4>
+      ${jaugesPiliers(detail)}
+    </section>
 
-    ${badges ? `<h4>Atouts détectés</h4><div class="jetons">${badges}</div>` : ""}
-    ${alertes ? `<h4>Points de vigilance</h4><div class="jetons">${alertes}</div>` : ""}
-    ${nucleaire ? `<p class="source-ligne">${nucleaire}</p>` : ""}
+    <section>
+      <h4>Atouts détectés${listeBadges.length ? ` (${listeBadges.length})` : ""}</h4>
+      ${badges ? `<div class="jetons">${badges}</div>`
+               : `<p class="aucun">Aucun atout particulier détecté dans l'annonce.</p>`}
+    </section>
 
-    <h4>L'annonce</h4>
-    <p class="description">${echap(a.description)}</p>
-    <p class="source-ligne">Source : ${echap(a.source)}${a.url
-      ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
-      : " (bien fictif, jeu de démonstration)"}</p>`;
+    <section>
+      <h4>Points de vigilance</h4>
+      ${alertes ? `<div class="jetons">${alertes}</div>`
+                : `<p class="aucun">✓ Aucun point de vigilance détecté.</p>`}
+      ${nucleaire ? `<p class="note-detail">${nucleaire}</p>` : ""}
+    </section>
+
+    <section>
+      <h4>L'annonce</h4>
+      <p class="description">${echap(a.description)}</p>
+      <p class="source-ligne">Source : ${echap(a.source)}${a.url
+        ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
+        : " (bien fictif, jeu de démonstration)"}</p>
+    </section>`;
   $("#voile").hidden = false;
   document.body.style.overflow = "hidden";
 }

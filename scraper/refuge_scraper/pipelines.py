@@ -67,16 +67,18 @@ class PipelineRefuge:
             hashlib.sha1((brut.get("url") or brut.get("titre", "")).encode()).hexdigest()[:12],
         )
 
-        cle_geo = f"{brut.get('commune')}|{brut.get('code_postal')}"
-        if cle_geo not in self.cache_geo:
-            self.cache_geo[cle_geo] = geocoder_commune(
-                brut.get("commune"), brut.get("code_postal"))
-        geo_resultat = self.cache_geo[cle_geo]
-        if geo_resultat:
-            brut["lat"], brut["lon"], cp = geo_resultat
-            brut.setdefault("code_postal", cp)
-            if cp:
-                brut["departement"] = cp[:2]
+        # Géocodage seulement si le site n'a pas déjà fourni la position.
+        if brut.get("lat") is None or brut.get("lon") is None:
+            cle_geo = f"{brut.get('commune')}|{brut.get('code_postal')}"
+            if cle_geo not in self.cache_geo:
+                self.cache_geo[cle_geo] = geocoder_commune(
+                    brut.get("commune"), brut.get("code_postal"))
+            geo_resultat = self.cache_geo[cle_geo]
+            if geo_resultat:
+                brut["lat"], brut["lon"], cp = geo_resultat
+                brut.setdefault("code_postal", cp)
+        if brut.get("code_postal") and not brut.get("departement"):
+            brut["departement"] = str(brut["code_postal"])[:2]
 
         db.upsert_annonce(self.conn, preparer_annonce(brut))
         self.nb += 1
