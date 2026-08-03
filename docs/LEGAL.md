@@ -13,10 +13,15 @@
   pas de déguisement en navigateur.
 - **Aucune donnée personnelle des vendeurs n'est collectée** (ni nom, ni
   téléphone, ni e-mail) : uniquement le bien, son prix et son texte.
-- Les grands portails (SeLoger, Leboncoin, Bien'ici, Logic-Immo…) sont
+- Les très grands portails (SeLoger, Leboncoin, Logic-Immo…) sont
   **exclus** : leurs conditions générales interdisent la collecte automatisée
   et ils la bloquent techniquement. Le POC ne cherche pas à contourner ces
   protections — c'est un choix, pas une limite technique.
+- **Bien'ici** a été ajouté à la demande, via son API JSON publique (celle
+  que le navigateur appelle en visitant le site), sans contournement de
+  protection. Ses CGU restreignent néanmoins la réutilisation des annonces :
+  réservez ce robot à une **veille personnelle**, gardez la cadence lente
+  par défaut, et passez par un flux officiel pour tout usage au-delà.
 
 ## Les règles du jeu en France (résumé)
 

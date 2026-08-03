@@ -145,8 +145,8 @@ body {
   z-index: 1000; overflow-y: auto;
 }
 .modale {
-  background: var(--carte-fond); border-radius: 14px; max-width: 700px; width: 100%;
-  padding: 22px 24px; position: relative; margin-bottom: 4vh;
+  background: var(--carte-fond); border-radius: 14px; max-width: 780px; width: 100%;
+  padding: 22px 26px 24px; position: relative; margin-bottom: 4vh;
 }
 .fermer {
   position: absolute; top: 10px; right: 12px; border: none; background: none;
@@ -154,21 +154,57 @@ body {
 }
 .fermer:hover { color: var(--encre); }
 .modale h2 { margin: 0 0 2px; font-size: 20px; padding-right: 30px; }
-.modale .lieu { color: var(--encre-2); margin-bottom: 12px; }
-.modale .rangee-prix { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; margin: 10px 0 4px; }
-.modale .rangee-prix .prix { font-size: 24px; font-weight: 800; }
-.modale .rangee-prix span { color: var(--encre-2); font-size: 14px; }
+.modale .lieu { color: var(--encre-2); }
 .modale h4 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
-.modale .description { font-size: 14px; color: var(--encre); }
-.modale .source-ligne { margin-top: 16px; font-size: 12.5px; color: var(--encre-2); }
+.modale .description { font-size: 14.5px; color: var(--encre); line-height: 1.7; }
+.modale .source-ligne { margin-top: 14px; font-size: 12.5px; color: var(--encre-2); }
 .modale .source-ligne a { color: var(--accent); }
 
+/* entête de la fiche */
+.fiche-entete { display: flex; gap: 14px; align-items: flex-start; }
+.score-jeton.grand { width: 64px; height: 64px; font-size: 22px; border-radius: 14px; }
+.classe-grande { font-weight: 700; color: var(--accent); margin-top: 4px; font-size: 13.5px; }
+
+/* tuiles de chiffres clés */
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 8px; margin: 16px 0 4px;
+}
+.stat {
+  background: var(--fond); border: 1px solid var(--bordure); border-radius: 10px;
+  padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0;
+}
+.stat .etiquette { font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--encre-2); }
+.stat .valeur { font-weight: 700; font-size: 15px; white-space: nowrap; }
+.stat .sous { font-size: 11px; color: var(--encre-2); }
+
+/* étiquette DPE (lettre toujours affichée, jamais la couleur seule) */
+.dpe { display: inline-block; min-width: 26px; text-align: center; padding: 1px 7px; border-radius: 6px; font-weight: 800; }
+.dpe-A { background: #1e7a46; color: #fff; }
+.dpe-B { background: #5fa244; color: #fff; }
+.dpe-C { background: #b8bf2b; color: #24312a; }
+.dpe-D { background: #e8c51f; color: #24312a; }
+.dpe-E { background: #e59a27; color: #24312a; }
+.dpe-F { background: #d96f28; color: #fff; }
+.dpe-G { background: #c0392b; color: #fff; }
+
+/* panneau du score */
+.panneau {
+  background: #fbfaf6; border: 1px solid var(--bordure); border-radius: 12px;
+  padding: 12px 16px 14px; margin-top: 14px;
+}
+.panneau h4 { margin-top: 0; }
+.aucun { color: var(--encre-2); font-size: 13px; margin: 4px 0; }
+.note-detail { font-size: 12.5px; color: var(--encre-2); margin: 8px 0 0; }
+
 /* jauges des piliers du score */
-.pilier { display: grid; grid-template-columns: 170px 1fr 52px; gap: 10px; align-items: center; margin-top: 7px; font-size: 13px; }
+.pilier { display: grid; grid-template-columns: 200px 1fr 56px; gap: 10px; align-items: center; margin-top: 8px; font-size: 13px; }
 .pilier .nom { color: var(--encre); }
 .pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
-.jauge { height: 10px; background: #ece8dd; border-radius: 5px; overflow: hidden; }
-.jauge > div { height: 100%; background: var(--n3); border-radius: 5px; min-width: 2px; }
+.pilier .valeur b { color: var(--encre); }
+.jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden; }
+.jauge > div { height: 100%; background: var(--n3); border-radius: 6px; min-width: 2px; }
+@media (max-width: 600px) { .pilier { grid-template-columns: 132px 1fr 48px; } }
 
 /* légende Leaflet */
 .legende-carte {

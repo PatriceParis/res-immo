@@ -56,9 +56,10 @@ Le barème complet du score est expliqué dans **[docs/CRITERES.md](docs/CRITERE
 | Source | État |
 |---|---|
 | **Jeu de démonstration** (75 biens fictifs mais réalistes, communes et prix plausibles) | ✅ chargé automatiquement |
+| **Bien'ici** (API JSON du site — position GPS et DPE inclus) | ⚙️ `bash scripts/collecter.sh bienici` — usage personnel, voir `scraper/README.md` |
 | **Robots de collecte** (sites d'annonces entre particuliers : PAP, immo-entre-particuliers) | ⚙️ fournis, à lancer soi-même : `bash scripts/collecter.sh pap` |
 | **Risques officiels Géorisques** (État) | ⚙️ `python scripts/enrichir_risques.py` (nécessite internet) |
-| SeLoger, Leboncoin, Bien'ici… | ❌ volontairement absents du POC |
+| SeLoger, Leboncoin… | ❌ volontairement absents du POC |
 
 Pourquoi pas les grands portails ? Leurs conditions d'utilisation
 **interdisent la collecte automatisée** et ils la bloquent techniquement.
