@@ -7,6 +7,7 @@ Au premier démarrage, si la base est vide, le jeu de démonstration
 
 from __future__ import annotations
 
+import json
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -18,17 +19,20 @@ from .chargement import charger_annonces_json, charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
 DEMO = RACINE / "data" / "annonces_demo.json"
+# Annonces RÉELLES collectées (par scripts/collecter*.py ou la GitHub Action) ;
+# absent tant qu'aucune collecte n'a eu lieu — l'app fonctionne alors en démo.
+REEL = RACINE / "data" / "annonces_reel.json"
 
 _amorce_faite = False
 
 
 def assurer_demo() -> None:
-    """Si la base est vide, charge le jeu de démonstration.
+    """Si la base est vide, charge les annonces réelles (si présentes) + la démo.
 
-    Depuis le fichier data/annonces_demo.json en local ; généré en mémoire sur
-    un hébergement serverless (Vercel), où le disque est en lecture seule et
-    où l'événement de démarrage n'est pas toujours exécuté — d'où l'appel de
-    cette fonction au début de chaque route de l'API.
+    Le jeu de démonstration vient de data/annonces_demo.json en local, ou est
+    généré en mémoire sur un hébergement serverless. On appelle cette fonction
+    au début de chaque route car, en serverless, l'événement de démarrage n'est
+    pas toujours exécuté.
     """
     global _amorce_faite
     if _amorce_faite:
@@ -36,12 +40,21 @@ def assurer_demo() -> None:
     conn = db.connexion()
     try:
         if db.nb_annonces(conn) == 0:
+            total = 0
+            if REEL.exists():
+                try:
+                    biens = json.loads(REEL.read_text(encoding="utf-8"))
+                except (OSError, ValueError):
+                    biens = []
+                if biens:
+                    total += charger_liste(conn, biens)
+                    print(f"✔ {len(biens)} annonce(s) réelle(s) chargée(s).")
             if DEMO.exists():
-                n = charger_annonces_json(conn, DEMO)
+                total += charger_annonces_json(conn, DEMO)
             else:
                 from .demo import generer_annonces
-                n = charger_liste(conn, generer_annonces())
-            print(f"✔ Base vide : {n} annonces de démonstration chargées.")
+                total += charger_liste(conn, generer_annonces())
+            print(f"✔ Base initialisée : {total} annonces.")
     finally:
         conn.close()
     _amorce_faite = True

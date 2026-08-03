@@ -93,6 +93,16 @@ cadre légal sont dans **[docs/LEGAL.md](docs/LEGAL.md)** — à lire avant tout
 collecte réelle. Tous les robots respectent d'office le `robots.txt` des sites
 et une cadence lente.
 
+### 🔄 Mise à jour automatique (GitHub Action)
+
+Une action planifiée (`.github/workflows/collecte.yml`) collecte de vraies
+annonces chez les agences — via un **vrai navigateur, côté GitHub** — puis les
+committe : le site en ligne se met alors à jour **tout seul**. Pour la lancer à
+la main : onglet **Actions** du dépôt → **Collecte d'annonces réelles** →
+**Run workflow** (vous pouvez y saisir les sites d'agences à visiter). Elle
+tourne aussi chaque lundi matin. Les annonces réelles s'ajoutent à la démo et
+restent identifiées par leur agence.
+
 ---
 
 ## ⚠️ Limites connues du POC
