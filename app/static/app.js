@@ -170,6 +170,7 @@ function reinitialiser() {
   $("#f-agence").value = "";
   $("#f-tri").value = "score";
   etat.region = null;
+  etat.cadre = false;
   document.querySelectorAll(".atouts input").forEach((c) => (c.checked = false));
   majTerroirs();
   majAffichagesFiltres();
@@ -467,6 +468,7 @@ $("#terroirs").addEventListener("click", (ev) => {
   const b = ev.target.closest(".terroir");
   if (!b) return;
   etat.region = etat.region === b.dataset.region ? null : b.dataset.region;
+  etat.cadre = false;  // recentrer la carte sur le terroir choisi
   majTerroirs();
   rafraichir();
 });
@@ -488,5 +490,19 @@ document.addEventListener("click", (ev) => {
 $("#modale-fermer").addEventListener("click", fermerFiche);
 $("#voile").addEventListener("click", (ev) => { if (ev.target === $("#voile")) fermerFiche(); });
 document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") fermerFiche(); });
+
+/* filtres repliables sur mobile (l'utilisateur voit d'abord les biens) */
+const filtresToggle = $("#filtres-toggle");
+if (filtresToggle) {
+  const petit = () => window.matchMedia("(max-width: 900px)").matches;
+  if (petit()) $(".filtres").classList.add("replie");
+  const syncToggle = () =>
+    filtresToggle.setAttribute("aria-expanded", String(!$(".filtres").classList.contains("replie")));
+  syncToggle();
+  filtresToggle.addEventListener("click", () => {
+    $(".filtres").classList.toggle("replie");
+    syncToggle();
+  });
+}
 
 initialiser();

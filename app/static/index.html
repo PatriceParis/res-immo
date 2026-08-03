@@ -23,7 +23,12 @@
 <main class="agencement">
 
   <aside class="filtres" aria-label="Filtres de recherche">
-    <h2>Affiner la recherche</h2>
+    <div class="filtres-tete">
+      <h2>Affiner la recherche</h2>
+      <button class="filtres-toggle" id="filtres-toggle" type="button"
+              aria-controls="filtres-corps" aria-expanded="true">Filtres &amp; tri ▾</button>
+    </div>
+    <div class="filtres-corps" id="filtres-corps">
 
     <label class="champ">
       <span>Budget maximum <output id="aff-prix">tous prix</output></span>
@@ -86,6 +91,7 @@
       <div><span class="pastille n3"></span> 55–69 · bon potentiel</div>
       <div><span class="pastille n2"></span> 40–54 · potentiel moyen</div>
       <div><span class="pastille n1"></span> 0–39 · potentiel limité</div>
+    </div>
     </div>
   </aside>
 
