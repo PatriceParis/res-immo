@@ -1,6 +1,4 @@
+# Dépendances du serveur web (les seules installées par l'hébergement Vercel).
+# Pour l'utilisation locale complète (robots de collecte, tests…),
+# c'est requirements-local.txt qui est utilisé par demarrer.sh / demarrer.bat.
 fastapi>=0.110,<1.0
-uvicorn>=0.29,<1.0
-requests>=2.31,<3.0
-scrapy>=2.11,<3.0
-pytest>=8.0,<9.0
-httpx>=0.27,<1.0
