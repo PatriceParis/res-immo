@@ -100,8 +100,12 @@ function photoReelle(a) {
 // l'illustration si l'image ne charge pas (jamais d'image cassée).
 function imgPhoto(a) {
   const u = photoReelle(a);
-  return u ? `<img class="vraie-photo" src="${u}" alt="" loading="lazy"
-    decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">` : "";
+  if (!u) return "";
+  // On passe par notre relais /api/photo (même domaine) : sinon les CDN des
+  // agences bloquent l'image et rien ne s'affiche. onerror → repli illustration.
+  const src = "/api/photo?u=" + encodeURIComponent(u);
+  return `<img class="vraie-photo" src="${src}" alt="" loading="lazy"
+    decoding="async" onerror="this.remove()">`;
 }
 
 function illustration(a) {
