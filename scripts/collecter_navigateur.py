@@ -147,10 +147,11 @@ def _geocoder(commune, cp):
 
 
 def _geocoder_texte(texte):
-    """Repli : trouve la commune citée dans le titre (ex. « … BELLÊME »)."""
+    """Repli : cherche une COMMUNE citée dans le titre (type=municipality pour
+    ne jamais tomber sur une adresse au hasard, ex. un titre vague → Orléans)."""
     if not texte:
         return None
-    return _ban({"q": texte[:80], "limit": 1})
+    return _ban({"q": texte[:80], "type": "municipality", "limit": 1})
 
 
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
@@ -212,6 +213,12 @@ def main() -> None:
                 brut = extraire_annonce(html, u, source=_slug(cible["nom"]),
                                         agence=cible["nom"], agence_url=base)
                 if not brut:
+                    continue
+                # Rejette les pages où l'extraction n'a pas trouvé un vrai titre
+                # d'annonce (titre = nom de l'agence / du site) : peu exploitables.
+                titre_bas = (brut.get("titre") or "").strip().lower()
+                hote = urlparse(base).netloc.replace("www.", "")
+                if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
                     continue
                 brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                         hashlib.sha1(u.encode()).hexdigest()[:12])
