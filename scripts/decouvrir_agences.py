@@ -36,7 +36,13 @@ except ImportError:  # pragma: no cover
 ANNUAIRE = RACINE / "scraper" / "refuge_scraper" / "agences.json"
 URL_SUGGEST = "https://res.bienici.com/suggest.json?q={q}"
 URL_ANNONCES = "https://www.bienici.com/realEstateAds.json?filters={filtres}"
-ENTETES = {"User-Agent": "RefugeImmo-POC/0.1 (veille personnelle)"}
+# On se présente comme un navigateur (comme le collecteur Scrapy).
+ENTETES = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/140.0.0.0 Safari/537.36"),
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+}
 
 
 def _zones(lieu: str) -> list:

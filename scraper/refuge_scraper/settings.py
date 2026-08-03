@@ -1,13 +1,19 @@
-"""Réglages Scrapy — volontairement « polis » :
+"""Réglages Scrapy — usage personnel, « poli mais fonctionnel » :
 
-- robots.txt respecté (un site qui refuse les robots n'est pas collecté) ;
-- une seule requête à la fois, cadence lente et adaptative ;
-- identification honnête du robot (pas de faux navigateur) ;
+- le collecteur se présente comme un NAVIGATEUR courant (User-Agent Chrome +
+  en-têtes de navigateur) : beaucoup de sites d'agences renvoient une erreur
+  aux clients qui s'annoncent « robot », alors qu'ils servent normalement la
+  page à un navigateur ;
+- une seule requête à la fois, cadence lente et adaptative (on ne surcharge
+  jamais le site) ;
+- robots.txt respecté par défaut (désactivable pour un usage strictement
+  personnel) ;
 - cache HTTP local pour ne pas re-télécharger pendant les mises au point.
 
-Voir docs/LEGAL.md avant toute collecte réelle.
+À réserver à une veille personnelle — voir docs/LEGAL.md.
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -21,9 +27,25 @@ BOT_NAME = "refuge_immo"
 SPIDER_MODULES = ["refuge_scraper.spiders"]
 NEWSPIDER_MODULE = "refuge_scraper.spiders"
 
-USER_AGENT = "RefugeImmo-POC/0.1 (projet personnel de veille immobilière)"
+# On se présente comme un navigateur récent (Chrome). Surchargeable :
+#   export REFUGE_USER_AGENT="…"
+USER_AGENT = os.environ.get(
+    "REFUGE_USER_AGENT",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+)
 
-ROBOTSTXT_OBEY = True
+# En-têtes envoyés par un vrai navigateur (langue française, types acceptés).
+DEFAULT_REQUEST_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
+              "image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
+    "Upgrade-Insecure-Requests": "1",
+}
+
+# robots.txt respecté par défaut ; pour un usage strictement personnel on peut
+# le désactiver avec :  export REFUGE_ROBOTSTXT=0
+ROBOTSTXT_OBEY = os.environ.get("REFUGE_ROBOTSTXT", "1") != "0"
 DOWNLOAD_DELAY = 2.5
 RANDOMIZE_DOWNLOAD_DELAY = True
 CONCURRENT_REQUESTS = 2

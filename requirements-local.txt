@@ -5,3 +5,7 @@ requests>=2.31,<3.0
 scrapy>=2.11,<3.0
 pytest>=8.0,<9.0
 httpx>=0.27,<1.0
+
+# Optionnel — collecte via un vrai navigateur (scripts/collecter_navigateur.py),
+# pour les sites d'agences protégés par un anti-robots. À installer soi-même :
+#   pip install playwright && playwright install chromium
