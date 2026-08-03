@@ -267,13 +267,17 @@ def extraire_annonce(html: str, url: str, source: str,
     if "prix" not in annonce or "surface_m2" not in annonce:
         texte = _texte_visible(html)
     if "prix" not in annonce and texte:
-        m = RE_PRIX.search(texte)
-        if m:
-            annonce["prix"] = _num(m.group(1))
+        for m in RE_PRIX.finditer(texte):          # 1er montant plausible
+            val = _num(m.group(1))
+            if val and 3_000 <= val <= 5_000_000:
+                annonce["prix"] = val
+                break
     if "surface_m2" not in annonce and texte:
-        m = RE_SURFACE.search(f"{annonce.get('titre', '')} {texte}")
-        if m:
-            annonce["surface_m2"] = _num(m.group(1))
+        for m in RE_SURFACE.finditer(f"{annonce.get('titre', '')} {texte}"):
+            val = _num(m.group(1))
+            if val and 8 <= val <= 800:            # surface habitable plausible
+                annonce["surface_m2"] = val
+                break
     if "terrain_m2" not in annonce and texte:
         m = RE_TERRAIN.search(texte)
         if m:
@@ -286,6 +290,25 @@ def extraire_annonce(html: str, url: str, source: str,
         m = RE_PIECES.search(f"{annonce.get('titre', '')} {texte}")
         if m:
             annonce["pieces"] = _num(m.group(1))
+
+    # Nettoyage du titre (entités HTML, espaces multiples).
+    if annonce.get("titre"):
+        titre_propre = (annonce["titre"].replace("&nbsp;", " ")
+                        .replace("&amp;", "&").replace("&#039;", "'"))
+        annonce["titre"] = re.sub(r"\s+", " ", titre_propre).strip()
+
+    # Bornes de bon sens : écarte les valeurs aberrantes issues d'un mauvais
+    # repérage dans le texte (n° de référence pris pour un prix, terrain pris
+    # pour la surface habitable…).
+    prix = annonce.get("prix")
+    if prix is not None and not (3_000 <= prix <= 5_000_000):
+        annonce["prix"] = None
+    surface = annonce.get("surface_m2")
+    if surface is not None and not (8 <= surface <= 800):
+        annonce["surface_m2"] = None
+    terrain = annonce.get("terrain_m2")
+    if terrain is not None and not (10 <= terrain <= 2_000_000):
+        annonce["terrain_m2"] = None
 
     if not annonce.get("prix") and not annonce.get("surface_m2"):
         return None
