@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     agence            TEXT,
     agence_url        TEXT DEFAULT '',
     photo             TEXT DEFAULT '',
+    texte             TEXT DEFAULT '',
     lat               REAL,
     lon               REAL,
     altitude          REAL,
@@ -102,7 +103,7 @@ def _migrer(conn: sqlite3.Connection) -> None:
     """Ajoute les colonnes récentes à une base créée par une version antérieure."""
     existantes = {r[1] for r in conn.execute("PRAGMA table_info(annonces)").fetchall()}
     for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''"),
-                                ("photo", "TEXT DEFAULT ''")):
+                                ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -131,6 +132,7 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "agence": a.get("agence"),
         "agence_url": a.get("agence_url", ""),
         "photo": a.get("photo", ""),
+        "texte": a.get("texte", ""),
         "lat": a.get("lat"),
         "lon": a.get("lon"),
         "altitude": a.get("altitude"),
@@ -163,6 +165,7 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
 
 def _row_vers_dict(row: sqlite3.Row) -> dict:
     d = dict(row)
+    d.pop("texte", None)  # texte de détection interne, non exposé par l'API
     for colonne, cle in CHAMPS_JSON.items():
         try:
             d[cle] = json.loads(d.pop(colonne) or "null")

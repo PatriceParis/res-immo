@@ -57,6 +57,18 @@ MOTIFS = {
         r"granges?|dependances?|appentis|ecuries?|etables?|hangars?"
     ),
     "atelier": r"ateliers?|garages?",
+    # --- critères de résilience ajoutés ---
+    "troglodyte": r"troglodyt",                       # habitat troglodyte : inertie thermique + abri
+    "source": r"\bsources?\b|captage|resurgence",
+    "prairie": r"prairies?|paturages?|patures?|pacages?|herbages?|\bfoin\b",
+    "poulailler": r"poulaillers?|clapiers?",
+    "vigne": r"\bvignes?\b|vignoble",
+    "ruches": r"ruches?|apicult",
+    "pierre": r"\bpierres?\b|tuffeau|colombages?|torchis",   # inertie thermique
+    "pompe_chaleur": r"pompe a chaleur|geothermie|aerothermie",
+    "assainissement": r"assainissement autonome|phytoepuration|toilettes seches",
+    "isolement": r"hameau|sans vis-a-vis|pleine campagne|a l'ecart|pleine nature",
+    "autonomie": r"\bautonom",
 }
 
 _MOTIFS_COMPILES = {cle: re.compile(motif) for cle, motif in MOTIFS.items()}
@@ -76,6 +88,8 @@ def _pilier_eau(f: dict) -> float:
     points = 0
     if f.get("puits"):
         points += 12
+    if f.get("source"):
+        points += 6      # source / captage : eau gravitaire autonome
     if f.get("recuperation_pluie"):
         points += 4
     if f.get("eau_proximite"):
@@ -85,6 +99,8 @@ def _pilier_eau(f: dict) -> float:
 
 def _pilier_abri(f: dict) -> float:
     points = 0
+    if f.get("troglodyte"):
+        points += 7      # habitat troglodyte : abri enterré, frais, cellier naturel
     if f.get("cave"):
         points += 8
     if f.get("grange_dependance"):
@@ -100,6 +116,10 @@ def _pilier_energie(f: dict, dpe: str | None) -> float:
         points += 6
     if f.get("solaire"):
         points += 5
+    if f.get("pompe_chaleur"):
+        points += 3
+    if f.get("troglodyte") or f.get("pierre"):
+        points += 3      # inertie thermique : frais l'été, tempéré l'hiver
     if dpe in ("A", "B"):
         points += 4
     elif dpe == "C":
@@ -108,20 +128,32 @@ def _pilier_energie(f: dict, dpe: str | None) -> float:
 
 
 def _pilier_alimentation(f: dict, terrain_m2: float | None) -> float:
+    """Capacité à produire sa nourriture : de l'espace (terrain) ET/OU des
+    aménagements nourriciers (potager, verger, poulailler, vigne, ruches,
+    pâture). Ainsi un bien sans grand terrain mais bien équipé marque des points,
+    et un bien au vaste terrain aussi — voir docs/CRITERES.md."""
     points = 0
     terrain = terrain_m2 or 0
-    if terrain >= 10_000:
-        points += 8
-    elif terrain >= 5_000:
+    if terrain >= 10_000:        # espace cultivable / élevage
         points += 6
+    elif terrain >= 5_000:
+        points += 5
     elif terrain >= 2_500:
         points += 4
     elif terrain >= 1_000:
         points += 2
     if f.get("verger_potager"):
-        points += 4
+        points += 4             # déjà nourricier
+    if f.get("prairie"):
+        points += 3             # pâture : élevage, foin
     if f.get("serre"):
-        points += 3
+        points += 2
+    if f.get("poulailler"):
+        points += 2
+    if f.get("vigne"):
+        points += 2
+    if f.get("ruches"):
+        points += 2
     return min(points, 15)
 
 
@@ -152,7 +184,7 @@ def _pilier_risques(r: dict) -> float:
     return max(points, 0)
 
 
-def _pilier_situation(altitude, densite, temps_min) -> float:
+def _pilier_situation(altitude, densite, temps_min, f=None) -> float:
     points = 0
     if altitude is not None:
         if altitude >= 200:
@@ -167,6 +199,8 @@ def _pilier_situation(altitude, densite, temps_min) -> float:
         points += 4
     elif densite < 300:
         points += 2
+    if f and f.get("isolement"):
+        points += 2  # hameau, à l'écart, pleine campagne
     if temps_min is not None:
         if temps_min <= 90:
             points += 6
@@ -226,6 +260,26 @@ def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
         badges.append("Serre")
     if f.get("grange_dependance"):
         badges.append("Dépendances")
+    if f.get("troglodyte"):
+        badges.append("Habitat troglodyte")
+    if f.get("source"):
+        badges.append("Source / captage")
+    if f.get("prairie"):
+        badges.append("Prairie / pâture")
+    if f.get("poulailler"):
+        badges.append("Poulailler")
+    if f.get("vigne"):
+        badges.append("Vigne")
+    if f.get("ruches"):
+        badges.append("Ruches")
+    if f.get("pompe_chaleur"):
+        badges.append("Pompe à chaleur")
+    if f.get("pierre"):
+        badges.append("Bâti pierre (inertie)")
+    if f.get("autonomie"):
+        badges.append("Orienté autonomie")
+    if f.get("isolement"):
+        badges.append("Hameau isolé")
     terrain = annonce.get("terrain_m2") or 0
     if terrain >= 2_500:
         badges.append(f"Grand terrain ({int(terrain):,} m²)".replace(",", " "))
@@ -277,6 +331,7 @@ def calculer_score(annonce: dict) -> dict:
             annonce.get("altitude"),
             annonce.get("densite_hab_km2"),
             annonce.get("temps_voiture_min"),
+            f,
         ),
     }
     piliers = {

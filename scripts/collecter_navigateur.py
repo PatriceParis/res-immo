@@ -123,7 +123,7 @@ def _liens_page(page, base: str) -> list[str]:
 
 
 def _ban(params: dict):
-    """Interroge la Base Adresse Nationale ; renvoie (lat, lon, ville, cp) ou None."""
+    """Base Adresse Nationale ; renvoie (lat, lon, ville, cp, codeINSEE) ou None."""
     if requests is None:
         return None
     try:
@@ -137,7 +137,23 @@ def _ban(params: dict):
         return None
     pr = feats[0]["properties"]
     lon, lat = feats[0]["geometry"]["coordinates"]
-    return lat, lon, (pr.get("city") or pr.get("name")), pr.get("postcode")
+    return lat, lon, (pr.get("city") or pr.get("name")), pr.get("postcode"), pr.get("citycode")
+
+
+def _densite(citycode):
+    """Densité de population (hab/km²) de la commune via geo.api.gouv.fr."""
+    if not citycode or requests is None:
+        return None
+    try:
+        r = requests.get(f"https://geo.api.gouv.fr/communes/{citycode}",
+                         params={"fields": "population,surface"}, timeout=8,
+                         headers={"User-Agent": "RefugeImmo-POC"})
+        r.raise_for_status()
+        d = r.json()
+    except Exception:
+        return None
+    pop, surf = d.get("population"), d.get("surface")  # surface en hectares
+    return round(pop / (surf / 100.0), 1) if pop and surf else None
 
 
 def _geocoder(commune, cp):
@@ -226,12 +242,14 @@ def main() -> None:
                     geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
                            or _geocoder_texte(brut.get("titre")))
                     if geo:
-                        brut["lat"], brut["lon"], ville, cp = geo
+                        brut["lat"], brut["lon"], ville, cp, citycode = geo
                         if ville and not brut.get("commune"):
                             brut["commune"] = ville
                         if cp:
                             brut["code_postal"] = brut.get("code_postal") or cp
                             brut["departement"] = cp[:2]
+                        if brut.get("densite_hab_km2") is None:
+                            brut["densite_hab_km2"] = _densite(citycode)
                 db.upsert_annonce(conn, preparer_annonce(brut))
                 n += 1
                 time.sleep(args.delai)

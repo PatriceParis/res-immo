@@ -34,7 +34,11 @@ def preparer_annonce(brut: dict) -> dict:
         annonce["distance_km"] = distance
         annonce["temps_voiture_min"] = geo.temps_voiture_min(distance)
 
-    features = scoring.extraire_criteres(titre, description)
+    # Détection sur le titre + la description + le texte complet de la page
+    # (`texte`) : les descriptions d'agences sont souvent très courtes, l'essentiel
+    # (cave, puits, troglodyte…) est ailleurs dans la page.
+    detection = f"{description} {annonce.get('texte', '')}"
+    features = scoring.extraire_criteres(titre, detection)
     annonce["features"] = features
 
     risques = dict(annonce.get("risques") or {})

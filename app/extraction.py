@@ -327,6 +327,10 @@ def extraire_annonce(html: str, url: str, source: str,
     if not annonce.get("prix") and not annonce.get("surface_m2"):
         return None
 
+    # Texte complet de la page (tronqué) pour la détection des critères de
+    # résilience : les descriptions schema.org sont souvent trop courtes.
+    annonce["texte"] = (texte or _texte_visible(html))[:3000]
+
     annonce["source"] = source
     annonce["url"] = url
     annonce["agence"] = agence
