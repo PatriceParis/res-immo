@@ -158,6 +158,16 @@ def _adresse(noeud: dict) -> dict:
     return adr if isinstance(adr, dict) else {}
 
 
+def _image(noeud: dict) -> str | None:
+    """Première photo : schema.org `image` (URL, liste, ou ImageObject)."""
+    img = noeud.get("image") or noeud.get("photo")
+    if isinstance(img, list):
+        img = img[0] if img else None
+    if isinstance(img, dict):
+        img = img.get("url") or img.get("contentUrl")
+    return img if isinstance(img, str) and img.startswith("http") else None
+
+
 def _geo(noeud: dict):
     geo = noeud.get("geo")
     if isinstance(geo, list):
@@ -216,6 +226,7 @@ def _depuis_jsonld(noeud: dict) -> dict:
         "lat": lat,
         "lon": lon,
         "dpe": dpe,
+        "photo": _image(noeud),
         "type_bien": _type_bien(titre, _types(noeud)),
     }
 
@@ -244,6 +255,8 @@ def extraire_annonce(html: str, url: str, source: str,
     metas = _metas(html)
     annonce.setdefault("titre", metas.get("og:title") or "")
     annonce.setdefault("description", metas.get("og:description") or "")
+    if not annonce.get("photo") and metas.get("og:image"):
+        annonce["photo"] = metas["og:image"]
     if "prix" not in annonce:
         prix_meta = metas.get("product:price:amount") or metas.get("og:price:amount")
         if prix_meta:

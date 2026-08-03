@@ -23,6 +23,8 @@ PAGE_JSONLD = """
   "name": "Longère rénovée avec cave et puits",
   "description": "Belle longère avec cave voûtée, puits et grange. Poêle à bois.",
   "url": "https://agence-du-perche.fr/annonce/12345",
+  "image": ["https://agence-du-perche.fr/photos/12345-1.jpg",
+            "https://agence-du-perche.fr/photos/12345-2.jpg"],
   "numberOfRooms": 6,
   "floorSize": {"@type": "QuantitativeValue", "value": "165", "unitCode": "MTK"},
   "address": {"@type": "PostalAddress", "addressLocality": "Bellême", "postalCode": "61130"},
@@ -57,6 +59,7 @@ PAGE_OG = """
 <html><head>
 <meta property="og:title" content="Maison de campagne à Toucy">
 <meta property="og:description" content="Maison avec cave et verger.">
+<meta property="og:image" content="https://agence-yonne.fr/img/toucy.jpg">
 </head><body>
 <h1>Maison de campagne</h1>
 <p>Prix : 176 000 €. Surface habitable 130 m². Terrain de 2 500 m². 5 pièces.</p>
@@ -79,6 +82,7 @@ def test_jsonld_complet():
     assert a["dpe"] == "C"
     assert a["type_bien"] == "longère"
     assert a["agence"] == "Agence du Perche"
+    assert a["photo"] == "https://agence-du-perche.fr/photos/12345-1.jpg"
 
 
 def test_jsonld_graph_et_offre_liste():
@@ -97,6 +101,7 @@ def test_repli_opengraph_et_texte():
     assert a["surface_m2"] == 130
     assert a["terrain_m2"] == 2500
     assert a["pieces"] == 5
+    assert a["photo"] == "https://agence-yonne.fr/img/toucy.jpg"
 
 
 def test_page_non_annonce_ignoree():

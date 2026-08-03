@@ -42,6 +42,15 @@ python scripts/enrichir_risques.py  # API Géorisques (réseau requis)
 - Attribution agence : colonnes `agence`/`agence_url` (migration auto dans
   `db.connexion`), endpoint `/api/agences`, filtre `agence`, affichage
   « 🏢 via l'agence » + lien « voir chez l'agence » dans la fiche.
+- `app/regions.py` — indice de résilience par région (axes structurels) qui
+  PRIORISE les 5 terroirs cibles ; endpoint `/api/regions`, filtre `region`,
+  bandeau « Terroirs ciblés » cliquable. La démo n'inclut plus l'Île-de-France.
+- Photo : colonne `photo` (migration auto). Vraie photo si l'annonce en fournit
+  (extraction `image`/`og:image`), sinon illustration SVG générée côté client
+  par type de bien (`visuelBien` dans app.js). Bloc « mise en relation »
+  (galerie verrouillée + bouton) = modèle économique — voir docs/PERSONA.md.
+- Persona, douleurs, objectifs et modèle économique : docs/PERSONA.md (c'est le
+  document qui justifie les choix produit ; le lire avant d'ajouter une feature).
 - Base de données : `data/refuge.db` (gitignorée), surchargeable via
   la variable d'environnement `REFUGE_DB` (utilisée par les tests).
 

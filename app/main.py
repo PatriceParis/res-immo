@@ -13,7 +13,7 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
 
-from . import db
+from . import db, regions
 from .chargement import charger_annonces_json, charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -72,6 +72,7 @@ def liste_annonces(
     potager: int = 0,
     hors_inondation: int = 0,
     type_bien: str | None = None,
+    region: str | None = None,
     agence: str | None = None,
     q: str | None = Query(None, description="Recherche texte (titre, description, commune)"),
     tri: str = "score",
@@ -109,6 +110,22 @@ def meta():
         return db.meta(conn)
     finally:
         conn.close()
+
+
+@app.get("/api/regions")
+def liste_regions():
+    """Classement de résilience des terroirs + nombre de biens par région."""
+    assurer_demo()
+    conn = db.connexion()
+    try:
+        comptes = {r["region"]: r["nb"] for r in conn.execute(
+            "SELECT region, COUNT(*) nb FROM annonces GROUP BY region").fetchall()}
+    finally:
+        conn.close()
+    classement = regions.classement()
+    for r in classement:
+        r["nb_biens"] = comptes.get(r["region"], 0)
+    return {"regions": classement, "cibles": regions.regions_cibles()}
 
 
 @app.get("/api/agences")
