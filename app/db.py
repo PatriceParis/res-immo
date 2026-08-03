@@ -77,7 +77,12 @@ CHAMPS_JSON = {
 
 def chemin_db() -> Path:
     """Chemin du fichier SQLite (surchargeable via la variable REFUGE_DB)."""
-    return Path(os.environ.get("REFUGE_DB", RACINE / "data" / "refuge.db"))
+    if "REFUGE_DB" in os.environ:
+        return Path(os.environ["REFUGE_DB"])
+    if os.environ.get("VERCEL"):
+        # Hébergement serverless : seul /tmp est accessible en écriture.
+        return Path("/tmp/refuge.db")
+    return RACINE / "data" / "refuge.db"
 
 
 def connexion() -> sqlite3.Connection:

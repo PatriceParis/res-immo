@@ -51,10 +51,14 @@ def preparer_annonce(brut: dict) -> dict:
     return annonce
 
 
-def charger_annonces_json(conn, chemin: Path | str) -> int:
-    """Charge un fichier JSON (liste d'annonces brutes) en base. Renvoie le nombre chargé."""
-    annonces = json.loads(Path(chemin).read_text(encoding="utf-8"))
+def charger_liste(conn, annonces: list[dict]) -> int:
+    """Enrichit et insère une liste d'annonces brutes. Renvoie le nombre chargé."""
     for brut in annonces:
         db.upsert_annonce(conn, preparer_annonce(brut))
     conn.commit()
     return len(annonces)
+
+
+def charger_annonces_json(conn, chemin: Path | str) -> int:
+    """Charge un fichier JSON (liste d'annonces brutes) en base."""
+    return charger_liste(conn, json.loads(Path(chemin).read_text(encoding="utf-8")))
