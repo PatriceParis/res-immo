@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 
 from . import db, geo, regions, scoring
+from .qualite import est_bien_valide
 
 
 def preparer_annonce(brut: dict) -> dict:
@@ -65,11 +66,15 @@ def preparer_annonce(brut: dict) -> dict:
 
 
 def charger_liste(conn, annonces: list[dict]) -> int:
-    """Enrichit et insère une liste d'annonces brutes. Renvoie le nombre chargé."""
+    """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé."""
+    n = 0
     for brut in annonces:
+        if not est_bien_valide(brut):
+            continue  # blog, page catalogue, appartement, parking… : écarté
         db.upsert_annonce(conn, preparer_annonce(brut))
+        n += 1
     conn.commit()
-    return len(annonces)
+    return n
 
 
 def charger_annonces_json(conn, chemin: Path | str) -> int:

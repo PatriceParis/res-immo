@@ -1,0 +1,43 @@
+"""Tests du filtre de qualité (ne garder que de vrais biens « refuge »)."""
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from app.qualite import est_bien_valide  # noqa: E402
+
+
+def test_rejette_pages_non_annonce():
+    # Article de blog (cas réel vu sur le site)
+    assert not est_bien_valide(
+        {"titre": "Vendre sa maison, quel mandat choisir? Demeures du Perche",
+         "prix": 795000})
+    # Page catalogue « nos biens à vendre »
+    assert not est_bien_valide(
+        {"titre": "Nos biens à vendre | Demeures du Perche et de Normandie",
+         "surface_m2": 120})
+    # Page d'agence
+    assert not est_bien_valide({"titre": "Estimation gratuite | Notre agence",
+                                "surface_m2": 90})
+
+
+def test_rejette_biens_non_refuge():
+    assert not est_bien_valide({"titre": "Appartement T3 lumineux à Beauvais",
+                                "type_bien": "appartement", "surface_m2": 65})
+    assert not est_bien_valide({"titre": "Studio meublé centre-ville", "surface_m2": 22})
+    assert not est_bien_valide({"titre": "Parking sécurisé à vendre", "prix": 15000})
+    assert not est_bien_valide({"titre": "Terrain à bâtir viabilisé", "prix": 80000})
+    assert not est_bien_valide({"titre": "Local commercial 120 m²", "surface_m2": 120})
+
+
+def test_accepte_vrais_biens_refuge():
+    assert est_bien_valide(
+        {"titre": "Longère avec cave et puits — Bellême", "type_bien": "longère",
+         "surface_m2": 140, "prix": 285000, "pieces": 5})
+    assert est_bien_valide(
+        {"titre": "Maison de campagne à Toucy", "type_bien": "maison", "surface_m2": 130})
+    # Maison « à vendre » (singulier) : à ne PAS confondre avec la page catalogue
+    assert est_bien_valide(
+        {"titre": "Maison à vendre à Mortagne-au-Perche", "type_bien": "maison",
+         "prix": 190000, "pieces": 6})
