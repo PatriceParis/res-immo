@@ -70,12 +70,31 @@ Les annonces collectées sont géocodées (Base Adresse Nationale), notées par
 le moteur de score, puis ajoutées à la même base que l'interface web —
 rechargez simplement la page pour les voir.
 
-## Garde-fous intégrés
+## Se présenter comme un navigateur
 
-- `ROBOTSTXT_OBEY = True` : ce que le site interdit n'est pas visité ;
-- 1 requête à la fois, ~2,5 s d'attente entre chaque, ralentissement
-  automatique si le site répond lentement ;
-- User-Agent honnête (`RefugeImmo-POC`), pas de faux navigateur.
+Beaucoup de sites d'agences renvoient une **erreur 403** aux clients qui
+s'annoncent comme des robots, alors qu'ils servent la page normalement à un
+navigateur. Le collecteur envoie donc un **User-Agent de navigateur récent
+(Chrome)** et les en-têtes correspondants (`Accept-Language: fr-FR`…), défini
+dans `refuge_scraper/settings.py`. Surchargeable :
+
+```bash
+export REFUGE_USER_AGENT="Mozilla/5.0 (…) Chrome/…"   # autre navigateur
+export REFUGE_ROBOTSTXT=0                              # ignorer robots.txt (usage personnel)
+```
+
+## Garde-fous conservés
+
+- **1 requête à la fois**, ~2,5 s d'attente entre chaque, ralentissement
+  automatique si le site répond lentement (on ne surcharge jamais le site) ;
+- **robots.txt respecté par défaut** (désactivable ci-dessus) ;
+- **aucune donnée personnelle de vendeur** collectée.
+
+> Un simple User-Agent suffit pour les sites qui ne filtrent que là-dessus.
+> Les portails protégés par un anti-robots avancé (Cloudflare, DataDome…)
+> peuvent exiger un **vrai navigateur** : voir `collecter_navigateur.py`
+> (rendu via Chromium/Playwright) si un site résiste. À réserver à un usage
+> personnel — voir `docs/LEGAL.md`.
 
 ## Si un robot ne trouve plus rien
 

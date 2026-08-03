@@ -82,6 +82,7 @@ est expliqué dans **[docs/STRATEGIE_COLLECTE.md](docs/STRATEGIE_COLLECTE.md)**.
 | **Jeu de démonstration** (75 biens fictifs mais réalistes, attribués à des agences fictives) | ✅ chargé automatiquement |
 | **① Découverte d'agences** via Bien'ici (« qui a des biens dans ma zone ? ») | ⚙️ `python scripts/decouvrir_agences.py` |
 | **② Collecte chez les agences** (sitemap + schema.org, tout logiciel) | ⚙️ `bash scripts/collecter.sh agence` |
+| **②bis Collecte via un vrai navigateur** (sites protégés par anti-robots) | ⚙️ `python scripts/collecter_navigateur.py -s https://agence.fr` |
 | **Bien'ici** (API JSON directe — position GPS et DPE inclus) | ⚙️ `bash scripts/collecter.sh bienici` |
 | **Annonces entre particuliers** (PAP, immo-entre-particuliers) | ⚙️ `bash scripts/collecter.sh pap` |
 | **Risques officiels Géorisques** (État) | ⚙️ `python scripts/enrichir_risques.py` |

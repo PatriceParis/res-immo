@@ -7,10 +7,14 @@
 
 - Les robots fournis **respectent le fichier `robots.txt`** des sites : une
   page que le site interdit aux robots n'est **pas** visitée
-  (`ROBOTSTXT_OBEY = True`, non désactivable à la légère).
-- Cadence volontairement lente (1 requête à la fois, ~2,5 s d'attente),
-  identification honnête (`User-Agent: RefugeImmoPOC`) : pas de surcharge,
-  pas de déguisement en navigateur.
+  (`ROBOTSTXT_OBEY = True` par défaut ; désactivable pour un usage strictement
+  personnel via `REFUGE_ROBOTSTXT=0`).
+- Le collecteur se présente comme un **navigateur** (User-Agent Chrome), car
+  beaucoup de sites d'agences refusent les clients qui s'annoncent « robot »
+  alors qu'ils servent la page à un navigateur. Ce n'est pas un déguisement
+  malveillant : la cadence reste **lente** (1 requête à la fois, ~2,5 s), on ne
+  surcharge jamais le site, et l'usage visé est une **veille personnelle**. On
+  ne cherche pas à forcer les protections avancées (Cloudflare, CAPTCHA…).
 - **Aucune donnée personnelle des vendeurs n'est collectée** (ni nom, ni
   téléphone, ni e-mail) : uniquement le bien, son prix et son texte.
 - Les très grands portails (SeLoger, Leboncoin, Logic-Immo…) sont
