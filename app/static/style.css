@@ -150,10 +150,12 @@ body {
   padding: 22px 26px 24px; position: relative; margin-bottom: 4vh;
 }
 .fermer {
-  position: absolute; top: 10px; right: 12px; border: none; background: none;
-  font-size: 18px; cursor: pointer; color: var(--encre-2); padding: 6px;
+  position: absolute; top: 12px; right: 12px; border: none; z-index: 3;
+  width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, .9);
+  box-shadow: 0 1px 5px rgba(20, 30, 24, .2); font-size: 16px; cursor: pointer;
+  color: var(--encre); display: flex; align-items: center; justify-content: center; padding: 0;
 }
-.fermer:hover { color: var(--encre); }
+.fermer:hover { background: #fff; }
 .modale h2 { margin: 0 0 2px; font-size: 20px; padding-right: 30px; }
 .modale .lieu { color: var(--encre-2); }
 .modale h4 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
@@ -280,3 +282,42 @@ body {
 .mer-form { display: flex; gap: 6px; margin-top: 6px; }
 .mer-form input { flex: 1; padding: 8px; border: 1px solid var(--bordure); border-radius: 8px; font: inherit; }
 .mer-note { font-size: 12px; color: var(--encre-2); margin: 8px 0 0; }
+
+/* ---------- responsive / mobile ---------- */
+body { overflow-x: hidden; }
+.filtres-tete { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.filtres-toggle {
+  display: none; border: 1px solid var(--bordure); background: var(--fond);
+  color: var(--encre); font: inherit; font-size: 13px; font-weight: 600;
+  padding: 6px 12px; border-radius: 8px; cursor: pointer;
+}
+.filtres-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 900px) {
+  .agencement { padding: 0 14px; margin: 12px auto; gap: 12px; }
+  .entete-int { padding: 12px 14px; }
+  .slogan { font-size: 12px; }
+  .filtres { position: static; padding: 12px 14px; }
+  .filtres h2 { margin: 0; }
+  .filtres-toggle { display: inline-flex; }
+  .filtres.replie .filtres-corps { display: none; }
+  .filtres-corps { margin-top: 12px; }
+  #carte { height: 300px; }
+  .terroirs-bloc { margin-top: 12px; }
+}
+
+@media (max-width: 560px) {
+  .marque { font-size: 20px; }
+  .liste { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .stat .valeur { font-size: 14px; white-space: normal; }
+  .barre-resultats { gap: 6px; }
+  .note-estimation { font-size: 11px; }
+  .modale { padding: 18px 16px 22px; border-radius: 12px; }
+  .modale h2 { font-size: 18px; }
+  .photo-grande { height: 190px; }
+  .mise-en-relation { padding: 12px; }
+  .fiche-entete { gap: 10px; }
+  .score-jeton.grand { width: 54px; height: 54px; font-size: 19px; }
+  .terroir { padding: 6px 10px; }
+}
