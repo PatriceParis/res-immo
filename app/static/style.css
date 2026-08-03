@@ -1,0 +1,183 @@
+/* Refuge Immo — feuille de style (thème clair).
+   Gamme de score séquentielle validée (clair → foncé = score croissant) :
+   n1 #C9DCC2 · n2 #7FAE84 · n3 #3F7D53 · n4 #1B4332 */
+
+:root {
+  --encre: #24312a;
+  --encre-2: #5c6b60;
+  --fond: #f6f3ec;
+  --carte-fond: #ffffff;
+  --bordure: #e4dfd3;
+  --marque: #1b4332;
+  --accent: #2d6a4f;
+  --n1: #c9dcc2;
+  --n2: #7fae84;
+  --n3: #3f7d53;
+  --n4: #1b4332;
+  --alerte-fond: #fbece8;
+  --alerte-texte: #8c3325;
+  --alerte-bord: #efcdc4;
+  --badge-fond: #eaf2ec;
+  --badge-bord: #cfe0d2;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  background: var(--fond);
+  color: var(--encre);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* ---------- entête ---------- */
+.entete { background: var(--marque); color: #f2efe6; }
+.entete-int {
+  max-width: 1280px; margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  flex-wrap: wrap;
+}
+.marque { font-size: 22px; font-weight: 700; letter-spacing: .3px; }
+.slogan { font-size: 13px; opacity: .85; margin-top: 2px; }
+.pastille-source {
+  font-size: 12px; padding: 4px 10px; border-radius: 99px;
+  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);
+}
+
+/* ---------- agencement ---------- */
+.agencement {
+  max-width: 1280px; margin: 18px auto; padding: 0 20px;
+  display: grid; grid-template-columns: 290px 1fr; gap: 18px;
+  align-items: start;
+}
+@media (max-width: 900px) { .agencement { grid-template-columns: 1fr; } }
+
+/* ---------- filtres ---------- */
+.filtres {
+  background: var(--carte-fond); border: 1px solid var(--bordure);
+  border-radius: 12px; padding: 16px; position: sticky; top: 12px;
+}
+.filtres h2 { margin: 0 0 12px; font-size: 16px; }
+.champ { display: block; margin-bottom: 14px; font-size: 13.5px; }
+.champ > span { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; color: var(--encre); font-weight: 600; }
+.champ output { font-weight: 600; color: var(--accent); }
+.champ input[type=range] { width: 100%; accent-color: var(--accent); }
+.champ select {
+  width: 100%; padding: 7px 8px; border: 1px solid var(--bordure);
+  border-radius: 8px; background: #fff; font: inherit; color: inherit;
+}
+.atouts { border: 1px solid var(--bordure); border-radius: 10px; padding: 10px 12px 12px; margin: 0 0 14px; }
+.atouts legend { font-weight: 600; font-size: 13.5px; padding: 0 4px; }
+.atouts label { display: flex; gap: 8px; align-items: center; margin-top: 6px; font-weight: 400; }
+.atouts input { accent-color: var(--accent); width: 15px; height: 15px; }
+.bouton-secondaire {
+  width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--bordure);
+  background: var(--fond); color: var(--encre); font: inherit; cursor: pointer;
+}
+.bouton-secondaire:hover { border-color: var(--accent); color: var(--accent); }
+
+.legende-score { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bordure); font-size: 12.5px; color: var(--encre-2); }
+.legende-score h3 { margin: 0 0 8px; font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
+.legende-score div { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.pastille { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--n4); flex: none; }
+.pastille.n1 { background: var(--n1); } .pastille.n2 { background: var(--n2); }
+.pastille.n3 { background: var(--n3); } .pastille.n4 { background: var(--n4); }
+
+/* ---------- résultats ---------- */
+#carte {
+  height: 380px; border-radius: 12px; border: 1px solid var(--bordure);
+  background: #e9e6dd; overflow: hidden;
+}
+.carte-indispo {
+  height: 100%; display: flex; align-items: center; justify-content: center;
+  color: var(--encre-2); font-size: 14px; text-align: center; padding: 20px;
+}
+.barre-resultats {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  margin: 14px 2px 10px; flex-wrap: wrap;
+}
+#compteur { font-weight: 700; font-size: 16px; }
+.note-estimation { font-size: 12px; color: var(--encre-2); }
+
+.liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+
+.fiche {
+  background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: 12px;
+  padding: 14px 16px; cursor: pointer; transition: box-shadow .15s, transform .15s;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.fiche:hover { box-shadow: 0 4px 16px rgba(27, 67, 50, .14); transform: translateY(-1px); }
+.fiche-haut { display: flex; gap: 10px; align-items: flex-start; }
+.score-jeton {
+  flex: none; width: 52px; height: 52px; border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 18px; line-height: 1; border: 2px solid var(--n4);
+}
+.score-jeton small { font-weight: 600; font-size: 9px; opacity: .8; margin-top: 2px; }
+.score-jeton.n1 { background: var(--n1); color: var(--encre); }
+.score-jeton.n2 { background: var(--n2); color: #14281c; }
+.score-jeton.n3 { background: var(--n3); color: #fff; }
+.score-jeton.n4 { background: var(--n4); color: #fff; }
+.fiche h3 { margin: 0; font-size: 15px; line-height: 1.3; }
+.fiche .lieu { color: var(--encre-2); font-size: 12.5px; margin-top: 2px; }
+.fiche .classe { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+.fiche .chiffres { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
+.fiche .chiffres .prix { font-weight: 800; font-size: 16px; }
+.fiche .chiffres span { color: var(--encre-2); }
+.fiche .chiffres b { color: var(--encre); font-weight: 600; }
+
+.jetons { display: flex; flex-wrap: wrap; gap: 5px; }
+.badge, .alerte {
+  font-size: 11.5px; padding: 3px 8px; border-radius: 99px; border: 1px solid;
+}
+.badge { background: var(--badge-fond); border-color: var(--badge-bord); color: var(--marque); }
+.alerte { background: var(--alerte-fond); border-color: var(--alerte-bord); color: var(--alerte-texte); font-weight: 600; }
+
+/* ---------- modale ---------- */
+.voile[hidden] { display: none; }
+.voile {
+  position: fixed; inset: 0; background: rgba(20, 30, 24, .55);
+  display: flex; align-items: flex-start; justify-content: center; padding: 4vh 16px;
+  z-index: 1000; overflow-y: auto;
+}
+.modale {
+  background: var(--carte-fond); border-radius: 14px; max-width: 700px; width: 100%;
+  padding: 22px 24px; position: relative; margin-bottom: 4vh;
+}
+.fermer {
+  position: absolute; top: 10px; right: 12px; border: none; background: none;
+  font-size: 18px; cursor: pointer; color: var(--encre-2); padding: 6px;
+}
+.fermer:hover { color: var(--encre); }
+.modale h2 { margin: 0 0 2px; font-size: 20px; padding-right: 30px; }
+.modale .lieu { color: var(--encre-2); margin-bottom: 12px; }
+.modale .rangee-prix { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; margin: 10px 0 4px; }
+.modale .rangee-prix .prix { font-size: 24px; font-weight: 800; }
+.modale .rangee-prix span { color: var(--encre-2); font-size: 14px; }
+.modale h4 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
+.modale .description { font-size: 14px; color: var(--encre); }
+.modale .source-ligne { margin-top: 16px; font-size: 12.5px; color: var(--encre-2); }
+.modale .source-ligne a { color: var(--accent); }
+
+/* jauges des piliers du score */
+.pilier { display: grid; grid-template-columns: 170px 1fr 52px; gap: 10px; align-items: center; margin-top: 7px; font-size: 13px; }
+.pilier .nom { color: var(--encre); }
+.pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
+.jauge { height: 10px; background: #ece8dd; border-radius: 5px; overflow: hidden; }
+.jauge > div { height: 100%; background: var(--n3); border-radius: 5px; min-width: 2px; }
+
+/* légende Leaflet */
+.legende-carte {
+  background: #fff; padding: 8px 10px; border-radius: 8px; font-size: 11.5px;
+  border: 1px solid var(--bordure); color: var(--encre); line-height: 1.7;
+}
+.legende-carte .pastille { width: 11px; height: 11px; border-width: 1.5px; margin-right: 5px; vertical-align: -1px; }
+
+.vide {
+  grid-column: 1 / -1; text-align: center; color: var(--encre-2);
+  padding: 40px 20px; background: var(--carte-fond); border: 1px dashed var(--bordure); border-radius: 12px;
+}

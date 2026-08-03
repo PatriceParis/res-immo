@@ -1,0 +1,15 @@
+# Environnement Python local
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Base de données locale (régénérée automatiquement)
+data/refuge.db
+data/refuge.db-journal
+data/refuge.db-wal
+data/refuge.db-shm
+
+# Cache du collecteur
+scraper/.scrapy/
+scraper/httpcache/
