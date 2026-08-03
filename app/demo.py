@@ -21,16 +21,9 @@ import random
 # `feu_foret` : proximité d'un massif sensible ; `seveso_km` : site industriel.
 # ---------------------------------------------------------------------------
 COMMUNES = [
-    ("Provins", "77160", "Seine-et-Marne", "Île-de-France", 48.559, 3.299, 150, 130, 2200, {"argile": 2}),
-    ("Bray-sur-Seine", "77480", "Seine-et-Marne", "Île-de-France", 48.414, 3.239, 60, 90, 1900, {"inondation": True, "argile": 1}),
-    ("Rozay-en-Brie", "77540", "Seine-et-Marne", "Île-de-France", 48.685, 2.960, 110, 180, 2500, {"argile": 2}),
-    ("Jouarre", "77640", "Seine-et-Marne", "Île-de-France", 48.925, 3.129, 150, 120, 2300, {"argile": 2}),
-    ("Château-Landon", "77570", "Seine-et-Marne", "Île-de-France", 48.148, 2.697, 100, 80, 1900, {"argile": 1}),
-    ("Milly-la-Forêt", "91490", "Essonne", "Île-de-France", 48.403, 2.470, 70, 100, 2800, {"feu_foret": True, "argile": 1}),
-    ("Dourdan", "91410", "Essonne", "Île-de-France", 48.529, 2.011, 130, 300, 2900, {"argile": 1}),
-    ("Houdan", "78550", "Yvelines", "Île-de-France", 48.790, 1.600, 110, 250, 2900, {"argile": 1}),
-    ("La Roche-Guyon", "95780", "Val-d'Oise", "Île-de-France", 49.080, 1.630, 30, 90, 2600, {"inondation": True}),
-    ("Magny-en-Vexin", "95420", "Val-d'Oise", "Île-de-France", 49.155, 1.786, 110, 150, 2400, {"argile": 1}),
+    # POC recentré sur les 5 terroirs les plus résilients (voir app/regions.py).
+    # L'Île-de-France est volontairement écartée : trop dense, artificialisée,
+    # en stress hydrique — la moins résiliente pour un projet de repli.
     ("Senonches", "28250", "Eure-et-Loir", "Centre-Val de Loire", 48.562, 1.031, 250, 40, 1500, {"feu_foret": True}),
     ("Illiers-Combray", "28120", "Eure-et-Loir", "Centre-Val de Loire", 48.303, 1.244, 160, 60, 1500, {"argile": 1}),
     ("Nogent-le-Rotrou", "28400", "Eure-et-Loir", "Centre-Val de Loire", 48.322, 0.822, 130, 400, 1500, {}),

@@ -1,12 +1,21 @@
 # ⛰️ Refuge Immo
 
-**Trouvez votre base arrière à moins de 3 h de Paris.**
-Refuge Immo est un POC (démonstrateur) de recherche immobilière pensé pour les
-Parisiens et Franciliens qui veulent anticiper les dérèglements climatiques :
-chaque bien reçoit un **score de résilience sur 100** (eau, abri, énergie,
-autonomie alimentaire, risques naturels, accessibilité) et se filtre par
-budget, temps de route depuis Paris, taille de terrain, présence d'une cave,
-d'un puits…
+**Votre plan B au vert — les 5 terroirs les plus résilients à moins de 2 h 30 de Paris.**
+
+Refuge Immo est un POC (démonstrateur) de recherche immobilière pour les
+Parisiens inquiets du climat qui veulent **un lieu de repli** rationnel — pas
+un bunker de survivaliste. Il est pensé du point de vue de l'utilisateur final
+(voir **[docs/PERSONA.md](docs/PERSONA.md)** : persona, douleurs, objectifs).
+
+Concrètement :
+- il **cible les 5 régions les plus résilientes** (et écarte l'Île-de-France),
+  classées par un indice transparent — voir **[docs/PERSONA.md](docs/PERSONA.md)** et `app/regions.py` ;
+- chaque bien reçoit un **score de résilience sur 100** (eau, abri, énergie,
+  autonomie alimentaire, risques, accès) et **une photo** ;
+- filtres par budget, temps de route, terrain, atouts (cave, puits…) et terroir ;
+- si un bien vous plaît, un bouton **met en relation avec l'agence** pour
+  recevoir le reste des photos et le dossier — c'est le **modèle économique**
+  (gratuit pour l'acheteur, rémunéré à la mise en relation qualifiée).
 
 ![Aperçu de l'application](docs/apercu.png)
 
@@ -36,18 +45,24 @@ démonstration.
 
 ## 🧭 Ce que fait l'application
 
-- **Carte + liste** des biens, avec une pastille de score colorée
-  (vert foncé = excellent potentiel refuge) ;
+- **Terroirs ciblés** : les 5 régions les plus résilientes, classées par un
+  indice transparent (`app/regions.py`) et cliquables pour filtrer — le POC
+  **priorise** au lieu de tout montrer ;
+- **Carte + liste** des biens, chacun avec **une photo** et une pastille de
+  score colorée (vert foncé = excellent potentiel refuge) ;
 - **Filtres** : budget, temps de route depuis Paris (estimé), score minimum,
-  taille de terrain, et atouts indispensables (cave, puits, chauffage au bois,
-  panneaux solaires, dépendances, potager, hors zone inondable) ;
-- **Fiche détaillée** : décomposition du score en 6 piliers, atouts détectés,
-  points de vigilance (zone inondable, sols argileux, centrale nucléaire ou
-  site Seveso proche, passoire thermique…), texte de l'annonce ;
-- **Détection automatique** : la cave, le puits, le poêle à bois ou le verger
-  sont repérés directement dans le texte des annonces.
+  taille de terrain, terroir, agence, et atouts indispensables (cave, puits,
+  chauffage au bois, panneaux solaires, dépendances, potager, hors inondable) ;
+- **Fiche détaillée** : photo, chiffres clés, décomposition du score en 6
+  piliers, atouts détectés, points de vigilance (zone inondable, argiles,
+  centrale nucléaire ou Seveso proche, passoire thermique…), texte de l'annonce ;
+- **Mise en relation** : bouton « Recevoir les photos & être recontacté » qui
+  relie l'acheteur à l'agence — le cœur du **modèle économique** ;
+- **Détection automatique** : la cave, le puits, le poêle ou le verger sont
+  repérés directement dans le texte des annonces.
 
-Le barème complet du score est expliqué dans **[docs/CRITERES.md](docs/CRITERES.md)**.
+Le barème du score est dans **[docs/CRITERES.md](docs/CRITERES.md)**, le choix
+des terroirs et le modèle économique dans **[docs/PERSONA.md](docs/PERSONA.md)**.
 
 ---
 
