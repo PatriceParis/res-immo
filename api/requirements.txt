@@ -1,0 +1,3 @@
+# Dépendances minimales pour l'hébergement Vercel (le fichier requirements.txt
+# à la racine, plus complet, sert à l'utilisation locale : robots, tests…).
+fastapi>=0.110,<1.0

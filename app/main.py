@@ -14,21 +14,42 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
 
 from . import db
-from .chargement import charger_annonces_json
+from .chargement import charger_annonces_json, charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
 DEMO = RACINE / "data" / "annonces_demo.json"
 
+_amorce_faite = False
 
-@asynccontextmanager
-async def cycle_de_vie(app: FastAPI):
+
+def assurer_demo() -> None:
+    """Si la base est vide, charge le jeu de démonstration.
+
+    Depuis le fichier data/annonces_demo.json en local ; généré en mémoire sur
+    un hébergement serverless (Vercel), où le disque est en lecture seule et
+    où l'événement de démarrage n'est pas toujours exécuté — d'où l'appel de
+    cette fonction au début de chaque route de l'API.
+    """
+    global _amorce_faite
+    if _amorce_faite:
+        return
     conn = db.connexion()
     try:
-        if db.nb_annonces(conn) == 0 and DEMO.exists():
-            n = charger_annonces_json(conn, DEMO)
+        if db.nb_annonces(conn) == 0:
+            if DEMO.exists():
+                n = charger_annonces_json(conn, DEMO)
+            else:
+                from .demo import generer_annonces
+                n = charger_liste(conn, generer_annonces())
             print(f"✔ Base vide : {n} annonces de démonstration chargées.")
     finally:
         conn.close()
+    _amorce_faite = True
+
+
+@asynccontextmanager
+async def cycle_de_vie(app: FastAPI):
+    assurer_demo()
     yield
 
 
@@ -57,6 +78,7 @@ def liste_annonces(
     offset: int = 0,
 ):
     filtres = {k: v for k, v in locals().items()}
+    assurer_demo()
     conn = db.connexion()
     try:
         total, items = db.chercher(conn, filtres)
@@ -67,6 +89,7 @@ def liste_annonces(
 
 @app.get("/api/annonces/{annonce_id}")
 def detail_annonce(annonce_id: str):
+    assurer_demo()
     conn = db.connexion()
     try:
         row = conn.execute("SELECT * FROM annonces WHERE id = ?", (annonce_id,)).fetchone()
@@ -79,6 +102,7 @@ def detail_annonce(annonce_id: str):
 
 @app.get("/api/meta")
 def meta():
+    assurer_demo()
     conn = db.connexion()
     try:
         return db.meta(conn)
