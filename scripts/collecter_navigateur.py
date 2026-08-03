@@ -157,10 +157,32 @@ def _densite(citycode):
     return round(pop / (surf / 100.0), 1) if pop and surf else None
 
 
+def _altitude(lat, lon):
+    """Altitude (m) de la position via l'API open-meteo (best-effort)."""
+    if lat is None or lon is None or requests is None:
+        return None
+    try:
+        r = requests.get("https://api.open-meteo.com/v1/elevation",
+                         params={"latitude": lat, "longitude": lon}, timeout=8,
+                         headers={"User-Agent": "RefugeImmo-POC"})
+        r.raise_for_status()
+        vals = r.json().get("elevation") or []
+    except Exception:
+        return None
+    return round(vals[0]) if vals and isinstance(vals[0], (int, float)) else None
+
+
 def _geocoder(commune, cp):
     if not commune:
         return None
     return _ban({"q": f"{commune} {cp or ''}".strip(), "type": "municipality", "limit": 1})
+
+
+def _geocoder_cp(cp):
+    """Géocode par code postal (fiable) : renvoie la commune principale du CP."""
+    if not cp:
+        return None
+    return _ban({"q": str(cp), "type": "municipality", "limit": 1})
 
 
 def _geocoder_texte(texte):
@@ -245,6 +267,7 @@ def main() -> None:
                                         hashlib.sha1(u.encode()).hexdigest()[:12])
                 if brut.get("lat") is None:
                     geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
+                           or _geocoder_cp(brut.get("code_postal"))
                            or _geocoder_texte(brut.get("titre")))
                     if geo:
                         brut["lat"], brut["lon"], ville, cp, citycode = geo
@@ -252,9 +275,12 @@ def main() -> None:
                             brut["commune"] = ville
                         if cp:
                             brut["code_postal"] = brut.get("code_postal") or cp
-                            brut["departement"] = cp[:2]
+                            brut["departement"] = brut.get("departement") or str(cp)[:2]
                         if brut.get("densite_hab_km2") is None:
                             brut["densite_hab_km2"] = _densite(citycode)
+                # Altitude (pilier Situation) une fois la position connue.
+                if brut.get("altitude") is None and brut.get("lat") is not None:
+                    brut["altitude"] = _altitude(brut["lat"], brut["lon"])
                 db.upsert_annonce(conn, preparer_annonce(brut))
                 n += 1
                 time.sleep(args.delai)
