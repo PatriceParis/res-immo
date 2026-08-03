@@ -1,0 +1,36 @@
+{
+  "_note": [
+    "Agences INDÉPENDANTES à sites légers (peu ou pas de protection anti-robots),",
+    "ciblées dans les terroirs les plus résilients. Pour chacune : 'site' et,",
+    "quand on la connaît, la (les) page(s) 'index' qui listent les biens.",
+    "Le collecteur essaie d'abord le sitemap.xml du site (qui liste les pages de",
+    "biens), puis ces pages 'index' en repli. À compléter avec",
+    "scripts/decouvrir_agences.py ou à la main."
+  ],
+  "agences": [
+    {
+      "nom": "Perch'Immo",
+      "site": "https://www.perch-immo.fr",
+      "zone": "Perche (Bellême, Mortagne-au-Perche)",
+      "index": ["https://www.perch-immo.fr/vente/1", "https://www.perch-immo.fr/vente/2"]
+    },
+    {
+      "nom": "Demeures du Perche et de Normandie",
+      "site": "https://demeures-perche-normandie.fr",
+      "zone": "Perche / Normandie",
+      "index": ["https://demeures-perche-normandie.fr/a-vendre/"]
+    },
+    {
+      "nom": "Maison du Perche",
+      "site": "https://www.maisonduperche.fr",
+      "zone": "Perche (Bellême)",
+      "index": ["https://www.maisonduperche.fr/"]
+    },
+    {
+      "nom": "Perche et Demeures",
+      "site": "https://www.percheetdemeures.com",
+      "zone": "Parc naturel du Perche",
+      "index": ["https://www.percheetdemeures.com/stone-farmhouses-traditional-houses-and-longeres/"]
+    }
+  ]
+}
