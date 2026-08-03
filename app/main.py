@@ -1,8 +1,8 @@
 """Serveur web de Refuge Immo : API de recherche + interface.
 
 Lancement :  python -m uvicorn app.main:app   puis  http://localhost:8000
-Au premier démarrage, si la base est vide, le jeu de démonstration
-(data/annonces_demo.json) est chargé automatiquement.
+Au premier démarrage, la base est remplie avec les annonces RÉELLES collectées
+(data/annonces_reel.json) — il n'y a plus de jeu de démonstration.
 """
 
 from __future__ import annotations
@@ -15,46 +15,35 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
 
 from . import db, regions
-from .chargement import charger_annonces_json, charger_liste
+from .chargement import charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
-DEMO = RACINE / "data" / "annonces_demo.json"
-# Annonces RÉELLES collectées (par scripts/collecter*.py ou la GitHub Action) ;
-# absent tant qu'aucune collecte n'a eu lieu — l'app fonctionne alors en démo.
+# Annonces RÉELLES collectées (scripts/collecter*.py ou la GitHub Action).
+# C'est désormais la SEULE source du site — il n'y a plus de jeu de démonstration.
 REEL = RACINE / "data" / "annonces_reel.json"
 
 _amorce_faite = False
 
 
-def assurer_demo() -> None:
-    """Si la base est vide, charge les annonces réelles (si présentes) + la démo.
+def assurer_donnees() -> None:
+    """Charge en base les annonces réelles (data/annonces_reel.json) si vide.
 
-    Le jeu de démonstration vient de data/annonces_demo.json en local, ou est
-    généré en mémoire sur un hébergement serverless. On appelle cette fonction
-    au début de chaque route car, en serverless, l'événement de démarrage n'est
-    pas toujours exécuté.
+    Appelée au début de chaque route car, en serverless (Vercel), l'événement
+    de démarrage n'est pas toujours exécuté et la base /tmp est réinitialisée.
     """
     global _amorce_faite
     if _amorce_faite:
         return
     conn = db.connexion()
     try:
-        if db.nb_annonces(conn) == 0:
-            total = 0
-            if REEL.exists():
-                try:
-                    biens = json.loads(REEL.read_text(encoding="utf-8"))
-                except (OSError, ValueError):
-                    biens = []
-                if biens:
-                    total += charger_liste(conn, biens)
-                    print(f"✔ {len(biens)} annonce(s) réelle(s) chargée(s).")
-            if DEMO.exists():
-                total += charger_annonces_json(conn, DEMO)
-            else:
-                from .demo import generer_annonces
-                total += charger_liste(conn, generer_annonces())
-            print(f"✔ Base initialisée : {total} annonces.")
+        if db.nb_annonces(conn) == 0 and REEL.exists():
+            try:
+                biens = json.loads(REEL.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                biens = []
+            if biens:
+                charger_liste(conn, biens)
+                print(f"✔ {len(biens)} annonce(s) réelle(s) chargée(s).")
     finally:
         conn.close()
     _amorce_faite = True
@@ -62,7 +51,7 @@ def assurer_demo() -> None:
 
 @asynccontextmanager
 async def cycle_de_vie(app: FastAPI):
-    assurer_demo()
+    assurer_donnees()
     yield
 
 
@@ -93,7 +82,7 @@ def liste_annonces(
     offset: int = 0,
 ):
     filtres = {k: v for k, v in locals().items()}
-    assurer_demo()
+    assurer_donnees()
     conn = db.connexion()
     try:
         total, items = db.chercher(conn, filtres)
@@ -104,7 +93,7 @@ def liste_annonces(
 
 @app.get("/api/annonces/{annonce_id}")
 def detail_annonce(annonce_id: str):
-    assurer_demo()
+    assurer_donnees()
     conn = db.connexion()
     try:
         row = conn.execute("SELECT * FROM annonces WHERE id = ?", (annonce_id,)).fetchone()
@@ -117,7 +106,7 @@ def detail_annonce(annonce_id: str):
 
 @app.get("/api/meta")
 def meta():
-    assurer_demo()
+    assurer_donnees()
     conn = db.connexion()
     try:
         return db.meta(conn)
@@ -128,7 +117,7 @@ def meta():
 @app.get("/api/regions")
 def liste_regions():
     """Classement de résilience des terroirs + nombre de biens par région."""
-    assurer_demo()
+    assurer_donnees()
     conn = db.connexion()
     try:
         comptes = {r["region"]: r["nb"] for r in conn.execute(
@@ -144,7 +133,7 @@ def liste_regions():
 @app.get("/api/agences")
 def agences():
     """Agences présentes en base (nom, site, nombre de biens, score moyen)."""
-    assurer_demo()
+    assurer_donnees()
     conn = db.connexion()
     try:
         return {"agences": db.agences(conn)}

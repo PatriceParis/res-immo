@@ -35,3 +35,11 @@ def test_ile_de_france_derniere_et_non_cible():
     derniere = cl[-1]
     assert derniere["region"] == "Île-de-France"
     assert derniere["cible"] is False
+
+
+def test_region_du_departement():
+    assert regions.region_du_departement("61") == "Normandie"
+    assert regions.region_du_departement("58") == "Bourgogne-Franche-Comté"
+    assert regions.region_du_departement("10") == "Grand Est"
+    assert regions.region_du_departement(28) == "Centre-Val de Loire"   # int accepté
+    assert regions.region_du_departement("99") is None
