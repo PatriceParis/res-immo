@@ -1,25 +1,25 @@
-"""Collecte via un VRAI navigateur (Chromium piloté par Playwright).
+"""Collecte via un VRAI navigateur (Chromium/Playwright), sitemap en priorité.
 
-Un simple User-Agent suffit pour beaucoup de sites, mais certains portails
-protégés par un anti-robots avancé (Cloudflare…) exigent un vrai navigateur
-qui exécute le JavaScript. Ce script pilote Chromium, ouvre les pages
-d'annonces des agences, lit les données schema.org (via app.extraction),
-géocode la commune si besoin, calcule le score et enregistre les biens.
+Stratégie, pour chaque agence :
+  1. on lit son **sitemap.xml** (qui liste directement les pages de biens) ;
+  2. à défaut, on ouvre la (les) page(s) « nos biens » (champ `index`) et on y
+     relève les liens vers les annonces ;
+  3. on ouvre chaque page d'annonce dans un vrai navigateur (exécution du
+     JavaScript), on lit les données schema.org — sinon le texte (prix en €,
+     m²…) via app.extraction — on géocode la commune, on calcule le score et
+     on enregistre.
 
-Ce n'est pas un « déguisement » : c'est réellement un navigateur Chrome.
+Ce n'est pas un déguisement : c'est réellement un navigateur Chrome.
 
-Installation (une seule fois, sur votre machine) :
-    pip install playwright && playwright install chromium
+Installation (une fois) :  pip install playwright && playwright install chromium
 
 Usage :
-    python scripts/collecter_navigateur.py -s https://une-agence.fr
-    python scripts/collecter_navigateur.py -s https://une-agence.fr --index https://une-agence.fr/nos-biens
-    python scripts/collecter_navigateur.py            # toutes les agences de agences.json
-Options : --max 25 (biens/agence), --delai 3 (secondes entre pages).
+    python scripts/collecter_navigateur.py                       # agences_sites.json
+    python scripts/collecter_navigateur.py -s https://agence.fr --index https://agence.fr/nos-biens
+Options : --max 12 (biens/agence), --delai 2.5 (s entre pages).
 
-À réserver à une veille personnelle — voir docs/LEGAL.md. Même un vrai
-navigateur ne franchit pas toutes les protections : le script s'arrête
-proprement et l'indique dans le journal si un site résiste.
+Usage personnel — voir docs/LEGAL.md. Un vrai navigateur ne franchit pas
+toutes les protections ; le script s'arrête proprement et l'indique.
 """
 
 from __future__ import annotations
@@ -44,7 +44,7 @@ from app.extraction import extraire_annonce  # noqa: E402
 try:
     from playwright.sync_api import sync_playwright
 except ImportError:
-    print("Playwright n'est pas installé. Sur votre machine :\n"
+    print("Playwright n'est pas installé :\n"
           "  pip install playwright && playwright install chromium")
     sys.exit(1)
 
@@ -53,9 +53,9 @@ try:
 except ImportError:
     requests = None
 
-ANNUAIRE = RACINE / "scraper" / "refuge_scraper" / "agences.json"
+CONFIG = RACINE / "scraper" / "refuge_scraper" / "agences_sites.json"
 MOTIF_BIEN = re.compile(
-    r"/(annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens|detail|ref)[-/]",
+    r"/(annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens|detail|ref|maison|propriete)[-/]",
     re.IGNORECASE,
 )
 UA = os.environ.get(
@@ -63,46 +63,73 @@ UA = os.environ.get(
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
 )
+RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 
 
 def _slug(nom: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (nom or "agence").lower()).strip("-")
 
 
-def _cibles(site: str, nom: str) -> list[dict]:
+def _cibles(site: str, nom: str, index: str) -> list[dict]:
     if site:
-        return [{"nom": nom or urlparse(site).netloc, "site": site.rstrip("/")}]
+        return [{"nom": nom or urlparse(site).netloc, "site": site.rstrip("/"),
+                 "index": [index] if index else []}]
     try:
-        return json.loads(ANNUAIRE.read_text(encoding="utf-8")).get("agences", [])
+        return json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
     except (OSError, ValueError):
-        print(f"Annuaire illisible : {ANNUAIRE}")
+        print(f"Config illisible : {CONFIG}")
         return []
 
 
-def _liens_biens(page, base: str) -> list[str]:
+def _sitemap_urls(base: str) -> list[str]:
+    """URLs de pages de biens listées dans le sitemap.xml (via requests)."""
+    if requests is None:
+        return []
+    entetes = {"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"}
+    for chemin in ("/sitemap.xml", "/sitemap_index.xml", "/sitemap-index.xml"):
+        try:
+            r = requests.get(base + chemin, headers=entetes, timeout=15)
+        except Exception:
+            continue
+        if r.status_code != 200 or "<loc" not in r.text.lower():
+            continue
+        locs = RE_LOC.findall(r.text)
+        detail, sous = [], []
+        for u in locs:
+            (sous if u.lower().endswith(".xml") else detail).append(u)
+        for su in sous[:15]:            # suivre les sous-sitemaps une fois
+            try:
+                detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=15).text)
+            except Exception:
+                pass
+        biens = [u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)]
+        if biens:
+            return biens
+    return []
+
+
+def _liens_page(page, base: str) -> list[str]:
     hrefs = page.eval_on_selector_all(
         "a[href]", "els => els.map(e => e.getAttribute('href'))") or []
-    urls, vus = [], set()
-    hote = urlparse(base).netloc
+    urls, vus, hote = [], set(), urlparse(base).netloc
     for h in hrefs:
         if not h:
             continue
-        u = urljoin(base, h)
+        u = urljoin(base, h).split("#")[0]
         if urlparse(u).netloc == hote and MOTIF_BIEN.search(u) and u not in vus:
             vus.add(u)
             urls.append(u)
     return urls
 
 
-def _geocoder(commune: str | None, cp: str | None):
-    """Coordonnées de la commune via la Base Adresse Nationale (facultatif)."""
+def _geocoder(commune, cp):
     if not commune or requests is None:
         return None
     try:
-        r = requests.get(
-            "https://api-adresse.data.gouv.fr/search/",
-            params={"q": f"{commune} {cp or ''}".strip(), "type": "municipality", "limit": 1},
-            timeout=8, headers={"User-Agent": "RefugeImmo-POC"})
+        r = requests.get("https://api-adresse.data.gouv.fr/search/",
+                         params={"q": f"{commune} {cp or ''}".strip(),
+                                 "type": "municipality", "limit": 1},
+                         timeout=8, headers={"User-Agent": "RefugeImmo-POC"})
         r.raise_for_status()
         feats = r.json().get("features") or []
     except Exception:
@@ -113,13 +140,38 @@ def _geocoder(commune: str | None, cp: str | None):
     return lat, lon, feats[0]["properties"].get("postcode")
 
 
+def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
+    urls = _sitemap_urls(base)
+    if urls:
+        print(f"  sitemap : {len(urls)} page(s) de biens")
+        return urls[:maxi]
+    # repli : on parcourt les pages « nos biens »
+    urls = []
+    for idx in (cible.get("index") or [base]):
+        try:
+            page.goto(idx, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(1800)
+        except Exception as e:
+            print(f"  ✘ index injoignable {idx} ({e.__class__.__name__})")
+            continue
+        for u in _liens_page(page, base):
+            if u not in urls:
+                urls.append(u)
+    # depuis un index, on ne garde que les liens qui ressemblent à un détail
+    # (un chiffre dans le chemin) pour éviter les pages de catégorie.
+    details = [u for u in urls if re.search(r"\d", urlparse(u).path)]
+    choix = details or urls
+    print(f"  index : {len(choix)} lien(s) de bien repéré(s)")
+    return choix[:maxi]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("-s", "--site", default="", help="site d'une agence")
-    ap.add_argument("-n", "--nom", default="", help="nom de l'agence")
-    ap.add_argument("--index", default="", help="page listant les annonces (sinon accueil)")
-    ap.add_argument("--max", type=int, default=25, help="biens max par agence")
-    ap.add_argument("--delai", type=float, default=3.0, help="secondes entre deux pages")
+    ap.add_argument("-s", "--site", default="")
+    ap.add_argument("-n", "--nom", default="")
+    ap.add_argument("--index", default="")
+    ap.add_argument("--max", type=int, default=12)
+    ap.add_argument("--delai", type=float, default=2.5)
     args = ap.parse_args()
 
     conn = db.connexion()
@@ -132,41 +184,33 @@ def main() -> None:
             extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8"})
         page = contexte.new_page()
 
-        for cible in _cibles(args.site, args.nom):
+        for cible in _cibles(args.site, args.nom, args.index):
             base = cible["site"].rstrip("/")
-            depart = args.index or base
-            print(f"\n▶ {cible['nom']} — {depart}")
-            try:
-                page.goto(depart, wait_until="domcontentloaded", timeout=30000)
-                page.wait_for_timeout(1500)
-            except Exception as e:
-                print(f"  ✘ page de départ injoignable ({e.__class__.__name__})")
-                continue
-
-            urls = _liens_biens(page, base)[:args.max]
-            print(f"  {len(urls)} page(s) d'annonce repérée(s)")
+            print(f"\n▶ {cible['nom']} — {base}")
+            urls = _urls_a_visiter(page, cible, base, args.max)
             n = 0
             for u in urls:
                 try:
                     page.goto(u, wait_until="domcontentloaded", timeout=30000)
-                    page.wait_for_timeout(800)
+                    page.wait_for_timeout(900)
                     html = page.content()
                 except Exception:
                     continue
                 brut = extraire_annonce(html, u, source=_slug(cible["nom"]),
                                         agence=cible["nom"], agence_url=base)
-                if brut:
-                    brut["id"] = "%s-%s" % (_slug(cible["nom"]),
-                                            hashlib.sha1(u.encode()).hexdigest()[:12])
-                    if brut.get("lat") is None and brut.get("commune"):
-                        geo = _geocoder(brut.get("commune"), brut.get("code_postal"))
-                        if geo:
-                            brut["lat"], brut["lon"], cp = geo
-                            brut.setdefault("code_postal", cp)
-                            if cp:
-                                brut["departement"] = cp[:2]
-                    db.upsert_annonce(conn, preparer_annonce(brut))
-                    n += 1
+                if not brut:
+                    continue
+                brut["id"] = "%s-%s" % (_slug(cible["nom"]),
+                                        hashlib.sha1(u.encode()).hexdigest()[:12])
+                if brut.get("lat") is None and brut.get("commune"):
+                    geo = _geocoder(brut.get("commune"), brut.get("code_postal"))
+                    if geo:
+                        brut["lat"], brut["lon"], cp = geo
+                        brut.setdefault("code_postal", cp)
+                        if cp:
+                            brut["departement"] = cp[:2]
+                db.upsert_annonce(conn, preparer_annonce(brut))
+                n += 1
                 time.sleep(args.delai)
             conn.commit()
             print(f"  ✔ {n} bien(s) enregistré(s)")
