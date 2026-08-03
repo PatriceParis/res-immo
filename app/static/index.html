@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refuge Immo — biens résilients autour de Paris</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="entete-int">
+    <div>
+      <div class="marque">⛰️ Refuge Immo</div>
+      <div class="slogan">Votre base arrière à moins de 3 h de Paris — résilience &amp; autonomie</div>
+    </div>
+    <span class="pastille-source" id="bandeau-source">jeu de démonstration</span>
+  </div>
+</header>
+
+<main class="agencement">
+
+  <aside class="filtres" aria-label="Filtres de recherche">
+    <h2>Affiner la recherche</h2>
+
+    <label class="champ">
+      <span>Budget maximum <output id="aff-prix">tous prix</output></span>
+      <input type="range" id="f-prix" min="100000" max="800000" step="10000" value="800000">
+    </label>
+
+    <label class="champ">
+      <span>Temps de route depuis Paris <output id="aff-temps">sans limite</output></span>
+      <input type="range" id="f-temps" min="45" max="240" step="15" value="240">
+    </label>
+
+    <label class="champ">
+      <span>Score de résilience minimum <output id="aff-score">0</output></span>
+      <input type="range" id="f-score" min="0" max="90" step="5" value="0">
+    </label>
+
+    <label class="champ">
+      <span>Terrain minimum</span>
+      <select id="f-terrain">
+        <option value="0">Indifférent</option>
+        <option value="1000">1 000 m² et +</option>
+        <option value="2500">2 500 m² et +</option>
+        <option value="5000">5 000 m² et +</option>
+        <option value="10000">1 hectare et +</option>
+      </select>
+    </label>
+
+    <fieldset class="champ atouts">
+      <legend>Atouts indispensables</legend>
+      <label><input type="checkbox" id="f-cave"> Cave ou sous-sol</label>
+      <label><input type="checkbox" id="f-puits"> Puits ou forage</label>
+      <label><input type="checkbox" id="f-bois"> Chauffage au bois</label>
+      <label><input type="checkbox" id="f-solaire"> Panneaux solaires</label>
+      <label><input type="checkbox" id="f-dependances"> Dépendances / grange</label>
+      <label><input type="checkbox" id="f-potager"> Verger / potager</label>
+      <label><input type="checkbox" id="f-hors-inondation"> Hors zone inondable</label>
+    </fieldset>
+
+    <label class="champ">
+      <span>Trier par</span>
+      <select id="f-tri">
+        <option value="score">Score de résilience</option>
+        <option value="prix">Prix croissant</option>
+        <option value="prix_m2">Prix au m²</option>
+        <option value="temps">Temps depuis Paris</option>
+        <option value="terrain">Taille du terrain</option>
+      </select>
+    </label>
+
+    <button id="f-reinit" class="bouton-secondaire" type="button">Tout réinitialiser</button>
+
+    <div class="legende-score" aria-hidden="false">
+      <h3>Lecture du score</h3>
+      <div><span class="pastille n4"></span> 70–100 · excellent potentiel</div>
+      <div><span class="pastille n3"></span> 55–69 · bon potentiel</div>
+      <div><span class="pastille n2"></span> 40–54 · potentiel moyen</div>
+      <div><span class="pastille n1"></span> 0–39 · potentiel limité</div>
+    </div>
+  </aside>
+
+  <section class="resultats">
+    <div id="carte" role="img" aria-label="Carte des biens"></div>
+    <div class="barre-resultats">
+      <span id="compteur">Chargement…</span>
+      <span class="note-estimation">Temps de route estimés à vol d'oiseau corrigé — à vérifier avant visite.</span>
+    </div>
+    <div id="liste" class="liste"></div>
+  </section>
+
+</main>
+
+<!-- Fiche détaillée d'un bien -->
+<div id="voile" class="voile" hidden>
+  <div class="modale" role="dialog" aria-modal="true" aria-labelledby="modale-titre">
+    <button class="fermer" id="modale-fermer" aria-label="Fermer">✕</button>
+    <div id="modale-contenu"></div>
+  </div>
+</div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
