@@ -162,6 +162,35 @@ function ecartMarche(a) {
     sous ? `${Math.abs(e)} % sous le secteur` : `+${e} % / secteur`}</span>`;
 }
 
+// Depuis quand ce bien n'a-t-il pas été reconstaté en ligne ?
+//
+// Une annonce affichée prétend implicitement être encore d'actualité. Or la
+// collecte passe chez les agences à tour de rôle : un bien peut n'avoir pas
+// été revérifié depuis plusieurs semaines, et avoir été vendu entre-temps.
+// Plutôt que de laisser croire, on le dit — et au-delà de 45 jours on invite
+// à reconfirmer auprès de l'agence.
+const JOURS_AVANT_PEREMPTION = 45;
+
+function joursDepuis(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (isNaN(d)) return null;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
+}
+
+function fraicheur(a) {
+  const jours = joursDepuis(a.revue_le);
+  if (jours == null) return "";
+  const quand = jours <= 0 ? "aujourd'hui"
+    : jours === 1 ? "hier"
+    : `il y a ${jours} jours`;
+  if (jours > JOURS_AVANT_PEREMPTION) {
+    return `<p class="source-ligne perime">Vu en ligne ${quand} — à reconfirmer
+      auprès de l'agence avant de vous déplacer.</p>`;
+  }
+  return `<p class="source-ligne">Annonce constatée en ligne ${quand}.</p>`;
+}
+
 // On ne connaît QU'UNE photo par bien (celle publiée par l'agence). Afficher
 // « 1 / 9 » revenait à inventer un nombre à partir d'un hachage de l'identifiant,
 // et à le présenter comme un fait — jusque dans l'argument commercial
@@ -492,6 +521,7 @@ function ouvrirFiche(id) {
       <p class="source-ligne">Source : ${echap(a.source)}${a.url
         ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
         : ""}</p>
+      ${fraicheur(a)}
     </section>`;
 
   const btn = $("#btn-mer");
