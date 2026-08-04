@@ -45,6 +45,26 @@ PORTAILS_EXCLUS = {
     "x.com", "youtube.com", "wa.me", "immobilier.notaires.fr", "meilleursagents.com",
 }
 
+# Sites « tête de réseau » : OpenStreetMap donne souvent l'adresse nationale
+# pour une agence locale de franchise. Y collecter ramènerait des biens de
+# toute la France — hors sujet, et le budget de collecte y passerait entier.
+# On exclut le domaine EXACT, mais on garde les déclinaisons locales
+# (compiegne.arthurimmo.com, century21-vandome-crepy.com, quentimmo.fr…),
+# qui sont, elles, de vraies agences de terrain.
+RESEAUX_NATIONAUX = {
+    "orpi.com", "laforet.com", "eraimmobilier.com", "era-immobilier.fr",
+    "century21.fr", "guy-hoquet.com", "nestenn.com", "iadfrance.fr",
+    "iad-france.fr", "stephaneplazaimmobilier.com", "ladresse.com",
+    "humanimmobilier.fr", "arthurimmo.com", "sergic.com", "foncia.com",
+    "citya.com", "square-habitat.fr", "safti.fr", "capifrance.fr",
+    "optimhome.com", "bellesdemeures.com", "proprieteslefigaro.com",
+}
+
+# Au-delà, ce n'est plus une agence de terroir mais un portail : une agence
+# locale n'a pas des milliers de biens en vitrine. Garde-fou indépendant de
+# la liste ci-dessus, qui ne peut pas être exhaustive.
+PLAFOND_BIENS_LOCAL = 2000
+
 # Indices d'une page de bien dans une URL (mêmes repères que le collecteur).
 MOTIF_BIEN = re.compile(
     r"/(annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens"
@@ -78,11 +98,19 @@ def domaine(url: str) -> str:
 
 
 def est_portail_exclu(url: str) -> bool:
-    """True pour un portail national, un réseau social ou un domaine vide."""
+    """True pour un portail national, un réseau social ou un domaine vide.
+
+    Les portails sont exclus jusque dans leurs sous-domaines ; les têtes de
+    réseau seulement sur le domaine exact, pour laisser passer les agences
+    locales de franchise (compiegne.arthurimmo.com est une vraie agence,
+    arthurimmo.com est le site national).
+    """
     d = domaine(url)
     if not d or "." not in d:
         return True
-    return any(d == p or d.endswith("." + p) for p in PORTAILS_EXCLUS)
+    if any(d == p or d.endswith("." + p) for p in PORTAILS_EXCLUS):
+        return True
+    return d in RESEAUX_NATIONAUX
 
 
 def agences_depuis_overpass(reponse: dict, zone_nom: str) -> list[dict]:
@@ -120,10 +148,18 @@ def score_candidat(sonde: dict) -> int:
 
     Sert à trier les candidats — on branche d'abord ceux qui rapporteront le
     plus de biens exploitables, pas ceux dont le nom sonne bien.
+
+    Un catalogue démesuré n'est PAS un bon signe : c'est un portail national
+    (Orpi, ERA… : des dizaines de milliers de biens dans toute la France).
+    Y collecter serait hors sujet et engloutirait le budget de collecte.
     """
     if not sonde.get("joignable"):
         return 0
-    note = min(sonde.get("nb_biens", 0), 60)          # jusqu'à 60 points
+    nb = sonde.get("nb_biens", 0)
+    site = sonde.get("site")
+    if nb > PLAFOND_BIENS_LOCAL or (site and est_portail_exclu(site)):
+        return 0
+    note = min(nb, 60)                                # jusqu'à 60 points
     if sonde.get("sitemap"):
         note += 20        # un sitemap = collecte fiable et peu coûteuse
     if sonde.get("schema_org"):

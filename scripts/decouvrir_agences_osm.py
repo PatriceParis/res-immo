@@ -27,6 +27,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import urljoin
@@ -61,17 +62,28 @@ RE_JSONLD_IMMO = re.compile(
 
 
 def _zone(zone: dict) -> list[dict]:
-    """Agences recensées par OpenStreetMap autour d'une ville."""
-    for service in OVERPASS:
+    """Agences recensées par OpenStreetMap autour d'une ville.
+
+    Overpass n'accorde que quelques créneaux simultanés par adresse IP et
+    répond « 429 / trop de requêtes » au-delà : on réessaie, en alternant les
+    deux serveurs publics et en patientant un peu plus à chaque tentative.
+    Sans cela, la moitié des zones revenait vide alors que les données
+    existent bel et bien.
+    """
+    dernier = ""
+    for tentative in range(4):
+        service = OVERPASS[tentative % len(OVERPASS)]
         try:
             r = requests.post(service, data={"data": requete_overpass(zone)},
-                              headers=ENTETES, timeout=90)
+                              headers=ENTETES, timeout=120)
             r.raise_for_status()
             agences = agences_depuis_overpass(r.json(), zone["nom"])
             print(f"  {zone['nom']:20} {len(agences):>3} agence(s) avec site web")
             return agences
         except Exception as e:
-            print(f"  {zone['nom']:20} ✘ {e.__class__.__name__} ({service.split('/')[2]})")
+            dernier = f"{e.__class__.__name__} ({service.split('/')[2]})"
+            time.sleep(4 * (tentative + 1))
+    print(f"  {zone['nom']:20} ✘ abandon après 4 tentatives — {dernier}")
     return []
 
 
@@ -145,12 +157,19 @@ def main() -> None:
                     help="n'écrit pas la configuration, affiche seulement le rapport")
     ap.add_argument("--note", type=int, default=25,
                     help="note minimale pour brancher une agence (défaut : 25)")
-    ap.add_argument("--parallele", type=int, default=12)
+    ap.add_argument("--parallele", type=int, default=12,
+                    help="sondages de sites simultanés (défaut : 12)")
+    ap.add_argument("--parallele-osm", type=int, default=2,
+                    help="requêtes Overpass simultanées — au-delà de 2, l'API refuse")
     args = ap.parse_args()
 
-    print(f"1/2 — Recensement OpenStreetMap sur {len(ZONES)} zones (en parallèle)")
+    # Overpass n'accepte que 2 requêtes simultanées par IP : au-delà, il
+    # refuse et les zones reviennent vides. Le sondage des sites, lui, vise
+    # des hôtes tous différents et peut rester largement parallèle.
+    print(f"1/2 — Recensement OpenStreetMap sur {len(ZONES)} zones "
+          f"({args.parallele_osm} en parallèle)")
     candidates: list[dict] = []
-    with ThreadPoolExecutor(max_workers=min(args.parallele, len(ZONES))) as pool:
+    with ThreadPoolExecutor(max_workers=args.parallele_osm) as pool:
         for futur in as_completed([pool.submit(_zone, z) for z in ZONES]):
             candidates += futur.result()
 
