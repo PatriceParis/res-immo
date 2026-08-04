@@ -75,7 +75,10 @@
       <label><input type="checkbox" id="f-solaire"> Panneaux solaires</label>
       <label><input type="checkbox" id="f-dependances"> Dépendances / grange</label>
       <label><input type="checkbox" id="f-potager"> Verger / potager</label>
-      <label><input type="checkbox" id="f-hors-inondation"> Hors zone inondable</label>
+      <!-- Géorisques documente le risque à l'échelle de la COMMUNE, pas de la
+           parcelle : « Hors zone inondable » promettait plus que la donnée ne
+           permet. L'intitulé dit maintenant ce qui est réellement filtré. -->
+      <label title="Écarte les biens dont la commune est documentée inondable par Géorisques. Le risque s'apprécie ensuite à l'adresse."><input type="checkbox" id="f-hors-inondation"> Commune sans inondation recensée</label>
     </fieldset>
 
     <label class="champ">

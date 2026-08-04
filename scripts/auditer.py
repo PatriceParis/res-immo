@@ -240,6 +240,42 @@ def verifier_liens(biens: list[dict], audit: Audit) -> None:
             audit.signaler("photo à l'URL non absolue", f"{photo[:60]}  {_etiquette(b)}")
 
 
+# Cases à cocher de l'interface → colonne qui les porte.
+FILTRES_BOOLEENS = {
+    "Cave / sous-sol": "has_cave",
+    "Puits / source": "has_puits",
+    "Chauffage au bois": "has_bois",
+    "Panneaux solaires": "has_solaire",
+    "Dépendances / grange": "has_dependances",
+    "Verger / potager": "has_potager",
+    "Habitat troglodyte": "has_troglodyte",
+    "Commune sans inondation recensée": "hors_inondation",
+}
+
+
+def verifier_filtres_actifs(biens: list[dict], audit: Audit) -> None:
+    """Une case qui sélectionne 0 % ou 100 % du catalogue ne filtre rien.
+
+    C'est exactement ce qui est arrivé à « hors zone inondable » : les
+    risques Géorisques ont été renommés `*_commune`, le chargement lisait
+    encore l'ancienne clé, et la case laissait passer 133 biens sur 133 —
+    dont 86 dans une commune documentée inondable. Silencieux, invisible
+    aux tests unitaires, et pourtant la case promettait quelque chose.
+    """
+    for libelle, colonne in FILTRES_BOOLEENS.items():
+        connus = [b for b in biens if b.get(colonne) is not None]
+        if len(connus) < 20:          # échantillon trop mince pour conclure
+            continue
+        coches = sum(1 for b in connus if b[colonne])
+        if coches == 0:
+            audit.signaler("case à cocher qui ne renvoie jamais rien",
+                           f"« {libelle} » ({colonne}) : 0 bien sur {len(connus)}")
+        elif coches == len(connus):
+            audit.signaler("case à cocher qui ne filtre rien",
+                           f"« {libelle} » ({colonne}) : "
+                           f"{coches} biens sur {len(connus)}")
+
+
 REGLES = (
     verifier_prix_au_m2,
     verifier_surfaces,
@@ -250,6 +286,7 @@ REGLES = (
     verifier_biens_vendus,
     verifier_doublons,
     verifier_liens,
+    verifier_filtres_actifs,
 )
 
 

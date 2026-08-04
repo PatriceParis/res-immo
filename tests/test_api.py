@@ -149,6 +149,40 @@ def test_les_pastilles_de_terroir_comptent_avec_les_filtres(client):
     assert liste["total"] == par_region["Normandie"]
 
 
+def test_le_filtre_d_inondation_reconnait_le_risque_communal(tmp_path, monkeypatch):
+    """Bug muet : la case « inondation » ne filtrait plus rien.
+
+    Les risques Géorisques ont été renommés `*_commune` pour dire leur
+    portée réelle, mais le chargement lisait toujours la clé `inondation`.
+    Plus aucun bien n'était donc marqué inondable : 133 biens sur 133
+    passaient la case, dont 86 dans une commune documentée inondable.
+    """
+    monkeypatch.setenv("REFUGE_DB", str(tmp_path / "inond.db"))
+    from app import db
+    from app.chargement import charger_liste
+
+    # Prix et surfaces distincts : trois biens au signalement identique sont
+    # écartés par le garde-fou anti-bandeau (_signatures_suspectes).
+    base = {"source": "test", "type_bien": "maison", "commune": "Bellême",
+            "code_postal": "61130", "lat": 48.373, "lon": 0.560}
+    conn = db.connexion()
+    charges = charger_liste(conn, [
+        {**base, "id": "sec", "titre": "Maison de bourg au sec",
+         "prix": 200000, "surface_m2": 120, "risques": {}},
+        {**base, "id": "commune", "titre": "Maison de bourg près du ru",
+         "prix": 210000, "surface_m2": 130, "risques": {"inondation_commune": True}},
+        {**base, "id": "parcelle", "titre": "Maison de bourg dans le val",
+         "prix": 220000, "surface_m2": 140, "risques": {"inondation": True}},
+    ])
+    assert charges == 3
+    try:
+        total, items = db.chercher(conn, {"hors_inondation": 1, "limit": 50})
+    finally:
+        conn.close()
+    assert total == 1, "le risque communal ET le risque à la parcelle doivent écarter"
+    assert items[0]["id"] == "sec"
+
+
 def test_le_filtre_de_region_n_ecrase_pas_les_autres_pastilles(client):
     """Compter par région en appliquant le filtre de région mettrait toutes
     les autres à zéro : ce filtre-là doit être ignoré."""
