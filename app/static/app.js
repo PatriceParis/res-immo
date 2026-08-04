@@ -127,6 +127,25 @@ function illustration(a) {
   return "data:image/svg+xml," + encodeURIComponent(svg).replace(/'/g, "%27");
 }
 
+/* ---------------- fraîcheur de l'annonce ----------------
+   Ce que cherche celui qui revient chaque semaine : ce qui a bougé. */
+
+function estNouveau(a, jours = 10) {
+  if (!a.vue_le) return false;
+  const vue = new Date(a.vue_le);
+  if (isNaN(vue)) return false;
+  return (Date.now() - vue.getTime()) / 86400000 <= jours;
+}
+
+// Une baisse de prix est le signal d'achat le plus parlant — et celui
+// qu'aucun portail n'affiche clairement.
+function baisse(a) {
+  if (!a.prix_precedent || !a.prix || a.prix >= a.prix_precedent) return "";
+  const ecart = Math.round(100 * (a.prix_precedent - a.prix) / a.prix_precedent);
+  return `<span class="baisse-prix" title="Ancien prix : ${fmtEuros.format(a.prix_precedent)}">
+    ↓ ${ecart} %</span>`;
+}
+
 function nbPhotos(a) {
   return 6 + empreinte(a.id || a.titre || "x") % 7;  // 6 à 12 photos « au dossier »
 }
@@ -219,6 +238,7 @@ function ficheAnnonce(a) {
     <div class="photo" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
       <span class="photo-compte">📷 1 / ${nbPhotos(a)}</span>
+      ${estNouveau(a) ? `<span class="pastille-nouveau">Nouveau</span>` : ""}
     </div>
     <div class="fiche-haut">
       <div class="score-jeton ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
@@ -231,6 +251,7 @@ function ficheAnnonce(a) {
     </div>
     <div class="chiffres">
       <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix n.c."}</span>
+      ${baisse(a)}
       ${prixM2 ? `<span>${fmtNombre.format(prixM2)} €/m²</span>` : ""}
       <span><b>${a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : "—"}</b> hab.</span>
       <span>terrain <b>${a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : "—"}</b></span>

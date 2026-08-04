@@ -55,6 +55,10 @@ CREATE TABLE IF NOT EXISTS annonces (
     has_dependances   INTEGER DEFAULT 0,
     has_potager       INTEGER DEFAULT 0,
     has_troglodyte    INTEGER DEFAULT 0,
+    vue_le            TEXT DEFAULT '',
+    revue_le          TEXT DEFAULT '',
+    prix_precedent    REAL,
+    prix_baisse_le    TEXT DEFAULT '',
     hors_inondation   INTEGER DEFAULT 1,
     date_maj          TEXT
 );
@@ -70,6 +74,9 @@ TRIS = {
     "prix_m2": "(prix * 1.0 / NULLIF(surface_m2, 0)) ASC",
     "temps":   "temps_voiture_min ASC",
     "terrain": "terrain_m2 DESC",
+    # Ce qui vient d'arriver : c'est la question de celui qui revient
+    # chaque semaine voir si quelque chose a bougé.
+    "nouveaute": "vue_le DESC",
 }
 
 CHAMPS_JSON = {
@@ -108,7 +115,11 @@ def _migrer(conn: sqlite3.Connection) -> None:
     for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''"),
                                 ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''"),
                                 ("train_json", "TEXT DEFAULT '{}'"),
-                                ("has_troglodyte", "INTEGER DEFAULT 0")):
+                                ("has_troglodyte", "INTEGER DEFAULT 0"),
+                                ("vue_le", "TEXT DEFAULT ''"),
+                                ("revue_le", "TEXT DEFAULT ''"),
+                                ("prix_precedent", "REAL"),
+                                ("prix_baisse_le", "TEXT DEFAULT ''")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -159,6 +170,10 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "has_dependances": a.get("has_dependances", 0),
         "has_potager": a.get("has_potager", 0),
         "has_troglodyte": a.get("has_troglodyte", 0),
+        "vue_le": a.get("vue_le", ""),
+        "revue_le": a.get("revue_le", ""),
+        "prix_precedent": a.get("prix_precedent"),
+        "prix_baisse_le": a.get("prix_baisse_le", ""),
         "hors_inondation": a.get("hors_inondation", 1),
         "date_maj": a.get("date_maj", date.today().isoformat()),
     }

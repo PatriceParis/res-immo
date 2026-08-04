@@ -66,6 +66,35 @@ RE_TERRAIN_HA = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:ha|hectares?)\b", re.IGNOREC
 RE_PIECES = re.compile(r"(\d{1,2})\s*pi[eè]ces?", re.IGNORECASE)
 RE_TITRE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 RE_DPE = re.compile(r"\b([A-G])\b")
+
+# --- Diagnostic de performance énergétique (DPE) ------------------------------
+# Le DPE est obligatoire dans toute annonce, mais sa lettre A–G est presque
+# toujours portée par une IMAGE ou une étiquette stylée, pas par le texte : le
+# lire dans le texte seul le manquait systématiquement (0 bien sur 72).
+# On le cherche donc là où les sites le rangent réellement.
+RE_DPE_CLASSE = re.compile(          # class="dpe-d", "energy-class-D", "etiquette-energie_C"
+    r'class="[^"]*?(?:dpe|classe[-_ ]?energie|energy[-_ ]?class|etiquette[-_ ]?energ\w*)'
+    r'[-_ ]?([a-g])(?![a-z0-9])', re.IGNORECASE)
+RE_DPE_DATA = re.compile(            # data-dpe="D", data-classe-energie="C"
+    r'data-(?:dpe|classe[-_]?energie|energie|energy)="\s*([a-g])\s*"', re.IGNORECASE)
+RE_DPE_ALT = re.compile(             # alt="DPE D", title="Classe énergie : C"
+    r'(?:alt|title)="[^"]{0,60}?(?:dpe|classe [ée]nerg\w*|[ée]tiquette [ée]nerg\w*)'
+    r'[^"a-g]{0,12}?([a-g])(?![a-z0-9])"?', re.IGNORECASE)
+# En texte, la lettre est TOUJOURS en majuscule sur une étiquette. L'exiger
+# évite de lire « DPE a été réalisé » comme un DPE de classe A.
+RE_DPE_TEXTE = re.compile(
+    r'(?:DPE|[Cc]lasse [ée]nerg\w*|[ÉEée]tiquette [ée]nerg\w*|[Bb]ilan [ée]nerg\w*)'
+    r'\s*(?:[:\-–]|\bde\b)?\s*([A-G])(?![A-Za-z0-9])')
+
+
+def _dpe(html: str, texte: str) -> str | None:
+    """Classe énergétique A–G du bien, cherchée dans l'ordre de fiabilité."""
+    for motif in (RE_DPE_CLASSE, RE_DPE_DATA, RE_DPE_ALT):
+        m = motif.search(html or "")
+        if m:
+            return m.group(1).upper()
+    m = RE_DPE_TEXTE.search(texte or "")
+    return m.group(1).upper() if m else None
 # Code postal de France métropolitaine (01000–95999, Corse comprise).
 RE_CP = re.compile(r"\b((?:0[1-9]|[1-8]\d|9[0-5])\d{3})\b")
 # Numéros de référence d'annonce : « Ref. 23624 », « réf : 1077b », « n° 1580 ».
@@ -356,6 +385,12 @@ def extraire_annonce(html: str, url: str, source: str,
     # le code postal quand schema.org ne fournit pas l'adresse.
     texte_complet = texte or _texte_visible(html)
     annonce["texte"] = texte_complet[:3000]
+
+    # DPE : schema.org ne le donne presque jamais ; on le cherche dans la page.
+    if not annonce.get("dpe"):
+        dpe = _dpe(html, texte_complet)
+        if dpe:
+            annonce["dpe"] = dpe
 
     if not annonce.get("code_postal"):
         cp = _code_postal(annonce.get("titre", ""), texte_complet)

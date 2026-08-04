@@ -82,6 +82,8 @@ def preparer_annonce(brut: dict) -> dict:
     annonce["has_dependances"] = int(features.get("grange_dependance", False))
     annonce["has_potager"] = int(features.get("verger_potager", False))
     annonce["has_troglodyte"] = int(features.get("troglodyte", False))
+    # Mémoire portée par le fichier exporté (app/historique.py) : on la
+    # laisse telle quelle, c'est elle qui dit ce qui est nouveau.
     annonce["hors_inondation"] = 0 if risques.get("inondation") else 1
     return annonce
 
