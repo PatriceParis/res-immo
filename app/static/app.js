@@ -104,11 +104,16 @@ function photoProxy(a) {
 
 // Balise <img> de la vraie photo, posée sur l'illustration : onerror bascule
 // sur l'illustration si l'image ne charge pas (jamais d'image cassée).
+//
+// La pastille « photo de l'agence » disparaît avec elle : la laisser sur
+// l'illustration de repli reviendrait à annoncer une photo qu'on ne montre
+// pas — le même défaut que le compte de photos inventé, en plus discret.
 function imgPhoto(a) {
   const src = photoProxy(a);
   if (!src) return "";
   return `<img class="vraie-photo" src="${src}" alt="" loading="lazy"
-    decoding="async" onerror="this.remove()">`;
+    decoding="async"
+    onerror="this.parentNode.classList.add('photo-absente'); this.remove()">`;
 }
 
 function illustration(a) {
