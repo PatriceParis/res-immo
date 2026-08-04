@@ -96,8 +96,15 @@ jobs:
                 break
               fi
               echo "Push rejeté : la branche a bougé pendant la collecte, on se replace dessus ($essai/5)…"
+              # On met notre fichier de côté, on se cale EXACTEMENT sur la
+              # version distante, puis on le remet : ainsi notre commit ne
+              # contient que ce fichier. Un « reset --soft » laisserait l'index
+              # de l'ancien checkout et re-committerait tout le reste au
+              # passage, écrasant silencieusement le travail des autres.
+              cp data/annonces_reel.json "$RUNNER_TEMP/annonces_reel.json"
               git fetch origin main
-              git reset --soft origin/main
+              git reset --hard origin/main
+              cp "$RUNNER_TEMP/annonces_reel.json" data/annonces_reel.json
               git add data/annonces_reel.json
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
               sleep $((essai * 5))
