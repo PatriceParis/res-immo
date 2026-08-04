@@ -63,6 +63,8 @@ démonstration.
 
 Le barème du score est dans **[docs/CRITERES.md](docs/CRITERES.md)**, le choix
 des terroirs et le modèle économique dans **[docs/PERSONA.md](docs/PERSONA.md)**.
+Les prochaines évolutions — et ce qui limite le produit aujourd'hui, chiffres
+à l'appui — sont dans **[docs/ROADMAP.md](docs/ROADMAP.md)**.
 
 ---
 
