@@ -58,7 +58,14 @@ MOTIFS = {
     ),
     "atelier": r"ateliers?|garages?",
     # --- critères de résilience ajoutés ---
-    "troglodyte": r"troglodyt",                       # habitat troglodyte : inertie thermique + abri
+    # Habitat troglodyte : inertie thermique + abri. Au-delà du mot savant, on
+    # reconnaît le vocabulaire du pays du tuffeau (vallée du Loir, Vendômois),
+    # où l'on dit « cave demeurante » pour une cave habitée.
+    "troglodyte": (
+        r"troglodyt|caves? demeurantes?|demeurante"
+        r"|creuse\w* dans (la roche|le coteau|le tuffeau|la falaise|le rocher)"
+        r"|habitat de coteau|maisons? de coteau"
+    ),
     "source": r"\bsources?\b|captage|resurgence",
     "prairie": r"prairies?|paturages?|patures?|pacages?|herbages?|\bfoin\b",
     "poulailler": r"poulaillers?|clapiers?",

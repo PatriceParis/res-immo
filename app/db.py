@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     has_solaire       INTEGER DEFAULT 0,
     has_dependances   INTEGER DEFAULT 0,
     has_potager       INTEGER DEFAULT 0,
+    has_troglodyte    INTEGER DEFAULT 0,
     hors_inondation   INTEGER DEFAULT 1,
     date_maj          TEXT
 );
@@ -106,7 +107,8 @@ def _migrer(conn: sqlite3.Connection) -> None:
     existantes = {r[1] for r in conn.execute("PRAGMA table_info(annonces)").fetchall()}
     for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''"),
                                 ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''"),
-                                ("train_json", "TEXT DEFAULT '{}'")):
+                                ("train_json", "TEXT DEFAULT '{}'"),
+                                ("has_troglodyte", "INTEGER DEFAULT 0")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -156,6 +158,7 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "has_solaire": a.get("has_solaire", 0),
         "has_dependances": a.get("has_dependances", 0),
         "has_potager": a.get("has_potager", 0),
+        "has_troglodyte": a.get("has_troglodyte", 0),
         "hors_inondation": a.get("hors_inondation", 1),
         "date_maj": a.get("date_maj", date.today().isoformat()),
     }
@@ -203,6 +206,7 @@ def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
         "solaire": "has_solaire = 1",
         "dependances": "has_dependances = 1",
         "potager": "has_potager = 1",
+        "troglodyte": "has_troglodyte = 1",
         "hors_inondation": "hors_inondation = 1",
     }
     for cle, sql in drapeaux.items():

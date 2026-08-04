@@ -140,7 +140,7 @@ Au-delà des équipements « classiques », le score reconnaît aussi :
 
 | Critère | Pilier(s) | Intérêt résilience |
 |---|---|---|
-| **Habitat troglodyte** | Abri +8, Énergie +3 | creusé dans la roche : **frais l'été, tempéré l'hiver**, cellier naturel — précieux face aux canicules |
+| **Habitat troglodyte** | Abri +8, Énergie +3 | creusé dans la roche : **frais l'été, tempéré l'hiver**, cellier naturel — précieux face aux canicules. Repéré aussi via le vocabulaire du pays du tuffeau (« cave demeurante », « creusé dans le coteau »), et filtrable directement dans l'interface |
 | Source / captage | Eau +4 | eau gravitaire, sans réseau ni pompe |
 | Bâti pierre / tuffeau / colombage | Énergie +3 | forte **inertie thermique** (confort sans climatisation) |
 | Pompe à chaleur / géothermie | Énergie +3 | chauffage sobre |

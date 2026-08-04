@@ -64,6 +64,7 @@ RE_TERRAIN = re.compile(
     r"(?:terrain|parcelle|jardin)\D{0,30}?(\d[\d\s  ]{2,})\s*m[²2]", re.IGNORECASE)
 RE_TERRAIN_HA = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:ha|hectares?)\b", re.IGNORECASE)
 RE_PIECES = re.compile(r"(\d{1,2})\s*pi[eè]ces?", re.IGNORECASE)
+RE_TITRE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 RE_DPE = re.compile(r"\b([A-G])\b")
 # Code postal de France métropolitaine (01000–95999, Corse comprise).
 RE_CP = re.compile(r"\b((?:0[1-9]|[1-8]\d|9[0-5])\d{3})\b")
@@ -363,11 +364,23 @@ def extraire_annonce(html: str, url: str, source: str,
     if annonce.get("code_postal") and not annonce.get("departement"):
         annonce["departement"] = str(annonce["code_postal"])[:2]
 
+    # Dernier recours pour le titre : la balise <title> de la page.
+    if not annonce.get("titre"):
+        balise = RE_TITRE.search(html)
+        if balise:
+            annonce["titre"] = re.sub(r"\s+", " ", balise.group(1)).strip()
+
+    # Sans titre exploitable, l'extraction a échoué de bout en bout. Inventer
+    # un titre (« Agence X — bien à vendre ») masquait cet échec : les pages
+    # concernées ressortaient toutes avec le MÊME prix et la MÊME surface,
+    # récupérés dans un bandeau commun à tout le site. Mieux vaut ne rien
+    # remonter qu'une dizaine de biens fantômes identiques.
+    if not annonce.get("titre"):
+        return None
+
     annonce["source"] = source
     annonce["url"] = url
     annonce["agence"] = agence
     annonce["agence_url"] = agence_url
     annonce.setdefault("type_bien", "maison")
-    if not annonce.get("titre"):
-        annonce["titre"] = (agence or "Annonce") + " — bien à vendre"
     return annonce

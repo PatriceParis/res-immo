@@ -169,7 +169,8 @@ function lireFiltres() {
   for (const [id, cle] of [
     ["#f-cave", "cave"], ["#f-puits", "puits"], ["#f-bois", "bois"],
     ["#f-solaire", "solaire"], ["#f-dependances", "dependances"],
-    ["#f-potager", "potager"], ["#f-hors-inondation", "hors_inondation"],
+    ["#f-potager", "potager"], ["#f-troglodyte", "troglodyte"],
+    ["#f-hors-inondation", "hors_inondation"],
   ]) if ($(id).checked) p.set(cle, "1");
   if ($("#f-agence").value) p.set("agence", $("#f-agence").value);
   if (etat.region) p.set("region", etat.region);

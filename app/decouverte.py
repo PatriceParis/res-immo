@@ -34,6 +34,11 @@ ZONES = [
     {"nom": "Vendôme",         "lat": 47.7931, "lon": 1.0656, "rayon_km": 30},
     {"nom": "Nogent-le-Rotrou", "lat": 48.3230, "lon": 0.8175, "rayon_km": 25},
     {"nom": "Sens",            "lat": 48.1977, "lon": 3.2836, "rayon_km": 25},
+    # Vallée du Loir : le pays du tuffeau, où l'habitat troglodyte est courant.
+    # Une maison creusée dans le coteau reste fraîche l'été et tempérée
+    # l'hiver — précisément ce qu'on cherche face aux canicules.
+    {"nom": "Montoire-sur-le-Loir", "lat": 47.7539, "lon": 0.8672, "rayon_km": 25},
+    {"nom": "Château-Renault",  "lat": 47.5919, "lon": 0.9114, "rayon_km": 25},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence

@@ -335,3 +335,6 @@ body { overflow-x: hidden; }
   .score-jeton.grand { width: 54px; height: 54px; font-size: 19px; }
   .terroir { padding: 6px 10px; }
 }
+
+/* Petit ⓘ d'aide à côté d'un filtre peu évident (ex. habitat troglodyte). */
+.aide-filtre { color: var(--encre-2); font-size: 11px; cursor: help; }
