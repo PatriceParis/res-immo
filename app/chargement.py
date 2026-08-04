@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from . import db, gares, geo, regions, scoring
+from . import db, gares, geo, marche, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
 
 
@@ -128,9 +128,24 @@ def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
 
 
 def charger_liste(conn, annonces: list[dict]) -> int:
-    """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé."""
+    """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé.
+
+    Deux temps : on prépare d'abord tous les biens retenus, car situer un prix
+    par rapport à son secteur suppose de connaître l'ensemble ; on écrit
+    ensuite.
+    """
+    retenues = _preparer_toutes(conn, annonces)
+    medianes = marche.medianes_par_secteur(retenues)
+    for annonce in retenues:
+        db.upsert_annonce(conn, marche.situer(annonce, medianes))
+    conn.commit()
+    return len(retenues)
+
+
+def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
+    """Applique tous les filtres de qualité et de périmètre, sans écrire."""
     suspectes = _signatures_suspectes(annonces)
-    n = 0
+    retenues = []
     for brut in annonces:
         if (brut.get("agence"), brut.get("prix"), brut.get("surface_m2"),
                 brut.get("terrain_m2")) in suspectes:
@@ -150,10 +165,8 @@ def charger_liste(conn, annonces: list[dict]) -> int:
             continue
         if str(dept) not in DEPARTEMENTS_CIBLES:
             continue  # hors des terroirs ciblés (souvent une réf. lue comme un CP)
-        db.upsert_annonce(conn, annonce)
-        n += 1
-    conn.commit()
-    return n
+        retenues.append(annonce)
+    return retenues
 
 
 def charger_annonces_json(conn, chemin: Path | str) -> int:

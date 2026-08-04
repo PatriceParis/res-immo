@@ -59,7 +59,11 @@ RE_META_INV = re.compile(  # variante : content avant property
     re.IGNORECASE,
 )
 RE_PRIX = re.compile(r"(\d[\d\s  .]{3,})\s*€")
-RE_SURFACE = re.compile(r"(\d{2,4})\s*m[²2]\b", re.IGNORECASE)
+# Les surfaces sont très souvent décimales dans les annonces (« 132,96 m² »,
+# « 238.0 m2 »). Sans la partie décimale, « 132,96 m² » était lu **96 m²** et
+# « 238.0 m2 » n'était pas reconnu du tout : de quoi fausser tous les prix
+# au m², donc la comparaison au marché.
+RE_SURFACE = re.compile(r"(\d{2,4}(?:[.,]\d{1,2})?)\s*m[²2]\b", re.IGNORECASE)
 RE_TERRAIN = re.compile(
     r"(?:terrain|parcelle|jardin)\D{0,30}?(\d[\d\s  ]{2,})\s*m[²2]", re.IGNORECASE)
 RE_TERRAIN_HA = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:ha|hectares?)\b", re.IGNORECASE)
