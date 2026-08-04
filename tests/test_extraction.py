@@ -155,3 +155,19 @@ def test_numero_de_reference_nest_pas_un_code_postal():
     a = extraire_annonce(html, "https://x.fr/demeures/hotel-alencon", source="x")
     assert a["code_postal"] == "61000"
     assert a["departement"] == "61"
+
+
+def test_surfaces_decimales():
+    """« 132,96 m² » était lu 96 m², « 238.0 m2 » pas lu du tout — de quoi
+    fausser le prix au m² et donc la comparaison au marché."""
+    html = """<html><head>
+    <meta property="og:title" content="Maison 6 pièces 132,96 m² Bellême">
+    </head><body><p>Prix : 189 000 €. Terrain 1 200 m².</p></body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/1-maison", source="x")
+    assert a["surface_m2"] == 132.96
+
+    html2 = """<html><head>
+    <meta property="og:title" content="maison 7 pièces - 238.0 m2 - BETHISY">
+    </head><body><p>Prix : 280 000 €.</p></body></html>"""
+    b = extraire_annonce(html2, "https://x.fr/vente/2-maison", source="x")
+    assert b["surface_m2"] == 238

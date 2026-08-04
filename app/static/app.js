@@ -146,6 +146,17 @@ function baisse(a) {
     ↓ ${ecart} %</span>`;
 }
 
+// Écart au prix du secteur : 150 000 € est cher dans la Nièvre et donné
+// dans l'Oise — seul l'écart local est parlant, et personne ne l'affiche.
+function ecartMarche(a) {
+  const e = a.ecart_marche_pct;
+  if (e == null || Math.abs(e) < 10) return "";
+  const sous = e < 0;
+  return `<span class="ecart-marche ${sous ? "bon" : "cher"}"
+    title="Médiane du secteur : ${fmtNombre.format(a.prix_m2_secteur)} €/m²">${
+    sous ? `${Math.abs(e)} % sous le secteur` : `+${e} % / secteur`}</span>`;
+}
+
 function nbPhotos(a) {
   return 6 + empreinte(a.id || a.titre || "x") % 7;  // 6 à 12 photos « au dossier »
 }
@@ -253,6 +264,7 @@ function ficheAnnonce(a) {
       <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix n.c."}</span>
       ${baisse(a)}
       ${prixM2 ? `<span>${fmtNombre.format(prixM2)} €/m²</span>` : ""}
+      ${ecartMarche(a)}
       <span><b>${a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : "—"}</b> hab.</span>
       <span>terrain <b>${a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : "—"}</b></span>
       ${a.pieces ? `<span><b>${a.pieces}</b> p.</span>` : ""}

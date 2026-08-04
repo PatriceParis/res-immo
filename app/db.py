@@ -59,6 +59,9 @@ CREATE TABLE IF NOT EXISTS annonces (
     revue_le          TEXT DEFAULT '',
     prix_precedent    REAL,
     prix_baisse_le    TEXT DEFAULT '',
+    prix_m2           REAL,
+    prix_m2_secteur   REAL,
+    ecart_marche_pct  REAL,
     hors_inondation   INTEGER DEFAULT 1,
     date_maj          TEXT
 );
@@ -77,6 +80,8 @@ TRIS = {
     # Ce qui vient d'arriver : c'est la question de celui qui revient
     # chaque semaine voir si quelque chose a bougé.
     "nouveaute": "vue_le DESC",
+    # Les meilleures affaires : le plus en dessous du prix du secteur.
+    "affaire": "ecart_marche_pct ASC",
 }
 
 CHAMPS_JSON = {
@@ -119,7 +124,10 @@ def _migrer(conn: sqlite3.Connection) -> None:
                                 ("vue_le", "TEXT DEFAULT ''"),
                                 ("revue_le", "TEXT DEFAULT ''"),
                                 ("prix_precedent", "REAL"),
-                                ("prix_baisse_le", "TEXT DEFAULT ''")):
+                                ("prix_baisse_le", "TEXT DEFAULT ''"),
+                                ("prix_m2", "REAL"),
+                                ("prix_m2_secteur", "REAL"),
+                                ("ecart_marche_pct", "REAL")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -174,6 +182,9 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "revue_le": a.get("revue_le", ""),
         "prix_precedent": a.get("prix_precedent"),
         "prix_baisse_le": a.get("prix_baisse_le", ""),
+        "prix_m2": a.get("prix_m2"),
+        "prix_m2_secteur": a.get("prix_m2_secteur"),
+        "ecart_marche_pct": a.get("ecart_marche_pct"),
         "hors_inondation": a.get("hors_inondation", 1),
         "date_maj": a.get("date_maj", date.today().isoformat()),
     }
