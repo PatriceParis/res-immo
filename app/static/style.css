@@ -201,13 +201,21 @@ body {
 .note-detail { font-size: 12.5px; color: var(--encre-2); margin: 8px 0 0; }
 
 /* jauges des piliers du score */
-.pilier { display: grid; grid-template-columns: 200px 1fr 56px; gap: 10px; align-items: center; margin-top: 8px; font-size: 13px; }
+.pilier { margin-top: 8px; font-size: 13px; }
+.pilier-tete { display: grid; grid-template-columns: 200px 1fr 56px; gap: 10px; align-items: center;
+  cursor: pointer; list-style: none; }
+.pilier-tete::-webkit-details-marker { display: none; }
 .pilier .nom { color: var(--encre); }
+.pilier .info-i { color: var(--encre-2); font-size: 11px; }
+.pilier[open] .info-i { color: var(--accent); }
 .pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
 .pilier .valeur b { color: var(--encre); }
+.pilier-info { margin: 6px 0 2px; padding: 8px 11px; background: var(--badge-fond);
+  border: 1px solid var(--badge-bord); border-radius: 8px; color: var(--encre-2);
+  font-size: 12.5px; line-height: 1.55; }
 .jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden; }
 .jauge > div { height: 100%; background: var(--n3); border-radius: 6px; min-width: 2px; }
-@media (max-width: 600px) { .pilier { grid-template-columns: 132px 1fr 48px; } }
+@media (max-width: 600px) { .pilier-tete { grid-template-columns: 132px 1fr 48px; } }
 
 /* légende Leaflet */
 .legende-carte {

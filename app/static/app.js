@@ -309,12 +309,13 @@ const ICONES_PILIERS = {
   alimentation: "🥕", risques: "🛡️", situation: "🚗",
 };
 
-// Explication de chaque pilier (infobulle au survol du détail du score).
+// Explication de chaque pilier — dépliable en tapant (utile sur mobile, où
+// une infobulle au survol n'existe pas).
 const EXPLICATIONS_PILIERS = {
   eau: "Puits ou forage, source/captage, récupération d'eau de pluie, cours d'eau à proximité.",
   abri: "Cave ou sous-sol, habitat troglodyte, grange/dépendances, atelier.",
   energie: "Chauffage au bois, panneaux solaires, pompe à chaleur, inertie thermique (pierre/troglodyte), DPE.",
-  alimentation: "Capacité à produire sa nourriture : taille du terrain PLUS les aménagements — potager, verger, poulailler, vigne, ruches, prairie/pâture. Un petit terrain bien équipé marque autant qu'un grand terrain nu.",
+  alimentation: "Pouvoir produire une partie de sa nourriture. On additionne l'espace (la taille du terrain, pour cultiver ou élever) ET les aménagements déjà là — potager, verger, poulailler, serre, vigne, ruches, prairie. Un petit terrain bien équipé peut marquer autant qu'un grand terrain nu. Score à 0 quand l'annonce n'indique ni terrain ni aménagement : on ne peut alors rien prouver.",
   risques: "On part de 20 puis on retire des points : zone inondable, sols argileux, centrale nucléaire ou site Seveso proche, feux de forêt.",
   situation: "Altitude, faible densité de population, hameau isolé, temps de route depuis Paris.",
 };
@@ -322,14 +323,18 @@ const EXPLICATIONS_PILIERS = {
 function jaugesPiliers(detail) {
   if (!detail || !detail.piliers) return "";
   return Object.entries(detail.piliers).map(([cle, p]) => `
-    <div class="pilier" title="${echap(EXPLICATIONS_PILIERS[cle] || "")}">
-      <span class="nom">${ICONES_PILIERS[cle] || ""} ${echap(p.libelle)}</span>
-      <div class="jauge" role="meter" aria-valuemin="0" aria-valuemax="${p.max}"
-           aria-valuenow="${p.points}" aria-label="${echap(p.libelle)}">
-        <div style="width:${Math.min(100, (p.points / p.max) * 100)}%"></div>
-      </div>
-      <span class="valeur"><b>${p.points}</b>/${p.max}</span>
-    </div>`).join("");
+    <details class="pilier">
+      <summary class="pilier-tete">
+        <span class="nom">${ICONES_PILIERS[cle] || ""} ${echap(p.libelle)}
+          <span class="info-i" aria-hidden="true">ⓘ</span></span>
+        <div class="jauge" role="meter" aria-valuemin="0" aria-valuemax="${p.max}"
+             aria-valuenow="${p.points}" aria-label="${echap(p.libelle)}">
+          <div style="width:${Math.min(100, (p.points / p.max) * 100)}%"></div>
+        </div>
+        <span class="valeur"><b>${p.points}</b>/${p.max}</span>
+      </summary>
+      <p class="pilier-info">${echap(EXPLICATIONS_PILIERS[cle] || "")}</p>
+    </details>`).join("");
 }
 
 function tuile(etiquette, valeur, sous) {
