@@ -338,3 +338,15 @@ body { overflow-x: hidden; }
 
 /* Petit ⓘ d'aide à côté d'un filtre peu évident (ex. habitat troglodyte). */
 .aide-filtre { color: var(--encre-2); font-size: 11px; cursor: help; }
+
+/* Fraîcheur : ce qui vient d'arriver, et ce dont le prix a baissé. */
+.pastille-nouveau {
+  position: absolute; top: 8px; left: 8px; z-index: 2;
+  background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
+  padding: 3px 9px; border-radius: 99px; letter-spacing: .3px;
+  box-shadow: 0 1px 4px rgba(20, 30, 24, .3);
+}
+.baisse-prix {
+  background: #eaf2ec; border: 1px solid var(--badge-bord); color: var(--marque);
+  font-weight: 700; font-size: 12px; padding: 2px 7px; border-radius: 99px;
+}

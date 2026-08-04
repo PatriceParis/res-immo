@@ -158,18 +158,36 @@ def _densite(citycode):
 
 
 def _altitude(lat, lon):
-    """Altitude (m) de la position via l'API open-meteo (best-effort)."""
+    """Altitude (m) de la position, avec repli et réessai.
+
+    Une seule tentative sur un seul service ne renseignait l'altitude que pour
+    la moitié des biens — or elle vaut jusqu'à 3 points du pilier Situation.
+    On interroge donc deux services successivement, avec un second essai.
+    """
     if lat is None or lon is None or requests is None:
         return None
-    try:
-        r = requests.get("https://api.open-meteo.com/v1/elevation",
-                         params={"latitude": lat, "longitude": lon}, timeout=8,
-                         headers={"User-Agent": "RefugeImmo-POC"})
-        r.raise_for_status()
-        vals = r.json().get("elevation") or []
-    except Exception:
-        return None
-    return round(vals[0]) if vals and isinstance(vals[0], (int, float)) else None
+    services = (
+        ("https://api.open-meteo.com/v1/elevation",
+         {"latitude": lat, "longitude": lon},
+         lambda d: (d.get("elevation") or [None])[0]),
+        # Repli : service d'élévation d'OpenTopoData (jeu SRTM 30 m).
+        ("https://api.opentopodata.org/v1/srtm30m",
+         {"locations": f"{lat},{lon}"},
+         lambda d: ((d.get("results") or [{}])[0]).get("elevation")),
+    )
+    for tentative in range(2):
+        for url, params, lire in services:
+            try:
+                r = requests.get(url, params=params, timeout=10,
+                                 headers={"User-Agent": "RefugeImmo-POC"})
+                r.raise_for_status()
+                valeur = lire(r.json())
+                if isinstance(valeur, (int, float)):
+                    return round(valeur)
+            except Exception:
+                continue
+        time.sleep(1 + tentative)
+    return None
 
 
 def _geocoder(commune, cp):

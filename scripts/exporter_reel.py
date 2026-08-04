@@ -16,7 +16,9 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db  # noqa: E402
+from datetime import date  # noqa: E402
+
+from app import db, historique  # noqa: E402
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
@@ -26,6 +28,10 @@ CHAMPS = [
     "surface_m2", "terrain_m2", "pieces", "commune", "code_postal",
     "departement", "region", "agence", "agence_url", "photo", "texte",
     "lat", "lon", "altitude", "densite_hab_km2", "dpe", "risques",
+    # Mémoire d'une collecte à l'autre (voir app/historique.py) : c'est ce
+    # fichier, versionné, qui traverse le temps — pas la base, recréée à
+    # chaque exécution.
+    "vue_le", "revue_le", "absences", "prix_precedent", "prix_baisse_le",
 ]
 
 
@@ -54,8 +60,33 @@ def main() -> None:
 
     sortie = RACINE / "data" / "annonces_reel.json"
     sortie.parent.mkdir(exist_ok=True)
-    sortie.write_text(json.dumps(biens, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{len(biens)} annonce(s) réelle(s) exportée(s) vers {sortie}")
+
+    # On reporte l'historique du fichier précédent : date de première vue,
+    # baisses de prix, et retrait des annonces que l'agence a enlevées.
+    precedentes = []
+    if sortie.exists():
+        try:
+            precedentes = json.loads(sortie.read_text(encoding="utf-8"))
+        except ValueError:
+            precedentes = []
+    # Seules les agences réellement parcourues cette fois font autorité : une
+    # collecte écourtée ne doit pas faire disparaître les biens des autres.
+    visitees = {b.get("agence") for b in biens if b.get("agence")}
+    fusionnees = historique.fusionner(precedentes, biens, visitees,
+                                      date.today().isoformat())
+
+    sortie.write_text(json.dumps(fusionnees, ensure_ascii=False, indent=1),
+                      encoding="utf-8")
+    nouveaux = sum(1 for b in fusionnees if b.get("vue_le") == date.today().isoformat()
+                   and b.get("revue_le") == date.today().isoformat()
+                   and b.get("id") in {x.get("id") for x in biens}
+                   and b.get("id") not in {x.get("id") for x in precedentes})
+    baisses = sum(1 for b in fusionnees
+                  if b.get("prix_baisse_le") == date.today().isoformat())
+    retirees = len(precedentes) + len(biens) - len(fusionnees) - (len(biens) - nouveaux)
+    print(f"{len(fusionnees)} annonce(s) exportée(s) vers {sortie}")
+    print(f"  dont {nouveaux} nouvelle(s), {baisses} baisse(s) de prix, "
+          f"{max(retirees, 0)} retirée(s) par l'agence")
 
 
 if __name__ == "__main__":
