@@ -86,7 +86,22 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add data/annonces_reel.json
             git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || echo "Aucun changement."
-            git push
+            # La collecte dure ~20 min : un commit poussé pendant ce temps
+            # faisait rejeter ce push, et TOUT le travail était perdu.
+            # On rejoue alors notre fichier de données (le seul commité ici)
+            # par-dessus la version distante, puis on réessaie.
+            for essai in 1 2 3 4 5; do
+              if git push; then
+                echo "Poussé (essai $essai)."
+                break
+              fi
+              echo "Push rejeté : la branche a bougé pendant la collecte, on se replace dessus ($essai/5)…"
+              git fetch origin main
+              git reset --soft origin/main
+              git add data/annonces_reel.json
+              git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
+              sleep $((essai * 5))
+            done
           else
             echo "Aucune annonce collectée (les sites ont peut-être bloqué, ou aucune URL d'annonce trouvée)."
             echo "Astuce : relancez en indiquant des 'sites' d'agences et éventuellement une page 'index' de leurs biens."
