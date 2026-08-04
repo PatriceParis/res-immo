@@ -7,7 +7,9 @@ fermes, moulins, propriétés…) et on écarte tout le bruit qui polluait le sc
   quel mandat choisir ? »), pages catalogue (« nos biens à vendre »), pages
   d'agence (contact, estimation, mentions légales) ;
 - ce qui n'a **aucun intérêt refuge** : appartements, studios, parkings,
-  terrains nus, locaux commerciaux, programmes neufs, viager.
+  terrains nus, locaux commerciaux, programmes neufs, viager ;
+- ce qui n'est **plus achetable** : biens vendus ou sous compromis, dont
+  l'annonce reste souvent en ligne des mois après la vente.
 
 Un appartement n'a ni terrain, ni cave, ni autonomie possible : par
 construction il ne peut pas être un refuge résilient.
@@ -48,12 +50,33 @@ _LETTRES = re.compile(r"[a-z]")
 # En-deçà, un « prix » trahit une extraction ratée (référence, n° de téléphone).
 PRIX_MINI = 15000
 
+# Bien déjà vendu / sous compromis : l'annonce reste en ligne mais n'est plus
+# achetable. Le pastille « Vendu » du site est au SINGULIER ; le menu de
+# navigation, lui, dit « Biens vendus » au PLURIEL — que \b...\b ne capture pas.
+# On écarte aussi les tournures « vendu avec / séparément / meublé » (descriptif).
+_VENDU = re.compile(
+    r"\bvendue?\b(?!\s+(?:avec|separement|separe|meuble|loue|libre|sur plan))"
+    r"|sous (?:compromis|offre|promesse)|compromis (?:de vente )?signe"
+    r"|n'est plus disponible|bien indisponible|affaire (?:conclue|realisee)"
+)
+
+
+def est_vendu(a: dict) -> bool:
+    """True si l'annonce signale un bien vendu ou sous compromis."""
+    if a.get("vendu"):                     # disponibilité schema.org (fiable)
+        return True
+    texte = normaliser(f"{a.get('texte') or ''} {a.get('description') or ''}")
+    return bool(_VENDU.search(texte))
+
 
 def est_bien_valide(a: dict) -> bool:
     """True uniquement pour l'annonce d'un vrai logement de type refuge."""
     titre = normaliser(a.get("titre") or "")
     # Titre vide ou indigent (numéro de référence seul, « 389 ») : inexploitable.
     if len(_LETTRES.findall(titre)) < 5:
+        return False
+    # Déjà vendu : l'annonce traîne en ligne, mais on ne la propose pas.
+    if est_vendu(a):
         return False
     if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
         return False

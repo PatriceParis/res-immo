@@ -5,7 +5,42 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.qualite import est_bien_valide  # noqa: E402
+from app.qualite import est_bien_valide, est_vendu  # noqa: E402
+
+
+def test_detecte_les_biens_vendus():
+    """La pastille « Vendu » de la fiche (cas réel signalé par l'utilisateur)."""
+    assert est_vendu({"texte": "Retour aux résultats Partager ce bien Vendu "
+                               "Afficher toutes les photos 1 / 11"})
+    assert est_vendu({"texte": "maison retour Vendu Ref : 1280 villa 170 m"})
+    assert est_vendu({"texte": "Cette maison est sous compromis."})
+    # Disponibilité schema.org (signal le plus fiable).
+    assert est_vendu({"vendu": True, "texte": ""})
+
+
+def test_le_menu_biens_vendus_ne_compte_pas():
+    """Piège : le menu de navigation dit « Biens vendus » sur CHAQUE page.
+
+    Au pluriel — il ne doit jamais faire passer un bien disponible pour vendu.
+    """
+    menu = ("Espace propriétaire 0 fr Menu Nos biens Biens vendus Notre équipe "
+            "Estimation Alerte e-mail Contact Accueil")
+    assert not est_vendu({"texte": menu})
+    assert est_bien_valide({"titre": "Longère avec cave à Bellême", "texte": menu,
+                            "type_bien": "longère", "surface_m2": 140})
+
+
+def test_vendu_descriptif_ne_compte_pas():
+    """« vendu avec/séparément/meublé » décrit le bien, il n'est pas vendu."""
+    assert not est_vendu({"texte": "Le terrain attenant est vendu séparément."})
+    assert not est_vendu({"texte": "Bien vendu meublé, disponible immédiatement."})
+
+
+def test_bien_vendu_ecarte_de_la_base():
+    assert not est_bien_valide(
+        {"titre": "PROCHE BELLÊME ET FORÊT DOMANIALE MAISON 3 CHAMBRES",
+         "type_bien": "maison", "surface_m2": 96, "prix": 97000,
+         "texte": "Partager ce bien Vendu Afficher toutes les photos"})
 
 
 def test_rejette_pages_non_annonce():
