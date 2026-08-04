@@ -64,7 +64,9 @@ démonstration.
 Le barème du score est dans **[docs/CRITERES.md](docs/CRITERES.md)**, le choix
 des terroirs et le modèle économique dans **[docs/PERSONA.md](docs/PERSONA.md)**.
 Les prochaines évolutions — et ce qui limite le produit aujourd'hui, chiffres
-à l'appui — sont dans **[docs/ROADMAP.md](docs/ROADMAP.md)**.
+à l'appui — sont dans **[docs/ROADMAP.md](docs/ROADMAP.md)**. L'audit de
+cohérence des chiffres affichés est dans **[docs/AUDIT.md](docs/AUDIT.md)**
+(et rejouable : `python scripts/auditer.py`).
 
 ---
 
