@@ -171,3 +171,35 @@ def test_surfaces_decimales():
     </head><body><p>Prix : 280 000 €.</p></body></html>"""
     b = extraire_annonce(html2, "https://x.fr/vente/2-maison", source="x")
     assert b["surface_m2"] == 238
+
+
+def test_la_surface_du_terrain_n_est_pas_prise_pour_l_habitable():
+    """Dans « Terrain de 2 500 m² », « 500 m² » se lisait comme une surface
+    habitable et supplantait les vrais 130 m² de la maison."""
+    from app.extraction import _surfaces
+    assert _surfaces("Surface habitable 130 m². Terrain de 2 500 m².") == [130]
+    assert _surfaces("terrain 4425 m²") == []          # hors bornes habitables
+
+
+def test_surface_choisie_par_coherence_du_prix_au_m2():
+    """Cas réel : une propriété à 950 000 € ressortait à 50 m² — la première
+    surface du texte était celle de la piscine, soit 19 000 €/m²."""
+    html = """<html><head>
+    <meta property="og:title" content="propriété avec piscine, tennis et gîtes">
+    </head><body><p>Prix : 950 000 €. Piscine de 50 m², maison de 350 m².</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/9-propriete", source="x")
+    assert a["surface_m2"] == 350                       # pas la piscine
+
+
+def test_prix_absurde_efface_quand_le_titre_donne_la_surface():
+    """« Hôtel particulier 8 pièces 220 m2 » à 40 000 € : 182 €/m². La surface
+    vient du titre, donc c'est le prix qui est faux — on n'en affiche aucun
+    plutôt qu'un chiffre trompeur."""
+    html = """<html><head>
+    <meta property="og:title" content="Hôtel particulier 8 pièces 220 m2 Beaumont">
+    </head><body><p>Honoraires 40 000 €.</p></body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/3-hotel", source="x")
+    assert a["surface_m2"] == 220
+    assert a.get("prix") is None
+    assert "_surface_du_titre" not in a                  # clé interne nettoyée

@@ -127,3 +127,31 @@ def test_mise_en_relation_refuse_les_entrees_invalides(client):
     assert client.post("/api/contact",
                        json={"annonce_id": "t-1", "email": "jean@exemple.fr",
                              "message": "x" * 5000}).status_code == 422
+
+
+def test_les_pastilles_de_terroir_comptent_avec_les_filtres(client):
+    """Bug signalé : la pastille annonçait « 60 biens » quand la liste filtrée
+    n'en montrait que 2 — elle comptait sans tenir compte des filtres."""
+    # Sans filtre : les deux biens du jeu de test, dans deux régions.
+    tous = client.get("/api/regions").json()["regions"]
+    par_region = {r["region"]: r["nb_biens"] for r in tous}
+    assert par_region["Normandie"] == 1          # la fermette de Bellême
+    assert par_region["Hauts-de-France"] == 1    # le pavillon de Beauvais
+
+    # Avec le filtre « cave » : seule la fermette correspond.
+    filtre = client.get("/api/regions", params={"cave": 1}).json()["regions"]
+    par_region = {r["region"]: r["nb_biens"] for r in filtre}
+    assert par_region["Normandie"] == 1
+    assert par_region["Hauts-de-France"] == 0
+
+    # Et le compte de la pastille égale bien le total de la liste filtrée.
+    liste = client.get("/api/annonces", params={"cave": 1, "region": "Normandie"}).json()
+    assert liste["total"] == par_region["Normandie"]
+
+
+def test_le_filtre_de_region_n_ecrase_pas_les_autres_pastilles(client):
+    """Compter par région en appliquant le filtre de région mettrait toutes
+    les autres à zéro : ce filtre-là doit être ignoré."""
+    r = client.get("/api/regions", params={"region": "Normandie"}).json()["regions"]
+    par_region = {x["region"]: x["nb_biens"] for x in r}
+    assert par_region["Hauts-de-France"] == 1    # toujours comptée
