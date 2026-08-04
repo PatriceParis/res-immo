@@ -26,6 +26,9 @@ def main() -> None:
     parseur = argparse.ArgumentParser(description=__doc__)
     parseur.add_argument("--forcer", action="store_true")
     parseur.add_argument("--max", type=int, default=200)
+    # Cette étape vient APRÈS la collecte : si elle déborde, le job est
+    # coupé avant l'export et tout le travail est perdu. On la borne.
+    parseur.add_argument("--minutes-max", type=float, default=10.0)
     args = parseur.parse_args()
 
     conn = db.connexion()
@@ -34,8 +37,12 @@ def main() -> None:
     ).fetchall()
 
     faits, echecs = 0, 0
+    fin_prevue = time.monotonic() + args.minutes_max * 60
     for row in rows:
         if faits + echecs >= args.max:
+            break
+        if time.monotonic() > fin_prevue:
+            print("⏱ Budget atteint : on laisse la place à l'export.")
             break
         annonce = db._row_vers_dict(row)
         risques = annonce.get("risques") or {}
@@ -70,7 +77,7 @@ def main() -> None:
         )
         faits += 1
         print(f"✔ {annonce['commune']}: risques mis à jour (score {detail['total']})")
-        time.sleep(1)  # politesse vis-à-vis de l'API publique
+        time.sleep(0.4)  # politesse vis-à-vis de l'API publique
 
     conn.commit()
     conn.close()
