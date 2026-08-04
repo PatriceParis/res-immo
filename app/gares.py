@@ -66,6 +66,16 @@ GARES = [
     ("Le Creusot–Montceau–Montchanin TGV", 46.8003, 4.4331, 80, "Lyon"),
     ("Chalon-sur-Saône", 46.7806, 4.8536, 95, "Lyon"),
     ("Montceau-les-Mines", 46.6739, 4.3661, 100, "Lyon"),
+    # --- Pays de la Loire (Montparnasse) ---
+    # Le Mans est la MEILLEURE desserte de toute la sélection : 55 min de
+    # Montparnasse, mieux que Vendôme. Les biens du Perche sarthois étaient
+    # pourtant notés comme si aucune gare n'existait — la table s'arrêtait à
+    # la frontière de l'Orne.
+    ("Le Mans", 47.9953, 0.1925, 55, "Montparnasse"),
+    ("La Ferté-Bernard", 48.1875, 0.6503, 80, "Montparnasse"),
+    ("Sablé-sur-Sarthe", 47.8397, -0.3311, 90, "Montparnasse"),
+    ("Laval", 48.0772, -0.7614, 80, "Montparnasse"),
+    ("Mayenne", 48.3033, -0.6167, 145, "Montparnasse"),
 ]
 
 # Au-delà de cette distance, on considère qu'il faut de toute façon une voiture

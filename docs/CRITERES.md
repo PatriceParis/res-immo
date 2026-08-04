@@ -127,6 +127,7 @@ Villes qui cumulent ruralité et accès direct :
 |---|---|---|
 | **Vendôme**–Villiers-sur-Loir | **42 min** (TGV, Montparnasse) | Perche vendômois |
 | **Château-Thierry** | ~50 min (Est) | Sud de l'Aisne, vallée de la Marne |
+| **Le Mans** | **55 min** (TGV, Montparnasse) | Perche sarthois, bocage mayennais |
 | **Noyon** | ~1 h (Nord) | Noyonnais, Oise |
 | **Le Creusot–Montceau TGV** | **1 h 20** (Lyon) | Saône-et-Loire, sud Bourgogne |
 | Compiègne · Creil · Sens · Vernon | 30–55 min | Oise, Yonne, Eure |
