@@ -40,7 +40,7 @@ sys.path.insert(0, str(RACINE))
 from app import db  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
-from app.qualite import est_bien_valide  # noqa: E402
+from app.qualite import est_bien_valide, est_vendu  # noqa: E402
 
 try:
     from playwright.sync_api import sync_playwright
@@ -194,10 +194,14 @@ def _geocoder_texte(texte):
 
 
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
+    # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
+    # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
+    # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
+    vivier = max(maxi * 6, 40)
     urls = _sitemap_urls(base)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
-        return urls[:maxi]
+        return urls[:vivier]
     # repli : on parcourt les pages « nos biens »
     urls = []
     for idx in (cible.get("index") or [base]):
@@ -215,7 +219,7 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
     details = [u for u in urls if re.search(r"\d", urlparse(u).path)]
     choix = details or urls
     print(f"  index : {len(choix)} lien(s) de bien repéré(s)")
-    return choix[:maxi]
+    return choix[:vivier]
 
 
 def main() -> None:
@@ -241,8 +245,10 @@ def main() -> None:
             base = cible["site"].rstrip("/")
             print(f"\n▶ {cible['nom']} — {base}")
             urls = _urls_a_visiter(page, cible, base, args.max)
-            n = 0
+            n, vendus, ecartes = 0, 0, 0
             for u in urls:
+                if n >= args.max:      # on s'arrête sur les biens GARDÉS,
+                    break              # pas sur les pages visitées
                 try:
                     page.goto(u, wait_until="domcontentloaded", timeout=30000)
                     page.wait_for_timeout(900)
@@ -259,9 +265,13 @@ def main() -> None:
                 hote = urlparse(base).netloc.replace("www.", "")
                 if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
                     continue
-                # Filtre qualité : vrai logement de type refuge uniquement
-                # (écarte blog, catalogue, appartement, parking, terrain nu…).
+                # Filtre qualité : vrai logement de type refuge, encore à vendre
+                # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
+                if est_vendu(brut):
+                    vendus += 1
+                    continue
                 if not est_bien_valide(brut):
+                    ecartes += 1
                     continue
                 brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                         hashlib.sha1(u.encode()).hexdigest()[:12])
@@ -285,7 +295,8 @@ def main() -> None:
                 n += 1
                 time.sleep(args.delai)
             conn.commit()
-            print(f"  ✔ {n} bien(s) enregistré(s)")
+            print(f"  ✔ {n} bien(s) enregistré(s)"
+                  f" — {vendus} déjà vendu(s), {ecartes} hors cible")
             total += n
 
         navigateur.close()

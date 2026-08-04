@@ -241,8 +241,11 @@ def _depuis_jsonld(noeud: dict) -> dict:
         dpe = m.group(1) if m else None
 
     cp = _premier(adresse, "postalCode")
+    # Disponibilité schema.org : SoldOut / OutOfStock = bien déjà vendu.
+    dispo = str(_premier(offre, "availability") or "").lower()
     return {
         "titre": titre,
+        "vendu": any(x in dispo for x in ("soldout", "outofstock", "discontinued")) or None,
         "description": str(_premier(noeud, "description") or "").strip(),
         "prix": _num(_premier(offre, "price", "lowPrice") or _premier(noeud, "price")),
         "surface_m2": surface,
