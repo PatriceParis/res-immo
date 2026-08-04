@@ -485,11 +485,30 @@ function ouvrirFiche(id) {
       </div>
       <p class="mer-note" id="mer-note">Modèle : la plateforme est gratuite pour vous ;
         elle est rémunérée à la mise en relation qualifiée avec l'agence.</p>`;
-    $("#mer-envoi").addEventListener("click", () => {
+    $("#mer-envoi").addEventListener("click", async () => {
       const mail = ($("#mer-mail").value || "").trim();
-      $("#mer-note").textContent = mail.includes("@")
-        ? "✓ Demande enregistrée (démonstration). Dans la version réelle, l'agence vous recontacte sous 48 h avec le dossier complet."
-        : "Indiquez un e-mail valide pour être recontacté.";
+      const note = $("#mer-note");
+      if (!mail.includes("@")) {
+        note.textContent = "Indiquez un e-mail valide pour être recontacté.";
+        return;
+      }
+      note.textContent = "Envoi…";
+      try {
+        const r = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ annonce_id: a.id, email: mail, message: "" }),
+        });
+        if (!r.ok) throw new Error(await r.text());
+        const d = await r.json();
+        // On donne aussi le lien direct : la demande aboutit même si
+        // l'agence tarde à répondre.
+        note.innerHTML = `✓ Demande transmise${d.agence ? " à " + echap(d.agence) : ""}.`
+          + (d.url ? ` En attendant, <a href="${echap(d.url)}" target="_blank"
+               rel="noopener">voir l'annonce chez l'agence</a>.` : "");
+      } catch (e) {
+        note.textContent = "L'envoi a échoué. Réessayez dans un instant.";
+      }
     });
   });
 

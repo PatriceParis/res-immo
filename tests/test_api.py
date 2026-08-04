@@ -98,3 +98,32 @@ def test_un_bien_d_ile_de_france_n_est_pas_charge(tmp_path, monkeypatch):
     }])
     conn.close()
     assert charges == 0
+
+
+def test_mise_en_relation(client, tmp_path):
+    """C'est le modèle économique : la demande doit réellement aboutir."""
+    r = client.post("/api/contact",
+                    json={"annonce_id": "t-1", "email": "jean@exemple.fr",
+                          "message": "Je souhaite visiter."})
+    assert r.status_code == 200
+    d = r.json()
+    assert d["ok"] is True
+    assert d["annonce"].startswith("Fermette")
+
+    # La demande est journalisée hors du dépôt (elle contient un e-mail).
+    journal = tmp_path / "demandes_contact.jsonl"
+    assert journal.exists()
+    assert "jean@exemple.fr" in journal.read_text(encoding="utf-8")
+
+
+def test_mise_en_relation_refuse_les_entrees_invalides(client):
+    assert client.post("/api/contact",
+                       json={"annonce_id": "t-1", "email": "pas-un-email"}
+                       ).status_code == 422
+    assert client.post("/api/contact",
+                       json={"annonce_id": "inconnu", "email": "jean@exemple.fr"}
+                       ).status_code == 404
+    # Message démesuré : refusé avant d'atteindre le disque.
+    assert client.post("/api/contact",
+                       json={"annonce_id": "t-1", "email": "jean@exemple.fr",
+                             "message": "x" * 5000}).status_code == 422
