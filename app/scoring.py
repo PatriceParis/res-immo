@@ -85,35 +85,44 @@ def extraire_criteres(titre: str, description: str) -> dict:
 # ---------------------------------------------------------------------------
 
 def _pilier_eau(f: dict) -> float:
+    """12 points. Un puits est un vrai plus, mais peu discriminant en pratique :
+    les annonces d'agences ne le mentionnent quasiment jamais (0 sur nos 49
+    biens réels). Lui donner un poids énorme ne trierait rien — ça ne ferait
+    que tasser tout le monde vers le bas. Il vaut donc un bon bonus, pas un
+    critère décisif ; c'est un point à vérifier en visite."""
     points = 0
     if f.get("puits"):
-        points += 12
+        points += 6
     if f.get("source"):
-        points += 6      # source / captage : eau gravitaire autonome
+        points += 4      # source / captage : eau gravitaire autonome
     if f.get("recuperation_pluie"):
-        points += 4
+        points += 3
     if f.get("eau_proximite"):
-        points += 4
-    return min(points, 20)
+        points += 3
+    return min(points, 12)
 
 
 def _pilier_abri(f: dict) -> float:
+    """18 points. La cave est l'atout signature de l'application — et elle est
+    réellement mentionnée dans les annonces, donc elle trie vraiment."""
     points = 0
     if f.get("troglodyte"):
-        points += 7      # habitat troglodyte : abri enterré, frais, cellier naturel
+        points += 8      # habitat troglodyte : abri enterré, frais, cellier naturel
     if f.get("cave"):
-        points += 8
+        points += 9
     if f.get("grange_dependance"):
-        points += 4
+        points += 5
     if f.get("atelier"):
         points += 3
-    return min(points, 15)
+    return min(points, 18)
 
 
 def _pilier_energie(f: dict, dpe: str | None) -> float:
+    """17 points. Le chauffage au bois est très souvent indiqué (poêle, insert,
+    cheminée) : c'est un critère lisible dans les annonces."""
     points = 0
     if f.get("bois"):
-        points += 6
+        points += 7
     if f.get("solaire"):
         points += 5
     if f.get("pompe_chaleur"):
@@ -121,10 +130,10 @@ def _pilier_energie(f: dict, dpe: str | None) -> float:
     if f.get("troglodyte") or f.get("pierre"):
         points += 3      # inertie thermique : frais l'été, tempéré l'hiver
     if dpe in ("A", "B"):
-        points += 4
+        points += 5
     elif dpe == "C":
-        points += 2
-    return min(points, 15)
+        points += 3
+    return min(points, 17)
 
 
 def _pilier_alimentation(f: dict, terrain_m2: float | None) -> float:
@@ -135,9 +144,9 @@ def _pilier_alimentation(f: dict, terrain_m2: float | None) -> float:
     points = 0
     terrain = terrain_m2 or 0
     if terrain >= 10_000:        # espace cultivable / élevage
-        points += 6
+        points += 8
     elif terrain >= 5_000:
-        points += 5
+        points += 6
     elif terrain >= 2_500:
         points += 4
     elif terrain >= 1_000:
@@ -154,7 +163,7 @@ def _pilier_alimentation(f: dict, terrain_m2: float | None) -> float:
         points += 2
     if f.get("ruches"):
         points += 2
-    return min(points, 15)
+    return min(points, 18)
 
 
 def _pilier_risques(r: dict) -> float:
@@ -169,7 +178,7 @@ def _pilier_risques(r: dict) -> float:
         pénaliser tout le monde. On retire peu, et on l'affiche comme un point
         à vérifier à l'adresse.
     """
-    points = 20.0
+    points = 15.0
     if r.get("inondation"):
         points -= 8
     elif r.get("inondation_commune"):
@@ -199,6 +208,10 @@ def _pilier_risques(r: dict) -> float:
 
 
 def _pilier_situation(altitude, densite, temps_min, f=None, train=None) -> float:
+    """20 points. C'est le pilier le mieux renseigné : densité, altitude, temps
+    de route et gare la plus proche sont calculés en open data pour *chaque*
+    bien, sans dépendre de ce que l'agence a bien voulu écrire. Il mérite donc
+    un poids important — c'est lui qui trie réellement les terroirs."""
     points = 0
     if altitude is not None:
         if altitude >= 200:
@@ -208,9 +221,9 @@ def _pilier_situation(altitude, densite, temps_min, f=None, train=None) -> float
     if densite is None:
         points += 2  # inconnue : valeur neutre
     elif densite < 30:
-        points += 6
+        points += 7
     elif densite < 80:
-        points += 4
+        points += 5
     elif densite < 300:
         points += 2
     if f and f.get("isolement"):
@@ -235,16 +248,16 @@ def _pilier_situation(altitude, densite, temps_min, f=None, train=None) -> float
                 points += 2
         elif minutes is not None:  # gare un peu plus loin (15–25 km)
             points += 1
-    return min(points, 15)
+    return min(points, 20)
 
 
 MAX_PILIERS = {
-    "eau": 20,
-    "abri": 15,
-    "energie": 15,
-    "alimentation": 15,
-    "risques": 20,
-    "situation": 15,
+    "eau": 12,
+    "abri": 18,
+    "energie": 17,
+    "alimentation": 18,
+    "risques": 15,
+    "situation": 20,
 }
 
 LIBELLES_PILIERS = {

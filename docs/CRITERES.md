@@ -12,39 +12,39 @@ méritent une visite, il ne remplace ni le diagnostic ni le notaire.
 
 ## Les 6 piliers
 
-### 💧 Autonomie en eau — 20 points
+### 💧 Autonomie en eau — 12 points
 | Critère | Points | Pourquoi |
 |---|---|---|
-| Puits ou forage | 12 | eau disponible même si le réseau flanche ; le critère le plus difficile à ajouter après coup |
-| Récupération d'eau de pluie (cuve, citerne) | 4 | arrosage, appoint, réserve |
-| Cours d'eau, mare ou étang à proximité | 4 | ressource de secours (à filtrer), fraîcheur |
+| Puits ou forage | 6 | eau disponible même si le réseau flanche ; le critère le plus difficile à ajouter après coup |
+| Récupération d'eau de pluie (cuve, citerne) | 3 | arrosage, appoint, réserve |
+| Cours d'eau, mare ou étang à proximité | 3 | ressource de secours (à filtrer), fraîcheur |
 
-### 🕳️ Abri & stockage — 15 points
+### 🕳️ Abri & stockage — 18 points
 | Critère | Points | Pourquoi |
 |---|---|---|
-| **Cave ou sous-sol** | **8** | stockage longue durée au frais (récoltes, conserves), refuge en canicule ou tempête — l'atout signature de l'application |
-| Grange, dépendances | 4 | stockage de matériel, bois, extension possible |
+| **Cave ou sous-sol** | **9** | stockage longue durée au frais (récoltes, conserves), refuge en canicule ou tempête — l'atout signature de l'application |
+| Grange, dépendances | 5 | stockage de matériel, bois, extension possible |
 | Atelier ou garage | 3 | réparer soi-même |
 
-### 🔥 Énergie — 15 points
+### 🔥 Énergie — 17 points
 | Critère | Points | Pourquoi |
 |---|---|---|
-| Chauffage au bois (poêle, insert, chaudière) | 6 | chauffer sans réseau ni fioul |
+| Chauffage au bois (poêle, insert, chaudière) | 7 | chauffer sans réseau ni fioul |
 | Panneaux solaires | 5 | électricité en autonomie partielle |
-| Bonne isolation : DPE A/B | 4 (C : 2) | besoin d'énergie réduit à la source |
+| Bonne isolation : DPE A/B | 5 (C : 3) | besoin d'énergie réduit à la source |
 
-### 🥕 Autonomie alimentaire — 15 points
+### 🥕 Autonomie alimentaire — 18 points
 
 **La question : « ce bien permet-il de produire une partie de sa nourriture ? »**
 On additionne deux choses : **l'espace** (un terrain, pour cultiver ou élever)
 **ET** les **aménagements déjà là** (potager, poulailler…). Ainsi un petit
 terrain bien équipé peut marquer autant qu'un grand terrain nu. Total plafonné
-à 15.
+à 18.
 
 | Critère | Points | Pourquoi |
 |---|---|---|
-| Terrain ≥ 1 ha | 6 | de l'espace pour cultiver / élever |
-| Terrain ≥ 5 000 m² | 5 | |
+| Terrain ≥ 1 ha | 8 | de l'espace pour cultiver / élever |
+| Terrain ≥ 5 000 m² | 6 | |
 | Terrain ≥ 2 500 m² | 4 | |
 | Terrain ≥ 1 000 m² | 2 | |
 | Verger ou potager déjà en place | +4 | production immédiate |
@@ -55,10 +55,10 @@ terrain bien équipé peut marquer autant qu'un grand terrain nu. Total plafonn�
 | Serre | +2 | cultures prolongées |
 
 *Exemple : une maison sans grand terrain mais avec potager (+4), poulailler (+2)
-et ruches (+2) obtient 8/15 — elle est déjà partiellement nourricière. Une
-propriété d'un hectare nu obtient 6/15.*
+et ruches (+2) obtient 8/18 — elle est déjà partiellement nourricière. Une
+propriété d'un hectare nu obtient 8/18.*
 
-### 🌊 Exposition aux risques — 20 points (on part de 20, on retire)
+### 🌊 Exposition aux risques — 15 points (on part de 15, on retire)
 | Risque | Points retirés |
 |---|---|
 | Zone inondable | −8 |
@@ -97,11 +97,11 @@ réservée à un bien **réellement situé** en zone inondable. L'état des risq
 étant obligatoire à la vente, l'acheteur aura la réponse exacte au moment de
 l'offre.
 
-### 🚗 Situation & accès — 15 points
+### 🚗 Situation & accès — 20 points
 | Critère | Points |
 |---|---|
 | Altitude ≥ 200 m | 3 (≥ 100 m : 2) |
-| Densité < 30 hab/km² | 6 (< 80 : 4 ; < 300 : 2) |
+| Densité < 30 hab/km² | 7 (< 80 : 5 ; < 300 : 2) |
 | Paris à ≤ 1 h 30 de route | 6 (≤ 2 h 30 : 4 ; ≤ 3 h 30 : 2) |
 | Hameau / à l'écart / pleine campagne | 2 |
 | **Gare à ≤ 15 km, Paris en ≤ 1 h** | **4** (≤ 1 h 30 : 3 ; ≤ 2 h : 2) |
@@ -140,8 +140,8 @@ Au-delà des équipements « classiques », le score reconnaît aussi :
 
 | Critère | Pilier(s) | Intérêt résilience |
 |---|---|---|
-| **Habitat troglodyte** | Abri +7, Énergie +3 | creusé dans la roche : **frais l'été, tempéré l'hiver**, cellier naturel — précieux face aux canicules |
-| Source / captage | Eau +6 | eau gravitaire, sans réseau ni pompe |
+| **Habitat troglodyte** | Abri +8, Énergie +3 | creusé dans la roche : **frais l'été, tempéré l'hiver**, cellier naturel — précieux face aux canicules |
+| Source / captage | Eau +4 | eau gravitaire, sans réseau ni pompe |
 | Bâti pierre / tuffeau / colombage | Énergie +3 | forte **inertie thermique** (confort sans climatisation) |
 | Pompe à chaleur / géothermie | Énergie +3 | chauffage sobre |
 | Poulailler · vigne · ruches · prairie | Alimentation | production nourricière |
@@ -151,6 +151,31 @@ Au-delà des équipements « classiques », le score reconnaît aussi :
 Ces mots-clés sont cherchés sur **tout le texte de la page** de l'annonce (pas
 seulement la courte description), et la **densité de population** de la commune
 est récupérée automatiquement (open data) pour le pilier Situation.
+
+## Pourquoi ce barème a été rééquilibré
+
+Un critère ne vaut que s'il **trie**. Le barème initial mettait 20 points sur
+l'eau, dont 12 pour le seul puits — or **aucune** des annonces réelles
+collectées ne mentionne un puits, une source ou des panneaux solaires : les
+agences décrivent la cuisine et la vue, pas l'autonomie. Ces 20 points étaient
+donc du poids mort : ils ne départageaient personne et tassaient tous les
+scores vers le bas.
+
+Le poids a été déplacé vers ce qui est **réellement renseigné**, sans rien
+retirer à la logique de résilience :
+
+| Pilier | Avant | Après | Pourquoi |
+|---|---|---|---|
+| Autonomie en eau | 20 | **12** | presque jamais mentionné dans les annonces |
+| Abri & stockage | 15 | **18** | la cave est citée dans ~1 annonce sur 4 |
+| Énergie | 15 | **17** | le chauffage au bois est très souvent indiqué |
+| Autonomie alimentaire | 15 | **18** | la surface du terrain est presque toujours donnée |
+| Exposition aux risques | 20 | **15** | quasi tous les biens y obtenaient le maximum |
+| Situation & accès | 15 | **20** | densité, altitude, route et gare sont calculés pour *chaque* bien |
+
+Un puits reste un vrai plus (6 points, le plus gros bonus « équipement » du
+pilier eau) — mais il n'est plus décisif, car c'est un critère qui se vérifie
+**en visite**, pas dans une annonce.
 
 ## Lecture du total
 
