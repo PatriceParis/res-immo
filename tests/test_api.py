@@ -29,11 +29,14 @@ def client(tmp_path, monkeypatch):
             "densite_hab_km2": 50, "dpe": "D", "risques": {},
         },
         {
+            # Bien faible, mais dans un terroir CIBLÉ (Oise). Il était situé à
+            # Dourdan (91) : l'Île-de-France étant écartée du périmètre, il
+            # n'était tout simplement plus chargé.
             "id": "t-2", "source": "test", "titre": "Pavillon simple",
             "description": "Pavillon en lotissement, chauffage électrique.",
             "prix": 450000, "surface_m2": 100, "terrain_m2": 300,
-            "commune": "Dourdan", "code_postal": "91410",
-            "lat": 48.529, "lon": 2.011, "altitude": 130,
+            "commune": "Beauvais", "code_postal": "60000",
+            "lat": 49.430, "lon": 2.081, "altitude": 130,
             "densite_hab_km2": 300, "dpe": "F", "risques": {"inondation": True},
         },
     ]
@@ -74,3 +77,24 @@ def test_meta(client):
     meta = client.get("/api/meta").json()
     assert meta["nb"] == 2
     assert meta["nb_cave"] == 1
+
+
+def test_un_bien_d_ile_de_france_n_est_pas_charge(tmp_path, monkeypatch):
+    """L'Île-de-France est 6e au classement des terroirs : hors cible.
+
+    Les agences frontalières (Château-Thierry couvre La Ferté-sous-Jouarre)
+    en ramenaient sans que rien ne les arrête.
+    """
+    monkeypatch.setenv("REFUGE_DB", str(tmp_path / "idf.db"))
+    from app import db
+    from app.chargement import charger_liste
+
+    conn = db.connexion()
+    charges = charger_liste(conn, [{
+        "id": "idf-1", "source": "test", "titre": "Maison T6 dans hameau",
+        "type_bien": "maison", "prix": 250000, "surface_m2": 140, "pieces": 6,
+        "commune": "La Ferté-sous-Jouarre", "code_postal": "77260",
+        "lat": 48.947, "lon": 3.126,
+    }])
+    conn.close()
+    assert charges == 0

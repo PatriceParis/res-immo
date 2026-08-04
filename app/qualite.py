@@ -37,7 +37,10 @@ _NON_ANNONCE = re.compile(
 
 # Types de biens sans intérêt pour un refuge (repérés dans le titre).
 _TYPES_EXCLUS = re.compile(
-    r"appartements?|studios?|\bloft\b|parkings?|\bbox\b|emplacement de parking"
+    # « appt », « appart » : abréviations courantes dans les titres d'agences
+    # (« A VENDRE APPT T2 »), qui passaient à travers « appartements? ».
+    r"appartements?|\bapparts?\b|\bappts?\b|studios?|\bloft\b|parkings?|\bbox\b"
+    r"|emplacement de parking"
     r"|local (commercial|professionnel|d'activite)|locaux (commerciaux|professionnels)"
     r"|\bbureaux\b|entrepots?|fonds de commerce|murs commerciaux"
     r"|immeuble de rapport|terrains? (a batir|constructibles?|nus?)"
