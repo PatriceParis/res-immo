@@ -84,7 +84,17 @@ def preparer_annonce(brut: dict) -> dict:
     annonce["has_troglodyte"] = int(features.get("troglodyte", False))
     # Mémoire portée par le fichier exporté (app/historique.py) : on la
     # laisse telle quelle, c'est elle qui dit ce qui est nouveau.
-    annonce["hors_inondation"] = 0 if risques.get("inondation") else 1
+    # Le filtre d'inondation lisait encore la clé `inondation`, disparue quand
+    # les risques Géorisques ont été renommés `*_commune` (leur portée réelle).
+    # Plus aucun bien n'était donc marqué en zone inondable : la case « Hors
+    # zone inondable » ne filtrait PLUS RIEN — 133 biens sur 133 la passaient,
+    # dont 86 dans une commune où l'inondation est documentée.
+    #
+    # On accepte les deux clés : `inondation` quand l'information est connue à
+    # la parcelle, `inondation_commune` (le cas courant) quand elle ne l'est
+    # qu'à l'échelle de la commune. L'intitulé de la case le dit.
+    annonce["hors_inondation"] = 0 if (
+        risques.get("inondation") or risques.get("inondation_commune")) else 1
     return annonce
 
 
