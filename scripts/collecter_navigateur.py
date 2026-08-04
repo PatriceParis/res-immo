@@ -234,7 +234,7 @@ def main() -> None:
     ap.add_argument("--pages-max", type=int, default=30)
     # Budget de temps global : on rend la main proprement avant que le runner
     # CI ne coupe le job, sinon l'export et le commit ne tournent jamais.
-    ap.add_argument("--minutes-max", type=float, default=35.0)
+    ap.add_argument("--minutes-max", type=float, default=40.0)
     args = ap.parse_args()
 
     conn = db.connexion()
