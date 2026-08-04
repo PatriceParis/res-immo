@@ -206,6 +206,43 @@ def test_la_surface_annoncee_comme_terrain_est_ecartee():
         _surfaces("Jardin clos de 300 m², habitation de 145 m²"), 290000) == 145
 
 
+def test_habitable_egale_au_terrain_est_recherchee_dans_le_texte():
+    """Cas réel : la fiche technique schema.org de l'agence donne
+    floorSize = 360 alors que sa propre page annonce « Surface habitable
+    300 m² — Terrain 360 m² ». La valeur ne vient pas du texte : écarter les
+    surfaces qualifiées de terrain ne suffisait donc pas."""
+    html = """<html><head>
+    <meta property="og:title" content="BUXY. Belle demeure en pierre">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"Belle demeure",
+     "offers":{"@type":"Offer","price":"525000","priceCurrency":"EUR"},
+     "floorSize":{"value":360},
+     "address":{"postalCode":"71390","addressLocality":"Buxy"}}
+    </script></head><body>
+    <p>Surface habitable 300 m² Nombre de chambres 6 Terrain 360m²</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/1-demeure", source="x")
+    assert a["terrain_m2"] == 360
+    assert a["surface_m2"] == 300          # et non le terrain déguisé
+
+
+def test_aucune_surface_plutot_qu_un_terrain_deguise():
+    """Si le texte n'offre aucune surface crédible distincte du terrain, on
+    n'en affiche aucune : mieux vaut se taire que tromper."""
+    html = """<html><head>
+    <meta property="og:title" content="Maison de bourg">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"Maison de bourg",
+     "offers":{"@type":"Offer","price":"180000","priceCurrency":"EUR"},
+     "floorSize":{"value":262},
+     "address":{"postalCode":"61130","addressLocality":"Bellême"}}
+    </script></head><body><p>Terrain de 262 m². Beau jardin clos.</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://x.fr/vente/2-maison", source="x")
+    assert a["surface_m2"] is None
+    assert a["prix"] == 180000             # le prix, lui, reste connu
+
+
 def test_surface_choisie_par_coherence_du_prix_au_m2():
     """Cas réel : une propriété à 950 000 € ressortait à 50 m² — la première
     surface du texte était celle de la piscine, soit 19 000 €/m²."""
