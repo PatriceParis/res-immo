@@ -34,11 +34,17 @@ ZONES = [
     {"nom": "Vendôme",         "lat": 47.7931, "lon": 1.0656, "rayon_km": 30},
     {"nom": "Nogent-le-Rotrou", "lat": 48.3230, "lon": 0.8175, "rayon_km": 25},
     {"nom": "Sens",            "lat": 48.1977, "lon": 3.2836, "rayon_km": 25},
-    # Vallée du Loir : le pays du tuffeau, où l'habitat troglodyte est courant.
-    # Une maison creusée dans le coteau reste fraîche l'été et tempérée
-    # l'hiver — précisément ce qu'on cherche face aux canicules.
+    # Vallées du Loir et du Cher : le pays du tuffeau, où l'habitat troglodyte
+    # est courant. Une maison creusée dans le coteau reste fraîche l'été et
+    # tempérée l'hiver — précisément ce qu'on cherche face aux canicules.
+    # Toutes ces communes sont à 2 h 40 – 3 h 10 de Paris, en Centre-Val de
+    # Loire : le troglodyte n'oblige donc pas à sortir du périmètre.
     {"nom": "Montoire-sur-le-Loir", "lat": 47.7539, "lon": 0.8672, "rayon_km": 25},
     {"nom": "Château-Renault",  "lat": 47.5919, "lon": 0.9114, "rayon_km": 25},
+    {"nom": "Trôo",             "lat": 47.7847, "lon": 0.7936, "rayon_km": 20},
+    {"nom": "Montrichard",      "lat": 47.3428, "lon": 1.1892, "rayon_km": 25},
+    {"nom": "Amboise",          "lat": 47.4131, "lon": 0.9821, "rayon_km": 25},
+    {"nom": "Vouvray",          "lat": 47.4108, "lon": 0.7967, "rayon_km": 20},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence
