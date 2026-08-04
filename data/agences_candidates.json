@@ -77,6 +77,17 @@
   "note": 80
  },
  {
+  "nom": "De Noray Immobilier",
+  "site": "https://denoray-immobilier.com",
+  "zone": "Château-Renault",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 136,
+  "motif": "",
+  "note": 80
+ },
+ {
   "nom": "Cap Immobilier",
   "site": "https://capimmobilier89.fr",
   "zone": "Sens",
@@ -86,6 +97,17 @@
   "nb_biens": 56,
   "motif": "",
   "note": 76
+ },
+ {
+  "nom": "Arthurimmo",
+  "site": "https://adfoncier.arthurimmo.com",
+  "zone": "Montoire-sur-le-Loir",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 55,
+  "motif": "",
+  "note": 75
  },
  {
   "nom": "ArthurImmo.com Agence Saint-Hubert",
@@ -108,6 +130,17 @@
   "nb_biens": 21,
   "motif": "",
   "note": 41
+ },
+ {
+  "nom": "Agence Greub",
+  "site": "https://agence-greub.fr",
+  "zone": "Château-Thierry",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 13,
+  "motif": "",
+  "note": 33
  },
  {
   "nom": "Square Habitat",
@@ -286,6 +319,61 @@
   "note": 20
  },
  {
+  "nom": "Catenne Immobilier",
+  "site": "https://tlg-catenne.fr",
+  "zone": "Compiègne",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Authon Immobilier",
+  "site": "https://authonimmobilier.com",
+  "zone": "Nogent-le-Rotrou",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "C3 Immobilier",
+  "site": "https://c3immobilier.fr",
+  "zone": "Château-Thierry",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "CHART'Immo",
+  "site": "https://chartimmo.com",
+  "zone": "Château-Renault",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Aci Immobillier",
+  "site": "https://aci-immo.com",
+  "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 10,
+  "motif": "",
+  "note": 10
+ },
+ {
   "nom": "L'immobilier à La Loupe",
   "site": "https://limmobilier-a-laloupe.fr",
   "zone": "Nogent-le-Rotrou",
@@ -341,9 +429,31 @@
   "note": 2
  },
  {
+  "nom": "Agence La Chaumière",
+  "site": "https://agencelachaumiere.fr",
+  "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 2,
+  "motif": "",
+  "note": 2
+ },
+ {
   "nom": "Legrand Immobiler",
   "site": "https://legrand-immobilier.com",
   "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 1
+ },
+ {
+  "nom": "Agence Simon",
+  "site": "https://agence-simon.com",
+  "zone": "Château-Renault",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
@@ -792,39 +902,6 @@
   "note": 0
  },
  {
-  "nom": "Catenne Immobilier",
-  "site": "https://tlg-catenne.fr",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Aci Immobillier",
-  "site": "https://aci-immo.com",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Agence La Chaumière",
-  "site": "https://agencelachaumiere.fr",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
   "nom": "Antony Oioli Patrimoine Immo",
   "site": "https://patrimoine-immo.net",
   "zone": "Sens",
@@ -880,14 +957,69 @@
   "note": 0
  },
  {
-  "nom": "Authon Immobilier",
-  "site": "https://authonimmobilier.com",
-  "zone": "Nogent-le-Rotrou",
+  "nom": "Agence Candat",
+  "site": "https://candat-immoblier.fr",
+  "zone": "Château-Thierry",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Agence Boilot",
+  "site": "https://agence-boilot.com",
+  "zone": "Château-Thierry",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "Yann Vrancken Immo",
+  "site": "https://yann-vrancken-immobilier.fr",
+  "zone": "Château-Thierry",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
   "motif": "ReadTimeout",
+  "note": 0
+ },
+ {
+  "nom": "IMMO 7",
+  "site": "https://agenceimmo7.com",
+  "zone": "Château-Thierry",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "Aim Transactions Montlouis",
+  "site": "https://aim-transactions.com",
+  "zone": "Château-Renault",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Chambord Immobilier",
+  "site": "https://chambordimmobilier.fr",
+  "zone": "Château-Renault",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectTimeout",
   "note": 0
  }
 ]
