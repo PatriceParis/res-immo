@@ -99,10 +99,79 @@ que pas de règle.
 
 ---
 
-## L'audit est maintenant outillé
+# Pour que cela ne se reproduise plus
 
-`scripts/auditer.py` rejoue ces contrôles sur la base réellement servie, et
-tourne à chaque collecte (`.github/workflows/collecte.yml`).
+Corriger ces défauts un à un ne suffisait pas : il en reviendra d'autres de
+la même famille à chaque évolution. Quatre pièces les empêchent désormais
+d'atteindre le site.
+
+## 1. Les promesses de l'interface, écrites une seule fois
+
+`app/coherence.py` énonce **douze invariants** en français, chacun avec le
+moyen de le vérifier. Ce sont les promesses que l'écran fait à l'utilisateur :
+
+| Promesse | Ce qu'elle empêche |
+|---|---|
+| Le compteur décrit la liste, ou dit qu'il tronque | « 250 biens trouvés », 200 affichés |
+| La somme des pastilles égale le total | Les 16 biens sarthois comptés nulle part |
+| Cliquer une pastille donne le nombre annoncé | **Le bug d'origine** : « 60 biens », 2 dans la liste |
+| Chaque case réduit la sélection, et tout ce qui reste la satisfait | La case d'inondation inerte |
+| Les curseurs bornent réellement | Un budget de 200 000 € qui laisse passer 400 000 € |
+| Chaque tri range vraiment | Un « moins cher d'abord » qui ne trie pas |
+| Chaque bien mène à son agence | Une mise en relation impossible |
+| Le score égale la somme de ses piliers | Un score qui contredit son propre détail |
+| L'écart au marché est recalculable | « 18 % sous le secteur » sorti de nulle part |
+| « Nouveau » et les baisses de prix sont justifiés | De faux signaux d'achat |
+| Les bornes des filtres couvrent les données | Un bien inatteignable par le curseur |
+| Les agences annoncées existent | Une agence au menu sans aucun bien |
+
+Ces invariants ne dépendent pas de la façon dont on interroge le site : ils
+tournent aussi bien sur un banc d'essai que sur le site en ligne.
+
+## 2. Ce que l'utilisateur voit vraiment
+
+Le contrat au niveau de l'API ne suffisait pas : **le compte de photos inventé
+vivait entièrement dans le JavaScript**, l'API était irréprochable.
+
+`scripts/auditer_interface.py` ouvre donc la vraie page dans un vrai
+navigateur et compare l'écran aux données : compteur, pastilles, chaque case
+à cocher, fiche détaillée. Il refuse en outre toute **promesse chiffrée non
+sourcée** (« 1 / 9 photos », « 8 autres photos »), et interdit qu'une valeur
+affichée vienne d'un hachage ou d'un tirage au sort — seule l'illustration de
+repli, décor assumé, a le droit de varier.
+
+```bash
+python scripts/auditer_interface.py                          # démarre le site et l'audite
+python scripts/auditer_interface.py --url https://res-immo.vercel.app
+```
+
+## 3. La preuve que ces contrôles détectent quelque chose
+
+Un contrôle qui ne détecte rien donne une fausse assurance — exactement le
+travers combattu ici. Chaque invariant est donc confronté, dans
+`tests/test_coherence.py`, à une API **délibérément menteuse**, et doit le
+voir. Un test vérifie qu'aucun invariant n'échappe à cette preuve ; deux
+autres qu'aucune case à cocher ni aucun tri de l'interface n'est hors
+contrat — c'est ce dernier qui a révélé que le tri « prix au m² » n'était
+surveillé par rien.
+
+La garantie a été éprouvée en **réintroduisant les trois vrais bugs** : le
+compte de photos fabriqué, la pastille qui ignore les filtres, la case
+d'inondation inerte. Les trois sont détectés — le deuxième réaffiche
+littéralement « Centre-Val de Loire annonce 60 biens ».
+
+## 4. Une vérification à chaque modification
+
+Le dépôt n'avait **aucune** vérification automatique : une modification
+pouvait atteindre le site sans que rien ne l'ait relue.
+`.github/workflows/verification.yml` fait désormais passer, à chaque push :
+les tests, l'audit des données servies, puis l'audit de l'interface dans un
+navigateur. En mode strict — une promesse non tenue arrête la vérification.
+
+## L'audit des données
+
+`scripts/auditer.py` reste le pendant côté données, et tourne aussi à chaque
+collecte (`.github/workflows/collecte.yml`).
 
 ```bash
 python scripts/auditer.py              # audite data/refuge.db
@@ -116,6 +185,20 @@ piliers, écart au marché non reproductible, biens vendus, doublons, liens
 morts, et **case à cocher qui sélectionne 0 % ou 100 % du catalogue** — c'est
 cette dernière qui aurait attrapé le filtre d'inondation.
 
-**État à la fin de l'audit : 7 anomalies sur 133 biens (5 %)**, toutes
-antérieures aux correctifs d'extraction. Réextraites avec le code actuel, les
-5 prix au m² aberrants disparaissent.
+---
+
+## Où en est-on
+
+- **108 tests** passent, dont la preuve de détection de chaque invariant.
+- **26 promesses d'interface tenues** sur les données réelles.
+- **7 anomalies de données sur 133 biens (5 %)**, toutes antérieures aux
+  correctifs d'extraction : réextraites avec le code actuel, les 5 prix au m²
+  aberrants disparaissent.
+
+## Ajouter quelque chose à l'interface
+
+Une nouvelle case à cocher, un nouveau tri, un nouveau chiffre affiché ?
+**Ajoutez l'invariant correspondant dans `app/coherence.py`.** Les tests
+refusent une case ou un tri qui ne serait couvert par rien — c'est
+volontaire : c'est la seule façon d'empêcher qu'un contrôle tombe en panne
+en silence, comme l'a fait celui de l'inondation.
