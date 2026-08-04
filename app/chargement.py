@@ -81,6 +81,7 @@ def preparer_annonce(brut: dict) -> dict:
     annonce["has_solaire"] = int(features.get("solaire", False))
     annonce["has_dependances"] = int(features.get("grange_dependance", False))
     annonce["has_potager"] = int(features.get("verger_potager", False))
+    annonce["has_troglodyte"] = int(features.get("troglodyte", False))
     annonce["hors_inondation"] = 0 if risques.get("inondation") else 1
     return annonce
 
@@ -97,10 +98,32 @@ DISTANCE_MAX_KM = 350
 DEPARTEMENTS_CIBLES = set(regions.REGION_PAR_DEPT) | {"72", "53", "89", "58"}
 
 
+def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
+    """Repère les (agence, prix, surface, terrain) qui reviennent à l'identique.
+
+    Quand une agence sort plusieurs biens avec EXACTEMENT le même prix, la même
+    surface et le même terrain, ce ne sont pas des biens : l'extraction a lu un
+    bandeau commun à toutes les pages du site (cas réel : 10 annonces à
+    530 000 €, 265 m², dans dix communes différentes). On préfère ne rien
+    afficher plutôt que des biens fantômes aux prix faux.
+    """
+    compte: dict = {}
+    for a in annonces:
+        cle = (a.get("agence"), a.get("prix"), a.get("surface_m2"), a.get("terrain_m2"))
+        if cle[1] is None and cle[2] is None:
+            continue
+        compte[cle] = compte.get(cle, 0) + 1
+    return {cle for cle, n in compte.items() if n >= seuil}
+
+
 def charger_liste(conn, annonces: list[dict]) -> int:
     """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé."""
+    suspectes = _signatures_suspectes(annonces)
     n = 0
     for brut in annonces:
+        if (brut.get("agence"), brut.get("prix"), brut.get("surface_m2"),
+                brut.get("terrain_m2")) in suspectes:
+            continue  # doublons issus d'un bandeau de site, pas de vrais biens
         if not est_bien_valide(brut):
             continue  # blog, page catalogue, appartement, parking, vendu… : écarté
         annonce = preparer_annonce(brut)

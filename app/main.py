@@ -76,6 +76,7 @@ def liste_annonces(
     solaire: int = 0,
     dependances: int = 0,
     potager: int = 0,
+    troglodyte: int = 0,
     hors_inondation: int = 0,
     type_bien: str | None = None,
     region: str | None = None,
