@@ -320,7 +320,7 @@ const EXPLICATIONS_PILIERS = {
   energie: "Chauffage au bois, panneaux solaires, pompe à chaleur, inertie thermique (pierre/troglodyte), DPE.",
   alimentation: "Pouvoir produire une partie de sa nourriture. On additionne l'espace (la taille du terrain, pour cultiver ou élever) ET les aménagements déjà là — potager, verger, poulailler, serre, vigne, ruches, prairie. Un petit terrain bien équipé peut marquer autant qu'un grand terrain nu. Score à 0 quand l'annonce n'indique ni terrain ni aménagement : on ne peut alors rien prouver.",
   risques: "On part de 20 puis on retire des points : zone inondable, sols argileux, centrale nucléaire ou site Seveso proche, feux de forêt.",
-  situation: "Altitude, faible densité de population, hameau isolé, temps de route depuis Paris.",
+  situation: "Altitude, faible densité de population, hameau isolé, temps de route depuis Paris, et surtout accès en TRAIN : une gare proche rend le refuge atteignable sans voiture (pénurie de carburant, pas de véhicule) et compatible avec un travail à Paris.",
 };
 
 function jaugesPiliers(detail) {
@@ -381,8 +381,12 @@ function ouvrirFiche(id) {
       ${tuile("Surface", a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : null)}
       ${tuile("Terrain", a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : null)}
       ${tuile("Pièces", a.pieces)}
-      ${tuile("Depuis Paris", fmtTemps(a.temps_voiture_min),
+      ${tuile("Paris en voiture", fmtTemps(a.temps_voiture_min),
               a.distance_km ? "~" + Math.round(a.distance_km * 1.25) + " km · estimé" : "estimé")}
+      ${a.train && a.train.nom
+        ? tuile("Paris en train", fmtTemps(a.train.minutes_paris),
+                `${echap(a.train.nom)} · à ${a.train.km} km`)
+        : ""}
       ${tuile("Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}
       ${tuile("DPE", a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>` : "n.c.")}
     </div>

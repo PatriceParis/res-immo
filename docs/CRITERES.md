@@ -68,9 +68,11 @@ propriété d'un hectare nu obtient 6/15.*
 | Zone sensible aux feux de forêt | −2 |
 
 La distance aux centrales est calculée automatiquement (liste des 18 CNPE
-embarquée). Les autres risques viennent du jeu de démonstration ou, pour de
-vraies annonces, de l'API officielle **Géorisques**
-(`python scripts/enrichir_risques.py`).
+embarquée). Les autres risques sont renseignés par l'API officielle de l'État
+**Géorisques** — zone inondable, retrait-gonflement des argiles, feux de forêt,
+sismicité, radon, sites industriels. L'enrichissement tourne **automatiquement à
+chaque collecte** (étape « Enrichir les risques officiels » du workflow), et peut
+se relancer à la main : `python scripts/enrichir_risques.py`.
 
 ### 🚗 Situation & accès — 15 points
 | Critère | Points |
@@ -78,11 +80,36 @@ vraies annonces, de l'API officielle **Géorisques**
 | Altitude ≥ 200 m | 3 (≥ 100 m : 2) |
 | Densité < 30 hab/km² | 6 (< 80 : 4 ; < 300 : 2) |
 | Paris à ≤ 1 h 30 de route | 6 (≤ 2 h 30 : 4 ; ≤ 3 h 30 : 2) |
+| Hameau / à l'écart / pleine campagne | 2 |
+| **Gare à ≤ 15 km, Paris en ≤ 1 h** | **4** (≤ 1 h 30 : 3 ; ≤ 2 h : 2) |
+| Gare entre 15 et 25 km | 1 |
 
 Le POC cible une **base de repli atteignable** : un refuge à 6 h de route ne
 sert à rien en cas de départ précipité — d'où des points pour la proximité,
 alors que la faible densité joue en sens inverse. C'est cet équilibre qui
 fait ressortir le Perche, la Puisaye ou le Pays d'Othe.
+
+#### 🚆 Pourquoi le train compte
+
+La voiture suppose du **carburant**, un véhicule en état et des routes
+praticables. Une commune desservie par une gare reste **atteignable sans
+voiture** — en cas de pénurie, de prix de l'énergie qui s'envole, ou pour qui
+n'a tout simplement pas de véhicule. C'est aussi ce qui rend un repli
+**compatible avec un travail à Paris**, donc un projet réaliste plutôt qu'un
+rêve : on peut s'installer *avant* la crise, pas seulement y fuir.
+
+Villes qui cumulent ruralité et accès direct :
+
+| Ville | Paris en train | Terroir |
+|---|---|---|
+| **Vendôme**–Villiers-sur-Loir | **42 min** (TGV, Montparnasse) | Perche vendômois |
+| **Château-Thierry** | ~50 min (Est) | Sud de l'Aisne, vallée de la Marne |
+| **Noyon** | ~1 h (Nord) | Noyonnais, Oise |
+| Compiègne · Creil · Sens · Vernon | 30–55 min | Oise, Yonne, Eure |
+
+La table des gares vit dans `app/gares.py` (nom, position, minutes depuis
+Paris) ; la gare la plus proche d'un bien est trouvée automatiquement, dans un
+rayon de 25 km au-delà duquel la voiture redevient indispensable.
 
 ### ➕ Autres critères de résilience (détectés dans le texte)
 

@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     temps_voiture_min REAL,
     features_json     TEXT DEFAULT '{}',
     risques_json      TEXT DEFAULT '{}',
+    train_json        TEXT DEFAULT '{}',
     score_total       REAL DEFAULT 0,
     score_detail_json TEXT DEFAULT '{}',
     badges_json       TEXT DEFAULT '[]',
@@ -73,6 +74,7 @@ TRIS = {
 CHAMPS_JSON = {
     "features_json": "features",
     "risques_json": "risques",
+    "train_json": "train",
     "score_detail_json": "score_detail",
     "badges_json": "badges",
     "alertes_json": "alertes",
@@ -103,7 +105,8 @@ def _migrer(conn: sqlite3.Connection) -> None:
     """Ajoute les colonnes récentes à une base créée par une version antérieure."""
     existantes = {r[1] for r in conn.execute("PRAGMA table_info(annonces)").fetchall()}
     for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''"),
-                                ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''")):
+                                ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''"),
+                                ("train_json", "TEXT DEFAULT '{}'")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -142,6 +145,7 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "temps_voiture_min": a.get("temps_voiture_min"),
         "features_json": json.dumps(a.get("features", {}), ensure_ascii=False),
         "risques_json": json.dumps(a.get("risques", {}), ensure_ascii=False),
+        "train_json": json.dumps(a.get("train") or {}, ensure_ascii=False),
         "score_total": a.get("score_total", 0),
         "score_detail_json": json.dumps(a.get("score_detail", {}), ensure_ascii=False),
         "badges_json": json.dumps(a.get("badges", []), ensure_ascii=False),
