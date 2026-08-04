@@ -271,6 +271,34 @@ def signaux_de_fraicheur_justifies(appeler: Appel) -> Rapport:
     return r
 
 
+def date_de_constatation_credible(appeler: Appel) -> Rapport:
+    """La fiche annonce « constatée en ligne il y a N jours » : ça engage.
+
+    La collecte passe chez les agences à tour de rôle ; un bien peut n'avoir
+    pas été revérifié depuis des semaines. La fiche le dit — encore faut-il
+    que la date soit présente et vraie.
+    """
+    from datetime import date
+
+    r = Rapport("date_de_constatation_credible",
+                "Quand une fiche annonce depuis quand le bien a été constaté "
+                "en ligne, la date est crédible.")
+    # Une date absente n'est pas un manquement : l'interface n'affiche alors
+    # rien du tout (cf. `fraicheur()` dans app.js). Ne rien dire est honnête ;
+    # dire une date fausse ne l'est pas. C'est cela qu'on vérifie.
+    aujourd_hui = date.today().isoformat()
+    for b in _tous(appeler)["items"]:
+        vue = b.get("revue_le")
+        if not vue:
+            continue
+        if vue > aujourd_hui:
+            r.manquements.append(f"{b['id']} : constatée le {vue}, dans le futur")
+        elif b.get("vue_le") and b["vue_le"] > vue:
+            r.manquements.append(
+                f"{b['id']} : première vue ({b['vue_le']}) après la dernière ({vue})")
+    return r
+
+
 def bornes_des_filtres_couvrent_les_donnees(appeler: Appel) -> Rapport:
     """Le curseur de budget doit pouvoir atteindre le bien le plus cher."""
     r = Rapport("bornes_des_filtres_couvrent_les_donnees",
@@ -320,6 +348,7 @@ INVARIANTS = (
     score_egal_a_ses_piliers,
     ecart_au_marche_reproductible,
     signaux_de_fraicheur_justifies,
+    date_de_constatation_credible,
     bornes_des_filtres_couvrent_les_donnees,
     agences_annoncees_presentes,
 )

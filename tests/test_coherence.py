@@ -234,6 +234,17 @@ def test_detecte_une_baisse_de_prix_qui_n_en_est_pas_une(appeler):
     assert not r.tenue
 
 
+def test_detecte_une_date_de_constatation_impossible(appeler):
+    def constatee_demain(chemin, params, reponse):
+        if chemin == "/api/annonces":
+            for b in reponse.get("items", []):
+                b["revue_le"] = "2099-01-01"
+        return reponse
+
+    r = coherence.date_de_constatation_credible(_menteur(appeler, constatee_demain))
+    assert not r.tenue
+
+
 def test_detecte_une_agence_annoncee_a_tort(appeler):
     def agence_fantome(chemin, params, reponse):
         if chemin == "/api/agences":
@@ -264,6 +275,7 @@ def test_chaque_invariant_a_sa_preuve_de_detection():
         "seuils_numeriques_respectes", "tris_ordonnes",
         "chaque_bien_mene_a_l_agence", "score_egal_a_ses_piliers",
         "ecart_au_marche_reproductible", "signaux_de_fraicheur_justifies",
+        "date_de_constatation_credible",
         "bornes_des_filtres_couvrent_les_donnees", "agences_annoncees_presentes",
     }
     declares = {inv.__name__ for inv in coherence.INVARIANTS}
