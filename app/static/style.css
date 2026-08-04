@@ -273,6 +273,11 @@ body {
 .vraie-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; }
 .photo-compte { z-index: 2; }
 
+/* Photo qui ne charge pas : on retombe sur l'illustration, et la pastille
+   « photo de l'agence » s'efface avec elle. Annoncer une photo qu'on ne
+   montre pas serait le même défaut que d'en inventer le nombre. */
+.photo-absente .photo-compte { display: none; }
+
 /* ---------- mise en relation (modèle : photos + contact agence) ---------- */
 .mise-en-relation {
   display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
