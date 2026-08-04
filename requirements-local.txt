@@ -4,7 +4,12 @@ uvicorn>=0.29,<1.0
 requests>=2.31,<3.0
 scrapy>=2.11,<3.0
 pytest>=8.0,<9.0
-httpx>=0.27,<1.0
+# Client HTTP du banc d'essai FastAPI (TestClient). Starlette a changé de
+# dépendance en cours de route : les versions récentes réclament httpx2, les
+# anciennes httpx. On installe les deux — c'est quelques centaines de kilo-
+# octets, contre une suite de tests qui ne démarre plus selon la machine.
+httpx>=0.27
+httpx2>=2.0
 
 # Optionnel — collecte via un vrai navigateur (scripts/collecter_navigateur.py),
 # pour les sites d'agences protégés par un anti-robots. À installer soi-même :
