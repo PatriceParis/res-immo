@@ -93,7 +93,10 @@ jobs:
           if [ "$N" -gt 0 ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/annonces_reel.json
+            # Le journal des visites porte la ROTATION : sans lui, la collecte
+            # repartirait toujours des mêmes premières agences et ne
+            # reviendrait jamais aux dernières.
+            git add data/annonces_reel.json data/agences_visitees.json
             git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || echo "Aucun changement."
             # La collecte dure ~20 min : un commit poussé pendant ce temps
             # faisait rejeter ce push, et TOUT le travail était perdu.
@@ -111,10 +114,12 @@ jobs:
               # de l'ancien checkout et re-committerait tout le reste au
               # passage, écrasant silencieusement le travail des autres.
               cp data/annonces_reel.json "$RUNNER_TEMP/annonces_reel.json"
+              cp data/agences_visitees.json "$RUNNER_TEMP/agences_visitees.json" 2>/dev/null || true
               git fetch origin main
               git reset --hard origin/main
               cp "$RUNNER_TEMP/annonces_reel.json" data/annonces_reel.json
-              git add data/annonces_reel.json
+              cp "$RUNNER_TEMP/agences_visitees.json" data/agences_visitees.json 2>/dev/null || true
+              git add data/annonces_reel.json data/agences_visitees.json
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
               sleep $((essai * 5))
             done

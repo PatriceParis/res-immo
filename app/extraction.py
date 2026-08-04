@@ -117,13 +117,38 @@ RE_REFERENCE = re.compile(r"(?:r[ée]f\.?(?:[ée]rence)?|n[°o]|lot)\s*:?\s*\d+"
 PRIX_M2_MIN, PRIX_M2_MAX = 300, 8000
 
 
+# Ce qui, juste avant un nombre en m², désigne du TERRAIN et non de
+# l'habitable. Cas réels : « Surface 83,58 m² terrain 285 m² » et « Surface
+# habitable (m²) 94 m² surface terrain 558 m² » — dans les deux, c'est le
+# terrain qui ressortait comme surface habitable du bien.
+RE_AVANT_TERRAIN = re.compile(
+    r"(?:terrain|parcelle|jardin|cour|verger|prairie|p[âa]ture|potager)"
+    r"[^.;]{0,18}$", re.IGNORECASE)
+
+
 def _surfaces(texte: str) -> list[float]:
-    """Toutes les surfaces habitables plausibles citées, dans l'ordre."""
-    vues = []
-    for m in RE_SURFACE.finditer(texte or ""):
+    """Toutes les surfaces habitables plausibles citées, dans l'ordre.
+
+    Les surfaces annoncées comme du terrain sont écartées : elles passaient
+    pour de l'habitable et, étant généralement plus grandes, l'emportaient au
+    moment de choisir — `_surface_coherente` retient la plus grande des
+    surfaces crédibles, et un terrain l'est souvent aussi.
+    """
+    texte = texte or ""
+    vues, fin_precedente = [], 0
+    for m in RE_SURFACE.finditer(texte):
+        # On ne regarde en arrière que jusqu'à la surface précédente : sinon
+        # « Terrain 500 m², maison 120 m² » verrait le mot « terrain » devant
+        # les 120 m² de la maison et les écarterait à tort.
+        debut = max(fin_precedente, m.start() - 40)
+        qualifie_du_terrain = RE_AVANT_TERRAIN.search(texte[debut:m.start()])
+        fin_precedente = m.end()
         val = _num(m.group(1))
-        if val and 8 <= val <= 800 and val not in vues:
-            vues.append(val)
+        if not val or not (8 <= val <= 800) or val in vues:
+            continue
+        if qualifie_du_terrain:
+            continue
+        vues.append(val)
     return vues
 
 

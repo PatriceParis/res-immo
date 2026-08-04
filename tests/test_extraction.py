@@ -181,6 +181,31 @@ def test_la_surface_du_terrain_n_est_pas_prise_pour_l_habitable():
     assert _surfaces("terrain 4425 m²") == []          # hors bornes habitables
 
 
+def test_la_surface_annoncee_comme_terrain_est_ecartee():
+    """Cas réels relevés par l'audit : « Surface 83,58 m² terrain 285 m² » et
+    « Surface habitable (m²) 94 m² surface terrain 558 m² » ressortaient tous
+    deux avec le TERRAIN comme surface habitable — la plus grande des surfaces
+    crédibles l'emportait, et un terrain l'est souvent aussi."""
+    from app.extraction import _surface_coherente, _surfaces
+
+    # Le terrain ne doit pas figurer parmi les candidats. Les autres surfaces
+    # de la page (une pièce, une dépendance) peuvent y rester : c'est le rôle
+    # de _surface_coherente de trancher entre elles.
+    candidats = _surfaces("Surface 83,58 m² terrain 285 m² séjour 25 m²")
+    assert 285 not in candidats
+    assert _surface_coherente(candidats, 150000) == 83.58
+
+    candidats = _surfaces("Surface habitable (m²) 94 m² surface terrain 558 m²")
+    assert 558 not in candidats
+    assert _surface_coherente(candidats, 260000) == 94
+
+    # …sans écarter pour autant l'habitable qui SUIT une mention de terrain :
+    # on ne regarde en arrière que jusqu'à la surface précédente.
+    assert _surface_coherente(_surfaces("Terrain 500 m², maison 120 m²"), 240000) == 120
+    assert _surface_coherente(
+        _surfaces("Jardin clos de 300 m², habitation de 145 m²"), 290000) == 145
+
+
 def test_surface_choisie_par_coherence_du_prix_au_m2():
     """Cas réel : une propriété à 950 000 € ressortait à 50 m² — la première
     surface du texte était celle de la piscine, soit 19 000 €/m²."""

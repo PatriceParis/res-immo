@@ -31,6 +31,7 @@ import os
 import re
 import sys
 import time
+from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
@@ -71,15 +72,80 @@ def _slug(nom: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", (nom or "agence").lower()).strip("-")
 
 
+JOURNAL_VISITES = RACINE / "data" / "agences_visitees.json"
+
+
+def _derniere_visite() -> dict:
+    """Date de dernier PASSAGE par agence — qu'il ait rapporté ou non.
+
+    Se fonder sur `revue_le` (présent seulement quand l'agence a livré des
+    biens) affamerait la rotation : une agence dont le site est cassé ne
+    recevrait jamais de date, resterait éternellement en tête et prendrait le
+    budget des autres à chaque collecte. On enregistre donc le passage.
+
+    L'export sert de repli pour les agences visitées avant l'existence de ce
+    journal.
+    """
+    vu: dict = {}
+    try:
+        for bien in json.loads(
+                (RACINE / "data" / "annonces_reel.json").read_text(encoding="utf-8")):
+            agence, date = bien.get("agence"), bien.get("revue_le") or ""
+            if agence and date > vu.get(agence, ""):
+                vu[agence] = date
+    except (OSError, ValueError):
+        pass
+    try:
+        for agence, date in json.loads(
+                JOURNAL_VISITES.read_text(encoding="utf-8")).items():
+            if date > vu.get(agence, ""):
+                vu[agence] = date
+    except (OSError, ValueError):
+        pass
+    return vu
+
+
+def _noter_visite(agence: str, jour: str) -> None:
+    """Consigne le passage chez une agence, même s'il n'a rien rapporté."""
+    try:
+        journal = json.loads(JOURNAL_VISITES.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        journal = {}
+    journal[agence] = jour
+    try:
+        JOURNAL_VISITES.parent.mkdir(parents=True, exist_ok=True)
+        JOURNAL_VISITES.write_text(
+            json.dumps(journal, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8")
+    except OSError:
+        pass    # un journal indisponible ne doit pas arrêter la collecte
+
+
 def _cibles(site: str, nom: str, index: str) -> list[dict]:
     if site:
         return [{"nom": nom or urlparse(site).netloc, "site": site.rstrip("/"),
                  "index": [index] if index else []}]
     try:
-        return json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
+        agences = json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
     except (OSError, ValueError):
         print(f"Config illisible : {CONFIG}")
         return []
+
+    # ROTATION. La collecte s'arrête au budget de temps : en parcourant
+    # toujours la liste dans le même ordre, on revisitait sans cesse les mêmes
+    # premières agences et JAMAIS les dernières. Constat réel : 51 agences
+    # configurées, 4 réellement revues lors d'une collecte.
+    #
+    # Deux conséquences, toutes deux invisibles depuis le site : les biens des
+    # agences de fin de liste étaient figés pour toujours — un bien vendu chez
+    # elles n'expirait jamais, faute d'être jamais constaté absent — et une
+    # amélioration de l'extraction ne les atteignait pas.
+    #
+    # On commence donc par celles qu'on a vues il y a le plus longtemps, les
+    # jamais visitées en tête. Chaque agence revient à son tour.
+    vu = _derniere_visite()
+    agences.sort(key=lambda a: (vu.get(a.get("nom"), ""), a.get("nom") or ""))
+    return agences
 
 
 def _sitemap_urls(base: str) -> list[str]:
@@ -340,6 +406,7 @@ def main() -> None:
             conn.commit()
             print(f"  ✔ {n} bien(s) enregistré(s)"
                   f" — {vendus} déjà vendu(s), {ecartes} hors cible")
+            _noter_visite(cible["nom"], date.today().isoformat())
             total += n
 
         navigateur.close()
