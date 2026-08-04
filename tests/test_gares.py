@@ -45,3 +45,40 @@ def test_pilier_situation_reste_plafonne():
     parfait = _pilier_situation(250, 10, 60, {"isolement": True},
                                 {"minutes_paris": 42, "km": 2.0})
     assert parfait <= MAX_PILIERS["situation"]
+
+
+def test_gare_dans_la_commune_touche_son_bonus():
+    """Piège Python : « train.get("km") or 99 » vaut 99 quand km == 0.0.
+
+    Une gare située DANS la commune se retrouvait donc traitée comme étant à
+    99 km, et privée du bonus — exactement l'inverse du but recherché.
+    """
+    sur_place = _pilier_situation(250, 40, 265, None,
+                                  {"minutes_paris": 80, "km": 0.0})
+    lointaine = _pilier_situation(250, 40, 265, None,
+                                  {"minutes_paris": 80, "km": 20.0})
+    assert sur_place > lointaine
+
+
+def test_le_creusot_tgv_rapproche_la_saone_et_loire():
+    """Chalon est à 4 h 25 de route, mais Le Creusot TGV met Paris à 1 h 20 :
+    c'est précisément ce que le pilier « accès sans voiture » doit voir."""
+    creusot = gares.gare_la_plus_proche(46.8003, 4.4331)
+    assert creusot and creusot["minutes_paris"] == 80
+    assert "Creusot" in creusot["nom"]
+
+    chalon = gares.gare_la_plus_proche(46.7806, 4.8536)
+    assert chalon and chalon["minutes_paris"] <= 100
+
+    # À situation routière identique, la desserte TGV fait la différence.
+    sans = _pilier_situation(200, 50, 265, None, None)
+    avec = _pilier_situation(200, 50, 265, None, creusot)
+    assert avec > sans
+
+
+def test_yonne_desservie():
+    """La Puisaye est à 2 h 25 de route et à 22 km d'une gare : elle doit
+    conserver un accès train, même sans gare dans la commune."""
+    toucy = gares.gare_la_plus_proche(47.7333, 3.2944)
+    assert toucy and "Auxerre" in toucy["nom"]
+    assert gares.gare_la_plus_proche(47.7982, 3.5734)["minutes_paris"] == 105

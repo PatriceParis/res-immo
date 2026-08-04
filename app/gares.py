@@ -54,11 +54,18 @@ GARES = [
     # --- Bourgogne-Franche-Comté (Bercy / Lyon) ---
     ("Sens", 48.1978, 3.2778, 55, "Bercy"),
     ("Joigny", 47.9803, 3.3936, 75, "Bercy"),
+    ("Migennes", 47.9656, 3.5122, 65, "Bercy"),
     ("Auxerre–Saint-Gervais", 47.7961, 3.5822, 105, "Bercy"),
     ("Avallon", 47.4886, 3.9058, 145, "Bercy"),
     ("Montbard", 47.6236, 4.3369, 60, "Lyon"),
     ("Clamecy", 47.4589, 3.5194, 150, "Bercy"),
     ("Nevers", 46.9906, 3.1567, 120, "Bercy"),
+    # Saône-et-Loire. Le cas d'école de ce que le train change : Chalon est à
+    # 4 h 25 de route, mais Le Creusot TGV met Paris à 1 h 20 — ce bassin est
+    # donc bien plus proche qu'il n'y paraît sur une carte routière.
+    ("Le Creusot–Montceau–Montchanin TGV", 46.8003, 4.4331, 80, "Lyon"),
+    ("Chalon-sur-Saône", 46.7806, 4.8536, 95, "Lyon"),
+    ("Montceau-les-Mines", 46.6739, 4.3661, 100, "Lyon"),
 ]
 
 # Au-delà de cette distance, on considère qu'il faut de toute façon une voiture
