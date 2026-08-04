@@ -85,13 +85,32 @@ def preparer_annonce(brut: dict) -> dict:
     return annonce
 
 
+# Au-delà, ce n'est plus une base de repli depuis Paris — et c'est en pratique
+# le signe d'une géolocalisation ratée (un numéro de référence pris pour un code
+# postal envoyait des biens du Perche dans la Creuse ou le Cantal).
+DISTANCE_MAX_KM = 350
+
+# Départements des 5 terroirs ciblés, plus quelques voisins immédiats (Sarthe
+# pour le Perche sarthois, Aisne pour Château-Thierry…). Un bien annoncé hors
+# de cette liste par une agence du Perche trahit une erreur de lecture, pas une
+# vraie annonce lointaine : on l'écarte même sans coordonnées.
+DEPARTEMENTS_CIBLES = set(regions.REGION_PAR_DEPT) | {"72", "53", "89", "58"}
+
+
 def charger_liste(conn, annonces: list[dict]) -> int:
     """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé."""
     n = 0
     for brut in annonces:
         if not est_bien_valide(brut):
-            continue  # blog, page catalogue, appartement, parking… : écarté
-        db.upsert_annonce(conn, preparer_annonce(brut))
+            continue  # blog, page catalogue, appartement, parking, vendu… : écarté
+        annonce = preparer_annonce(brut)
+        distance = annonce.get("distance_km")
+        if distance is not None and distance > DISTANCE_MAX_KM:
+            continue  # hors zone de repli, ou géolocalisation aberrante
+        dept = annonce.get("departement")
+        if dept and str(dept) not in DEPARTEMENTS_CIBLES:
+            continue  # hors des terroirs ciblés (souvent une réf. lue comme un CP)
+        db.upsert_annonce(conn, annonce)
         n += 1
     conn.commit()
     return n
