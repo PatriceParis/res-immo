@@ -9,85 +9,31 @@
   ],
   "agences": [
     {
-      "nom": "Perch'Immo",
-      "site": "https://www.perch-immo.fr",
-      "zone": "Perche (Bellême, Mortagne-au-Perche)",
-      "index": ["https://www.perch-immo.fr/vente/1", "https://www.perch-immo.fr/vente/2"]
-    },
-    {
-      "nom": "Demeures du Perche et de Normandie",
-      "site": "https://demeures-perche-normandie.fr",
-      "zone": "Perche / Normandie",
-      "index": ["https://demeures-perche-normandie.fr/a-vendre/"]
-    },
-    {
-      "nom": "Maison du Perche",
-      "site": "https://www.maisonduperche.fr",
-      "zone": "Perche (Bellême)",
-      "index": ["https://www.maisonduperche.fr/"]
-    },
-    {
-      "nom": "Perche et Demeures",
-      "site": "https://www.percheetdemeures.com",
-      "zone": "Parc naturel du Perche",
-      "index": ["https://www.percheetdemeures.com/stone-farmhouses-traditional-houses-and-longeres/"]
-    },
-    {
-      "nom": "Morvan Immobilier",
-      "site": "https://www.morvan-immobilier.com",
-      "zone": "Morvan (Nièvre) — Bourgogne-Franche-Comté",
-      "index": []
-    },
-    {
-      "nom": "Morvan Patrimoine",
-      "site": "https://www.morvan-patrimoine.com",
-      "zone": "Château-Chinon, Bazois (Nièvre) — Bourgogne-Franche-Comté",
-      "index": []
-    },
-    {
-      "nom": "Agence des Lacs",
-      "site": "https://www.agence-des-lacs.com",
-      "zone": "Aube (Brienne-le-Château, lacs) — Grand Est",
-      "index": []
-    },
-    {
-      "nom": "Du Côté de Chez Vous",
-      "site": "https://www.ducotedechezvous-immo.com",
-      "zone": "Aube, Pays d'Othe — Grand Est",
-      "index": []
+      "nom": "Dorimmo",
+      "site": "https://www.dorimmo.com",
+      "zone": "Beauvais, Oise — Hauts-de-France",
+      "index": [],
+      "max": 12,
+      "pages": 120
     },
     {
       "nom": "Baudart Immo",
       "site": "https://www.baudartimmo.fr",
       "zone": "Beauvais, Oise — Hauts-de-France",
-      "index": ["https://www.baudartimmo.fr/annonces/transaction/vente.html"]
+      "index": [
+        "https://www.baudartimmo.fr/annonces/transaction/vente.html"
+      ],
+      "max": 10,
+      "pages": 60
     },
     {
-      "nom": "Dorimmo",
-      "site": "https://www.dorimmo.com",
-      "zone": "Beauvais, Oise — Hauts-de-France",
-      "index": []
-    },
-    {
-      "nom": "Agence du Terroir",
-      "site": "https://www.agenceduterroir.com",
-      "zone": "Perche vendômois (Vendôme, Mondoubleau) — Centre-Val de Loire",
-      "gare": "Vendôme–Villiers-sur-Loir TGV · Paris-Montparnasse en 42 min",
-      "index": []
-    },
-    {
-      "nom": "Indicateur Vendômois",
-      "site": "https://www.indicateurvendomois.com",
-      "zone": "Vendômois (Loir-et-Cher) — Centre-Val de Loire",
-      "gare": "Vendôme–Villiers-sur-Loir TGV · Paris-Montparnasse en 42 min",
-      "index": []
-    },
-    {
-      "nom": "Agence Boilot",
-      "site": "https://www.agence-boilot.net",
-      "zone": "Château-Thierry, sud de l'Aisne — Hauts-de-France",
-      "gare": "Château-Thierry · Paris-Est en ~50 min",
-      "index": []
+      "nom": "Cabinet Reca",
+      "site": "https://cabinet-reca.fr",
+      "zone": "Noyon (Oise) — Hauts-de-France",
+      "gare": "Noyon · Paris-Nord en ~1 h",
+      "index": [],
+      "max": 12,
+      "pages": 60
     },
     {
       "nom": "Château-Thierry Immobilier",
@@ -104,11 +50,96 @@
       "index": []
     },
     {
-      "nom": "Cabinet Reca",
-      "site": "https://cabinet-reca.fr",
-      "zone": "Noyon (Oise) — Hauts-de-France",
-      "gare": "Noyon · Paris-Nord en ~1 h",
+      "nom": "Indicateur Vendômois",
+      "site": "https://www.indicateurvendomois.com",
+      "zone": "Vendômois (Loir-et-Cher) — Centre-Val de Loire",
+      "gare": "Vendôme–Villiers-sur-Loir TGV · Paris-Montparnasse en 42 min",
+      "index": [],
+      "max": 12,
+      "pages": 120
+    },
+    {
+      "nom": "Agence du Terroir",
+      "site": "https://www.agenceduterroir.com",
+      "zone": "Perche vendômois (Vendôme, Mondoubleau) — Centre-Val de Loire",
+      "gare": "Vendôme–Villiers-sur-Loir TGV · Paris-Montparnasse en 42 min",
+      "index": [],
+      "max": 10,
+      "pages": 60
+    },
+    {
+      "nom": "Agence Boilot",
+      "site": "https://www.agence-boilot.net",
+      "zone": "Château-Thierry, sud de l'Aisne — Hauts-de-France",
+      "gare": "Château-Thierry · Paris-Est en ~50 min",
+      "index": [],
+      "max": 8,
+      "pages": 45
+    },
+    {
+      "nom": "Du Côté de Chez Vous",
+      "site": "https://www.ducotedechezvous-immo.com",
+      "zone": "Aube, Pays d'Othe — Grand Est",
+      "index": [],
+      "max": 10,
+      "pages": 90
+    },
+    {
+      "nom": "Agence des Lacs",
+      "site": "https://www.agence-des-lacs.com",
+      "zone": "Aube (Brienne-le-Château, lacs) — Grand Est",
       "index": []
+    },
+    {
+      "nom": "Morvan Immobilier",
+      "site": "https://www.morvan-immobilier.com",
+      "zone": "Morvan (Nièvre) — Bourgogne-Franche-Comté",
+      "index": [],
+      "max": 8,
+      "pages": 45
+    },
+    {
+      "nom": "Morvan Patrimoine",
+      "site": "https://www.morvan-patrimoine.com",
+      "zone": "Château-Chinon, Bazois (Nièvre) — Bourgogne-Franche-Comté",
+      "index": []
+    },
+    {
+      "nom": "Perch'Immo",
+      "site": "https://www.perch-immo.fr",
+      "zone": "Perche (Bellême, Mortagne-au-Perche)",
+      "index": [
+        "https://www.perch-immo.fr/vente/1",
+        "https://www.perch-immo.fr/vente/2"
+      ],
+      "max": 5
+    },
+    {
+      "nom": "Maison du Perche",
+      "site": "https://www.maisonduperche.fr",
+      "zone": "Perche (Bellême)",
+      "index": [
+        "https://www.maisonduperche.fr/"
+      ],
+      "max": 5
+    },
+    {
+      "nom": "Perche et Demeures",
+      "site": "https://www.percheetdemeures.com",
+      "zone": "Parc naturel du Perche",
+      "index": [
+        "https://www.percheetdemeures.com/stone-farmhouses-traditional-houses-and-longeres/"
+      ],
+      "max": 5
+    },
+    {
+      "nom": "Demeures du Perche et de Normandie",
+      "site": "https://demeures-perche-normandie.fr",
+      "zone": "Perche / Normandie",
+      "index": [
+        "https://demeures-perche-normandie.fr/a-vendre/"
+      ],
+      "max": 4
     }
   ]
 }
