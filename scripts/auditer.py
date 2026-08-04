@@ -276,6 +276,38 @@ def verifier_filtres_actifs(biens: list[dict], audit: Audit) -> None:
                            f"{coches} biens sur {len(connus)}")
 
 
+""" Fraîcheur : au-delà, un bien affiché n'a pas été reconstaté en ligne
+depuis longtemps, et peut fort bien être vendu."""
+JOURS_AVANT_PEREMPTION = 45
+
+
+def verifier_fraicheur(biens: list[dict], audit: Audit) -> None:
+    """Un bien affiché doit avoir été revu en ligne récemment.
+
+    La collecte s'arrête sur un budget de temps : sans rotation, elle
+    revisitait toujours les mêmes premières agences, et les biens des autres
+    restaient affichés indéfiniment sans jamais être reconstatés. Le site
+    laissait croire à une sélection à jour.
+
+    Ce contrôle rend la chose visible plutôt que supposée — c'est ce point
+    aveugle qui a fait conclure à tort qu'un correctif d'extraction s'était
+    appliqué à tout le catalogue.
+    """
+    from datetime import date, timedelta
+
+    limite = (date.today() - timedelta(days=JOURS_AVANT_PEREMPTION)).isoformat()
+    perimes = [b for b in biens if (b.get("revue_le") or "") < limite]
+    if perimes:
+        par_agence: dict = defaultdict(int)
+        for b in perimes:
+            par_agence[b.get("agence") or "?"] += 1
+        detail = ", ".join(f"{a} ({n})" for a, n in
+                           sorted(par_agence.items(), key=lambda kv: -kv[1])[:6])
+        audit.signaler(
+            f"bien non reconstaté depuis plus de {JOURS_AVANT_PEREMPTION} jours",
+            f"{len(perimes)} bien(s) — {detail}")
+
+
 REGLES = (
     verifier_prix_au_m2,
     verifier_surfaces,
@@ -287,6 +319,7 @@ REGLES = (
     verifier_doublons,
     verifier_liens,
     verifier_filtres_actifs,
+    verifier_fraicheur,
 )
 
 
