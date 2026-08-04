@@ -138,3 +138,14 @@ def test_rejette_vitrines_de_constructeur_et_pages_d_agence():
     assert est_bien_valide(
         {"titre": "Vente Maison Ribemont 5 pièce(s) 100 m2", "type_bien": "maison",
          "surface_m2": 100, "prix": 128000, "pieces": 5})
+
+
+def test_abreviations_appartement_ecartees():
+    """Cas réel : « A VENDRE APPT T2 » passait à travers « appartements? »."""
+    assert not est_bien_valide({"titre": "A VENDRE APPT T2 A LA FERTÉ SOUS JOUARRE",
+                                "surface_m2": 45, "prix": 95000})
+    assert not est_bien_valide({"titre": "Vente appart 3 pièces centre-ville",
+                                "surface_m2": 65, "prix": 120000})
+    # « T6 » seul ne disqualifie pas : une maison peut être un T6.
+    assert est_bien_valide({"titre": "A VENDRE MAISON T6 DANS HAMEAU",
+                            "type_bien": "maison", "surface_m2": 140, "prix": 235000})
