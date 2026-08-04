@@ -46,13 +46,21 @@ def risques_pour(lat: float, lon: float, timeout: int = 10) -> dict | None:
         for cle in ("retraitGonflementsDesArgiles", "retraitGonflementArgile", "argiles")
     )
 
+    # ATTENTION à la portée : ce point d'accès dit qu'un risque est **documenté
+    # sur la commune**, pas que CE bien y est exposé. Mesuré sur nos annonces :
+    # séisme et radon ressortent à 100 % (toute commune française a un zonage),
+    # l'inondation à 80 % (presque toute commune a une rivière). Traiter ces
+    # signaux comme une exposition du bien pénaliserait tout le monde à tort :
+    # on les nomme donc « _commune » et on les utilise comme points de
+    # vigilance à vérifier à l'adresse, pas comme une condamnation.
     return {
-        "inondation": _present(naturels.get("inondation")),
+        "inondation_commune": _present(naturels.get("inondation")),
         "argile": 1 if argile_present else 0,
-        "feu_foret": _present(naturels.get("feuForet")),
-        "seisme": _present(naturels.get("seisme")),
-        "radon": _present(naturels.get("radon")),
+        "feu_foret_commune": _present(naturels.get("feuForet")),
+        "seisme_commune": _present(naturels.get("seisme")),
+        "radon_commune": _present(naturels.get("radon")),
         "seveso_km": None,  # non fourni par ce point d'accès
-        "icpe": _present(technologiques.get("icpe")),
+        "icpe_commune": _present(technologiques.get("icpe")),
+        "portee": "commune",
         "source": "georisques",
     }

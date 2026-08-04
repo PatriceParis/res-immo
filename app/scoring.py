@@ -158,10 +158,22 @@ def _pilier_alimentation(f: dict, terrain_m2: float | None) -> float:
 
 
 def _pilier_risques(r: dict) -> float:
-    """Part de 20 points, puis retire des points par risque identifié."""
+    """Part de 20 points, puis retire des points par risque identifié.
+
+    Deux portées, à ne pas confondre :
+      - `inondation` / `feu_foret` : le BIEN est exposé (zonage à l'adresse) →
+        pénalité pleine ;
+      - `*_commune` (Géorisques) : le risque est seulement **documenté sur la
+        commune**. Presque toute commune française a une rivière, un zonage
+        sismique et un potentiel radon : pénaliser pleinement reviendrait à
+        pénaliser tout le monde. On retire peu, et on l'affiche comme un point
+        à vérifier à l'adresse.
+    """
     points = 20.0
     if r.get("inondation"):
         points -= 8
+    elif r.get("inondation_commune"):
+        points -= 2
     argile = r.get("argile") or 0
     if argile >= 2:
         points -= 3
@@ -181,6 +193,8 @@ def _pilier_risques(r: dict) -> float:
             points -= 3
     if r.get("feu_foret"):
         points -= 2
+    elif r.get("feu_foret_commune"):
+        points -= 1
     return max(points, 0)
 
 
@@ -311,6 +325,7 @@ def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
 
 
 def _alertes(r: dict, dpe: str | None) -> list[str]:
+    """Alertes fortes : le bien est concerné. Voir `_vigilances` pour le reste."""
     alertes = []
     if r.get("inondation"):
         alertes.append("Zone inondable")
@@ -327,6 +342,27 @@ def _alertes(r: dict, dpe: str | None) -> list[str]:
     if dpe in ("F", "G"):
         alertes.append(f"Passoire thermique (DPE {dpe})")
     return alertes
+
+
+def _vigilances(r: dict) -> list[str]:
+    """Risques documentés sur la COMMUNE (Géorisques) : à vérifier à l'adresse.
+
+    Ce ne sont pas des défauts du bien : presque toute commune française est
+    concernée par au moins l'un d'eux. On les affiche pour que l'acheteur pose
+    la question au notaire (l'état des risques est obligatoire à la vente).
+    """
+    v = []
+    if r.get("inondation_commune") and not r.get("inondation"):
+        v.append("Inondation documentée sur la commune — à vérifier à l'adresse")
+    if r.get("feu_foret_commune") and not r.get("feu_foret"):
+        v.append("Feux de forêt documentés sur la commune")
+    if r.get("radon_commune"):
+        v.append("Potentiel radon sur la commune (fréquent dans le Massif armoricain)")
+    if r.get("seisme_commune"):
+        v.append("Zonage sismique communal (toute commune en a un)")
+    if r.get("icpe_commune"):
+        v.append("Installation classée (ICPE) recensée sur la commune")
+    return v
 
 
 def calculer_score(annonce: dict) -> dict:
@@ -362,4 +398,5 @@ def calculer_score(annonce: dict) -> dict:
         "piliers": piliers,
         "badges": _badges(f, annonce, piliers),
         "alertes": _alertes(r, annonce.get("dpe")),
+        "vigilances": _vigilances(r),
     }
