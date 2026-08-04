@@ -6,7 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app import gares  # noqa: E402
-from app.scoring import _pilier_situation  # noqa: E402
+from app.scoring import MAX_PILIERS, _pilier_situation  # noqa: E402
 
 
 def test_villes_desservies():
@@ -44,4 +44,4 @@ def test_pilier_situation_reste_plafonne():
     """Le bonus train ne fait pas déborder le pilier au-dessus de son maximum."""
     parfait = _pilier_situation(250, 10, 60, {"isolement": True},
                                 {"minutes_paris": 42, "km": 2.0})
-    assert parfait <= 15
+    assert parfait <= MAX_PILIERS["situation"]

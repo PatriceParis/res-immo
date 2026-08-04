@@ -29,14 +29,27 @@ CHAMPS = [
 ]
 
 
+def _bien(row) -> dict:
+    """Une ligne de base → dict exportable.
+
+    `_row_vers_dict` décode les colonnes JSON (risques_json → risques) mais
+    **retire `texte`**, réservé à l'usage interne de l'API. Or c'est ce texte
+    qui permet de détecter cave, puits, poêle… au rechargement : on le remet
+    depuis la ligne brute, sinon le scoring repart d'une description de
+    quelques lignes et tous les critères disparaissent.
+    """
+    bien = db._row_vers_dict(row)
+    bien["texte"] = dict(row).get("texte") or ""
+    return {cle: bien.get(cle) for cle in CHAMPS}
+
+
 def main() -> None:
     conn = db.connexion()
     rows = conn.execute(
         "SELECT * FROM annonces WHERE source IS NOT NULL AND source <> 'démo' "
         "ORDER BY score_total DESC"
     ).fetchall()
-    # _row_vers_dict décode les colonnes JSON (dont risques_json → risques).
-    biens = [{k: db._row_vers_dict(r).get(k) for k in CHAMPS} for r in rows]
+    biens = [_bien(r) for r in rows]
     conn.close()
 
     sortie = RACINE / "data" / "annonces_reel.json"

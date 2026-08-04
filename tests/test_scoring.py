@@ -95,7 +95,7 @@ def test_risque_communal_ne_condamne_pas_le_bien():
     communes, l'inondation à 80 %. Les compter comme une exposition du bien
     pénaliserait tout le monde à tort.
     """
-    from app.scoring import _pilier_risques, _alertes, _vigilances
+    from app.scoring import MAX_PILIERS, _pilier_risques, _alertes, _vigilances
 
     commune = {"inondation_commune": True, "seisme_commune": True,
                "radon_commune": True, "icpe_commune": True, "portee": "commune"}
@@ -103,7 +103,7 @@ def test_risque_communal_ne_condamne_pas_le_bien():
 
     # Le bien réellement en zone inondable est bien plus pénalisé.
     assert _pilier_risques(bien_expose) < _pilier_risques(commune)
-    assert _pilier_risques(commune) >= 18          # à peine entamé
+    assert _pilier_risques(commune) >= MAX_PILIERS["risques"] - 2   # à peine entamé
     # Et on n'affiche pas « Zone inondable » pour un simple signal communal.
     assert "Zone inondable" not in _alertes(commune, None)
     assert "Zone inondable" in _alertes(bien_expose, None)
