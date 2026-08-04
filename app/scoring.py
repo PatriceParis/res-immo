@@ -245,7 +245,11 @@ def _pilier_situation(altitude, densite, temps_min, f=None, train=None) -> float
     # Accessible SANS VOITURE : une gare proche reste utilisable en cas de
     # pénurie de carburant, et rend le repli compatible avec un travail à Paris.
     if train:
-        minutes, km = train.get("minutes_paris"), train.get("km") or 99
+        # Attention : « train.get("km") or 99 » vaut 99 quand km == 0.0 —
+        # une gare DANS la commune se retrouvait privée de son bonus.
+        minutes = train.get("minutes_paris")
+        km = train.get("km")
+        km = 99 if km is None else km
         if minutes is not None and km <= 15:
             if minutes <= 60:
                 points += 4      # ex. Vendôme (42 min), Château-Thierry (50 min)
@@ -337,7 +341,8 @@ def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
     if temps is not None and temps <= 120:
         badges.append("À moins de 2 h de Paris")
     train = annonce.get("train")
-    if train and (train.get("km") or 99) <= 15 and train.get("minutes_paris") is not None:
+    if (train and (train.get("km") if train.get("km") is not None else 99) <= 15
+            and train.get("minutes_paris") is not None):
         badges.append(f"Gare à {train['km']} km · Paris en {train['minutes_paris']} min")
     if piliers["risques"]["points"] >= 18:
         badges.append("Faible exposition aux risques")

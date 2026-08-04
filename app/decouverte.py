@@ -45,6 +45,16 @@ ZONES = [
     {"nom": "Montrichard",      "lat": 47.3428, "lon": 1.1892, "rayon_km": 25},
     {"nom": "Amboise",          "lat": 47.4131, "lon": 0.9821, "rayon_km": 25},
     {"nom": "Vouvray",          "lat": 47.4108, "lon": 0.7967, "rayon_km": 20},
+    # Yonne : la Puisaye et l'Auxerrois, à 2 h 30 de route et desservis depuis
+    # Paris-Bercy (Sens 55 min, Joigny 75 min, Auxerre 1 h 45).
+    {"nom": "Auxerre",          "lat": 47.7982, "lon": 3.5734, "rayon_km": 30},
+    {"nom": "Toucy (Puisaye)",  "lat": 47.7333, "lon": 3.2944, "rayon_km": 25},
+    {"nom": "Avallon",          "lat": 47.4900, "lon": 3.9086, "rayon_km": 25},
+    # Saône-et-Loire : loin par la route (4 h 25) mais **1 h 20 de Paris par
+    # Le Creusot TGV**. C'est exactement ce que le pilier « accès sans
+    # voiture » est fait pour reconnaître.
+    {"nom": "Chalon-sur-Saône", "lat": 46.7806, "lon": 4.8536, "rayon_km": 30},
+    {"nom": "Le Creusot",       "lat": 46.8003, "lon": 4.4331, "rayon_km": 30},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence

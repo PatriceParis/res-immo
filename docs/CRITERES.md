@@ -128,7 +128,14 @@ Villes qui cumulent ruralité et accès direct :
 | **Vendôme**–Villiers-sur-Loir | **42 min** (TGV, Montparnasse) | Perche vendômois |
 | **Château-Thierry** | ~50 min (Est) | Sud de l'Aisne, vallée de la Marne |
 | **Noyon** | ~1 h (Nord) | Noyonnais, Oise |
+| **Le Creusot–Montceau TGV** | **1 h 20** (Lyon) | Saône-et-Loire, sud Bourgogne |
 | Compiègne · Creil · Sens · Vernon | 30–55 min | Oise, Yonne, Eure |
+| Joigny · Migennes · Auxerre | 1 h 05 – 1 h 45 (Bercy) | Yonne, Puisaye |
+
+**Le cas de Chalon-sur-Saône illustre tout l'intérêt du critère** : 4 h 25 de
+route, ce qui la placerait hors de portée — mais **1 h 20 de Paris par
+Le Creusot TGV**. Sur une carte routière, ce bassin paraît lointain ; en
+train, il est plus proche que le Perche.
 
 La table des gares vit dans `app/gares.py` (nom, position, minutes depuis
 Paris) ; la gare la plus proche d'un bien est trouvée automatiquement, dans un
