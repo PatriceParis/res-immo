@@ -197,7 +197,7 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
     # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
     # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
-    vivier = max(maxi * 4, 30)
+    vivier = max(maxi * 8, 80)
     urls = _sitemap_urls(base)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
@@ -228,7 +228,7 @@ def main() -> None:
     ap.add_argument("-n", "--nom", default="")
     ap.add_argument("--index", default="")
     ap.add_argument("--max", type=int, default=12)
-    ap.add_argument("--delai", type=float, default=1.2)
+    ap.add_argument("--delai", type=float, default=0.9)
     # Plafond de pages ouvertes par agence : une agence dont tout le catalogue
     # est vendu ne doit pas consommer le temps des autres.
     ap.add_argument("--pages-max", type=int, default=30)
@@ -254,21 +254,27 @@ def main() -> None:
                       "l'export et l'enregistrement aient lieu.")
                 break
             base = cible["site"].rstrip("/")
+            # Réglages par agence : `max` (biens voulus) et `pages` (pages à
+            # ouvrir). Utile là où le catalogue est gros mais commence par des
+            # biens vendus — il faut creuser plus loin pour trouver du dispo —
+            # et pour ne pas laisser un seul terroir occuper toute la liste.
+            maxi = int(cible.get("max") or args.max)
+            pages_max = int(cible.get("pages") or args.pages_max)
             print(f"\n▶ {cible['nom']} — {base}")
-            urls = _urls_a_visiter(page, cible, base, args.max)
+            urls = _urls_a_visiter(page, cible, base, maxi)
             n, vendus, ecartes, vues = 0, 0, 0, 0
             for u in urls:
-                if n >= args.max:      # on s'arrête sur les biens GARDÉS,
+                if n >= maxi:          # on s'arrête sur les biens GARDÉS,
                     break              # pas sur les pages visitées
-                if vues >= args.pages_max:
-                    print(f"  … plafond de {args.pages_max} pages atteint pour cette agence")
+                if vues >= pages_max:
+                    print(f"  … plafond de {pages_max} pages atteint pour cette agence")
                     break
                 if time.monotonic() > fin_prevue:
                     break
                 vues += 1
                 try:
-                    page.goto(u, wait_until="domcontentloaded", timeout=30000)
-                    page.wait_for_timeout(900)
+                    page.goto(u, wait_until="domcontentloaded", timeout=20000)
+                    page.wait_for_timeout(600)
                     html = page.content()
                 except Exception:
                     continue
