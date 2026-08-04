@@ -175,18 +175,18 @@ def _altitude(lat, lon):
          {"locations": f"{lat},{lon}"},
          lambda d: ((d.get("results") or [{}])[0]).get("elevation")),
     )
-    for tentative in range(2):
-        for url, params, lire in services:
-            try:
-                r = requests.get(url, params=params, timeout=10,
-                                 headers={"User-Agent": "RefugeImmo-POC"})
-                r.raise_for_status()
-                valeur = lire(r.json())
-                if isinstance(valeur, (int, float)):
-                    return round(valeur)
-            except Exception:
-                continue
-        time.sleep(1 + tentative)
+    # Deux services, un seul passage : l'altitude ne vaut pas qu'on retarde
+    # toute la collecte. Le budget de temps est plus précieux que ces 3 points.
+    for url, params, lire in services:
+        try:
+            r = requests.get(url, params=params, timeout=6,
+                             headers={"User-Agent": "RefugeImmo-POC"})
+            r.raise_for_status()
+            valeur = lire(r.json())
+            if isinstance(valeur, (int, float)):
+                return round(valeur)
+        except Exception:
+            continue
     return None
 
 
@@ -250,9 +250,11 @@ def main() -> None:
     # Plafond de pages ouvertes par agence : une agence dont tout le catalogue
     # est vendu ne doit pas consommer le temps des autres.
     ap.add_argument("--pages-max", type=int, default=30)
-    # Budget de temps global : on rend la main proprement avant que le runner
-    # CI ne coupe le job, sinon l'export et le commit ne tournent jamais.
-    ap.add_argument("--minutes-max", type=float, default=40.0)
+    # Budget de temps global. Il doit laisser la place aux étapes SUIVANTES
+    # (enrichissement des risques, export, commit) : une collecte de 40 min
+    # sur un job plafonné à 50 a déjà fait couper le job avant l'export.
+    #   collecte 28 + risques 10 + export 1 = 39 min, sous les 50 du job.
+    ap.add_argument("--minutes-max", type=float, default=28.0)
     args = ap.parse_args()
 
     conn = db.connexion()
