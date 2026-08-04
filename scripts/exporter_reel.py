@@ -19,11 +19,13 @@ sys.path.insert(0, str(RACINE))
 from app import db  # noqa: E402
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
+# `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
+# sans réseau. Le train, lui, est recalculé au chargement (table locale des gares).
 CHAMPS = [
     "id", "source", "url", "titre", "description", "type_bien", "prix",
     "surface_m2", "terrain_m2", "pieces", "commune", "code_postal",
     "departement", "region", "agence", "agence_url", "photo", "texte",
-    "lat", "lon", "altitude", "densite_hab_km2", "dpe",
+    "lat", "lon", "altitude", "densite_hab_km2", "dpe", "risques",
 ]
 
 
@@ -33,7 +35,8 @@ def main() -> None:
         "SELECT * FROM annonces WHERE source IS NOT NULL AND source <> 'démo' "
         "ORDER BY score_total DESC"
     ).fetchall()
-    biens = [{k: dict(r).get(k) for k in CHAMPS} for r in rows]
+    # _row_vers_dict décode les colonnes JSON (dont risques_json → risques).
+    biens = [{k: db._row_vers_dict(r).get(k) for k in CHAMPS} for r in rows]
     conn.close()
 
     sortie = RACINE / "data" / "annonces_reel.json"

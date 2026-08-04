@@ -184,7 +184,7 @@ def _pilier_risques(r: dict) -> float:
     return max(points, 0)
 
 
-def _pilier_situation(altitude, densite, temps_min, f=None) -> float:
+def _pilier_situation(altitude, densite, temps_min, f=None, train=None) -> float:
     points = 0
     if altitude is not None:
         if altitude >= 200:
@@ -208,6 +208,19 @@ def _pilier_situation(altitude, densite, temps_min, f=None) -> float:
             points += 4
         elif temps_min <= 210:
             points += 2
+    # Accessible SANS VOITURE : une gare proche reste utilisable en cas de
+    # pénurie de carburant, et rend le repli compatible avec un travail à Paris.
+    if train:
+        minutes, km = train.get("minutes_paris"), train.get("km") or 99
+        if minutes is not None and km <= 15:
+            if minutes <= 60:
+                points += 4      # ex. Vendôme (42 min), Château-Thierry (50 min)
+            elif minutes <= 90:
+                points += 3      # ex. Noyon (65 min)
+            elif minutes <= 120:
+                points += 2
+        elif minutes is not None:  # gare un peu plus loin (15–25 km)
+            points += 1
     return min(points, 15)
 
 
@@ -289,6 +302,9 @@ def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
     temps = annonce.get("temps_voiture_min")
     if temps is not None and temps <= 120:
         badges.append("À moins de 2 h de Paris")
+    train = annonce.get("train")
+    if train and (train.get("km") or 99) <= 15 and train.get("minutes_paris") is not None:
+        badges.append(f"Gare à {train['km']} km · Paris en {train['minutes_paris']} min")
     if piliers["risques"]["points"] >= 18:
         badges.append("Faible exposition aux risques")
     return badges
@@ -332,6 +348,7 @@ def calculer_score(annonce: dict) -> dict:
             annonce.get("densite_hab_km2"),
             annonce.get("temps_voiture_min"),
             f,
+            annonce.get("train"),
         ),
     }
     piliers = {

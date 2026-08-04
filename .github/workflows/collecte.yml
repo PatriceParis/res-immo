@@ -71,6 +71,11 @@ jobs:
             python scripts/collecter_navigateur.py --max "$MAX" || true
           fi
 
+      - name: Enrichir les risques officiels (Géorisques)
+        # API publique de l'État : zone inondable, argiles, feux de forêt…
+        # Non bloquant : sans réseau ou si l'API change, on garde l'existant.
+        run: python scripts/enrichir_risques.py --max 200 || true
+
       - name: Exporter et committer si des annonces ont été trouvées
         run: |
           python scripts/exporter_reel.py

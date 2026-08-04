@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from . import db, geo, regions, scoring
+from . import db, gares, geo, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
 
 
@@ -40,6 +40,8 @@ def preparer_annonce(brut: dict) -> dict:
         distance = geo.distance_paris_km(lat, lon)
         annonce["distance_km"] = distance
         annonce["temps_voiture_min"] = geo.temps_voiture_min(distance)
+        # Accès sans voiture : gare la plus proche et temps de train vers Paris.
+        annonce["train"] = gares.gare_la_plus_proche(lat, lon)
 
     # Détection sur le titre + la description + le texte complet de la page
     # (`texte`) : les descriptions d'agences sont souvent très courtes, l'essentiel
