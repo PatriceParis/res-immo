@@ -19,7 +19,7 @@ experte assumée pour le POC : elles sont transparentes et destinées à être
 affinées avec des données ouvertes (Corine Land Cover pour la forêt, INSEE
 pour la densité, DRIAS pour le climat 2050, Géorisques pour les risques).
 
-Résultat : on cible les 5 terroirs les mieux notés et on écarte l'Île-de-France
+Résultat : on cible tous les terroirs sauf l'Île-de-France
 (trop dense, artificialisée, en stress hydrique et îlot de chaleur — la moins
 résiliente pour un projet de repli, même si c'est la plus proche).
 """
@@ -77,6 +77,16 @@ REGIONS = [
                     "Sologne : la sélection des communes compte beaucoup ici.",
     },
     {
+        "region": "Pays de la Loire",
+        "zone": "Le Perche sarthois et le bocage mayennais",
+        "axes": {"eau": 15, "bois": 14, "terres": 15, "surete": 14, "acces": 16},
+        "argument": "Le prolongement naturel du Perche : même bocage, même "
+                    "polyculture-élevage, et le meilleur accès en train de "
+                    "toute la sélection (Le Mans en 55 min). Moins forestier "
+                    "que l'Orne et sujet aux restrictions d'eau estivales : "
+                    "on vise le nord des deux départements.",
+    },
+    {
         "region": "Île-de-France",
         "zone": "Brie, Vexin, Hurepoix",
         "axes": {"eau": 9, "bois": 10, "terres": 10, "surete": 9, "acces": 18},
@@ -86,8 +96,15 @@ REGIONS = [
     },
 ]
 
-# Nombre de terroirs retenus pour le POC.
-NB_CIBLES = 5
+# On cible tous les terroirs SAUF le dernier du classement. Ce n'est pas un
+# quota arbitraire : la décision documentée est d'écarter l'Île-de-France, et
+# elle est très en retrait (56/100 contre 66 pour l'avant-dernière).
+#
+# Écrire « 5 » en dur avait un effet de bord silencieux : en ajoutant une 7e
+# région, le Centre-Val de Loire — d'où viennent les troglodytes et le
+# Vendômois — serait sorti de la cible sans que personne ne l'ait décidé, et
+# ses biens auraient disparu du site.
+NB_CIBLES = len(REGIONS) - 1
 
 
 def _total(axes: dict) -> int:
@@ -121,6 +138,7 @@ _DEPTS_PAR_REGION = {
     "Bourgogne-Franche-Comté": ["21", "25", "39", "58", "70", "71", "89", "90"],
     "Grand Est": ["08", "10", "51", "52", "54", "55", "57", "67", "68", "88"],
     "Hauts-de-France": ["02", "59", "60", "62", "80"],
+    "Pays de la Loire": ["53", "72"],
     "Île-de-France": ["75", "77", "78", "91", "92", "93", "94", "95"],
 }
 REGION_PAR_DEPT = {d: reg for reg, depts in _DEPTS_PAR_REGION.items() for d in depts}

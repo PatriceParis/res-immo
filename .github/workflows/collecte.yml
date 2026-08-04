@@ -76,6 +76,15 @@ jobs:
         # Non bloquant : sans réseau ou si l'API change, on garde l'existant.
         run: python scripts/enrichir_risques.py --max 200 || true
 
+      - name: Auditer la cohérence des données collectées
+        # Les anomalies qui comptent ici ne font pas planter le site : elles le
+        # rendent faux (surface de piscine lue comme habitable, bien compté
+        # dans le total mais rattaché à aucune pastille de terroir…). Aucun
+        # test unitaire ne les attrape, elles naissent des vraies données.
+        # Non bloquant : le rapport s'affiche dans le journal du run, et une
+        # collecte imparfaite reste préférable à pas de collecte du tout.
+        run: python scripts/auditer.py || true
+
       - name: Exporter et committer si des annonces ont été trouvées
         run: |
           python scripts/exporter_reel.py

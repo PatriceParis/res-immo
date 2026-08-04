@@ -1,6 +1,6 @@
 # ⛰️ Refuge Immo
 
-**Votre plan B au vert — les 5 terroirs les plus résilients à moins de 2 h 30 de Paris.**
+**Votre plan B au vert — les terroirs les plus résilients à moins de 350 km de Paris.**
 
 Refuge Immo est un POC (démonstrateur) de recherche immobilière pour les
 Parisiens inquiets du climat qui veulent **un lieu de repli** rationnel — pas
@@ -8,7 +8,7 @@ un bunker de survivaliste. Il est pensé du point de vue de l'utilisateur final
 (voir **[docs/PERSONA.md](docs/PERSONA.md)** : persona, douleurs, objectifs).
 
 Concrètement :
-- il **cible les 5 régions les plus résilientes** (et écarte l'Île-de-France),
+- il **cible les régions les plus résilientes** (et écarte l'Île-de-France),
   classées par un indice transparent — voir **[docs/PERSONA.md](docs/PERSONA.md)** et `app/regions.py` ;
 - chaque bien reçoit un **score de résilience sur 100** (eau, abri, énergie,
   autonomie alimentaire, risques, accès) et **une photo** ;
@@ -45,7 +45,7 @@ démonstration.
 
 ## 🧭 Ce que fait l'application
 
-- **Terroirs ciblés** : les 5 régions les plus résilientes, classées par un
+- **Terroirs ciblés** : toutes les régions du classement sauf la dernière, classées par un
   indice transparent (`app/regions.py`) et cliquables pour filtrer — le POC
   **priorise** au lieu de tout montrer ;
 - **Carte + liste** des biens, chacun avec **une photo** et une pastille de

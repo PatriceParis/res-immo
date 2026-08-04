@@ -40,6 +40,12 @@ choses se dégradent (canicules, coupures, pénuries) — sans y laisser leurs
 ## Objectifs (gains) — ce qu'ils veulent obtenir
 
 - Une **liste courte de biens résilients** dans leur budget, à ≤ 2 h 30.
+  *Le souhait est bien celui-là, mais la sélection va en pratique jusqu'à
+  3 h 35 de route (périmètre de 350 km) : les meilleurs terroirs ne sont pas
+  tous à 2 h 30, et le train raccourcit souvent le trajet réel — Le Mans en
+  55 min, Le Creusot en 1 h 20. D'où le filtre « temps de route » et le
+  pilier « accès sans voiture », qui laissent l'arbitrage à l'utilisateur au
+  lieu de lui promettre 2 h 30 partout.*
 - **Comprendre pourquoi** un bien est résilient (score transparent) pour
   **oser franchir le pas** — une décision rationnelle, pas anxieuse.
 - **Voir** le bien (une photo suffit à créer l'envie) et **entrer en contact
@@ -50,7 +56,7 @@ choses se dégradent (canicules, coupures, pénuries) — sans y laisser leurs
 
 | Douleur / objectif | Décision produit appliquée |
 |---|---|
-| « Où chercher ? » + « pas parano » | **On cible les 5 terroirs les plus résilients** (indice `app/regions.py`), on **écarte l'Île-de-France** (dense, artificialisée, stress hydrique). Bandeau « Terroirs ciblés » cliquable, classé par résilience. |
+| « Où chercher ? » + « pas parano » | **On cible les terroirs les plus résilients** (indice `app/regions.py`), on **écarte l'Île-de-France** (dense, artificialisée, stress hydrique). Bandeau « Terroirs ciblés » cliquable, classé par résilience. |
 | Les portails ne parlent pas résilience | **Score /100 transparent** en 6 piliers, mis en avant sur chaque bien et détaillé dans la fiche. |
 | Peur du piège | **Points de vigilance** explicites (zone inondable, argiles, nucléaire/Seveso proche, passoire thermique). |
 | Manque de temps | **Présélection triée par score**, filtres « atouts indispensables » (cave, puits, hors inondation…). |
@@ -79,7 +85,7 @@ l'agence reçoit des contacts qualifiés, la plateforme est payée à la valeur 
 ## Ce qu'il faudrait tester avec de vrais utilisateurs (prochaines étapes)
 
 1. Le score inspire-t-il **confiance** ? (comprennent-ils les 6 piliers ?)
-2. Les **5 terroirs** correspondent-ils à leur imaginaire du « bon coin » ?
+2. Les **terroirs ciblés** correspondent-ils à leur imaginaire du « bon coin » ?
 3. Combien acceptent de **laisser leur e-mail** pour recevoir le dossier ?
    (le vrai test du modèle économique)
 4. Quels **filtres** manquent (gare à moins de X km ? fibre ? école ?) ?

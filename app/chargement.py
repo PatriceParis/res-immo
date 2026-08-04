@@ -93,20 +93,24 @@ def preparer_annonce(brut: dict) -> dict:
 # postal envoyait des biens du Perche dans la Creuse ou le Cantal).
 DISTANCE_MAX_KM = 350
 
-# Départements des 5 terroirs ciblés, plus quelques voisins immédiats (Sarthe
-# pour le Perche sarthois, Mayenne…). Un bien annoncé hors de cette liste par
-# une agence du Perche trahit une erreur de lecture, pas une vraie annonce
+# Départements des terroirs ciblés. Un bien annoncé hors de cette liste par une
+# agence du Perche trahit une erreur de lecture, pas une vraie annonce
 # lointaine : on l'écarte même sans coordonnées.
 #
-# L'Île-de-France en est exclue **volontairement** : elle arrive 6e au
+# L'Île-de-France en est exclue **volontairement** : elle est dernière au
 # classement des terroirs (trop dense, artificialisée, en stress hydrique) et
 # ne fait donc pas partie de la cible. Sans cette exclusion, les agences
 # frontalières y ramenaient des biens — La Ferté-sous-Jouarre, Nangis — que
 # l'application est précisément censée écarter.
+#
+# La liste se déduit ENTIÈREMENT du classement des terroirs : la Sarthe et la
+# Mayenne y figuraient auparavant en dur, si bien que leurs biens étaient
+# comptés dans le total mais rattachés à aucune pastille — introuvables par
+# le filtre de région. Elles relèvent désormais du terroir « Pays de la Loire ».
 DEPARTEMENTS_CIBLES = {
     dept for dept, region in regions.REGION_PAR_DEPT.items()
     if region in set(regions.regions_cibles())
-} | {"72", "53"}
+}
 
 
 def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
