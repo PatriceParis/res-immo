@@ -139,3 +139,42 @@ def test_catalogue_demesure_trahit_un_portail():
               "schema_org": True, "site": "https://agence-locale.fr"}
     assert score_candidat(portail) == 0
     assert score_candidat(locale) > 50
+
+
+def test_les_passes_se_cumulent_au_lieu_de_s_ecraser():
+    """Overpass ne répond pas pour les mêmes zones d'une passe à l'autre.
+
+    Cas réel : Compiègne a répondu à la 1re passe, Vendôme à la 2e. Écraser le
+    rapport ferait perdre la moitié du travail à chaque fois.
+    """
+    from app.decouverte import fusionner_rapports
+
+    passe1 = [{"site": "https://compiegne.fr", "note": 80, "zone": "Compiègne"},
+              {"site": "https://beauvais.fr", "note": 40, "zone": "Beauvais"}]
+    passe2 = [{"site": "https://vendome.fr", "note": 76, "zone": "Vendôme"},
+              # Même site que la passe 1, mieux sondé cette fois : on garde le meilleur.
+              {"site": "https://beauvais.fr", "note": 89, "zone": "Beauvais"}]
+
+    cumul = fusionner_rapports(passe1, passe2)
+    par_site = {s["site"]: s["note"] for s in cumul}
+    assert set(par_site) == {"https://compiegne.fr", "https://beauvais.fr",
+                             "https://vendome.fr"}
+    assert par_site["https://beauvais.fr"] == 89        # le meilleur sondage l'emporte
+    assert [s["note"] for s in cumul] == sorted((s["note"] for s in cumul), reverse=True)
+
+
+def test_constructeurs_de_maisons_neuves_ecartes():
+    """Une maison neuve de lotissement n'a ni cave, ni dépendance, ni terrain
+    nourricier : c'est l'inverse d'un refuge."""
+    from app.decouverte import est_constructeur
+
+    assert est_constructeur("Maisons France Confort")
+    assert est_constructeur("Maisons Pierre")
+    assert est_constructeur("Trecobat constructeur")
+    assert not est_constructeur("Perch'Immo")
+    assert not est_constructeur("Maison du Perche")     # agence, pas constructeur
+
+    _, ajoutees = fusionner(
+        [], [{"nom": "Maisons France Confort", "site": "https://mfc.fr", "note": 80},
+             {"nom": "Agence du Bourg", "site": "https://bourg.fr", "note": 60}], 25)
+    assert [a["nom"] for a in ajoutees] == ["Agence du Bourg"]

@@ -37,7 +37,7 @@ sys.path.insert(0, str(RACINE))
 
 from app.decouverte import (  # noqa: E402
     ZONES, agences_depuis_overpass, domaine, est_portail_exclu, fusionner,
-    requete_overpass, score_candidat, urls_de_biens,
+    fusionner_rapports, requete_overpass, score_candidat, urls_de_biens,
 )
 
 try:
@@ -196,7 +196,17 @@ def main() -> None:
             except Exception:
                 pass
 
-    sondes.sort(key=lambda s: -s.get("note", 0))
+    # Overpass ne répond pas pour les mêmes zones d'une fois sur l'autre : on
+    # cumule avec les sondages précédents plutôt que de les écraser, sinon la
+    # couverture fait du sur-place au lieu de s'enrichir.
+    ancien = []
+    if RAPPORT.exists():
+        try:
+            ancien = json.loads(RAPPORT.read_text(encoding="utf-8"))
+        except ValueError:
+            pass
+    sondes = fusionner_rapports(ancien, sondes)
+    print(f"    → {len(sondes)} sondages au total en cumulant les passes précédentes")
     retenues = [s for s in sondes if s.get("note", 0) >= args.note]
     print(f"\n{'note':>5}  {'biens':>5}  agence")
     for s in sondes[:40]:
