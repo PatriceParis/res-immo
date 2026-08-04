@@ -55,4 +55,9 @@ jobs:
         # Le contrat de cohérence côté API, la garde contre les valeurs
         # fabriquées, puis ce que l'utilisateur voit réellement à l'écran.
         # --strict : une promesse non tenue fait échouer la vérification.
+        #
+        # Borné dans le temps : l'audit prend une vingtaine de secondes. S'il
+        # dépasse, c'est qu'il est bloqué — et un contrôle qui bloque est pire
+        # qu'un contrôle qui échoue, parce qu'il ne dit rien.
+        timeout-minutes: 6
         run: python scripts/auditer_interface.py --strict
