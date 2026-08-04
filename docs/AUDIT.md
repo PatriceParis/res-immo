@@ -187,13 +187,62 @@ cette dernière qui aurait attrapé le filtre d'inondation.
 
 ---
 
+---
+
+# Ce que la première collecte vérifiée a révélé
+
+Le dispositif a été mis à l'épreuve dès la collecte suivante — et il a
+trouvé deux choses qu'aucune relecture n'aurait vues.
+
+## La moitié du catalogue n'était jamais revue
+
+**51 agences configurées, 4 réellement revisitées.** La collecte s'arrête sur
+un budget de temps et parcourait toujours la liste dans le même ordre : elle
+repassait chez les premières et n'atteignait jamais les dernières.
+
+Deux conséquences, invisibles depuis le site :
+
+- les biens des agences de fin de liste étaient **figés pour toujours** ; un
+  bien vendu chez elles n'expirait jamais, faute d'être jamais constaté
+  absent — exactement la remarque qui a lancé tout ce travail ;
+- un correctif d'extraction ne les atteignait pas.
+
+La collecte commence désormais par les agences vues il y a le plus longtemps.
+Le piège évité : se fonder sur la date des biens aurait affamé la rotation,
+puisqu'un site cassé ne livre aucun bien et n'aurait jamais reçu de date — il
+serait resté éternellement en tête, prenant le budget des autres à chaque
+collecte. C'est donc le **passage** qui est consigné, dans
+`data/agences_visitees.json`.
+
+Et la fiche dit maintenant **« Annonce constatée en ligne il y a N jours »**,
+avec une invitation à reconfirmer au-delà de 45 jours. Une annonce affichée
+prétend implicitement être d'actualité ; autant que ce soit vérifiable.
+
+## Le terrain lu comme surface habitable
+
+La règle « terrain identique à l'habitable » — celle qui avait failli être
+supprimée pour bruit — a relevé deux cas sans appel :
+
+| La page annonce | On stockait |
+|---|---|
+| « Surface 83,58 m² **terrain 285 m²** » | 285 m² habitables |
+| « Surface habitable (m²) 94 m² **surface terrain 558 m²** » | 558 m² habitables |
+
+En cause : parmi les surfaces crédibles, on retenait la plus grande — et un
+terrain l'est souvent aussi. Les surfaces annoncées comme du terrain sont
+désormais écartées, en ne regardant en arrière que jusqu'à la surface
+précédente : sinon « Terrain 500 m², maison 120 m² » aurait vu le mot
+« terrain » devant les 120 m² de la maison et les aurait perdus.
+
+---
+
 ## Où en est-on
 
-- **108 tests** passent, dont la preuve de détection de chaque invariant.
-- **26 promesses d'interface tenues** sur les données réelles.
-- **7 anomalies de données sur 133 biens (5 %)**, toutes antérieures aux
-  correctifs d'extraction : réextraites avec le code actuel, les 5 prix au m²
-  aberrants disparaissent.
+- **115 tests** passent, dont la preuve de détection de chaque invariant.
+- **27 promesses d'interface tenues** sur les données réelles.
+- Les anomalies de données restantes viennent d'agences non revues depuis les
+  correctifs d'extraction — c'est ce que la rotation résout, collecte après
+  collecte.
 
 ## Ajouter quelque chose à l'interface
 
