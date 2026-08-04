@@ -283,8 +283,16 @@ def main() -> int:
                     executable_path=os.environ.get("REFUGE_CHROMIUM") or None,
                     headless=True)
                 page = navigateur.new_page(viewport={"width": 1280, "height": 900})
+                # Les photos d'agences passent par notre relais et peuvent
+                # traîner (CDN lent, hôte injoignable). On les bloque : l'audit
+                # porte sur les CHIFFRES et les contrôles, pas sur les images.
+                # Sans cela, « networkidle » n'arrivait jamais et l'audit
+                # restait suspendu — un contrôle qui bloque est pire qu'un
+                # contrôle qui échoue.
+                page.route("**/api/photo*", lambda route: route.abort())
+                page.set_default_timeout(20_000)
                 try:
-                    page.goto(base, wait_until="networkidle", timeout=45_000)
+                    page.goto(base, wait_until="domcontentloaded", timeout=45_000)
                     verifier_page(page, appeler, constat)
                 finally:
                     navigateur.close()
