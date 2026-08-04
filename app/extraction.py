@@ -67,16 +67,22 @@ RE_PIECES = re.compile(r"(\d{1,2})\s*pi[eè]ces?", re.IGNORECASE)
 RE_DPE = re.compile(r"\b([A-G])\b")
 # Code postal de France métropolitaine (01000–95999, Corse comprise).
 RE_CP = re.compile(r"\b((?:0[1-9]|[1-8]\d|9[0-5])\d{3})\b")
+# Numéros de référence d'annonce : « Ref. 23624 », « réf : 1077b », « n° 1580 ».
+# Ils ressemblent à s'y méprendre à un code postal — « Hôtel particulier à
+# Alençon - Ref. 23624 » se retrouvait géolocalisé dans la Creuse.
+RE_REFERENCE = re.compile(r"(?:r[ée]f\.?(?:[ée]rence)?|n[°o]|lot)\s*:?\s*\d+", re.IGNORECASE)
 
 
 def _code_postal(titre: str, texte: str) -> str | None:
     """Repère le code postal du bien : priorité au titre (souvent « Ville
     (61130) »), sinon le CP le plus fréquent du texte — c'est celui du bien,
     pas une adresse d'agence en pied de page."""
-    m = RE_CP.search(titre or "")
+    titre = RE_REFERENCE.sub(" ", titre or "")
+    texte = RE_REFERENCE.sub(" ", texte or "")
+    m = RE_CP.search(titre)
     if m:
         return m.group(1)
-    trouves = RE_CP.findall(texte or "")
+    trouves = RE_CP.findall(texte)
     return Counter(trouves).most_common(1)[0][0] if trouves else None
 
 

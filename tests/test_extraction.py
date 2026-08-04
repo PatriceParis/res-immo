@@ -142,3 +142,16 @@ def test_valeurs_aberrantes_ecartees():
     assert a["titre"] == "Maison de caractère"          # &nbsp; nettoyé
     assert a["prix"] == 250000                            # le vrai prix, pas 387 M
     assert a.get("surface_m2") in (None, )                # 6000 m² écarté (aberrant)
+
+
+def test_numero_de_reference_nest_pas_un_code_postal():
+    """Cas réel : « Hôtel particulier à Alençon - Ref. 23624 » se retrouvait
+    géolocalisé dans la Creuse (23), le numéro de référence ayant été pris
+    pour un code postal."""
+    html = """<html><head>
+    <meta property="og:title" content="Hôtel particulier de charme - Alençon - Ref. 23624">
+    </head><body><p>Alençon 61000, Orne. Prix : 395 000 €. Surface 210 m².</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://x.fr/demeures/hotel-alencon", source="x")
+    assert a["code_postal"] == "61000"
+    assert a["departement"] == "61"
