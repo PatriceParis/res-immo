@@ -121,3 +121,20 @@ def test_accepte_vrais_biens_refuge():
     assert est_bien_valide(
         {"titre": "Maison à vendre à Mortagne-au-Perche", "type_bien": "maison",
          "prix": 190000, "pieces": 6})
+
+
+def test_rejette_vitrines_de_constructeur_et_pages_d_agence():
+    """Cas réels remontés d'une collecte : une page « modèles et prix » d'un
+    constructeur et la page d'accueil d'une agence s'affichaient comme biens."""
+    assert not est_bien_valide(
+        {"titre": "Maison France Confort : 7 Modèles et Prix Exclusifs",
+         "surface_m2": 120, "prix": 250000})
+    assert not est_bien_valide(
+        {"titre": "Olléa Immobilier Beauvais - Achat & Vente Immobilier",
+         "surface_m2": 90, "prix": 180000})
+    assert not est_bien_valide(
+        {"titre": "Faire construire sa maison neuve dans l'Oise", "surface_m2": 100})
+    # Une vraie annonce contenant le mot « vente » reste valide.
+    assert est_bien_valide(
+        {"titre": "Vente Maison Ribemont 5 pièce(s) 100 m2", "type_bien": "maison",
+         "surface_m2": 100, "prix": 128000, "pieces": 5})

@@ -28,6 +28,11 @@ _NON_ANNONCE = re.compile(
     r"|qui sommes|contactez|mentions legales|notre agence|vendre (sa|votre|ma|leur) "
     r"|comment (vendre|acheter|choisir|estimer)|pourquoi (vendre|choisir|faire)"
     r"|^a vendre\s*\|"          # titre-gabarit « A vendre | Agence » (pas un bien)
+    # Page d'accueil d'agence : « Untel Immobilier - Achat & Vente Immobilier »
+    r"|achat (&|et) vente|vente (&|et) location|gestion locative"
+    # Vitrine de constructeur : « Maisons France Confort : 7 Modèles et Prix »
+    r"|modeles? et prix|nos modeles|faire construire|maisons? neuves?"
+    r"|constructeur"
 )
 
 # Types de biens sans intérêt pour un refuge (repérés dans le titre).

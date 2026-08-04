@@ -108,7 +108,13 @@ def charger_liste(conn, annonces: list[dict]) -> int:
         if distance is not None and distance > DISTANCE_MAX_KM:
             continue  # hors zone de repli, ou géolocalisation aberrante
         dept = annonce.get("departement")
-        if dept and str(dept) not in DEPARTEMENTS_CIBLES:
+        if not dept:
+            # Sans localisation, on ne peut ni situer le bien, ni calculer sa
+            # distance de Paris, sa densité ou sa gare : la moitié du score est
+            # indéterminable et l'acheteur ne sait même pas où c'est. En
+            # pratique, ce sont des pages d'agence ou de constructeur.
+            continue
+        if str(dept) not in DEPARTEMENTS_CIBLES:
             continue  # hors des terroirs ciblés (souvent une réf. lue comme un CP)
         db.upsert_annonce(conn, annonce)
         n += 1
