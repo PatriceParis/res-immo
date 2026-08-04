@@ -355,6 +355,8 @@ function ouvrirFiche(id) {
   const listeBadges = a.badges || [];
   const badges = listeBadges.map((b) => `<span class="badge">✓ ${echap(b)}</span>`).join("");
   const alertes = (a.alertes || []).map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
+  const vigilances = ((detail && detail.vigilances) || [])
+    .map((v) => `<li>${echap(v)}</li>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
   const risques = a.risques || {};
   const nucleaire = risques.nucleaire_km != null
@@ -420,8 +422,14 @@ function ouvrirFiche(id) {
     <section>
       <h4>Points de vigilance</h4>
       ${alertes ? `<div class="jetons">${alertes}</div>`
-                : `<p class="aucun">✓ Aucun point de vigilance détecté.</p>`}
+                : `<p class="aucun">✓ Aucun point de vigilance détecté sur le bien.</p>`}
       ${nucleaire ? `<p class="note-detail">${nucleaire}</p>` : ""}
+      ${vigilances ? `
+        <p class="note-detail"><b>Risques recensés sur la commune</b> (source
+        Géorisques). Ils ne disent pas que ce bien est exposé — presque toute
+        commune française est concernée par au moins l'un d'eux : à vérifier à
+        l'adresse exacte (l'état des risques est obligatoire à la vente).</p>
+        <ul class="vigilances">${vigilances}</ul>` : ""}
     </section>
 
     <section>

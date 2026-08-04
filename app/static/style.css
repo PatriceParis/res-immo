@@ -213,6 +213,8 @@ body {
 .pilier-info { margin: 6px 0 2px; padding: 8px 11px; background: var(--badge-fond);
   border: 1px solid var(--badge-bord); border-radius: 8px; color: var(--encre-2);
   font-size: 12.5px; line-height: 1.55; }
+.vigilances { margin: 6px 0 0; padding-left: 18px; color: var(--encre-2); font-size: 13px; line-height: 1.6; }
+.vigilances li { margin-top: 2px; }
 .jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden; }
 .jauge > div { height: 100%; background: var(--n3); border-radius: 6px; min-width: 2px; }
 @media (max-width: 600px) { .pilier-tete { grid-template-columns: 132px 1fr 48px; } }

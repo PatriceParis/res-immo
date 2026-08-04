@@ -51,6 +51,18 @@ def preparer_annonce(brut: dict) -> dict:
     annonce["features"] = features
 
     risques = dict(annonce.get("risques") or {})
+    # Données Géorisques collectées avant la distinction de portée : leurs
+    # drapeaux étaient déjà **communaux** (séisme et radon ressortaient à 100 %).
+    # On les requalifie pour ne pas pénaliser le bien comme s'il était exposé.
+    if risques.get("source") == "georisques" and not risques.get("portee"):
+        for ancien, nouveau in (("inondation", "inondation_commune"),
+                                ("feu_foret", "feu_foret_commune"),
+                                ("seisme", "seisme_commune"),
+                                ("radon", "radon_commune"),
+                                ("icpe", "icpe_commune")):
+            if ancien in risques:
+                risques[nouveau] = risques.pop(ancien)
+        risques["portee"] = "commune"
     if lat is not None and lon is not None and risques.get("nucleaire_km") is None:
         nom, dist = geo.centrale_la_plus_proche(lat, lon)
         risques["nucleaire_km"] = dist

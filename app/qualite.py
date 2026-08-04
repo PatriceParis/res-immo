@@ -36,7 +36,16 @@ _TYPES_EXCLUS = re.compile(
     r"|local (commercial|professionnel|d'activite)|locaux (commerciaux|professionnels)"
     r"|\bbureaux\b|entrepots?|fonds de commerce|murs commerciaux"
     r"|immeuble de rapport|terrains? (a batir|constructibles?|nus?)"
+    r"|^terrains?\b|vente de terrains?|batiment d'activite|hangar agricole"
     r"|programme neuf|investissement locatif|viager"
+)
+
+# Le chemin de l'URL porte souvent le VRAI type du bien (…/vente/ville/terrain/…)
+# — signal bien plus fiable que le titre, souvent tronqué ou commercial.
+_URL_TYPE_EXCLU = re.compile(
+    r"/(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
+    r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf)/",
+    re.IGNORECASE,
 )
 
 # Types de biens acceptés (habitables, avec potentiel refuge).
@@ -79,6 +88,9 @@ def est_bien_valide(a: dict) -> bool:
     if est_vendu(a):
         return False
     if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
+        return False
+    # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
+    if _URL_TYPE_EXCLU.search(a.get("url") or ""):
         return False
     if (a.get("type_bien") or "maison") not in TYPES_REFUGE:
         return False

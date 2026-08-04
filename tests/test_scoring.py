@@ -86,3 +86,26 @@ def test_autonomie_alimentaire_sans_terrain():
     pts = scoring.calculer_score({"features": f, "risques": {}, "terrain_m2": 0}
                                  )["piliers"]["alimentation"]["points"]
     assert pts >= 8  # verger/potager 4 + poulailler 2 + ruches 2
+
+
+def test_risque_communal_ne_condamne_pas_le_bien():
+    """Géorisques signale un risque DOCUMENTÉ SUR LA COMMUNE, pas sur le bien.
+
+    Mesuré sur nos annonces réelles : séisme et radon ressortent à 100 % des
+    communes, l'inondation à 80 %. Les compter comme une exposition du bien
+    pénaliserait tout le monde à tort.
+    """
+    from app.scoring import _pilier_risques, _alertes, _vigilances
+
+    commune = {"inondation_commune": True, "seisme_commune": True,
+               "radon_commune": True, "icpe_commune": True, "portee": "commune"}
+    bien_expose = {"inondation": True}
+
+    # Le bien réellement en zone inondable est bien plus pénalisé.
+    assert _pilier_risques(bien_expose) < _pilier_risques(commune)
+    assert _pilier_risques(commune) >= 18          # à peine entamé
+    # Et on n'affiche pas « Zone inondable » pour un simple signal communal.
+    assert "Zone inondable" not in _alertes(commune, None)
+    assert "Zone inondable" in _alertes(bien_expose, None)
+    # Le signal communal reste visible, comme point à vérifier.
+    assert any("commune" in v for v in _vigilances(commune))

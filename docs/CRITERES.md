@@ -69,10 +69,33 @@ propriété d'un hectare nu obtient 6/15.*
 
 La distance aux centrales est calculée automatiquement (liste des 18 CNPE
 embarquée). Les autres risques sont renseignés par l'API officielle de l'État
-**Géorisques** — zone inondable, retrait-gonflement des argiles, feux de forêt,
-sismicité, radon, sites industriels. L'enrichissement tourne **automatiquement à
-chaque collecte** (étape « Enrichir les risques officiels » du workflow), et peut
-se relancer à la main : `python scripts/enrichir_risques.py`.
+**Géorisques**. L'enrichissement tourne **automatiquement à chaque collecte**
+(étape « Enrichir les risques officiels » du workflow), et peut se relancer à la
+main : `python scripts/enrichir_risques.py`.
+
+#### ⚠️ Portée des données Géorisques : commune ≠ bien
+
+Le point d'accès utilisé indique qu'un risque est **documenté sur la commune**,
+pas que *ce* bien y est exposé. Mesuré sur nos annonces réelles :
+
+| Risque « présent » | Part des communes |
+|---|---|
+| Zonage sismique | **100 %** |
+| Potentiel radon | **100 %** |
+| Inondation | 80 % |
+| Installation classée (ICPE) | 75 % |
+
+Toute commune française a un zonage sismique et un potentiel radon ; presque
+toutes ont une rivière. Retirer 8 points d'inondation sur cette base
+pénaliserait 80 % des biens **à tort** — et ferait passer une ferme perchée du
+Perche pour une maison les pieds dans l'eau.
+
+Ces signaux sont donc traités comme des **points de vigilance à vérifier à
+l'adresse** (affichés sous la fiche), avec une pénalité symbolique (−2 pour
+l'inondation communale, −1 pour les feux). La pénalité pleine (−8) reste
+réservée à un bien **réellement situé** en zone inondable. L'état des risques
+étant obligatoire à la vente, l'acheteur aura la réponse exacte au moment de
+l'offre.
 
 ### 🚗 Situation & accès — 15 points
 | Critère | Points |

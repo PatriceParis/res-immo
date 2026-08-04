@@ -79,6 +79,29 @@ def test_rejette_pages_et_titres_indigents():
                                 "surface_m2": 405, "prix": 286200})
 
 
+def test_le_type_dans_l_url_prime_sur_le_titre():
+    """Cas réels : le titre dit « maison », l'URL dit terrain / autre.
+
+    Les titres d'agences sont souvent tronqués ou purement commerciaux ; le
+    chemin de l'URL, lui, porte le vrai type du bien.
+    """
+    assert not est_bien_valide(
+        {"titre": "A PROXIMITE DE BELLEME ET SES COMMERCES", "surface_m2": 440,
+         "prix": 56000,
+         "url": "https://www.perch-immo.fr/vente/2525-belforet-en-perche/terrain/1841-a-proximite"})
+    assert not est_bien_valide(
+        {"titre": "BATIMENT D", "surface_m2": 375, "prix": 213900,
+         "url": "https://www.perch-immo.fr/vente/1-belleme/autre/1479-batiment-d-activite-belleme"})
+    assert not est_bien_valide(
+        {"titre": "Vente de terrains | Indicateur Vendomois", "surface_m2": 400,
+         "url": "https://www.indicateurvendomois.com/vente/terrains/1"})
+    # Une vraie maison garde son URL /maison/ : elle passe.
+    assert est_bien_valide(
+        {"titre": "Corps de ferme à rénover au bout d'un chemin",
+         "type_bien": "corps de ferme", "surface_m2": 180, "prix": 345000,
+         "url": "https://www.perch-immo.fr/vente/1-belleme/maison/1795-corps-de-ferme"})
+
+
 def test_rejette_prix_aberrant_sans_surface():
     # « Prix » de 3 480 € (référence prise pour un prix) sans surface : écarté.
     assert not est_bien_valide({"titre": "Propriété de caractère restaurée",
