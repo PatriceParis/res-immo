@@ -395,9 +395,14 @@ def extraire_annonce(html: str, url: str, source: str,
             annonce["prix"] = _num(prix_meta)
 
     # 3. dernier recours : repères dans le texte visible
-    texte = None
-    if "prix" not in annonce or "surface_m2" not in annonce:
-        texte = _texte_visible(html)
+    #
+    # Le texte n'était extrait que si le prix OU la surface manquaient — donc
+    # jamais quand la fiche technique du site les fournit tous les deux. Deux
+    # conséquences : le TERRAIN n'était alors pas lu du tout, et l'on ne
+    # pouvait pas recouper une surface douteuse avec ce que la page annonce
+    # noir sur blanc. Il est de toute façon relu plus bas pour la détection
+    # des atouts : l'extraire ici ne coûte rien.
+    texte = _texte_visible(html)
     if "prix" not in annonce and texte:
         for m in RE_PRIX.finditer(texte):          # 1er montant plausible
             val = _num(m.group(1))
@@ -450,6 +455,20 @@ def extraire_annonce(html: str, url: str, source: str,
     terrain = annonce.get("terrain_m2")
     if terrain is not None and not (10 <= terrain <= 2_000_000):
         annonce["terrain_m2"] = None
+
+    # Habitable = terrain : le site a publié la même valeur dans les deux
+    # champs. Cas réel : la fiche technique de l'agence donne floorSize = 360
+    # alors que sa propre page annonce « Surface habitable 300 m² — Terrain
+    # 360 m² ». Écarter les surfaces du texte annoncées comme du terrain ne
+    # suffit pas ici : la valeur ne vient PAS du texte, elle vient des données
+    # structurées du site. On va donc rechercher dans le texte une surface
+    # distincte du terrain — et si aucune n'est crédible, on n'affiche pas de
+    # surface plutôt qu'un terrain déguisé en habitable.
+    surface, terrain = annonce.get("surface_m2"), annonce.get("terrain_m2")
+    if surface and terrain and surface == terrain:
+        autres = [v for v in _surfaces(texte or "") if v != terrain]
+        annonce["surface_m2"] = _surface_coherente(autres, annonce.get("prix"))
+        annonce.pop("_surface_du_titre", None)
 
     # Contrôle croisé : un prix au m² absurde signale que l'une des deux
     # valeurs est fausse. Le titre étant la source la plus sûre, on garde ce
