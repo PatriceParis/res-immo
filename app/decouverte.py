@@ -56,7 +56,7 @@ RESEAUX_NATIONAUX = {
     "century21.fr", "guy-hoquet.com", "nestenn.com", "iadfrance.fr",
     "iad-france.fr", "stephaneplazaimmobilier.com", "ladresse.com",
     "humanimmobilier.fr", "arthurimmo.com", "sergic.com", "foncia.com",
-    "citya.com", "square-habitat.fr", "safti.fr", "capifrance.fr",
+    "citya.com", "square-habitat.fr", "squarehabitat.fr", "safti.fr", "capifrance.fr",
     "optimhome.com", "bellesdemeures.com", "proprieteslefigaro.com",
 }
 
@@ -167,6 +167,42 @@ def score_candidat(sonde: dict) -> int:
     return note
 
 
+# Constructeurs de maisons neuves : ils vendent du terrain + plan, pas des
+# biens existants. Une maison neuve de lotissement n'a ni cave, ni dépendance,
+# ni terrain nourricier — l'inverse d'un refuge.
+CONSTRUCTEURS = re.compile(
+    r"maisons? (france confort|pierre|d'en france|balency|axcess|phenix|club)"
+    r"|constructeur|maisons? neuves?|villas? club|trecobat|geoxia",
+    re.IGNORECASE,
+)
+
+
+def est_constructeur(nom: str) -> bool:
+    """True pour un constructeur de maisons neuves (hors cible refuge)."""
+    return bool(CONSTRUCTEURS.search(nom or ""))
+
+
+def fusionner_rapports(ancien: list[dict], nouveau: list[dict]) -> list[dict]:
+    """Cumule les sondages de plusieurs passes, en gardant le meilleur par site.
+
+    L'API Overpass est capricieuse : d'une passe à l'autre, ce ne sont pas les
+    mêmes zones qui répondent (Compiègne un coup, Vendôme le suivant). Écraser
+    le rapport à chaque fois ferait perdre la moitié du travail. En cumulant,
+    la couverture s'enrichit à chaque passage au lieu de faire du sur-place.
+    """
+    par_domaine: dict[str, dict] = {}
+    for sonde in list(ancien or []) + list(nouveau or []):
+        d = domaine(sonde.get("site", ""))
+        if not d:
+            continue
+        garde = par_domaine.get(d)
+        # Le sondage le plus concluant l'emporte (un site injoignable un jour
+        # peut très bien répondre le lendemain).
+        if garde is None or sonde.get("note", 0) > garde.get("note", 0):
+            par_domaine[d] = sonde
+    return sorted(par_domaine.values(), key=lambda s: -s.get("note", 0))
+
+
 def fusionner(existantes: list[dict], candidates: list[dict],
               note_mini: int = 25) -> tuple[list[dict], list[dict]]:
     """Ajoute les candidates retenues aux agences déjà configurées.
@@ -180,6 +216,8 @@ def fusionner(existantes: list[dict], candidates: list[dict],
         d = domaine(c.get("site", ""))
         if not d or d in connus or c.get("note", 0) < note_mini:
             continue
+        if est_constructeur(c.get("nom", "")):
+            continue    # maisons neuves : pas de cave, pas de dépendances
         connus.add(d)
         ajoutees.append({
             "nom": c["nom"],
