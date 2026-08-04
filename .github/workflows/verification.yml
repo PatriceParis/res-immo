@@ -1,0 +1,58 @@
+name: Vérification
+
+# Le dépôt n'avait aucune vérification automatique : une modification pouvait
+# atteindre le site sans que rien ne l'ait relue. C'est ainsi que la case
+# « hors zone inondable » a pu tomber en panne sans bruit, et que la pastille
+# d'un terroir a pu annoncer « 60 biens » face à une liste de 2.
+#
+# Trois barrages, du moins cher au plus complet :
+#   1. les tests (dont le contrat de cohérence et ses preuves de détection) ;
+#   2. l'audit des données réellement publiées ;
+#   3. l'audit de l'interface dans un vrai navigateur.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Tests
+        run: python -m pytest -q
+
+      - name: Auditer les données telles qu'elles seront servies
+        # On charge d'abord data/annonces_reel.json en base, comme le fait le
+        # site à son démarrage : c'est cet état-là que voit l'utilisateur, pas
+        # le fichier brut (qui contient aussi les biens écartés au chargement).
+        run: |
+          python -c "
+          from pathlib import Path
+          from app import db
+          from app.chargement import charger_annonces_json
+          conn = db.connexion()
+          print('chargés :', charger_annonces_json(conn, Path('data/annonces_reel.json')))
+          conn.close()"
+          python scripts/auditer.py
+
+      - name: Auditer l'interface dans un vrai navigateur
+        # Le contrat de cohérence côté API, la garde contre les valeurs
+        # fabriquées, puis ce que l'utilisateur voit réellement à l'écran.
+        # --strict : une promesse non tenue fait échouer la vérification.
+        run: python scripts/auditer_interface.py --strict
