@@ -63,7 +63,12 @@ RE_PRIX = re.compile(r"(\d[\d\s  .]{3,})\s*€")
 # « 238.0 m2 »). Sans la partie décimale, « 132,96 m² » était lu **96 m²** et
 # « 238.0 m2 » n'était pas reconnu du tout : de quoi fausser tous les prix
 # au m², donc la comparaison au marché.
-RE_SURFACE = re.compile(r"(\d{2,4}(?:[.,]\d{1,2})?)\s*m[²2]\b", re.IGNORECASE)
+RE_SURFACE = re.compile(
+    # Le nombre ne doit pas être la FIN d'un nombre plus grand : dans
+    # « Terrain de 2 500 m² », « 500 m² » se lisait comme une surface
+    # habitable, et supplantait les vrais 130 m² de la maison.
+    r"(?<!\d)(?<!\d[\s\u00a0\u202f])(\d{2,4}(?:[.,]\d{1,2})?)\s*m[²2]\b",
+    re.IGNORECASE)
 RE_TERRAIN = re.compile(
     r"(?:terrain|parcelle|jardin)\D{0,30}?(\d[\d\s  ]{2,})\s*m[²2]", re.IGNORECASE)
 RE_TERRAIN_HA = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:ha|hectares?)\b", re.IGNORECASE)
@@ -105,6 +110,37 @@ RE_CP = re.compile(r"\b((?:0[1-9]|[1-8]\d|9[0-5])\d{3})\b")
 # Ils ressemblent à s'y méprendre à un code postal — « Hôtel particulier à
 # Alençon - Ref. 23624 » se retrouvait géolocalisé dans la Creuse.
 RE_REFERENCE = re.compile(r"(?:r[ée]f\.?(?:[ée]rence)?|n[°o]|lot)\s*:?\s*\d+", re.IGNORECASE)
+
+
+# Bornes de prix au m² pour les terroirs ruraux visés. Au-delà, ce n'est pas
+# le bien qui est hors norme : c'est une des deux valeurs qui est fausse.
+PRIX_M2_MIN, PRIX_M2_MAX = 300, 8000
+
+
+def _surfaces(texte: str) -> list[float]:
+    """Toutes les surfaces habitables plausibles citées, dans l'ordre."""
+    vues = []
+    for m in RE_SURFACE.finditer(texte or ""):
+        val = _num(m.group(1))
+        if val and 8 <= val <= 800 and val not in vues:
+            vues.append(val)
+    return vues
+
+
+def _surface_coherente(candidates: list[float], prix) -> float | None:
+    """La surface qui donne un prix au m² crédible, à défaut la première.
+
+    Sans ce garde-fou, on retenait la première surface rencontrée — souvent
+    une pièce, une piscine ou une dépendance. Mieux vaut ne rien afficher
+    qu'une surface qui rend le prix au m² absurde.
+    """
+    if not candidates:
+        return None
+    if not prix:
+        return candidates[0]
+    coherentes = [v for v in candidates if PRIX_M2_MIN <= prix / v <= PRIX_M2_MAX]
+    # La plus grande des surfaces crédibles : l'habitable dépasse les annexes.
+    return max(coherentes) if coherentes else None
 
 
 def _code_postal(titre: str, texte: str) -> str | None:
@@ -344,11 +380,20 @@ def extraire_annonce(html: str, url: str, source: str,
                 annonce["prix"] = val
                 break
     if "surface_m2" not in annonce and texte:
-        for m in RE_SURFACE.finditer(f"{annonce.get('titre', '')} {texte}"):
-            val = _num(m.group(1))
-            if val and 8 <= val <= 800:            # surface habitable plausible
-                annonce["surface_m2"] = val
-                break
+        # Le titre d'abord : c'est la surface la plus fiable de la page.
+        titre_courant = annonce.get("titre", "")
+        du_titre = _surfaces(titre_courant)
+        if du_titre:
+            annonce["surface_m2"] = du_titre[0]
+            annonce["_surface_du_titre"] = True
+        else:
+            # Sinon, parmi toutes les surfaces du texte, celle qui donne un
+            # prix au m² crédible : prendre la première conduisait à retenir
+            # une piscine ou une chambre (« 50 m² » pour une propriété à
+            # 950 000 €, soit 19 000 €/m²).
+            choisie = _surface_coherente(_surfaces(texte), annonce.get("prix"))
+            if choisie:
+                annonce["surface_m2"] = choisie
     if "terrain_m2" not in annonce and texte:
         m = RE_TERRAIN.search(texte)
         if m:
@@ -380,6 +425,18 @@ def extraire_annonce(html: str, url: str, source: str,
     terrain = annonce.get("terrain_m2")
     if terrain is not None and not (10 <= terrain <= 2_000_000):
         annonce["terrain_m2"] = None
+
+    # Contrôle croisé : un prix au m² absurde signale que l'une des deux
+    # valeurs est fausse. Le titre étant la source la plus sûre, on garde ce
+    # qu'il affirme et on efface l'autre — plutôt que d'afficher un hôtel
+    # particulier de 220 m² à 182 €/m², ou une propriété à 19 000 €/m².
+    du_titre = annonce.pop("_surface_du_titre", False)
+    prix, surface = annonce.get("prix"), annonce.get("surface_m2")
+    if prix and surface and not (PRIX_M2_MIN <= prix / surface <= PRIX_M2_MAX):
+        if du_titre:
+            annonce["prix"] = None          # la surface du titre fait foi
+        else:
+            annonce["surface_m2"] = None
 
     if not annonce.get("prix") and not annonce.get("surface_m2"):
         return None

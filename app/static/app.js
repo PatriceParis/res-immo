@@ -157,15 +157,29 @@ function ecartMarche(a) {
     sous ? `${Math.abs(e)} % sous le secteur` : `+${e} % / secteur`}</span>`;
 }
 
-function nbPhotos(a) {
-  return 6 + empreinte(a.id || a.titre || "x") % 7;  // 6 à 12 photos « au dossier »
+// On ne connaît QU'UNE photo par bien (celle publiée par l'agence). Afficher
+// « 1 / 9 » revenait à inventer un nombre à partir d'un hachage de l'identifiant,
+// et à le présenter comme un fait — jusque dans l'argument commercial
+// (« 8 autres photos »). On ne promet donc plus de compte.
+function aUnePhoto(a) {
+  return Boolean(photoReelle(a));
 }
 
 /* ---------------- terroirs ciblés ---------------- */
 
 async function chargerTerroirs() {
+  // Les pastilles comptent AVEC les filtres actifs : elles annoncent ce que
+  // l'utilisateur trouvera en cliquant. On retire le filtre de région et les
+  // paramètres d'affichage, qui n'ont pas de sens pour un comptage.
+  let params = "";
   try {
-    const data = await (await fetch("/api/regions")).json();
+    const p = lireFiltres();
+    p.delete("region");
+    p.delete("tri");
+    params = "?" + p.toString();
+  } catch (e) { params = ""; }
+  try {
+    const data = await (await fetch("/api/regions" + params)).json();
     etat.regions = (data.regions || []).filter((r) => r.cible);
   } catch (e) { etat.regions = []; }
   majTerroirs();
@@ -248,7 +262,7 @@ function ficheAnnonce(a) {
            aria-label="Voir le détail : ${echap(a.titre)}">
     <div class="photo" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
-      <span class="photo-compte">📷 1 / ${nbPhotos(a)}</span>
+      ${aUnePhoto(a) ? `<span class="photo-compte">📷 photo de l'agence</span>` : ""}
       ${estNouveau(a) ? `<span class="pastille-nouveau">Nouveau</span>` : ""}
     </div>
     <div class="fiche-haut">
@@ -399,7 +413,7 @@ function ouvrirFiche(id) {
   $("#modale-contenu").innerHTML = `
     <div class="photo-grande" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
-      <span class="photo-compte">📷 1 / ${nbPhotos(a)} photos</span>
+      ${aUnePhoto(a) ? `<span class="photo-compte">📷 photo de l'agence</span>` : ""}
     </div>
     <header class="fiche-entete">
       <div class="score-jeton grand ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
@@ -432,10 +446,10 @@ function ouvrirFiche(id) {
         <div class="vignette" style="background-image:${photoProxy(a) ? `url('${photoProxy(a)}'),` : ""}url('${illustration(a)}')"></div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">🔒</div>
-        <div class="vignette verrou">＋${Math.max(1, nbPhotos(a) - 4)}</div>
+        <div class="vignette verrou">🔒</div>
       </div>
       <div class="mer-corps">
-        <strong>${nbPhotos(a) - 1} autres photos + le dossier complet</strong>
+        <strong>Les autres photos et le dossier complet</strong>
         <span>Gratuit pour vous : on vous met en relation avec ${a.agence ? echap(a.agence) : "l'agence"}
           pour recevoir toutes les photos, le DPE détaillé et organiser la visite.</span>
         <button class="btn-mer" id="btn-mer">Recevoir les photos &amp; être recontacté</button>
@@ -524,12 +538,25 @@ function fermerFiche() {
 /* ---------------- chargement des données ---------------- */
 
 async function rafraichir() {
-  const reponse = await fetch("/api/annonces?" + lireFiltres().toString());
-  const data = await reponse.json();
+  const p = lireFiltres();
+  p.set("limit", "500");           // plafond de l'API : on demande tout
+  const data = await (await fetch("/api/annonces?" + p.toString())).json();
   etat.annonces = data.items;
-  $("#compteur").textContent = `${data.total} bien${data.total > 1 ? "s" : ""} trouvé${data.total > 1 ? "s" : ""}`;
+
+  // Le compteur doit décrire CE QUI EST AFFICHÉ. Annoncer « 250 biens
+  // trouvés » en n'en listant que 200 est le même travers que les pastilles
+  // de terroir qui comptaient sans les filtres : un chiffre qui ne
+  // correspond pas à ce qu'il prétend décrire.
+  const n = data.total;
+  const montres = (data.items || []).length;
+  $("#compteur").textContent = `${n} bien${n > 1 ? "s" : ""} trouvé${n > 1 ? "s" : ""}`
+    + (montres < n ? ` — les ${montres} premiers affichés` : "");
+
   rendreListe();
   rendreCarte();
+  // Les pastilles de terroir comptent avec les mêmes filtres : elles doivent
+  // donc être recalculées à chaque changement.
+  chargerTerroirs();
 }
 
 async function initialiser() {

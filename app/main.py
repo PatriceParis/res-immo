@@ -124,13 +124,37 @@ def meta():
 
 
 @app.get("/api/regions")
-def liste_regions():
-    """Classement de résilience des terroirs + nombre de biens par région."""
+def liste_regions(
+    prix_min: int | None = None,
+    prix_max: int | None = None,
+    temps_max: int | None = None,
+    surface_min: int | None = None,
+    terrain_min: int | None = None,
+    score_min: int | None = None,
+    cave: int = 0,
+    puits: int = 0,
+    bois: int = 0,
+    solaire: int = 0,
+    dependances: int = 0,
+    potager: int = 0,
+    troglodyte: int = 0,
+    hors_inondation: int = 0,
+    type_bien: str | None = None,
+    agence: str | None = None,
+    q: str | None = None,
+):
+    """Classement de résilience des terroirs + nombre de biens par région.
+
+    Les comptes tiennent compte des **filtres courants** : une pastille qui
+    annonce « 60 biens » alors que la liste filtrée n'en montre que 2 induit
+    l'utilisateur en erreur. Le filtre de région lui-même est ignoré, sinon
+    toutes les autres régions tomberaient à zéro.
+    """
+    filtres = {k: v for k, v in locals().items()}
     assurer_donnees()
     conn = db.connexion()
     try:
-        comptes = {r["region"]: r["nb"] for r in conn.execute(
-            "SELECT region, COUNT(*) nb FROM annonces GROUP BY region").fetchall()}
+        comptes = db.comptes_par_region(conn, filtres)
     finally:
         conn.close()
     classement = regions.classement()

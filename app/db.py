@@ -207,8 +207,18 @@ def _row_vers_dict(row: sqlite3.Row) -> dict:
     return d
 
 
-def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
-    """Recherche filtrée. Renvoie (nombre total, page de résultats)."""
+def _clauses(filtres: dict, ignorer: set | None = None) -> tuple[str, list]:
+    """Construit la clause WHERE et ses paramètres à partir des filtres.
+
+    Extrait de `chercher` pour que le comptage par région applique EXACTEMENT
+    les mêmes filtres que la liste : sans cela, la pastille d'un terroir
+    annonçait « 60 biens » quand la liste filtrée n'en montrait que 2.
+
+    `ignorer` permet d'exclure un filtre du calcul — on compte les biens de
+    chaque région *sans* le filtre de région, sinon toutes les autres
+    tomberaient à zéro.
+    """
+    ignorer = ignorer or set()
     clauses, params = ["1=1"], []
 
     numeriques = {
@@ -220,7 +230,7 @@ def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
         "score_min": "score_total >= ?",
     }
     for cle, sql in numeriques.items():
-        valeur = filtres.get(cle)
+        valeur = None if cle in ignorer else filtres.get(cle)
         if valeur is not None:
             clauses.append(sql)
             params.append(valeur)
@@ -236,27 +246,45 @@ def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
         "hors_inondation": "hors_inondation = 1",
     }
     for cle, sql in drapeaux.items():
-        if filtres.get(cle):
+        if cle not in ignorer and filtres.get(cle):
             clauses.append(sql)
 
-    if filtres.get("type_bien"):
+    if "type_bien" not in ignorer and filtres.get("type_bien"):
         clauses.append("type_bien = ?")
         params.append(filtres["type_bien"])
 
-    if filtres.get("region"):
+    if "region" not in ignorer and filtres.get("region"):
         clauses.append("region = ?")
         params.append(filtres["region"])
 
-    if filtres.get("agence"):
+    if "agence" not in ignorer and filtres.get("agence"):
         clauses.append("agence = ?")
         params.append(filtres["agence"])
 
-    if filtres.get("q"):
+    if "q" not in ignorer and filtres.get("q"):
         clauses.append("(titre LIKE ? OR description LIKE ? OR commune LIKE ?)")
         motif = f"%{filtres['q']}%"
         params.extend([motif, motif, motif])
 
-    ou = " AND ".join(clauses)
+    return " AND ".join(clauses), params
+
+
+def comptes_par_region(conn: sqlite3.Connection, filtres: dict) -> dict:
+    """Nombre de biens par région, **avec les filtres courants** (hors région).
+
+    C'est ce qui rend les pastilles de terroir honnêtes : elles annoncent ce
+    que l'utilisateur trouvera en cliquant, pas un total sans rapport.
+    """
+    ou, params = _clauses(filtres, ignorer={"region"})
+    lignes = conn.execute(
+        f"SELECT region, COUNT(*) nb FROM annonces WHERE {ou} GROUP BY region", params
+    ).fetchall()
+    return {r["region"]: r["nb"] for r in lignes if r["region"]}
+
+
+def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
+    """Recherche filtrée. Renvoie (nombre total, page de résultats)."""
+    ou, params = _clauses(filtres)
     tri = TRIS.get(filtres.get("tri", "score"), TRIS["score"])
     limite = min(int(filtres.get("limit", 200)), 500)
     decalage = max(int(filtres.get("offset", 0)), 0)
