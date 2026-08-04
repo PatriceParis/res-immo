@@ -111,3 +111,31 @@ def test_zones_couvrent_les_villes_demandees():
     assert {"Château-Thierry", "Noyon", "Vendôme", "Beauvais"} <= noms
     for z in ZONES:
         assert -5 < z["lon"] < 10 and 41 < z["lat"] < 52     # bien en France
+
+
+def test_tete_de_reseau_exclue_mais_agence_locale_gardee():
+    """OpenStreetMap donne souvent l'adresse NATIONALE d'une franchise locale.
+
+    Collecter sur orpi.com ramènerait des dizaines de milliers de biens de
+    toute la France. Mais quentimmo.fr ou compiegne.arthurimmo.com sont, eux,
+    de vraies agences de terrain : il ne faut pas les perdre.
+    """
+    assert est_portail_exclu("https://orpi.com")
+    assert est_portail_exclu("https://www.laforet.com/agence/compiegne")
+    assert est_portail_exclu("https://eraimmobilier.com")
+    assert est_portail_exclu("https://arthurimmo.com")
+    # Déclinaisons locales : conservées.
+    assert not est_portail_exclu("https://compiegne.arthurimmo.com")
+    assert not est_portail_exclu("https://century21-vandome-crepy.com")
+    assert not est_portail_exclu("https://quentimmo.fr")
+
+
+def test_catalogue_demesure_trahit_un_portail():
+    """Garde-fou indépendant de la liste de réseaux, qui ne peut être exhaustive :
+    une agence de terroir n'a pas des milliers de biens en vitrine."""
+    portail = {"joignable": True, "nb_biens": 69519, "sitemap": True,
+               "schema_org": True, "site": "https://inconnu-national.fr"}
+    locale = {"joignable": True, "nb_biens": 77, "sitemap": True,
+              "schema_org": True, "site": "https://agence-locale.fr"}
+    assert score_candidat(portail) == 0
+    assert score_candidat(locale) > 50
