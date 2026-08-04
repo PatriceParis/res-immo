@@ -23,6 +23,28 @@
  },
  {
   "nom": "Century 21",
+  "site": "https://century21agencegrandsud.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 87,
+  "motif": "",
+  "note": 100
+ },
+ {
+  "nom": "Sotheby's",
+  "site": "https://valdeloire-sologne-sothebysrealty.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 165,
+  "motif": "",
+  "note": 100
+ },
+ {
+  "nom": "Century 21",
   "site": "https://century21-vandome-crepy.com",
   "zone": "Compiègne",
   "joignable": true,
@@ -88,6 +110,83 @@
   "note": 80
  },
  {
+  "nom": "GSM Immobilier",
+  "site": "https://gsm-immobilier.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 346,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "AJC immobilier",
+  "site": "https://ajc-immobilier.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 145,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "Action Vente 37",
+  "site": "https://action-vente37.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 66,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "Topaze immobilier",
+  "site": "https://topaze-immobilier.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 123,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "Lelièvre immobilier",
+  "site": "https://lelievre-immobilier.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 392,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "Transacom",
+  "site": "https://transacom.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 105,
+  "motif": "",
+  "note": 80
+ },
+ {
+  "nom": "Agence Afico",
+  "site": "https://afico.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 149,
+  "motif": "",
+  "note": 80
+ },
+ {
   "nom": "Cap Immobilier",
   "site": "https://capimmobilier89.fr",
   "zone": "Sens",
@@ -110,9 +209,75 @@
   "note": 75
  },
  {
+  "nom": "Century 21",
+  "site": "https://century21-centre-habitat-tours.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 32,
+  "motif": "",
+  "note": 72
+ },
+ {
+  "nom": "Panther'Immo",
+  "site": "https://pantherimmo.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 47,
+  "motif": "",
+  "note": 67
+ },
+ {
+  "nom": "Valoire Habîtat",
+  "site": "https://valloire-habitat.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 44,
+  "motif": "",
+  "note": 64
+ },
+ {
+  "nom": "Deletan Immobilier",
+  "site": "https://deletang-immobilier.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 36,
+  "motif": "",
+  "note": 56
+ },
+ {
+  "nom": "Angélot Immo",
+  "site": "https://angelot-immo.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 11,
+  "motif": "",
+  "note": 51
+ },
+ {
   "nom": "ArthurImmo.com Agence Saint-Hubert",
   "site": "https://compiegne.arthurimmo.com",
   "zone": "Compiègne",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 25,
+  "motif": "",
+  "note": 45
+ },
+ {
+  "nom": "Sarl C2Si",
+  "site": "https://c2s-immo.com",
+  "zone": "Amboise",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -130,6 +295,28 @@
   "nb_biens": 21,
   "motif": "",
   "note": 41
+ },
+ {
+  "nom": "Brosset Immobilier",
+  "site": "https://brosset-immobilier.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 20,
+  "motif": "",
+  "note": 40
+ },
+ {
+  "nom": "Human Immobilier",
+  "site": "https://human-immobilier.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": true,
+  "nb_biens": 20,
+  "motif": "",
+  "note": 40
  },
  {
   "nom": "Agence Greub",
@@ -198,6 +385,39 @@
   "note": 22
  },
  {
+  "nom": "Maisons CPR",
+  "site": "https://maisons-ctvl.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 2,
+  "motif": "",
+  "note": 22
+ },
+ {
+  "nom": "Tours Habitat",
+  "site": "https://tours-habitat.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 2,
+  "motif": "",
+  "note": 22
+ },
+ {
+  "nom": "Tours métropole habitat",
+  "site": "https://tmh.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 2,
+  "motif": "",
+  "note": 22
+ },
+ {
   "nom": "Era Immobillier",
   "site": "https://era-immobilier-crepy-en-valois.fr",
   "zone": "Compiègne",
@@ -212,6 +432,28 @@
   "nom": "Cimm Immobilier",
   "site": "https://gisors.cimm.com",
   "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 21
+ },
+ {
+  "nom": "Immoservices Patrimoines",
+  "site": "https://immoservicespatrimoine.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 21
+ },
+ {
+  "nom": "Cimm Immobilier",
+  "site": "https://ballan-mire.cimm.com",
+  "zone": "Vouvray",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -367,11 +609,121 @@
   "site": "https://aci-immo.com",
   "zone": "Beauvais",
   "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Faubourg 70",
+  "site": "https://demeures-de-loire.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Activ'expertise Sud Loir-Et-Cher",
+  "site": "https://activexpertise-sudloiretcher.fr",
+  "zone": "Montrichard",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Lucilia B. Immobilier",
+  "site": "https://lucilia-b-immobilier.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Era Immobilier",
+  "site": "https://erafrance.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Arthur Loyd",
+  "site": "https://arthur-loyd.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Les courtières",
+  "site": "https://lescourtieres.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Averimmo",
+  "site": "https://averimmo.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Im Valoris",
+  "site": "https://imvaloris.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Luxor Immo",
+  "site": "https://luxor-immo.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Era Immobilier",
+  "site": "https://era-tourssud.com",
+  "zone": "Amboise",
+  "joignable": true,
   "sitemap": false,
   "schema_org": false,
-  "nb_biens": 10,
+  "nb_biens": 14,
   "motif": "",
-  "note": 10
+  "note": 14
  },
  {
   "nom": "L'immobilier à La Loupe",
@@ -396,9 +748,42 @@
   "note": 9
  },
  {
+  "nom": "Guy Hoquet",
+  "site": "https://tours.guy-hoquet.com",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 9,
+  "motif": "",
+  "note": 9
+ },
+ {
+  "nom": "IMMO 7",
+  "site": "https://agenceimmo7.com",
+  "zone": "Château-Thierry",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 7,
+  "motif": "",
+  "note": 7
+ },
+ {
   "nom": "Ordim Immobilier",
   "site": "https://ordim-immo.com",
   "zone": "Sens",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 4,
+  "motif": "",
+  "note": 4
+ },
+ {
+  "nom": "Côté Particuliers",
+  "site": "https://tours.coteparticuliers.com",
+  "zone": "Amboise",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
@@ -440,6 +825,17 @@
   "note": 2
  },
  {
+  "nom": "Déclic Immo",
+  "site": "https://centredeclicimmo37.declic.immo",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 2,
+  "motif": "",
+  "note": 2
+ },
+ {
   "nom": "Legrand Immobiler",
   "site": "https://legrand-immobilier.com",
   "zone": "Beauvais",
@@ -454,6 +850,39 @@
   "nom": "Agence Simon",
   "site": "https://agence-simon.com",
   "zone": "Château-Renault",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 1
+ },
+ {
+  "nom": "Chautemps Immobilier",
+  "site": "https://chautemps-immobilier.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 1
+ },
+ {
+  "nom": "Ataraxia",
+  "site": "https://ataraxia.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 1
+ },
+ {
+  "nom": "Béranger immobilier",
+  "site": "https://beranger-immobilier.com",
+  "zone": "Amboise",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
@@ -990,17 +1419,6 @@
   "note": 0
  },
  {
-  "nom": "IMMO 7",
-  "site": "https://agenceimmo7.com",
-  "zone": "Château-Thierry",
-  "joignable": true,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "aucune page de bien repérée",
-  "note": 0
- },
- {
   "nom": "Aim Transactions Montlouis",
   "site": "https://aim-transactions.com",
   "zone": "Château-Renault",
@@ -1015,6 +1433,138 @@
   "nom": "Chambord Immobilier",
   "site": "https://chambordimmobilier.fr",
   "zone": "Château-Renault",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Activ'expertise Blois",
+  "site": "https://activexpertise-blois.fr",
+  "zone": "Montrichard",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "City and Co",
+  "site": "https://cityandco.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "Stéphane Plaza Immobilier",
+  "site": "https://toursest.stephaneplazaimmobilier.com",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "HTTP 403",
+  "note": 0
+ },
+ {
+  "nom": "DESIRE Immobilier",
+  "site": "https://desireimmo37.fr",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "L'immothèque",
+  "site": "https://limmotheque.fr",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "SSLError",
+  "note": 0
+ },
+ {
+  "nom": "Immo Plus",
+  "site": "https://immoplus-touraine.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "L'agence du neuf.immo",
+  "site": "https://lagenceduneuf.immo",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Sixième Avenue",
+  "site": "https://toursouest.stephaneplazaimmobilier.com",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "HTTP 403",
+  "note": 0
+ },
+ {
+  "nom": "Lamy",
+  "site": "https://lamy-immobilier.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 6414,
+  "motif": "",
+  "note": 0
+ },
+ {
+  "nom": "Agence Motte",
+  "site": "https://fnaim.fr",
+  "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "Welcome Home Immobilier",
+  "site": "https://welcomehomeimmobilier.fr",
+  "zone": "Amboise",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ReadTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Bourse de l'Immobilier",
+  "site": "https://bourse-immobilier.fr",
+  "zone": "Vouvray",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
