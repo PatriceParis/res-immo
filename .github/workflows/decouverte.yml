@@ -58,8 +58,18 @@ jobs:
             for essai in 1 2 3 4 5; do
               if git push; then echo "Poussé (essai $essai)."; break; fi
               echo "Push rejeté, on se replace sur la branche distante ($essai/5)…"
+              # On met nos deux fichiers de côté, on se cale EXACTEMENT sur la
+              # version distante, puis on les remet : notre commit ne contient
+              # alors qu'eux. Un « reset --soft » laisserait l'index de
+              # l'ancien checkout et re-committerait tout le reste — c'est
+              # ainsi qu'une découverte a un jour annulé une collecte entière
+              # (101 annonces ramenées à 77) sans le moindre message d'erreur.
+              cp scraper/refuge_scraper/agences_sites.json "$RUNNER_TEMP/agences_sites.json"
+              cp data/agences_candidates.json "$RUNNER_TEMP/agences_candidates.json"
               git fetch origin main
-              git reset --soft origin/main
+              git reset --hard origin/main
+              cp "$RUNNER_TEMP/agences_sites.json" scraper/refuge_scraper/agences_sites.json
+              cp "$RUNNER_TEMP/agences_candidates.json" data/agences_candidates.json
               git add scraper/refuge_scraper/agences_sites.json data/agences_candidates.json
               git commit -m "Découverte : agences des zones visées ($(date -u +%F))" || true
               sleep $((essai * 5))
