@@ -1,0 +1,69 @@
+name: Découverte d'agences
+
+# Cherche les agences immobilières des zones visées (Château-Thierry, Noyon,
+# Beauvais, Vendôme…) dans OpenStreetMap, sonde leurs sites en parallèle, et
+# branche ceux qui sont exploitables sur la collecte.
+#
+# À lancer à la main quand on veut élargir la couverture, ou une fois par mois :
+# le tissu d'agences bouge lentement, inutile d'y revenir chaque semaine.
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "Note minimale pour brancher une agence (0-100, défaut 25)"
+        required: false
+        default: "25"
+      simuler:
+        description: "true = rapport seul, sans modifier la configuration"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "0 5 1 * *"   # le 1er de chaque mois à 05:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  decouverte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install requests
+
+      - name: Recenser et sonder les agences
+        env:
+          NOTE: ${{ github.event.inputs.note }}
+          SIMULER: ${{ github.event.inputs.simuler }}
+        run: |
+          OPTIONS="--note ${NOTE:-25}"
+          if [ "$SIMULER" = "true" ]; then OPTIONS="$OPTIONS --simuler"; fi
+          python scripts/decouvrir_agences_osm.py $OPTIONS
+
+      - name: Committer les agences découvertes
+        run: |
+          if [ -n "$(git status --porcelain scraper/refuge_scraper/agences_sites.json data/agences_candidates.json)" ]; then
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add scraper/refuge_scraper/agences_sites.json data/agences_candidates.json
+            git commit -m "Découverte : agences des zones visées ($(date -u +%F))"
+            # La branche peut avoir bougé pendant le sondage : on rejoue nos
+            # fichiers par-dessus la version distante plutôt que de tout perdre.
+            for essai in 1 2 3 4 5; do
+              if git push; then echo "Poussé (essai $essai)."; break; fi
+              echo "Push rejeté, on se replace sur la branche distante ($essai/5)…"
+              git fetch origin main
+              git reset --soft origin/main
+              git add scraper/refuge_scraper/agences_sites.json data/agences_candidates.json
+              git commit -m "Découverte : agences des zones visées ($(date -u +%F))" || true
+              sleep $((essai * 5))
+            done
+          else
+            echo "Aucune nouvelle agence exploitable."
+          fi

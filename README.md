@@ -80,7 +80,7 @@ est expliqué dans **[docs/STRATEGIE_COLLECTE.md](docs/STRATEGIE_COLLECTE.md)**.
 | Source | État |
 |---|---|
 | **Jeu de démonstration** (75 biens fictifs mais réalistes, attribués à des agences fictives) | ✅ chargé automatiquement |
-| **① Découverte d'agences** via Bien'ici (« qui a des biens dans ma zone ? ») | ⚙️ `python scripts/decouvrir_agences.py` |
+| **① Découverte d'agences** via OpenStreetMap (« quelles agences dans ma zone ? ») | ⚙️ `python scripts/decouvrir_agences_osm.py` |
 | **② Collecte chez les agences** (sitemap + schema.org, tout logiciel) | ⚙️ `bash scripts/collecter.sh agence` |
 | **②bis Collecte via un vrai navigateur** (sites protégés par anti-robots) | ⚙️ `python scripts/collecter_navigateur.py -s https://agence.fr` |
 | **Bien'ici** (API JSON directe — position GPS et DPE inclus) | ⚙️ `bash scripts/collecter.sh bienici` |
