@@ -197,7 +197,7 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
     # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
     # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
-    vivier = max(maxi * 6, 40)
+    vivier = max(maxi * 4, 30)
     urls = _sitemap_urls(base)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
@@ -228,11 +228,18 @@ def main() -> None:
     ap.add_argument("-n", "--nom", default="")
     ap.add_argument("--index", default="")
     ap.add_argument("--max", type=int, default=12)
-    ap.add_argument("--delai", type=float, default=2.5)
+    ap.add_argument("--delai", type=float, default=1.2)
+    # Plafond de pages ouvertes par agence : une agence dont tout le catalogue
+    # est vendu ne doit pas consommer le temps des autres.
+    ap.add_argument("--pages-max", type=int, default=30)
+    # Budget de temps global : on rend la main proprement avant que le runner
+    # CI ne coupe le job, sinon l'export et le commit ne tournent jamais.
+    ap.add_argument("--minutes-max", type=float, default=35.0)
     args = ap.parse_args()
 
     conn = db.connexion()
     total = 0
+    fin_prevue = time.monotonic() + args.minutes_max * 60
     with sync_playwright() as p:
         navigateur = p.chromium.launch(
             executable_path=os.environ.get("REFUGE_CHROMIUM") or None, headless=True)
@@ -242,13 +249,23 @@ def main() -> None:
         page = contexte.new_page()
 
         for cible in _cibles(args.site, args.nom, args.index):
+            if time.monotonic() > fin_prevue:
+                print("\n⏱ Budget de temps atteint : on s'arrête là pour que "
+                      "l'export et l'enregistrement aient lieu.")
+                break
             base = cible["site"].rstrip("/")
             print(f"\n▶ {cible['nom']} — {base}")
             urls = _urls_a_visiter(page, cible, base, args.max)
-            n, vendus, ecartes = 0, 0, 0
+            n, vendus, ecartes, vues = 0, 0, 0, 0
             for u in urls:
                 if n >= args.max:      # on s'arrête sur les biens GARDÉS,
                     break              # pas sur les pages visitées
+                if vues >= args.pages_max:
+                    print(f"  … plafond de {args.pages_max} pages atteint pour cette agence")
+                    break
+                if time.monotonic() > fin_prevue:
+                    break
+                vues += 1
                 try:
                     page.goto(u, wait_until="domcontentloaded", timeout=30000)
                     page.wait_for_timeout(900)
