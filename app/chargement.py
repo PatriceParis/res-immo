@@ -12,13 +12,19 @@ import json
 from pathlib import Path
 
 from . import db, geo, regions, scoring
-from .qualite import est_bien_valide
+from .qualite import PRIX_MINI, est_bien_valide
 
 
 def preparer_annonce(brut: dict) -> dict:
     annonce = dict(brut)
     titre = annonce.get("titre", "")
     description = annonce.get("description", "")
+
+    # Prix aberrant (< 15 000 € pour une maison = référence ou n° pris pour un
+    # prix) : on l'efface plutôt que d'afficher « 3 480 € » sur une propriété.
+    prix = annonce.get("prix")
+    if prix is not None and prix < PRIX_MINI:
+        annonce["prix"] = None
 
     # Région : déduite du département (les annonces d'agences ne la donnent pas).
     if not annonce.get("region"):

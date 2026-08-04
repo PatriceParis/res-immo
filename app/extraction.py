@@ -297,7 +297,7 @@ def extraire_annonce(html: str, url: str, source: str,
     if "prix" not in annonce and texte:
         for m in RE_PRIX.finditer(texte):          # 1er montant plausible
             val = _num(m.group(1))
-            if val and 3_000 <= val <= 5_000_000:
+            if val and 15_000 <= val <= 5_000_000:  # sous 15 000 € : réf., pas un prix
                 annonce["prix"] = val
                 break
     if "surface_m2" not in annonce and texte:

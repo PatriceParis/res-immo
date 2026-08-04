@@ -31,6 +31,28 @@ def test_rejette_biens_non_refuge():
     assert not est_bien_valide({"titre": "Local commercial 120 m²", "surface_m2": 120})
 
 
+def test_rejette_pages_et_titres_indigents():
+    # Page de résultats de recherche (vue réellement sur un site d'agence).
+    assert not est_bien_valide({"titre": "Search - Perche et Demeures", "surface_m2": 400})
+    # Titre-gabarit « A vendre | Agence » : aucune info de bien.
+    assert not est_bien_valide({"titre": "A vendre | BAUDART IMMO", "surface_m2": 100})
+    # Titres réduits à un numéro de référence.
+    assert not est_bien_valide({"titre": "389", "surface_m2": 176, "prix": 11500})
+    assert not est_bien_valide({"titre": "9", "surface_m2": 720})
+    # Local professionnel : hors cible refuge.
+    assert not est_bien_valide({"titre": "LOCAL PROFESSIONNEL BELLÊME 405 M²",
+                                "surface_m2": 405, "prix": 286200})
+
+
+def test_rejette_prix_aberrant_sans_surface():
+    # « Prix » de 3 480 € (référence prise pour un prix) sans surface : écarté.
+    assert not est_bien_valide({"titre": "Propriété de caractère restaurée",
+                                "type_bien": "propriété", "prix": 3480, "pieces": 8})
+    # Le même bien AVEC une surface reste valide (le prix sera corrigé au chargement).
+    assert est_bien_valide({"titre": "Propriété de caractère restaurée",
+                            "type_bien": "propriété", "prix": 3480, "surface_m2": 220})
+
+
 def test_accepte_vrais_biens_refuge():
     assert est_bien_valide(
         {"titre": "Longère avec cave et puits — Bellême", "type_bien": "longère",
