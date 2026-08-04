@@ -4,6 +4,23 @@ Ce document part de **ce qui limite le produit aujourd'hui**, mesuré sur les
 données réelles, et non d'une liste d'envies. Chaque chantier indique pourquoi
 il compte pour l'utilisateur, et comment on saura qu'il est réussi.
 
+## Déjà livré
+
+| Chantier | État |
+|---|---|
+| Extraction du DPE (classe CSS, attribut, texte alternatif, texte) | ✅ |
+| Altitude : deux services et réessai | ✅ |
+| Mémoire des annonces : première vue, dernière vue, baisse de prix | ✅ |
+| Pastille « Nouveau », écart de prix, tri « Nouveautés d'abord » | ✅ |
+| Retrait des annonces enlevées par l'agence (avec absence tolérée) | ✅ |
+| Écart au prix médian du secteur + tri « Meilleur prix / secteur » | ✅ |
+| Mise en relation réellement transmise (`POST /api/contact`) | ✅ |
+| Surfaces décimales (« 132,96 m² » était lu 96 m²) | ✅ |
+
+Restent ouverts : la collecte incrémentale, le dédoublonnage inter-agences,
+le risque à la parcelle, les données DVF, le comparateur, et les sites rendus
+en JavaScript.
+
 ## Où en est le produit
 
 Mesuré sur la dernière collecte (4 août 2026) :

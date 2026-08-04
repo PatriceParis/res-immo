@@ -13,3 +13,6 @@ data/refuge.db-shm
 # Cache du collecteur
 scraper/.scrapy/
 scraper/httpcache/
+
+# Demandes de mise en relation : contiennent une donnée personnelle
+data/demandes_contact.jsonl
