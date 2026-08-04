@@ -1,16 +1,5 @@
 [
  {
-  "nom": "Century 21",
-  "site": "https://century21-infinity-lacroix-saint-ouen.com",
-  "zone": "Compiègne",
-  "joignable": true,
-  "sitemap": true,
-  "schema_org": true,
-  "nb_biens": 77,
-  "motif": "",
-  "note": 100
- },
- {
   "nom": "Dorimmo",
   "site": "https://dorimmo.com",
   "zone": "Beauvais",
@@ -20,17 +9,6 @@
   "nb_biens": 226,
   "motif": "",
   "note": 100
- },
- {
-  "nom": "Century 21",
-  "site": "https://century21-vandome-crepy.com",
-  "zone": "Compiègne",
-  "joignable": true,
-  "sitemap": true,
-  "schema_org": true,
-  "nb_biens": 55,
-  "motif": "",
-  "note": 95
  },
  {
   "nom": "Eco Immo 60",
@@ -46,7 +24,7 @@
  {
   "nom": "Orpi",
   "site": "https://quentimmo.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -55,42 +33,42 @@
   "note": 80
  },
  {
-  "nom": "Orpi",
-  "site": "https://orpi.com",
-  "zone": "Compiègne",
+  "nom": "Maisons France Confort",
+  "site": "https://maisons-france-confort.fr",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
-  "nb_biens": 69519,
+  "nb_biens": 212,
   "motif": "",
   "note": 80
  },
  {
-  "nom": "Laforêt",
-  "site": "https://laforet.com",
-  "zone": "Compiègne",
+  "nom": "ACBI",
+  "site": "https://agencecbi.com",
+  "zone": "Vendôme",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
-  "nb_biens": 42464,
+  "nb_biens": 789,
   "motif": "",
   "note": 80
  },
  {
-  "nom": "Era",
-  "site": "https://eraimmobilier.com",
-  "zone": "Soissons",
+  "nom": "Cap Immobilier",
+  "site": "https://capimmobilier89.fr",
+  "zone": "Sens",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
-  "nb_biens": 124376,
+  "nb_biens": 56,
   "motif": "",
-  "note": 80
+  "note": 76
  },
  {
   "nom": "ArthurImmo.com Agence Saint-Hubert",
   "site": "https://compiegne.arthurimmo.com",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -110,15 +88,15 @@
   "note": 41
  },
  {
-  "nom": "Sergic Gestion Et Location",
-  "site": "https://sergic.com",
-  "zone": "Compiègne",
+  "nom": "Square Habitat",
+  "site": "https://squarehabitat.fr",
+  "zone": "Sens",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
-  "nb_biens": 18,
+  "nb_biens": 8,
   "motif": "",
-  "note": 38
+  "note": 28
  },
  {
   "nom": "Agence Olleon",
@@ -134,7 +112,7 @@
  {
   "nom": "Ibay",
   "site": "https://immobay.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -145,7 +123,7 @@
  {
   "nom": "Margny Immo",
   "site": "https://margny-immo.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -165,17 +143,6 @@
   "note": 22
  },
  {
-  "nom": "Era Immobillier",
-  "site": "https://era-immobilier-crepy-en-valois.fr",
-  "zone": "Compiègne",
-  "joignable": true,
-  "sitemap": true,
-  "schema_org": false,
-  "nb_biens": 1,
-  "motif": "",
-  "note": 21
- },
- {
   "nom": "Cimm Immobilier",
   "site": "https://gisors.cimm.com",
   "zone": "Beauvais",
@@ -189,7 +156,7 @@
  {
   "nom": "4 pour cent Immobilier",
   "site": "https://4pourcentimmobilier.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -201,6 +168,17 @@
   "nom": "Burner Immo",
   "site": "https://burnerimmo.fr",
   "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Elite Immobilier",
+  "site": "https://elite-immobilier-compiegne.com",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -242,9 +220,75 @@
   "note": 20
  },
  {
-  "nom": "Guy Hoquet",
-  "site": "https://soissons.guy-hoquet.com",
-  "zone": "Soissons",
+  "nom": "Activ'expertise",
+  "site": "https://activexpertise-centre.fr",
+  "zone": "Vendôme",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Cabinet Fontaine",
+  "site": "https://cabinetfontaine.fr",
+  "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Activ'expertise",
+  "site": "https://activexpertise-nord-touraine.fr",
+  "zone": "Vendôme",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "L'immobilier à La Loupe",
+  "site": "https://limmobilier-a-laloupe.fr",
+  "zone": "Nogent-le-Rotrou",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 9,
+  "motif": "",
+  "note": 9
+ },
+ {
+  "nom": "C-L'IMMO",
+  "site": "https://c-limmo.fr",
+  "zone": "Sens",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 9,
+  "motif": "",
+  "note": 9
+ },
+ {
+  "nom": "Ordim Immobilier",
+  "site": "https://ordim-immo.com",
+  "zone": "Sens",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 4,
+  "motif": "",
+  "note": 4
+ },
+ {
+  "nom": "ISA Immo",
+  "site": "https://isa-immo.com",
+  "zone": "Beauvais",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
@@ -264,53 +308,9 @@
   "note": 1
  },
  {
-  "nom": "Ldp",
-  "site": "https://leslogisdepicardie.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectionError",
-  "note": 0
- },
- {
-  "nom": "Bien Chez Nous Immobilier",
-  "site": "https://biencheznousimmobilier.fr",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectionError",
-  "note": 0
- },
- {
-  "nom": "Stéphane Plaza Immobilier",
-  "site": "https://lacroixsaintouen.stephaneplazaimmobilier.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "HTTP 403",
-  "note": 0
- },
- {
-  "nom": "Agence du Matz",
-  "site": "https://agence-du-matz.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "SSLError",
-  "note": 0
- },
- {
-  "nom": "JMM",
-  "site": "https://mjm-habitat.com",
-  "zone": "Compiègne",
+  "nom": "Remax Immco",
+  "site": "https://remaximmco.fr",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
@@ -321,7 +321,7 @@
  {
   "nom": "est8",
   "site": "https://est8.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
@@ -332,7 +332,7 @@
  {
   "nom": "Nexity",
   "site": "https://nexity.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
@@ -341,20 +341,31 @@
   "note": 0
  },
  {
-  "nom": "Remax Immco",
-  "site": "https://remaximmco.fr",
-  "zone": "Compiègne",
+  "nom": "Renov Eco Habitat",
+  "site": "https://renov-eco-habitat.fr",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
   "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Agence du Matz",
+  "site": "https://agence-du-matz.com",
+  "zone": "Noyon",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "SSLError",
   "note": 0
  },
  {
   "nom": "Activ'expertise",
   "site": "https://activexpertise-compiegne.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
@@ -363,58 +374,14 @@
   "note": 0
  },
  {
-  "nom": "Cobat les Maisons",
-  "site": "https://cobatlesmaisons.fr",
-  "zone": "Compiègne",
-  "joignable": true,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "aucune page de bien repérée",
-  "note": 0
- },
- {
   "nom": "CG Immobilier",
   "site": "https://rdvenligne.dylentab.fr",
-  "zone": "Compiègne",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
   "motif": "aucune page de bien repérée",
-  "note": 0
- },
- {
-  "nom": "Pierrefonds Immobilier",
-  "site": "https://pierrefondsimmobilier.fr",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectionError",
-  "note": 0
- },
- {
-  "nom": "Century 21",
-  "site": "https://century21-collin-estrees.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "HTTP 410",
-  "note": 0
- },
- {
-  "nom": "Century 21",
-  "site": "https://century21-collin-st-just-en-chaussee.com",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "HTTP 410",
   "note": 0
  },
  {
@@ -426,6 +393,17 @@
   "schema_org": false,
   "nb_biens": 0,
   "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Century 21",
+  "site": "https://century21-collin-st-just-en-chaussee.com",
+  "zone": "Beauvais",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "HTTP 410",
   "note": 0
  },
  {
@@ -462,25 +440,14 @@
   "note": 0
  },
  {
-  "nom": "L'Immobilière Conseils",
-  "site": "https://immobiliere-noyon.com",
-  "zone": "Compiègne",
+  "nom": "Cobat les Maisons",
+  "site": "https://cobatlesmaisons.fr",
+  "zone": "Noyon",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
   "motif": "aucune page de bien repérée",
-  "note": 0
- },
- {
-  "nom": "Mapeo Immobilier",
-  "site": "https://mapeo-immo.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
   "note": 0
  },
  {
@@ -506,25 +473,14 @@
   "note": 0
  },
  {
-  "nom": "Maisons France Confort",
-  "site": "https://maisons-france-confort.fr",
-  "zone": "Compiègne",
-  "joignable": false,
+  "nom": "L'Immobilière Conseils",
+  "site": "https://immobiliere-noyon.com",
+  "zone": "Noyon",
+  "joignable": true,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Cabinet Saint-Denis",
-  "site": "https://cabinetstdenis.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
+  "motif": "aucune page de bien repérée",
   "note": 0
  },
  {
@@ -539,17 +495,6 @@
   "note": 0
  },
  {
-  "nom": "Crèvecoeur Immobilier",
-  "site": "https://crevecoeurimmobilier.fr",
-  "zone": "Beauvais",
-  "joignable": true,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "aucune page de bien repérée",
-  "note": 0
- },
- {
   "nom": "Maison Mota",
   "site": "https://maisonsmota.fr",
   "zone": "Beauvais",
@@ -561,14 +506,69 @@
   "note": 0
  },
  {
-  "nom": "Arturimmo",
-  "site": "https://soissons-arthurimmo.com",
-  "zone": "Soissons",
+  "nom": "Crèvecoeur Immobilier",
+  "site": "https://crevecoeurimmobilier.fr",
+  "zone": "Beauvais",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 0
+ },
+ {
+  "nom": "Mapeo Immobilier",
+  "site": "https://mapeo-immo.com",
+  "zone": "Noyon",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectionError",
+  "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Cabinet Saint-Denis",
+  "site": "https://cabinetstdenis.com",
+  "zone": "Noyon",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Antony Oioli Patrimoine Immo",
+  "site": "https://patrimoine-immo.net",
+  "zone": "Sens",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "SSLError",
+  "note": 0
+ },
+ {
+  "nom": "Agence Maisons Pierre Sens",
+  "site": "https://maisons-pierre.com",
+  "zone": "Sens",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "SSLError",
+  "note": 0
+ },
+ {
+  "nom": "Guyon Immobilier",
+  "site": "https://guyon-immobilier.com",
+  "zone": "Nogent-le-Rotrou",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "SSLError",
   "note": 0
  },
  {
@@ -583,47 +583,36 @@
   "note": 0
  },
  {
-  "nom": "Maisons Gide",
-  "site": "https://maisons-gide.fr",
-  "zone": "Soissons",
-  "joignable": false,
+  "nom": "Imelle",
+  "site": "https://imelle-immo.com",
+  "zone": "Nogent-le-Rotrou",
+  "joignable": true,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectionError",
+  "motif": "aucune page de bien repérée",
   "note": 0
  },
  {
-  "nom": "Renov Eco Habitat",
-  "site": "https://renov-eco-habitat.fr",
-  "zone": "Noyon",
+  "nom": "Agence Mellinger Immobilier",
+  "site": "https://mellinger-immobilier.com",
+  "zone": "Vendôme",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectionError",
+  "motif": "HTTP 501",
   "note": 0
  },
  {
-  "nom": "L'immobilière de Compiègne",
-  "site": "https://immobiliere-de-compiegne.fr",
-  "zone": "Noyon",
+  "nom": "Aci Immobillier",
+  "site": "https://aci-immo.com",
+  "zone": "Beauvais",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectionError",
-  "note": 0
- },
- {
-  "nom": "Artémis Expertise Immobilier",
-  "site": "https://artemisexpertise.com",
-  "zone": "Noyon",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "HTTP 403",
+  "motif": "ReadTimeout",
   "note": 0
  },
  {
@@ -638,102 +627,25 @@
   "note": 0
  },
  {
-  "nom": "Immobilier Soissons Marie-Hélène Pitois",
-  "site": "https://proprietes-privees.com",
-  "zone": "Soissons",
+  "nom": "Authon Immobilier",
+  "site": "https://authonimmobilier.com",
+  "zone": "Nogent-le-Rotrou",
   "joignable": false,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Clésence",
-  "site": "https://clesence.fr",
-  "zone": "Soissons",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Elite Immobilier",
-  "site": "https://elite-immobilier-compiegne.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Foncia",
-  "site": "https://foncia.com",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Catenne Immobilier",
-  "site": "https://tlg-catenne.fr",
-  "zone": "Compiègne",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Aci Immobillier",
-  "site": "https://aci-immo.com",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "Cabinet Fontaine",
-  "site": "https://cabinetfontaine.fr",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
+  "motif": "ReadTimeout",
   "note": 0
  },
  {
   "nom": "Agence La Chaumière",
   "site": "https://agencelachaumiere.fr",
   "zone": "Beauvais",
-  "joignable": false,
+  "joignable": true,
   "sitemap": false,
   "schema_org": false,
   "nb_biens": 0,
-  "motif": "ConnectTimeout",
-  "note": 0
- },
- {
-  "nom": "ISA Immo",
-  "site": "https://isa-immo.com",
-  "zone": "Beauvais",
-  "joignable": false,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 0,
-  "motif": "ConnectTimeout",
+  "motif": "aucune page de bien repérée",
   "note": 0
  }
 ]
