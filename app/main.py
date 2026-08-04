@@ -169,7 +169,15 @@ def proxy_photo(u: str):
     except socket.gaierror:
         raise HTTPException(status_code=400, detail="hôte introuvable")
 
-    req = urllib.request.Request(u, headers={"User-Agent": _UA_NAV, "Accept": "image/*,*/*"})
+    # On imite le navigateur chargeant l'image DEPUIS le site de l'agence
+    # (Referer + Origin de son propre domaine) : c'est ce que vérifient la
+    # plupart des protections anti-hotlink des CDN.
+    req = urllib.request.Request(u, headers={
+        "User-Agent": _UA_NAV,
+        "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+        "Accept-Language": "fr-FR,fr;q=0.9",
+        "Referer": f"{p.scheme}://{p.hostname}/",
+    })
     try:
         with urllib.request.urlopen(req, timeout=8) as r:
             ct = (r.headers.get("Content-Type") or "").split(";")[0].strip()

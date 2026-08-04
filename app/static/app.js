@@ -95,15 +95,18 @@ function photoReelle(a) {
   return "";
 }
 
-// Balise <img> de la vraie photo, posée sur l'illustration : referrerpolicy
-// "no-referrer" contourne les blocages anti-hotlink, et onerror bascule sur
-// l'illustration si l'image ne charge pas (jamais d'image cassée).
-function imgPhoto(a) {
+// URL de la vraie photo relayée par NOTRE domaine (/api/photo) : sinon les CDN
+// des agences bloquent le hotlink et rien ne s'affiche. "" si pas de photo.
+function photoProxy(a) {
   const u = photoReelle(a);
-  if (!u) return "";
-  // On passe par notre relais /api/photo (même domaine) : sinon les CDN des
-  // agences bloquent l'image et rien ne s'affiche. onerror → repli illustration.
-  const src = "/api/photo?u=" + encodeURIComponent(u);
+  return u ? "/api/photo?u=" + encodeURIComponent(u) : "";
+}
+
+// Balise <img> de la vraie photo, posée sur l'illustration : onerror bascule
+// sur l'illustration si l'image ne charge pas (jamais d'image cassée).
+function imgPhoto(a) {
+  const src = photoProxy(a);
+  if (!src) return "";
   return `<img class="vraie-photo" src="${src}" alt="" loading="lazy"
     decoding="async" onerror="this.remove()">`;
 }
@@ -386,7 +389,7 @@ function ouvrirFiche(id) {
 
     <div class="mise-en-relation">
       <div class="galerie" aria-hidden="true">
-        <div class="vignette" style="background-image:url('${photoReelle(a) || illustration(a)}')"></div>
+        <div class="vignette" style="background-image:${photoProxy(a) ? `url('${photoProxy(a)}'),` : ""}url('${illustration(a)}')"></div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">＋${Math.max(1, nbPhotos(a) - 4)}</div>
