@@ -6,7 +6,18 @@ name: Collecte d'annonces réelles
 # Deux façons de la lancer :
 #   • à la main : onglet « Actions » → « Collecte d'annonces réelles » →
 #     « Run workflow » (on peut y saisir des sites d'agences précis) ;
-#   • automatiquement : tous les lundis matin (voir cron ci-dessous).
+#   • automatiquement : tous les matins (voir cron ci-dessous).
+#
+# Pourquoi tous les jours et non plus le lundi ? Parce que la collecte
+# s'arrête sur un budget de temps : elle visite une quinzaine d'agences par
+# passage, en commençant par celles vues il y a le plus longtemps. Avec 53
+# agences, un tour complet prenait UN MOIS — un bien vendu pouvait donc rester
+# affiché quatre semaines. Tous les jours, le tour se boucle en quatre jours.
+#
+# Le recensement va porter l'annuaire à plusieurs centaines d'agences : il
+# faudra alors répartir la collecte sur plusieurs jobs parallèles, chacun
+# prenant une tranche de la file, avec une fusion finale — quatre jobs qui
+# committent le même fichier en même temps se perdraient mutuellement.
 
 on:
   workflow_dispatch:
@@ -24,7 +35,7 @@ on:
         required: false
         default: "8"
   schedule:
-    - cron: "0 6 * * 1"   # tous les lundis à 06:00 UTC
+    - cron: "0 6 * * *"   # tous les jours à 06:00 UTC
 
 permissions:
   contents: write
