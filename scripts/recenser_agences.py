@@ -182,15 +182,26 @@ def _communes_par_departement(departements: list[str]) -> dict:
 
 
 def piste_reseaux(departements: list[str]) -> list[dict]:
-    index = reseaux.index_des_communes(_communes_par_departement(departements))
-    print(f"  {len(index)} noms de communes distincts pour le rapprochement\n")
+    # Toutes les communes de France, pour écarter les noms ambigus : sans
+    # cela, /agence-immobiliere/bretigny (Essonne) était rattaché à Brétigny
+    # dans l'Oise, et /immobilier-montlucon-centre-ville-les-forges/ devenait
+    # « Orpi Ville ». Trois résultats, trois faux.
+    communes_fr = _json(f"{GEO_API}/communes?fields=nom", essais=2, timeout=90) or []
+    nationales = reseaux.occurrences_nationales(communes_fr)
+    extensions = reseaux.extensions_nationales(communes_fr)
+    print(f"  {len(nationales)} noms de communes en France pour lever les ambiguïtés"
+          if nationales else
+          "  ⚠ liste nationale indisponible : le rapprochement sera plus prudent")
+    index = reseaux.index_des_communes(
+        _communes_par_departement(departements), nationales)
+    print(f"  {len(index)} noms utilisables comme repère sur nos terroirs\n")
     trouvees = []
     for reseau in reseaux.RESEAUX:
         if reseau.get("mandataires"):
             print(f"  {reseau['nom']} : réseau de mandataires, pas d'agence à brancher")
             continue
         urls = _urls_du_sitemap(reseau["site"])
-        agences = reseaux.agences_du_reseau(reseau, urls, index)
+        agences = reseaux.agences_du_reseau(reseau, urls, index, extensions)
         trouvees += agences
         print(f"  {reseau['nom']} : {len(urls)} URLs au sitemap → "
               f"{len(agences)} agence(s) sur nos terroirs")

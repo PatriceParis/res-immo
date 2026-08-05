@@ -20,6 +20,50 @@ COMMUNES = {"60": ["Noyon", "Compiègne", "Beauvais", "Le Meux"],
 INDEX = reseaux.index_des_communes(COMMUNES)
 
 
+# Les trois faux positifs du premier recensement réel, et rien d'autre.
+COMMUNES_FR = [{"nom": n} for n in (
+    "Brétigny", "Brétigny-sur-Orge", "Ville", "Aube", "Bellême", "Noyon",
+    "Compiègne", "Beauvais", "Vendôme", "Montluçon")]
+NATIONALES = reseaux.occurrences_nationales(COMMUNES_FR)
+EXTENSIONS = reseaux.extensions_nationales(COMMUNES_FR)
+
+
+def test_les_trois_faux_positifs_du_premier_recensement():
+    """Le premier recensement réel a ramené 3 agences de réseau, et les trois
+    étaient fausses :
+
+      /agence-immobiliere/bretigny        → Brétigny-sur-Orge (91), rattachée
+                                            à Brétigny dans l'Oise ;
+      /immobilier-montlucon-centre-ville- → la commune « Ville » (60) lue dans
+       les-forges/                          une adresse de Montluçon (03) ;
+      /square-habitat-champagne-bourgogne/ → la commune « Aube » (61) lue dans
+       nos-agences-immo                     « Champagne » … non, dans « Aube ».
+
+    Trois résultats, trois faux : pire que rien, puisqu'ils auraient pollué
+    le catalogue.
+    """
+    index = reseaux.index_des_communes(
+        {"60": ["Brétigny", "Ville"], "61": ["Aube", "Bellême"]}, NATIONALES)
+    # « Ville » et « Aube » sont trop courants pour servir de repère.
+    assert "ville" not in index and "aube" not in index
+
+    def cherche(nom, site, url):
+        return reseaux.agences_du_reseau({"nom": nom, "site": site}, [url],
+                                         index, EXTENSIONS)
+
+    assert cherche("Laforêt", "https://www.laforet.com",
+                   "https://www.laforet.com/agence-immobiliere/bretigny-sur-orge") == []
+    assert cherche("Orpi", "https://www.orpi.com",
+                   "https://www.orpi.com/immobilier-montlucon-centre-ville-les-forges/") == []
+    assert cherche("Square Habitat", "https://www.squarehabitat.fr",
+                   "https://www.squarehabitat.fr/square-habitat-champagne-bourgogne/nos-agences-immo") == []
+
+    # Et la vraie agence de Brétigny (Oise) reste trouvée.
+    vrai = cherche("Laforêt", "https://www.laforet.com",
+                   "https://www.laforet.com/agence-immobiliere/bretigny")
+    assert vrai and vrai[0]["departement"] == "60"
+
+
 def test_une_agence_de_reseau_est_rattachee_a_sa_commune():
     laforet = {"nom": "Laforêt", "site": "https://www.laforet.com"}
     urls = [

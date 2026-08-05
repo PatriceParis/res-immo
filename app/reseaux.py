@@ -81,8 +81,29 @@ def _segments(url: str) -> str:
     return slug(urlparse(url or "").path)
 
 
-def agences_du_reseau(reseau: dict, urls: list[str],
-                      communes_par_slug: dict) -> list[dict]:
+def extensions_nationales(communes: list) -> dict:
+    """{slug → slugs de communes françaises qui le prolongent}.
+
+    « Brétigny » est une commune de l'Oise, « Brétigny-sur-Orge » une commune
+    de l'Essonne. L'URL /agence-immobiliere/bretigny-sur-orge contient
+    « bretigny » suivi d'un tiret : elle se rattachait donc à l'Oise. Savoir
+    qu'un nom plus long existe permet d'exiger un rattachement MAXIMAL.
+    """
+    tous = []
+    for c in communes or []:
+        nom = c.get("nom") if isinstance(c, dict) else c
+        if nom:
+            tous.append(slug(nom))
+    par_prefixe: dict = {}
+    for s in tous:
+        morceaux = s.split("-")
+        for i in range(1, len(morceaux)):
+            par_prefixe.setdefault("-".join(morceaux[:i]), set()).add(s)
+    return {k: sorted(v) for k, v in par_prefixe.items()}
+
+
+def agences_du_reseau(reseau: dict, urls: list[str], communes_par_slug: dict,
+                      extensions: dict | None = None) -> list[dict]:
     """Pages d'agence du réseau situées dans une commune ciblée.
 
     `communes_par_slug` : {slug de commune → code département}. C'est lui qui
@@ -105,7 +126,14 @@ def agences_du_reseau(reseau: dict, urls: list[str],
         for cs in sorted(communes_par_slug, key=len, reverse=True):
             if len(cs) < 4:
                 continue
-            if re.search(rf"(?:^|-){re.escape(cs)}(?:-|$)", chemin):
+            m = re.search(rf"(?:^|-){re.escape(cs)}(?:-|$)", chemin)
+            if m:
+                # Rattachement MAXIMAL : si une commune française au nom plus
+                # long commence ici, c'est elle que l'URL désigne.
+                depuis = chemin[m.start() + (1 if m.group(0)[0] == "-" else 0):]
+                if any(re.match(rf"{re.escape(plus_long)}(?:-|$)", depuis)
+                       for plus_long in (extensions or {}).get(cs, ())):
+                    continue
                 if url in vues:
                     break
                 vues.add(url)
@@ -120,14 +148,64 @@ def agences_du_reseau(reseau: dict, urls: list[str],
     return trouvees
 
 
-def index_des_communes(par_departement: dict) -> dict:
-    """{slug → (département, nom)} à partir de {département: [noms de communes]}.
+# Un seuil de longueur serait le mauvais outil : « Noyon » fait cinq lettres,
+# « Sens » et « Gien » quatre, et ce sont des villes que l'on vise. Trois
+# lettres restent trop peu pour distinguer quoi que ce soit.
+LONGUEUR_MINIMALE = 4
 
-    Les homonymes entre départements sont écartés : « Sainte-Marie » existe
-    partout, et rattacherait des agences au mauvais terroir.
+# Ce qui départage vraiment, ce n'est pas la longueur mais le fait d'être un
+# mot courant. « Ville » (Oise) et « Aube » (Orne) sont de vraies communes,
+# qu'on lit pourtant dans n'importe quelle adresse : c'est ainsi que
+# /immobilier-montlucon-centre-ville-les-forges/ est devenu « Orpi Ville ».
+# On n'y met QUE des mots dont l'usage courant l'emporte sur la commune —
+# Sens, Tours, Noyon ou Gien n'y ont pas leur place, ce sont nos terroirs.
+TROP_COURANTS = {
+    "ville", "aube", "bourg", "chapelle", "campagne", "village", "centre",
+    "vallee", "coteau", "riviere", "rivieres", "chateau", "abbaye", "foret",
+    "montagne", "la-chapelle", "le-bourg", "plage", "port", "pont", "gare",
+    "marche", "place", "eglise", "moulin", "ferme", "grange", "maison",
+}
+
+
+def index_des_communes(par_departement: dict, nationales: dict | None = None) -> dict:
+    """{slug → (département, nom)} pour les communes utilisables comme repère.
+
+    Trois filtres, chacun né d'un faux positif constaté :
+
+    - **Homonymie nationale.** « Brétigny » existe dans l'Oise et dans
+      l'Essonne : /agence-immobiliere/bretigny désignait Brétigny-sur-Orge,
+      et l'agence se retrouvait rattachée à l'Oise. `nationales` — l'ensemble
+      des communes de France — permet d'écarter tout nom porté par plusieurs
+      communes du pays, pas seulement par plusieurs de NOS départements.
+    - **Noms trop courts**, sous six lettres : trop de collisions fortuites.
+    - **Mots courants** : « Ville », « Aube », « Bourg » sont de vraies
+      communes qu'on lit dans n'importe quelle adresse.
     """
     compte: dict = {}
     for dept, noms in (par_departement or {}).items():
         for nom in noms:
             compte.setdefault(slug(nom), set()).add((dept, nom))
-    return {s: next(iter(v)) for s, v in compte.items() if len(v) == 1}
+
+    index = {}
+    for s, valeurs in compte.items():
+        if len(valeurs) > 1 or len(s) < LONGUEUR_MINIMALE or s in TROP_COURANTS:
+            continue
+        if nationales and nationales.get(s, 0) > 1:
+            continue          # le nom existe ailleurs en France : trop risqué
+        index[s] = next(iter(valeurs))
+    return index
+
+
+def occurrences_nationales(communes: list) -> dict:
+    """{slug → nombre de communes françaises portant ce nom}.
+
+    Sert à écarter les noms ambigus. Une liste vide n'est pas une erreur :
+    l'index se rabat alors sur les autres filtres, en le disant.
+    """
+    compte: dict = {}
+    for c in communes or []:
+        nom = c.get("nom") if isinstance(c, dict) else c
+        if nom:
+            s = slug(nom)
+            compte[s] = compte.get(s, 0) + 1
+    return compte
