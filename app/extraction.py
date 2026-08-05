@@ -23,6 +23,7 @@ from __future__ import annotations
 import json
 import re
 from collections import Counter
+from urllib.parse import urljoin
 
 # Types schema.org qui désignent un bien immobilier ou une offre de vente.
 TYPES_IMMO = {
@@ -273,28 +274,132 @@ def _adresse(noeud: dict) -> dict:
     return adr if isinstance(adr, dict) else {}
 
 
-def _url_img(u) -> str | None:
-    """Normalise une URL d'image en absolu https (gère le protocol-relative //)."""
+def _url_img(u, base: str | None = None) -> str | None:
+    """Normalise une URL d'image en absolu https.
+
+    Les chemins RELATIFS (« /media/biens/2017-1.jpg ») étaient purement et
+    simplement rejetés : une agence qui les publie ainsi n'avait aucune photo,
+    alors que l'URL était là, à un `urljoin` près.
+    """
     if not isinstance(u, str):
         return None
     u = u.strip()
+    if not u or u.startswith("data:"):
+        return None
     if u.startswith("//"):        # ex. //cdn.agence.fr/photo.jpg
         return "https:" + u
     if u.startswith("http://"):   # force https quand c'est possible
         return "https://" + u[len("http://"):]
     if u.startswith("https://"):
         return u
+    if base:
+        absolue = urljoin(base, u)
+        return absolue if absolue.startswith("https://") else (
+            "https://" + absolue[len("http://"):] if absolue.startswith("http://") else None)
     return None
 
 
-def _image(noeud: dict) -> str | None:
+def _image(noeud: dict, base: str | None = None) -> str | None:
     """Première photo : schema.org `image` (URL, liste, ou ImageObject)."""
     img = noeud.get("image") or noeud.get("photo")
     if isinstance(img, list):
         img = img[0] if img else None
     if isinstance(img, dict):
         img = img.get("url") or img.get("contentUrl")
-    return _url_img(img)
+    return _url_img(img, base)
+
+
+# --- Photo de repli : les images de la page ---------------------------------
+#
+# Un quart des biens n'avait aucune photo, non parce que la page n'en montre
+# pas, mais parce qu'on ne cherchait QUE dans schema.org et OpenGraph. Les
+# sites qui ne publient ni l'un ni l'autre affichaient pourtant leurs clichés
+# dans de simples <img>. On va donc les y chercher.
+
+RE_BALISE_IMG = re.compile(r"<(?:img|source)\b[^>]*>", re.IGNORECASE)
+RE_ATTRIBUT = re.compile(r"""([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
+RE_FOND_CSS = re.compile(r"background-image\s*:\s*url\(\s*['\"]?([^'\")]+)", re.IGNORECASE)
+
+# Attributs où dort l'URL réelle. `src` vient en dernier : sur les sites à
+# chargement différé, il ne contient qu'un pixel gris ou un flou de
+# remplacement, la vraie photo étant dans un `data-*`.
+ATTRS_IMAGE = ("data-src", "data-original", "data-lazy-src", "data-lazy",
+               "data-echo", "data-image", "data-large", "data-full", "src")
+
+# Habillage du site, jamais le bien : logos, pictogrammes, drapeaux de langue,
+# pixels de mesure d'audience, images d'attente.
+RE_IMG_HABILLAGE = re.compile(
+    r"logo|sprite|favicon|picto|icone?s?/|/icons?/|flag|drapeau|avatar|placeholder"
+    r"|blank|spacer|transparent|loader|loading|chargement|pixel|tracking|banniere"
+    r"|banner|signature|cachet|qr[-_]?code|\.svg(?:$|\?)", re.IGNORECASE)
+
+# Ce qui, au contraire, sent la photo de bien.
+RE_IMG_BIEN = re.compile(
+    r"/(?:photos?|images?|medias?|uploads?|biens?|annonces?|propert|listing|vente"
+    r"|galerie|gallery|thumb|vignette)", re.IGNORECASE)
+
+
+def _urls_srcset(valeur: str) -> list[str]:
+    """URLs d'un srcset, de la plus large à la plus étroite."""
+    entrees = []
+    for morceau in (valeur or "").split(","):
+        bouts = morceau.strip().split()
+        if not bouts:
+            continue
+        largeur = 0
+        if len(bouts) > 1 and bouts[1].endswith(("w", "x")):
+            try:
+                largeur = float(bouts[1][:-1])
+            except ValueError:
+                largeur = 0
+        entrees.append((largeur, bouts[0]))
+    return [u for _, u in sorted(entrees, key=lambda e: -e[0])]
+
+
+def _image_de_la_page(html: str, base: str | None) -> str | None:
+    """Photo la plus plausible parmi les images de la page.
+
+    On écarte l'habillage du site (logos, pictogrammes, pixels de mesure) et
+    les vignettes minuscules, puis on préfère une URL qui ressemble à un média
+    de bien — à défaut, la première image crédible rencontrée.
+    """
+    candidates, secours = [], []
+    for balise in RE_BALISE_IMG.finditer(html or ""):
+        attrs = {}
+        for m in RE_ATTRIBUT.finditer(balise.group(0)):
+            attrs[m.group(1).lower()] = m.group(2) if m.group(2) is not None else m.group(3)
+
+        # Une vignette déclarée minuscule n'est pas la photo du bien.
+        petite = False
+        for cle in ("width", "height"):
+            try:
+                if 0 < int(re.sub(r"\D", "", attrs.get(cle, "") or "0") or 0) <= 100:
+                    petite = True
+            except ValueError:
+                pass
+        if petite:
+            continue
+
+        brutes = []
+        for cle in ("srcset", "data-srcset"):
+            if attrs.get(cle):
+                brutes += _urls_srcset(attrs[cle])
+        brutes += [attrs[c] for c in ATTRS_IMAGE if attrs.get(c)]
+
+        for brute in brutes:
+            url = _url_img(brute, base)
+            if not url or RE_IMG_HABILLAGE.search(url):
+                continue
+            (candidates if RE_IMG_BIEN.search(url) else secours).append(url)
+            break
+
+    if not candidates and not secours:
+        # Dernier recours : les diaporamas posent souvent la photo en fond CSS.
+        for m in RE_FOND_CSS.finditer(html or ""):
+            url = _url_img(m.group(1), base)
+            if url and not RE_IMG_HABILLAGE.search(url):
+                return url
+    return candidates[0] if candidates else (secours[0] if secours else None)
 
 
 def _geo(noeud: dict):
@@ -326,7 +431,7 @@ def _metas(html: str) -> dict:
     return metas
 
 
-def _depuis_jsonld(noeud: dict) -> dict:
+def _depuis_jsonld(noeud: dict, base: str | None = None) -> dict:
     offre = _offre(noeud)
     props = _proprietes(noeud)
     adresse = _adresse(noeud)
@@ -358,7 +463,7 @@ def _depuis_jsonld(noeud: dict) -> dict:
         "lat": lat,
         "lon": lon,
         "dpe": dpe,
-        "photo": _image(noeud),
+        "photo": _image(noeud, base),
         "type_bien": _type_bien(titre, _types(noeud)),
     }
 
@@ -381,14 +486,24 @@ def extraire_annonce(html: str, url: str, source: str,
     candidats = [n for n in _blocs_jsonld(html) if _types(n) & TYPES_IMMO]
     candidats.sort(key=lambda n: (n.get("offers") is None and n.get("price") is None))
     if candidats:
-        annonce = {k: v for k, v in _depuis_jsonld(candidats[0]).items() if v not in (None, "")}
+        annonce = {k: v for k, v in _depuis_jsonld(candidats[0], url).items() if v not in (None, "")}
 
     # 2. compléments OpenGraph / meta
     metas = _metas(html)
     annonce.setdefault("titre", metas.get("og:title") or "")
     annonce.setdefault("description", metas.get("og:description") or "")
-    if not annonce.get("photo") and metas.get("og:image"):
-        annonce["photo"] = _url_img(metas["og:image"])
+    if not annonce.get("photo"):
+        for cle in ("og:image", "og:image:secure_url", "twitter:image",
+                    "twitter:image:src"):
+            if metas.get(cle):
+                annonce["photo"] = _url_img(metas[cle], url)
+                if annonce["photo"]:
+                    break
+    if not annonce.get("photo"):
+        # Ni schema.org, ni OpenGraph : la photo est pourtant bien là, dans les
+        # <img> de la page. Un quart des biens s'affichait sans image faute de
+        # l'y chercher.
+        annonce["photo"] = _image_de_la_page(html, url)
     if "prix" not in annonce:
         prix_meta = metas.get("product:price:amount") or metas.get("og:price:amount")
         if prix_meta:
