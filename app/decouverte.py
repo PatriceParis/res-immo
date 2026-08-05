@@ -108,6 +108,27 @@ def requete_overpass(zone: dict) -> str:
     )
 
 
+def requete_overpass_departement(code: str) -> str:
+    """Toutes les agences d'un DÉPARTEMENT, pas seulement autour d'une ville.
+
+    Les 19 zones en cercle laissaient de côté tout ce qui n'était pas à moins
+    de 25 ou 30 km d'un chef-lieu choisi à la main — c'est-à-dire l'essentiel
+    de la campagne, précisément là où se trouvent les biens qu'on cherche. On
+    interroge donc la limite administrative du département (admin_level 6 en
+    France, portant le code INSEE).
+    """
+    return (
+        "[out:json][timeout:180];"
+        f'area["boundary"="administrative"]["admin_level"="6"]'
+        f'["ref:INSEE"="{code}"]->.d;'
+        '(node["office"="estate_agent"](area.d);'
+        'way["office"="estate_agent"](area.d);'
+        'node["shop"="estate_agent"](area.d);'
+        'way["shop"="estate_agent"](area.d);'
+        ");out center tags;"
+    )
+
+
 def domaine(url: str) -> str:
     """Domaine nu, sans www ni sous-chemin ('https://www.a.fr/x' → 'a.fr')."""
     if not url:
@@ -150,6 +171,38 @@ def agences_depuis_overpass(reponse: dict, zone_nom: str) -> list[dict]:
         vues.add(d)
         agences.append({"nom": nom, "site": f"https://{d}", "zone": zone_nom})
     return agences
+
+
+def agences_sans_site(reponse: dict, zone_nom: str) -> list[dict]:
+    """Agences repérées par OpenStreetMap mais SANS site web déclaré.
+
+    Elles étaient purement écartées. C'est pourtant la majorité des points :
+    une agence de village a rarement pris la peine de renseigner son site dans
+    OSM, ce qui ne veut pas dire qu'elle n'en a pas. On les conserve donc —
+    avec leur commune et leur téléphone quand ils sont là — comme pistes à
+    résoudre, et pour savoir ce qu'on ne couvre pas.
+    """
+    trouvees, vues = [], set()
+    for element in (reponse or {}).get("elements", []):
+        tags = element.get("tags") or {}
+        nom = (tags.get("name") or "").strip()
+        site = (tags.get("website") or tags.get("contact:website")
+                or tags.get("url") or "").strip()
+        if not nom or site:
+            continue
+        commune = (tags.get("addr:city") or "").strip()
+        cle = (nom.lower(), commune.lower())
+        if cle in vues:
+            continue
+        vues.add(cle)
+        trouvees.append({
+            "nom": nom,
+            "commune": commune,
+            "code_postal": (tags.get("addr:postcode") or "").strip(),
+            "telephone": (tags.get("phone") or tags.get("contact:phone") or "").strip(),
+            "zone": zone_nom,
+        })
+    return trouvees
 
 
 def urls_de_biens(urls: list[str], hote: str) -> list[str]:
