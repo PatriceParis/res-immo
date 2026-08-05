@@ -75,8 +75,21 @@ def _slug(nom: str) -> str:
 JOURNAL_VISITES = RACINE / "data" / "agences_visitees.json"
 
 
+def _cle_agence(site: str) -> str:
+    """Identifie une agence par son DOMAINE, jamais par son nom.
+
+    « Century 21 » désigne cinq agences distinctes dans la configuration —
+    Chalon, Compiègne, Amboise… Indexer la rotation sur le nom revenait à
+    marquer les cinq comme visitées dès qu'on passait chez l'une : les quatre
+    autres partaient en fin de file et n'étaient jamais atteintes. Le domaine,
+    lui, est unique.
+    """
+    hote = urlparse(site or "").netloc.lower()
+    return hote[4:] if hote.startswith("www.") else hote
+
+
 def _derniere_visite() -> dict:
-    """Date de dernier PASSAGE par agence — qu'il ait rapporté ou non.
+    """Date de dernier PASSAGE par domaine d'agence — qu'il ait rapporté ou non.
 
     Se fonder sur `revue_le` (présent seulement quand l'agence a livré des
     biens) affamerait la rotation : une agence dont le site est cassé ne
@@ -84,34 +97,34 @@ def _derniere_visite() -> dict:
     budget des autres à chaque collecte. On enregistre donc le passage.
 
     L'export sert de repli pour les agences visitées avant l'existence de ce
-    journal.
+    journal ; il porte l'URL de l'agence, donc la même clé.
     """
     vu: dict = {}
     try:
         for bien in json.loads(
                 (RACINE / "data" / "annonces_reel.json").read_text(encoding="utf-8")):
-            agence, date = bien.get("agence"), bien.get("revue_le") or ""
-            if agence and date > vu.get(agence, ""):
-                vu[agence] = date
+            cle, date = _cle_agence(bien.get("agence_url")), bien.get("revue_le") or ""
+            if cle and date > vu.get(cle, ""):
+                vu[cle] = date
     except (OSError, ValueError):
         pass
     try:
-        for agence, date in json.loads(
+        for cle, date in json.loads(
                 JOURNAL_VISITES.read_text(encoding="utf-8")).items():
-            if date > vu.get(agence, ""):
-                vu[agence] = date
+            if date > vu.get(cle, ""):
+                vu[cle] = date
     except (OSError, ValueError):
         pass
     return vu
 
 
-def _noter_visite(agence: str, jour: str) -> None:
+def _noter_visite(site: str, jour: str) -> None:
     """Consigne le passage chez une agence, même s'il n'a rien rapporté."""
     try:
         journal = json.loads(JOURNAL_VISITES.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         journal = {}
-    journal[agence] = jour
+    journal[_cle_agence(site)] = jour
     try:
         JOURNAL_VISITES.parent.mkdir(parents=True, exist_ok=True)
         JOURNAL_VISITES.write_text(
@@ -144,7 +157,8 @@ def _cibles(site: str, nom: str, index: str) -> list[dict]:
     # On commence donc par celles qu'on a vues il y a le plus longtemps, les
     # jamais visitées en tête. Chaque agence revient à son tour.
     vu = _derniere_visite()
-    agences.sort(key=lambda a: (vu.get(a.get("nom"), ""), a.get("nom") or ""))
+    agences.sort(key=lambda a: (vu.get(_cle_agence(a.get("site")), ""),
+                                a.get("nom") or ""))
     return agences
 
 
@@ -406,7 +420,7 @@ def main() -> None:
             conn.commit()
             print(f"  ✔ {n} bien(s) enregistré(s)"
                   f" — {vendus} déjà vendu(s), {ecartes} hors cible")
-            _noter_visite(cible["nom"], date.today().isoformat())
+            _noter_visite(cible["site"], date.today().isoformat())
             total += n
 
         navigateur.close()
