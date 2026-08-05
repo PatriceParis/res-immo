@@ -253,6 +253,33 @@ def verifier_doublons(biens: list[dict], audit: Audit) -> None:
                 + ", ".join(sorted({str(b.get('agence')) for b in lot})))
 
 
+def verifier_photos(biens: list[dict], audit: Audit) -> None:
+    """Une annonce sans photo ne donne envie de rien.
+
+    Un quart des biens s'affichait avec une illustration générée alors que la
+    page de l'agence montrait bien des clichés : la photo n'était cherchée que
+    dans schema.org et OpenGraph. Le signalement se fait par agence — quand
+    TOUS les biens d'une agence sont sans photo, c'est son site qu'on lit mal,
+    pas ses annonces qui en manquent.
+    """
+    par_agence: dict = defaultdict(lambda: [0, 0])
+    for b in biens:
+        etat = par_agence[b.get("agence") or b.get("source") or "?"]
+        etat[0] += 1
+        if (b.get("photo") or "").startswith("http"):
+            etat[1] += 1
+    for agence, (total, avec) in sorted(par_agence.items(), key=lambda kv: kv[1][1] - kv[1][0]):
+        if total >= 3 and avec == 0:
+            audit.signaler("aucune photo pour toute une agence",
+                           f"{agence} — {total} bien(s), pas une seule photo")
+    total = len(biens)
+    avec = sum(1 for b in biens if (b.get("photo") or "").startswith("http"))
+    if total and avec / total < 0.75:
+        audit.signaler("couverture photo insuffisante",
+                       f"{avec} bien(s) illustré(s) sur {total} "
+                       f"({round(100 * avec / total)} %)")
+
+
 def verifier_liens(biens: list[dict], audit: Audit) -> None:
     """Sans lien vers l'annonce d'origine, la mise en relation est morte."""
     for b in biens:
@@ -378,6 +405,7 @@ REGLES = (
     verifier_biens_vendus,
     verifier_doublons,
     verifier_liens,
+    verifier_photos,
     verifier_filtres_actifs,
     verifier_fraicheur,
     verifier_commune_conforme_au_titre,
