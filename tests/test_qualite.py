@@ -140,6 +140,42 @@ def test_rejette_vitrines_de_constructeur_et_pages_d_agence():
          "surface_m2": 100, "prix": 128000, "pieces": 5})
 
 
+def test_rejette_les_offres_de_construction():
+    """Cas réel : « Bourgogne Bâtir », classée agence par OpenStreetMap, a
+    livré 7 offres de construction — « Maison + Terrain à Oslon », 55 000 € —
+    toutes géolocalisées au siège du constructeur. Le site annonçait donc
+    7 biens à Chalon-sur-Saône où il n'y en avait aucun.
+
+    Ce prix est celui d'un chantier, et le bien n'existe pas encore : c'est
+    l'exact contraire d'un refuge prêt à habiter."""
+    for titre in ("Maison 3 chambres + Terrain à Saint Etienne en Bresse !",
+                  "Maison + Terrain à OSLON ! - Bourgogne Bâtir",
+                  "Votre Maison Connectée avec DELTA DORE",
+                  "Terrain à bâtir viabilisé"):
+        assert not est_bien_valide(
+            {"titre": titre, "type_bien": "maison", "surface_m2": 90,
+             "prix": 55000}), titre
+
+    # Une maison existante vendue AVEC son terrain reste un bien valide :
+    # c'est la formule « maison + terrain » du constructeur qu'on écarte,
+    # pas le fait d'avoir du terrain.
+    assert est_bien_valide(
+        {"titre": "Longère rénovée avec 5000 m² de terrain arboré",
+         "type_bien": "longère", "surface_m2": 150, "prix": 245000})
+
+
+def test_le_constructeur_est_ecarte_des_la_decouverte():
+    """Mieux vaut ne jamais le brancher que filtrer ses annonces ensuite."""
+    from app.decouverte import est_constructeur
+
+    assert est_constructeur("Bourgogne Bâtir")
+    assert est_constructeur("Bourgogne Batir")          # sans accent
+    assert est_constructeur("Constructions Dupont")
+    # Une agence ordinaire n'est pas écartée.
+    assert not est_constructeur("Terres du Perche")
+    assert not est_constructeur("Century 21 Agence Massot")
+
+
 def test_abreviations_appartement_ecartees():
     """Cas réel : « A VENDRE APPT T2 » passait à travers « appartements? »."""
     assert not est_bien_valide({"titre": "A VENDRE APPT T2 A LA FERTÉ SOUS JOUARRE",

@@ -24,8 +24,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sqlite3
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -308,6 +310,41 @@ def verifier_fraicheur(biens: list[dict], audit: Audit) -> None:
             f"{len(perimes)} bien(s) — {detail}")
 
 
+RE_VILLE_DU_TITRE = re.compile(
+    r"\b(?:à|a|de)\s+([A-ZÉÈÀÂÔÎÛ][\w'\-]+(?:[ -][A-ZÉÈÀÂÔÎÛ][\w'\-]+){0,3})")
+
+
+def _sans_accents(s: str) -> str:
+    s = unicodedata.normalize("NFD", s or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z]+", " ", s.lower()).strip()
+
+
+def verifier_commune_conforme_au_titre(biens: list[dict], audit: Audit) -> None:
+    """La commune enregistrée ne doit pas contredire celle du titre.
+
+    Quand la page ne donne pas d'adresse, le code postal du pied de page —
+    celui de l'agence — est pris pour celui du bien. Cas réel : sept offres
+    « Maison + Terrain à Oslon / Seurre / Chenôves » toutes enregistrées à
+    Chalon-sur-Saône, siège du constructeur. Le site annonçait alors sept
+    biens dans une commune où il n'y en avait aucun.
+
+    Des communes voisines ou fusionnées se ressemblent peu (Montval-sur-Loir
+    et Dissay-sous-Courcillon sont la même commune depuis 2016) : ce contrôle
+    signale, il ne corrige pas.
+    """
+    for b in biens:
+        m = RE_VILLE_DU_TITRE.search(b.get("titre") or "")
+        commune = b.get("commune")
+        if not m or not commune:
+            continue
+        du_titre, enregistree = _sans_accents(m.group(1)), _sans_accents(commune)
+        if not du_titre or du_titre in enregistree or enregistree in du_titre:
+            continue
+        audit.signaler(
+            "commune enregistrée en désaccord avec le titre",
+            f"enregistré « {commune} », titre « {m.group(1)} »  {_etiquette(b)}")
+
+
 REGLES = (
     verifier_prix_au_m2,
     verifier_surfaces,
@@ -320,6 +357,7 @@ REGLES = (
     verifier_liens,
     verifier_filtres_actifs,
     verifier_fraicheur,
+    verifier_commune_conforme_au_titre,
 )
 
 

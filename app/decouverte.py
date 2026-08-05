@@ -193,7 +193,13 @@ def score_candidat(sonde: dict) -> int:
 # ni terrain nourricier — l'inverse d'un refuge.
 CONSTRUCTEURS = re.compile(
     r"maisons? (france confort|pierre|d'en france|balency|axcess|phenix|club)"
-    r"|constructeur|maisons? neuves?|villas? club|trecobat|geoxia",
+    r"|constructeur|maisons? neuves?|villas? club|trecobat|geoxia"
+    # « Bourgogne Bâtir » a été branchée comme agence — OpenStreetMap la
+    # classe office=estate_agent — et a livré 7 offres de construction
+    # (« Maison + Terrain à Oslon », 55 000 €), toutes géolocalisées au siège
+    # du constructeur. Un nom en « bâtir » ou « construction » suffit à s'en
+    # méfier : on cherche des maisons existantes, pas des chantiers.
+    r"|b[âa]tir\b|constructions?\b|maisons? \+ terrain",
     re.IGNORECASE,
 )
 
