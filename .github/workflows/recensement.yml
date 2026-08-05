@@ -1,0 +1,72 @@
+name: Recensement des agences
+
+# Constitue la liste la plus complète possible des agences immobilières des
+# terroirs ciblés, à partir de trois sources complémentaires :
+#   - OpenStreetMap, balayé par DÉPARTEMENT ;
+#   - les annuaires des réseaux de franchise (Laforêt, Century 21, Orpi…) ;
+#   - le registre officiel des entreprises (code d'activité 68.31Z), qui sert
+#     de référence pour mesurer ce qu'on couvre vraiment.
+#
+# C'est le socle de la mise à jour planifiée des annonces : sans un annuaire
+# d'agences étoffé, la collecte tourne toujours sur les mêmes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Pistes à lancer : osm, reseaux, sirene (séparées par des virgules)"
+        required: false
+        default: "osm,reseaux,sirene"
+      departements:
+        description: "Codes séparés par des virgules (vide = tous les terroirs ciblés)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 4 2 * *"   # le 2 de chaque mois, au lendemain de la découverte
+
+permissions:
+  contents: write
+
+jobs:
+  recensement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Recenser
+        env:
+          SOURCES: ${{ github.event.inputs.sources }}
+          DEPTS: ${{ github.event.inputs.departements }}
+        run: |
+          OPTIONS="--sources ${SOURCES:-osm,reseaux,sirene}"
+          if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
+          python scripts/recenser_agences.py $OPTIONS
+
+      - name: Committer le recensement
+        run: |
+          if [ -n "$(git status --porcelain data/agences_recensees.json data/couverture_agences.json)" ]; then
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/agences_recensees.json data/couverture_agences.json
+            N=$(python -c "import json; print(len(json.load(open('data/agences_recensees.json'))))" 2>/dev/null || echo 0)
+            git commit -m "Recensement : $N agences répertoriées ($(date -u +%F))"
+            for essai in 1 2 3 4 5; do
+              if git push; then echo "Poussé (essai $essai)."; break; fi
+              echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
+              cp data/agences_recensees.json "$RUNNER_TEMP/a.json"
+              cp data/couverture_agences.json "$RUNNER_TEMP/c.json" 2>/dev/null || true
+              git fetch origin main
+              git reset --hard origin/main
+              cp "$RUNNER_TEMP/a.json" data/agences_recensees.json
+              cp "$RUNNER_TEMP/c.json" data/couverture_agences.json 2>/dev/null || true
+              git add data/agences_recensees.json data/couverture_agences.json
+              git commit -m "Recensement : $N agences répertoriées ($(date -u +%F))" || true
+              sleep $((essai * 5))
+            done
+          else
+            echo "Aucun changement."
+          fi
