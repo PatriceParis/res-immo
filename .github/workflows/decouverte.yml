@@ -18,6 +18,10 @@ on:
         description: "true = rapport seul, sans modifier la configuration"
         required: false
         default: "false"
+      zones:
+        description: "Zones à traiter, séparées par des virgules (vide = toutes). Ex. : Chalon,Auxerre,Avallon"
+        required: false
+        default: ""
   schedule:
     - cron: "0 5 1 * *"   # le 1er de chaque mois à 05:00 UTC
 
@@ -41,10 +45,14 @@ jobs:
         env:
           NOTE: ${{ github.event.inputs.note }}
           SIMULER: ${{ github.event.inputs.simuler }}
+          ZONES: ${{ github.event.inputs.zones }}
         run: |
           OPTIONS="--note ${NOTE:-25}"
           if [ "$SIMULER" = "true" ]; then OPTIONS="$OPTIONS --simuler"; fi
-          python scripts/decouvrir_agences_osm.py $OPTIONS
+          # Overpass revient vide pour certaines zones d'une fois sur l'autre :
+          # pouvoir ne relancer QUE celles-là évite de rejouer les 19 zones.
+          if [ -n "$ZONES" ]; then OPTIONS="$OPTIONS --zones \"$ZONES\""; fi
+          eval python scripts/decouvrir_agences_osm.py $OPTIONS
 
       - name: Committer les agences découvertes
         run: |

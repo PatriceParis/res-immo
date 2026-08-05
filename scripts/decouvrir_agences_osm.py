@@ -161,16 +161,33 @@ def main() -> None:
                     help="sondages de sites simultanés (défaut : 12)")
     ap.add_argument("--parallele-osm", type=int, default=2,
                     help="requêtes Overpass simultanées — au-delà de 2, l'API refuse")
+    # Overpass ne répond pas pour les mêmes zones d'une fois sur l'autre :
+    # Chalon-sur-Saône, Auxerre et Avallon sont revenues vides quand les
+    # autres aboutissaient. Relancer les 19 zones pour en rattraper 3 est long
+    # et risque de rejouer le même échec ; on peut donc les cibler.
+    ap.add_argument("--zones", default="",
+                    help="zones à traiter, séparées par des virgules (par "
+                         "défaut : toutes). Ex. : --zones \"Chalon,Auxerre\"")
     args = ap.parse_args()
+
+    zones = ZONES
+    if args.zones:
+        voulues = [z.strip().lower() for z in args.zones.split(",") if z.strip()]
+        zones = [z for z in ZONES if any(v in z["nom"].lower() for v in voulues)]
+        if not zones:
+            print(f"Aucune zone ne correspond à « {args.zones} ».\n"
+                  "Zones connues : " + ", ".join(z["nom"] for z in ZONES))
+            return
+        print("Zones ciblées : " + ", ".join(z["nom"] for z in zones) + "\n")
 
     # Overpass n'accepte que 2 requêtes simultanées par IP : au-delà, il
     # refuse et les zones reviennent vides. Le sondage des sites, lui, vise
     # des hôtes tous différents et peut rester largement parallèle.
-    print(f"1/2 — Recensement OpenStreetMap sur {len(ZONES)} zones "
+    print(f"1/2 — Recensement OpenStreetMap sur {len(zones)} zone(s) "
           f"({args.parallele_osm} en parallèle)")
     candidates: list[dict] = []
     with ThreadPoolExecutor(max_workers=args.parallele_osm) as pool:
-        for futur in as_completed([pool.submit(_zone, z) for z in ZONES]):
+        for futur in as_completed([pool.submit(_zone, z) for z in zones]):
             candidates += futur.result()
 
     # Dédoublonnage inter-zones (une agence peut couvrir deux bassins).
