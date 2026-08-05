@@ -33,6 +33,15 @@ _NON_ANNONCE = re.compile(
     # Vitrine de constructeur : « Maisons France Confort : 7 Modèles et Prix »
     r"|modeles? et prix|nos modeles|faire construire|maisons? neuves?"
     r"|constructeur"
+    # Offre de CONSTRUCTION, pas un bien existant : « Maison 3 chambres +
+    # Terrain à Seurre ! — Bourgogne Bâtir », 46 488 €. Ce prix est celui
+    # d'un chantier, pas d'une maison ; et le bien n'existe pas encore, ce
+    # qui est l'exact contraire d'un refuge prêt à habiter. Sept de ces
+    # offres se sont retrouvées listées, toutes géolocalisées au siège du
+    # constructeur — d'où « 7 biens à Chalon-sur-Saône » qui n'y étaient pas.
+    r"|maisons?[^|]{0,40}\+ *terrain|terrains? a batir|votre (future )?maison"
+    r"|maison (connectee|contemporaine|personnalisee)|projet de construction"
+    r"|\bbatir\b|primo[- ]accedants?"
 )
 
 # Types de biens sans intérêt pour un refuge (repérés dans le titre).
