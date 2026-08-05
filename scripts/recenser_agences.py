@@ -98,13 +98,17 @@ def _json(url: str, **kw) -> dict | None:
 # --- Piste 1 : OpenStreetMap, par département -------------------------------
 
 
+# Overpass met parfois les requêtes en file d'attente sans rien dire. Un
+# essai de 180 s par miroir, deux fois, sur deux miroirs, c'est douze minutes
+# perdues pour UN département — c'est ce qui a immobilisé les deux premiers
+# essais de recensement. Un seul essai par miroir, plus court.
 def _overpass(requete: str) -> dict | None:
     for miroir in OVERPASS:
         url = miroir + "?data=" + urllib.parse.quote(requete)
-        d = _json(url, essais=2, timeout=180)
+        d = _json(url, essais=1, timeout=90)
         if d is not None:
             return d
-        time.sleep(3)
+        time.sleep(2)
     return None
 
 
@@ -196,14 +200,23 @@ def piste_reseaux(departements: list[str]) -> list[dict]:
 # --- Piste 3 : registre officiel des entreprises ----------------------------
 
 
+# Budget de la piste registre : au-delà, on garde ce qu'on a. Mieux vaut un
+# recensement partiel et livré qu'un recensement complet et perdu.
+SECONDES_REGISTRE = 900
+
+
 def piste_sirene(departements: list[str]) -> list[dict]:
     recensees = []
+    echeance = time.monotonic() + SECONDES_REGISTRE
     for dept in departements:
+        if time.monotonic() > echeance:
+            print(f"  temps imparti atteint : départements suivants non traités")
+            break
         page, pages, total = 1, 1, 0
-        while page <= pages and page <= 40:      # garde-fou : 1 000 agences/dept
+        while page <= pages and page <= 40 and time.monotonic() < echeance:
             url = sirene.API + "?" + urllib.parse.urlencode(
                 sirene.parametres(dept, page=page))
-            rep = _json(url, essais=3, timeout=45)
+            rep = _json(url, essais=2, timeout=30)
             if rep is None:
                 break
             pages = sirene.nombre_de_pages(rep)
