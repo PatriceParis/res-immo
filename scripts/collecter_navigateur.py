@@ -134,14 +134,32 @@ def _noter_visite(site: str, jour: str) -> None:
         pass    # un journal indisponible ne doit pas arrêter la collecte
 
 
-def _cibles(site: str, nom: str, index: str) -> list[dict]:
-    if site:
-        return [{"nom": nom or urlparse(site).netloc, "site": site.rstrip("/"),
-                 "index": [index] if index else []}]
+def _configurees() -> list[dict]:
     try:
-        agences = json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
+        return json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
     except (OSError, ValueError):
         print(f"Config illisible : {CONFIG}")
+        return []
+
+
+def _cibles(site: str, nom: str, index: str) -> list[dict]:
+    if site:
+        # Une agence DÉJÀ configurée garde son identité, même désignée par son
+        # URL. Sans cela, `-s https://immo-ray.com` la rebaptisait
+        # « immo-ray.com » : ses biens repartaient sous un autre identifiant et
+        # le catalogue se retrouvait avec 21 doublons — le même bien deux fois,
+        # sous deux noms d'agence.
+        connue = next((a for a in _configurees()
+                       if _cle_agence(a.get("site")) == _cle_agence(site)), None)
+        if connue and not nom:
+            cible = dict(connue)
+            if index:
+                cible["index"] = [index]
+            return [cible]
+        return [{"nom": nom or urlparse(site).netloc, "site": site.rstrip("/"),
+                 "index": [index] if index else []}]
+    agences = _configurees()
+    if not agences:
         return []
 
     # ROTATION. La collecte s'arrête au budget de temps : en parcourant

@@ -129,3 +129,23 @@ def test_un_site_designe_a_la_main_reste_prioritaire(depot):
     _configurer(depot, ["Une autre"])
     cibles = collecteur._cibles("https://choisie.fr", "Choisie", "")
     assert [c["nom"] for c in cibles] == ["Choisie"]
+
+
+def test_une_agence_connue_designee_par_son_url_garde_son_nom(depot):
+    """Cas vécu : `-s https://immo-ray.com` a rebaptisé Cabinet Ray
+    « immo-ray.com ». Ses biens sont repartis sous un autre identifiant et le
+    catalogue s'est retrouvé avec 21 doublons — le même bien deux fois, sous
+    deux noms d'agence."""
+    depot.joinpath("scraper/refuge_scraper/agences_sites.json").write_text(
+        json.dumps({"agences": [
+            {"nom": "Cabinet Ray", "site": "https://immo-ray.com", "max": 8},
+        ]}), encoding="utf-8")
+
+    for demande in ("https://immo-ray.com", "https://www.immo-ray.com/"):
+        cible = collecteur._cibles(demande, "", "")[0]
+        assert cible["nom"] == "Cabinet Ray", demande
+        assert cible["max"] == 8            # ses réglages suivent aussi
+
+    # Un nom donné explicitement reste souverain.
+    assert collecteur._cibles("https://immo-ray.com", "Autre nom", "")[0]["nom"] \
+        == "Autre nom"
