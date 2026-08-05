@@ -56,6 +56,17 @@
  },
  {
   "nom": "Century 21",
+  "site": "https://century21agencemassot-nouveau.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 73,
+  "motif": "",
+  "note": 100
+ },
+ {
+  "nom": "Century 21",
   "site": "https://century21-vandome-crepy.com",
   "zone": "Compiègne",
   "joignable": true,
@@ -220,6 +231,17 @@
   "note": 80
  },
  {
+  "nom": "Bourgogne Batir",
+  "site": "https://bourgognebatir.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 66,
+  "motif": "",
+  "note": 80
+ },
+ {
   "nom": "Cap Immobilier",
   "site": "https://capimmobilier89.fr",
   "zone": "Sens",
@@ -304,6 +326,17 @@
   "sitemap": true,
   "schema_org": true,
   "nb_biens": 11,
+  "motif": "",
+  "note": 51
+ },
+ {
+  "nom": "Echinard",
+  "site": "https://echinard.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 51,
   "motif": "",
   "note": 51
  },
@@ -405,6 +438,17 @@
   "nb_biens": 6,
   "motif": "",
   "note": 26
+ },
+ {
+  "nom": "Europe immobilier",
+  "site": "https://europeimmobilier.fr",
+  "zone": "Avallon",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 4,
+  "motif": "",
+  "note": 24
  },
  {
   "nom": "Ibay",
@@ -520,6 +564,28 @@
   "nom": "Régie d'Immeuble Beaufaron",
   "site": "https://locationautun.fr",
   "zone": "Le Creusot",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 21
+ },
+ {
+  "nom": "Cimm Immobilier",
+  "site": "https://varennes-le-grand.cimm.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 21
+ },
+ {
+  "nom": "Expertimo",
+  "site": "https://expertimo-avallon.com",
+  "zone": "Avallon",
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
@@ -847,6 +913,28 @@
   "note": 20
  },
  {
+  "nom": "Cabinet Cartallier",
+  "site": "https://immodefrance-chalon.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
+  "nom": "Vinel Immobilier",
+  "site": "https://valerievinelimmobilier.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
+  "note": 20
+ },
+ {
   "nom": "Era Immobilier",
   "site": "https://era-tourssud.com",
   "zone": "Amboise",
@@ -1037,6 +1125,17 @@
   "nom": "Béranger immobilier",
   "site": "https://beranger-immobilier.com",
   "zone": "Amboise",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 1,
+  "motif": "",
+  "note": 1
+ },
+ {
+  "nom": "Immo Transactions",
+  "site": "https://avallon.immotransactions.fr",
+  "zone": "Avallon",
   "joignable": true,
   "sitemap": false,
   "schema_org": false,
@@ -1768,6 +1867,50 @@
   "schema_org": false,
   "nb_biens": 0,
   "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Id. Invest",
+  "site": "https://id-invest.eu",
+  "zone": "Chalon-sur-Saône",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Semcoda",
+  "site": "https://semcoda.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Sennecey Immobilier",
+  "site": "https://sennecey-immobilier.com",
+  "zone": "Chalon-sur-Saône",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "HTTP 404",
+  "note": 0
+ },
+ {
+  "nom": "Enfin Bien Chez Vous",
+  "site": "https://enfinbienchezvous.com",
+  "zone": "Avallon",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "aucune page de bien repérée",
   "note": 0
  }
 ]
