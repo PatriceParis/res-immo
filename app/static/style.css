@@ -53,6 +53,10 @@ body {
   display: grid; grid-template-columns: 290px 1fr; gap: 18px;
   align-items: start;
 }
+/* Sans cela, un enfant de grille ne descend jamais sous la largeur de son
+   contenu : la rangée de terroirs en défilement horizontal élargissait la
+   colonne, et les fiches débordaient hors de l'écran sur mobile. */
+.agencement > * { min-width: 0; }
 @media (max-width: 900px) { .agencement { grid-template-columns: 1fr; } }
 
 /* ---------- filtres ---------- */
@@ -88,7 +92,7 @@ body {
 
 /* ---------- résultats ---------- */
 #carte {
-  height: 380px; border-radius: 12px; border: 1px solid var(--bordure);
+  height: 300px; border-radius: 12px; border: 1px solid var(--bordure);
   background: #e9e6dd; overflow: hidden;
 }
 .carte-indispo {
@@ -110,7 +114,45 @@ body {
   display: flex; flex-direction: column; gap: 8px;
 }
 .fiche:hover { box-shadow: 0 4px 16px rgba(27, 67, 50, .14); transform: translateY(-1px); }
-.fiche-haut { display: flex; gap: 10px; align-items: flex-start; }
+
+/* Hiérarchie de portail immobilier : le prix domine, puis les
+   caractéristiques, puis le lieu. Le titre de l'agence, autrefois en tête et
+   en gras, passe en accroche secondaire — c'est de la prose commerciale, pas
+   une donnée. */
+.fiche-corps { display: flex; flex-direction: column; gap: 3px; }
+.ligne-prix { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.fiche .prix { font-size: 21px; font-weight: 800; letter-spacing: -.3px; line-height: 1.15; }
+.fiche .prix-m2 { font-size: 12.5px; color: var(--encre-2); }
+.fiche .specs { font-size: 14px; margin-top: 4px; color: var(--encre-2); }
+.fiche .specs b { color: var(--encre); font-weight: 700; }
+.fiche .lieu { font-size: 14px; color: var(--encre-2); }
+.fiche .lieu b { color: var(--encre); font-weight: 600; }
+.fiche .acces { font-size: 12.5px; color: var(--encre-2); margin-top: 1px; }
+.fiche .acces .sep { margin: 0 6px; opacity: .5; }
+.fiche .acces .gare { opacity: .8; }
+.fiche .accroche {
+  margin: 6px 0 0; font-size: 13px; color: var(--encre-2); line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.fiche .jetons { margin-top: 8px; }
+.badge.sourd { background: transparent; color: var(--encre-2); }
+
+/* Le score de résilience est notre apport propre : il se pose sur la photo,
+   là où les portails mettent le DPE — visible sans voler la vedette au prix. */
+.score-pastille {
+  position: absolute; right: 8px; bottom: 8px; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 46px; padding: 4px 7px; border-radius: 9px; line-height: 1;
+  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+.score-pastille b { font-size: 17px; font-weight: 800; }
+.score-pastille small { font-size: 8.5px; letter-spacing: .3px; opacity: .85; margin-top: 2px; }
+.score-pastille.n1 { background: var(--n1); color: var(--encre); }
+.score-pastille.n2 { background: var(--n2); color: #14281c; }
+.score-pastille.n3 { background: var(--n3); color: #fff; }
+.score-pastille.n4 { background: var(--n4); color: #fff; }
+
 .score-jeton {
   flex: none; width: 52px; height: 52px; border-radius: 12px;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -122,18 +164,16 @@ body {
 .score-jeton.n3 { background: var(--n3); color: #fff; }
 .score-jeton.n4 { background: var(--n4); color: #fff; }
 .fiche h3 { margin: 0; font-size: 15px; line-height: 1.3; }
-.fiche .lieu { color: var(--encre-2); font-size: 12.5px; margin-top: 2px; }
 .fiche .classe { font-size: 12px; color: var(--accent); font-weight: 600; }
-.agence-ligne { font-size: 12px; color: var(--encre-2); margin-top: 2px; }
-
-.fiche .chiffres { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; }
-.fiche .chiffres .prix { font-weight: 800; font-size: 16px; }
-.fiche .chiffres span { color: var(--encre-2); }
-.fiche .chiffres b { color: var(--encre); font-weight: 600; }
+.agence-ligne {
+  font-size: 11.5px; color: var(--encre-2); margin-top: 8px;
+  padding-top: 8px; border-top: 1px solid var(--bordure);
+  text-transform: uppercase; letter-spacing: .4px;
+}
 
 .jetons { display: flex; flex-wrap: wrap; gap: 5px; }
 .badge, .alerte {
-  font-size: 11.5px; padding: 3px 8px; border-radius: 99px; border: 1px solid;
+  font-size: 11px; padding: 2px 8px; border-radius: 6px; border: 1px solid;
 }
 .badge { background: var(--badge-fond); border-color: var(--badge-bord); color: var(--marque); }
 .alerte { background: var(--alerte-fond); border-color: var(--alerte-bord); color: var(--alerte-texte); font-weight: 600; }
@@ -156,7 +196,19 @@ body {
   color: var(--encre); display: flex; align-items: center; justify-content: center; padding: 0;
 }
 .fermer:hover { background: #fff; }
-.modale h2 { margin: 0 0 2px; font-size: 20px; padding-right: 30px; }
+/* Le titre de l'agence n'est plus le premier élément de la fiche : il vient
+   après le prix et les caractéristiques, en accroche. */
+.modale h2 {
+  margin: 8px 0 2px; font-size: 15px; font-weight: 600; padding-right: 30px;
+  color: var(--encre-2); line-height: 1.35;
+}
+.prix-modale { font-size: 26px; font-weight: 800; letter-spacing: -.4px; line-height: 1.1; }
+.prix-modale .prix-m2 {
+  font-size: 13px; font-weight: 500; color: var(--encre-2); margin-left: 6px;
+}
+.fiche-entete .specs { font-size: 14.5px; color: var(--encre-2); margin-top: 4px; }
+.fiche-entete .specs b { color: var(--encre); font-weight: 700; }
+.fiche-entete .lieu { font-size: 14px; color: var(--encre-2); margin-top: 2px; }
 .modale .lieu { color: var(--encre-2); }
 .modale h4 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
 .modale .description { font-size: 14.5px; color: var(--encre); line-height: 1.7; }
@@ -255,17 +307,20 @@ body {
 .terroir .score-terroir { font-weight: 700; color: var(--accent); }
 .terroir.actif .score-terroir { color: #cfe8d6; }
 .terroir .nb { color: var(--encre-2); }
+/* Une pastille à 0 bien promet un clic qui ne donnera rien : on
+   l'estompe plutôt que de la présenter comme les autres. */
+.terroir.vide { opacity: .5; }
 .terroir.actif .nb { color: #cfe0d2; }
 
 /* ---------- photo du bien ---------- */
 .fiche { overflow: hidden; }
 .fiche .photo {
-  height: 148px; margin: -14px -16px 6px; position: relative;
+  height: 178px; margin: -14px -16px 12px; position: relative;
   background: #dfe7df center/cover no-repeat;
 }
 .photo-compte {
-  position: absolute; bottom: 8px; left: 8px; font-size: 11px;
-  background: rgba(20, 30, 24, .62); color: #fff; padding: 2px 8px; border-radius: 99px;
+  position: absolute; bottom: 8px; left: 8px; font-size: 10.5px;
+  background: rgba(20, 30, 24, .55); color: #fff; padding: 2px 8px; border-radius: 6px;
 }
 .photo-grande {
   height: 230px; border-radius: 12px; margin-bottom: 14px; position: relative;
@@ -325,8 +380,23 @@ body { overflow-x: hidden; }
   .filtres-toggle { display: inline-flex; }
   .filtres.replie .filtres-corps { display: none; }
   .filtres-corps { margin-top: 12px; }
-  #carte { height: 300px; }
-  .terroirs-bloc { margin-top: 12px; }
+
+  /* Sur mobile, il fallait faire défiler la carte PUIS six pastilles de
+     terroir avant d'apercevoir la première annonce. Un chercheur de maison
+     veut voir des maisons : la liste passe devant, la carte et les terroirs
+     restent accessibles juste en dessous. */
+  .resultats { display: flex; flex-direction: column; }
+  .barre-resultats { order: 1; margin-top: 0; }
+  #liste { order: 2; }
+  #carte { order: 3; height: 320px; margin-top: 18px; }
+  .terroirs-bloc { order: 4; margin-top: 14px; }
+
+  /* Les terroirs défilent horizontalement au lieu d'empiler six lignes. */
+  .terroirs {
+    flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px;
+    scrollbar-width: thin;
+  }
+  .terroir { flex: none; }
 }
 
 @media (max-width: 560px) {
