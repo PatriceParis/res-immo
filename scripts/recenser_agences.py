@@ -60,13 +60,24 @@ SORTIE = RACINE / "data" / "agences_recensees.json"
 SORTIE_COUVERTURE = RACINE / "data" / "couverture_agences.json"
 
 
+# Certains sitemaps de réseaux nationaux pèsent des dizaines de méga-octets.
+# Les lire en entier immobilisait le recensement : un premier essai est resté
+# plus de trente minutes sur trois départements, sans rien écrire. On borne
+# donc ce qu'on accepte de télécharger.
+PLAFOND_TELECHARGEMENT = 12_000_000      # 12 Mo, largement de quoi pour un index
+
+
 def _lire(url: str, essais: int = 3, timeout: int = 90) -> str | None:
     for essai in range(essais):
         try:
             req = urllib.request.Request(url, headers={
-                "User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"})
+                "User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9",
+                "Accept-Encoding": "identity"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.read().decode("utf-8", "ignore")
+                brut = r.read(PLAFOND_TELECHARGEMENT)
+            if len(brut) >= PLAFOND_TELECHARGEMENT:
+                print(f"    … {url[:60]} tronqué à {PLAFOND_TELECHARGEMENT // 1_000_000} Mo")
+            return brut.decode("utf-8", "ignore")
         except Exception as e:
             if essai == essais - 1:
                 print(f"    ✗ {url[:70]} — {type(e).__name__}")
@@ -124,22 +135,32 @@ def piste_osm(departements: list[str]) -> tuple[list[dict], list[dict]]:
 # --- Piste 2 : annuaires des réseaux de franchise ---------------------------
 
 
+# Aucun réseau ne doit pouvoir manger le budget des autres.
+SECONDES_PAR_RESEAU = 120
+
+
 def _urls_du_sitemap(base: str, profondeur: int = 1) -> list[str]:
     """URLs listées par le sitemap d'un site (sous-sitemaps suivis une fois)."""
     import re
     RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
+    echeance = time.monotonic() + SECONDES_PAR_RESEAU
     for chemin in ("/sitemap.xml", "/sitemap_index.xml", "/sitemap-index.xml"):
-        brut = _lire(base.rstrip("/") + chemin, essais=2, timeout=60)
+        brut = _lire(base.rstrip("/") + chemin, essais=1, timeout=30)
         if not brut or "<loc" not in brut.lower():
             continue
         locs = RE_LOC.findall(brut)
         detail = [u for u in locs if not u.lower().endswith(".xml")]
         sous = [u for u in locs if u.lower().endswith(".xml")]
         if profondeur:
-            # Les annuaires d'agences sont souvent dans un sous-sitemap dédié.
+            # Les annuaires d'agences sont souvent dans un sous-sitemap dédié :
+            # on les suit d'abord, et on ne descend dans les autres que s'il
+            # reste du temps.
             interessants = [u for u in sous if reseaux.MOTIF_PAGE_AGENCE.search(u)]
-            for su in (interessants or sous)[:20]:
-                s = _lire(su, essais=1, timeout=60)
+            for su in (interessants or sous)[:12]:
+                if time.monotonic() > echeance:
+                    print(f"    … {base} : temps imparti atteint, on garde l'acquis")
+                    break
+                s = _lire(su, essais=1, timeout=30)
                 if s:
                     detail += RE_LOC.findall(s)
         return list(dict.fromkeys(detail))
@@ -215,6 +236,23 @@ def main() -> int:
     sans_site: list[dict] = []
     registre: list[dict] = []
 
+    # Chaque piste écrit dès qu'elle a fini. Sans cela, une piste qui traîne
+    # (les sitemaps des grands réseaux pèsent lourd) faisait perdre AUSSI le
+    # travail des précédentes quand le job atteignait sa limite de temps.
+    def enregistrer() -> None:
+        uniques, vues = [], set()
+        for a in recensees + sans_site + registre:
+            cle = (decouverte.domaine(a.get("site"))
+                   or (a.get("nom", "").lower(), (a.get("commune") or "").lower()))
+            if cle in vues:
+                continue
+            vues.add(cle)
+            uniques.append(a)
+        SORTIE.parent.mkdir(parents=True, exist_ok=True)
+        SORTIE.write_text(json.dumps(uniques, ensure_ascii=False, indent=1) + "\n",
+                          encoding="utf-8")
+        return uniques
+
     if "osm" in sources:
         print("── OpenStreetMap, par département ──")
         avec, sans = piste_osm(depts)
@@ -224,7 +262,8 @@ def main() -> int:
             a["source"] = "openstreetmap (sans site)"
         recensees += avec
         sans_site += sans
-        print(f"→ {len(avec)} avec site, {len(sans)} sans site\n")
+        enregistrer()
+        print(f"→ {len(avec)} avec site, {len(sans)} sans site (enregistré)\n")
 
     if "reseaux" in sources:
         print("── Annuaires des réseaux de franchise ──")
@@ -232,29 +271,18 @@ def main() -> int:
         for a in r:
             a["source"] = "réseau"
         recensees += r
-        print(f"→ {len(r)} agence(s) de réseau\n")
+        enregistrer()
+        print(f"→ {len(r)} agence(s) de réseau (enregistré)\n")
 
     if "sirene" in sources:
         print("── Registre officiel des entreprises (NAF 68.31Z) ──")
         registre = piste_sirene(depts)
         for a in registre:
             a["source"] = "registre"
-        print(f"→ {len(registre)} agence(s) recensée(s)\n")
+        enregistrer()
+        print(f"→ {len(registre)} agence(s) recensée(s) (enregistré)\n")
 
-    # Dédoublonnage par domaine quand on a un site, par (nom, commune) sinon.
-    uniques, vues = [], set()
-    for a in recensees + sans_site + registre:
-        cle = (decouverte.domaine(a.get("site"))
-               or (a.get("nom", "").lower(), (a.get("commune") or "").lower()))
-        if cle in vues:
-            continue
-        vues.add(cle)
-        uniques.append(a)
-
-    SORTIE.parent.mkdir(parents=True, exist_ok=True)
-    SORTIE.write_text(json.dumps(uniques, ensure_ascii=False, indent=1) + "\n",
-                      encoding="utf-8")
-
+    uniques = enregistrer()
     avec_site = [a for a in uniques if a.get("site")]
     print(f"Total : {len(uniques)} agence(s) recensée(s), "
           f"dont {len(avec_site)} avec un site exploitable.")
