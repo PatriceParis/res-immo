@@ -149,6 +149,35 @@ def test_les_pastilles_de_terroir_comptent_avec_les_filtres(client):
     assert liste["total"] == par_region["Normandie"]
 
 
+def test_un_nombre_de_pieces_invraisemblable_n_est_pas_affiche(tmp_path, monkeypatch):
+    """« Maison · 520 m² · 1 pièce » s'affichait en tête de la première fiche.
+
+    Personne ne vend 520 m² d'une seule pièce : le chiffre vient d'une
+    lecture ratée. Mieux vaut n'en annoncer aucun — la surface et le terrain
+    situent déjà le bien.
+    """
+    monkeypatch.setenv("REFUGE_DB", str(tmp_path / "pieces.db"))
+    from app import db
+    from app.chargement import charger_liste
+
+    base = {"source": "test", "type_bien": "maison", "commune": "Bellême",
+            "code_postal": "61130", "lat": 48.373, "lon": 0.560}
+    conn = db.connexion()
+    charger_liste(conn, [
+        {**base, "id": "absurde", "titre": "Propriété de grand caractère",
+         "prix": 1100000, "surface_m2": 520, "pieces": 1},
+        {**base, "id": "credible", "titre": "Longère rénovée avec cave",
+         "prix": 245000, "surface_m2": 160, "pieces": 6},
+    ])
+    try:
+        par_id = {b["id"]: b for _, b in [(0, x) for x in
+                  db.chercher(conn, {"limit": 50})[1]]}
+    finally:
+        conn.close()
+    assert par_id["absurde"]["pieces"] is None
+    assert par_id["credible"]["pieces"] == 6      # 27 m²/pièce : plausible
+
+
 def test_le_filtre_d_inondation_reconnait_le_risque_communal(tmp_path, monkeypatch):
     """Bug muet : la case « inondation » ne filtrait plus rien.
 

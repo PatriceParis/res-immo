@@ -14,6 +14,10 @@ from pathlib import Path
 from . import db, gares, geo, marche, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
 
+# Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
+# une demeure aux très grands volumes reste sous 120 m² par pièce.
+MAX_M2_PAR_PIECE = 120
+
 
 def preparer_annonce(brut: dict) -> dict:
     annonce = dict(brut)
@@ -25,6 +29,15 @@ def preparer_annonce(brut: dict) -> dict:
     prix = annonce.get("prix")
     if prix is not None and prix < PRIX_MINI:
         annonce["prix"] = None
+
+    # Nombre de pièces invraisemblable au regard de la surface. Sauté aux yeux
+    # sur la première fiche du site : « Maison · 520 m² · 1 pièce ». Personne
+    # ne vend 520 m² d'une seule pièce ; c'est une lecture ratée, et elle
+    # s'affichait au beau milieu des caractéristiques. On préfère ne rien
+    # annoncer — la surface et le terrain suffisent à situer le bien.
+    pieces, surface = annonce.get("pieces"), annonce.get("surface_m2")
+    if pieces and (pieces > 30 or (surface and surface / pieces > MAX_M2_PAR_PIECE)):
+        annonce["pieces"] = None
 
     # Région : déduite du département (les annonces d'agences ne la donnent pas).
     if not annonce.get("region"):

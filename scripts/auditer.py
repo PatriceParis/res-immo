@@ -124,6 +124,28 @@ def verifier_surfaces(biens: list[dict], audit: Audit) -> None:
                            f"{terrain} m²  {_etiquette(b)}")
 
 
+def verifier_pieces(biens: list[dict], audit: Audit) -> None:
+    """Le nombre de pièces doit être plausible pour la surface annoncée.
+
+    Repéré à l'œil sur la première fiche du site, une fois le prix et les
+    caractéristiques mis en avant : « Maison · 520 m² · 1 pièce ». Personne
+    ne vend 520 m² d'une seule pièce — le chiffre vient d'une lecture ratée,
+    et il s'affichait sans que rien ne le questionne.
+    """
+    for b in biens:
+        pieces, surface = b.get("pieces"), b.get("surface_m2")
+        if not pieces or not surface:
+            continue
+        if pieces > 30:
+            audit.signaler("nombre de pièces invraisemblable",
+                           f"{pieces} pièces  {_etiquette(b)}")
+        elif surface / pieces > 120:      # plus de 120 m² par pièce
+            audit.signaler(
+                "pièces trop peu nombreuses pour la surface",
+                f"{surface} m² pour {pieces} pièce(s) — "
+                f"{round(surface / pieces)} m²/pièce  {_etiquette(b)}")
+
+
 def verifier_geographie(biens: list[dict], audit: Audit) -> None:
     """Département, région et coordonnées doivent se confirmer entre eux."""
     for b in biens:
@@ -348,6 +370,7 @@ def verifier_commune_conforme_au_titre(biens: list[dict], audit: Audit) -> None:
 REGLES = (
     verifier_prix_au_m2,
     verifier_surfaces,
+    verifier_pieces,
     verifier_geographie,
     verifier_couverture_des_pastilles,
     verifier_score,

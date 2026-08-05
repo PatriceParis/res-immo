@@ -223,7 +223,8 @@ function majTerroirs() {
   const c = $("#terroirs");
   if (!c) return;
   c.innerHTML = etat.regions.map((r) => `
-    <button class="terroir ${etat.region === r.region ? "actif" : ""}"
+    <button class="terroir ${etat.region === r.region ? "actif" : ""}${
+              r.nb_biens ? "" : " vide"}"
             data-region="${echap(r.region)}" title="${echap(r.zone)} — ${echap(r.argument)}">
       <span class="idx">${r.rang}</span>
       <span class="nom">${echap(r.region)}</span>
@@ -279,45 +280,99 @@ function reinitialiser() {
   rafraichir();
 }
 
-/* ---------------- rendu de la liste ---------------- */
+/* ---------------- rendu de la liste ----------------
+
+   La fiche suit la hiérarchie des portails immobiliers, celle que l'œil de
+   l'acheteur connaît déjà : le PRIX d'abord, puis les caractéristiques
+   (type, surface, pièces, terrain), puis le lieu. Auparavant le titre de
+   l'agence occupait la première place en gros et en gras, et le prix se
+   perdait dans une rangée où tout avait le même poids. */
+
+// Titre de l'agence, ramené à une casse lisible.
+// « PROPRIÉTÉ DE GRAND CARACTERE ORIGINE 18ème » : les agences écrivent
+// souvent en capitales, ce qui crie et se lit mal. On repasse en casse de
+// phrase, en rendant sa majuscule à la commune, qui elle est un nom propre.
+function casseNormale(texte, commune) {
+  const t = (texte || "").trim();
+  if (!t) return "";
+  const lettres = t.replace(/[^A-Za-zÀ-ÿ]/g, "");
+  const majuscules = t.replace(/[^A-ZÀ-Þ]/g, "").length;
+  if (!lettres.length || majuscules / lettres.length < 0.6) return t;  // casse normale
+
+  let s = t.toLowerCase().replace(/(^|[.!?…]\s+)([a-zà-ÿ])/g,
+                                  (m, avant, c) => avant + c.toUpperCase());
+  for (const mot of String(commune || "").split(/[\s-]+/)) {
+    if (mot.length < 3) continue;
+    s = s.replace(new RegExp(`\\b${mot.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "gi"),
+                  mot);
+  }
+  return s;
+}
+
+// Ligne de caractéristiques : « Longère · 165 m² · 6 pièces · terrain 7 500 m² ».
+// C'est la ligne que tout acheteur lit en diagonale sur un portail.
+function caracteristiques(a) {
+  const bouts = [];
+  const type = a.type_bien || "maison";
+  bouts.push(`<b>${echap(type.charAt(0).toUpperCase() + type.slice(1))}</b>`);
+  if (a.surface_m2) bouts.push(`${fmtNombre.format(a.surface_m2)} m²`);
+  if (a.pieces) bouts.push(`${a.pieces} pièce${a.pieces > 1 ? "s" : ""}`);
+  if (a.terrain_m2) {
+    bouts.push(a.terrain_m2 >= 10000
+      ? `terrain ${(a.terrain_m2 / 10000).toLocaleString("fr-FR", {maximumFractionDigits: 1})} ha`
+      : `terrain ${fmtNombre.format(a.terrain_m2)} m²`);
+  }
+  return bouts.join(" · ");
+}
+
+// Accès : la voiture, et le train quand il y a une gare — c'est l'argument
+// propre à ce service, il mérite d'être lisible d'un coup d'œil.
+function acces(a) {
+  const bouts = [];
+  if (a.temps_voiture_min != null) bouts.push(`🚗 ${fmtTemps(a.temps_voiture_min)}`);
+  if (a.train && a.train.nom && a.train.minutes_paris != null) {
+    bouts.push(`🚆 ${fmtTemps(a.train.minutes_paris)} <span class="gare">via ${
+      echap(a.train.nom)}</span>`);
+  }
+  return bouts.length ? `<div class="acces">${bouts.join("<span class='sep'>·</span>")}</div>` : "";
+}
 
 function ficheAnnonce(a) {
   const niveau = niveauScore(a.score_total);
-  const badges = (a.badges || []).slice(0, 4)
-    .map((b) => `<span class="badge">✓ ${echap(b)}</span>`).join("");
-  const reste = (a.badges || []).length > 4
-    ? `<span class="badge">+ ${a.badges.length - 4}</span>` : "";
-  const alertes = (a.alertes || []).slice(0, 2)
+  const badges = (a.badges || []).slice(0, 3)
+    .map((b) => `<span class="badge">${echap(b)}</span>`).join("");
+  const reste = (a.badges || []).length > 3
+    ? `<span class="badge sourd">+${a.badges.length - 3}</span>` : "";
+  const alertes = (a.alertes || []).slice(0, 1)
     .map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
+  const accroche = casseNormale(a.titre, a.commune);
 
   return `
   <article class="fiche" data-id="${echap(a.id)}" tabindex="0" role="button"
            aria-label="Voir le détail : ${echap(a.titre)}">
     <div class="photo" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
-      ${aUnePhoto(a) ? `<span class="photo-compte">📷 photo de l'agence</span>` : ""}
       ${estNouveau(a) ? `<span class="pastille-nouveau">Nouveau</span>` : ""}
+      <span class="score-pastille ${niveau}"
+            title="Score de résilience : ${Math.round(a.score_total)} sur 100">
+        <b>${Math.round(a.score_total)}</b><small>résilience</small></span>
+      ${aUnePhoto(a) ? `<span class="photo-compte">photo de l'agence</span>` : ""}
     </div>
-    <div class="fiche-haut">
-      <div class="score-jeton ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
-      <div>
-        <h3>${echap(a.titre)}</h3>
-        <div class="lieu">${echap(a.commune || "")} · ${echap(a.departement || "")} · 🚗 ${fmtTemps(a.temps_voiture_min)} de Paris</div>
-        <div class="classe">${echap((a.score_detail && a.score_detail.classe) || "")}</div>
-        ${a.agence ? `<div class="agence-ligne">🏢 ${echap(a.agence)}</div>` : ""}
+    <div class="fiche-corps">
+      <div class="ligne-prix">
+        <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix sur demande"}</span>
+        ${baisse(a)}${ecartMarche(a)}
       </div>
+      ${prixM2 ? `<div class="prix-m2">${fmtNombre.format(prixM2)} €/m²</div>` : ""}
+      <div class="specs">${caracteristiques(a)}</div>
+      <div class="lieu"><b>${echap(a.commune || "")}</b>${
+        a.departement ? ` (${echap(a.departement)})` : ""}</div>
+      ${acces(a)}
+      ${accroche ? `<p class="accroche">${echap(accroche)}</p>` : ""}
+      <div class="jetons">${badges}${reste}${alertes}</div>
+      ${a.agence ? `<div class="agence-ligne">${echap(a.agence)}</div>` : ""}
     </div>
-    <div class="chiffres">
-      <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix n.c."}</span>
-      ${baisse(a)}
-      ${prixM2 ? `<span>${fmtNombre.format(prixM2)} €/m²</span>` : ""}
-      ${ecartMarche(a)}
-      <span><b>${a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : "—"}</b> hab.</span>
-      <span>terrain <b>${a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : "—"}</b></span>
-      ${a.pieces ? `<span><b>${a.pieces}</b> p.</span>` : ""}
-    </div>
-    <div class="jetons">${badges}${reste}${alertes}</div>
   </article>`;
 }
 
@@ -452,18 +507,22 @@ function ouvrirFiche(id) {
     <header class="fiche-entete">
       <div class="score-jeton grand ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
       <div>
-        <h2 id="modale-titre">${echap(a.titre)}</h2>
-        <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""} · ${echap(a.departement || "")}</div>
-        ${a.agence ? `<div class="agence-ligne">🏢 ${echap(a.agence)}</div>` : ""}
+        <!-- Même hiérarchie que la liste : le prix d'abord, puis les
+             caractéristiques, puis le lieu. Le titre de l'agence, ramené en
+             casse lisible, vient après — c'est une accroche, pas une donnée. -->
+        <div class="prix-modale">${a.prix ? fmtEuros.format(a.prix) : "Prix sur demande"}${
+          prixM2 ? ` <span class="prix-m2">${fmtNombre.format(prixM2)} €/m²</span>` : ""}</div>
+        <div class="specs">${caracteristiques(a)}</div>
+        <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""}</div>
+        <h2 id="modale-titre">${echap(casseNormale(a.titre, a.commune))}</h2>
         <div class="classe-grande">${echap(detail.classe || "")}</div>
       </div>
     </header>
 
+    <!-- Prix, surface et terrain sont déjà en tête : les répéter en tuiles
+         faisait dire trois fois la même chose. Ne restent ici que les
+         informations qu'on ne lit nulle part ailleurs. -->
     <div class="stats">
-      ${tuile("Prix", a.prix ? fmtEuros.format(a.prix) : "n.c.",
-              prixM2 ? fmtNombre.format(prixM2) + " €/m²" : "")}
-      ${tuile("Surface", a.surface_m2 ? fmtNombre.format(a.surface_m2) + " m²" : null)}
-      ${tuile("Terrain", a.terrain_m2 ? fmtNombre.format(a.terrain_m2) + " m²" : null)}
       ${tuile("Pièces", a.pieces)}
       ${tuile("Paris en voiture", fmtTemps(a.temps_voiture_min),
               a.distance_km ? "~" + Math.round(a.distance_km * 1.25) + " km · estimé" : "estimé")}
@@ -608,7 +667,7 @@ async function initialiser() {
     const agences = ((await (await fetch("/api/agences")).json()).agences) || [];
     if (agences.length) {
       $("#bandeau-source").textContent =
-        `${agences.length} agence${agences.length > 1 ? "s" : ""} · annonces réelles`;
+        `${agences.length} agence${agences.length > 1 ? "s" : ""}`;
     }
     const sel = $("#f-agence");
     for (const ag of agences) {
