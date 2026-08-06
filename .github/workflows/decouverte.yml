@@ -28,6 +28,15 @@ on:
 permissions:
   contents: write
 
+# Un seul de ces travaux à la fois : collecte, découverte et recensement
+# écrivent tous dans data/ et committent sur main. Deux qui tournent ensemble
+# se disputeraient le fichier — et la reprise après conflit d'un workflow peut
+# écraser le travail de l'autre. Ce garde-fou vaut aussi pour l'usage des
+# minutes : rien ne tourne en double.
+concurrency:
+  group: donnees-refuge
+  cancel-in-progress: false
+
 jobs:
   decouverte:
     runs-on: ubuntu-latest
