@@ -200,6 +200,20 @@ def test_detecte_un_bien_sans_lien_vers_l_agence(appeler):
     assert not r.tenue
 
 
+def test_detecte_deux_biens_qui_pointent_la_meme_page(appeler):
+    """Cas réel : neuf biens dédoublés parce que le nom de leur agence avait
+    changé, donc leur identifiant aussi — mais pas leur URL."""
+    def bien_dedouble(chemin, params, reponse):
+        if chemin == "/api/annonces" and reponse.get("items"):
+            jumeau = dict(reponse["items"][0])
+            jumeau["id"] = jumeau["id"] + "-bis"      # même page, autre identifiant
+            reponse["items"].append(jumeau)
+        return reponse
+
+    r = coherence.chaque_page_ne_parait_qu_une_fois(_menteur(appeler, bien_dedouble))
+    assert not r.tenue
+
+
 def test_detecte_un_score_qui_n_est_pas_la_somme_de_ses_piliers(appeler):
     def score_gonfle(chemin, params, reponse):
         if chemin.startswith("/api/annonces/"):
@@ -273,7 +287,8 @@ def test_chaque_invariant_a_sa_preuve_de_detection():
         "compteur_honnete", "pastilles_exhaustives",
         "pastilles_tiennent_leur_promesse", "cases_a_cocher_actives",
         "seuils_numeriques_respectes", "tris_ordonnes",
-        "chaque_bien_mene_a_l_agence", "score_egal_a_ses_piliers",
+        "chaque_bien_mene_a_l_agence", "chaque_page_ne_parait_qu_une_fois",
+        "score_egal_a_ses_piliers",
         "ecart_au_marche_reproductible", "signaux_de_fraicheur_justifies",
         "date_de_constatation_credible",
         "bornes_des_filtres_couvrent_les_donnees", "agences_annoncees_presentes",

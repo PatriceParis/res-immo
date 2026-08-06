@@ -220,6 +220,30 @@ def chaque_bien_mene_a_l_agence(appeler: Appel) -> Rapport:
     return r
 
 
+def chaque_page_ne_parait_qu_une_fois(appeler: Appel) -> Rapport:
+    """Voir deux fois la même maison fait douter de toute la liste.
+
+    L'identifiant d'un bien dépend du nom de son agence : si ce nom change,
+    le même logement revient sous un second identifiant, et le catalogue le
+    montre en double. L'URL, elle, ne dépend de personne — c'est la seule
+    signature qui tienne.
+    """
+    r = Rapport("chaque_page_ne_parait_qu_une_fois",
+                "Deux biens de la liste ne renvoient jamais à la même page.")
+    vues: dict = {}
+    for b in _tous(appeler)["items"]:
+        url = b.get("url")
+        if url:
+            vues.setdefault(url, []).append(b.get("id"))
+    doubles = {u: ids for u, ids in vues.items() if len(ids) > 1}
+    if doubles:
+        url, ids = next(iter(doubles.items()))
+        r.manquements.append(
+            f"{len(doubles)} page(s) listée(s) plusieurs fois "
+            f"(ex. {url} sous {', '.join(str(i) for i in ids)})")
+    return r
+
+
 def score_egal_a_ses_piliers(appeler: Appel) -> Rapport:
     """Le score affiché doit être la somme du détail qu'on montre à côté."""
     r = Rapport("score_egal_a_ses_piliers",
@@ -345,6 +369,7 @@ INVARIANTS = (
     seuils_numeriques_respectes,
     tris_ordonnes,
     chaque_bien_mene_a_l_agence,
+    chaque_page_ne_parait_qu_une_fois,
     score_egal_a_ses_piliers,
     ecart_au_marche_reproductible,
     signaux_de_fraicheur_justifies,
