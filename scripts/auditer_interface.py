@@ -60,6 +60,26 @@ SOURCES_FABRIQUEES = (
 FONCTIONS_DECORATIVES = ("illustration",)
 
 
+def _image_de_test(largeur: int = 1200, hauteur: int = 900) -> bytes:
+    """Une PNG unie, assez grande pour révéler une mise en page qui lâche.
+
+    Fabriquée à la main : le but est d'exercer le chemin d'affichage des
+    photos sans dépendre d'internet ni d'une bibliothèque d'images.
+    """
+    import struct
+    import zlib
+
+    def bloc(nom: bytes, donnees: bytes) -> bytes:
+        return (struct.pack(">I", len(donnees)) + nom + donnees
+                + struct.pack(">I", zlib.crc32(nom + donnees) & 0xFFFFFFFF))
+
+    entete = struct.pack(">IIBBBBB", largeur, hauteur, 8, 2, 0, 0, 0)
+    ligne = b"\x00" + b"\xa8\xc0\xb4" * largeur          # vert pâle
+    return (b"\x89PNG\r\n\x1a\n" + bloc(b"IHDR", entete)
+            + bloc(b"IDAT", zlib.compress(ligne * hauteur, 6))
+            + bloc(b"IEND", b""))
+
+
 class Constat:
     def __init__(self) -> None:
         self.manquements: list[tuple[str, str]] = []
@@ -171,7 +191,40 @@ def verifier_page(page, appeler, constat: Constat) -> None:
         else:
             constat.promesse(f"la case « {libelle} » filtre réellement l'affichage")
 
-    # 4. Aucune promesse chiffrée fabriquée dans le corps de la page.
+    # 4. Une fiche illustrée garde la même mise en page qu'une fiche sans
+    #    photo. La vraie photo est posée en absolu dans un cadre de hauteur
+    #    fixe ; si la règle qui l'y contraint saute, l'image s'affiche à sa
+    #    taille naturelle et fait exploser la fiche. C'est arrivé, et rien ne
+    #    l'a signalé — l'audit bloquait alors les photos.
+    cadres = page.locator(".fiche .photo")
+    if cadres.count():
+        hauteurs, debordantes = [], 0
+        for i in range(min(cadres.count(), 12)):
+            cadre = cadres.nth(i)
+            boite = cadre.bounding_box()
+            if not boite:
+                continue
+            hauteurs.append(round(boite["height"]))
+            img = cadre.locator("img.vraie-photo")
+            if img.count():
+                bi = img.first.bounding_box()
+                if bi and (bi["height"] > boite["height"] + 2
+                           or bi["width"] > boite["width"] + 2):
+                    debordantes += 1
+        if debordantes:
+            constat.manque(
+                "photo qui déborde de son cadre",
+                f"{debordantes} fiche(s) où l'image dépasse le cadre — "
+                "la mise en page se disloque")
+        elif len(set(hauteurs)) > 1:
+            constat.manque(
+                "fiches de hauteurs différentes",
+                f"cadres photo mesurés : {sorted(set(hauteurs))} px — "
+                "une fiche illustrée ne doit pas se distinguer des autres")
+        else:
+            constat.promesse("une fiche illustrée garde la mise en page des autres")
+
+    # 5. Aucune promesse chiffrée fabriquée dans le corps de la page.
     corps = page.text_content("body") or ""
     for motif, quoi in PROMESSES_CHIFFREES:
         trouve = motif.search(corps)
@@ -182,7 +235,7 @@ def verifier_page(page, appeler, constat: Constat) -> None:
     if not any(m.search(corps) for m, _ in PROMESSES_CHIFFREES):
         constat.promesse("aucune promesse chiffrée fabriquée dans la liste")
 
-    # 5. Une fiche ouverte ne fabrique rien non plus (c'est là que vivait
+    # 6. Une fiche ouverte ne fabrique rien non plus (c'est là que vivait
     #    « 8 autres photos + le dossier complet »).
     if cartes:
         page.locator(".fiche").first.click()
@@ -284,12 +337,18 @@ def main() -> int:
                     headless=True)
                 page = navigateur.new_page(viewport={"width": 1280, "height": 900})
                 # Les photos d'agences passent par notre relais et peuvent
-                # traîner (CDN lent, hôte injoignable). On les bloque : l'audit
-                # porte sur les CHIFFRES et les contrôles, pas sur les images.
-                # Sans cela, « networkidle » n'arrivait jamais et l'audit
-                # restait suspendu — un contrôle qui bloque est pire qu'un
-                # contrôle qui échoue.
-                page.route("**/api/photo*", lambda route: route.abort())
+                # traîner (CDN lent, hôte injoignable). On ne va donc pas les
+                # chercher — mais on ne les BLOQUE pas non plus : on répond à
+                # leur place par une image de test aux dimensions généreuses.
+                #
+                # Les bloquer était un angle mort : aucune fiche n'affichait
+                # jamais de vraie photo pendant l'audit. Un nettoyage de CSS a
+                # ainsi pu casser la mise en page de toutes les fiches
+                # illustrées sans que rien ne le signale — c'est l'utilisateur
+                # qui l'a vu. Une image de 1200 × 900 reproduit fidèlement le
+                # cas : si la règle qui la contraint disparaît, la fiche gonfle.
+                page.route("**/api/photo*", lambda route: route.fulfill(
+                    status=200, content_type="image/png", body=_image_de_test()))
                 page.set_default_timeout(20_000)
                 try:
                     page.goto(base, wait_until="domcontentloaded", timeout=45_000)
