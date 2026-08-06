@@ -31,7 +31,7 @@ permissions:
 jobs:
   decouverte:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60   # 577 sites recensés à sonder, contre une vingtaine avant
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -47,7 +47,7 @@ jobs:
           SIMULER: ${{ github.event.inputs.simuler }}
           ZONES: ${{ github.event.inputs.zones }}
         run: |
-          OPTIONS="--note ${NOTE:-25}"
+          OPTIONS="--note ${NOTE:-25} --parallele 20"
           if [ "$SIMULER" = "true" ]; then OPTIONS="$OPTIONS --simuler"; fi
           # Overpass revient vide pour certaines zones d'une fois sur l'autre :
           # pouvoir ne relancer QUE celles-là évite de rejouer les 19 zones.

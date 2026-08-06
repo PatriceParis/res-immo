@@ -48,6 +48,7 @@ except ImportError:
 
 CONFIG = RACINE / "scraper" / "refuge_scraper" / "agences_sites.json"
 RAPPORT = RACINE / "data" / "agences_candidates.json"
+RECENSEMENT = RACINE / "data" / "agences_recensees.json"
 OVERPASS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
@@ -161,6 +162,8 @@ def main() -> None:
                     help="sondages de sites simultanés (défaut : 12)")
     ap.add_argument("--parallele-osm", type=int, default=2,
                     help="requêtes Overpass simultanées — au-delà de 2, l'API refuse")
+    ap.add_argument("--sans-recensement", action="store_true",
+                    help="ne pas reprendre data/agences_recensees.json")
     # Overpass ne répond pas pour les mêmes zones d'une fois sur l'autre :
     # Chalon-sur-Saône, Auxerre et Avallon sont revenues vides quand les
     # autres aboutissaient. Relancer les 19 zones pour en rattraper 3 est long
@@ -189,6 +192,23 @@ def main() -> None:
     with ThreadPoolExecutor(max_workers=args.parallele_osm) as pool:
         for futur in as_completed([pool.submit(_zone, z) for z in zones]):
             candidates += futur.result()
+
+    # Les agences déjà repérées par scripts/recenser_agences.py. Sans ce
+    # branchement, les deux dispositifs s'ignoraient : le recensement a
+    # rassemblé 577 sites d'agences sur les 36 départements, et pas un seul
+    # n'arrivait jusqu'à la collecte — celle-ci continuait de tourner sur les
+    # 53 agences trouvées autour de 19 villes.
+    if RECENSEMENT.exists() and not args.sans_recensement:
+        try:
+            recensees = json.loads(RECENSEMENT.read_text(encoding="utf-8"))
+        except ValueError:
+            recensees = []
+        avec_site = [a for a in recensees if a.get("site")]
+        for a in avec_site:
+            candidates.append({"nom": a.get("nom") or domaine(a["site"]),
+                               "site": a["site"],
+                               "zone": a.get("zone") or f"dept {a.get('departement', '?')}"})
+        print(f"    + {len(avec_site)} agence(s) issues du recensement")
 
     # Dédoublonnage inter-zones (une agence peut couvrir deux bassins).
     uniques, vues = [], set()
