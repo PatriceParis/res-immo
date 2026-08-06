@@ -331,7 +331,6 @@ function ficheAnnonce(a) {
   const alertes = (a.alertes || []).slice(0, 1)
     .map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
-  const accroche = casseNormale(a.titre, a.commune);
 
   return `
   <article class="fiche" data-id="${echap(a.id)}" tabindex="0" role="button"
@@ -359,7 +358,12 @@ function ficheAnnonce(a) {
       <div class="lieu"><b>${echap(a.commune || "")}</b>${
         a.departement ? ` (${echap(a.departement)})` : ""}</div>
       ${acces(a)}
-      ${accroche ? `<p class="accroche">${echap(accroche)}</p>` : ""}
+      <!-- Pas d'accroche commerciale dans la liste : « Belle demeure de
+           caractère au cœur d'un village prisé » se répète d'une annonce à
+           l'autre et n'aide pas à trancher. Ce qui départage tient dans les
+           lignes au-dessus — prix, caractéristiques, lieu, accès — et dans le
+           score. Le texte de l'agence reste sur la fiche détaillée, là où on
+           vient chercher le détail. -->
       <div class="jetons">${badges}${reste}${alertes}</div>
       ${a.agence ? `<div class="agence-ligne">${echap(a.agence)}</div>` : ""}
     </div>
