@@ -185,3 +185,49 @@ def test_abreviations_appartement_ecartees():
     # « T6 » seul ne disqualifie pas : une maison peut être un T6.
     assert est_bien_valide({"titre": "A VENDRE MAISON T6 DANS HAMEAU",
                             "type_bien": "maison", "surface_m2": 140, "prix": 235000})
+
+
+def test_locations_ecartees_du_catalogue():
+    """Cas réel : dix annonces de LOCATION dans un catalogue de vente.
+
+    Sans prix de vente, elles n'ont ni prix au m² ni écart au marché — et
+    l'une d'elles affichait 199 800 €, un montant récupéré ailleurs sur la
+    page, qui la faisait passer pour une vraie vente.
+    """
+    # Repérée par le titre
+    assert not est_bien_valide({"titre": "Maison à louer Savonnières",
+                                "type_bien": "maison", "surface_m2": 120})
+    assert not est_bien_valide({"titre": "F3 A louer a Fécamp",
+                                "type_bien": "maison", "surface_m2": 55})
+    assert not est_bien_valide({"titre": "Location Maison 4 pièces 82 m² Déols",
+                                "type_bien": "maison", "surface_m2": 82})
+    # Repérée par l'URL, alors que le titre ne dit rien
+    assert not est_bien_valide(
+        {"titre": "MAISON T4", "type_bien": "maison", "surface_m2": 96,
+         "url": "https://agence.fr/location/maison-4-pieces-monts-37260"})
+    assert not est_bien_valide(
+        {"titre": "Maison 4 pièces 85 m² Veigné", "type_bien": "maison",
+         "surface_m2": 85,
+         "url": "https://agence.fr/fr/louer/maison/veigne-37250"})
+    assert not est_bien_valide(
+        {"titre": "MAISON F3 PLAIN PIED SALENCY", "type_bien": "maison",
+         "surface_m2": 66,
+         "url": "https://cabinet-reca.fr/a-louer/maison-f3-salency-l50002559/"})
+    # Faux positif à éviter : un domaine de portail qui contient « alouer ».
+    assert est_bien_valide(
+        {"titre": "Longère 4 chambres à Bellême", "type_bien": "longère",
+         "surface_m2": 140, "prix": 245000,
+         "url": "https://www.avendrealouer.fr/vente/belleme/longere-12345.html"})
+
+
+def test_une_vraie_maison_contemporaine_reste_au_catalogue():
+    """« maison contemporaine » désignait un modèle de constructeur — la règle
+    écartait aussi cette annonce réelle de Larçay."""
+    assert est_bien_valide(
+        {"titre": "Magnifique maison Contemporaine", "type_bien": "maison",
+         "surface_m2": 165, "prix": 425000,
+         "url": "https://www.pantherimmo.com/vente/137-larcay/maison/t5/82-magnifique-maison-contemporaine/"})
+    # Les pages de constructeur restent écartées, par d'autres signaux.
+    assert not est_bien_valide(
+        {"titre": "Votre Maison Connectée avec DELTA DORE - Bourgogne Bâtir",
+         "type_bien": "maison", "surface_m2": 110, "prix": 180000})

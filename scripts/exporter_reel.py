@@ -49,6 +49,45 @@ def _bien(row) -> dict:
     return {cle: bien.get(cle) for cle in CHAMPS}
 
 
+def sans_doublon_d_url(annonces: list[dict]) -> list[dict]:
+    """Une page d'annonce = un bien. Garde le plus récemment revu.
+
+    L'identifiant d'un bien est fabriqué à partir du nom de son agence ; si
+    ce nom change, le même logement réapparaît sous un second identifiant et
+    la liste le montre deux fois. C'est arrivé : une collecte ciblée avait
+    nommé les agences d'après leur domaine (`ajc-immobilier-com-…` au lieu de
+    `ajc-immobilier-…`), et neuf biens se sont dédoublés.
+
+    L'historique finit par écarter la version périmée — mais seulement après
+    deux passages sur l'agence, soit plusieurs jours d'affichage fautif. On
+    tranche donc ici, sur le seul critère qui ne dépend d'aucun nom : deux
+    annonces qui pointent la même page sont le même bien.
+    """
+    par_url: dict[str, dict] = {}
+    ordre: list[str] = []
+    for bien in annonces:
+        url = bien.get("url")
+        if not url:                                  # sans URL, on ne compare rien
+            ordre.append(id(bien))
+            par_url[id(bien)] = bien
+            continue
+        garde = par_url.get(url)
+        if garde is None:
+            ordre.append(url)
+            par_url[url] = bien
+        elif (bien.get("revue_le") or "") > (garde.get("revue_le") or ""):
+            # La plus fraîche gagne, mais elle hérite de la date de première
+            # vue la plus ancienne : c'est bien le même bien depuis ce jour-là.
+            fusion = dict(bien)
+            anciennes = [d for d in (bien.get("vue_le"), garde.get("vue_le")) if d]
+            if anciennes:
+                fusion["vue_le"] = min(anciennes)
+            par_url[url] = fusion
+        elif garde.get("vue_le") and bien.get("vue_le"):
+            garde["vue_le"] = min(garde["vue_le"], bien["vue_le"])
+    return [par_url[cle] for cle in ordre]
+
+
 def main() -> None:
     conn = db.connexion()
     rows = conn.execute(
@@ -74,6 +113,7 @@ def main() -> None:
     visitees = {b.get("agence") for b in biens if b.get("agence")}
     fusionnees = historique.fusionner(precedentes, biens, visitees,
                                       date.today().isoformat())
+    fusionnees = sans_doublon_d_url(fusionnees)
 
     # Ordre STABLE, par identifiant. Le fichier est committé six fois par jour
     # et pèse un méga-octet : sans ordre fixe, chaque export réécrit tout et

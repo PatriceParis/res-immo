@@ -265,3 +265,16 @@ def test_prix_absurde_efface_quand_le_titre_donne_la_surface():
     assert a["surface_m2"] == 220
     assert a.get("prix") is None
     assert "_surface_du_titre" not in a                  # clé interne nettoyée
+
+
+def test_le_type_du_bien_ne_se_devine_pas_dans_un_nom_de_commune():
+    """Cas réel : « Châteauroux » faisait un château, « Moulins » un moulin."""
+    from app.extraction import _type_bien
+
+    assert _type_bien("Maison 4 pièces 82 m² Châteauroux 36000", set()) == "maison"
+    assert _type_bien("Maison de bourg à Moulins", set()) == "maison"
+    assert _type_bien("Maison de ville à Château-Renault", set()) == "maison"
+    # Un vrai château reste un château.
+    assert _type_bien("Château du XVIIIe avec parc", set()) == "château"
+    assert _type_bien("Moulin à eau restauré", set()) == "moulin"
+    assert _type_bien("Corps de ferme avec grange", set()) == "corps de ferme"

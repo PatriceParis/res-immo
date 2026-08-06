@@ -47,6 +47,14 @@ MOTS_TYPE = [
     ("appartement", "appartement"), ("maison", "maison"),
 ]
 
+# Ces mots doivent être des MOTS, pas des morceaux de mots : « Châteauroux »
+# annonçait un château, et « Moulins » un moulin. On écarte aussi le mot suivi
+# d'un trait d'union, qui trahit presque toujours un nom de commune
+# (Château-Renault, Ferme-Neuve) plutôt que le type du bien.
+RE_MOTS_TYPE = [
+    (re.compile(rf"\b{re.escape(mot)}\b(?!-)"), valeur) for mot, valeur in MOTS_TYPE
+]
+
 RE_JSONLD = re.compile(
     r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
     re.DOTALL | re.IGNORECASE,
@@ -413,8 +421,8 @@ def _geo(noeud: dict):
 
 def _type_bien(titre: str, types: set[str]) -> str:
     bas = (titre or "").lower()
-    for mot, valeur in MOTS_TYPE:
-        if mot in bas:
+    for motif, valeur in RE_MOTS_TYPE:
+        if motif.search(bas):
             return valeur
     for t in types:
         if t in TYPE_VERS_BIEN:

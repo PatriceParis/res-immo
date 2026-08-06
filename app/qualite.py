@@ -40,7 +40,13 @@ _NON_ANNONCE = re.compile(
     # offres se sont retrouvées listées, toutes géolocalisées au siège du
     # constructeur — d'où « 7 biens à Chalon-sur-Saône » qui n'y étaient pas.
     r"|maisons?[^|]{0,40}\+ *terrain|terrains? a batir|votre (future )?maison"
-    r"|maison (connectee|contemporaine|personnalisee)|projet de construction"
+    # « maison contemporaine » décrit aussi bien un modèle de constructeur
+    # qu'une vraie maison à vendre : la règle écartait « Magnifique maison
+    # Contemporaine », une annonce parfaitement valide de Larçay. Les pages
+    # de constructeur qu'elle visait sont déjà prises par « bâtir » et
+    # « votre maison ». On ne garde que « personnalisée », qui n'a de sens
+    # que pour un bien qui n'existe pas encore.
+    r"|maison personnalisee|projet de construction"
     r"|\bbatir\b|primo[- ]accedants?"
 )
 
@@ -62,6 +68,21 @@ _TYPES_EXCLUS = re.compile(
 _URL_TYPE_EXCLU = re.compile(
     r"/(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
     r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf)/",
+    re.IGNORECASE,
+)
+
+# On cherche un bien à ACHETER. Beaucoup d'agences publient location et vente
+# sur le même gabarit de page, et dix annonces de location s'étaient glissées
+# dans le catalogue : « Maison à louer Savonnières », « F3 A louer a Fécamp »…
+# Sans prix de vente, elles n'ont ni écart au marché ni prix au m² — et l'une
+# affichait 199 800 €, un montant récupéré ailleurs sur la page, qui la
+# faisait passer pour une vraie vente.
+_LOCATION_TITRE = re.compile(r"\ba louer\b|\blocation\b|\blouer\b|\bloyer\b")
+# Le chemin de l'URL est le signal le plus sûr : /location/, /louer/, ou le
+# gabarit « maison-a-louer-Commune.htm ». On exige les séparateurs autour du
+# mot pour ne pas attraper un domaine comme « avendrealouer.fr ».
+_URL_LOCATION = re.compile(
+    r"/locations?/|/louer/|[/-]a-louer[-/.]|[/-]locations?[-/.]",
     re.IGNORECASE,
 )
 
@@ -105,6 +126,9 @@ def est_bien_valide(a: dict) -> bool:
     if est_vendu(a):
         return False
     if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
+        return False
+    # Location : ce n'est pas un bien à acheter.
+    if _LOCATION_TITRE.search(titre) or _URL_LOCATION.search(a.get("url") or ""):
         return False
     # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
     if _URL_TYPE_EXCLU.search(a.get("url") or ""):
