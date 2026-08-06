@@ -75,7 +75,14 @@ def main() -> None:
     fusionnees = historique.fusionner(precedentes, biens, visitees,
                                       date.today().isoformat())
 
-    sortie.write_text(json.dumps(fusionnees, ensure_ascii=False, indent=1),
+    # Ordre STABLE, par identifiant. Le fichier est committé six fois par jour
+    # et pèse un méga-octet : sans ordre fixe, chaque export réécrit tout et
+    # git stocke une copie entière à chaque fois — plus de deux gigaoctets par
+    # an pour un catalogue qui bouge à la marge. Trié, seules les lignes des
+    # biens réellement modifiés changent, et le dépôt ne grossit que de ce
+    # qui a bougé.
+    fusionnees.sort(key=lambda b: b.get("id") or "")
+    sortie.write_text(json.dumps(fusionnees, ensure_ascii=False, indent=1) + "\n",
                       encoding="utf-8")
     nouveaux = sum(1 for b in fusionnees if b.get("vue_le") == date.today().isoformat()
                    and b.get("revue_le") == date.today().isoformat()
