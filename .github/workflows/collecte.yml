@@ -6,18 +6,22 @@ name: Collecte d'annonces réelles
 # Deux façons de la lancer :
 #   • à la main : onglet « Actions » → « Collecte d'annonces réelles » →
 #     « Run workflow » (on peut y saisir des sites d'agences précis) ;
-#   • automatiquement : tous les matins (voir cron ci-dessous).
+#   • automatiquement : toutes les quatre heures (voir cron ci-dessous).
 #
-# Pourquoi tous les jours et non plus le lundi ? Parce que la collecte
-# s'arrête sur un budget de temps : elle visite une quinzaine d'agences par
-# passage, en commençant par celles vues il y a le plus longtemps. Avec 53
-# agences, un tour complet prenait UN MOIS — un bien vendu pouvait donc rester
-# affiché quatre semaines. Tous les jours, le tour se boucle en quatre jours.
+# Pourquoi si souvent ? La collecte s'arrête sur un budget de temps : elle
+# visite une quinzaine d'agences par passage, en commençant par celles vues il
+# y a le plus longtemps. L'annuaire est passé de 53 à 235 agences — un
+# passage par jour demanderait DIX-SEPT JOURS pour boucler le tour, et un bien
+# vendu resterait affiché deux semaines et demie. Six passages par jour
+# ramènent le tour à trois jours.
 #
-# Le recensement va porter l'annuaire à plusieurs centaines d'agences : il
-# faudra alors répartir la collecte sur plusieurs jobs parallèles, chacun
-# prenant une tranche de la file, avec une fusion finale — quatre jobs qui
-# committent le même fichier en même temps se perdraient mutuellement.
+# Six passages espacés de quatre heures, et non six jobs parallèles : un
+# passage dure environ quarante minutes, ils ne se chevauchent donc jamais.
+# C'est ce qui compte, car deux jobs qui committent le même fichier
+# d'annonces en même temps se perdraient mutuellement — la reprise après
+# conflit remet en place SA version. Le jour où il faudra vraiment
+# paralléliser, il faudra passer par des artefacts et une fusion finale,
+# comme le fait déjà le workflow de recensement.
 
 on:
   workflow_dispatch:
@@ -35,7 +39,7 @@ on:
         required: false
         default: "8"
   schedule:
-    - cron: "0 6 * * *"   # tous les jours à 06:00 UTC
+    - cron: "0 2,6,10,14,18,22 * * *"   # toutes les 4 h
 
 permissions:
   contents: write
