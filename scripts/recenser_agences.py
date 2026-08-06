@@ -112,9 +112,15 @@ def _overpass(requete: str) -> dict | None:
     return None
 
 
+# Budget de la piste OpenStreetMap. Sans lui, 36 départements à deux essais
+# de 90 secondes dépassaient à eux seuls la durée du job.
+SECONDES_OSM = 1200
+
+
 def piste_osm(departements: list[str]) -> tuple[list[dict], list[dict]]:
     """Agences du département : celles qui ont un site, et celles sans."""
     avec, sans = [], []
+    echeance = time.monotonic() + SECONDES_OSM
     # Overpass n'accepte que 2 requêtes simultanées par IP ; au-delà il refuse
     # et les départements reviennent vides sans le dire.
     with ThreadPoolExecutor(max_workers=2) as pool:
@@ -122,6 +128,9 @@ def piste_osm(departements: list[str]) -> tuple[list[dict], list[dict]]:
                   for d in departements}
         for futur in as_completed(futurs):
             dept = futurs[futur]
+            if time.monotonic() > echeance:
+                futur.cancel()
+                continue
             rep = futur.result()
             if rep is None:
                 print(f"  dept {dept} : Overpass n'a pas répondu")
@@ -264,8 +273,16 @@ def main() -> int:
     # (les sitemaps des grands réseaux pèsent lourd) faisait perdre AUSSI le
     # travail des précédentes quand le job atteignait sa limite de temps.
     def enregistrer() -> None:
+        # On COMPLÈTE le fichier existant au lieu de le remplacer : le
+        # recensement se fait par tranches de départements (36 en un seul run
+        # dépasserait le temps imparti), et une tranche qui écrase la
+        # précédente ne construirait jamais l'annuaire complet.
+        try:
+            deja = json.loads(SORTIE.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            deja = []
         uniques, vues = [], set()
-        for a in recensees + sans_site + registre:
+        for a in deja + recensees + sans_site + registre:
             cle = (decouverte.domaine(a.get("site"))
                    or (a.get("nom", "").lower(), (a.get("commune") or "").lower()))
             if cle in vues:
