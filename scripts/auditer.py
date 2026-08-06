@@ -363,9 +363,49 @@ RE_VILLE_DU_TITRE = re.compile(
     r"\b(?:à|a|de)\s+([A-ZÉÈÀÂÔÎÛ][\w'\-]+(?:[ -][A-ZÉÈÀÂÔÎÛ][\w'\-]+){0,3})")
 
 
+# Ce qui suit « de » dans un titre d'annonce n'est pas toujours une commune :
+# « Maison de Maître », « Baisse de Prix »… Ces mots-là décrivent le bien.
+MOTS_QUI_NE_SONT_PAS_DES_COMMUNES = {
+    "maitre", "prix", "ville", "bourg", "campagne", "caractere", "charme",
+    "standing", "reve", "vacances", "pierre", "village", "pays", "plain pied",
+    "maison", "propriete", "particulier", "prestige", "famille", "vie",
+}
+
+# « à 15 mn de Bellême », « à 5 minutes de Bellême », « proche de Nogent » :
+# le titre situe le bien PAR RAPPORT à cette ville, il ne dit pas qu'il y est.
+# Sans cette garde, une longère de Val-au-Perche vendue « à 15 mn de Bellême »
+# passait pour une erreur d'enregistrement — alors que les deux sont justes.
+RE_PROXIMITE = re.compile(
+    r"(?:\d+\s*(?:mn|min|minutes?|km|kms|h|heures?)|proche|pres|a proximite"
+    r"|aux portes|a deux pas|non loin)\s*(?:de|du|d'|des)?\s*$",
+    re.IGNORECASE,
+)
+
+
 def _sans_accents(s: str) -> str:
     s = unicodedata.normalize("NFD", s or "").encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z]+", " ", s.lower()).strip()
+
+
+def _deplie(s: str) -> str:
+    """Minuscules sans accents, mais en GARDANT les chiffres — « à 15 mn de »
+    ne se reconnaît pas si le 15 a disparu."""
+    return unicodedata.normalize("NFD", s or "").encode("ascii", "ignore").decode().lower()
+
+
+def ville_du_titre(titre: str) -> str | None:
+    """La commune que le titre attribue au bien — ou None s'il n'en donne pas.
+
+    On parcourt tous les candidats plutôt que de s'arrêter au premier : dans
+    « Monts - Baisse de Prix », le premier venu est « Prix ».
+    """
+    for m in RE_VILLE_DU_TITRE.finditer(titre or ""):
+        if _sans_accents(m.group(1)) in MOTS_QUI_NE_SONT_PAS_DES_COMMUNES:
+            continue
+        if RE_PROXIMITE.search(_deplie(titre[:m.start(1)])):
+            continue
+        return m.group(1)
+    return None
 
 
 def verifier_commune_conforme_au_titre(biens: list[dict], audit: Audit) -> None:
@@ -382,16 +422,16 @@ def verifier_commune_conforme_au_titre(biens: list[dict], audit: Audit) -> None:
     signale, il ne corrige pas.
     """
     for b in biens:
-        m = RE_VILLE_DU_TITRE.search(b.get("titre") or "")
+        ville = ville_du_titre(b.get("titre") or "")
         commune = b.get("commune")
-        if not m or not commune:
+        if not ville or not commune:
             continue
-        du_titre, enregistree = _sans_accents(m.group(1)), _sans_accents(commune)
+        du_titre, enregistree = _sans_accents(ville), _sans_accents(commune)
         if not du_titre or du_titre in enregistree or enregistree in du_titre:
             continue
         audit.signaler(
             "commune enregistrée en désaccord avec le titre",
-            f"enregistré « {commune} », titre « {m.group(1)} »  {_etiquette(b)}")
+            f"enregistré « {commune} », titre « {ville} »  {_etiquette(b)}")
 
 
 REGLES = (
