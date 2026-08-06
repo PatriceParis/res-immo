@@ -57,12 +57,46 @@ jobs:
             for essai in 1 2 3 4 5; do
               if git push; then echo "Poussé (essai $essai)."; break; fi
               echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
+              # On FUSIONNE avec la version distante au lieu de la remplacer.
+              # Remettre simplement son propre fichier effacerait le travail de
+              # l'autre run — et le recensement se fait par tranches, donc deux
+              # runs se chevauchent forcément un jour.
               cp data/agences_recensees.json "$RUNNER_TEMP/a.json"
               cp data/couverture_agences.json "$RUNNER_TEMP/c.json" 2>/dev/null || true
               git fetch origin main
               git reset --hard origin/main
-              cp "$RUNNER_TEMP/a.json" data/agences_recensees.json
+              python - <<'FUSION'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          def cle(a):
+              site = a.get("site") or ""
+              if site:
+                  h = urlparse(site if "//" in site else "https://" + site).netloc.lower()
+                  return h[4:] if h.startswith("www.") else h
+              return (a.get("nom", "").lower(), (a.get("commune") or "").lower())
+
+          cible = Path("data/agences_recensees.json")
+          try:
+              distant = json.loads(cible.read_text(encoding="utf-8"))
+          except (OSError, ValueError):
+              distant = []
+          import os
+          mien = json.loads(Path(os.environ["RUNNER_TEMP"], "a.json").read_text(encoding="utf-8"))
+          fusion, vues = [], set()
+          for a in distant + mien:
+              k = cle(a)
+              if k in vues:
+                  continue
+              vues.add(k)
+              fusion.append(a)
+          cible.write_text(json.dumps(fusion, ensure_ascii=False, indent=1) + "\n",
+                           encoding="utf-8")
+          print(f"Fusion : {len(distant)} distantes + {len(mien)} locales → {len(fusion)}")
+          FUSION
               cp "$RUNNER_TEMP/c.json" data/couverture_agences.json 2>/dev/null || true
+              N=$(python -c "import json; print(len(json.load(open('data/agences_recensees.json'))))" 2>/dev/null || echo 0)
               git add data/agences_recensees.json data/couverture_agences.json
               git commit -m "Recensement : $N agences répertoriées ($(date -u +%F))" || true
               sleep $((essai * 5))
