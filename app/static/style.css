@@ -139,15 +139,25 @@ body {
 .badge.sourd { background: transparent; color: var(--encre-2); }
 
 /* Le score de résilience est notre apport propre : il se pose sur la photo,
-   là où les portails mettent le DPE — visible sans voler la vedette au prix. */
+   là où les portails mettent le DPE. Il y est désormais SEUL — « Nouveau » et
+   « photo de l'agence » l'entouraient de bruit — et assez grand pour se lire
+   d'un coup d'œil dans une liste. C'est la seule chose que ce site sait dire
+   et qu'aucun portail ne dit. */
 .score-pastille {
-  position: absolute; right: 8px; bottom: 8px; z-index: 2;
+  position: absolute; right: 10px; bottom: 10px; z-index: 2;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-width: 46px; padding: 4px 7px; border-radius: 9px; line-height: 1;
-  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+  min-width: 66px; padding: 8px 10px 7px; border-radius: 12px; line-height: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  border: 2px solid rgba(255,255,255,.55);
 }
-.score-pastille b { font-size: 17px; font-weight: 800; }
-.score-pastille small { font-size: 8.5px; letter-spacing: .3px; opacity: .85; margin-top: 2px; }
+.score-pastille b { font-size: 27px; font-weight: 800; letter-spacing: -.5px; }
+.score-pastille i {
+  font-style: normal; font-size: 10px; font-weight: 700; opacity: .75; margin-top: 1px;
+}
+.score-pastille small {
+  font-size: 9px; letter-spacing: .6px; text-transform: uppercase;
+  font-weight: 600; opacity: .9; margin-top: 4px;
+}
 .score-pastille.n1 { background: var(--n1); color: var(--encre); }
 .score-pastille.n2 { background: var(--n2); color: #14281c; }
 .score-pastille.n3 { background: var(--n3); color: #fff; }
@@ -318,25 +328,18 @@ body {
   height: 178px; margin: -14px -16px 12px; position: relative;
   background: #dfe7df center/cover no-repeat;
 }
-.photo-compte {
-  position: absolute; bottom: 8px; left: 8px; font-size: 10.5px;
-  background: rgba(20, 30, 24, .55); color: #fff; padding: 2px 8px; border-radius: 6px;
-}
 .photo-grande {
   height: 230px; border-radius: 12px; margin-bottom: 14px; position: relative;
   background: #dfe7df center/cover no-repeat;
 }
-.photo-grande .photo-compte { bottom: 10px; left: 10px; }
-
+.photo-grande 
 /* vraie photo de l'agence, posée sur l'illustration (repli si échec de chargement) */
 .vraie-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; }
-.photo-compte { z-index: 2; }
 
 /* Photo qui ne charge pas : on retombe sur l'illustration, et la pastille
    « photo de l'agence » s'efface avec elle. Annoncer une photo qu'on ne
    montre pas serait le même défaut que d'en inventer le nombre. */
-.photo-absente .photo-compte { display: none; }
-
+.photo-absente 
 /* ---------- mise en relation (modèle : photos + contact agence) ---------- */
 .mise-en-relation {
   display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
@@ -419,12 +422,6 @@ body { overflow-x: hidden; }
 .aide-filtre { color: var(--encre-2); font-size: 11px; cursor: help; }
 
 /* Fraîcheur : ce qui vient d'arriver, et ce dont le prix a baissé. */
-.pastille-nouveau {
-  position: absolute; top: 8px; left: 8px; z-index: 2;
-  background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
-  padding: 3px 9px; border-radius: 99px; letter-spacing: .3px;
-  box-shadow: 0 1px 4px rgba(20, 30, 24, .3);
-}
 .baisse-prix {
   background: #eaf2ec; border: 1px solid var(--badge-bord); color: var(--marque);
   font-weight: 700; font-size: 12px; padding: 2px 7px; border-radius: 99px;

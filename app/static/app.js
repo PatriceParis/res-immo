@@ -135,13 +135,6 @@ function illustration(a) {
 /* ---------------- fraîcheur de l'annonce ----------------
    Ce que cherche celui qui revient chaque semaine : ce qui a bougé. */
 
-function estNouveau(a, jours = 10) {
-  if (!a.vue_le) return false;
-  const vue = new Date(a.vue_le);
-  if (isNaN(vue)) return false;
-  return (Date.now() - vue.getTime()) / 86400000 <= jours;
-}
-
 // Une baisse de prix est le signal d'achat le plus parlant — et celui
 // qu'aucun portail n'affiche clairement.
 function baisse(a) {
@@ -189,14 +182,6 @@ function fraicheur(a) {
       auprès de l'agence avant de vous déplacer.</p>`;
   }
   return `<p class="source-ligne">Annonce constatée en ligne ${quand}.</p>`;
-}
-
-// On ne connaît QU'UNE photo par bien (celle publiée par l'agence). Afficher
-// « 1 / 9 » revenait à inventer un nombre à partir d'un hachage de l'identifiant,
-// et à le présenter comme un fait — jusque dans l'argument commercial
-// (« 8 autres photos »). On ne promet donc plus de compte.
-function aUnePhoto(a) {
-  return Boolean(photoReelle(a));
 }
 
 /* ---------------- terroirs ciblés ---------------- */
@@ -351,13 +336,18 @@ function ficheAnnonce(a) {
   return `
   <article class="fiche" data-id="${echap(a.id)}" tabindex="0" role="button"
            aria-label="Voir le détail : ${echap(a.titre)}">
+    <!-- Une seule pastille sur la photo, et c'est le score de résilience.
+         « Nouveau » et « photo de l'agence » l'entouraient de bruit : le
+         premier n'apprend rien sur le bien, le second énonce l'évidence —
+         une photo d'agence sur un site d'annonces. Ce qui distingue ce
+         service, c'est le score ; il est désormais seul et lisible de loin. -->
     <div class="photo" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
-      ${estNouveau(a) ? `<span class="pastille-nouveau">Nouveau</span>` : ""}
       <span class="score-pastille ${niveau}"
-            title="Score de résilience : ${Math.round(a.score_total)} sur 100">
-        <b>${Math.round(a.score_total)}</b><small>résilience</small></span>
-      ${aUnePhoto(a) ? `<span class="photo-compte">photo de l'agence</span>` : ""}
+            title="Score de résilience : ${Math.round(a.score_total)} sur 100 — ${
+              echap((a.score_detail && a.score_detail.classe) || "")}">
+        <b>${Math.round(a.score_total)}</b><i>/100</i>
+        <small>résilience</small></span>
     </div>
     <div class="fiche-corps">
       <div class="ligne-prix">
@@ -502,7 +492,6 @@ function ouvrirFiche(id) {
   $("#modale-contenu").innerHTML = `
     <div class="photo-grande" style="background-image:url('${illustration(a)}')">
       ${imgPhoto(a)}
-      ${aUnePhoto(a) ? `<span class="photo-compte">📷 photo de l'agence</span>` : ""}
     </div>
     <header class="fiche-entete">
       <div class="score-jeton grand ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
