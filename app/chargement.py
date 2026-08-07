@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-from . import db, gares, geo, marche, regions, scoring
+from . import caviardage, db, gares, geo, marche, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
 
 # Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
@@ -21,7 +21,10 @@ MAX_M2_PAR_PIECE = 120
 
 
 def preparer_annonce(brut: dict) -> dict:
-    annonce = dict(brut)
+    # Les identifiants d'autrui sortent AVANT tout le reste : une clé d'API
+    # captée dans le texte d'une page n'a rien à faire dans notre base, et
+    # encore moins dans un dépôt public (voir app/caviardage.py).
+    annonce = caviardage.caviarder_annonce(brut)
     titre = annonce.get("titre", "")
     description = annonce.get("description", "")
 
