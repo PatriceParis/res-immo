@@ -98,3 +98,32 @@ def test_le_garde_fou_regarde_dans_les_listes_et_les_dictionnaires():
     assert identifiants_restants(
         {"photos": ["https://cdn.fr/a.jpg"], "risques": {"inondation": True},
          "prix": 200000}) == []
+
+
+def test_une_photo_signee_est_retiree_sans_perdre_l_annonce():
+    """Cas réel : les images d'Immo Côte d'Opale portent un `access-token=`.
+    C'est l'IMAGE qui pose problème, pas la maison — six annonces valides
+    auraient disparu du catalogue pour cette seule raison."""
+    from app.caviardage import preparer_pour_publication
+
+    signee = "https://cdn.agence.fr/photo-9.jpg?access-token=" + "z" * 40
+    propre, retires = preparer_pour_publication({
+        "id": "x1", "url": "https://agence.fr/bien/9", "photo": signee,
+        "photos": [signee, "https://cdn.agence.fr/photo-10.jpg"],
+        "titre": "Maison 5 pièces à Berck", "prix": 245000,
+    })
+    assert propre["photos"] == ["https://cdn.agence.fr/photo-10.jpg"]
+    assert propre["photo"] == "https://cdn.agence.fr/photo-10.jpg", "on prend la suivante"
+    assert identifiants_restants(propre) == []
+    assert retires, "le retrait doit être signalé"
+
+
+def test_sans_candidate_propre_l_annonce_reste_mais_sans_image():
+    from app.caviardage import preparer_pour_publication
+
+    signee = "https://cdn.agence.fr/p.jpg?access-token=" + "z" * 40
+    propre, _ = preparer_pour_publication(
+        {"id": "x2", "url": "https://agence.fr/bien/2", "photo": signee,
+         "photos": [signee], "titre": "Longère"})
+    assert propre["photo"] is None
+    assert identifiants_restants(propre) == []

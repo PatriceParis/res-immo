@@ -122,17 +122,22 @@ def main() -> None:
     # Le caviardage à l'entrée devrait suffire ; s'il a laissé passer quelque
     # chose, mieux vaut écarter le bien et le dire que faire refuser le dépôt
     # entier — ou publier la clé de quelqu'un.
-    propres, suspects = [], []
+    propres, allegees, abandonnes = [], 0, []
     for bien in fusionnees:
+        bien, retires = caviardage.preparer_pour_publication(bien)
+        if retires:
+            allegees += 1
         champs = caviardage.identifiants_restants(bien)
         if champs:
-            suspects.append((bien.get("id"), champs))
-        else:
-            propres.append(bien)
-    if suspects:
-        print(f"  {len(suspects)} bien(s) écarté(s) — identifiant de tiers "
-              f"détecté dans : {sorted({c for _, cs in suspects for c in cs})}")
-        for identifiant, champs in suspects[:5]:
+            abandonnes.append((bien.get("id"), champs))
+            continue
+        propres.append(bien)
+    if allegees:
+        print(f"  {allegees} bien(s) allégé(s) d'une adresse signée par un jeton")
+    if abandonnes:
+        print(f"  {len(abandonnes)} bien(s) abandonné(s) — identifiant de tiers "
+              f"irréductible : {sorted({c for _, cs in abandonnes for c in cs})}")
+        for identifiant, champs in abandonnes[:5]:
             print(f"    {identifiant} → {champs}")
     fusionnees = propres
 
