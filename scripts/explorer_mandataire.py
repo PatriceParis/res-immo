@@ -44,6 +44,14 @@ _NAVIGATEUR = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.
 SECONDES = 20
 PLAFOND = 20_000_000
 
+# Ce qui ressemble à une page de bien, tous réseaux confondus. Taillé pour
+# IAD au départ (« /annonce/ »), il manquait les autres : chaque réseau a son
+# vocabulaire, et une sonde qui ne voit qu'un seul mot conclut trop vite qu'il
+# n'y a rien à voir.
+RE_ANNONCE = re.compile(
+    r"/(annonces?|biens?|vente|a-vendre|propriete|maison|offre|ref)[-/]",
+    re.IGNORECASE)
+
 
 def lire(url: str) -> tuple[int, bytes]:
     requete = urllib.request.Request(url, headers={
@@ -154,7 +162,7 @@ def _annonces_du_sitemap(sitemaps: list[str], profondeur: int = 2) -> list[str]:
             liens = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>",
                                donnees.decode("utf-8", "replace"))
             sous = [u for u in liens if u.endswith((".xml", ".xml.gz"))]
-            ici = [u for u in liens if "/annonce" in u or "/bien" in u]
+            ici = [u for u in liens if RE_ANNONCE.search(u)]
             print(f"   {sitemap.split('/')[-1]:24} {len(liens):6} lien(s) — "
                   f"{len(sous)} sous-sitemap(s), {len(ici)} annonce(s)")
             annonces += ici
@@ -221,27 +229,24 @@ def _resumer_par_commune(urls: list[str], departements_cibles: set) -> None:
 
 def main() -> None:
     parametres = argparse.ArgumentParser()
-    parametres.add_argument("annonce", nargs="?",
-                            help="URL d'une annonce du réseau (facultatif : à "
-                                 "défaut, on en prend une au sitemap)")
-    parametres.add_argument("--site", help="racine du site (déduite sinon)")
+    parametres.add_argument("cibles", nargs="+",
+                            help="domaines ou URL d'annonces, un par réseau")
     args = parametres.parse_args()
 
-    if not args.annonce and not args.site:
-        print("Donnez au moins --site ou l'URL d'une annonce.")
-        raise SystemExit(2)
-    morceaux = urlparse(args.annonce or args.site)
-    base = args.site or f"{morceaux.scheme}://{morceaux.netloc}"
-    print("=" * 78)
-    print(f"SONDE MANDATAIRE — {base}")
-    print("=" * 78)
+    for cible in args.cibles:
+        morceaux = urlparse(cible)
+        base = f"{morceaux.scheme}://{morceaux.netloc}"
+        annonce = cible if morceaux.path.strip("/") else ""
+        print("\n" + "=" * 78)
+        print(f"SONDE MANDATAIRE — {base}")
+        print("=" * 78)
 
-    sitemaps = ce_que_le_site_autorise(base)
-    # On évalue d'abord la porte d'entrée : sans elle, il n'y a pas de piste,
-    # et elle nous fournit au passage une annonce à disséquer. Évaluer un
-    # réseau ne demande donc plus d'en connaître une d'avance.
-    annonces = comment_atteindre_un_terroir(base, sitemaps)
-    ce_qu_on_sait_extraire(args.annonce or (annonces[0] if annonces else ""))
+        sitemaps = ce_que_le_site_autorise(base)
+        # On évalue d'abord la porte d'entrée : sans elle il n'y a pas de
+        # piste, et elle fournit au passage une annonce à disséquer. Évaluer
+        # un réseau ne demande donc plus d'en connaître une d'avance.
+        annonces = comment_atteindre_un_terroir(base, sitemaps)
+        ce_qu_on_sait_extraire(annonce or (annonces[0] if annonces else ""))
     print("\nFin de sonde.")
 
 
