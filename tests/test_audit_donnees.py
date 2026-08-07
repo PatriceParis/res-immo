@@ -50,3 +50,37 @@ def test_une_ville_citee_pour_situer_le_bien_n_est_pas_sa_commune():
     # Mais une adresse franche reste une adresse.
     assert ville_du_titre(
         "Maison en pierre avec jardin et garage à Bellême (61130)") == "Bellême"
+
+
+def _audit(biens):
+    a = auditer.Audit()
+    auditer.verifier_biens_empiles_sur_un_point(biens, a)
+    return a
+
+
+def _bien(agence, commune, lat, lon):
+    return {"agence": agence, "commune": commune, "lat": lat, "lon": lon,
+            "titre": f"Maison à {commune}", "id": f"{agence}-{commune}"}
+
+
+def test_toute_une_agence_sur_un_point_est_signalee():
+    """Le symptôme du code postal de l'agence pris pour celui du bien :
+    des communes différentes, une seule coordonnée."""
+    biens = [_bien("Agence du Havre", c, 49.507, 0.130)
+             for c in ("Le Havre", "Montivilliers", "Harfleur", "Gonfreville")]
+    assert sum(len(v) for v in _audit(biens).anomalies.values()) == 1
+
+
+def test_une_agence_dont_les_biens_sont_repartis_ne_l_est_pas():
+    biens = [_bien("Agence répartie", "Bellême", 48.373, 0.560),
+             _bien("Agence répartie", "Mortagne", 48.520, 0.545),
+             _bien("Agence répartie", "Nogent", 48.322, 0.821),
+             _bien("Agence répartie", "Rémalard", 48.475, 0.780)]
+    assert not _audit(biens).anomalies
+
+
+def test_trois_biens_ne_suffisent_pas_a_juger():
+    """Une petite agence de village peut honnêtement n'avoir que trois biens,
+    tous chez elle — on ne l'accuse pas sur si peu."""
+    biens = [_bien("Petite agence", "Bellême", 48.373, 0.560) for _ in range(3)]
+    assert not _audit(biens).anomalies

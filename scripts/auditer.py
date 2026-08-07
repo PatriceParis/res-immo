@@ -327,6 +327,51 @@ def verifier_filtres_actifs(biens: list[dict], audit: Audit) -> None:
                            f"{coches} biens sur {len(connus)}")
 
 
+# En-deçà, l'échantillon est trop mince : une petite agence de village peut
+# honnêtement n'avoir que trois biens, tous dans sa commune.
+BIENS_MINIMUM_POUR_JUGER_UNE_AGENCE = 4
+
+
+def verifier_biens_empiles_sur_un_point(biens: list[dict], audit: Audit) -> None:
+    """Toute une agence sur une seule coordonnée : ses biens ne sont pas situés.
+
+    Quand la page d'annonce ne donne pas l'adresse du bien, c'est le code
+    postal du pied de page — celui de l'AGENCE — qui sert à le localiser.
+    Tous ses biens atterrissent alors au même endroit : le centre de sa
+    propre commune. C'est ce qui avait mis sept maisons à Chalon-sur-Saône,
+    où il n'y en avait aucune.
+
+    Le symptôme se voit sans quitter le fichier : des biens censés être dans
+    des communes différentes partagent la coordonnée au mètre près. Deux
+    agences du Havre partageaient même exactement le même point.
+
+    Ce qui est en jeu n'est pas seulement la carte : la distance à Paris,
+    l'altitude, la densité et le risque d'inondation sont tous calculés à
+    partir de ce point. Faux, ils faussent le score de résilience.
+
+    Ce contrôle signale, il ne corrige pas : distinguer l'agence de village
+    qui ne vend vraiment que chez elle de celle qui empile tout son
+    catalogue sur sa vitrine demande de rouvrir les annonces.
+    """
+    par_agence: dict = defaultdict(list)
+    for b in biens:
+        if b.get("agence"):
+            par_agence[b["agence"]].append(b)
+
+    for agence, siens in sorted(par_agence.items()):
+        if len(siens) < BIENS_MINIMUM_POUR_JUGER_UNE_AGENCE:
+            continue
+        points = {(round(b["lat"], 3), round(b["lon"], 3)) for b in siens
+                  if b.get("lat") and b.get("lon")}
+        if len(points) != 1:
+            continue
+        communes = {b.get("commune") for b in siens if b.get("commune")}
+        audit.signaler(
+            "toute une agence localisée sur un point unique",
+            f"{agence} — {len(siens)} bien(s) au même endroit "
+            f"({', '.join(sorted(c for c in communes if c)) or 'commune inconnue'})")
+
+
 """ Fraîcheur : au-delà, un bien affiché n'a pas été reconstaté en ligne
 depuis longtemps, et peut fort bien être vendu."""
 JOURS_AVANT_PEREMPTION = 45
@@ -449,6 +494,7 @@ REGLES = (
     verifier_filtres_actifs,
     verifier_fraicheur,
     verifier_commune_conforme_au_titre,
+    verifier_biens_empiles_sur_un_point,
 )
 
 
