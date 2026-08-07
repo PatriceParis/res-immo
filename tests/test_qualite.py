@@ -231,3 +231,30 @@ def test_une_vraie_maison_contemporaine_reste_au_catalogue():
     assert not est_bien_valide(
         {"titre": "Votre Maison Connectée avec DELTA DORE - Bourgogne Bâtir",
          "type_bien": "maison", "surface_m2": 110, "prix": 180000})
+
+
+def test_pages_catalogue_ecartees():
+    """Cas réels : l'extraction y prend le prix et la surface de la première
+    vignette, ce qui les faisait passer pour un bien à part entière."""
+    for titre in ("177 Maisons à vendre",
+                  "22 Villas et maisons à vendre",
+                  "Vente de maisons et villas | Agence du Centre",
+                  "Biens immobiliers à vendre | Berry Immobilier",
+                  "Maisons à vendre à Pont-l'Évêque"):
+        assert not est_bien_valide(
+            {"titre": titre, "type_bien": "maison", "surface_m2": 370,
+             "prix": 212000}), titre
+    # Page de glossaire repérée par son URL.
+    assert not est_bien_valide(
+        {"titre": "Biens immobiliers - Office b", "type_bien": "maison",
+         "surface_m2": 721, "prix": 240000,
+         "url": "https://www.office-b.fr/lexique/biens-immobiliers/"})
+
+
+def test_une_annonce_singuliere_reste_valide():
+    """« Maison à vendre à Barentin » est une vraie annonce : singulier, pas
+    de décompte. La règle contre les catalogues ne doit pas l'emporter."""
+    assert est_bien_valide(
+        {"titre": "Maison à vendre à Barentin : 5 pièces avec jardin",
+         "type_bien": "maison", "surface_m2": 120, "prix": 245000,
+         "url": "https://biasimmobilier.fr/maison-barentin-5p/"})

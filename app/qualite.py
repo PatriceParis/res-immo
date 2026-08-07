@@ -24,6 +24,17 @@ from .scoring import normaliser
 # Titres qui trahissent une page qui n'est PAS une annonce individuelle.
 _NON_ANNONCE = re.compile(
     r"nos biens|biens a vendre|\bannonces\b|resultats?|\brecherche\b|\bsearch\b"
+    # Page catalogue titrée par son compte : « 177 Maisons à vendre ». Le
+    # pluriel et le nombre en tête la distinguent d'une vraie annonce, qui dit
+    # « Maison à vendre à Barentin » — au singulier, sans décompte.
+    r"|^\d+ (?:maisons|biens|annonces|proprietes|appartements|logements)\b"
+    r"|\bmaisons a vendre\b"
+    # Autres gabarits de page catalogue rencontrés : « Vente de maisons et
+    # villas | Agence du Centre », « Biens immobiliers à vendre | Berry
+    # Immobilier ». L'extraction y prend le prix et la surface de la première
+    # vignette, ce qui les faisait passer pour un bien à part entière.
+    r"|^vente (?:de|d')|^biens immobiliers\b|\bbiens immobiliers a vendre\b"
+    r"|\bvillas et maisons\b|\bmaisons et villas\b"
     r"|\bblog\b|actualit|\bconseils?\b|\bguides?\b|quel mandat|estimation"
     r"|qui sommes|contactez|mentions legales|notre agence|vendre (sa|votre|ma|leur) "
     r"|comment (vendre|acheter|choisir|estimer)|pourquoi (vendre|choisir|faire)"
@@ -67,7 +78,10 @@ _TYPES_EXCLUS = re.compile(
 # — signal bien plus fiable que le titre, souvent tronqué ou commercial.
 _URL_TYPE_EXCLU = re.compile(
     r"/(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
-    r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf)/",
+    r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf"
+    # Page de glossaire : /lexique/biens-immobiliers/ décrivait le mot, pas
+    # un bien — et repartait avec le prix lu ailleurs sur la page.
+    r"|lexique|glossaire|definitions?)/",
     re.IGNORECASE,
 )
 

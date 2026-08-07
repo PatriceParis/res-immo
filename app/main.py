@@ -241,34 +241,55 @@ _UA_NAV = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
            "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
 
 
+def referer_de_la_page(page: str | None, cible) -> str:
+    """Le Referer qu'enverrait un navigateur affichant `page`.
+
+    À défaut de page exploitable (absente, relative, autre protocole), on se
+    rabat sur le domaine de l'image : c'est ce qui se faisait avant, et cela
+    convient tant que l'agence héberge ses photos chez elle.
+    """
+    if page:
+        origine = urlparse(page)
+        if origine.scheme in ("http", "https") and origine.hostname:
+            return f"{origine.scheme}://{origine.netloc}/"
+    return f"{cible.scheme}://{cible.hostname}/"
+
+
 @app.get("/api/photo")
-def proxy_photo(u: str):
+def proxy_photo(u: str, p: str | None = None):
     """Relaie une image d'agence depuis NOTRE domaine.
 
     Les CDN d'agences bloquent souvent le « hotlink » (image chargée depuis un
     autre site) : le navigateur n'affichait donc rien sur Vercel. En passant par
     ce relais, l'image est servie depuis res-immo.vercel.app et s'affiche.
+
+    `p` est la page de l'annonce d'où vient l'image. C'est elle qui donne le
+    bon Referer : un navigateur qui affiche cette page réclame l'image AVEC
+    l'adresse de la page. Beaucoup d'agences hébergent leurs photos sur un CDN
+    d'un autre domaine (groupe123immo.com → staticlbi.com) ; se réclamer du
+    CDN lui-même, comme on le faisait, n'imite aucun navigateur réel. Sans
+    `p`, on retombe sur l'ancien comportement, qui suffit aux agences qui
+    hébergent leurs images chez elles.
     """
-    p = urlparse(u)
-    if p.scheme not in ("http", "https") or not p.hostname:
+    cible = urlparse(u)
+    if cible.scheme not in ("http", "https") or not cible.hostname:
         raise HTTPException(status_code=400, detail="URL invalide")
     # Anti-SSRF : on refuse les adresses privées / locales.
     try:
-        for infos in socket.getaddrinfo(p.hostname, None):
+        for infos in socket.getaddrinfo(cible.hostname, None):
             ip = ipaddress.ip_address(infos[4][0])
             if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved:
                 raise HTTPException(status_code=400, detail="hôte non autorisé")
     except socket.gaierror:
         raise HTTPException(status_code=400, detail="hôte introuvable")
 
-    # On imite le navigateur chargeant l'image DEPUIS le site de l'agence
-    # (Referer + Origin de son propre domaine) : c'est ce que vérifient la
-    # plupart des protections anti-hotlink des CDN.
+    # On imite le navigateur affichant la PAGE de l'annonce : c'est cette
+    # adresse-là que vérifient les protections anti-hotlink des CDN.
     req = urllib.request.Request(u, headers={
         "User-Agent": _UA_NAV,
         "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
         "Accept-Language": "fr-FR,fr;q=0.9",
-        "Referer": f"{p.scheme}://{p.hostname}/",
+        "Referer": referer_de_la_page(p, cible),
     })
     try:
         with urllib.request.urlopen(req, timeout=8) as r:
