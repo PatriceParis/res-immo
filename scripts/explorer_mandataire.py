@@ -125,39 +125,90 @@ def comment_atteindre_un_terroir(base: str, sitemaps: list[str]) -> None:
         return
 
     cibles = {d for d, r in REGION_PAR_DEPT.items() if r in set(regions_cibles())}
-    for sitemap in sitemaps[:4]:
-        code, donnees = lire(sitemap)
+    annonces = _annonces_du_sitemap(sitemaps)
+    if not annonces:
+        print("   Aucune annonce trouvée dans les sitemaps.")
+        return
+    print(f"\n4. VOLUME ATTEIGNABLE — {len(annonces)} annonce(s) publiées au sitemap")
+    _resumer_par_commune(annonces, cibles)
+
+
+def _annonces_du_sitemap(sitemaps: list[str], profondeur: int = 2) -> list[str]:
+    """Descend dans les sous-sitemaps jusqu'à trouver les annonces."""
+    a_lire, annonces, vus = list(sitemaps), [], set()
+    for _ in range(profondeur + 1):
+        suivants = []
+        for sitemap in a_lire[:12]:
+            if sitemap in vus:
+                continue
+            vus.add(sitemap)
+            code, donnees = lire(sitemap)
+            if code != 200 or not donnees:
+                print(f"   {sitemap} → HTTP {code}")
+                continue
+            liens = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>",
+                               donnees.decode("utf-8", "replace"))
+            sous = [u for u in liens if u.endswith((".xml", ".xml.gz"))]
+            ici = [u for u in liens if "/annonce" in u or "/bien" in u]
+            print(f"   {sitemap.split('/')[-1]:24} {len(liens):6} lien(s) — "
+                  f"{len(sous)} sous-sitemap(s), {len(ici)} annonce(s)")
+            annonces += ici
+            suivants += sous
+        a_lire = suivants
+        if not a_lire:
+            break
+    return annonces
+
+
+def _slug(texte: str) -> str:
+    import unicodedata
+    sans = unicodedata.normalize("NFD", texte).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", sans.lower()).strip("-")
+
+
+def _communes_des_departements(departements: set) -> dict:
+    """Nom normalisé → département, pour les terroirs ciblés."""
+    import json
+    communes = {}
+    for dept in sorted(departements):
+        code, donnees = lire(
+            f"https://geo.api.gouv.fr/departements/{dept}/communes?fields=nom")
         if code != 200 or not donnees:
-            print(f"   {sitemap} → HTTP {code}, illisible")
             continue
-        texte = donnees.decode("utf-8", "replace")
-        liens = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", texte)
-        sous = [u for u in liens if ".xml" in u]
-        annonces = [u for u in liens if "/annonce" in u or "/bien" in u]
-        print(f"   {sitemap}")
-        print(f"     {len(liens)} lien(s) — {len(sous)} sous-sitemap(s), "
-              f"{len(annonces)} annonce(s) directe(s)")
-        if annonces:
-            _resumer_par_commune(annonces, cibles)
-        for s in sous[:3]:
-            print(f"     ↳ {s}")
+        try:
+            for c in json.loads(donnees):
+                communes[_slug(c["nom"])] = dept
+        except ValueError:
+            continue
+    return communes
 
 
 def _resumer_par_commune(urls: list[str], departements_cibles: set) -> None:
-    """Les URL d'annonces portent souvent le nom de la commune : on s'en sert
-    pour estimer ce qui tomberait dans nos terroirs."""
-    print(f"     exemples : {urls[0][:100]}")
-    codes = re.compile(r"\b(\d{5})\b")
+    """Les URL d'annonces portent le nom de la commune : on s'en sert pour
+    estimer ce qui tomberait dans nos terroirs, département par département."""
+    print(f"   exemple : {urls[0][:104]}")
+    print(f"   Rapprochement avec les communes des {len(departements_cibles)} "
+          f"départements ciblés…")
+    communes = _communes_des_departements(departements_cibles)
+    if not communes:
+        print("   Liste des communes indisponible : rapprochement impossible.")
+        return
+    # Les noms longs d'abord : « saint-berain-sur-dheune » avant « berain ».
+    par_longueur = sorted(communes, key=len, reverse=True)
     par_dept: dict = {}
-    for u in urls:
-        trouve = codes.search(u)
-        if trouve:
-            dept = trouve.group(1)[:2]
-            par_dept[dept] = par_dept.get(dept, 0) + 1
-    if par_dept:
-        dans_cible = sum(n for d, n in par_dept.items() if d in departements_cibles)
-        print(f"     {dans_cible} annonce(s) dans les départements ciblés "
-              f"sur {sum(par_dept.values())} localisables")
+    touchees = 0
+    for url in urls:
+        chemin = _slug(urlparse(url).path)
+        for nom in par_longueur:
+            if len(nom) >= 5 and nom in chemin:
+                dept = communes[nom]
+                par_dept[dept] = par_dept.get(dept, 0) + 1
+                touchees += 1
+                break
+    print(f"   {touchees} annonce(s) rattachées à une commune de nos terroirs "
+          f"({touchees * 100 // max(len(urls), 1)} % du total national)")
+    for dept, n in sorted(par_dept.items(), key=lambda t: -t[1])[:12]:
+        print(f"     {dept} {REGION_PAR_DEPT.get(dept, ''):24} {n:5}")
 
 
 def main() -> None:
