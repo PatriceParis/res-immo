@@ -21,6 +21,10 @@ on:
         description: "Budget de temps"
         required: false
         default: "30"
+      departements:
+        description: "Codes séparés par des virgules (vide = tour normal)"
+        required: false
+        default: ""
   schedule:
     - cron: "0 1,13 * * *"
 
@@ -52,9 +56,11 @@ jobs:
         env:
           RESEAU: ${{ github.event.inputs.reseau }}
           MINUTES: ${{ github.event.inputs.minutes }}
+          DEPTS: ${{ github.event.inputs.departements }}
         run: |
           OPTIONS="--minutes ${MINUTES:-30}"
           if [ -n "$RESEAU" ]; then OPTIONS="$OPTIONS --reseau $RESEAU"; fi
+          if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
           python scripts/collecter_mandataires.py $OPTIONS
 
       - name: Enrichir les risques officiels (Géorisques)

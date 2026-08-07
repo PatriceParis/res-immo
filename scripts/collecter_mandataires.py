@@ -201,6 +201,10 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     print(f"  {len(adresses)} annonce(s) au sitemap")
     a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index)
     groupes = mandataires.par_departement(a_visiter)
+    if args.departements:
+        voulus = {d.strip() for d in args.departements.split(",") if d.strip()}
+        groupes = {d: lot for d, lot in groupes.items() if d in voulus}
+        print(f"  restreint à {sorted(voulus)} — {len(groupes)} département(s) trouvé(s)")
     print(f"  {len(a_visiter)} dans nos terroirs, sur {len(groupes)} département(s)")
 
     vu = derniere_visite()
@@ -238,6 +242,9 @@ def main() -> None:
                             help="annonces visitées par département et par passage")
     parametres.add_argument("--delai", type=float, default=1.5,
                             help="secondes entre deux pages")
+    parametres.add_argument("--departements",
+                            help="codes séparés par des virgules — pour vérifier "
+                                 "un terroir précis sans attendre son tour")
     args = parametres.parse_args()
 
     print("Communes des terroirs ciblés…")
