@@ -422,6 +422,10 @@ def _image_de_la_page(html: str, base: str | None) -> str | None:
     présente dans la même page. Trois correctifs successifs sur des noms de
     fichiers n'avaient traité que les symptômes de ce choix-là.
     """
+    return _classees(*_candidates_de_la_page(html, base))
+
+
+def _candidates_de_la_page(html: str, base: str | None) -> tuple[list, list]:
     candidates, secours = [], []
     for balise in RE_BALISE_IMG.finditer(html or ""):
         attrs = {}
@@ -457,14 +461,38 @@ def _image_de_la_page(html: str, base: str | None) -> str | None:
         for m in RE_FOND_CSS.finditer(html or ""):
             url = _url_img(m.group(1), base)
             if url and not (RE_IMG_HABILLAGE.search(url) or RE_IMG_LANGUE.search(url)):
-                return url
+                secours.append(url)
 
-    # La plus grande l'emporte ; à taille égale ou inconnue, la première
-    # rencontrée — l'ordre du document reste un départage honnête.
-    retenues = candidates or secours
-    if not retenues:
-        return None
-    return max(retenues, key=lambda u: (largeur_annoncee(u), -retenues.index(u)))
+    return candidates, secours
+
+
+def _classees(candidates: list, secours: list) -> str | None:
+    retenues = _toutes_classees(candidates, secours)
+    return retenues[0] if retenues else None
+
+
+def _toutes_classees(candidates: list, secours: list) -> list:
+    """Les candidates, de la plus plausible à la moins.
+
+    La plus grande d'abord ; à taille égale ou inconnue, l'ordre du document
+    départage. Les vraies photos passent devant les vignettes de secours.
+    """
+    def ordre(liste):
+        return sorted(dict.fromkeys(liste),
+                      key=lambda u: (-largeur_annoncee(u), liste.index(u)))
+    return ordre(candidates) + ordre(secours)
+
+
+def images_de_la_page(html: str, base: str | None) -> list:
+    """Toutes les images plausibles de la page, la meilleure en tête.
+
+    On en garde plusieurs parce qu'une seule ne suffit pas : quand la
+    première se révèle être du mobilier de site — ce qui ne se voit qu'en
+    comparant les annonces entre elles, donc bien après l'extraction — il
+    faut pouvoir prendre la suivante plutôt que laisser la fiche sans image.
+    """
+    candidates, secours = _candidates_de_la_page(html, base)
+    return _toutes_classees(candidates, secours)
 
 
 def _geo(noeud: dict):
@@ -557,23 +585,31 @@ def extraire_annonce(html: str, url: str, source: str,
     metas = _metas(html)
     annonce.setdefault("titre", metas.get("og:title") or "")
     annonce.setdefault("description", metas.get("og:description") or "")
-    if not annonce.get("photo"):
-        # L'OpenGraph d'un site mal gabarité sert le logo de l'agence à toutes
-        # ses pages (`logo_og.png`). On lui applique le même tamis qu'aux <img>
-        # : refusée, la vignette laisse la place aux vraies photos de la page.
-        for cle in ("og:image", "og:image:secure_url", "twitter:image",
-                    "twitter:image:src"):
-            if metas.get(cle):
-                candidate = _url_img(metas[cle], url)
-                if candidate and not (RE_IMG_HABILLAGE.search(candidate)
-                                      or RE_IMG_LANGUE.search(candidate)):
-                    annonce["photo"] = candidate
-                    break
-    if not annonce.get("photo"):
-        # Ni schema.org, ni OpenGraph : la photo est pourtant bien là, dans les
-        # <img> de la page. Un quart des biens s'affichait sans image faute de
-        # l'y chercher.
-        annonce["photo"] = _image_de_la_page(html, url)
+    # PLUSIEURS candidates, dans l'ordre de confiance : schema.org, puis
+    # OpenGraph, puis les images de la page. On ne s'arrête plus à la
+    # première, parce qu'on ne peut pas encore savoir laquelle est bonne :
+    # le mobilier de site ne se reconnaît qu'en comparant les annonces entre
+    # elles (voir chargement.py), donc bien après cette fonction. Chez
+    # Bonnabelle et Cabinet Ray, schema.org annonce un bandeau « espace
+    # client » et une cloche — alors que les vraies photos sont dans la page,
+    # juste en dessous, et ne servaient à rien faute d'être conservées.
+    candidates_photo = []
+    if annonce.get("photo"):
+        candidates_photo.append(annonce["photo"])
+    for cle in ("og:image", "og:image:secure_url", "twitter:image",
+                "twitter:image:src"):
+        if metas.get(cle):
+            candidate = _url_img(metas[cle], url)
+            if candidate:
+                candidates_photo.append(candidate)
+    candidates_photo += images_de_la_page(html, url)
+
+    # L'habillage évident (logo, drapeau) ne mérite même pas d'être gardé en
+    # réserve — sauf si c'est tout ce que la page contient.
+    propres = [u for u in dict.fromkeys(candidates_photo)
+               if not (RE_IMG_HABILLAGE.search(u) or RE_IMG_LANGUE.search(u))]
+    annonce["photos"] = propres or list(dict.fromkeys(candidates_photo))
+    annonce["photo"] = annonce["photos"][0] if annonce["photos"] else None
     if "prix" not in annonce:
         prix_meta = metas.get("product:price:amount") or metas.get("og:price:amount")
         if prix_meta:

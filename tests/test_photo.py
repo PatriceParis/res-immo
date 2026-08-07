@@ -282,3 +282,52 @@ def test_a_taille_inconnue_l_ordre_du_document_departage():
     html = ('<html><body><img src="/medias/premiere.jpg">'
             '<img src="/medias/seconde.jpg"></body></html>')
     assert _image_de_la_page(html, "https://a.fr/x") == "https://a.fr/medias/premiere.jpg"
+
+
+def test_plusieurs_candidates_sont_conservees():
+    """Cas réel de Cabinet Ray : schema.org annonce la cloche, la vraie photo
+    est dans la page juste en dessous. Une seule candidate stockée, et la
+    fiche restait vide dès qu'on écartait la cloche."""
+    from app.extraction import extraire_annonce
+
+    html = """<html><head>
+      <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Product","name":"Demeure bressane",
+       "image":"https://www.immo-ray.com/fr/a/vente/maisons/bresse/1942/img/bell.png",
+       "offers":{"@type":"Offer","price":"395000","priceCurrency":"EUR"}}
+      </script></head><body>
+      <img src="/fr/a/vente/maisons/bresse/1942/img/bell.png">
+      <img src="/helpers/image-get.inc.php?f=1024x550&amp;n=11665">
+      <p>Surface 240 m². Louhans 71500.</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://www.immo-ray.com/fr/a/vente/maisons/bresse/1942/x",
+                         source="x")
+    assert a["photo"].endswith("img/bell.png"), "la cloche reste en tête, on ne le sait pas encore"
+    assert any("image-get" in u for u in a["photos"]), "la vraie photo doit être en réserve"
+
+
+def test_la_reserve_prend_le_relais_quand_la_premiere_est_du_mobilier():
+    """Bout en bout : huit annonces d'une agence portent la même cloche en
+    tête ; chacune doit basculer sur SA propre photo."""
+    from app.chargement import _photos_de_mobilier, photo_retenue
+
+    biens = []
+    for n in (1942, 1988, 1993, 1997):
+        biens.append({
+            "agence": "Cabinet Ray",
+            "photo": f"https://www.immo-ray.com/fr/a/vente/maisons/x/{n}/img/bell.png",
+            "photos": [f"https://www.immo-ray.com/fr/a/vente/maisons/x/{n}/img/bell.png",
+                       f"https://www.immo-ray.com/helpers/image-get.inc.php?f=1024x550&n={n}"],
+        })
+    mobilier = _photos_de_mobilier(biens)
+    for n, bien in zip((1942, 1988, 1993, 1997), biens):
+        assert photo_retenue(bien, mobilier) == (
+            f"https://www.immo-ray.com/helpers/image-get.inc.php?f=1024x550&n={n}")
+
+
+def test_sans_reserve_utilisable_on_ne_montre_rien():
+    from app.chargement import _photos_de_mobilier, photo_retenue
+
+    logo = "https://agence.fr/img/logo-agence.png"
+    biens = [{"agence": "A", "photo": logo, "photos": [logo]} for _ in range(3)]
+    assert photo_retenue(biens[0], _photos_de_mobilier(biens)) is None
