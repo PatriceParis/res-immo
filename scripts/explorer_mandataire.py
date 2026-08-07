@@ -207,8 +207,11 @@ def _resumer_par_commune(urls: list[str], departements_cibles: set) -> None:
                 break
     print(f"   {touchees} annonce(s) rattachées à une commune de nos terroirs "
           f"({touchees * 100 // max(len(urls), 1)} % du total national)")
-    for dept, n in sorted(par_dept.items(), key=lambda t: -t[1])[:12]:
+    for dept, n in sorted(par_dept.items(), key=lambda t: -t[1]):
         print(f"     {dept} {REGION_PAR_DEPT.get(dept, ''):24} {n:5}")
+    manquants = sorted(departements_cibles - set(par_dept))
+    if manquants:
+        print(f"   Aucune annonce trouvée dans : {', '.join(manquants)}")
 
 
 def main() -> None:
