@@ -66,6 +66,42 @@ def caviarder_annonce(annonce: dict) -> dict:
     return propre
 
 
+def porte_un_identifiant(valeur: str) -> bool:
+    return bool(valeur) and any(motif.search(valeur) for motif in MOTIFS)
+
+
+def preparer_pour_publication(annonce: dict) -> tuple[dict, list[str]]:
+    """L'annonce publiable, et ce qu'il a fallu lui retirer.
+
+    Écarter le bien entier serait disproportionné : quand une adresse de photo
+    est signée par un jeton — cas réel chez Immo Côte d'Opale, dont les images
+    portent un `access-token=` —, c'est l'IMAGE qui pose problème, pas
+    l'annonce. On retire donc les adresses fautives et on garde le bien, qui
+    reste une vraie maison à vendre.
+
+    Un bien n'est abandonné que si son propre lien est en cause : sans lien
+    vers l'agence, il ne sert plus à rien, et on ne peut pas le republier sans
+    republier le jeton.
+    """
+    propre = caviarder_annonce(annonce)
+    retires = []
+
+    candidates = propre.get("photos")
+    if isinstance(candidates, list):
+        gardees = [u for u in candidates
+                   if not (isinstance(u, str) and porte_un_identifiant(u))]
+        if len(gardees) != len(candidates):
+            retires.append(f"photos ({len(candidates) - len(gardees)} adresse(s))")
+            propre["photos"] = gardees
+
+    if isinstance(propre.get("photo"), str) and porte_un_identifiant(propre["photo"]):
+        suivantes = [u for u in (propre.get("photos") or []) if isinstance(u, str)]
+        propre["photo"] = suivantes[0] if suivantes else None
+        retires.append("photo")
+
+    return propre, retires
+
+
 def identifiants_restants(annonce: dict) -> list[str]:
     """Les champs qui contiennent encore quelque chose d'un identifiant.
 
