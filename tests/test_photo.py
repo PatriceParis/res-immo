@@ -240,3 +240,45 @@ def test_deux_agences_differentes_ne_se_contaminent_pas():
     biens = [{"agence": "A", "photo": "https://cdn.fr/photo.jpg"},
              {"agence": "B", "photo": "https://cdn.fr/photo.jpg"}]
     assert _photos_de_mobilier(biens) == set()
+
+
+def test_la_plus_grande_image_l_emporte_sur_la_premiere():
+    """LE défaut de fond, mesuré sur la page réelle de Cabinet Ray : la cloche
+    d'en-tête arrive avant la galerie, et « la première » gagnait."""
+    from app.extraction import _image_de_la_page
+
+    html = """<html><body>
+      <img src="/fr/a/vente/maisons/chalonnais/1997/img/bell.png">
+      <img src="/helpers/image-get.inc.php?f=1024x550&amp;n=11665">
+      <img src="/helpers/image-get.inc.php?f=1024x550&amp;n=11666">
+    </body></html>"""
+    photo = _image_de_la_page(html, "https://www.immo-ray.com/fr/a/vente/x/1997/y")
+    assert photo == "https://www.immo-ray.com/helpers/image-get.inc.php?f=1024x550&n=11665"
+
+
+def test_l_adresse_d_image_est_deschappee():
+    """« &amp;n=11665 » désignerait un paramètre nommé « amp;n » : le serveur
+    ne renverrait pas la photo demandée."""
+    from app.extraction import _url_img
+
+    assert _url_img("https://immo-ray.com/i.php?f=1024x550&amp;n=11665") == (
+        "https://immo-ray.com/i.php?f=1024x550&n=11665")
+
+
+def test_largeur_annoncee_par_l_adresse():
+    from app.extraction import largeur_annoncee
+
+    assert largeur_annoncee("https://cdn.fr/1600xauto/images/biens/photo.jpg") == 1600
+    assert largeur_annoncee("https://cdn.fr/580xauto/images/biens/photo.jpg") == 580
+    assert largeur_annoncee("https://immo-ray.com/i.php?f=1024x550&n=11665") == 1024
+    assert largeur_annoncee("https://immo-ray.com/img/ann/290x218/11665.jpg") == 290
+    assert largeur_annoncee("https://agence.fr/photo.jpg?w=800") == 800
+    assert largeur_annoncee("https://agence.fr/img/bell.png") == 0
+
+
+def test_a_taille_inconnue_l_ordre_du_document_departage():
+    from app.extraction import _image_de_la_page
+
+    html = ('<html><body><img src="/medias/premiere.jpg">'
+            '<img src="/medias/seconde.jpg"></body></html>')
+    assert _image_de_la_page(html, "https://a.fr/x") == "https://a.fr/medias/premiere.jpg"

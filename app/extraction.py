@@ -20,6 +20,7 @@ Scrapy que dans un test hors-ligne.
 
 from __future__ import annotations
 
+import html as html_
 import json
 import re
 from collections import Counter
@@ -291,7 +292,11 @@ def _url_img(u, base: str | None = None) -> str | None:
     """
     if not isinstance(u, str):
         return None
-    u = u.strip()
+    # Une adresse lue dans du HTML arrive échappée : immo-ray sert
+    # « image-get.inc.php?f=1024x550&amp;n=11665 ». Gardé tel quel, le
+    # paramètre s'appellerait « amp;n » et le serveur renverrait autre chose
+    # que la photo demandée.
+    u = html_.unescape(u.strip())
     if not u or u.startswith("data:"):
         return None
     if u.startswith("//"):        # ex. //cdn.agence.fr/photo.jpg
@@ -383,12 +388,39 @@ def _urls_srcset(valeur: str) -> list[str]:
     return [u for _, u in sorted(entrees, key=lambda e: -e[0])]
 
 
+# Largeur annoncée par l'adresse elle-même : « …?f=1024x550&n=11665 »,
+# « /1600xauto/images/… », « /290x218/11665.jpg », « ?w=800 ». Les sites
+# d'agences dimensionnent presque toujours leurs images dans l'URL, et c'est
+# le seul indice de taille disponible sans télécharger le fichier.
+RE_LARGEUR_URL = re.compile(
+    r"(?:^|[/?&_=-])(\d{3,4})\s*[x×]\s*(?:\d{2,4}|auto)"
+    r"|[?&](?:w|width|size)=(\d{3,4})", re.IGNORECASE)
+
+
+def largeur_annoncee(url: str) -> int:
+    """La plus grande largeur que l'adresse revendique, 0 si elle n'en dit rien."""
+    largeurs = []
+    for a, b in RE_LARGEUR_URL.findall(url or ""):
+        for valeur in (a, b):
+            if valeur:
+                largeurs.append(int(valeur))
+    return max(largeurs) if largeurs else 0
+
+
 def _image_de_la_page(html: str, base: str | None) -> str | None:
     """Photo la plus plausible parmi les images de la page.
 
     On écarte l'habillage du site (logos, pictogrammes, pixels de mesure) et
     les vignettes minuscules, puis on préfère une URL qui ressemble à un média
-    de bien — à défaut, la première image crédible rencontrée.
+    de bien.
+
+    Parmi celles-là, on prend LA PLUS GRANDE, et non la première rencontrée.
+    C'était le défaut de fond : l'habillage d'un site est en haut de la page,
+    la galerie plus bas — donc le premier venu était systématiquement une
+    icône. Chez Cabinet Ray, `img/bell.png` (une cloche, sans dimension
+    annoncée) l'emportait sur `image-get.inc.php?f=1024x550`, la vraie photo,
+    présente dans la même page. Trois correctifs successifs sur des noms de
+    fichiers n'avaient traité que les symptômes de ce choix-là.
     """
     candidates, secours = [], []
     for balise in RE_BALISE_IMG.finditer(html or ""):
@@ -426,7 +458,13 @@ def _image_de_la_page(html: str, base: str | None) -> str | None:
             url = _url_img(m.group(1), base)
             if url and not (RE_IMG_HABILLAGE.search(url) or RE_IMG_LANGUE.search(url)):
                 return url
-    return candidates[0] if candidates else (secours[0] if secours else None)
+
+    # La plus grande l'emporte ; à taille égale ou inconnue, la première
+    # rencontrée — l'ordre du document reste un départage honnête.
+    retenues = candidates or secours
+    if not retenues:
+        return None
+    return max(retenues, key=lambda u: (largeur_annoncee(u), -retenues.index(u)))
 
 
 def _geo(noeud: dict):
