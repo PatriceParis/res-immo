@@ -196,3 +196,47 @@ def test_sans_page_connue_le_relais_garde_l_ancien_comportement():
     # Une page inexploitable (relative, autre protocole) ne doit pas casser.
     assert referer_de_la_page("/annonce/562", img) == "https://agencearmance.com/"
     assert referer_de_la_page("javascript:alert(1)", img) == "https://agencearmance.com/"
+
+
+def test_une_image_repetee_chez_une_agence_n_est_pas_une_photo():
+    """Cas réel : la cloche `bell.png` sur huit annonces de Cabinet Ray.
+
+    Chaque annonce la sert depuis SON dossier — les URL diffèrent, le nom de
+    fichier non. Trois fois de suite le mobilier de site est revenu sous un
+    nom neuf (FR.png, logo_og.png, bell.png) : c'est la répétition qu'on
+    regarde désormais, pas le nom.
+    """
+    from app.chargement import _photos_de_mobilier
+
+    biens = [{"agence": "Cabinet Ray",
+              "photo": f"https://www.immo-ray.com/fr/a/vente/maisons/x/{n}/img/bell.png"}
+             for n in (1942, 1988, 1993, 1997)]
+    mobilier = _photos_de_mobilier(biens)
+    assert len(mobilier) == 4
+
+
+def test_un_fichier_strictement_identique_suffit_a_deux():
+    """Deux biens distincts ne peuvent pas partager le même fichier image."""
+    from app.chargement import _photos_de_mobilier
+
+    logo = "https://agence.fr/img/header-agence.png"
+    assert _photos_de_mobilier([{"agence": "A", "photo": logo},
+                                {"agence": "A", "photo": logo}]) == {logo}
+
+
+def test_deux_facades_homonymes_restent_des_photos():
+    """Deux maisons peuvent honnêtement avoir chacune leur FACADE-PRINCIPALE.jpg
+    — même nom, fichiers différents. On ne les confond pas avec du mobilier."""
+    from app.chargement import _photos_de_mobilier
+
+    biens = [{"agence": "NC Immo", "photo": "https://nc.fr/1/FACADE-PRINCIPALE.jpg"},
+             {"agence": "NC Immo", "photo": "https://nc.fr/2/FACADE-PRINCIPALE.jpg"}]
+    assert _photos_de_mobilier(biens) == set()
+
+
+def test_deux_agences_differentes_ne_se_contaminent_pas():
+    from app.chargement import _photos_de_mobilier
+
+    biens = [{"agence": "A", "photo": "https://cdn.fr/photo.jpg"},
+             {"agence": "B", "photo": "https://cdn.fr/photo.jpg"}]
+    assert _photos_de_mobilier(biens) == set()

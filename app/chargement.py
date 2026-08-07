@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from urllib.parse import urlparse
 
 from . import db, gares, geo, marche, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
@@ -154,6 +155,52 @@ def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
     return {cle for cle, n in compte.items() if n >= seuil}
 
 
+def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
+    """Repère les images qui reviennent d'une annonce à l'autre chez une agence.
+
+    Deux maisons différentes ne partagent jamais leur photo. Une image qu'on
+    retrouve sur plusieurs annonces du même site n'est donc pas la photo d'un
+    bien : c'est le mobilier de la page — logo, en-tête, bandeau « espace
+    client », icône Facebook, icône de cloche.
+
+    On a d'abord voulu reconnaître ce mobilier à son NOM. Trois fois de suite,
+    il est revenu sous un nom neuf : `FR.png` (le drapeau du sélecteur de
+    langue), `logo_og.png` (la vignette OpenGraph), puis `bell.png` — une
+    cloche servie à huit annonces de la même agence et logée sous
+    /vente/maisons/, donc classée parmi les MEILLEURES candidates. Aucune
+    liste de noms ne rattrapera la suivante. La répétition, elle, est ce que
+    voit un lecteur : toutes les annonces montrent la même image.
+
+    Deux critères, selon ce dont on est sûr :
+
+    - le même FICHIER (URL identique) sur au moins deux annonces : impossible
+      pour deux biens distincts, quel que soit son nom ;
+    - le même NOM DE FICHIER sur au moins trois annonces : les gabarits
+      servent le mobilier relativement à chaque annonce (`…/1942/img/bell.png`,
+      `…/1988/img/bell.png`). Trois, et non deux, parce que deux photos
+      réelles peuvent honnêtement s'appeler chacune `FACADE-PRINCIPALE.jpg`.
+    """
+    par_url: dict = {}
+    par_nom: dict = {}
+    for a in annonces:
+        photo, agence = a.get("photo"), a.get("agence")
+        if not photo or not agence:
+            continue
+        par_url.setdefault((agence, photo), []).append(photo)
+        nom = urlparse(photo).path.rsplit("/", 1)[-1]
+        if nom:
+            par_nom.setdefault((agence, nom), []).append(photo)
+
+    mobilier = set()
+    for photos in par_url.values():
+        if len(photos) >= 2:
+            mobilier.update(photos)
+    for photos in par_nom.values():
+        if len(photos) >= seuil_nom:
+            mobilier.update(photos)
+    return mobilier
+
+
 def charger_liste(conn, annonces: list[dict]) -> int:
     """Enrichit et insère les annonces VALIDES (filtre qualité). Renvoie le nombre chargé.
 
@@ -172,8 +219,13 @@ def charger_liste(conn, annonces: list[dict]) -> int:
 def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     """Applique tous les filtres de qualité et de périmètre, sans écrire."""
     suspectes = _signatures_suspectes(annonces)
+    mobilier = _photos_de_mobilier(annonces)
     retenues = []
     for brut in annonces:
+        if brut.get("photo") in mobilier:
+            # Mieux vaut l'illustration de repli, qui ne prétend rien, qu'une
+            # cloche ou un logo présentés comme la maison.
+            brut = dict(brut, photo=None)
         if (brut.get("agence"), brut.get("prix"), brut.get("surface_m2"),
                 brut.get("terrain_m2")) in suspectes:
             continue  # doublons issus d'un bandeau de site, pas de vrais biens
