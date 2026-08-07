@@ -99,3 +99,33 @@ def test_une_commune_trop_courte_ne_cree_pas_de_faux_rapprochement():
     dans presque n'importe quelle adresse."""
     index = mandataires.index_des_communes({"51": ["Ay", "Bu"]})
     assert index == []
+
+
+SAFTI = mandataires.RESEAUX["safti"]
+
+
+def test_safti_retient_ses_maisons_et_ecarte_le_reste():
+    """Ses adresses portent le type, la commune ET le code postal."""
+    urls = [
+        "https://www.safti.fr/annonces/achat/maison/givry-71640/1480990",
+        "https://www.safti.fr/annonces/achat/appartement/chablis-89800/1480991",
+        "https://www.safti.fr/annonces/achat/maison/antony-92160/1480992",
+        "https://www.safti.fr/recherche?location=givry",
+    ]
+    retenues = mandataires.annonces_a_visiter(urls, SAFTI, INDEX)
+    assert [a["commune"] for a in retenues] == ["Givry"]
+    assert retenues[0]["agence"] == "Safti (71)"
+
+
+def test_safti_ne_lit_que_les_sitemaps_de_maisons_disponibles():
+    """Lire les 73 626 adresses pour n'en garder que les maisons à vendre
+    serait inutilement lourd — pour eux comme pour nous."""
+    voulus = SAFTI["sitemaps_voulus"]
+    garde = "https://www.safti.fr/sitemaps/sitemap.annonce.maison.disponible.xml"
+    assert voulus.search(garde)
+    for ecarte in (
+            "https://www.safti.fr/sitemaps/sitemap.annonce.maison.vendu.xml",
+            "https://www.safti.fr/sitemaps/sitemap.annonce.appartement.disponible.xml",
+            "https://www.safti.fr/sitemaps/sitemap.annonce.commerce.disponible.xml",
+            "https://www.safti.fr/sitemaps/sitemap.mandataires.xml"):
+        assert not voulus.search(ecarte), ecarte

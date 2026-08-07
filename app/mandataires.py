@@ -1,6 +1,6 @@
 """Réseaux de mandataires : quelles annonces lire, et sous quelle identité.
 
-Ces réseaux — IAD, Capifrance — publient leurs propres mandats sur un site
+Ces réseaux — IAD, Safti, Capifrance — publient leurs propres mandats sur un
 national, avec une page par bien et un sitemap à l'intention des robots. Ce
 n'est pas un agrégateur qui republie les annonces d'autrui : c'est une agence,
 simplement très grande. Mesuré chez IAD : 94 216 annonces, dont 44 318 dans
@@ -48,6 +48,20 @@ RESEAUX = {
         "nom": "Capifrance",
         "site": "https://www.capifrance.fr",
         "motif_annonce": re.compile(r"/annonce|/bien", re.IGNORECASE),
+    },
+    "safti": {
+        "nom": "Safti",
+        "site": "https://www.safti.fr",
+        # robots.txt interdit /recherche et /bien-indisponible ; les pages
+        # d'annonce (/annonces/achat/…) sont ouvertes.
+        "motif_annonce": re.compile(r"/annonces/achat/", re.IGNORECASE),
+        # Safti sépare ses sitemaps par TYPE et par DISPONIBILITÉ :
+        # sitemap.annonce.maison.disponible.xml, .appartement.vendu.xml…
+        # On ne lit donc que les maisons encore à vendre — 28 286 adresses au
+        # lieu de 73 626. C'est une économie pour eux comme pour nous, et cela
+        # évite d'aller chercher des biens déjà vendus pour les écarter après.
+        "sitemaps_voulus": re.compile(r"annonce\.(maison|propriete)\.disponible",
+                                      re.IGNORECASE),
     },
 }
 
