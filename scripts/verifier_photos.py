@@ -92,13 +92,60 @@ def verifier_une(annonce: dict, journal: bool = False) -> tuple[str | None, str]
     return None, "aucune candidate valable"
 
 
+def _verifier_export(fichier: Path, args) -> None:
+    """Repasse sur TOUT le catalogue publié, pas seulement la dernière collecte.
+
+    La vérification s'insère dans la collecte, qui ne voit que les annonces
+    du jour. Les autres — la grande majorité — ont été publiées avant qu'elle
+    n'existe : ce mode les rattrape en une fois.
+    """
+    import json
+
+    annonces = json.loads(fichier.read_text(encoding="utf-8"))
+    a_verifier = [a for a in annonces if _candidates(a)]
+    if args.limite:
+        a_verifier = a_verifier[:args.limite]
+
+    def travail(annonce):
+        if args.journal:
+            print(f"  {(annonce.get('titre') or '')[:60]}")
+        return annonce, *verifier_une(annonce, args.journal)
+
+    with ThreadPoolExecutor(max_workers=FILS) as executeur:
+        resultats = list(executeur.map(travail, a_verifier))
+
+    reussites = [r for r in resultats if r[1]]
+    if len(resultats) >= 20 and len(reussites) < PART_MINIMALE * len(resultats):
+        print(f"ARRÊT : {len(reussites)}/{len(resultats)} images seulement ont "
+              f"répondu. C'est un problème de réseau, pas de photos — "
+              f"aucune modification enregistrée.")
+        raise SystemExit(1)
+
+    changees = 0
+    for annonce, retenue, _motif in resultats:
+        if retenue != annonce.get("photo"):
+            annonce["photo"] = retenue
+            changees += 1
+    fichier.write_text(json.dumps(annonces, ensure_ascii=False, indent=1) + "\n",
+                       encoding="utf-8")
+    sans = len(resultats) - len(reussites)
+    print(f"{len(resultats)} annonce(s) vérifiée(s) : {len(reussites)} avec une vraie "
+          f"photo, {sans} sans. {changees} corrigée(s).")
+
+
 def main() -> None:
     parametres = argparse.ArgumentParser()
     parametres.add_argument("--limite", type=int, default=0,
                             help="n'en vérifier que N (mise au point)")
     parametres.add_argument("--journal", action="store_true",
                             help="détailler chaque candidate testée")
+    parametres.add_argument("--json", metavar="FICHIER",
+                            help="vérifier l'export plutôt que la base — pour "
+                                 "repasser sur tout le catalogue déjà publié")
     args = parametres.parse_args()
+
+    if args.json:
+        return _verifier_export(Path(args.json), args)
 
     conn = db.connexion()
     lignes = conn.execute(
