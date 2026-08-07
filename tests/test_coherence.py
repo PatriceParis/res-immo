@@ -296,3 +296,27 @@ def test_chaque_invariant_a_sa_preuve_de_detection():
     declares = {inv.__name__ for inv in coherence.INVARIANTS}
     assert declares == couverts, (
         f"invariant(s) sans preuve de détection : {declares - couverts}")
+
+
+def test_le_menu_des_agences_reste_verifie_quand_la_liste_est_tronquee(appeler):
+    """Passé 500 biens, la liste s'arrête au plafond mais le menu connaît tout
+    le catalogue : l'invariant doit se taire sur cet écart-là — et continuer
+    d'attraper un menu qui annonce MOINS que ce qu'on voit déjà."""
+    def catalogue_tronque(chemin, params, reponse):
+        if chemin == "/api/annonces":
+            reponse["total"] = reponse["total"] + 400      # le reste est coupé
+        return reponse
+
+    r = coherence.agences_annoncees_presentes(_menteur(appeler, catalogue_tronque))
+    assert r.tenue, r.manquements
+
+    def menu_qui_sous_compte(chemin, params, reponse):
+        if chemin == "/api/annonces":
+            reponse["total"] = reponse["total"] + 400
+        if chemin == "/api/agences":
+            for a in reponse["agences"]:
+                a["nb"] = 0                                # moins que la liste
+        return reponse
+
+    r = coherence.agences_annoncees_presentes(_menteur(appeler, menu_qui_sous_compte))
+    assert not r.tenue

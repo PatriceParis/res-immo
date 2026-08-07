@@ -346,7 +346,16 @@ def agences_annoncees_presentes(appeler: Appel) -> Rapport:
                 "Les agences listées dans le menu déroulant, et leur nombre "
                 "de biens, correspondent à ce que la liste contient.")
     agences = appeler("/api/agences", {})["agences"]
-    items = _tous(appeler)["items"]
+    d = _tous(appeler)
+    items = d["items"]
+    # Le menu déroulant est bâti sur TOUT le catalogue ; la liste, elle,
+    # s'arrête au plafond de l'API. Passé ce seuil, comparer les deux revient
+    # à reprocher au menu de connaître des biens qu'on n'a pas demandés — ce
+    # qui a fait crier 73 fois cet invariant le jour où le catalogue a dépassé
+    # 500 biens, alors que le site allait bien. On compare donc ce qui est
+    # comparable : sous le plafond, l'égalité stricte ; au-dessus, le menu ne
+    # doit jamais annoncer MOINS de biens que la liste n'en montre.
+    tronquee = d["total"] > len(items)
     reels: dict = {}
     for b in items:
         if b.get("agence"):
@@ -354,7 +363,13 @@ def agences_annoncees_presentes(appeler: Appel) -> Rapport:
     for a in agences:
         attendu = reels.get(a["agence"])
         if attendu is None:
-            r.manquements.append(f"« {a['agence']} » proposée mais aucun bien listé")
+            if not tronquee:
+                r.manquements.append(f"« {a['agence']} » proposée mais aucun bien listé")
+        elif tronquee:
+            if a["nb"] < attendu:
+                r.manquements.append(
+                    f"« {a['agence']} » annonce {a['nb']} bien(s), "
+                    f"la liste en montre déjà {attendu}")
         elif attendu != a["nb"]:
             r.manquements.append(
                 f"« {a['agence']} » annonce {a['nb']} bien(s), la liste en montre {attendu}")
