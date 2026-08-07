@@ -16,7 +16,12 @@ on:
     inputs:
       urls:
         description: "URL d'annonces à sonder, séparées par des espaces"
-        required: true
+        required: false
+        default: ""
+      mandataire:
+        description: "URL d'une annonce de réseau de mandataires (IAD, Safti…) à évaluer comme source"
+        required: false
+        default: ""
 
 jobs:
   sonder:
@@ -35,5 +40,10 @@ jobs:
           pip install playwright
           python -m playwright install --with-deps chromium
 
-      - name: Sonder
+      - name: Sonder les photos d'une annonce
+        if: github.event.inputs.urls != ''
         run: python scripts/diagnostiquer_photo.py ${{ github.event.inputs.urls }}
+
+      - name: Évaluer un réseau de mandataires comme source d'annonces
+        if: github.event.inputs.mandataire != ''
+        run: python scripts/explorer_mandataire.py "${{ github.event.inputs.mandataire }}"
