@@ -1,0 +1,39 @@
+name: Diagnostic photo
+
+# Ouvre une ou plusieurs annonces dans le vrai navigateur et rapporte ce que
+# la page contient : images présentes, verdict de chaque filtre, et l'effet
+# d'une attente plus longue.
+#
+# Ce workflow existe parce que le poste de développement n'a pas le réseau :
+# sans lui, tout diagnostic d'image se fait à l'aveugle — ce qui a déjà coûté
+# trois correctifs successifs sur des noms de fichiers.
+#
+# Il ne touche à AUCUNE donnée : il lit, il affiche. Il ne prend donc pas le
+# verrou « donnees-refuge » et peut tourner pendant une collecte.
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URL d'annonces à sonder, séparées par des espaces"
+        required: true
+
+jobs:
+  sonder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances + Chromium
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Sonder
+        run: python scripts/diagnostiquer_photo.py ${{ github.event.inputs.urls }}
