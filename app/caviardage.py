@@ -72,11 +72,26 @@ def identifiants_restants(annonce: dict) -> list[str]:
     Sert de garde-fou à l'export : mieux vaut écarter un bien que faire
     échouer toute une collecte sur un dépôt refusé — ou pire, publier la clé
     de quelqu'un.
+
+    On descend dans les listes et les dictionnaires. La première version ne
+    regardait que les valeurs texte de premier niveau : elle ne voyait donc
+    pas `photos`, qui est une LISTE d'adresses, ni `risques`, qui est un
+    dictionnaire. Le dépôt a été refusé une seconde fois pour cette raison —
+    un garde-fou qui ne regarde pas partout ne garde rien.
     """
     coupables = []
+
+    def parcourir(valeur, chemin: str) -> None:
+        if isinstance(valeur, str):
+            if valeur and any(motif.search(valeur) for motif in MOTIFS):
+                coupables.append(chemin)
+        elif isinstance(valeur, dict):
+            for cle, sous in valeur.items():
+                parcourir(sous, f"{chemin}.{cle}" if chemin else str(cle))
+        elif isinstance(valeur, (list, tuple)):
+            for rang, sous in enumerate(valeur):
+                parcourir(sous, f"{chemin}[{rang}]")
+
     for champ, valeur in annonce.items():
-        if not isinstance(valeur, str) or not valeur:
-            continue
-        if any(motif.search(valeur) for motif in MOTIFS):
-            coupables.append(champ)
+        parcourir(valeur, champ)
     return coupables
