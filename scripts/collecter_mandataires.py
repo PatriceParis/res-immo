@@ -1,4 +1,4 @@
-"""Collecte les annonces des réseaux de mandataires (IAD, Capifrance).
+"""Collecte les annonces des réseaux de mandataires (IAD, Safti, Capifrance).
 
 Pourquoi ce second collecteur
 -----------------------------
@@ -190,6 +190,13 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     if not sitemaps:
         print("  robots.txt ne déclare aucun sitemap : on s'abstient.")
         return 0
+    voulus = reseau.get("sitemaps_voulus")
+    if voulus:
+        retenus = [s for s in sitemaps if voulus.search(s)]
+        if retenus:
+            print(f"  {len(retenus)} sitemap(s) retenu(s) sur {len(sitemaps)} "
+                  f"— on ne lit que ce qui nous concerne")
+            sitemaps = retenus
     adresses = adresses_du_sitemap(sitemaps, reseau["motif_annonce"])
     print(f"  {len(adresses)} annonce(s) au sitemap")
     a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index)
