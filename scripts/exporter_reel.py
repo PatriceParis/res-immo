@@ -28,6 +28,9 @@ CHAMPS = [
     "surface_m2", "terrain_m2", "pieces", "commune", "code_postal",
     "departement", "region", "agence", "agence_url", "photo", "texte",
     "lat", "lon", "altitude", "densite_hab_km2", "dpe", "risques",
+    # Les autres images de la page, en réserve : si la première se révèle
+    # être du mobilier de site, la suivante prend sa place au chargement.
+    "photos",
     # Mémoire d'une collecte à l'autre (voir app/historique.py) : c'est ce
     # fichier, versionné, qui traverse le temps — pas la base, recréée à
     # chaque exécution.

@@ -183,22 +183,58 @@ def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
     par_url: dict = {}
     par_nom: dict = {}
     for a in annonces:
-        photo, agence = a.get("photo"), a.get("agence")
-        if not photo or not agence:
+        agence = a.get("agence")
+        if not agence:
             continue
-        par_url.setdefault((agence, photo), []).append(photo)
-        nom = urlparse(photo).path.rsplit("/", 1)[-1]
-        if nom:
-            par_nom.setdefault((agence, nom), []).append(photo)
+        # On compte les ANNONCES où l'image apparaît, pas ses occurrences :
+        # une galerie propose la même photo en plusieurs tailles, ce qui ne
+        # dit rien sur son caractère décoratif.
+        for photo in dict.fromkeys(_candidates(a)):
+            par_url.setdefault((agence, photo), set()).add(id(a))
+            nom = _nom_de_fichier(photo)
+            if nom:
+                par_nom.setdefault((agence, nom), set()).add(id(a))
 
     mobilier = set()
-    for photos in par_url.values():
-        if len(photos) >= 2:
-            mobilier.update(photos)
-    for photos in par_nom.values():
-        if len(photos) >= seuil_nom:
-            mobilier.update(photos)
+    for (_, photo), annonces_vues in par_url.items():
+        if len(annonces_vues) >= 2:
+            mobilier.add(photo)
+    noms_communs = {nom for (_, nom), vues in par_nom.items() if len(vues) >= seuil_nom}
+    for a in annonces:
+        for photo in _candidates(a):
+            if _nom_de_fichier(photo) in noms_communs:
+                mobilier.add(photo)
     return mobilier
+
+
+def _nom_de_fichier(url: str) -> str:
+    """Ce qui identifie l'image dans son adresse — requête comprise.
+
+    Beaucoup de sites servent leurs photos par un script :
+    `image-get.inc.php?f=1024x550&n=11665`. Le nom de fichier y est le même
+    pour TOUTES les annonces, et seule la requête change. S'arrêter au nom
+    faisait passer les vraies photos pour du mobilier répété — l'inverse
+    exact de ce qu'on cherche.
+    """
+    morceaux = urlparse(url or "")
+    nom = morceaux.path.rsplit("/", 1)[-1]
+    return f"{nom}?{morceaux.query}" if morceaux.query else nom
+
+
+def _candidates(annonce: dict) -> list:
+    """Les images proposées pour une annonce, de la plus plausible à la moins."""
+    photos = [u for u in (annonce.get("photos") or []) if u]
+    if annonce.get("photo") and annonce["photo"] not in photos:
+        photos.insert(0, annonce["photo"])
+    return photos
+
+
+def photo_retenue(annonce: dict, mobilier: set) -> str | None:
+    """La première candidate qui ne soit pas du mobilier de site."""
+    for photo in _candidates(annonce):
+        if photo not in mobilier:
+            return photo
+    return None
 
 
 def charger_liste(conn, annonces: list[dict]) -> int:
@@ -222,10 +258,12 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     mobilier = _photos_de_mobilier(annonces)
     retenues = []
     for brut in annonces:
-        if brut.get("photo") in mobilier:
-            # Mieux vaut l'illustration de repli, qui ne prétend rien, qu'une
-            # cloche ou un logo présentés comme la maison.
-            brut = dict(brut, photo=None)
+        retenue = photo_retenue(brut, mobilier)
+        if retenue != brut.get("photo"):
+            # La première candidate était du mobilier : on prend la suivante.
+            # S'il n'en reste aucune, l'illustration de repli — qui ne prétend
+            # rien — vaut mieux qu'une cloche présentée comme la maison.
+            brut = dict(brut, photo=retenue)
         if (brut.get("agence"), brut.get("prix"), brut.get("surface_m2"),
                 brut.get("terrain_m2")) in suspectes:
             continue  # doublons issus d'un bandeau de site, pas de vrais biens

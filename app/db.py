@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     score_detail_json TEXT DEFAULT '{}',
     badges_json       TEXT DEFAULT '[]',
     alertes_json      TEXT DEFAULT '[]',
+    photos_json       TEXT DEFAULT '[]',
     has_cave          INTEGER DEFAULT 0,
     has_puits         INTEGER DEFAULT 0,
     has_bois          INTEGER DEFAULT 0,
@@ -91,6 +92,7 @@ CHAMPS_JSON = {
     "score_detail_json": "score_detail",
     "badges_json": "badges",
     "alertes_json": "alertes",
+    "photos_json": "photos",
 }
 
 
@@ -127,7 +129,8 @@ def _migrer(conn: sqlite3.Connection) -> None:
                                 ("prix_baisse_le", "TEXT DEFAULT ''"),
                                 ("prix_m2", "REAL"),
                                 ("prix_m2_secteur", "REAL"),
-                                ("ecart_marche_pct", "REAL")):
+                                ("ecart_marche_pct", "REAL"),
+                                ("photos_json", "TEXT DEFAULT '[]'")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -156,6 +159,10 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "agence": a.get("agence"),
         "agence_url": a.get("agence_url", ""),
         "photo": a.get("photo", ""),
+        # Plusieurs candidates, de la plus plausible à la moins : si la
+        # première se révèle être du mobilier de site (voir chargement.py),
+        # la suivante prend sa place au lieu de laisser la fiche sans image.
+        "photos_json": json.dumps(a.get("photos") or [], ensure_ascii=False),
         "texte": a.get("texte", ""),
         "lat": a.get("lat"),
         "lon": a.get("lon"),
