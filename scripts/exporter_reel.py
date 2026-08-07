@@ -18,7 +18,7 @@ sys.path.insert(0, str(RACINE))
 
 from datetime import date  # noqa: E402
 
-from app import db, historique  # noqa: E402
+from app import caviardage, db, historique  # noqa: E402
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
@@ -117,6 +117,24 @@ def main() -> None:
     fusionnees = historique.fusionner(precedentes, biens, visitees,
                                       date.today().isoformat())
     fusionnees = sans_doublon_d_url(fusionnees)
+
+    # Dernier filet : aucun identifiant de tiers ne doit atteindre le dépôt.
+    # Le caviardage à l'entrée devrait suffire ; s'il a laissé passer quelque
+    # chose, mieux vaut écarter le bien et le dire que faire refuser le dépôt
+    # entier — ou publier la clé de quelqu'un.
+    propres, suspects = [], []
+    for bien in fusionnees:
+        champs = caviardage.identifiants_restants(bien)
+        if champs:
+            suspects.append((bien.get("id"), champs))
+        else:
+            propres.append(bien)
+    if suspects:
+        print(f"  {len(suspects)} bien(s) écarté(s) — identifiant de tiers "
+              f"détecté dans : {sorted({c for _, cs in suspects for c in cs})}")
+        for identifiant, champs in suspects[:5]:
+            print(f"    {identifiant} → {champs}")
+    fusionnees = propres
 
     # Ordre STABLE, par identifiant. Le fichier est committé six fois par jour
     # et pèse un méga-octet : sans ordre fixe, chaque export réécrit tout et
