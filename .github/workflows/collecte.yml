@@ -96,6 +96,15 @@ jobs:
         # Non bloquant : sans réseau ou si l'API change, on garde l'existant.
         run: python scripts/enrichir_risques.py --max 200 || true
 
+      - name: Vérifier que chaque photo se charge et montre bien une maison
+        # On OUVRE réellement chaque image avant de la publier. Sans cela, une
+        # adresse morte laissait la fiche vide alors que la photo existait, et
+        # une étiquette DPE — servie par le même script que les vraies photos,
+        # donc indiscernable sur l'adresse — passait pour la maison.
+        # Non bloquant : mieux vaut publier la collecte avec quelques
+        # illustrations de repli que ne rien publier du tout.
+        run: python scripts/verifier_photos.py || true
+
       - name: Auditer la cohérence des données collectées
         # Les anomalies qui comptent ici ne font pas planter le site : elles le
         # rendent faux (surface de piscine lue comme habitable, bien compté
