@@ -85,3 +85,16 @@ def test_le_caviardage_agit_des_l_entree_en_base():
     })
     assert MAPBOX not in prepare["texte"]
     assert prepare["features"].get("cave"), "la détection doit encore marcher"
+
+
+def test_le_garde_fou_regarde_dans_les_listes_et_les_dictionnaires():
+    """Le dépôt a été refusé une seconde fois parce que le garde-fou ne
+    regardait que les valeurs texte de premier niveau : `photos` est une
+    LISTE d'adresses, `risques` un dictionnaire."""
+    assert identifiants_restants(
+        {"photos": ["https://cdn.fr/a.jpg", f"https://cdn.fr/b.jpg?t={MAPBOX}"]}
+    ) == ["photos[1]"]
+    assert identifiants_restants({"risques": {"note": f"clé {JWT}"}}) == ["risques.note"]
+    assert identifiants_restants(
+        {"photos": ["https://cdn.fr/a.jpg"], "risques": {"inondation": True},
+         "prix": 200000}) == []
