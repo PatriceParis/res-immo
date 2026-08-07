@@ -97,9 +97,18 @@ function photoReelle(a) {
 
 // URL de la vraie photo relayée par NOTRE domaine (/api/photo) : sinon les CDN
 // des agences bloquent le hotlink et rien ne s'affiche. "" si pas de photo.
+//
+// On transmet aussi la page d'où vient la photo (`p`). Beaucoup d'agences
+// hébergent leurs images sur un CDN d'un AUTRE domaine (groupe123immo.com →
+// staticlbi.com), et ces CDN vérifient que la demande vient bien du site de
+// l'agence. Sans cette page, le relais ne pouvait annoncer que le domaine du
+// CDN lui-même — ce qu'aucun navigateur n'envoie jamais — et l'image était
+// refusée : la fiche retombait sur son illustration de repli.
 function photoProxy(a) {
   const u = photoReelle(a);
-  return u ? "/api/photo?u=" + encodeURIComponent(u) : "";
+  if (!u) return "";
+  const page = a.url ? "&p=" + encodeURIComponent(a.url) : "";
+  return "/api/photo?u=" + encodeURIComponent(u) + page;
 }
 
 // Balise <img> de la vraie photo, posée sur l'illustration : onerror bascule

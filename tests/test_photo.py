@@ -118,3 +118,81 @@ def test_une_page_sans_aucune_image_n_en_invente_pas():
     </body></html>"""
     a = extraire_annonce(html, "https://agence.fr/vente/1-maison", source="x")
     assert not a.get("photo")
+
+
+def test_le_drapeau_du_selecteur_de_langue_n_est_pas_une_photo():
+    """Cas réel signalé : six annonces d'Agence Armance affichaient le drapeau
+    français. L'image s'appelle FR.png et vit dans /assets/images/ — donc
+    RE_IMG_BIEN la classait parmi les photos PRÉFÉRÉES."""
+    from app.extraction import _image_de_la_page
+
+    html = """<html><body>
+      <a href="/fr"><img src="/assets/images/FR.png" alt="Français"></a>
+      <a href="/en"><img src="/assets/images/EN.png" alt="English"></a>
+      <img src="/assets/images/photos/maison-sormery-01.jpg" alt="La maison">
+    </body></html>"""
+    photo = _image_de_la_page(html, "https://agencearmance.com/fr/annonce/562")
+    assert photo == "https://agencearmance.com/assets/images/photos/maison-sormery-01.jpg"
+
+
+def test_un_drapeau_seul_ne_donne_aucune_photo():
+    """Mieux vaut pas d'image du tout qu'un drapeau présenté comme la maison."""
+    from app.extraction import _image_de_la_page
+
+    html = '<html><body><img src="/assets/images/FR.png"></body></html>'
+    assert _image_de_la_page(html, "https://agencearmance.com/fr/annonce/562") is None
+
+
+def test_le_logo_opengraph_ne_devient_pas_la_photo():
+    """« 177 Maisons à vendre » a été catalogué avec logo_og.png pour photo :
+    l'OpenGraph n'était filtré par rien."""
+    from app.extraction import extraire_annonce
+
+    html = """<html><head>
+      <meta property="og:image" content="/images/logo_og.png">
+      <meta property="og:title" content="Pavillon à Appoigny">
+    </head><body>
+      <img src="/medias/photos/pavillon-appoigny.jpg" alt="">
+      <p>Prix : 159 900 €. Surface 102 m². Appoigny 89380.</p>
+    </body></html>"""
+    a = extraire_annonce(html, "https://www.groupe123immo.com/vente/1-appoigny/maison/3515-x", source="x")
+    assert a.get("photo") == "https://www.groupe123immo.com/medias/photos/pavillon-appoigny.jpg"
+
+
+def test_une_vraie_photo_opengraph_est_conservee():
+    from app.extraction import extraire_annonce
+
+    html = ('<html><head><meta property="og:image" '
+            'content="https://cdn.agence.fr/photos/maison-42.jpg">'
+            '<meta property="og:title" content="Longère"></head><body>'
+            '<p>Prix : 245 000 €. Surface 140 m². Bellême 61130.</p>'
+            '</body></html>')
+    a = extraire_annonce(html, "https://agence.fr/bien/42", source="x")
+    assert a.get("photo") == "https://cdn.agence.fr/photos/maison-42.jpg"
+
+
+def test_le_relais_annonce_la_page_de_l_annonce_comme_referer():
+    """Cas réel signalé : les photos de Groupe 123 Immo (hébergées sur
+    staticlbi.com) ne s'affichaient pas. Le relais se réclamait du CDN
+    lui-même — ce qu'aucun navigateur n'envoie jamais."""
+    from urllib.parse import urlparse
+
+    from app.main import referer_de_la_page
+
+    cdn = urlparse("https://grcentvingttrois.staticlbi.com/600xauto/images/5/photo.jpg")
+    page = "https://www.groupe123immo.com/vente/1-appoigny/maison/3515-pavillon"
+    assert referer_de_la_page(page, cdn) == "https://www.groupe123immo.com/"
+
+
+def test_sans_page_connue_le_relais_garde_l_ancien_comportement():
+    """Les agences qui hébergent leurs images chez elles continuent de marcher."""
+    from urllib.parse import urlparse
+
+    from app.main import referer_de_la_page
+
+    img = urlparse("https://agencearmance.com/assets/photos/maison.jpg")
+    assert referer_de_la_page(None, img) == "https://agencearmance.com/"
+    assert referer_de_la_page("", img) == "https://agencearmance.com/"
+    # Une page inexploitable (relative, autre protocole) ne doit pas casser.
+    assert referer_de_la_page("/annonce/562", img) == "https://agencearmance.com/"
+    assert referer_de_la_page("javascript:alert(1)", img) == "https://agencearmance.com/"

@@ -341,6 +341,25 @@ RE_IMG_HABILLAGE = re.compile(
     r"|blank|spacer|transparent|loader|loading|chargement|pixel|tracking|banniere"
     r"|banner|signature|cachet|qr[-_]?code|\.svg(?:$|\?)", re.IGNORECASE)
 
+# Le sélecteur de langue. Son image s'appelle « FR.png », « en_GB.gif »,
+# « fr-fr.svg » : un code de langue ou de pays, jamais un nom de photo. Elle
+# échappait à RE_IMG_HABILLAGE (ni « flag » ni « drapeau » dans l'adresse) et,
+# pire, vivait dans /assets/images/ — donc RE_IMG_BIEN la classait parmi les
+# PHOTOS PRÉFÉRÉES. Six annonces d'une même agence affichaient un drapeau
+# français en guise de maison.
+#
+# On énumère les codes plutôt que d'écrire « deux lettres » : cette version-là
+# rejetait « og.jpg », le nom courant d'une vignette OpenGraph parfaitement
+# légitime (un test existant l'a montré aussitôt).
+CODES_DE_LANGUE = (
+    "fr en es de it nl pt ru zh ar pl ja sv da fi tr el ko "
+    "gb us be ch lu ca br cn jp"
+).split()
+RE_IMG_LANGUE = re.compile(
+    r"/(?:%s)(?:[-_](?:%s))?\.(?:png|gif|jpe?g|webp|svg)(?:$|[?#])"
+    % ("|".join(CODES_DE_LANGUE), "|".join(CODES_DE_LANGUE)),
+    re.IGNORECASE)
+
 # Ce qui, au contraire, sent la photo de bien.
 RE_IMG_BIEN = re.compile(
     r"/(?:photos?|images?|medias?|uploads?|biens?|annonces?|propert|listing|vente"
@@ -396,7 +415,7 @@ def _image_de_la_page(html: str, base: str | None) -> str | None:
 
         for brute in brutes:
             url = _url_img(brute, base)
-            if not url or RE_IMG_HABILLAGE.search(url):
+            if not url or RE_IMG_HABILLAGE.search(url) or RE_IMG_LANGUE.search(url):
                 continue
             (candidates if RE_IMG_BIEN.search(url) else secours).append(url)
             break
@@ -405,7 +424,7 @@ def _image_de_la_page(html: str, base: str | None) -> str | None:
         # Dernier recours : les diaporamas posent souvent la photo en fond CSS.
         for m in RE_FOND_CSS.finditer(html or ""):
             url = _url_img(m.group(1), base)
-            if url and not RE_IMG_HABILLAGE.search(url):
+            if url and not (RE_IMG_HABILLAGE.search(url) or RE_IMG_LANGUE.search(url)):
                 return url
     return candidates[0] if candidates else (secours[0] if secours else None)
 
@@ -501,11 +520,16 @@ def extraire_annonce(html: str, url: str, source: str,
     annonce.setdefault("titre", metas.get("og:title") or "")
     annonce.setdefault("description", metas.get("og:description") or "")
     if not annonce.get("photo"):
+        # L'OpenGraph d'un site mal gabarité sert le logo de l'agence à toutes
+        # ses pages (`logo_og.png`). On lui applique le même tamis qu'aux <img>
+        # : refusée, la vignette laisse la place aux vraies photos de la page.
         for cle in ("og:image", "og:image:secure_url", "twitter:image",
                     "twitter:image:src"):
             if metas.get(cle):
-                annonce["photo"] = _url_img(metas[cle], url)
-                if annonce["photo"]:
+                candidate = _url_img(metas[cle], url)
+                if candidate and not (RE_IMG_HABILLAGE.search(candidate)
+                                      or RE_IMG_LANGUE.search(candidate)):
+                    annonce["photo"] = candidate
                     break
     if not annonce.get("photo"):
         # Ni schema.org, ni OpenGraph : la photo est pourtant bien là, dans les
