@@ -98,7 +98,11 @@ def ce_que_le_site_autorise(base: str) -> list[str]:
 
 
 def ce_qu_on_sait_extraire(url: str) -> None:
-    print("\n2. CE QU'ON SAIT EXTRAIRE  (une vraie annonce dans notre extracteur)")
+    print("\n5. CE QU'ON SAIT EXTRAIRE  (une vraie annonce dans notre extracteur)")
+    if not url:
+        print("   Aucune annonce à disséquer.")
+        return
+    print(f"   {url[:104]}")
     code, donnees = lire(url)
     print(f"   HTTP {code}, {len(donnees)} octets")
     if code != 200 or not donnees:
@@ -117,20 +121,21 @@ def ce_qu_on_sait_extraire(url: str) -> None:
         print(f"                  {p[:96]}")
 
 
-def comment_atteindre_un_terroir(base: str, sitemaps: list[str]) -> None:
+def comment_atteindre_un_terroir(base: str, sitemaps: list[str]) -> list[str]:
     print("\n3. COMMENT ATTEINDRE LES ANNONCES D'UN TERROIR")
     if not sitemaps:
         print("   Aucun sitemap déclaré : il faudrait deviner les URL de recherche,")
         print("   ce qui est fragile. Piste à écarter sauf porte d'entrée évidente.")
-        return
+        return []
 
     cibles = {d for d, r in REGION_PAR_DEPT.items() if r in set(regions_cibles())}
     annonces = _annonces_du_sitemap(sitemaps)
     if not annonces:
         print("   Aucune annonce trouvée dans les sitemaps.")
-        return
+        return []
     print(f"\n4. VOLUME ATTEIGNABLE — {len(annonces)} annonce(s) publiées au sitemap")
     _resumer_par_commune(annonces, cibles)
+    return annonces
 
 
 def _annonces_du_sitemap(sitemaps: list[str], profondeur: int = 2) -> list[str]:
@@ -216,19 +221,27 @@ def _resumer_par_commune(urls: list[str], departements_cibles: set) -> None:
 
 def main() -> None:
     parametres = argparse.ArgumentParser()
-    parametres.add_argument("annonce", help="URL d'une annonce du réseau")
+    parametres.add_argument("annonce", nargs="?",
+                            help="URL d'une annonce du réseau (facultatif : à "
+                                 "défaut, on en prend une au sitemap)")
     parametres.add_argument("--site", help="racine du site (déduite sinon)")
     args = parametres.parse_args()
 
-    morceaux = urlparse(args.annonce)
+    if not args.annonce and not args.site:
+        print("Donnez au moins --site ou l'URL d'une annonce.")
+        raise SystemExit(2)
+    morceaux = urlparse(args.annonce or args.site)
     base = args.site or f"{morceaux.scheme}://{morceaux.netloc}"
     print("=" * 78)
     print(f"SONDE MANDATAIRE — {base}")
     print("=" * 78)
 
     sitemaps = ce_que_le_site_autorise(base)
-    ce_qu_on_sait_extraire(args.annonce)
-    comment_atteindre_un_terroir(base, sitemaps)
+    # On évalue d'abord la porte d'entrée : sans elle, il n'y a pas de piste,
+    # et elle nous fournit au passage une annonce à disséquer. Évaluer un
+    # réseau ne demande donc plus d'en connaître une d'avance.
+    annonces = comment_atteindre_un_terroir(base, sitemaps)
+    ce_qu_on_sait_extraire(args.annonce or (annonces[0] if annonces else ""))
     print("\nFin de sonde.")
 
 
