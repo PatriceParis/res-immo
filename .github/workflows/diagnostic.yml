@@ -19,7 +19,7 @@ on:
         required: false
         default: ""
       mandataire:
-        description: "URL d'une annonce de réseau de mandataires (IAD, Safti…) à évaluer comme source"
+        description: "Domaines ou annonces de réseaux de mandataires à évaluer (séparés par des espaces)"
         required: false
         default: ""
 
@@ -46,4 +46,4 @@ jobs:
 
       - name: Évaluer un réseau de mandataires comme source d'annonces
         if: github.event.inputs.mandataire != ''
-        run: python scripts/explorer_mandataire.py "${{ github.event.inputs.mandataire }}"
+        run: python scripts/explorer_mandataire.py ${{ github.event.inputs.mandataire }}
