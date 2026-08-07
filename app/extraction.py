@@ -344,7 +344,15 @@ ATTRS_IMAGE = ("data-src", "data-original", "data-lazy-src", "data-lazy",
 RE_IMG_HABILLAGE = re.compile(
     r"logo|sprite|favicon|picto|icone?s?/|/icons?/|flag|drapeau|avatar|placeholder"
     r"|blank|spacer|transparent|loader|loading|chargement|pixel|tracking|banniere"
-    r"|banner|signature|cachet|qr[-_]?code|\.svg(?:$|\?)", re.IGNORECASE)
+    r"|banner|signature|cachet|qr[-_]?code|\.svg(?:$|\?)"
+    # L'étiquette énergie et son graphique accompagnent chaque annonce
+    # immobilière française : ce sont des schémas réglementaires, jamais la
+    # maison. Idem pour les boutons de partage, qui vivent dans la même
+    # barre d'outils (`fic-print.png`, `fic-fb.png`, `fic-mail.png`).
+    r"|energie|graphe|etiquette|diagnostic|[-_/]dpe[-_.]|[-_/]ges[-_.]"
+    r"|[-_/]fic-(?:print|fb|mail|twitter)"
+    r"|[-_/](?:imprimer|partager|facebook|twitter|linkedin|instagram)[-_.]",
+    re.IGNORECASE)
 
 # Le sélecteur de langue. Son image s'appelle « FR.png », « en_GB.gif »,
 # « fr-fr.svg » : un code de langue ou de pays, jamais un nom de photo. Elle

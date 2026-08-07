@@ -331,3 +331,29 @@ def test_sans_reserve_utilisable_on_ne_montre_rien():
     logo = "https://agence.fr/img/logo-agence.png"
     biens = [{"agence": "A", "photo": logo, "photos": [logo]} for _ in range(3)]
     assert photo_retenue(biens[0], _photos_de_mobilier(biens)) is None
+
+
+def test_l_etiquette_energie_n_est_pas_la_maison():
+    """Toute annonce française porte son étiquette DPE et son graphique. Ils
+    n'apparaissent souvent qu'UNE fois par agence — la règle de répétition ne
+    peut donc pas les voir — mais ce ne sont jamais des photos de bien."""
+    from app.extraction import _image_de_la_page
+
+    html = """<html><body>
+      <img src="/fr/a/vente/maisons/bresse/1942/img/energie-fleche.jpg">
+      <img src="/fr/a/vente/maisons/bresse/1942/img/graphe.png">
+      <img src="/fr/a/vente/maisons/bresse/1942/img/fic-print.png">
+      <img src="/fr/a/vente/maisons/bresse/1942/img/fic-fb.png">
+      <img src="/helpers/image-get.inc.php?f=1024x550&amp;n=11665">
+    </body></html>"""
+    photo = _image_de_la_page(html, "https://www.immo-ray.com/fr/a/vente/x/1942/y")
+    assert photo == "https://www.immo-ray.com/helpers/image-get.inc.php?f=1024x550&n=11665"
+
+
+def test_une_maison_dite_energie_positive_reste_une_photo():
+    """La règle vise les schémas réglementaires, pas les mots du marketing —
+    on vérifie qu'un dossier de photos ordinaire n'est pas emporté."""
+    from app.extraction import _image_de_la_page
+
+    html = '<html><body><img src="/medias/biens/maison-renovee-2026.jpg"></body></html>'
+    assert _image_de_la_page(html, "https://a.fr/x") == "https://a.fr/medias/biens/maison-renovee-2026.jpg"

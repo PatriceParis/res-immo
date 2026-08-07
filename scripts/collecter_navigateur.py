@@ -393,6 +393,12 @@ def main() -> None:
                 try:
                     page.goto(u, wait_until="domcontentloaded", timeout=20000)
                     page.wait_for_timeout(600)
+                    # Un coup de molette avant de lire la page : beaucoup de
+                    # diaporamas ne chargent leurs photos qu'au défilement, et
+                    # sans cela on ne voyait que les icônes de l'en-tête. La
+                    # sonde l'a montré sur immo-ray : 14 images avant, 50 après.
+                    page.mouse.wheel(0, 2500)
+                    page.wait_for_timeout(900)
                     html = page.content()
                 except Exception:
                     continue
