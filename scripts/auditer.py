@@ -34,6 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app import db, regions  # noqa: E402
+from app.chargement import _photos_de_mobilier, photo_retenue  # noqa: E402
 from app.extraction import PRIX_M2_MAX, PRIX_M2_MIN  # noqa: E402
 from app.marche import ECART_SIGNIFICATIF  # noqa: E402
 from app.qualite import est_vendu  # noqa: E402
@@ -280,6 +281,41 @@ def verifier_photos(biens: list[dict], audit: Audit) -> None:
                        f"({round(100 * avec / total)} %)")
 
 
+def verifier_photo_publiee_egale_photo_affichee(biens: list[dict], audit: Audit) -> None:
+    """La photo inscrite au catalogue doit être celle que le site montrera.
+
+    Trois signalements de suite sur les images venaient de cet écart, et non
+    d'une erreur d'extraction. La chaîne compte quatre mains : l'extraction
+    propose, la vérification ouvre les images et tranche, l'export publie —
+    puis le CHARGEMENT rechoisit, et c'est lui qui a le dernier mot puisque
+    c'est lui qui sert le site.
+
+    Tant que ces deux dernières mains pouvaient diverger, le catalogue
+    pouvait s'annoncer illustré à 95 % en montrant des dessins de repli :
+    88 annonces de vingt agences étaient dans ce cas, dont 47 sans aucune
+    image affichable. Rien ne plantait, aucun test ne le voyait — seul
+    l'utilisateur le voyait.
+
+    Cette règle ferme l'écart : elle rejoue le chargement sur les données
+    publiées et exige le même résultat.
+    """
+    mobilier = _photos_de_mobilier(biens)
+    for b in biens:
+        publiee = b.get("photo") or ""
+        affichee = photo_retenue(b, mobilier) or ""
+        if publiee == affichee:
+            continue
+        if publiee and not affichee:
+            audit.signaler(
+                "photo annoncée mais jamais affichée",
+                f"{_etiquette(b)} — {publiee[:66]} est écartée au chargement")
+        else:
+            audit.signaler(
+                "photo publiée différente de la photo affichée",
+                f"{_etiquette(b)} — publiée {publiee[:44] or '(aucune)'} / "
+                f"affichée {affichee[:44] or '(aucune)'}")
+
+
 def verifier_liens(biens: list[dict], audit: Audit) -> None:
     """Sans lien vers l'annonce d'origine, la mise en relation est morte."""
     for b in biens:
@@ -491,6 +527,7 @@ REGLES = (
     verifier_doublons,
     verifier_liens,
     verifier_photos,
+    verifier_photo_publiee_egale_photo_affichee,
     verifier_filtres_actifs,
     verifier_fraicheur,
     verifier_commune_conforme_au_titre,
