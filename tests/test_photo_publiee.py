@@ -7,9 +7,14 @@ mais d'un désaccord entre deux étapes de la chaîne :
                                                           → CHARGEMENT (rechoisit)
 
 Le chargement a le dernier mot, puisque c'est lui qui sert le site. Tant
-qu'il pouvait défaire le verdict de la vérification, le catalogue s'annonçait
-illustré à 95 % en montrant des dessins de repli : 88 annonces de vingt
-agences étaient dans ce cas, dont 47 sans aucune image affichable.
+qu'il pouvait défaire le verdict de la vérification, une fiche publiée avec
+une photo vérifiée pouvait s'afficher avec une autre, morte : vingt et une
+fiches servies, chez cinq agences, étaient dans ce cas.
+
+Le compte se fait sur les fiches SERVIES, et non sur le fichier d'export —
+celui-ci en contient trois cents de plus, que le chargement écarte de toute
+façon. Les confondre gonfle le chiffre et fait crier la règle sur des fiches
+que personne ne voit.
 
 Ces tests fixent l'accord entre les deux bouts. Chacun échoue sur le code
 d'avant — c'est leur seule raison d'exister.
@@ -34,6 +39,22 @@ AUTRE = "https://cdn.exemple.com/1600xauto/images/biens/1/abc/photo_2.jpg"
 def _annonce(photo, photos, agence="Groupe123immo", n=1):
     return {"id": f"a{n}", "agence": agence, "url": f"https://agence.fr/bien/{n}",
             "photo": photo, "photos": list(photos)}
+
+
+def _annonce_servie(photo, photos, agence="Agence du Terroir", n=1):
+    """Une annonce que le site montrera vraiment.
+
+    L'audit ne juge que celles-là : le fichier d'export contient trois cents
+    entrées de plus que le site n'en sert. Un cas de test bâclé passerait donc
+    au travers de la règle sans rien prouver — d'où une fiche complète, avec
+    sa commune, son département de terroir et une surface plausible.
+    """
+    return dict(_annonce(photo, photos, agence, n),
+                url=f"https://agence.fr/maison-a-vendre-belleme-{n}.html",
+                titre=f"Maison en pierre de 120 m² à Bellême ({n})",
+                type_bien="maison", prix=250000 + n, surface_m2=120 + n,
+                terrain_m2=800, pieces=5, commune="Bellême",
+                code_postal="61130", departement="61", lat=48.376, lon=0.565)
 
 
 def test_la_photo_verifiee_passe_devant_les_autres_candidates():
@@ -91,8 +112,7 @@ def test_l_audit_signale_une_photo_annoncee_mais_jamais_affichee():
     dans la chaîne, l'audit de chaque collecte le verra."""
     auditeur = _auditeur()
     partagee = "https://agence.fr/photos/926/gran-maison.jpg"
-    biens = [_annonce(partagee, [partagee], agence="Agence du Terroir", n=n)
-             for n in range(3)]
+    biens = [_annonce_servie(partagee, [partagee], n=n) for n in range(3)]
     audit = auditeur.Audit()
     auditeur.verifier_photo_publiee_egale_photo_affichee(biens, audit)
     assert audit.anomalies["photo annoncée mais jamais affichée"], \
@@ -102,8 +122,8 @@ def test_l_audit_signale_une_photo_annoncee_mais_jamais_affichee():
 def test_l_audit_se_tait_quand_la_chaine_est_d_accord():
     """Une règle qui crie sur des données saines ne serait pas lue longtemps."""
     auditeur = _auditeur()
-    biens = [_annonce(f"https://agence.fr/photos/maison-{n}.jpg",
-                      [f"https://agence.fr/photos/maison-{n}.jpg"], n=n)
+    biens = [_annonce_servie(f"https://agence.fr/photos/maison-{n}.jpg",
+                             [f"https://agence.fr/photos/maison-{n}.jpg"], n=n)
              for n in range(3)]
     audit = auditeur.Audit()
     auditeur.verifier_photo_publiee_egale_photo_affichee(biens, audit)

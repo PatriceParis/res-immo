@@ -34,7 +34,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from app import db, regions  # noqa: E402
-from app.chargement import _photos_de_mobilier, photo_retenue  # noqa: E402
+from app.chargement import (_photos_de_mobilier, biens_servis,  # noqa: E402
+                            photo_retenue)
 from app.extraction import PRIX_M2_MAX, PRIX_M2_MIN  # noqa: E402
 from app.marche import ECART_SIGNIFICATIF  # noqa: E402
 from app.qualite import est_vendu  # noqa: E402
@@ -290,17 +291,24 @@ def verifier_photo_publiee_egale_photo_affichee(biens: list[dict], audit: Audit)
     puis le CHARGEMENT rechoisit, et c'est lui qui a le dernier mot puisque
     c'est lui qui sert le site.
 
-    Tant que ces deux dernières mains pouvaient diverger, le catalogue
-    pouvait s'annoncer illustré à 95 % en montrant des dessins de repli :
-    88 annonces de vingt agences étaient dans ce cas, dont 47 sans aucune
-    image affichable. Rien ne plantait, aucun test ne le voyait — seul
-    l'utilisateur le voyait.
+    Tant que ces deux dernières mains pouvaient diverger, une fiche pouvait
+    être publiée avec une photo vérifiée et s'afficher avec une autre, morte :
+    vingt et une fiches servies, chez cinq agences, étaient dans ce cas.
 
     Cette règle ferme l'écart : elle rejoue le chargement sur les données
     publiées et exige le même résultat.
+
+    On ne juge QUE les fiches réellement servies. Le fichier d'export en
+    contient trois cents de plus que le site n'en montre — pages de catalogue,
+    départements hors terroir, doublons de bandeau — que le chargement écarte
+    de toute façon. Les compter ferait crier la règle sur des fiches que
+    personne ne voit, et une règle qui crie pour rien cesse d'être lue.
     """
+    servies = {b.get("id") for b in biens_servis(biens)}
     mobilier = _photos_de_mobilier(biens)
     for b in biens:
+        if b.get("id") not in servies:
+            continue
         publiee = b.get("photo") or ""
         affichee = photo_retenue(b, mobilier) or ""
         if publiee == affichee:
