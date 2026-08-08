@@ -22,6 +22,10 @@ on:
         description: "Domaines ou annonces de réseaux de mandataires à évaluer (séparés par des espaces)"
         required: false
         default: ""
+      relais:
+        description: "Comparer direct / relais : nom d'agence, URLs d'annonces, ou 'echantillon'"
+        required: false
+        default: ""
 
 jobs:
   sonder:
@@ -47,3 +51,20 @@ jobs:
       - name: Évaluer un réseau de mandataires comme source d'annonces
         if: github.event.inputs.mandataire != ''
         run: python scripts/explorer_mandataire.py ${{ github.event.inputs.mandataire }}
+
+      - name: Comparer ce que voit la vérification et ce que voit le visiteur
+        # La vérification ouvre les images EN DIRECT depuis le runner ; le
+        # visiteur les reçoit par /api/photo, notre relais sur Vercel. Deux
+        # chemins, deux résultats possibles — d'où des fiches réputées
+        # illustrées qui restent au dessin de repli.
+        if: github.event.inputs.relais != ''
+        env:
+          CIBLE: ${{ github.event.inputs.relais }}
+        run: |
+          if [ "$CIBLE" = "echantillon" ]; then
+            python scripts/diagnostiquer_relais.py --echantillon 25
+          elif [ "${CIBLE#http}" != "$CIBLE" ]; then
+            python scripts/diagnostiquer_relais.py $CIBLE
+          else
+            python scripts/diagnostiquer_relais.py --agence "$CIBLE"
+          fi
