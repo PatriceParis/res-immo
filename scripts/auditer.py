@@ -561,8 +561,17 @@ def main() -> int:
     args = parseur.parse_args()
 
     if args.json:
-        biens = json.loads(args.json.read_text(encoding="utf-8"))
-        provenance = str(args.json)
+        tout = json.loads(args.json.read_text(encoding="utf-8"))
+        # On n'audite que ce que le site montre — comme le fait déjà le mode
+        # base, qui ne contient que des biens ayant passé le chargement. Les
+        # deux modes comptaient jusqu'ici des populations différentes : le
+        # fichier porte trois cents entrées de plus (pages de catalogue,
+        # départements hors terroir, doublons de bandeau), ce qui gonflait le
+        # taux d'anomalies d'un facteur trois et faisait bouger les chiffres
+        # d'un mode à l'autre sans que rien n'ait changé.
+        biens = biens_servis(tout)
+        provenance = (f"{args.json} — {len(biens)} servis sur {len(tout)} "
+                      f"({len(tout) - len(biens)} écartés au chargement)")
     else:
         try:
             biens = _biens_depuis_db()
