@@ -182,14 +182,23 @@ def _cibles(site: str, nom: str, index: str) -> list[dict]:
     return agences
 
 
-def _sitemap_urls(base: str) -> list[str]:
-    """URLs de pages de biens listées dans le sitemap.xml (via requests)."""
+def _sitemap_urls(base: str, fin_prevue: float = 0.0) -> list[str]:
+    """URLs de pages de biens listées dans le sitemap.xml (via requests).
+
+    `fin_prevue` borne la RECHERCHE elle-même. Sans cela, une agence pouvait
+    y engloutir des minutes — trois chemins candidats, seize requêtes de
+    quinze secondes chacune — pendant que le budget de la collecte filait.
+    Quatre passages planifiés de suite ont ainsi dépassé la limite du job et
+    ont été tués AVANT l'export : le travail était fait, puis jeté.
+    """
     if requests is None:
         return []
     entetes = {"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"}
     for chemin in ("/sitemap.xml", "/sitemap_index.xml", "/sitemap-index.xml"):
+        if fin_prevue and time.monotonic() > fin_prevue:
+            return []
         try:
-            r = requests.get(base + chemin, headers=entetes, timeout=15)
+            r = requests.get(base + chemin, headers=entetes, timeout=10)
         except Exception:
             continue
         if r.status_code != 200 or "<loc" not in r.text.lower():
@@ -198,9 +207,11 @@ def _sitemap_urls(base: str) -> list[str]:
         detail, sous = [], []
         for u in locs:
             (sous if u.lower().endswith(".xml") else detail).append(u)
-        for su in sous[:15]:            # suivre les sous-sitemaps une fois
+        for su in sous[:8]:             # suivre les sous-sitemaps une fois
+            if fin_prevue and time.monotonic() > fin_prevue:
+                break
             try:
-                detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=15).text)
+                detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=10).text)
             except Exception:
                 pass
         biens = [u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)]
@@ -223,12 +234,13 @@ def _liens_page(page, base: str) -> list[str]:
     return urls
 
 
-def _urls_a_visiter(page, cible: dict, base: str, maxi: int) -> list[str]:
+def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
+                    fin_prevue: float = 0.0) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
     # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
     # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
     vivier = max(maxi * 8, 80)
-    urls = _sitemap_urls(base)
+    urls = _sitemap_urls(base, fin_prevue)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
         return urls[:vivier]
@@ -293,7 +305,7 @@ def main() -> None:
             maxi = int(cible.get("max") or args.max)
             pages_max = int(cible.get("pages") or args.pages_max)
             print(f"\n▶ {cible['nom']} — {base}")
-            urls = _urls_a_visiter(page, cible, base, maxi)
+            urls = _urls_a_visiter(page, cible, base, maxi, fin_prevue)
             n, vendus, ecartes, vues = 0, 0, 0, 0
             for u in urls:
                 if n >= maxi:          # on s'arrête sur les biens GARDÉS,

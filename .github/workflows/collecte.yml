@@ -56,7 +56,12 @@ concurrency:
 jobs:
   collecte:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    # Le budget interne du collecteur est de 28 minutes, l'enrichissement et
+    # l'export en prennent une dizaine. Soixante laissent de la marge : quatre
+    # passages de suite ont été TUÉS à cinquante minutes, juste avant l'export
+    # — le travail était fait, puis jeté. Mieux vaut tenir le verrou un peu
+    # plus longtemps que perdre une collecte entière.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
