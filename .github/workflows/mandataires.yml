@@ -61,11 +61,14 @@ jobs:
           RESEAU: ${{ github.event.inputs.reseau }}
           MINUTES: ${{ github.event.inputs.minutes }}
           DEPTS: ${{ github.event.inputs.departements }}
+          PYTHONUNBUFFERED: "1"
         run: |
           OPTIONS="--minutes ${MINUTES:-20}"
           if [ -n "$RESEAU" ]; then OPTIONS="$OPTIONS --reseau $RESEAU"; fi
           if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
-          python scripts/collecter_mandataires.py $OPTIONS
+          # Même garde-fou que la collecte d'agences : la commande s'arrête à
+          # coup sûr, pour que l'export ait toujours lieu.
+          timeout --kill-after=30s 26m python scripts/collecter_mandataires.py $OPTIONS || true
 
       - name: Enrichir les risques officiels (Géorisques)
         # Moins qu'à la collecte d'agences : ce travail tient le verrou
