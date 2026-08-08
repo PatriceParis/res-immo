@@ -129,3 +129,19 @@ def test_safti_ne_lit_que_les_sitemaps_de_maisons_disponibles():
             "https://www.safti.fr/sitemaps/sitemap.annonce.commerce.disponible.xml",
             "https://www.safti.fr/sitemaps/sitemap.mandataires.xml"):
         assert not voulus.search(ecarte), ecarte
+
+
+def test_on_progresse_dans_un_departement_au_lieu_de_relire_les_memes():
+    """Un passage ne visite que quelques dizaines d'annonces par département.
+    En prenant toujours les premières du sitemap, les 1 308 autres annonces
+    de Saône-et-Loire n'auraient jamais été atteintes."""
+    annonces = [{"url": f"https://iad.fr/annonce/maison-givry-{n}"} for n in range(5)]
+    deja = {
+        "https://iad.fr/annonce/maison-givry-0": "2026-08-07",   # vue hier
+        "https://iad.fr/annonce/maison-givry-1": "2026-08-01",   # vue avant
+        # les 2, 3 et 4 sont inconnues
+    }
+    ordre = [a["url"].rsplit("-", 1)[1]
+             for a in mandataires.ordre_dans_le_departement(annonces, deja)]
+    assert ordre[:3] == ["2", "3", "4"], "les inconnues d'abord"
+    assert ordre[3:] == ["1", "0"], "puis la plus anciennement revue"

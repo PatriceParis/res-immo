@@ -126,6 +126,20 @@ def communes_des_terroirs() -> dict:
     return par_dept
 
 
+def annonces_deja_connues() -> dict:
+    """URL → date de dernière constatation, d'après le catalogue publié.
+
+    Sert à progresser DANS un département au lieu d'en relire éternellement
+    les mêmes premières annonces.
+    """
+    try:
+        biens = json.loads(
+            (RACINE / "data" / "annonces_reel.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {b["url"]: b.get("revue_le") or "" for b in biens if b.get("url")}
+
+
 def derniere_visite() -> dict:
     try:
         return json.loads(JOURNAL.read_text(encoding="utf-8"))
@@ -208,12 +222,14 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     print(f"  {len(a_visiter)} dans nos terroirs, sur {len(groupes)} département(s)")
 
     vu = derniere_visite()
+    deja_vues = annonces_deja_connues()
     total = 0
     for dept in mandataires.ordre_des_departements(groupes, vu):
         if time.monotonic() > fin_prevue:
             print("  budget de temps atteint — la suite au prochain passage.")
             break
-        lot = groupes[dept][:args.max_par_departement]
+        lot = mandataires.ordre_dans_le_departement(
+            groupes[dept], deja_vues)[:args.max_par_departement]
         gardes = compteurs = 0
         etats = {"garde": 0, "vendu": 0, "ecarte": 0, "illisible": 0}
         for annonce in lot:
