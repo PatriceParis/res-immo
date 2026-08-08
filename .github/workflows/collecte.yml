@@ -81,19 +81,33 @@ jobs:
           SITES: ${{ github.event.inputs.sites }}
           INDEX: ${{ github.event.inputs.index }}
           MAXIN: ${{ github.event.inputs.max }}
+          # Sans cela, Python met sa sortie en tampon quand elle part dans un
+          # fichier : à l'annulation, TOUT le journal est perdu. Cinq passages
+          # de suite ont ainsi été tués sans laisser la moindre trace de ce
+          # qu'ils faisaient — impossible de savoir où le temps partait.
+          PYTHONUNBUFFERED: "1"
         run: |
           MAX="${MAXIN:-8}"
+          # `timeout` est le garde-fou de dernier recours. Le collecteur a son
+          # propre budget de vingt-huit minutes, mais il l'a dépassé deux fois
+          # — jusqu'à cinquante-neuf minutes — par une attente qu'il ne
+          # surveillait pas. Le job entier était alors tué AVANT l'export, et
+          # tout le travail jeté. Ici, la commande s'arrête à coup sûr, et les
+          # étapes suivantes — enrichissement, vérification, export — ont
+          # toujours lieu. Mieux vaut une collecte écourtée qu'une collecte
+          # perdue.
+          COLLECTER="timeout --kill-after=30s 34m python scripts/collecter_navigateur.py"
           if [ -n "$SITES" ]; then
             for s in $SITES; do
               echo "== $s =="
               if [ -n "$INDEX" ]; then
-                python scripts/collecter_navigateur.py -s "$s" --index "$INDEX" --max "$MAX" || true
+                $COLLECTER -s "$s" --index "$INDEX" --max "$MAX" || true
               else
-                python scripts/collecter_navigateur.py -s "$s" --max "$MAX" || true
+                $COLLECTER -s "$s" --max "$MAX" || true
               fi
             done
           else
-            python scripts/collecter_navigateur.py --max "$MAX" || true
+            $COLLECTER --max "$MAX" || true
           fi
 
       - name: Enrichir les risques officiels (Géorisques)
