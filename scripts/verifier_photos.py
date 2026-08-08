@@ -39,9 +39,17 @@ from app.photos import ressemble_a_une_photo  # noqa: E402
 # Au-delà, ce n'est plus une vignette d'annonce et on ne veut pas la charger.
 PLAFOND_OCTETS = 8_000_000
 SECONDES = 10
-# On ne teste pas indéfiniment : si les six premières candidates d'une annonce
-# échouent, la septième n'a aucune raison de réussir.
-CANDIDATES_MAX = 6
+# On ne teste pas indéfiniment. Six suffisaient, pensait-on : « si les six
+# premières échouent, la septième n'a aucune raison de réussir ». C'était faux
+# — et d'une façon coûteuse. Huit annonces (six chez Michaël Zingraf, qui
+# propose jusqu'à 121 adresses par bien) se retrouvaient sans photo retenue
+# alors que le site en affichait une : celle du septième rang, jamais ouverte,
+# donc jamais vérifiée. L'abandon prématuré ne supprimait pas l'image, il la
+# rendait invisible au contrôle.
+#
+# Le coût ne se paie que sur les échecs : dès qu'une candidate convient, on
+# s'arrête. Dix-huit laissent trois tournées à une annonce difficile.
+CANDIDATES_MAX = 18
 # Les agences tolèrent mal une rafale ; huit fils suffisent à tenir le budget
 # de temps d'une collecte sans les brusquer.
 FILS = 8
