@@ -279,11 +279,23 @@ def main() -> None:
     # sur un job plafonné à 50 a déjà fait couper le job avant l'export.
     #   collecte 28 + risques 10 + export 1 = 39 min, sous les 50 du job.
     ap.add_argument("--minutes-max", type=float, default=28.0)
+    # Budget PAR AGENCE. Le budget global dit quand s'arrêter, pas comment
+    # répartir — et c'est la répartition qui manquait. Un passage de
+    # trente-quatre minutes n'a visité que TROIS agences pour dix-huit biens :
+    # le plafond de trente pages, à une vingtaine de secondes la page chez une
+    # agence lente, suffit à consommer douze minutes à lui seul.
+    #
+    # Or toute la rotation repose sur l'inverse : beaucoup d'agences, peu de
+    # biens chacune. À trois agences par passage, les deux cent trente-cinq de
+    # l'annuaire demanderaient treize jours pour boucler le tour, et un bien
+    # vendu resterait affiché deux semaines.
+    ap.add_argument("--minutes-par-agence", type=float, default=4.0)
     args = ap.parse_args()
 
     conn = db.connexion()
-    total = 0
-    fin_prevue = time.monotonic() + args.minutes_max * 60
+    total = agences = 0
+    depart = time.monotonic()
+    fin_prevue = depart + args.minutes_max * 60
     with sync_playwright() as p:
         navigateur = p.chromium.launch(
             executable_path=os.environ.get("REFUGE_CHROMIUM") or None, headless=True)
@@ -304,16 +316,25 @@ def main() -> None:
             # et pour ne pas laisser un seul terroir occuper toute la liste.
             maxi = int(cible.get("max") or args.max)
             pages_max = int(cible.get("pages") or args.pages_max)
+            debut = time.monotonic()
+            # L'agence n'a droit qu'à sa part, et jamais au-delà du budget
+            # global. La recherche d'URL est comprise dedans : c'est parfois
+            # elle qui traîne.
+            fin_agence = min(fin_prevue, debut + args.minutes_par_agence * 60)
             print(f"\n▶ {cible['nom']} — {base}")
-            urls = _urls_a_visiter(page, cible, base, maxi, fin_prevue)
+            urls = _urls_a_visiter(page, cible, base, maxi, fin_agence)
             n, vendus, ecartes, vues = 0, 0, 0, 0
+            debordement = ""
             for u in urls:
                 if n >= maxi:          # on s'arrête sur les biens GARDÉS,
                     break              # pas sur les pages visitées
                 if vues >= pages_max:
                     print(f"  … plafond de {pages_max} pages atteint pour cette agence")
                     break
-                if time.monotonic() > fin_prevue:
+                if time.monotonic() > fin_agence:
+                    debordement = (" — temps de l'agence épuisé"
+                                   if time.monotonic() <= fin_prevue
+                                   else " — budget global épuisé")
                     break
                 vues += 1
                 try:
@@ -368,14 +389,23 @@ def main() -> None:
                 n += 1
                 time.sleep(args.delai)
             conn.commit()
+            # Le temps passé est imprimé pour CHAQUE agence : c'est ce qui
+            # manquait pour comprendre où filait le budget. Cinq passages tués
+            # sans laisser de trace, puis un sixième qui n'a vu que trois
+            # agences — la réponse tenait dans une ligne qu'on n'écrivait pas.
+            duree = time.monotonic() - debut
             print(f"  ✔ {n} bien(s) enregistré(s)"
-                  f" — {vendus} déjà vendu(s), {ecartes} hors cible")
+                  f" — {vendus} déjà vendu(s), {ecartes} hors cible"
+                  f" — {vues} page(s) en {duree / 60:.1f} min{debordement}")
             _noter_visite(cible["site"], date.today().isoformat())
             total += n
+            agences += 1
 
         navigateur.close()
     conn.close()
-    print(f"\nTerminé : {total} bien(s) réel(s) ajouté(s). Rechargez l'application.")
+    ecoule = (time.monotonic() - depart) / 60
+    print(f"\nTerminé : {total} bien(s) réel(s) ajouté(s) chez {agences} agence(s) "
+          f"en {ecoule:.1f} min. Rechargez l'application.")
 
 
 if __name__ == "__main__":
