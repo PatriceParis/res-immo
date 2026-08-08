@@ -33,7 +33,7 @@ RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
 from app import db  # noqa: E402
-from app.chargement import _candidates  # noqa: E402
+from app.chargement import _candidates, _photos_de_mobilier  # noqa: E402
 from app.photos import ressemble_a_une_photo  # noqa: E402
 
 # Au-delà, ce n'est plus une vignette d'annonce et on ne veut pas la charger.
@@ -76,9 +76,23 @@ def telecharger(url: str, page: str | None) -> bytes | None:
         return None
 
 
-def verifier_une(annonce: dict, journal: bool = False) -> tuple[str | None, str]:
-    """La première candidate qui se charge et ressemble à une photo."""
+def verifier_une(annonce: dict, journal: bool = False,
+                 mobilier: set | None = None) -> tuple[str | None, str]:
+    """La première candidate qui se charge et ressemble à une photo.
+
+    Le mobilier de site est écarté ici, et non plus seulement au chargement.
+    Sans cela, la photo publiée n'était pas celle que le site affichait : le
+    catalogue comptait 47 annonces « illustrées » par une image que le
+    chargement rejetait ensuite comme répétée — dix maisons de l'Agence du
+    Terroir partageaient un même cliché. Le visiteur voyait le dessin de
+    repli, le décompte annonçait une photo.
+    """
+    mobilier = mobilier or set()
     for url in _candidates(annonce)[:CANDIDATES_MAX]:
+        if url in mobilier:
+            if journal:
+                print(f"      ✗ mobilier de site {url[:80]}")
+            continue
         donnees = telecharger(url, annonce.get("url"))
         if donnees is None:
             if journal:
@@ -102,6 +116,7 @@ def _verifier_export(fichier: Path, args) -> None:
     import json
 
     annonces = json.loads(fichier.read_text(encoding="utf-8"))
+    mobilier = _photos_de_mobilier(annonces)
     a_verifier = [a for a in annonces if _candidates(a)]
     if args.limite:
         a_verifier = a_verifier[:args.limite]
@@ -109,7 +124,7 @@ def _verifier_export(fichier: Path, args) -> None:
     def travail(annonce):
         if args.journal:
             print(f"  {(annonce.get('titre') or '')[:60]}")
-        return annonce, *verifier_une(annonce, args.journal)
+        return annonce, *verifier_une(annonce, args.journal, mobilier)
 
     with ThreadPoolExecutor(max_workers=FILS) as executeur:
         resultats = list(executeur.map(travail, a_verifier))
@@ -160,6 +175,7 @@ def main() -> None:
         except ValueError:
             annonce["photos"] = []
         annonces.append(annonce)
+    mobilier = _photos_de_mobilier(annonces)
     if args.limite:
         annonces = annonces[:args.limite]
 
@@ -168,7 +184,7 @@ def main() -> None:
             return annonce, None, "aucune image trouvée sur la page"
         if args.journal:
             print(f"  {(annonce.get('titre') or '')[:60]}")
-        retenue, motif = verifier_une(annonce, args.journal)
+        retenue, motif = verifier_une(annonce, args.journal, mobilier)
         return annonce, retenue, motif
 
     with ThreadPoolExecutor(max_workers=FILS) as executeur:

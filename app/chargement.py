@@ -225,10 +225,25 @@ def _nom_de_fichier(url: str) -> str:
 
 
 def _candidates(annonce: dict) -> list:
-    """Les images proposées pour une annonce, de la plus plausible à la moins."""
+    """Les images proposées pour une annonce, de la plus plausible à la moins.
+
+    La photo DÉJÀ RETENUE passe toujours en tête — y compris lorsqu'elle
+    figure aussi dans la liste. C'est elle que `scripts/verifier_photos.py` a
+    réellement ouverte et jugée conforme ; la laisser à son rang d'origine
+    revenait à défaire ce travail à chaque chargement du site.
+
+    Le défaut était invisible et durable : la vérification corrigeait la
+    photo, l'export la publiait, puis le chargement reprenait bêtement la
+    première candidate de la page — chez Groupe 123 Immo, une adresse en
+    `/600xauto/images/…` qui répond 404 quand les vraies photos vivent sous
+    `/1200xauto/images/biens/…`. Quatre-vingt-huit annonces de vingt agences
+    retombaient ainsi sur leur dessin de repli, alors que le catalogue les
+    comptait « illustrées ».
+    """
     photos = [u for u in (annonce.get("photos") or []) if u]
-    if annonce.get("photo") and annonce["photo"] not in photos:
-        photos.insert(0, annonce["photo"])
+    retenue = annonce.get("photo")
+    if retenue:
+        photos = [retenue] + [u for u in photos if u != retenue]
     return photos
 
 
