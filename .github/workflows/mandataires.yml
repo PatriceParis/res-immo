@@ -20,13 +20,17 @@ on:
       minutes:
         description: "Budget de temps"
         required: false
-        default: "30"
+        default: "20"
       departements:
         description: "Codes séparés par des virgules (vide = tour normal)"
         required: false
         default: ""
   schedule:
-    - cron: "0 1,13 * * *"
+    # Juste APRÈS les créneaux de la collecte d'agences (2 h et 14 h), jamais
+    # avant : les trois workflows partagent un verrou d'écriture, et celui-ci
+    # a fait manquer deux passages de collecte en tenant le verrou trop
+    # longtemps. La collecte d'agences tourne six fois par jour et prime.
+    - cron: "0 3,15 * * *"
 
 permissions:
   contents: write
@@ -58,13 +62,16 @@ jobs:
           MINUTES: ${{ github.event.inputs.minutes }}
           DEPTS: ${{ github.event.inputs.departements }}
         run: |
-          OPTIONS="--minutes ${MINUTES:-30}"
+          OPTIONS="--minutes ${MINUTES:-20}"
           if [ -n "$RESEAU" ]; then OPTIONS="$OPTIONS --reseau $RESEAU"; fi
           if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
           python scripts/collecter_mandataires.py $OPTIONS
 
       - name: Enrichir les risques officiels (Géorisques)
-        run: python scripts/enrichir_risques.py --max 200 || true
+        # Moins qu'à la collecte d'agences : ce travail tient le verrou
+        # d'écriture partagé, et un passage mandataires qui déborde fait
+        # manquer son tour à la collecte suivante.
+        run: python scripts/enrichir_risques.py --max 80 || true
 
       - name: Vérifier que chaque photo se charge et montre bien une maison
         run: python scripts/verifier_photos.py || true

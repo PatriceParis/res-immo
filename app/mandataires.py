@@ -148,6 +148,22 @@ def par_departement(annonces: list[dict]) -> dict:
     return groupes
 
 
+def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dict]:
+    """Les annonces d'un département, les jamais vues d'abord.
+
+    Un passage ne visite que quelques dizaines d'annonces par département,
+    et prenait jusqu'ici les PREMIÈRES du sitemap — donc toujours les mêmes.
+    La Saône-et-Loire en compte 1 333 : les 1 308 suivantes n'auraient jamais
+    été atteintes, et le département aurait paru couvert alors qu'on n'en
+    voyait que le premier vingtième.
+
+    On sert donc d'abord ce qu'on ne connaît pas, puis ce qu'on a revu il y a
+    le plus longtemps — la même règle que la rotation des agences, appliquée
+    un cran plus bas.
+    """
+    return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""), a["url"]))
+
+
 def ordre_des_departements(groupes: dict, derniere_visite: dict) -> list[str]:
     """Les départements vus il y a le plus longtemps d'abord.
 
