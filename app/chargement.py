@@ -304,6 +304,22 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     return retenues
 
 
+def biens_servis(annonces: list[dict]) -> list[dict]:
+    """Parmi les entrées d'un export, celles que le site montrera vraiment.
+
+    Le fichier d'export n'est pas le catalogue : il compte trois cents entrées
+    de plus que le site n'en sert — pages de catalogue, départements hors
+    terroir, doublons de bandeau. Tout contrôle qui les confond surestime le
+    catalogue ou signale des défauts que personne ne voit.
+
+    On rejoue donc les vrais filtres, plutôt que d'en réécrire une copie
+    ailleurs : une copie finirait par diverger, et c'est précisément une
+    divergence de ce genre qui a laissé passer les photos mortes.
+    """
+    gardes = {a.get("id") for a in _preparer_toutes(None, annonces) if a.get("id")}
+    return [b for b in annonces if b.get("id") in gardes]
+
+
 def charger_annonces_json(conn, chemin: Path | str) -> int:
     """Charge un fichier JSON (liste d'annonces brutes) en base."""
     return charger_liste(conn, json.loads(Path(chemin).read_text(encoding="utf-8")))
