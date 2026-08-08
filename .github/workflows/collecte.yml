@@ -96,18 +96,36 @@ jobs:
           # étapes suivantes — enrichissement, vérification, export — ont
           # toujours lieu. Mieux vaut une collecte écourtée qu'une collecte
           # perdue.
-          COLLECTER="timeout --kill-after=30s 34m python scripts/collecter_navigateur.py"
+          #
+          # `|| true` laissait en outre passer l'échec SANS RIEN DIRE. Deux
+          # passages programmés n'ont ainsi rien poussé, et le journal ne
+          # permettait même pas de distinguer un collecteur qui plante d'un
+          # collecteur coupé par le garde-fou. On continue de ne pas faire
+          # échouer le job — l'export doit avoir lieu — mais on le DIT.
+          collecter() {
+            set +e
+            timeout --kill-after=30s 34m python scripts/collecter_navigateur.py "$@"
+            code=$?
+            set -e
+            case "$code" in
+              0) echo "Collecteur terminé normalement." ;;
+              124|137)
+                echo "::warning::Collecteur ARRÊTÉ par le garde-fou de temps (code $code) : plus de 34 min. L'export suit." ;;
+              *)
+                echo "::error::Collecteur sorti EN ERREUR (code $code) — voir la trace ci-dessus. L'export suit." ;;
+            esac
+          }
           if [ -n "$SITES" ]; then
             for s in $SITES; do
               echo "== $s =="
               if [ -n "$INDEX" ]; then
-                $COLLECTER -s "$s" --index "$INDEX" --max "$MAX" || true
+                collecter -s "$s" --index "$INDEX" --max "$MAX"
               else
-                $COLLECTER -s "$s" --max "$MAX" || true
+                collecter -s "$s" --max "$MAX"
               fi
             done
           else
-            $COLLECTER --max "$MAX" || true
+            collecter --max "$MAX"
           fi
 
       - name: Enrichir les risques officiels (Géorisques)
