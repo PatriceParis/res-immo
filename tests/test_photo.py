@@ -171,31 +171,13 @@ def test_une_vraie_photo_opengraph_est_conservee():
     assert a.get("photo") == "https://cdn.agence.fr/photos/maison-42.jpg"
 
 
-def test_le_relais_annonce_la_page_de_l_annonce_comme_referer():
-    """Cas réel signalé : les photos de Groupe 123 Immo (hébergées sur
-    staticlbi.com) ne s'affichaient pas. Le relais se réclamait du CDN
-    lui-même — ce qu'aucun navigateur n'envoie jamais."""
-    from urllib.parse import urlparse
-
-    from app.main import referer_de_la_page
-
-    cdn = urlparse("https://grcentvingttrois.staticlbi.com/600xauto/images/5/photo.jpg")
-    page = "https://www.groupe123immo.com/vente/1-appoigny/maison/3515-pavillon"
-    assert referer_de_la_page(page, cdn) == "https://www.groupe123immo.com/"
-
-
-def test_sans_page_connue_le_relais_garde_l_ancien_comportement():
-    """Les agences qui hébergent leurs images chez elles continuent de marcher."""
-    from urllib.parse import urlparse
-
-    from app.main import referer_de_la_page
-
-    img = urlparse("https://agencearmance.com/assets/photos/maison.jpg")
-    assert referer_de_la_page(None, img) == "https://agencearmance.com/"
-    assert referer_de_la_page("", img) == "https://agencearmance.com/"
-    # Une page inexploitable (relative, autre protocole) ne doit pas casser.
-    assert referer_de_la_page("/annonce/562", img) == "https://agencearmance.com/"
-    assert referer_de_la_page("javascript:alert(1)", img) == "https://agencearmance.com/"
+# Les deux tests du relais /api/photo vivaient ici. Le relais a été retiré le
+# 10 août 2026 : il republiait chaque image depuis notre domaine avec un
+# Referer forgé — position juridiquement intenable (Renckhoff, VG Bild-Kunst),
+# et construite pour un problème que la sonde n'a pas retrouvé : soixante
+# photos sur soixante acceptent le hotlink honnête, IAD compris. Les photos
+# partent désormais directement de chez l'agence, avec notre Referer ; la
+# vérification (scripts/verifier_photos.py) teste ce monde-là.
 
 
 def test_une_image_repetee_chez_une_agence_n_est_pas_une_photo():

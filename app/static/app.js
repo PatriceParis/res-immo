@@ -117,21 +117,14 @@ function photoReelle(a) {
   return "";
 }
 
-// URL de la vraie photo relayée par NOTRE domaine (/api/photo) : sinon les CDN
-// des agences bloquent le hotlink et rien ne s'affiche. "" si pas de photo.
-//
-// On transmet aussi la page d'où vient la photo (`p`). Beaucoup d'agences
-// hébergent leurs images sur un CDN d'un AUTRE domaine (groupe123immo.com →
-// staticlbi.com), et ces CDN vérifient que la demande vient bien du site de
-// l'agence. Sans cette page, le relais ne pouvait annoncer que le domaine du
-// CDN lui-même — ce qu'aucun navigateur n'envoie jamais — et l'image était
-// refusée : la fiche retombait sur son illustration de repli.
-function photoProxy(a) {
-  const u = photoReelle(a);
-  if (!u) return "";
-  const page = a.url ? "&p=" + encodeURIComponent(a.url) : "";
-  return "/api/photo?u=" + encodeURIComponent(u) + page;
-}
+// La photo se charge DIRECTEMENT depuis l'agence — hotlink honnête, notre
+// Referer, pas de relais. Le relais /api/photo republiait chaque image
+// depuis notre domaine avec un Referer forgé : la position la plus fragile
+// juridiquement (Renckhoff 2018 pour la copie, VG Bild-Kunst 2021 pour le
+// contournement). La sonde a mesuré le monde d'après avant la bascule :
+// soixante photos sur soixante, trente hébergeurs dont IAD, zéro refus du
+// hotlink honnête. Une agence qui veut ne plus paraître ici bloque notre
+// referer, et c'est réglé — c'est son droit, et notre mécanisme de retrait.
 
 // Balise <img> de la vraie photo, posée sur l'illustration : onerror bascule
 // sur l'illustration si l'image ne charge pas (jamais d'image cassée).
@@ -157,7 +150,7 @@ function tuileAerienne(a) {
 }
 
 function imgPhoto(a) {
-  const src = photoProxy(a);
+  const src = photoReelle(a);
   const ciel = tuileAerienne(a);
   const premiere = src || ciel;
   if (!premiere) return "";
@@ -646,7 +639,7 @@ function ouvrirFiche(id) {
 
     <div class="mise-en-relation">
       <div class="galerie" aria-hidden="true">
-        <div class="vignette" style="background-image:${photoProxy(a) ? `url('${photoProxy(a)}'),` : ""}url('${illustration(a)}')"></div>
+        <div class="vignette" style="background-image:${photoReelle(a) ? `url('${photoReelle(a)}'),` : ""}url('${illustration(a)}')"></div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">🔒</div>
         <div class="vignette verrou">🔒</div>
