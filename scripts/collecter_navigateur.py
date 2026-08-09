@@ -247,6 +247,14 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
     # repli : on parcourt les pages « nos biens »
     urls = []
     for idx in (cible.get("index") or [base]):
+        # Seule boucle du collecteur qui n'avait pas d'échéance. Une agence
+        # déclarant plusieurs pages d'index pouvait y passer tout le temps de
+        # la collecte — trente secondes de navigation chacune — sans que le
+        # budget par agence, vérifié seulement DANS la boucle des biens, ait
+        # jamais son mot à dire.
+        if fin_prevue and time.monotonic() > fin_prevue:
+            print("  ⏱ temps épuisé pendant la recherche des pages de biens")
+            break
         try:
             page.goto(idx, wait_until="domcontentloaded", timeout=30000)
             page.wait_for_timeout(1800)
@@ -303,6 +311,16 @@ def main() -> None:
             user_agent=UA, locale="fr-FR",
             extra_http_headers={"Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8"})
         page = contexte.new_page()
+        # Plafond sur TOUT échange avec le navigateur, et pas seulement sur
+        # les appels dont on a pensé à passer un `timeout=`. Un passage de
+        # trente-quatre minutes s'est terminé sans qu'une seule agence soit
+        # menée à son terme : le garde-fou du workflow a fini par le tuer, et
+        # rien n'avait bougé. `page.content()` et `eval_on_selector_all()` ne
+        # prennent pas de délai en paramètre — une page dont le script bloque
+        # la boucle d'événements les fait attendre indéfiniment. Ces deux
+        # réglages valent pour tous les appels, y compris ceux qu'on oublie.
+        page.set_default_timeout(20_000)
+        page.set_default_navigation_timeout(25_000)
 
         for cible in _cibles(args.site, args.nom, args.index):
             if time.monotonic() > fin_prevue:

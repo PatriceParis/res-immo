@@ -43,6 +43,9 @@ class _FaussePage:
     def goto(self, *a, **k): pass
     def wait_for_timeout(self, *a, **k): pass
     def content(self): return "<html></html>"
+    def eval_on_selector_all(self, *a, **k): return []
+    def set_default_timeout(self, ms): pass
+    def set_default_navigation_timeout(self, ms): pass
 
     @property
     def mouse(self):
@@ -156,3 +159,101 @@ def test_la_collecte_va_jusqu_au_bout_sans_lever(collecte, monkeypatch):
                        agences=["A", "B"],
                        secondes_par_page={"A": 1, "B": 1})
     assert visitees == ["A", "B"]
+
+
+# --- La recherche des pages de biens a désormais son échéance --------------
+#
+# Un passage de trente-quatre minutes s'est terminé sans qu'UNE SEULE agence
+# soit menée à son terme : `data/dernier_passage.json` a rapporté le code 124
+# (tué par le garde-fou) et « aucun fichier modifié ». Or `_noter_visite`
+# s'exécute même pour une agence écourtée — donc le collecteur n'était jamais
+# ressorti de la première.
+#
+# Le budget par agence ne se vérifiait que dans la boucle des BIENS. La boucle
+# de repli qui cherche les pages « nos biens », elle, n'avait aucune échéance :
+# une agence déclarant plusieurs index pouvait y passer tout le temps de la
+# collecte, trente secondes de navigation chacune.
+
+
+class _PageLente:
+    """Un navigateur dont chaque navigation coûte cher."""
+
+    def __init__(self, horloge, secondes=30):
+        self.horloge, self.secondes, self.visites = horloge, secondes, []
+
+    def goto(self, url, **k):
+        self.visites.append(url)
+        self.horloge.avancer(self.secondes)
+
+    def wait_for_timeout(self, ms): self.horloge.avancer(ms / 1000)
+    def content(self): return "<html></html>"
+    def eval_on_selector_all(self, *a, **k): return []
+    def set_default_timeout(self, ms): pass
+    def set_default_navigation_timeout(self, ms): pass
+
+    @property
+    def mouse(self): return self
+
+    def wheel(self, *a, **k): pass
+
+
+def test_la_recherche_des_pages_de_biens_s_arrete_au_budget(monkeypatch):
+    """Vingt pages d'index à trente secondes : sans échéance, dix minutes
+    partent avant même d'avoir ouvert une annonce."""
+    horloge = _FausseHorloge()
+    monkeypatch.setattr(collecteur.time, "monotonic", horloge)
+    monkeypatch.setattr(collecteur, "_sitemap_urls", lambda *a, **k: [])
+    page = _PageLente(horloge)
+
+    cible = {"nom": "Agence lente", "site": "https://lente.fr",
+             "index": [f"https://lente.fr/nos-biens/{n}" for n in range(20)]}
+    fin = horloge.maintenant + 4 * 60          # quatre minutes d'échéance
+
+    collecteur._urls_a_visiter(page, cible, "https://lente.fr", 8, fin)
+
+    assert len(page.visites) < 20, "la recherche doit s'interrompre"
+    assert horloge.maintenant <= fin + 35, \
+        "elle ne doit pas dépasser son échéance de plus d'une navigation"
+
+
+def test_sans_echeance_la_recherche_va_jusqu_au_bout(monkeypatch):
+    """Le comportement reste inchangé quand aucun budget n'est imposé —
+    c'est le cas d'une collecte lancée à la main sur un seul site."""
+    horloge = _FausseHorloge()
+    monkeypatch.setattr(collecteur.time, "monotonic", horloge)
+    monkeypatch.setattr(collecteur, "_sitemap_urls", lambda *a, **k: [])
+    page = _PageLente(horloge)
+    cible = {"nom": "A", "site": "https://a.fr",
+             "index": [f"https://a.fr/{n}" for n in range(5)]}
+
+    collecteur._urls_a_visiter(page, cible, "https://a.fr", 8, 0.0)
+    assert len(page.visites) == 5
+
+
+def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch):
+    """`page.content()` et `eval_on_selector_all()` ne prennent pas de délai
+    en paramètre : seul un défaut posé sur la page les borne."""
+    poses = {}
+
+    class _PageTemoin(_FaussePage):
+        def set_default_timeout(self, ms): poses["appel"] = ms
+        def set_default_navigation_timeout(self, ms): poses["navigation"] = ms
+        def eval_on_selector_all(self, *a, **k): return []
+
+    class _Navigateur(_FauxNavigateur):
+        def new_page(self): return _PageTemoin()
+
+    class _Playwright(_FauxPlaywright):
+        def launch(self, **k): return _Navigateur()
+
+    horloge = _FausseHorloge()
+    monkeypatch.setattr(collecteur.time, "monotonic", horloge)
+    monkeypatch.setattr(collecteur.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(collecteur, "sync_playwright", lambda: _Playwright())
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [])
+    monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    assert poses.get("appel"), "aucun plafond posé sur les appels au navigateur"
+    assert poses.get("navigation"), "aucun plafond posé sur les navigations"
