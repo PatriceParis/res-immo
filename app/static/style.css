@@ -426,7 +426,6 @@ body { overflow-x: hidden; }
   font-weight: 700; font-size: 12px; padding: 2px 7px; border-radius: 99px;
 }
 
-/* Écart au prix médian du secteur : vert si sous le marché, sobre si au-dessus. */
-.ecart-marche { font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 99px; }
-.ecart-marche.bon { background: var(--n1); color: var(--marque); }
-.ecart-marche.cher { background: #f0ece2; color: var(--encre-2); }
+/* La pastille d'écart au prix du secteur a été retirée le 9 août 2026 (voir
+   app.js). Son habillage part avec elle : une règle CSS orpheline finit par
+   être recopiée ailleurs, ou par faire croire que l'élément existe encore. */

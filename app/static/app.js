@@ -153,16 +153,24 @@ function baisse(a) {
     ↓ ${ecart} %</span>`;
 }
 
-// Écart au prix du secteur : 150 000 € est cher dans la Nièvre et donné
-// dans l'Oise — seul l'écart local est parlant, et personne ne l'affiche.
-function ecartMarche(a) {
-  const e = a.ecart_marche_pct;
-  if (e == null || Math.abs(e) < 10) return "";
-  const sous = e < 0;
-  return `<span class="ecart-marche ${sous ? "bon" : "cher"}"
-    title="Médiane du secteur : ${fmtNombre.format(a.prix_m2_secteur)} €/m²">${
-    sous ? `${Math.abs(e)} % sous le secteur` : `+${e} % / secteur`}</span>`;
-}
+// L'écart au prix du secteur n'est plus affiché — retiré le 9 août 2026.
+//
+// L'idée reste juste : 150 000 € est cher dans la Nièvre et donné dans
+// l'Oise, et seul l'écart local est parlant. C'est la RÉFÉRENCE qui ne
+// valait rien. Elle se calculait sur notre propre catalogue — médiane du
+// €/m² des biens du même département — donc sur des prix demandés et non
+// sur des ventes, et elle héritait de toutes nos erreurs de lecture.
+//
+// Dans le Nord, sept annonces d'une même agence portaient « 50 000 € », qui
+// n'était pas leur prix mais une valeur de formulaire. La médiane du
+// département tombait à 353 €/m², et deux biens réels s'affichaient à
+// +1108 % et +1885 % du secteur. Une pastille fausse est pire qu'aucune
+// pastille : elle a l'air d'un renseignement.
+//
+// La comparaison reviendra sur une référence extérieure (prix moyen au m²
+// de MeilleurAgents ou équivalent). Les champs `prix_m2_secteur` et
+// `ecart_marche_pct` continuent d'être calculés, stockés et vérifiés par
+// l'audit de données : la tuyauterie attend, seul l'affichage s'arrête.
 
 // Depuis quand ce bien n'a-t-il pas été reconstaté en ligne ?
 //
@@ -360,7 +368,7 @@ function ficheAnnonce(a) {
     <div class="fiche-corps">
       <div class="ligne-prix">
         <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix sur demande"}</span>
-        ${baisse(a)}${ecartMarche(a)}
+        ${baisse(a)}
       </div>
       ${prixM2 ? `<div class="prix-m2">${fmtNombre.format(prixM2)} €/m²</div>` : ""}
       <div class="specs">${caracteristiques(a)}</div>

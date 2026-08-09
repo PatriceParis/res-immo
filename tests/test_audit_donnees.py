@@ -84,3 +84,46 @@ def test_trois_biens_ne_suffisent_pas_a_juger():
     tous chez elle — on ne l'accuse pas sur si peu."""
     biens = [_bien("Petite agence", "Bellême", 48.373, 0.560) for _ in range(3)]
     assert not _audit(biens).anomalies
+
+
+# --- Écart au marché : le contrôle a survécu à la pastille ------------------
+#
+# La pastille « +35 % / secteur » a été retirée de l'interface le 9 août 2026 :
+# sa référence était la médiane de notre propre catalogue, donc empoisonnée par
+# nos erreurs de lecture — sept annonces d'une agence du Nord portaient
+# « 50 000 € » au lieu de leur prix, la médiane du département tombait à
+# 353 €/m² et deux biens réels s'affichaient à +1108 % et +1885 %.
+#
+# Le champ reste calculé, en attendant une référence extérieure. L'invariant
+# d'interface qui le surveillait a disparu avec la pastille ; ce contrôle-ci
+# prend le relais sur les données, et voici sa preuve de détection.
+
+
+def _bien_compare(**champs):
+    return dict({"id": "x", "titre": "Maison à Bellême", "agence": "Agence"},
+                **champs)
+
+
+def test_un_ecart_au_marche_invente_est_signale():
+    """Le cas exact que surveillait l'interface : un écart annoncé que les
+    deux prix au m² affichés ne permettent pas de retrouver."""
+    audit = auditer.Audit()
+    auditer.verifier_comparaison_au_marche(
+        [_bien_compare(ecart_marche_pct=-42, prix_m2=1500, prix_m2_secteur=1500)], audit)
+    assert audit.anomalies["écart au marché non reproductible"]
+
+
+def test_un_ecart_sans_prix_de_reference_est_signale():
+    audit = auditer.Audit()
+    auditer.verifier_comparaison_au_marche(
+        [_bien_compare(ecart_marche_pct=-42, prix_m2=1500, prix_m2_secteur=None)], audit)
+    assert audit.anomalies["écart au marché sans prix de référence"]
+
+
+def test_un_ecart_juste_ne_declenche_rien():
+    """1 500 contre 2 000 €/m², c'est bien −25 % : rien à signaler."""
+    audit = auditer.Audit()
+    auditer.verifier_comparaison_au_marche(
+        [_bien_compare(prix=200000, ecart_marche_pct=-25, prix_m2=1500,
+               prix_m2_secteur=2000)], audit)
+    assert audit.total == 0

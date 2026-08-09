@@ -53,7 +53,10 @@ TRIS_ANNONCES = {
     "temps": ("temps_voiture_min", True),
     "terrain": ("terrain_m2", False),
     "score": ("score_total", False),
-    "affaire": ("ecart_marche_pct", True),
+    # « affaire » (Meilleur prix / secteur) a été retiré de l'interface le
+    # 9 août 2026, faute de référence fiable. L'API sait toujours trier ainsi
+    # (db.TRIS), mais ce tableau ne décrit que les tris RÉELLEMENT proposés :
+    # y laisser une entrée ferait vérifier une promesse qui n'est plus faite.
 }
 
 # Plafond de résultats appliqué par l'API (db.chercher).
@@ -261,22 +264,16 @@ def score_egal_a_ses_piliers(appeler: Appel) -> Rapport:
     return r
 
 
-def ecart_au_marche_reproductible(appeler: Appel) -> Rapport:
-    """« 18 % sous le secteur » doit se recalculer depuis les prix affichés."""
-    r = Rapport("ecart_au_marche_reproductible",
-                "L'écart au prix du secteur se retrouve à partir des deux "
-                "prix au m² affichés.")
-    for b in _tous(appeler)["items"]:
-        ecart, m2, secteur = (b.get("ecart_marche_pct"), b.get("prix_m2"),
-                              b.get("prix_m2_secteur"))
-        if ecart is None:
-            continue
-        if not m2 or not secteur:
-            r.manquements.append(f"{b['id']} : écart {ecart} % sans prix de référence")
-        elif abs(100 * (m2 - secteur) / secteur - ecart) > 1.5:
-            r.manquements.append(
-                f"{b['id']} : écart {round(ecart)} % non reproductible")
-    return r
+# « ecart_au_marche_reproductible » vivait ici : « 18 % sous le secteur » doit
+# se recalculer depuis les deux prix au m² affichés. La pastille ayant été
+# retirée le 9 août 2026, l'interface ne promet plus rien de tel — ce module
+# ne décrit QUE les promesses faites à l'utilisateur, et un invariant sans
+# promesse finit par être maintenu pour lui-même.
+#
+# Le champ reste calculé et stocké pour le jour où la comparaison reviendra
+# sur une référence extérieure. Il n'est pas laissé sans surveillance pour
+# autant : `verifier_comparaison_au_marche`, dans scripts/auditer.py, fait le
+# même contrôle sur les données. C'est sa place — ce n'était plus ici.
 
 
 def signaux_de_fraicheur_justifies(appeler: Appel) -> Rapport:
@@ -386,7 +383,6 @@ INVARIANTS = (
     chaque_bien_mene_a_l_agence,
     chaque_page_ne_parait_qu_une_fois,
     score_egal_a_ses_piliers,
-    ecart_au_marche_reproductible,
     signaux_de_fraicheur_justifies,
     date_de_constatation_credible,
     bornes_des_filtres_couvrent_les_donnees,
