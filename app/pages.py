@@ -22,7 +22,7 @@ from __future__ import annotations
 import html
 import json
 
-from . import seo
+from . import redaction, seo
 
 _ENTETE_STYLE = """
 :root { color-scheme: light }
@@ -126,8 +126,15 @@ def _temps(minutes) -> str:
     return f"{heures} h {reste:02d}" if heures else f"{reste} min"
 
 
-def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE) -> str:
-    """La fiche d'un bien : les faits, puis notre analyse, puis la source."""
+def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
+                 contexte: dict | None = None) -> str:
+    """La fiche d'un bien : notre lecture des données, les faits, la source.
+
+    `contexte` porte les médianes départementales, qui permettent de SITUER
+    le bien plutôt que de le décrire. Sans elles la fiche reste juste, mais
+    elle perd ce qui la rend propre à ce bien-là — et c'est justement ce qui
+    la distingue des neuf cent quatre-vingt-douze autres.
+    """
     canonique = f"{base}{seo.url_annonce(bien)}"
     region = bien.get("region") or ""
     fil = [("Accueil", "/")]
@@ -161,24 +168,11 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE) -> str:
             analyse.append(f"<dt>{_e(etiquette)}</dt><dd>{_e(valeur)}</dd>")
 
     badges = "".join(f"<li>{_e(b)}</li>" for b in (bien.get("badges") or []))
-    risques = bien.get("risques") or {}
-    ligne_nucleaire = ""
-    if risques.get("nucleaire_km") is not None:
-        ligne_nucleaire = (
-            f"<p>Centrale nucléaire la plus proche : "
-            f"{_e(risques.get('nucleaire_nom') or '')} à "
-            f"{round(risques['nucleaire_km'])} km.</p>")
-    vigilances = "".join(f"<li>{_e(v)}</li>"
-                         for v in (risques.get("vigilances") or []))
-    # Monté à part, et non dans le gabarit : une liste de risques doit
-    # toujours être accompagnée de sa mise en garde, jamais servie seule.
-    bloc_risques = (
-        "<p>Risques recensés sur la commune par Géorisques :</p>"
-        f"<ul>{vigilances}</ul>"
-        "<p>Ils ne disent pas que ce bien est exposé — presque toute commune "
-        "française est concernée par au moins l’un d’eux. À vérifier à "
-        "l’adresse exacte : l’état des risques est obligatoire à la vente.</p>"
-    ) if vigilances else ""
+    # Les paragraphes écrits depuis nos données : c'est le corps de la page,
+    # et la seule chose qu'aucun autre site ne peut publier. Voir
+    # app/redaction.py pour ce qu'on s'interdit d'y mettre.
+    prose = "".join(f"<p>{_e(p)}</p>"
+                    for p in redaction.description_longue(bien, contexte))
 
     suite = "".join(
         f'<li><a href="{_e(base + seo.url_annonce(v))}">{_e(seo.titre_annonce(v))}</a></li>'
@@ -194,14 +188,12 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE) -> str:
 {f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy">' if bien.get("photo") else ""}
 <p class="prix">{_e(seo._euros(bien.get("prix")) or "Prix sur demande")}</p>
 
-<h2>Caractéristiques du bien</h2>
-<dl>{"".join(faits)}</dl>
+<h2>Que disent les données sur ce bien ?</h2>
+{prose}
 
-<h2>Pourquoi ce bien est-il noté ainsi ?</h2>
-<dl>{"".join(analyse)}</dl>
+<h2>Caractéristiques et analyse en bref</h2>
+<dl>{"".join(faits)}{"".join(analyse)}</dl>
 {f'<ul class="jetons">{badges}</ul>' if badges else ""}
-{ligne_nucleaire}
-{bloc_risques}
 
 <h2>Comment visiter ce bien ?</h2>
 <p>L'annonce est publiée par <strong>{_e(bien.get("agence") or "une agence partenaire")}</strong>.

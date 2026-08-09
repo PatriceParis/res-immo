@@ -24,7 +24,7 @@ from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import db, pages, regions, seo
+from . import db, pages, redaction, regions, seo
 from .chargement import charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -419,8 +419,10 @@ def page_annonce(descriptif: str, identifiant: str, requete: Request):
         (b for b in biens if b.get("region") == bien.get("region")
          and b.get("id") != bien.get("id")),
         key=lambda b: b.get("score_total") or 0, reverse=True)
-    return HTMLResponse(pages.page_annonce(bien, voisins, _base(requete)),
-                        headers={"Cache-Control": "public, max-age=1800"})
+    return HTMLResponse(
+        pages.page_annonce(bien, voisins, _base(requete),
+                           redaction.contexte_departemental(biens)),
+        headers={"Cache-Control": "public, max-age=1800"})
 
 
 # L'interface web (fichiers statiques) est servie en dernier, sous la racine.
