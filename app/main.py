@@ -12,17 +12,19 @@ import json
 import re
 import socket
 import urllib.request
+from collections import Counter
 from contextlib import asynccontextmanager
 from pathlib import Path
 from urllib.parse import urlparse
 
 from datetime import datetime, timezone
 
-from fastapi import FastAPI, HTTPException, Query, Response
+from fastapi import FastAPI, HTTPException, Query, Request, Response
+from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import db, regions
+from . import db, pages, regions, seo
 from .chargement import charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -303,6 +305,122 @@ def proxy_photo(u: str, p: str | None = None):
         raise HTTPException(status_code=502, detail="image injoignable")
     return Response(content=data, media_type=ct or "image/jpeg",
                     headers={"Cache-Control": "public, max-age=86400"})
+
+
+# --- Pages rendues par le SERVEUR, pour les moteurs et les IA --------------
+#
+# L'interface est une page unique rendue en JavaScript : un robot qui ne
+# l'exécute pas — c'est le cas de la plupart des robots d'IA — n'y voit rien.
+# Ces routes servent le même catalogue en HTML. Voir app/pages.py.
+
+
+def _base(requete: Request) -> str:
+    """L'adresse publique du site, telle que le visiteur l'a demandée.
+
+    Écrite en dur, elle serait fausse en local et sur les déploiements de
+    prévisualisation Vercel — donc des canoniques fausses, ce qui est pire
+    que pas de canonique du tout.
+    """
+    return str(requete.base_url).rstrip("/") or seo.SITE
+
+
+def _catalogue() -> list[dict]:
+    """Les biens tels que le site les sert : préparés, filtrés et notés.
+
+    On lit la base directement plutôt que `db.chercher`, qui plafonne à cinq
+    cents résultats pour protéger l'API. Un plan du site tronqué laisserait
+    la moitié du catalogue hors de l'index sans que rien ne le signale.
+    """
+    assurer_donnees()
+    conn = db.connexion()
+    try:
+        lignes = conn.execute("SELECT * FROM annonces").fetchall()
+    finally:
+        conn.close()
+    return [db._row_vers_dict(ligne) for ligne in lignes]
+
+
+def _mediane(valeurs):
+    v = sorted(x for x in valeurs if x is not None)
+    return v[len(v) // 2] if v else None
+
+
+def _stats_terroir(biens: list[dict]) -> dict:
+    communes = [b.get("commune") for b in biens if b.get("commune")]
+    connus = [b for b in biens if b.get("hors_inondation") is not None]
+    return {
+        "communes": len(set(communes)),
+        "communes_frequentes": Counter(communes).most_common(),
+        "prix_median": _mediane(b.get("prix") for b in biens),
+        "surface_mediane": _mediane(b.get("surface_m2") for b in biens),
+        "altitude_mediane": (
+            round(_mediane(b.get("altitude") for b in biens))
+            if any(b.get("altitude") is not None for b in biens) else None),
+        "part_hors_inondation": (
+            round(100 * sum(1 for b in connus if b["hors_inondation"]) / len(connus))
+            if connus else None),
+    }
+
+
+@app.get("/robots.txt")
+def robots(requete: Request):
+    return PlainTextResponse(seo.robots_txt(_base(requete)),
+                             headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/llms.txt")
+def llms(requete: Request):
+    biens = _catalogue()
+    par_region = Counter(b.get("region") for b in biens if b.get("region"))
+    return PlainTextResponse(
+        seo.llms_txt(len(biens), dict(par_region), _base(requete)),
+        media_type="text/markdown; charset=utf-8",
+        headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/sitemap.xml")
+def plan_du_site(requete: Request):
+    biens = _catalogue()
+    regions = {b.get("region") for b in biens if b.get("region")}
+    return Response(seo.sitemap(biens, regions, _base(requete)),
+                    media_type="application/xml",
+                    headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/terroir/{terroir}")
+def page_terroir(terroir: str, requete: Request):
+    region = seo.region_du_slug(terroir)
+    if not region:
+        raise HTTPException(status_code=404, detail="terroir inconnu")
+    biens = [b for b in _catalogue() if b.get("region") == region]
+    if not biens:
+        raise HTTPException(status_code=404, detail="aucun bien sur ce terroir")
+    biens.sort(key=lambda b: b.get("score_total") or 0, reverse=True)
+    return HTMLResponse(
+        pages.page_terroir(region, biens, _stats_terroir(biens), _base(requete)),
+        headers={"Cache-Control": "public, max-age=1800"})
+
+
+@app.get("/annonce/{descriptif}/{identifiant}")
+def page_annonce(descriptif: str, identifiant: str, requete: Request):
+    biens = _catalogue()
+    bien = next((b for b in biens if b.get("id") == identifiant), None)
+    if bien is None:
+        # 410 et non 404 : le bien a existé, il a été vendu ou retiré. Le
+        # moteur retire alors la page de son index sans attendre des semaines,
+        # et sans compter l'adresse comme une erreur de notre part.
+        raise HTTPException(status_code=410, detail="ce bien n'est plus suivi")
+    if descriptif != seo.descriptif_annonce(bien):
+        # Une seule adresse par bien. Le titre évolue au fil des collectes —
+        # prix révisé, surface corrigée — et sans cette redirection le même
+        # bien s'indexerait sous plusieurs adresses.
+        return RedirectResponse(seo.url_annonce(bien), status_code=301)
+    voisins = sorted(
+        (b for b in biens if b.get("region") == bien.get("region")
+         and b.get("id") != bien.get("id")),
+        key=lambda b: b.get("score_total") or 0, reverse=True)
+    return HTMLResponse(pages.page_annonce(bien, voisins, _base(requete)),
+                        headers={"Cache-Control": "public, max-age=1800"})
 
 
 # L'interface web (fichiers statiques) est servie en dernier, sous la racine.

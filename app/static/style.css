@@ -429,3 +429,15 @@ body { overflow-x: hidden; }
 /* La pastille d'écart au prix du secteur a été retirée le 9 août 2026 (voir
    app.js). Son habillage part avec elle : une règle CSS orpheline finit par
    être recopiée ailleurs, ou par faire croire que l'élément existe encore. */
+
+/* Pied de page : la navigation par terroir. Elle est dans le HTML servi, et
+   non construite en JavaScript, parce qu'elle est le seul chemin par lequel
+   un robot — et notamment un robot d'IA, qui n'exécute pas de script —
+   découvre les pages de terroir puis les fiches. */
+.pied { background: #eceadf; border-top: 1px solid #ddd8cc; margin-top: 40px;
+        padding: 28px 20px 36px; color: #46543f; font-size: 14px; line-height: 1.6 }
+.pied nav h2 { font-size: 15px; margin: 0 0 8px; color: #23301f }
+.pied ul { list-style: none; padding: 0; margin: 0 0 16px;
+           display: flex; flex-wrap: wrap; gap: 8px 18px }
+.pied a { color: var(--marque, #1b4332); font-weight: 600 }
+.pied p { max-width: 70ch; margin: 0 }

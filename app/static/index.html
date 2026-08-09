@@ -3,10 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Refuge Immo — biens résilients autour de Paris</title>
+<title>Maisons résilientes à vendre près de Paris — notées face au climat | Refuge Immo</title>
+<meta name="description" content="Maisons et propriétés à vendre à moins de 350 km de Paris, notées sur l'eau, la chaleur, les risques naturels, l'autonomie et l'accès à Paris. Six terroirs, données Géorisques et Insee.">
+<link rel="canonical" href="https://res-immo.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Refuge Immo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Maisons résilientes à vendre près de Paris">
+<meta property="og:description" content="Des maisons à moins de 350 km de Paris, notées sur leur résilience au changement climatique : eau, chaleur, risques naturels, autonomie, accès.">
+<meta property="og:url" content="https://res-immo.vercel.app/">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Refuge Immo",
+ "url":"https://res-immo.vercel.app/",
+ "description":"Maisons à vendre à moins de 350 km de Paris, notées sur leur résilience au changement climatique.",
+ "inLanguage":"fr-FR",
+ "potentialAction":{"@type":"SearchAction",
+   "target":{"@type":"EntryPoint","urlTemplate":"https://res-immo.vercel.app/?q={search_term_string}"},
+   "query-input":"required name=search_term_string"}}
+</script>
 </head>
 <body>
 
@@ -137,6 +155,32 @@
     <div id="modale-contenu"></div>
   </div>
 </div>
+
+<!-- Pied de page — et seul chemin d'exploration du site.
+     Tout le reste de cette page est peuplé par JavaScript : un robot qui ne
+     l'exécute pas, ce qui est le cas de la plupart des robots d'IA, n'y
+     trouve AUCUN lien à suivre. Ces six liens sont la porte d'entrée vers
+     les pages de terroir rendues par le serveur, qui mènent elles-mêmes aux
+     fiches. Ils servent aussi aux visiteurs : c'est la navigation par
+     région qui manquait. -->
+<footer class="pied">
+  <nav aria-label="Terroirs">
+    <h2>Explorer par terroir</h2>
+    <ul>
+      <li><a href="/terroir/normandie">Maisons à vendre en Normandie</a></li>
+      <li><a href="/terroir/centre-val-de-loire">Val de Loire et Berry</a></li>
+      <li><a href="/terroir/grand-est">Lorraine, Champagne et Ardennes</a></li>
+      <li><a href="/terroir/hauts-de-france">Picardie et Hauts-de-France</a></li>
+      <li><a href="/terroir/bourgogne-franche-comte">Bourgogne et Franche-Comté</a></li>
+      <li><a href="/terroir/pays-de-la-loire">Sarthe et Pays de la Loire</a></li>
+    </ul>
+  </nav>
+  <p>Refuge Immo n'est pas une agence immobilière : le site ne vend rien et ne
+  prend aucun mandat. Il recense des annonces publiées par des agences et des
+  réseaux de mandataires, et les note sur leur résilience au changement
+  climatique. Risques naturels : Géorisques. Communes et densités : Insee et
+  data.gouv.fr.</p>
+</footer>
 
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="app.js"></script>
