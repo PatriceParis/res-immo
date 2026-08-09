@@ -7,11 +7,8 @@ Au premier démarrage, la base est remplie avec les annonces RÉELLES collectée
 
 from __future__ import annotations
 
-import ipaddress
 import json
 import re
-import socket
-import urllib.request
 from collections import Counter
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -277,73 +274,14 @@ def demander_contact(demande: DemandeContact):
     }
 
 
-_UA_NAV = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-           "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
-
-
-def referer_de_la_page(page: str | None, cible) -> str:
-    """Le Referer qu'enverrait un navigateur affichant `page`.
-
-    À défaut de page exploitable (absente, relative, autre protocole), on se
-    rabat sur le domaine de l'image : c'est ce qui se faisait avant, et cela
-    convient tant que l'agence héberge ses photos chez elle.
-    """
-    if page:
-        origine = urlparse(page)
-        if origine.scheme in ("http", "https") and origine.hostname:
-            return f"{origine.scheme}://{origine.netloc}/"
-    return f"{cible.scheme}://{cible.hostname}/"
-
-
-@app.get("/api/photo")
-def proxy_photo(u: str, p: str | None = None):
-    """Relaie une image d'agence depuis NOTRE domaine.
-
-    Les CDN d'agences bloquent souvent le « hotlink » (image chargée depuis un
-    autre site) : le navigateur n'affichait donc rien sur Vercel. En passant par
-    ce relais, l'image est servie depuis res-immo.vercel.app et s'affiche.
-
-    `p` est la page de l'annonce d'où vient l'image. C'est elle qui donne le
-    bon Referer : un navigateur qui affiche cette page réclame l'image AVEC
-    l'adresse de la page. Beaucoup d'agences hébergent leurs photos sur un CDN
-    d'un autre domaine (groupe123immo.com → staticlbi.com) ; se réclamer du
-    CDN lui-même, comme on le faisait, n'imite aucun navigateur réel. Sans
-    `p`, on retombe sur l'ancien comportement, qui suffit aux agences qui
-    hébergent leurs images chez elles.
-    """
-    cible = urlparse(u)
-    if cible.scheme not in ("http", "https") or not cible.hostname:
-        raise HTTPException(status_code=400, detail="URL invalide")
-    # Anti-SSRF : on refuse les adresses privées / locales.
-    try:
-        for infos in socket.getaddrinfo(cible.hostname, None):
-            ip = ipaddress.ip_address(infos[4][0])
-            if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved:
-                raise HTTPException(status_code=400, detail="hôte non autorisé")
-    except socket.gaierror:
-        raise HTTPException(status_code=400, detail="hôte introuvable")
-
-    # On imite le navigateur affichant la PAGE de l'annonce : c'est cette
-    # adresse-là que vérifient les protections anti-hotlink des CDN.
-    req = urllib.request.Request(u, headers={
-        "User-Agent": _UA_NAV,
-        "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
-        "Accept-Language": "fr-FR,fr;q=0.9",
-        "Referer": referer_de_la_page(p, cible),
-    })
-    try:
-        with urllib.request.urlopen(req, timeout=8) as r:
-            ct = (r.headers.get("Content-Type") or "").split(";")[0].strip()
-            if not ct.startswith("image/"):
-                raise HTTPException(status_code=415, detail="pas une image")
-            data = r.read(6_000_000)  # plafond ~6 Mo
-    except HTTPException:
-        raise
-    except Exception:
-        raise HTTPException(status_code=502, detail="image injoignable")
-    return Response(content=data, media_type=ct or "image/jpeg",
-                    headers={"Cache-Control": "public, max-age=86400"})
-
+# Le relais /api/photo a été retiré le 10 août 2026. Il republiait chaque
+# image depuis notre domaine avec un Referer forgé pour passer les
+# protections anti-hotlink — la position la plus fragile juridiquement, et
+# construite pour un problème que la mesure n'a pas retrouvé : sonde du
+# 10 août, soixante photos sur soixante acceptées en hotlink honnête, trente
+# hébergeurs dont IAD, zéro refus. Les photos partent désormais directement
+# de chez l'agence, avec notre Referer : elle voit notre trafic, et peut
+# nous bloquer d'un réglage si elle le souhaite.
 
 # --- Pages rendues par le SERVEUR, pour les moteurs et les IA --------------
 #

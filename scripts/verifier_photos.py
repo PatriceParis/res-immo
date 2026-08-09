@@ -61,13 +61,18 @@ _NAVIGATEUR = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.
                "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 
-def telecharger(url: str, page: str | None) -> bytes | None:
-    """L'image, telle qu'un navigateur affichant `page` la recevrait."""
-    cible = urlparse(url)
-    origine = urlparse(page or "")
-    referer = (f"{origine.scheme}://{origine.netloc}/"
-               if origine.scheme in ("http", "https") and origine.netloc
-               else f"{cible.scheme}://{cible.netloc}/")
+# Le site depuis lequel le visiteur regarde : c'est LUI que la vérification
+# doit imiter. Elle se présentait jusqu'ici avec le Referer de la page de
+# l'agence — le monde du relais, où l'on se déguisait. Le relais est retiré :
+# vérifier avec un autre referer que le nôtre reviendrait à valider des
+# images que le visiteur ne verra pas, l'angle mort exact qui a coûté trois
+# correctifs sur les photos.
+SITE = "https://res-immo.vercel.app/"
+
+
+def telecharger(url: str, page: str | None = None) -> bytes | None:
+    """L'image, telle que le navigateur d'un visiteur du SITE la recevrait."""
+    referer = SITE
     requete = urllib.request.Request(url, headers={
         "User-Agent": _NAVIGATEUR,
         "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
