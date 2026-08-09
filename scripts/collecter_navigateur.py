@@ -306,6 +306,32 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
     return choix[:vivier]
 
 
+JOURNAL_DEROULE = RACINE / "data" / "deroule_collecte.json"
+
+
+def _consigner_deroule(deroule: list[dict], minutes: float) -> None:
+    """Ce que chaque agence a coûté, et comment son tour s'est terminé.
+
+    Écrit dans le dépôt et non seulement au journal du run : celui-ci n'est
+    lisible que depuis l'onglet Actions, et la surveillance quotidienne n'a
+    que git. Quatre passages de suite sont restés inexplicables faute de ce
+    fichier ; le cinquième a été compris en une ligne.
+
+    La distinction qui compte est dans « fin » : une agence « terminée » a
+    rendu la main d'elle-même, une agence dont le « temps est épuisé » a
+    consommé son budget, une agence « INTERROMPUE » ne répondait plus. Trois
+    causes, trois remèdes opposés.
+    """
+    try:
+        JOURNAL_DEROULE.parent.mkdir(parents=True, exist_ok=True)
+        JOURNAL_DEROULE.write_text(json.dumps({
+            "minutes": minutes,
+            "agences": deroule,
+        }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    except OSError:
+        pass          # un journal indisponible ne doit pas perdre la collecte
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("-s", "--site", default="")
@@ -336,6 +362,7 @@ def main() -> None:
 
     conn = db.connexion()
     total = agences = 0
+    deroule: list[dict] = []
     depart = time.monotonic()
     fin_prevue = depart + args.minutes_max * 60
     with sync_playwright() as p:
@@ -460,12 +487,22 @@ def main() -> None:
                   f" — {vendus} déjà vendu(s), {ecartes} hors cible"
                   f" — {vues} page(s) en {duree / 60:.1f} min{debordement}")
             _noter_visite(cible["site"], date.today().isoformat())
+            # Et consigné dans le dépôt, pas seulement imprimé. Le journal du
+            # run n'est lisible que depuis l'onglet Actions ; ce fichier-ci
+            # est committé, donc lisible depuis git seul — c'est ce qui a
+            # permis de comprendre les quatre passages précédents.
+            deroule.append({
+                "agence": cible["nom"], "secondes": round(duree),
+                "pages": vues, "gardes": n,
+                "fin": (debordement.strip(" —") or "terminée"),
+            })
             total += n
             agences += 1
 
         navigateur.close()
     conn.close()
     ecoule = (time.monotonic() - depart) / 60
+    _consigner_deroule(deroule, round(ecoule, 1))
     print(f"\nTerminé : {total} bien(s) réel(s) ajouté(s) chez {agences} agence(s) "
           f"en {ecoule:.1f} min. Rechargez l'application.")
 
