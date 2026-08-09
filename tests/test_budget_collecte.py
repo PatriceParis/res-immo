@@ -329,3 +329,70 @@ def test_borner_reste_inoffensif_sans_sigalrm(monkeypatch):
     import signal as sig
     monkeypatch.delattr(sig, "SIGALRM", raising=False)
     collecteur.borner(5)()          # ne doit rien lever
+
+
+# --- Le déroulé, consigné dans le dépôt et pas seulement au journal ---------
+#
+# Le journal du run n'est lisible que depuis l'onglet Actions. La surveillance
+# quotidienne, elle, n'a que git — et quatre passages de suite sont restés
+# inexplicables faute d'une trace committée. `data/deroule_collecte.json` dit
+# ce que chaque agence a coûté et COMMENT son tour s'est terminé : rendue
+# d'elle-même, budget épuisé, ou interrompue. Trois causes, trois remèdes
+# opposés, et le fichier est la seule chose qui les distingue depuis git.
+
+
+def test_le_deroule_dit_comment_chaque_agence_a_fini(collecte, monkeypatch, tmp_path):
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    _lancer(monkeypatch, collecte,
+            agences=["Rapide", "Lente"],
+            secondes_par_page={"Rapide": 1, "Lente": 60},
+            minutes_par_agence=4.0, minutes_max=28.0)
+
+    ecrit = json.loads(journal.read_text(encoding="utf-8"))
+    assert [a["agence"] for a in ecrit["agences"]] == ["Rapide", "Lente"]
+    fins = {a["agence"]: a["fin"] for a in ecrit["agences"]}
+    assert fins["Rapide"] == "terminée", "une agence qui rend la main le dit"
+    assert "temps de l'agence épuisé" in fins["Lente"]
+    assert ecrit["agences"][1]["secondes"] >= 200, "le temps passé est consigné"
+
+
+def test_le_deroule_nomme_l_agence_interrompue(monkeypatch, tmp_path):
+    """Le cas qu'aucun autre signal ne distingue : une agence qui ne rend pas
+    la main ressemble, vue de git, à une agence simplement lente."""
+    import time as horloge_reelle
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [
+        {"nom": "Bloquée", "site": "https://bloquee.fr"}])
+
+    def urls(page, cible, base, maxi, fin_prevue=0.0):
+        horloge_reelle.sleep(30)
+        return []
+
+    monkeypatch.setattr(collecteur, "_urls_a_visiter", urls)
+    monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
+    monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
+    vrai_borner = collecteur.borner
+    monkeypatch.setattr(collecteur, "borner", lambda _: vrai_borner(1))
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    ecrit = json.loads(journal.read_text(encoding="utf-8"))
+    assert "INTERROMPUE" in ecrit["agences"][0]["fin"]
+
+
+def test_un_journal_indisponible_ne_perd_pas_la_collecte(collecte, monkeypatch,
+                                                         tmp_path):
+    """Le fichier est un confort de diagnostic : il ne doit jamais coûter une
+    collecte. On rend son écriture impossible en plaçant son dossier parent
+    là où se trouve déjà un FICHIER — le système refusera de créer le
+    dossier, comme le ferait un disque plein."""
+    obstacle = tmp_path / "obstacle"
+    obstacle.write_text("je ne suis pas un dossier", encoding="utf-8")
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", obstacle / "sous" / "x.json")
+
+    visitees = _lancer(monkeypatch, collecte, agences=["A"],
+                       secondes_par_page={"A": 1})
+    assert visitees == ["A"], "la collecte doit aboutir malgré le journal perdu"
