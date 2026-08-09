@@ -119,11 +119,46 @@ Nos annonces viennent des sites d'agences. Recopier leur texte de vente
 (3 000 signes en moyenne) serait du contenu dupliqué : pénalisant au
 référencement, et discutable vis-à-vis des agences.
 
-Les fiches ne portent donc que **des faits** — prix, surface, pièces, terrain,
-commune, DPE, qui n'appartiennent à personne — et **notre analyse** : score de
-résilience, altitude, risques Géorisques, distance à la centrale nucléaire,
-temps de route et gare. Un test l'impose (`test_la_prose_de_l_agence_n_est_
-jamais_republiee`). Chaque fiche renvoie visiblement vers l'annonce d'origine.
+**Réécrire ce texte ne réglerait rien** — c'est la question qui s'est posée,
+et elle mérite d'être tranchée noir sur blanc. « Modifier légèrement le
+contenu provenant d'autres sources » figure aux règles anti-spam de Google au
+même titre que la copie pure : un texte filé n'est pas un texte original, mais
+un texte copié rendu plus difficile à attribuer. Cela ne protège pas davantage
+en droit — les faits d'une annonce appartiennent à tous, la formulation
+appartient à son auteur, et une réécriture s'attaque justement à la
+formulation. Le confier à un modèle de langage ajouterait le défaut le plus
+grave ici : l'invention. Un modèle reformulant « maison de 120 m² » écrit
+volontiers « spacieuse maison baignée de lumière » ; la lumière, personne ne
+l'a mesurée.
+
+**Écrire notre propre texte à partir des faits est autre chose.** Nous
+disposons de données que l'agence n'a pas : altitude, densité communale,
+risques Géorisques, distance à la centrale la plus proche, temps de trajet,
+gare, et notre notation pilier par pilier. `app/redaction.py` les met en
+phrases et les compare aux médianes du département — « 54 m au-dessus de la
+médiane des biens que nous suivons dans le département » situe là où « 160 m
+d'altitude » ne dit rien. Personne d'autre ne peut écrire ce texte.
+
+Le risque réel n'est donc pas la duplication avec les agences : c'est la
+duplication entre **nos propres pages**. La parade n'est pas de faire tourner
+des synonymes — ce serait filer notre propre texte — mais de ne rien dire qui
+ne soit propre au bien : chaque phrase porte une comparaison chiffrée, et
+n'existe que si la donnée existe. Mesuré sur le catalogue réel :
+
+| Mesure | Valeur |
+|---|---|
+| Descriptions uniques | **990 sur 993 (99 %)** |
+| Longueur médiane | 755 signes |
+| Nombres distincts par fiche (médiane) | 17 |
+| Fiches sous 200 signes | moins de 5 % |
+
+Trois tests tiennent l'ensemble : aucun mot de l'agence ne passe (et retirer
+le champ `texte` ne change rien au résultat, preuve qu'il n'est pas lu) ;
+**tout nombre du texte doit se retrouver dans les données**, seule l'échelle
+« sur 100 » étant admise comme constante ; et les seuils de distinction
+ci-dessus sont vérifiés sur le catalogue réel, pas sur un exemple choisi.
+
+Chaque fiche renvoie visiblement vers l'annonce d'origine.
 
 ### Indexation par les IA
 

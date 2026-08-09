@@ -99,8 +99,11 @@ def test_le_risque_n_est_jamais_montre_sans_sa_mise_en_garde():
     """Afficher « retrait-gonflement des argiles » sans dire que le risque
     vaut pour la COMMUNE ferait fuir sur une information fausse."""
     plat = " ".join(pages.page_annonce(BIEN, []).split())
-    assert "Retrait-gonflement" in plat
-    assert "commune" in plat and "obligatoire à la vente" in plat
+    # Le risque est désormais énoncé dans une phrase — donc en minuscules,
+    # comme il se doit au milieu d'un texte, et non en étiquette isolée.
+    assert "retrait-gonflement des argiles" in plat.lower()
+    assert "commune entière et non pour cette parcelle" in plat
+    assert "obligatoire à la vente" in plat
 
 
 def test_la_page_ne_se_presente_pas_comme_une_agence():
