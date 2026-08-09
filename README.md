@@ -1,4 +1,4 @@
-# ⛰️ Refuge Immo
+# Refuge Immo
 
 **Votre plan B au vert — les terroirs les plus résilients à moins de 350 km de Paris.**
 

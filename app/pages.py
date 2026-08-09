@@ -29,7 +29,8 @@ _ENTETE_STYLE = """
 body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
        color: #23301f; background: #f7f6f1 }
 .bande { background: #1b4332; color: #f4f1e8; padding: 14px 20px }
-.bande a { color: #f4f1e8; text-decoration: none; font-weight: 700 }
+.bande a { color: #f4f1e8; text-decoration: none; font-weight: 700;
+           display: inline-flex; align-items: center; gap: 9px }
 main { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px }
 h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px }
 h2 { font-size: 19px; margin: 32px 0 8px }
@@ -101,12 +102,12 @@ def _document(titre: str, description: str, canonique: str, corps: str,
 <meta property="og:url" content="{_e(canonique)}">
 {og_image}
 <meta name="twitter:card" content="{'summary_large_image' if image else 'summary'}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
+<link rel="icon" href="{seo.favicon()}">
 <style>{_ENTETE_STYLE}</style>
 {structure}
 </head>
 <body>
-<div class="bande"><a href="{_e(base)}/">⛰️ {seo.NOM}</a></div>
+<div class="bande"><a href="{_e(base)}/">{seo.logo(26)}<span>{seo.NOM}</span></a></div>
 <main>
 {corps}
 <p class="note">{seo.NOM} n'est pas une agence immobilière : le site ne vend

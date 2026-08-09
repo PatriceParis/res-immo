@@ -225,6 +225,50 @@ function fraicheur(a) {
 
 /* ---------------- terroirs ciblés ---------------- */
 
+// Les gares desservant les biens, classées par temps de trajet vers Paris.
+//
+// Ce menu porte DEUX critères : les premières entrées demandent simplement
+// « une gare rapide » — c'est ce que veut dire « gare TGV » pour qui cherche
+// un repli compatible avec un travail à Paris — et les suivantes désignent
+// une gare précise. Un seul contrôle, parce que c'est une seule question.
+async function chargerGares() {
+  const menu = $("#f-gare");
+  if (!menu) return;
+  let gares = [];
+  try {
+    const p = lireFiltres();
+    p.delete("tri");
+    gares = ((await (await fetch("/api/gares?" + p.toString())).json()).gares) || [];
+  } catch (e) { return; }
+  const choix = menu.value;
+  menu.innerHTML = '<option value="">Toutes les gares</option>';
+
+  for (const [minutes, etiquette] of [[60, "moins d’1 h"], [90, "moins d’1 h 30"],
+                                      [120, "moins de 2 h"]]) {
+    const nb = gares.filter((g) => g.minutes_paris <= minutes)
+                    .reduce((somme, g) => somme + g.nb, 0);
+    if (!nb) continue;
+    const opt = document.createElement("option");
+    opt.value = `max:${minutes}`;
+    opt.textContent = `Paris en ${etiquette} de train — ${nb} bien${nb > 1 ? "s" : ""}`;
+    menu.appendChild(opt);
+  }
+
+  const groupe = document.createElement("optgroup");
+  groupe.label = "Une gare en particulier";
+  for (const g of gares) {
+    const opt = document.createElement("option");
+    opt.value = g.nom;
+    opt.textContent = `${g.nom} — ${fmtTemps(g.minutes_paris)} (${g.nb})`;
+    groupe.appendChild(opt);
+  }
+  if (groupe.children.length) menu.appendChild(groupe);
+  // On rétablit le choix de l'utilisateur : ce menu se reconstruit à chaque
+  // rafraîchissement des comptes, et le voir se vider serait déroutant.
+  menu.value = choix;
+  if (menu.value !== choix) menu.value = "";
+}
+
 async function chargerTerroirs() {
   // Les pastilles comptent AVEC les filtres actifs : elles annoncent ce que
   // l'utilisateur trouvera en cliquant. On retire le filtre de région et les
@@ -275,7 +319,12 @@ function lireFiltres() {
     ["#f-potager", "potager"], ["#f-troglodyte", "troglodyte"],
     ["#f-hors-inondation", "hors_inondation"],
   ]) if ($(id).checked) p.set(cle, "1");
-  if ($("#f-agence").value) p.set("agence", $("#f-agence").value);
+  // Une seule liste déroulante porte deux critères : soit une gare précise,
+  // soit un temps de trajet maximal. C'est ainsi que la question se pose —
+  // « celle-là », ou simplement « une gare rapide ».
+  const gare = $("#f-gare").value;
+  if (gare.startsWith("max:")) p.set("train_max", gare.slice(4));
+  else if (gare) p.set("gare", gare);
   if (etat.region) p.set("region", etat.region);
   p.set("tri", $("#f-tri").value);
   return p;
@@ -294,7 +343,7 @@ function reinitialiser() {
   $("#f-temps").value = $("#f-temps").max;
   $("#f-score").value = 0;
   $("#f-terrain").value = "0";
-  $("#f-agence").value = "";
+  $("#f-gare").value = "";
   $("#f-tri").value = "score";
   etat.region = null;
   etat.cadre = false;
@@ -681,8 +730,11 @@ async function rafraichir() {
   rendreListe();
   rendreCarte();
   // Les pastilles de terroir comptent avec les mêmes filtres : elles doivent
-  // donc être recalculées à chaque changement.
+  // donc être recalculées à chaque changement. Le menu des gares aussi —
+  // annoncer « Creil (13) » quand les filtres n'en laisseraient aucun serait
+  // le même mensonge, en plus discret.
   chargerTerroirs();
+  chargerGares();
 }
 
 async function initialiser() {
@@ -701,13 +753,7 @@ async function initialiser() {
       $("#bandeau-source").textContent =
         `${agences.length} agence${agences.length > 1 ? "s" : ""}`;
     }
-    const sel = $("#f-agence");
-    for (const ag of agences) {
-      const opt = document.createElement("option");
-      opt.value = ag.agence;
-      opt.textContent = `${ag.agence} (${ag.nb})`;
-      sel.appendChild(opt);
-    }
+    await chargerGares();
   } catch (e) { /* la page reste utilisable avec les valeurs par défaut */ }
   await chargerTerroirs();
   majAffichagesFiltres();
@@ -720,7 +766,7 @@ const rafraichirDoucement = attenuer(rafraichir);
 for (const id of ["#f-prix", "#f-temps", "#f-score"]) {
   $(id).addEventListener("input", () => { majAffichagesFiltres(); rafraichirDoucement(); });
 }
-for (const id of ["#f-terrain", "#f-agence", "#f-tri"]) $(id).addEventListener("change", rafraichir);
+for (const id of ["#f-terrain", "#f-gare", "#f-tri"]) $(id).addEventListener("change", rafraichir);
 document.querySelectorAll(".atouts input").forEach((c) => c.addEventListener("change", rafraichir));
 $("#f-reinit").addEventListener("click", reinitialiser);
 
