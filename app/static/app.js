@@ -12,6 +12,28 @@ const fmtEuros = new Intl.NumberFormat("fr-FR", {
 });
 const fmtNombre = new Intl.NumberFormat("fr-FR");
 
+// Intl sépare les milliers par une ESPACE FINE INSÉCABLE (U+202F), qui mesure
+// un sixième de cadratin. Elle est typographiquement juste, et pratiquement
+// invisible : dans les polices système où le glyphe manque, le navigateur la
+// rend à largeur nulle. « 250 000 € » gardait son espace en gros corps quand
+// « 1479 €/m² », juste en dessous, avait perdu le sien — deux nombres côte à
+// côte, deux typographies.
+//
+// On lui substitue l'espace insécable ordinaire (U+00A0) : un peu plus large
+// que ne le voudrait l'usage, mais présente partout. Insécable, donc jamais
+// de « 250 » en fin de ligne et « 000 € » à la suivante.
+const ESPACE_FINE = / /g;
+
+/** Un prix en euros, milliers séparés — « 250 000 € ». */
+function euros(valeur) {
+  return fmtEuros.format(valeur).replace(ESPACE_FINE, " ");
+}
+
+/** Un nombre, milliers séparés — « 1 479 », « 3 250 ». */
+function nombre(valeur) {
+  return fmtNombre.format(valeur).replace(ESPACE_FINE, " ");
+}
+
 function fmtTemps(minutes) {
   if (minutes == null) return "—";
   const h = Math.floor(minutes / 60), m = Math.round(minutes % 60);
@@ -149,7 +171,7 @@ function illustration(a) {
 function baisse(a) {
   if (!a.prix_precedent || !a.prix || a.prix >= a.prix_precedent) return "";
   const ecart = Math.round(100 * (a.prix_precedent - a.prix) / a.prix_precedent);
-  return `<span class="baisse-prix" title="Ancien prix : ${fmtEuros.format(a.prix_precedent)}">
+  return `<span class="baisse-prix" title="Ancien prix : ${euros(a.prix_precedent)}">
     ↓ ${ecart} %</span>`;
 }
 
@@ -261,7 +283,7 @@ function lireFiltres() {
 
 function majAffichagesFiltres() {
   const prix = +$("#f-prix").value;
-  $("#aff-prix").textContent = prix >= +$("#f-prix").max ? "tous prix" : fmtEuros.format(prix);
+  $("#aff-prix").textContent = prix >= +$("#f-prix").max ? "tous prix" : euros(prix);
   const temps = +$("#f-temps").value;
   $("#aff-temps").textContent = temps >= +$("#f-temps").max ? "sans limite" : fmtTemps(temps);
   $("#aff-score").textContent = $("#f-score").value > 0 ? `${$("#f-score").value}/100` : "0 (tous)";
@@ -317,12 +339,12 @@ function caracteristiques(a) {
   const bouts = [];
   const type = a.type_bien || "maison";
   bouts.push(`<b>${echap(type.charAt(0).toUpperCase() + type.slice(1))}</b>`);
-  if (a.surface_m2) bouts.push(`${fmtNombre.format(a.surface_m2)} m²`);
+  if (a.surface_m2) bouts.push(`${nombre(a.surface_m2)} m²`);
   if (a.pieces) bouts.push(`${a.pieces} pièce${a.pieces > 1 ? "s" : ""}`);
   if (a.terrain_m2) {
     bouts.push(a.terrain_m2 >= 10000
       ? `terrain ${(a.terrain_m2 / 10000).toLocaleString("fr-FR", {maximumFractionDigits: 1})} ha`
-      : `terrain ${fmtNombre.format(a.terrain_m2)} m²`);
+      : `terrain ${nombre(a.terrain_m2)} m²`);
   }
   return bouts.join(" · ");
 }
@@ -367,10 +389,10 @@ function ficheAnnonce(a) {
     </div>
     <div class="fiche-corps">
       <div class="ligne-prix">
-        <span class="prix">${a.prix ? fmtEuros.format(a.prix) : "Prix sur demande"}</span>
+        <span class="prix">${a.prix ? euros(a.prix) : "Prix sur demande"}</span>
         ${baisse(a)}
       </div>
-      ${prixM2 ? `<div class="prix-m2">${fmtNombre.format(prixM2)} €/m²</div>` : ""}
+      ${prixM2 ? `<div class="prix-m2">${nombre(prixM2)} €/m²</div>` : ""}
       <div class="specs">${caracteristiques(a)}</div>
       <div class="lieu"><b>${echap(a.commune || "")}</b>${
         a.departement ? ` (${echap(a.departement)})` : ""}</div>
@@ -442,7 +464,7 @@ function rendreCarte() {
     });
     marqueur.bindPopup(
       `<b>${Math.round(a.score_total)}/100</b> — ${echap(a.titre)}<br>` +
-      `${a.prix ? fmtEuros.format(a.prix) : ""} · 🚗 ${fmtTemps(a.temps_voiture_min)}<br>` +
+      `${a.prix ? euros(a.prix) : ""} · 🚗 ${fmtTemps(a.temps_voiture_min)}<br>` +
       `<a href="#" data-ouvrir="${echap(a.id)}">Voir la fiche</a>`
     );
     marqueur.addTo(etat.calque);
@@ -520,8 +542,8 @@ function ouvrirFiche(id) {
         <!-- Même hiérarchie que la liste : le prix d'abord, puis les
              caractéristiques, puis le lieu. Le titre de l'agence, ramené en
              casse lisible, vient après — c'est une accroche, pas une donnée. -->
-        <div class="prix-modale">${a.prix ? fmtEuros.format(a.prix) : "Prix sur demande"}${
-          prixM2 ? ` <span class="prix-m2">${fmtNombre.format(prixM2)} €/m²</span>` : ""}</div>
+        <div class="prix-modale">${a.prix ? euros(a.prix) : "Prix sur demande"}${
+          prixM2 ? ` <span class="prix-m2">${nombre(prixM2)} €/m²</span>` : ""}</div>
         <div class="specs">${caracteristiques(a)}</div>
         <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""}</div>
         <h2 id="modale-titre">${echap(casseNormale(a.titre, a.commune))}</h2>
