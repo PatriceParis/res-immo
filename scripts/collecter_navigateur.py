@@ -30,6 +30,7 @@ import json
 import os
 import re
 import sys
+import signal
 import time
 from datetime import date
 from pathlib import Path
@@ -234,6 +235,39 @@ def _liens_page(page, base: str) -> list[str]:
     return urls
 
 
+class TempsEcoule(Exception):
+    """L'agence n'a pas rendu la main dans le temps qui lui était imparti."""
+
+
+def _sonner(signum, frame):
+    raise TempsEcoule()
+
+
+def borner(secondes: int):
+    """Arme un réveil qui INTERROMPT l'agence en cours, quoi qu'elle fasse.
+
+    Le garde-fou de dernier recours, et le seul qui ne demande la coopération
+    de personne. Tous les autres la demandent : un `timeout=` de `requests`
+    s'applique à chaque LECTURE et non au total — un serveur qui distille ses
+    octets une seconde à la fois ne le déclenche jamais ; les délais posés sur
+    la page Playwright ne couvrent que les appels au navigateur ; les
+    vérifications de budget ne s'exécutent qu'entre deux tours de boucle.
+
+    Trois correctifs successifs ont ainsi énuméré les appels à borner, et le
+    passage suivant est reparti pour trente-quatre minutes sans mener une
+    seule agence à son terme. On cesse d'énumérer : `SIGALRM` interrompt le
+    processus jusque dans un appel système bloquant, donc y compris dans
+    l'appel qu'on aura oublié.
+
+    Renvoie une fonction à appeler pour désarmer.
+    """
+    if not hasattr(signal, "SIGALRM"):        # Windows : on s'en passe
+        return lambda: None
+    signal.signal(signal.SIGALRM, _sonner)
+    signal.alarm(max(1, int(secondes)))
+    return lambda: signal.alarm(0)
+
+
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
                     fin_prevue: float = 0.0) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
@@ -340,72 +374,82 @@ def main() -> None:
             # elle qui traîne.
             fin_agence = min(fin_prevue, debut + args.minutes_par_agence * 60)
             print(f"\n▶ {cible['nom']} — {base}")
-            urls = _urls_a_visiter(page, cible, base, maxi, fin_agence)
             n, vendus, ecartes, vues = 0, 0, 0, 0
             debordement = ""
-            for u in urls:
-                if n >= maxi:          # on s'arrête sur les biens GARDÉS,
-                    break              # pas sur les pages visitées
-                if vues >= pages_max:
-                    print(f"  … plafond de {pages_max} pages atteint pour cette agence")
-                    break
-                if time.monotonic() > fin_agence:
-                    debordement = (" — temps de l'agence épuisé"
-                                   if time.monotonic() <= fin_prevue
-                                   else " — budget global épuisé")
-                    break
-                vues += 1
-                try:
-                    page.goto(u, wait_until="domcontentloaded", timeout=20000)
-                    page.wait_for_timeout(600)
-                    # Un coup de molette avant de lire la page : beaucoup de
-                    # diaporamas ne chargent leurs photos qu'au défilement, et
-                    # sans cela on ne voyait que les icônes de l'en-tête. La
-                    # sonde l'a montré sur immo-ray : 14 images avant, 50 après.
-                    page.mouse.wheel(0, 2500)
-                    page.wait_for_timeout(900)
-                    html = page.content()
-                except Exception:
-                    continue
-                brut = extraire_annonce(html, u, source=_slug(cible["nom"]),
-                                        agence=cible["nom"], agence_url=base)
-                if not brut:
-                    continue
-                # Rejette les pages où l'extraction n'a pas trouvé un vrai titre
-                # d'annonce (titre = nom de l'agence / du site) : peu exploitables.
-                titre_bas = (brut.get("titre") or "").strip().lower()
-                hote = urlparse(base).netloc.replace("www.", "")
-                if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
-                    continue
-                # Filtre qualité : vrai logement de type refuge, encore à vendre
-                # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
-                if est_vendu(brut):
-                    vendus += 1
-                    continue
-                if not est_bien_valide(brut):
-                    ecartes += 1
-                    continue
-                brut["id"] = "%s-%s" % (_slug(cible["nom"]),
-                                        hashlib.sha1(u.encode()).hexdigest()[:12])
-                if brut.get("lat") is None:
-                    geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
-                           or _geocoder_cp(brut.get("code_postal"))
-                           or _geocoder_texte(brut.get("titre")))
-                    if geo:
-                        brut["lat"], brut["lon"], ville, cp, citycode = geo
-                        if ville and not brut.get("commune"):
-                            brut["commune"] = ville
-                        if cp:
-                            brut["code_postal"] = brut.get("code_postal") or cp
-                            brut["departement"] = brut.get("departement") or str(cp)[:2]
-                        if brut.get("densite_hab_km2") is None:
-                            brut["densite_hab_km2"] = _densite(citycode)
-                # Altitude (pilier Situation) une fois la position connue.
-                if brut.get("altitude") is None and brut.get("lat") is not None:
-                    brut["altitude"] = _altitude(brut["lat"], brut["lon"])
-                db.upsert_annonce(conn, preparer_annonce(brut))
-                n += 1
-                time.sleep(args.delai)
+            # Trente secondes de marge sur le budget : le temps de finir
+            # proprement le bien en cours avant que le réveil ne sonne.
+            desarmer = borner(args.minutes_par_agence * 60 + 30)
+            try:
+                urls = _urls_a_visiter(page, cible, base, maxi, fin_agence)
+                for u in urls:
+                    if n >= maxi:          # on s'arrête sur les biens GARDÉS,
+                        break              # pas sur les pages visitées
+                    if vues >= pages_max:
+                        print(f"  … plafond de {pages_max} pages atteint pour cette agence")
+                        break
+                    if time.monotonic() > fin_agence:
+                        debordement = (" — temps de l'agence épuisé"
+                                       if time.monotonic() <= fin_prevue
+                                       else " — budget global épuisé")
+                        break
+                    vues += 1
+                    try:
+                        page.goto(u, wait_until="domcontentloaded", timeout=20000)
+                        page.wait_for_timeout(600)
+                        # Un coup de molette avant de lire la page : beaucoup de
+                        # diaporamas ne chargent leurs photos qu'au défilement, et
+                        # sans cela on ne voyait que les icônes de l'en-tête. La
+                        # sonde l'a montré sur immo-ray : 14 images avant, 50 après.
+                        page.mouse.wheel(0, 2500)
+                        page.wait_for_timeout(900)
+                        html = page.content()
+                    except Exception:
+                        continue
+                    brut = extraire_annonce(html, u, source=_slug(cible["nom"]),
+                                            agence=cible["nom"], agence_url=base)
+                    if not brut:
+                        continue
+                    # Rejette les pages où l'extraction n'a pas trouvé un vrai titre
+                    # d'annonce (titre = nom de l'agence / du site) : peu exploitables.
+                    titre_bas = (brut.get("titre") or "").strip().lower()
+                    hote = urlparse(base).netloc.replace("www.", "")
+                    if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
+                        continue
+                    # Filtre qualité : vrai logement de type refuge, encore à vendre
+                    # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
+                    if est_vendu(brut):
+                        vendus += 1
+                        continue
+                    if not est_bien_valide(brut):
+                        ecartes += 1
+                        continue
+                    brut["id"] = "%s-%s" % (_slug(cible["nom"]),
+                                            hashlib.sha1(u.encode()).hexdigest()[:12])
+                    if brut.get("lat") is None:
+                        geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
+                               or _geocoder_cp(brut.get("code_postal"))
+                               or _geocoder_texte(brut.get("titre")))
+                        if geo:
+                            brut["lat"], brut["lon"], ville, cp, citycode = geo
+                            if ville and not brut.get("commune"):
+                                brut["commune"] = ville
+                            if cp:
+                                brut["code_postal"] = brut.get("code_postal") or cp
+                                brut["departement"] = brut.get("departement") or str(cp)[:2]
+                            if brut.get("densite_hab_km2") is None:
+                                brut["densite_hab_km2"] = _densite(citycode)
+                    # Altitude (pilier Situation) une fois la position connue.
+                    if brut.get("altitude") is None and brut.get("lat") is not None:
+                        brut["altitude"] = _altitude(brut["lat"], brut["lon"])
+                    db.upsert_annonce(conn, preparer_annonce(brut))
+                    n += 1
+                    time.sleep(args.delai)
+            except TempsEcoule:
+                debordement = " — INTERROMPUE, l'agence ne rendait pas la main"
+                print(f"  ⏱ arrêt forcé : aucun appel n'a rendu la main en "
+                      f"{args.minutes_par_agence:.0f} min. On passe à la suite.")
+            finally:
+                desarmer()
             conn.commit()
             # Le temps passé est imprimé pour CHAQUE agence : c'est ce qui
             # manquait pour comprendre où filait le budget. Cinq passages tués
