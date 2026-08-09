@@ -186,7 +186,7 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 
 <h1>{_e(seo.titre_annonce(bien))}</h1>
 <p class="chapeau">{_e(seo.description_annonce(bien))}</p>
-{f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy">' if bien.get("photo") else ""}
+{f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy" onerror="this.remove()">' if bien.get("photo") else ""}
 <p class="prix">{_e(seo._euros(bien.get("prix")) or "Prix sur demande")}</p>
 
 <h2>Que disent les données sur ce bien ?</h2>
