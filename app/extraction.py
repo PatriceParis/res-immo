@@ -68,7 +68,12 @@ RE_META_INV = re.compile(  # variante : content avant property
     r'<meta[^>]+content=["\']([^"\']*)["\'][^>]*(?:property|name)=["\']([^"\']+)["\']',
     re.IGNORECASE,
 )
-RE_PRIX = re.compile(r"(\d[\d\s  .]{3,})\s*€")
+# Le montant ne s'écrit pas toujours avec le symbole : six annonces d'une
+# même agence portaient « 175.000 EUROS » en toutes lettres, et le motif ne
+# reconnaissait que « € ». La virgule décimale manquait aussi à la classe,
+# si bien que « 40.000,00 € » ne correspondait à rien.
+RE_PRIX = re.compile(
+    r"(\d[\d\s\u00a0\u202f.,]{3,}?)\s*(?:€|EUROS?\b|EUR\b)", re.IGNORECASE)
 # Les surfaces sont très souvent décimales dans les annonces (« 132,96 m² »,
 # « 238.0 m2 »). Sans la partie décimale, « 132,96 m² » était lu **96 m²** et
 # « 238.0 m2 » n'était pas reconnu du tout : de quoi fausser tous les prix
@@ -191,17 +196,59 @@ def _code_postal(titre: str, texte: str) -> str | None:
     return Counter(trouves).most_common(1)[0][0] if trouves else None
 
 
+# Un nombre écrit à la française, avec ses deux séparateurs possibles.
+RE_NOMBRE = re.compile(r"-?\d+(?:[.,\s\u00a0\u202f]\d+)*")
+
+
+def _francais(brut: str) -> float:
+    """« 40.000,00 » → 40000.0, « 1.250.000 » → 1250000, « 140,5 » → 140.5.
+
+    En France, le point sépare les milliers et la virgule les décimales —
+    l'inverse de l'usage anglais. L'ancienne lecture prenait tout point pour
+    une décimale : « 1.250.000 € » devenait 1,25 €, « 40.000,00 € » devenait
+    40 €. Le seuil de vraisemblance des prix les écartait ensuite, si bien que
+    l'annonce s'affichait « Prix sur demande » alors que son titre portait le
+    montant en toutes lettres.
+
+    Le défaut ne touchait pas que les prix : « terrain 1.500 m² » se lisait
+    1,5 m², et là aucun seuil ne rattrapait la valeur — elle était publiée.
+
+    La règle : quand les deux séparateurs sont présents, le DERNIER porte la
+    décimale. Quand il n'y en a qu'un, un point suivi d'exactement trois
+    chiffres sépare des milliers ; tout le reste est une décimale. C'est la
+    convention française, et le corpus est français — un « 78.000 » anglais
+    valant 78,0 serait mal lu, mais on n'en rencontre pas ici.
+    """
+    s = re.sub(r"[\s\u00a0\u202f]", "", brut)
+    dernier_point, derniere_virgule = s.rfind("."), s.rfind(",")
+    if dernier_point >= 0 and derniere_virgule >= 0:
+        decimale = max(dernier_point, derniere_virgule)
+        entier = s[:decimale].replace(".", "").replace(",", "")
+        return float(f"{entier}.{s[decimale + 1:]}")
+    separateur = "." if dernier_point >= 0 else ("," if derniere_virgule >= 0 else "")
+    if not separateur:
+        return float(s)
+    groupes = s.split(separateur)
+    milliers = (len(groupes) > 2                        # 1.250.000
+                or (separateur == "." and len(groupes[-1]) == 3))
+    if milliers:
+        return float("".join(groupes))
+    return float(f"{separateur.join(groupes[:-1])}.{groupes[-1]}")
+
+
 def _num(x):
-    """Coerce '7 500 m²', '140,5', 140 → nombre (int si entier), sinon None."""
+    """Coerce '7 500 m²', '140,5', '40.000,00', 140 → nombre, sinon None."""
     if x is None:
         return None
     if isinstance(x, (int, float)):
         return x
-    s = str(x).replace(" ", "").replace(" ", "").replace(" ", "")
-    m = re.search(r"-?\d+(?:[.,]\d+)?", s)
+    m = RE_NOMBRE.search(str(x))
     if not m:
         return None
-    valeur = float(m.group().replace(",", "."))
+    try:
+        valeur = _francais(m.group())
+    except ValueError:
+        return None
     return int(valeur) if valeur.is_integer() else valeur
 
 
