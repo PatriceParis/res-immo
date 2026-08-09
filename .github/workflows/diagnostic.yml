@@ -62,7 +62,7 @@ jobs:
           CIBLE: ${{ github.event.inputs.relais }}
         run: |
           if [ "$CIBLE" = "echantillon" ]; then
-            python scripts/diagnostiquer_relais.py --echantillon 25
+            python scripts/diagnostiquer_relais.py
           elif [ "${CIBLE#http}" != "$CIBLE" ]; then
             python scripts/diagnostiquer_relais.py $CIBLE
           else

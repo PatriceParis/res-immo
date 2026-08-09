@@ -256,3 +256,31 @@ def test_llms_txt_dit_les_limites_autant_que_les_forces():
                     "n'est pas une agence", "993"):
         assert attendu in texte, attendu
     assert "https://exemple.fr/terroir/normandie" in texte
+
+
+# --- La commune vue du ciel -------------------------------------------------
+#
+# La photo d'agence n'est pas à nous, et la mesure du hotlink dira ce qu'il en
+# restera. La vue aérienne, elle, nous appartient de plein droit : orthophotos
+# IGN sous Licence Ouverte. C'est aussi la seule image qui ILLUSTRE ce que la
+# page analyse. Une contrainte d'honnêteté la gouverne : notre géolocalisation
+# est communale, pas parcellaire — la légende doit le dire.
+
+
+def test_la_fiche_montre_la_commune_vue_du_ciel():
+    html = pages.page_annonce(BIEN, [])
+    assert "data.geopf.fr" in html, "l'orthophoto IGN doit illustrer la fiche"
+    assert "orthophoto IGN" in html, "la source doit être créditée (licence)"
+
+
+def test_la_vue_aerienne_avoue_sa_precision():
+    """Elle cadre la COMMUNE : la présenter comme la parcelle serait inventer
+    — l'adresse exacte ne figure presque jamais dans l'annonce."""
+    plat = " ".join(pages.page_annonce(BIEN, []).split())
+    assert "L’emplacement exact du bien n’est pas connu" in plat
+
+
+def test_sans_coordonnees_pas_de_vue_aerienne():
+    """Plutôt rien qu'une carte centrée sur n'importe quoi."""
+    sans = {k: v for k, v in BIEN.items() if k not in ("lat", "lon")}
+    assert "data.geopf.fr" not in pages.page_annonce(sans, [])

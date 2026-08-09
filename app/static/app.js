@@ -139,12 +139,41 @@ function photoProxy(a) {
 // La pastille « photo de l'agence » disparaît avec elle : la laisser sur
 // l'illustration de repli reviendrait à annoncer une photo qu'on ne montre
 // pas — le même défaut que le compte de photos inventé, en plus discret.
+// Vue aérienne de la commune — orthophotos IGN, Licence Ouverte, servies par
+// la Géoplateforme. C'est le repli quand l'agence ne fournit pas de photo
+// exploitable : une VRAIE image du lieu — paysage, bâti, eau, forêt — plutôt
+// qu'un dessin. Le lieu est la commune, pas la parcelle : notre géolocalisation
+// vient de la BAN sur commune + code postal, l'adresse exacte n'étant presque
+// jamais publiée. L'étiquette « © IGN » le dit, et la licence l'exige.
+function tuileAerienne(a) {
+  if (a.lat == null || a.lon == null) return "";
+  const z = 15, n = 2 ** z;
+  const x = Math.floor((a.lon + 180) / 360 * n);
+  const phi = a.lat * Math.PI / 180;
+  const y = Math.floor((1 - Math.log(Math.tan(phi) + 1 / Math.cos(phi)) / Math.PI) / 2 * n);
+  return "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0"
+    + "&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&TILEMATRIXSET=PM"
+    + "&FORMAT=image/jpeg&TILEMATRIX=" + z + "&TILEROW=" + y + "&TILECOL=" + x;
+}
+
 function imgPhoto(a) {
   const src = photoProxy(a);
-  if (!src) return "";
-  return `<img class="vraie-photo" src="${src}" alt="" loading="lazy"
-    decoding="async"
-    onerror="this.parentNode.classList.add('photo-absente'); this.remove()">`;
+  const ciel = tuileAerienne(a);
+  const premiere = src || ciel;
+  if (!premiere) return "";
+  // Trois étages : la photo de l'agence si elle charge, sinon la vue
+  // aérienne de la commune, sinon le dessin (le fond du conteneur). Une
+  // classe sur le conteneur affiche l'étiquette « © IGN » quand c'est le
+  // ciel qui illustre — annoncer une vue aérienne comme la photo du bien
+  // serait le mensonge d'à côté.
+  const bascule = (src && ciel)
+    ? `if(!this.dataset.ciel){this.dataset.ciel=1;this.src='${ciel}';}` +
+      `else{this.parentNode.classList.add('photo-absente');this.remove();}`
+    : `this.parentNode.classList.add('photo-absente');this.remove();`;
+  return `<img class="vraie-photo" src="${premiere}"${src ? "" : ' data-ciel="1"'}
+    alt="" loading="lazy" decoding="async"
+    onload="if(this.dataset.ciel)this.parentNode.classList.add('vue-aerienne')"
+    onerror="${bascule}">`;
 }
 
 function illustration(a) {
