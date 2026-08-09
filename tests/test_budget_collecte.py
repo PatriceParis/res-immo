@@ -257,3 +257,75 @@ def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch):
 
     assert poses.get("appel"), "aucun plafond posé sur les appels au navigateur"
     assert poses.get("navigation"), "aucun plafond posé sur les navigations"
+
+
+# --- Le garde-fou qui ne demande la coopération de personne -----------------
+#
+# Trois correctifs successifs ont énuméré les appels à borner : budget global,
+# budget par agence, délais posés sur le navigateur. Le passage suivant est
+# reparti pour trente-quatre minutes sans mener UNE SEULE agence à son terme,
+# code 124 et « aucun fichier modifié ».
+#
+# Il restait toujours un appel non couvert, et il en restera toujours un : le
+# `timeout=` de `requests` s'applique à chaque LECTURE et non au total — un
+# serveur qui distille ses octets une seconde à la fois ne le déclenche
+# jamais. D'où `SIGALRM`, qui interrompt jusque dans un appel système
+# bloquant, donc y compris dans celui qu'on aura oublié.
+#
+# Ces tests bloquent POUR DE VRAI, sur une horloge réelle : une fausse horloge
+# ne prouverait rien ici, puisque tout l'enjeu est d'interrompre du code qui
+# ne consulte aucune horloge.
+
+
+def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, capsys):
+    """Le cas que trois correctifs successifs n'attrapaient pas."""
+    import time as horloge_reelle
+    visitees = []
+
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [
+        {"nom": "Bloquée", "site": "https://bloquee.fr"},
+        {"nom": "Saine", "site": "https://saine.fr"}])
+
+    def urls(page, cible, base, maxi, fin_prevue=0.0):
+        visitees.append(cible["nom"])
+        if cible["nom"] == "Bloquée":
+            horloge_reelle.sleep(30)     # le réveil doit sonner bien avant
+        return []
+
+    monkeypatch.setattr(collecteur, "_urls_a_visiter", urls)
+    monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
+    monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
+    # On garde la VRAIE fonction, avec un délai d'une seconde : c'est le
+    # mécanisme qu'on veut éprouver, pas une imitation.
+    vrai_borner = collecteur.borner
+    monkeypatch.setattr(collecteur, "borner", lambda _: vrai_borner(1))
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+
+    depart = horloge_reelle.monotonic()
+    collecteur.main()
+    ecoule = horloge_reelle.monotonic() - depart
+
+    assert visitees == ["Bloquée", "Saine"], "l'agence suivante doit avoir son tour"
+    assert ecoule < 20, f"le blocage a duré {ecoule:.0f} s : rien ne l'a interrompu"
+    assert "arrêt forcé" in capsys.readouterr().out
+
+
+def test_le_reveil_est_desarme_quand_tout_se_passe_bien(monkeypatch):
+    """Un réveil oublié sonnerait au milieu de l'agence SUIVANTE, et ferait
+    passer une agence saine pour bloquée."""
+    import signal as sig
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [])
+    monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
+    monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    desarmer = collecteur.borner(300)
+    desarmer()
+    assert sig.alarm(0) == 0, "une alarme est restée armée"
+
+
+def test_borner_reste_inoffensif_sans_sigalrm(monkeypatch):
+    """Sous Windows le mécanisme n'existe pas : il doit s'effacer, pas planter."""
+    import signal as sig
+    monkeypatch.delattr(sig, "SIGALRM", raising=False)
+    collecteur.borner(5)()          # ne doit rien lever
