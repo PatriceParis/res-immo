@@ -278,3 +278,77 @@ def test_le_type_du_bien_ne_se_devine_pas_dans_un_nom_de_commune():
     assert _type_bien("Château du XVIIIe avec parc", set()) == "château"
     assert _type_bien("Moulin à eau restauré", set()) == "moulin"
     assert _type_bien("Corps de ferme avec grange", set()) == "corps de ferme"
+
+
+# --- Le point français sépare les milliers, pas les décimales ---------------
+#
+# Signalé sur une annonce NC immo : le site affichait « Prix sur demande »
+# alors que le titre portait « 40.000,00 € » en toutes lettres.
+#
+# Deux causes. La lecture des nombres prenait tout point pour une décimale —
+# « 1.250.000 € » devenait 1,25 € — et le seuil de vraisemblance écartait
+# ensuite la valeur, d'où le prix absent. Et le motif de prix ne reconnaissait
+# que le symbole « € », jamais « EUROS » écrit en toutes lettres.
+#
+# Le défaut ne touchait pas que les prix, et c'est le plus grave : « terrain
+# 1.500 m² » se lisait 1,5 m², sans qu'aucun seuil ne rattrape la valeur.
+
+from app.extraction import RE_PRIX, _num  # noqa: E402
+
+
+def test_le_point_separe_les_milliers():
+    assert _num("40.000") == 40000
+    assert _num("1.250.000") == 1250000
+    assert _num("1.500") == 1500
+
+
+def test_la_virgule_reste_la_decimale():
+    assert _num("140,5") == 140.5
+    assert _num("132,96") == 132.96
+
+
+def test_les_deux_separateurs_ensemble():
+    """« 40.000,00 » : le dernier séparateur porte la décimale."""
+    assert _num("40.000,00") == 40000
+    assert _num("1.250.000,50") == 1250000.5
+    assert _num("250 000,50") == 250000.5
+
+
+def test_le_point_decimal_court_reste_une_decimale():
+    """« 238.0 m² » et « 140.50 » viennent des données structurées, où le
+    point est décimal. Un ou deux chiffres après le point : décimale."""
+    assert _num("238.0") == 238
+    assert _num("140.50") == 140.5
+    assert _num("78.5") == 78.5
+
+
+def test_l_espace_insecable_ne_coupe_pas_le_nombre():
+    assert _num("250 000") == 250000
+    assert _num("250 000") == 250000
+    assert _num("7 500 m²") == 7500
+
+
+def test_le_prix_se_lit_avec_le_mot_euros():
+    """Six annonces d'une même agence écrivaient « 175.000 EUROS »."""
+    for texte, attendu in (("175.000 EUROS", 175000),
+                           ("79.000,00 euros", 79000),
+                           ("130.000,00 EUROS", 130000),
+                           ("250 000 €", 250000),
+                           ("40.000,00 €", 40000)):
+        trouve = RE_PRIX.search(texte)
+        assert trouve, texte
+        assert _num(trouve.group(1)) == attendu, texte
+
+
+def test_le_prix_du_signalement_est_desormais_lu():
+    """Le cas exact : ncimmo71.fr, référence 58."""
+    titre = ("MAISON - ST SYMPHORIEN DE MARMAGNE - 40.000,00 € Référence 58 "
+             "- NC immo - Agence immobilière à Montchanin 71")
+    trouve = RE_PRIX.search(titre)
+    assert trouve and _num(trouve.group(1)) == 40000
+
+
+def test_une_reference_n_est_pas_un_prix():
+    """« Référence 58 » ne doit pas être pris pour un montant : le motif
+    exige une unité monétaire, et l'appelant un plancher de 15 000 €."""
+    assert not RE_PRIX.search("Référence 58 - REF 107")
