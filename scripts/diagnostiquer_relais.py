@@ -130,18 +130,22 @@ def _annonces(args) -> list[dict]:
         return [b for b in biens
                 if cle in (b.get("agence") or "").casefold()
                 or cle in (b.get("url") or "").casefold()]
-    # Échantillon PAR HÉBERGEUR, deux annonces chacun, et non les N premières
-    # du fichier : la décision à prendre est par CDN — un même hôte sert des
-    # dizaines d'agences, et deux annonces suffisent à connaître sa politique.
+    # Échantillon PAR HÉBERGEUR, deux annonces chacun, les plus gros hôtes
+    # D'ABORD. La première version prenait les hébergeurs dans l'ordre du
+    # fichier : le plafond de soixante annonces tombait au milieu de
+    # l'alphabet, et IAD — un tiers du catalogue à lui seul — n'était jamais
+    # mesuré. Deux passages de sonde ont conclu « tout va bien » sur un
+    # échantillon qui ignorait justement le plus gros enjeu.
     par_hote: dict = {}
     for b in biens:
         if not b.get("photo"):
             continue
         hote = urlparse(b["photo"]).hostname or "?"
-        lot = par_hote.setdefault(hote, [])
-        if len(lot) < 2:
-            lot.append(b)
-    return [b for lot in par_hote.values() for b in lot][:args.echantillon]
+        par_hote.setdefault(hote, []).append(b)
+    choix = []
+    for hote in sorted(par_hote, key=lambda h: -len(par_hote[h])):
+        choix.extend(par_hote[hote][:2])
+    return choix[:args.echantillon]
 
 
 def main() -> None:
