@@ -224,17 +224,11 @@ def test_detecte_un_score_qui_n_est_pas_la_somme_de_ses_piliers(appeler):
     assert not r.tenue
 
 
-def test_detecte_un_ecart_au_marche_invente(appeler):
-    def ecart_invente(chemin, params, reponse):
-        if chemin == "/api/annonces":
-            for b in reponse.get("items", []):
-                b["ecart_marche_pct"] = -42
-                b["prix_m2"] = 1500
-                b["prix_m2_secteur"] = 1500
-        return reponse
-
-    r = coherence.ecart_au_marche_reproductible(_menteur(appeler, ecart_invente))
-    assert not r.tenue
+# La preuve de détection de « ecart_au_marche_reproductible » vivait ici.
+# L'invariant a suivi la pastille d'écart au marché, retirée de l'interface le
+# 9 août 2026. Le contrôle n'est pas perdu : il se fait désormais sur les
+# données, dans scripts/auditer.py, et sa propre preuve de détection est dans
+# tests/test_audit_donnees.py.
 
 
 def test_detecte_une_baisse_de_prix_qui_n_en_est_pas_une(appeler):
@@ -289,7 +283,7 @@ def test_chaque_invariant_a_sa_preuve_de_detection():
         "seuils_numeriques_respectes", "tris_ordonnes",
         "chaque_bien_mene_a_l_agence", "chaque_page_ne_parait_qu_une_fois",
         "score_egal_a_ses_piliers",
-        "ecart_au_marche_reproductible", "signaux_de_fraicheur_justifies",
+        "signaux_de_fraicheur_justifies",
         "date_de_constatation_credible",
         "bornes_des_filtres_couvrent_les_donnees", "agences_annoncees_presentes",
     }
