@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS annonces (
     features_json     TEXT DEFAULT '{}',
     risques_json      TEXT DEFAULT '{}',
     train_json        TEXT DEFAULT '{}',
+    gare_nom          TEXT DEFAULT '',
+    gare_minutes      INTEGER,
     score_total       REAL DEFAULT 0,
     score_detail_json TEXT DEFAULT '{}',
     badges_json       TEXT DEFAULT '[]',
@@ -122,6 +124,8 @@ def _migrer(conn: sqlite3.Connection) -> None:
     for colonne, definition in (("agence", "TEXT"), ("agence_url", "TEXT DEFAULT ''"),
                                 ("photo", "TEXT DEFAULT ''"), ("texte", "TEXT DEFAULT ''"),
                                 ("train_json", "TEXT DEFAULT '{}'"),
+                                ("gare_nom", "TEXT DEFAULT ''"),
+                                ("gare_minutes", "INTEGER"),
                                 ("has_troglodyte", "INTEGER DEFAULT 0"),
                                 ("vue_le", "TEXT DEFAULT ''"),
                                 ("revue_le", "TEXT DEFAULT ''"),
@@ -174,6 +178,11 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "features_json": json.dumps(a.get("features", {}), ensure_ascii=False),
         "risques_json": json.dumps(a.get("risques", {}), ensure_ascii=False),
         "train_json": json.dumps(a.get("train") or {}, ensure_ascii=False),
+        # Extraites du JSON pour être filtrables et groupables : la gare
+        # qui dessert un bien est un critère de recherche à part entière,
+        # pas une note de bas de page.
+        "gare_nom": (a.get("train") or {}).get("nom") or "",
+        "gare_minutes": (a.get("train") or {}).get("minutes_paris"),
         "score_total": a.get("score_total", 0),
         "score_detail_json": json.dumps(a.get("score_detail", {}), ensure_ascii=False),
         "badges_json": json.dumps(a.get("badges", []), ensure_ascii=False),
@@ -264,9 +273,16 @@ def _clauses(filtres: dict, ignorer: set | None = None) -> tuple[str, list]:
         clauses.append("region = ?")
         params.append(filtres["region"])
 
-    if "agence" not in ignorer and filtres.get("agence"):
-        clauses.append("agence = ?")
-        params.append(filtres["agence"])
+    if "gare" not in ignorer and filtres.get("gare"):
+        clauses.append("gare_nom = ?")
+        params.append(filtres["gare"])
+
+    if "train_max" not in ignorer and filtres.get("train_max"):
+        # « Paris en moins d'une heure de train » : le critère que recouvre
+        # vraiment la demande d'un filtre « gare TGV ». Un bien sans gare
+        # connue est écarté — il ne remplit pas la condition.
+        clauses.append("gare_minutes IS NOT NULL AND gare_minutes <= ?")
+        params.append(int(filtres["train_max"]))
 
     if "q" not in ignorer and filtres.get("q"):
         clauses.append("(titre LIKE ? OR description LIKE ? OR commune LIKE ?)")
@@ -327,6 +343,36 @@ def meta(conn: sqlite3.Connection) -> dict:
     sources = [r[0] for r in conn.execute(
         "SELECT DISTINCT source FROM annonces ORDER BY source").fetchall()]
     return {**dict(row), "types": types, "sources": sources}
+
+
+def gares(conn: sqlite3.Connection, filtres: dict | None = None) -> list[dict]:
+    """Gares desservant au moins un bien, avec leur temps vers Paris.
+
+    Classées par temps de trajet et non par ordre alphabétique : ce que
+    cherche l'utilisateur qui demande « une gare TGV », c'est d'abord une
+    gare RAPIDE. Creil à trente minutes doit se lire avant Mayenne à deux
+    heures vingt-cinq.
+
+    Les comptes tiennent compte des filtres courants — sauf ceux que porte ce
+    menu lui-même, `gare` et `train_max`. Sans cette exception, choisir
+    « Paris en moins d'1 h » ferait disparaître du menu toutes les gares plus
+    lointaines : l'utilisateur ne pourrait plus revenir en arrière, et le menu
+    prétendrait qu'elles n'existent pas. Même règle que pour les pastilles de
+    terroir, et pour la même raison.
+    """
+    ou, params = _clauses(filtres or {}, ignorer={"gare", "train_max"})
+    rows = conn.execute(
+        f"""
+        SELECT gare_nom            AS nom,
+               MIN(gare_minutes)   AS minutes_paris,
+               COUNT(*)            AS nb
+        FROM annonces
+        WHERE {ou} AND gare_nom <> '' AND gare_minutes IS NOT NULL
+        GROUP BY gare_nom
+        ORDER BY minutes_paris, nom
+        """, params
+    ).fetchall()
+    return [dict(r) for r in rows]
 
 
 def agences(conn: sqlite3.Connection) -> list[dict]:

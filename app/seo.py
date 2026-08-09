@@ -42,9 +42,52 @@ import html
 import re
 import unicodedata
 from datetime import date
+from urllib.parse import quote
 
 SITE = "https://res-immo.vercel.app"
 NOM = "Refuge Immo"
+
+# La marque, définie une seule fois et partagée par l'interface et les pages
+# servies. L'emoji ⛰️ qui tenait ce rôle avait trois défauts : il appartient à
+# tout le monde, son rendu change d'un système à l'autre — le petit drapeau
+# bleu d'Apple n'est pas la montagne d'Android — et il ne dit rien du projet.
+#
+# Le dessin : un toit OUVERT, deux montants qui ne se referment pas — un abri,
+# pas une boîte — et une feuille centrée là où serait la porte. L'abri protège
+# quelque chose de vivant : c'est tout le propos, et cela se lit à seize
+# pixels comme à quarante-huit.
+def marque_svg(trait: str = "#f2efe6", feuille: str = "#8fb488") -> str:
+    """Le pictogramme seul, sans dimension ni fond : à poser où l'on veut."""
+    return (
+        f'<path d="M7.5 25.5 L24 11 L40.5 25.5" fill="none" stroke="{trait}" '
+        f'stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<path d="M11.5 28.5 L11.5 40 M36.5 28.5 L36.5 40" stroke="{trait}" '
+        f'stroke-width="3.6" stroke-linecap="round"/>'
+        f'<path d="M24 40.5 C 18 36 17 27 24 22 C 31 27 30 36 24 40.5 Z" '
+        f'fill="{feuille}"/>'
+        f'<path d="M24 40.5 L24 27" stroke="{trait}" stroke-width="1.7" '
+        f'stroke-linecap="round" opacity=".45"/>')
+
+
+def logo(taille: int = 30, trait: str = "#f2efe6",
+         feuille: str = "#8fb488") -> str:
+    return (f'<svg class="logo" width="{taille}" height="{taille}" '
+            f'viewBox="0 0 48 48" role="img" aria-label="Refuge Immo" '
+            f'focusable="false">{marque_svg(trait, feuille)}</svg>')
+
+
+def favicon() -> str:
+    """L'icône d'onglet, en URL de données.
+
+    Sur un fond carré à la couleur de la marque, et non en tracé nu : un
+    onglet peut être clair ou sombre, et un dessin sans fond disparaît dans
+    l'un des deux cas.
+    """
+    svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">'
+           '<rect width="48" height="48" rx="10" fill="#1b4332"/>'
+           + marque_svg() + '</svg>')
+    return "data:image/svg+xml," + quote(svg, safe="")
+
 
 # Robots d'IA explicitement accueillis. Les nommer n'est pas cosmétique :
 # plusieurs n'explorent que si une règle les vise, et un `Disallow` par

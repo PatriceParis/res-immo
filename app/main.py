@@ -86,7 +86,8 @@ def liste_annonces(
     hors_inondation: int = 0,
     type_bien: str | None = None,
     region: str | None = None,
-    agence: str | None = None,
+    gare: str | None = Query(None, description="Nom exact de la gare desservant le bien"),
+    train_max: int | None = Query(None, description="Paris en N minutes de train au plus"),
     q: str | None = Query(None, description="Recherche texte (titre, description, commune)"),
     tri: str = "score",
     limit: int = 200,
@@ -142,7 +143,8 @@ def liste_regions(
     troglodyte: int = 0,
     hors_inondation: int = 0,
     type_bien: str | None = None,
-    agence: str | None = None,
+    gare: str | None = None,
+    train_max: int | None = None,
     q: str | None = None,
 ):
     """Classement de résilience des terroirs + nombre de biens par région.
@@ -163,6 +165,42 @@ def liste_regions(
     for r in classement:
         r["nb_biens"] = comptes.get(r["region"], 0)
     return {"regions": classement, "cibles": regions.regions_cibles()}
+
+
+@app.get("/api/gares")
+def liste_gares(
+    prix_min: int | None = None,
+    prix_max: int | None = None,
+    temps_max: int | None = None,
+    surface_min: int | None = None,
+    terrain_min: int | None = None,
+    score_min: int | None = None,
+    cave: int = 0,
+    puits: int = 0,
+    bois: int = 0,
+    solaire: int = 0,
+    dependances: int = 0,
+    potager: int = 0,
+    troglodyte: int = 0,
+    hors_inondation: int = 0,
+    type_bien: str | None = None,
+    region: str | None = None,
+    train_max: int | None = None,
+    q: str | None = None,
+):
+    """Gares desservant les biens, classées par temps de trajet vers Paris.
+
+    Les comptes suivent les filtres courants, pour la même raison que les
+    pastilles de terroir : un menu qui annonce « Creil (12) » quand la liste
+    n'en montrerait aucun serait faux.
+    """
+    filtres = {k: v for k, v in locals().items()}
+    assurer_donnees()
+    conn = db.connexion()
+    try:
+        return {"gares": db.gares(conn, filtres)}
+    finally:
+        conn.close()
 
 
 @app.get("/api/agences")

@@ -441,3 +441,9 @@ body { overflow-x: hidden; }
            display: flex; flex-wrap: wrap; gap: 8px 18px }
 .pied a { color: var(--marque, #1b4332); font-weight: 600 }
 .pied p { max-width: 70ch; margin: 0 }
+
+/* La marque : pictogramme + nom, alignés sur la même ligne de base optique.
+   Le dessin remplace l'emoji ⛰️, qui appartenait à tout le monde, changeait
+   d'aspect d'un système à l'autre et ne disait rien du projet. */
+.marque { display: flex; align-items: center; gap: 10px; }
+.marque .logo { flex: none; }
