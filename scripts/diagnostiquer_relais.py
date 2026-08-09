@@ -15,6 +15,11 @@ et met les réponses côte à côte.
 
 Elle ne modifie rien : elle lit et affiche.
 
+Depuis l'examen juridique du relais, elle mesure aussi le HOTLINK HONNÊTE :
+l'image demandée avec le Referer de notre propre site, comme le ferait le
+navigateur d'un visiteur si l'on retirait le relais. C'est la donnée qui
+manque pour décider de l'architecture — combien de photos survivraient.
+
 Usage :
     python scripts/diagnostiquer_relais.py <url d'annonce> [<url> …]
     python scripts/diagnostiquer_relais.py --agence "Groupe123immo"
@@ -92,12 +97,25 @@ def sonder_une(annonce: dict) -> list[dict]:
                 photo = ("photo" if bonne else motif)[:24]
             except Exception:
                 photo = "illisible"
-        relais, type_relais, taille_relais = _par_le_relais(image, page)
-        lignes.append({
+        ligne = {
             "image": image, "retenue": image == retenue,
             "direct": etat, "type": type_direct, "octets": taille, "verdict": photo,
-            "relais": relais, "type_relais": type_relais, "octets_relais": taille_relais,
-        })
+        }
+        if image == retenue:
+            # Le hotlink HONNÊTE : l'image demandée comme le ferait le
+            # navigateur d'un visiteur de notre site — Referer à NOTRE nom,
+            # sans déguisement. C'est la seule mesure qui dise si la fiche
+            # resterait illustrée une fois le relais retiré. « Sans referer »
+            # complète le tableau : certains CDN acceptent tout sauf un
+            # referer étranger, d'autres exigent celui de l'agence.
+            etat_nous, _tn, octets_nous = _demander(image, SITE + "/")
+            etat_nu, _tv, octets_nu = _demander(image, None)
+            ligne.update({"nous": etat_nous, "octets_nous": octets_nous,
+                          "nu": etat_nu, "octets_nu": octets_nu})
+        relais, type_relais, taille_relais = _par_le_relais(image, page)
+        ligne.update({"relais": relais, "type_relais": type_relais,
+                      "octets_relais": taille_relais})
+        lignes.append(ligne)
     return lignes
 
 
@@ -112,15 +130,27 @@ def _annonces(args) -> list[dict]:
         return [b for b in biens
                 if cle in (b.get("agence") or "").casefold()
                 or cle in (b.get("url") or "").casefold()]
-    return [b for b in biens if b.get("photo")][:args.echantillon]
+    # Échantillon PAR HÉBERGEUR, deux annonces chacun, et non les N premières
+    # du fichier : la décision à prendre est par CDN — un même hôte sert des
+    # dizaines d'agences, et deux annonces suffisent à connaître sa politique.
+    par_hote: dict = {}
+    for b in biens:
+        if not b.get("photo"):
+            continue
+        hote = urlparse(b["photo"]).hostname or "?"
+        lot = par_hote.setdefault(hote, [])
+        if len(lot) < 2:
+            lot.append(b)
+    return [b for lot in par_hote.values() for b in lot][:args.echantillon]
 
 
 def main() -> None:
     parametres = argparse.ArgumentParser()
     parametres.add_argument("urls", nargs="*", help="adresses d'annonces à sonder")
     parametres.add_argument("--agence", help="toutes les annonces d'une agence")
-    parametres.add_argument("--echantillon", type=int, default=12,
-                            help="à défaut, sonder les N premières annonces illustrées")
+    parametres.add_argument("--echantillon", type=int, default=60,
+                            help="à défaut, sonder jusqu'à N annonces, deux par "
+                                 "hébergeur d'images")
     args = parametres.parse_args()
 
     annonces = _annonces(args)
@@ -133,6 +163,7 @@ def main() -> None:
     print("(comme le navigateur du visiteur).\n")
 
     desaccords = manquantes = 0
+    par_hote: dict = {}
     for annonce in annonces:
         print(f"── {(annonce.get('agence') or '?')} · {(annonce.get('commune') or '?')}")
         print(f"   {annonce.get('url')}")
@@ -153,6 +184,14 @@ def main() -> None:
                   f"{ligne['verdict'][:22]:22} │ relais {ligne['relais']:>12} "
                   f"{ligne['octets_relais']:>8} o  {marque}")
             print(f"     {ligne['image'][:118]}")
+            if "nous" in ligne:
+                print(f"     hotlink honnête {ligne['nous']:>9} "
+                      f"{ligne['octets_nous']:>8} o · sans referer "
+                      f"{ligne['nu']:>9} {ligne['octets_nu']:>8} o")
+                hote = urlparse(ligne["image"]).hostname or "?"
+                testes, ok = par_hote.get(hote, (0, 0))
+                reussi = ligne["nous"] == "200" and ligne["octets_nous"] > 0
+                par_hote[hote] = (testes + 1, ok + (1 if reussi else 0))
         if aucune_affichable:
             manquantes += 1
             print("   ⚠ AUCUNE candidate ne passe le relais : la fiche restera sans photo.")
@@ -160,6 +199,15 @@ def main() -> None:
 
     print(f"Bilan : {desaccords} désaccord(s) entre le direct et le relais, "
           f"{manquantes} annonce(s) qu'aucune image n'illustre côté visiteur.")
+
+    if par_hote:
+        total = sum(t for t, _ in par_hote.values())
+        vivants = sum(o for _, o in par_hote.values())
+        print("\nHotlink honnête (Referer = notre site), hébergeur par hébergeur :")
+        for hote, (testes, ok) in sorted(par_hote.items(), key=lambda kv: -kv[1][0]):
+            print(f"   {ok:>2}/{testes:<2} {hote}")
+        print(f"\nSans le relais, {vivants} photo(s) retenue(s) sur {total} "
+              f"resteraient affichées.")
 
 
 if __name__ == "__main__":
