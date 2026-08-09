@@ -114,7 +114,12 @@ jobs:
               *)
                 echo "::error::Collecteur sorti EN ERREUR (code $code) — voir la trace ci-dessus. L'export suit." ;;
             esac
+            # Le code de sortie doit survivre jusqu'à l'étape d'export : c'est
+            # lui qui distingue « le passage n'a pas eu lieu » de « le passage
+            # a eu lieu et n'a rien ramené ». On garde le pire des codes.
+            if [ "$code" -ne 0 ]; then echo "$code" > "$RUNNER_TEMP/code_collecteur"; fi
           }
+          echo 0 > "$RUNNER_TEMP/code_collecteur"
           if [ -n "$SITES" ]; then
             for s in $SITES; do
               echo "== $s =="
@@ -156,14 +161,42 @@ jobs:
           python scripts/exporter_reel.py
           N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
           echo "Annonces réelles collectées : $N"
+          # TOUJOURS laisser une trace dans le dépôt, même quand la collecte
+          # n'a rien changé. Quatre passages programmés de suite n'ont rien
+          # poussé : impossible, depuis le seul journal git, de distinguer un
+          # passage qui n'a pas eu lieu d'un passage qui n'a rien trouvé. Ce
+          # fichier tranche, et il tient dans une ligne.
+          CODE=$(cat "$RUNNER_TEMP/code_collecteur" 2>/dev/null || echo "?")
+          python - "$N" "$CODE" <<'PY'
+          import json, subprocess, sys, datetime, pathlib
+          annonces, code = sys.argv[1], sys.argv[2]
+          vus = subprocess.run(["git", "diff", "--name-only", "--", "data/"],
+                               capture_output=True, text=True).stdout.split()
+          pathlib.Path("data/dernier_passage.json").write_text(json.dumps({
+              "quand": datetime.datetime.now(datetime.timezone.utc)
+                       .replace(microsecond=0).isoformat(),
+              "code_collecteur": code,
+              "annonces_au_catalogue": int(annonces),
+              "fichiers_modifies": sorted(vus),
+          }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+          PY
           if [ "$N" -gt 0 ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             # Le journal des visites porte la ROTATION : sans lui, la collecte
             # repartirait toujours des mêmes premières agences et ne
             # reviendrait jamais aux dernières.
-            git add data/annonces_reel.json data/agences_visitees.json
-            git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || echo "Aucun changement."
+            git add data/annonces_reel.json data/agences_visitees.json data/dernier_passage.json
+            # Le libellé distingue les deux cas, car la surveillance cherche
+            # « ^Collecte auto » : un passage stérile ne doit pas passer pour
+            # une collecte réussie, mais il doit rester VISIBLE.
+            if git diff --cached --quiet -- data/annonces_reel.json data/agences_visitees.json; then
+              git commit -m "Collecte : passage sans résultat (code $CODE, $(date -u +%F\ %H:%MZ))" \
+                || echo "Aucun changement."
+            else
+              git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" \
+                || echo "Aucun changement."
+            fi
             # La collecte dure ~20 min : un commit poussé pendant ce temps
             # faisait rejeter ce push, et TOUT le travail était perdu.
             # On rejoue alors notre fichier de données (le seul commité ici)
@@ -179,13 +212,15 @@ jobs:
               # contient que ce fichier. Un « reset --soft » laisserait l'index
               # de l'ancien checkout et re-committerait tout le reste au
               # passage, écrasant silencieusement le travail des autres.
-              cp data/annonces_reel.json "$RUNNER_TEMP/annonces_reel.json"
-              cp data/agences_visitees.json "$RUNNER_TEMP/agences_visitees.json" 2>/dev/null || true
+              for f in annonces_reel.json agences_visitees.json dernier_passage.json; do
+                cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
+              done
               git fetch origin main
               git reset --hard origin/main
-              cp "$RUNNER_TEMP/annonces_reel.json" data/annonces_reel.json
-              cp "$RUNNER_TEMP/agences_visitees.json" data/agences_visitees.json 2>/dev/null || true
-              git add data/annonces_reel.json data/agences_visitees.json
+              for f in annonces_reel.json agences_visitees.json dernier_passage.json; do
+                cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
+              done
+              git add data/annonces_reel.json data/agences_visitees.json data/dernier_passage.json
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
               sleep $((essai * 5))
             done
