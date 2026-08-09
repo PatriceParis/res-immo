@@ -447,3 +447,13 @@ body { overflow-x: hidden; }
    d'aspect d'un système à l'autre et ne disait rien du projet. */
 .marque { display: flex; align-items: center; gap: 10px; }
 .marque .logo { flex: none; }
+
+/* L'étiquette de la vue aérienne : quand c'est le ciel qui illustre — photo
+   d'agence morte ou absente — le dire. Une orthophoto présentée comme la
+   photo du bien serait un mensonge, et la Licence Ouverte impose © IGN. */
+.photo.vue-aerienne::after, .photo-grande.vue-aerienne::after {
+  content: "Vue aérienne de la commune · © IGN";
+  position: absolute; left: 8px; bottom: 8px; z-index: 2;
+  font-size: 10.5px; letter-spacing: .2px; padding: 3px 9px; border-radius: 99px;
+  background: rgba(20, 30, 24, .62); color: #f2efe6; pointer-events: none;
+}

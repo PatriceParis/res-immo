@@ -51,6 +51,9 @@ ul { padding-left: 20px } li { margin: 3px 0 }
 table { border-collapse: collapse; width: 100%; margin: 10px 0 }
 td, th { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e4e0d5 }
 img { max-width: 100%; height: auto; border-radius: 10px }
+figure.aerienne { margin: 14px 0 } 
+figure.aerienne img { width: 100%; border-radius: 10px }
+figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 """
 
 
@@ -120,6 +123,27 @@ changement climatique. Chaque fiche renvoie vers l'annonce d'origine.</p>
 """
 
 
+def _carte_aerienne(bien: dict, largeur: int = 640, hauteur: int = 320) -> str:
+    """La commune vue du ciel — orthophotos IGN, Licence Ouverte.
+
+    C'est la seule image de la fiche qui nous appartienne de plein droit, et
+    la seule qui illustre ce que la page analyse : le paysage, le bâti, la
+    forêt, l'eau. Elle est CADRÉE SUR LA COMMUNE, pas sur le bien — notre
+    géolocalisation vient de la BAN sur commune et code postal, l'adresse
+    exacte n'étant presque jamais publiée. La légende le dit en toutes
+    lettres : la montrer comme la parcelle serait inventer.
+    """
+    lat, lon = bien.get("lat"), bien.get("lon")
+    if lat is None or lon is None:
+        return ""
+    dlat, dlon = 0.006, 0.012
+    bbox = f"{lon - dlon},{lat - dlat},{lon + dlon},{lat + dlat}"
+    return ("https://data.geopf.fr/wms-r?SERVICE=WMS&VERSION=1.3.0"
+            "&REQUEST=GetMap&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES="
+            f"&FORMAT=image/jpeg&CRS=CRS:84&BBOX={bbox}"
+            f"&WIDTH={largeur}&HEIGHT={hauteur}")
+
+
 def _temps(minutes) -> str:
     if not minutes:
         return ""
@@ -169,6 +193,16 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
             analyse.append(f"<dt>{_e(etiquette)}</dt><dd>{_e(valeur)}</dd>")
 
     badges = "".join(f"<li>{_e(b)}</li>" for b in (bien.get("badges") or []))
+    ciel = _carte_aerienne(bien)
+    aerienne = (
+        f'<figure class="aerienne"><img src="{_e(ciel)}" '
+        f'alt="Vue aérienne de {_e(bien.get("commune") or "la commune")}" '
+        f'loading="lazy" onerror="this.parentNode.remove()">'
+        f'<figcaption>La commune de {_e(bien.get("commune") or "")} vue du ciel '
+        f'— orthophoto IGN. L’emplacement exact du bien n’est pas connu : '
+        f'l’adresse ne figure pas dans l’annonce.</figcaption></figure>'
+    ) if ciel else ""
+
     # Les paragraphes écrits depuis nos données : c'est le corps de la page,
     # et la seule chose qu'aucun autre site ne peut publier. Voir
     # app/redaction.py pour ce qu'on s'interdit d'y mettre.
@@ -191,6 +225,7 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 
 <h2>Que disent les données sur ce bien ?</h2>
 {prose}
+{aerienne}
 
 <h2>Caractéristiques et analyse en bref</h2>
 <dl>{"".join(faits)}{"".join(analyse)}</dl>
