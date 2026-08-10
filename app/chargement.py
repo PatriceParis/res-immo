@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-from . import caviardage, db, gares, geo, marche, regions, scoring
+from . import caviardage, db, extraction, gares, geo, marche, regions, scoring
 from .qualite import PRIX_MINI, est_bien_valide
 
 # Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
@@ -33,6 +33,26 @@ def preparer_annonce(brut: dict) -> dict:
     prix = annonce.get("prix")
     if prix is not None and prix < PRIX_MINI:
         annonce["prix"] = None
+
+    # Le miroir du garde-fou précédent : le prix manque, mais le titre le
+    # porte en toutes lettres. Six maisons de NC Immo s'affichaient « Prix sur
+    # demande » alors que leur titre annonçait « 79.000,00 EUROS ». La lecture
+    # des montants à la française a été corrigée à l'extraction, mais un
+    # correctif d'extraction ne répare que ce qui est RECOLLECTÉ — et une
+    # agence n'est revisitée que tous les deux jours. On relit donc ici, à
+    # chaque chargement : le catalogue déjà publié se répare sans attendre son
+    # tour, et les prochaines agences qui écrivent ainsi n'attendront pas non
+    # plus.
+    #
+    # Mêmes bornes qu'à l'extraction, à dessein. Quand elle juge un prix au m²
+    # absurde et que la surface vient du titre, c'est le PRIX qu'elle efface :
+    # sans ce même contrôle ici, la relecture ressusciterait précisément ce
+    # qu'elle a écarté.
+    if not annonce.get("prix"):
+        retrouve = extraction.prix_dans(titre)
+        if retrouve and extraction.prix_m2_credible(retrouve,
+                                                    annonce.get("surface_m2")):
+            annonce["prix"] = retrouve
 
     # Nombre de pièces invraisemblable au regard de la surface. Sauté aux yeux
     # sur la première fiche du site : « Maison · 520 m² · 1 pièce ». Personne

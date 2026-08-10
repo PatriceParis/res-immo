@@ -252,6 +252,41 @@ def _num(x):
     return int(valeur) if valeur.is_integer() else valeur
 
 
+# Sous ce plancher, un montant suivi d'un « € » n'est pas le prix d'une
+# maison : c'est un numéro de référence, des honoraires, une taxe foncière ou
+# un loyer de garage. Au-dessus du plafond, c'est une erreur de lecture. Le
+# plancher vaut celui de app/qualite.py — même nombre, deux questions
+# distinctes : ici « ce nombre peut-il être un prix ? », là-bas « ce bien
+# mérite-t-il d'être publié ? ».
+PRIX_PLANCHER, PRIX_PLAFOND = 15_000, 5_000_000
+
+
+def prix_dans(texte: str) -> float | None:
+    """Le premier montant d'un texte libre qui puisse être un prix de maison.
+
+    Deux appelants, une seule lecture : l'extraction, quand la page ne donne
+    le prix ni en données structurées ni en OpenGraph ; et le chargement,
+    quand une annonce déjà publiée n'a pas de prix mais que son titre
+    l'affiche en toutes lettres.
+    """
+    for trouve in RE_PRIX.finditer(texte or ""):
+        valeur = _num(trouve.group(1))
+        if valeur and PRIX_PLANCHER <= valeur <= PRIX_PLAFOND:
+            return valeur
+    return None
+
+
+def prix_m2_credible(prix, surface) -> bool:
+    """Vrai si le rapport tient debout — ou s'il manque de quoi en juger.
+
+    Un prix au m² absurde ne dit pas que le bien est hors norme : il dit que
+    l'une des deux valeurs est fausse.
+    """
+    if not prix or not surface:
+        return True
+    return PRIX_M2_MIN <= prix / surface <= PRIX_M2_MAX
+
+
 def _types(noeud) -> set[str]:
     t = noeud.get("@type") if isinstance(noeud, dict) else None
     if isinstance(t, str):
@@ -680,11 +715,9 @@ def extraire_annonce(html: str, url: str, source: str,
     # des atouts : l'extraire ici ne coûte rien.
     texte = _texte_visible(html)
     if "prix" not in annonce and texte:
-        for m in RE_PRIX.finditer(texte):          # 1er montant plausible
-            val = _num(m.group(1))
-            if val and 15_000 <= val <= 5_000_000:  # sous 15 000 € : réf., pas un prix
-                annonce["prix"] = val
-                break
+        trouve = prix_dans(texte)
+        if trouve:
+            annonce["prix"] = trouve
     if "surface_m2" not in annonce and texte:
         # Le titre d'abord : c'est la surface la plus fiable de la page.
         titre_courant = annonce.get("titre", "")
@@ -752,7 +785,7 @@ def extraire_annonce(html: str, url: str, source: str,
     # particulier de 220 m² à 182 €/m², ou une propriété à 19 000 €/m².
     du_titre = annonce.pop("_surface_du_titre", False)
     prix, surface = annonce.get("prix"), annonce.get("surface_m2")
-    if prix and surface and not (PRIX_M2_MIN <= prix / surface <= PRIX_M2_MAX):
+    if not prix_m2_credible(prix, surface):
         if du_titre:
             annonce["prix"] = None          # la surface du titre fait foi
         else:
