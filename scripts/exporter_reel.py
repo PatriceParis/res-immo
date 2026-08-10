@@ -111,10 +111,12 @@ def main() -> None:
             precedentes = json.loads(sortie.read_text(encoding="utf-8"))
         except ValueError:
             precedentes = []
-    # Seules les agences réellement parcourues cette fois font autorité : une
+    # Seuls les SITES réellement parcourus cette fois font autorité : une
     # collecte écourtée ne doit pas faire disparaître les biens des autres.
-    visitees = {b.get("agence") for b in biens if b.get("agence")}
-    fusionnees = historique.fusionner(precedentes, biens, visitees,
+    # Le site, et non le nom de l'agence — « Century 21 » en couvre douze, et
+    # les avoir comptés pour un a retiré cinquante et une annonces en ligne.
+    visites = {historique.identite(b) for b in biens} - {""}
+    fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
     fusionnees = sans_doublon_d_url(fusionnees)
 

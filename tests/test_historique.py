@@ -10,7 +10,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.historique import ABSENCES_TOLEREES, est_nouveau, fusionner  # noqa: E402
+from app.historique import (  # noqa: E402
+    ABSENCES_TOLEREES, cle_agence, est_nouveau, fusionner, identite)
 
 AGENCES = {"Agence A"}
 
@@ -67,6 +68,50 @@ def test_agence_non_visitee_ne_fait_pas_disparaitre_ses_biens():
     res = fusionner(avant, [], {"Agence A"}, "2026-08-10")   # B non visitée
     assert len(res) == 1
     assert res[0].get("absences") in (None, 0)               # pas pénalisée
+
+
+def test_un_reseau_partiellement_visite_ne_perd_pas_ses_autres_agences():
+    """Le 10 août, cinquante et une annonces Century 21 ont disparu du
+    catalogue alors que leurs pages étaient en ligne.
+
+    Un même nom d'agence couvre douze sites — Caen, Troyes, Nancy, Honfleur…
+    La rotation en avait visité cinq. Le nom « Century 21 » entrait donc dans
+    l'ensemble des visitées, et les biens des sept autres sites étaient
+    comptés absents « chez leur agence », puis retirés à la deuxième absence.
+    """
+    caen = {"id": "c1", "agence": "Century 21", "prix": 200000,
+            "agence_url": "https://www.century21-bertin-caen.com", "vue_le": "2026-08-06"}
+    troyes = {"id": "t1", "agence": "Century 21", "prix": 180000,
+              "agence_url": "https://century21-martinot-troyes.com", "vue_le": "2026-08-06"}
+    # La collecte n'a parcouru que Caen, et n'y a rien trouvé de nouveau.
+    visites = {"century21-bertin-caen.com"}
+
+    res = fusionner([caen, troyes], [], visites, "2026-08-10")
+
+    par_id = {b["id"]: b for b in res}
+    assert par_id["t1"].get("absences") in (None, 0), "Troyes n'a pas été visitée"
+    assert par_id["c1"]["absences"] == 1, "Caen, elle, a bien été parcourue"
+
+    # Et la deuxième absence n'emporte que Caen.
+    res2 = fusionner(res, [], visites, "2026-08-17")
+    assert [b["id"] for b in res2] == ["t1"]
+
+
+def test_le_www_ne_fait_pas_deux_sites():
+    """Le collecteur enregistre `www.agence.fr`, l'annonce porte `agence.fr` :
+    sans normalisation, le site paraîtrait n'avoir jamais été visité et ses
+    biens retirés ne partiraient jamais."""
+    assert cle_agence("https://www.agence.fr/nos-biens") == "agence.fr"
+    assert cle_agence("https://AGENCE.fr") == "agence.fr"
+    assert cle_agence(None) == ""
+
+
+def test_sans_url_l_identite_retombe_sur_le_nom():
+    """Les enregistrements antérieurs à `agence_url` doivent continuer de
+    fonctionner, sinon leurs annonces retirées deviendraient éternelles."""
+    assert identite({"agence": "Agence A"}) == "Agence A"
+    assert identite({"agence": "Agence A",
+                     "agence_url": "https://www.a.fr"}) == "a.fr"
 
 
 def test_est_nouveau():

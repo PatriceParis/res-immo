@@ -17,11 +17,13 @@ Trois informations sont conservées pour chaque bien :
     prix_precedent  prix d'avant la dernière baisse (et `prix_baisse_le`)
 
 Et une règle de sortie : une annonce que l'agence a retirée disparaît à son
-tour — mais seulement si son agence a bien été visitée, sinon une collecte
+tour — mais seulement si son SITE a bien été visité, sinon une collecte
 écourtée ferait disparaître des biens parfaitement valides.
 """
 
 from __future__ import annotations
+
+from urllib.parse import urlparse
 
 # Une annonce absente de la dernière collecte de SON agence est considérée
 # retirée. On tolère une absence (page en erreur, site momentanément lent) :
@@ -29,17 +31,43 @@ from __future__ import annotations
 ABSENCES_TOLEREES = 1
 
 
+def cle_agence(url: str) -> str:
+    """Identifie une agence par son DOMAINE, jamais par son nom.
+
+    « Century 21 » désigne douze sites distincts — Chalon, Compiègne, Amboise,
+    Caen… La rotation de la collecte avait déjà appris cette leçon et s'indexe
+    sur le domaine depuis. La règle de sortie ci-dessous, elle, comparait
+    encore des noms : passer chez cinq Century 21 marquait les douze comme
+    visitées, et les biens des sept autres étaient comptés absents « chez leur
+    agence ». Cinquante et un ont ainsi été retirés du catalogue le 10 août
+    alors que leurs pages étaient parfaitement en ligne.
+
+    Une seule définition pour les deux usages, importée par le collecteur :
+    deux copies de cette règle avaient déjà divergé une fois.
+    """
+    hote = urlparse(url or "").netloc.lower()
+    return hote[4:] if hote.startswith("www.") else hote
+
+
+def identite(bien: dict) -> str:
+    """Ce qui désigne le site d'où vient un bien, pour savoir si l'on y est
+    passé. Le domaine quand il est connu ; à défaut le nom de l'agence, pour
+    les enregistrements antérieurs à `agence_url`."""
+    return cle_agence(bien.get("agence_url")) or (bien.get("agence") or "")
+
+
 def _index(annonces: list[dict]) -> dict:
     return {a["id"]: a for a in annonces or [] if a.get("id")}
 
 
 def fusionner(precedentes: list[dict], nouvelles: list[dict],
-              agences_visitees: set | None = None, aujourd_hui: str = "") -> list[dict]:
+              sites_visites: set | None = None, aujourd_hui: str = "") -> list[dict]:
     """Reporte l'historique des annonces précédentes sur la collecte du jour.
 
-    `agences_visitees` : noms des agences réellement parcourues cette fois. Les
-    biens des autres agences sont conservés tels quels — ne pas les avoir revus
-    ne prouve rien, la collecte s'est simplement arrêtée avant elles.
+    `sites_visites` : les SITES réellement parcourus cette fois — voir
+    `cle_agence`, un nom d'agence peut en couvrir douze. Les biens des autres
+    sites sont conservés tels quels : ne pas les avoir revus ne prouve rien,
+    la collecte s'est simplement arrêtée avant eux.
     """
     avant = _index(precedentes)
     gardees: list[dict] = []
@@ -68,8 +96,8 @@ def fusionner(precedentes: list[dict], nouvelles: list[dict],
     for identifiant, ancien in avant.items():
         if identifiant in vus:
             continue
-        # Agence non visitée cette fois : on n'a rien appris, on conserve.
-        if agences_visitees is not None and ancien.get("agence") not in agences_visitees:
+        # Site non visité cette fois : on n'a rien appris, on conserve.
+        if sites_visites is not None and identite(ancien) not in sites_visites:
             gardees.append(ancien)
             continue
         absences = int(ancien.get("absences") or 0) + 1
