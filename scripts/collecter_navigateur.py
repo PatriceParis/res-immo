@@ -39,7 +39,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db  # noqa: E402
+from app import db, historique  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
@@ -78,17 +78,12 @@ def _slug(nom: str) -> str:
 JOURNAL_VISITES = RACINE / "data" / "agences_visitees.json"
 
 
-def _cle_agence(site: str) -> str:
-    """Identifie une agence par son DOMAINE, jamais par son nom.
-
-    « Century 21 » désigne cinq agences distinctes dans la configuration —
-    Chalon, Compiègne, Amboise… Indexer la rotation sur le nom revenait à
-    marquer les cinq comme visitées dès qu'on passait chez l'une : les quatre
-    autres partaient en fin de file et n'étaient jamais atteintes. Le domaine,
-    lui, est unique.
-    """
-    hote = urlparse(site or "").netloc.lower()
-    return hote[4:] if hote.startswith("www.") else hote
+# La rotation et la règle de sortie de l'historique posent la MÊME question —
+# « sommes-nous passés chez cette agence ? » — et doivent y répondre pareil.
+# Elles ne le faisaient pas : la rotation comparait des domaines, l'historique
+# des noms, et cinquante et une annonces Century 21 en ligne ont disparu du
+# catalogue. Une seule définition, désormais, dans app/historique.py.
+_cle_agence = historique.cle_agence
 
 
 def _derniere_visite() -> dict:
