@@ -498,6 +498,10 @@ def main() -> None:
             })
             total += n
             agences += 1
+            # Écrit APRÈS CHAQUE AGENCE, et non une fois à la fin : tué par le
+            # garde-fou, le collecteur laissait dans le dépôt le déroulé du
+            # checkout précédent, présenté comme celui du passage courant.
+            _consigner_deroule(deroule, round((time.monotonic() - depart) / 60, 1))
 
         navigateur.close()
     conn.close()

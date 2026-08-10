@@ -80,6 +80,11 @@ def collecte(tmp_path, monkeypatch):
     monkeypatch.setattr(collecteur.time, "sleep", lambda *_: None)
     monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
     monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    # Sans cela, chaque test qui exécute main() écrit le VRAI journal de
+    # déroulé — et un `git add -A` a committé « Bloquée / Saine » par-dessus
+    # le déroulé d'une collecte réelle. Un test qui touche au dépôt n'est pas
+    # un test, c'est un effet de bord avec un nom rassurant.
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
     monkeypatch.setattr(collecteur.db, "connexion",
                         lambda: collecteur.db.connexion.__wrapped__()
                         if hasattr(collecteur.db.connexion, "__wrapped__") else _FausseBase())
@@ -230,7 +235,7 @@ def test_sans_echeance_la_recherche_va_jusqu_au_bout(monkeypatch):
     assert len(page.visites) == 5
 
 
-def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch):
+def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch, tmp_path):
     """`page.content()` et `eval_on_selector_all()` ne prennent pas de délai
     en paramètre : seul un défaut posé sur la page les borne."""
     poses = {}
@@ -252,6 +257,7 @@ def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch):
     monkeypatch.setattr(collecteur, "sync_playwright", lambda: _Playwright())
     monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [])
     monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
     monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
     collecteur.main()
 
@@ -277,7 +283,8 @@ def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch):
 # ne consulte aucune horloge.
 
 
-def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, capsys):
+def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, capsys,
+                                                              tmp_path):
     """Le cas que trois correctifs successifs n'attrapaient pas."""
     import time as horloge_reelle
     visitees = []
@@ -300,6 +307,7 @@ def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, caps
     # mécanisme qu'on veut éprouver, pas une imitation.
     vrai_borner = collecteur.borner
     monkeypatch.setattr(collecteur, "borner", lambda _: vrai_borner(1))
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
     monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
 
     depart = horloge_reelle.monotonic()
