@@ -49,11 +49,27 @@ def cle_agence(url: str) -> str:
     return hote[4:] if hote.startswith("www.") else hote
 
 
-def identite(bien: dict) -> str:
-    """Ce qui désigne le site d'où vient un bien, pour savoir si l'on y est
-    passé. Le domaine quand il est connu ; à défaut le nom de l'agence, pour
-    les enregistrements antérieurs à `agence_url`."""
-    return cle_agence(bien.get("agence_url")) or (bien.get("agence") or "")
+def identite(bien: dict) -> tuple:
+    """L'unité RÉELLEMENT parcourue d'où vient un bien : le nom ET le domaine.
+
+    Ni l'un ni l'autre ne suffit, et chacun a fait disparaître des annonces en
+    ligne — le même jour, dans les deux sens :
+
+    - le NOM seul est trop large quand une enseigne tient plusieurs sites.
+      « Century 21 » en désigne douze ; en visiter cinq marquait les douze, et
+      cinquante-six annonces des sept autres ont été retirées ;
+    - le DOMAINE seul est trop large quand un site porte plusieurs cibles.
+      Les mandataires IAD vivent tous sous `iadfrance.fr` mais sont parcourus
+      département par département (`iad:37`, `iad:71`… — voir le journal
+      data/mandataires_visites.json), et chacun devient une agence distincte,
+      « IAD France (37) ». Basculer sur le domaine pour régler le cas
+      Century 21 a fait disparaître deux cent six annonces IAD au passage
+      suivant.
+
+    La paire recouvre exactement ce que la collecte visite : un site pour une
+    agence indépendante, un couple réseau-département pour un mandataire.
+    """
+    return (bien.get("agence") or "", cle_agence(bien.get("agence_url")))
 
 
 def _index(annonces: list[dict]) -> dict:
