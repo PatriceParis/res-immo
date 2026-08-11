@@ -13,7 +13,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from app.historique import (  # noqa: E402
     ABSENCES_TOLEREES, cle_agence, est_nouveau, fusionner, identite)
 
-AGENCES = {"Agence A"}
+# Une cible parcourue, telle que l'export la désigne : nom ET domaine (ici
+# vide, ces annonces d'essai n'ayant pas d'adresse d'agence).
+AGENCES = {("Agence A", "")}
 
 
 def test_annonce_inedite_datee_du_jour():
@@ -65,7 +67,7 @@ def test_agence_non_visitee_ne_fait_pas_disparaitre_ses_biens():
     """Une collecte écourtée (budget de temps) ne prouve rien sur les biens
     des agences qu'elle n'a pas atteintes."""
     avant = [{"id": "x", "agence": "Agence B", "prix": 200000, "vue_le": "2026-07-01"}]
-    res = fusionner(avant, [], {"Agence A"}, "2026-08-10")   # B non visitée
+    res = fusionner(avant, [], AGENCES, "2026-08-10")        # B non visitée
     assert len(res) == 1
     assert res[0].get("absences") in (None, 0)               # pas pénalisée
 
@@ -84,7 +86,7 @@ def test_un_reseau_partiellement_visite_ne_perd_pas_ses_autres_agences():
     troyes = {"id": "t1", "agence": "Century 21", "prix": 180000,
               "agence_url": "https://century21-martinot-troyes.com", "vue_le": "2026-08-06"}
     # La collecte n'a parcouru que Caen, et n'y a rien trouvé de nouveau.
-    visites = {"century21-bertin-caen.com"}
+    visites = {identite(caen)}
 
     res = fusionner([caen, troyes], [], visites, "2026-08-10")
 
@@ -97,6 +99,31 @@ def test_un_reseau_partiellement_visite_ne_perd_pas_ses_autres_agences():
     assert [b["id"] for b in res2] == ["t1"]
 
 
+def test_un_reseau_de_mandataires_ne_perd_pas_ses_autres_departements():
+    """La faute inverse de la précédente, commise en la corrigeant.
+
+    Les mandataires IAD vivent tous sous `iadfrance.fr`, mais sont parcourus
+    département par département — chacun devient « IAD France (37) », « IAD
+    France (71) »… Indexer la visite sur le seul domaine marquait donc tout
+    le réseau comme parcouru dès qu'un département l'était : deux cent six
+    annonces ont disparu au passage mandataires du 11 août.
+    """
+    indre = {"id": "i37", "agence": "IAD France (37)", "prix": 200000,
+             "agence_url": "https://www.iadfrance.fr", "vue_le": "2026-08-07"}
+    saone = {"id": "i71", "agence": "IAD France (71)", "prix": 150000,
+             "agence_url": "https://www.iadfrance.fr", "vue_le": "2026-08-07"}
+    visites = {identite(indre)}          # seul le 37 a été parcouru
+
+    res = fusionner([indre, saone], [], visites, "2026-08-11")
+
+    par_id = {b["id"]: b for b in res}
+    assert par_id["i71"].get("absences") in (None, 0), "la Saône-et-Loire n'a pas été vue"
+    assert par_id["i37"]["absences"] == 1, "l'Indre-et-Loire, elle, a bien été parcourue"
+
+    res2 = fusionner(res, [], visites, "2026-08-12")
+    assert [b["id"] for b in res2] == ["i71"]
+
+
 def test_le_www_ne_fait_pas_deux_sites():
     """Le collecteur enregistre `www.agence.fr`, l'annonce porte `agence.fr` :
     sans normalisation, le site paraîtrait n'avoir jamais été visité et ses
@@ -106,12 +133,16 @@ def test_le_www_ne_fait_pas_deux_sites():
     assert cle_agence(None) == ""
 
 
-def test_sans_url_l_identite_retombe_sur_le_nom():
-    """Les enregistrements antérieurs à `agence_url` doivent continuer de
-    fonctionner, sinon leurs annonces retirées deviendraient éternelles."""
-    assert identite({"agence": "Agence A"}) == "Agence A"
-    assert identite({"agence": "Agence A",
-                     "agence_url": "https://www.a.fr"}) == "a.fr"
+def test_l_identite_distingue_les_deux_facons_de_partager():
+    """Un nom pour douze sites, un site pour douze noms : la paire sépare les
+    deux, là où chaque moitié prise seule les confond."""
+    c21 = {"agence": "Century 21", "agence_url": "https://www.century21-caen.com"}
+    c21_bis = {"agence": "Century 21", "agence_url": "https://century21-troyes.com"}
+    iad37 = {"agence": "IAD France (37)", "agence_url": "https://www.iadfrance.fr"}
+    iad71 = {"agence": "IAD France (71)", "agence_url": "https://www.iadfrance.fr"}
+    assert identite(c21) != identite(c21_bis), "même enseigne, deux sites"
+    assert identite(iad37) != identite(iad71), "même site, deux cibles"
+    assert identite({"agence": "Agence A"}) == ("Agence A", "")
 
 
 def test_est_nouveau():
