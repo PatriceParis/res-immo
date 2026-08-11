@@ -18,7 +18,7 @@ sys.path.insert(0, str(RACINE))
 
 from datetime import date  # noqa: E402
 
-from app import caviardage, db, historique  # noqa: E402
+from app import caviardage, chargement, db, historique  # noqa: E402
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
@@ -91,6 +91,32 @@ def sans_doublon_d_url(annonces: list[dict]) -> list[dict]:
     return [par_url[cle] for cle in ordre]
 
 
+def _photo_publiee_egale_photo_affichee(annonces: list[dict]) -> list[dict]:
+    """Publie, pour chaque bien, la photo que le chargement retiendra vraiment.
+
+    Le fichier annonçait autre chose que ce que le visiteur voit, dans les
+    deux sens : une photo qui ne s'affichera jamais, ou aucune alors qu'une
+    s'affiche. Deux causes, aucune fautive en soi :
+
+    - `photo` est choisie à la COLLECTE, bien par bien. Or « c'est du mobilier
+      de site » est un constat de CORPUS — on ne le sait qu'en voyant la même
+      image sur plusieurs annonces, donc plus tard, quand la voisine existe.
+      Chez LOR Immobilier, une image sert à neuf biens ; chez Bonnabelle, deux
+      annonces en double se partagent la leur.
+    - à l'inverse, un bien sans `photo` retenue en a souvent une parfaitement
+      affichable plus loin dans ses candidates : le chargement la trouve, le
+      fichier n'en disait rien.
+
+    L'écart n'était pas visible à l'écran — le chargement tranchait déjà bien.
+    Il faussait le décompte : le catalogue se disait illustré là où il ne
+    l'était pas, et l'inverse. On aligne donc le fichier sur l'affichage, en
+    appelant la fonction du chargement plutôt qu'en réécrivant sa règle.
+    """
+    mobilier = chargement._photos_de_mobilier(annonces)
+    return [dict(bien, photo=chargement.photo_retenue(bien, mobilier))
+            for bien in annonces]
+
+
 def main() -> None:
     conn = db.connexion()
     rows = conn.execute(
@@ -119,6 +145,7 @@ def main() -> None:
     fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
     fusionnees = sans_doublon_d_url(fusionnees)
+    fusionnees = _photo_publiee_egale_photo_affichee(fusionnees)
 
     # Dernier filet : aucun identifiant de tiers ne doit atteindre le dépôt.
     # Le caviardage à l'entrée devrait suffire ; s'il a laissé passer quelque
