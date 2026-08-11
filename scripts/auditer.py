@@ -52,8 +52,18 @@ DISTANCE_MAX_KM = 350
 class Audit:
     """Collecte les anomalies, groupées par famille."""
 
-    def __init__(self) -> None:
+    def __init__(self, corpus: list[dict] | None = None) -> None:
         self.anomalies: dict[str, list[str]] = defaultdict(list)
+        # Le fichier ENTIER, quand on audite un export — pas seulement les
+        # fiches servies. Une seule règle en a besoin, mais elle en a
+        # vraiment besoin : « cette image est du mobilier de site » se
+        # constate en voyant la même adresse sur PLUSIEURS annonces, et
+        # l'application fait ce constat sur tout le fichier. Le refaire sur le
+        # seul sous-ensemble servi voyait unique une image partagée avec une
+        # fiche écartée, et signalait un désaccord que le visiteur n'aura
+        # jamais. Un instrument qui ne mesure pas ce que fait l'application
+        # finit par envoyer chercher des pannes imaginaires.
+        self.corpus = corpus
 
     def signaler(self, famille: str, detail: str) -> None:
         self.anomalies[famille].append(detail)
@@ -305,7 +315,7 @@ def verifier_photo_publiee_egale_photo_affichee(biens: list[dict], audit: Audit)
     personne ne voit, et une règle qui crie pour rien cesse d'être lue.
     """
     servies = {b.get("id") for b in biens_servis(biens)}
-    mobilier = _photos_de_mobilier(biens)
+    mobilier = _photos_de_mobilier(audit.corpus or biens)
     for b in biens:
         if b.get("id") not in servies:
             continue
@@ -543,8 +553,10 @@ REGLES = (
 )
 
 
-def auditer(biens: list[dict]) -> Audit:
-    audit = Audit()
+def auditer(biens: list[dict], corpus: list[dict] | None = None) -> Audit:
+    """`biens` : les fiches jugées. `corpus` : le fichier entier dont elles
+    sortent, quand il est plus large — voir Audit.corpus."""
+    audit = Audit(corpus)
     for regle in REGLES:
         regle(biens, audit)
     return audit
@@ -560,6 +572,9 @@ def main() -> int:
                         help="nombre de cas listés par famille (défaut : 8)")
     args = parseur.parse_args()
 
+    # En mode base, les biens jugés SONT tout ce qu'on a : pas de corpus plus
+    # large à opposer. Le mode export, lui, en a un — voir Audit.corpus.
+    corpus = None
     if args.json:
         tout = json.loads(args.json.read_text(encoding="utf-8"))
         # On n'audite que ce que le site montre — comme le fait déjà le mode
@@ -570,6 +585,7 @@ def main() -> int:
         # taux d'anomalies d'un facteur trois et faisait bouger les chiffres
         # d'un mode à l'autre sans que rien n'ait changé.
         biens = biens_servis(tout)
+        corpus = tout
         provenance = (f"{args.json} — {len(biens)} servis sur {len(tout)} "
                       f"({len(tout) - len(biens)} écartés au chargement)")
     else:
@@ -585,7 +601,7 @@ def main() -> int:
         print("Aucun bien à auditer.")
         return 0
 
-    audit = auditer(biens)
+    audit = auditer(biens, corpus)
     if not audit.total:
         print("Aucune anomalie. Chaque chiffre décrit bien ce qu'il prétend décrire.")
         return 0
