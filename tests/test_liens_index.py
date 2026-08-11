@@ -5,12 +5,18 @@ En cherchant pourquoi, on a trouvé que l'Agence Saint-Joseph — comme cent
 trente-quatre autres sur deux cent trente-cinq — est déclarée sans le
 préfixe `www.` alors que ses pages vivent avec : le site redirige.
 
-Le filtre des liens comparait les hôtes à l'identique. Les liens écrits en
+Le filtre des liens compare les hôtes à l'identique. Les liens écrits en
 ABSOLU par ces sites (`https://www.agence.fr/vente/maison-123`) ne
-correspondaient donc à rien et étaient tous jetés. La panne était silencieuse
-parce que les liens RELATIFS, eux, passaient : `urljoin` les reconstruit sur
-l'adresse déclarée. Une agence ne livrait plus que ce que son sitemap voulait
-bien donner — et rien du tout si elle n'en avait pas.
+correspondent donc à rien et sont tous jetés. La panne est silencieuse parce
+que les liens RELATIFS, eux, passent : `urljoin` les reconstruit sur
+l'adresse déclarée. Une agence ne livre que ce que son sitemap veut bien
+donner — et rien du tout si elle n'en a pas.
+
+Assouplir la comparaison paraissait évident. Ça ne l'était pas : essayé le
+11 août, le passage suivant a été tué au bout de son temps, dix-huit annonces
+au lieu de cent. Ces tests gardent donc l'état actuel — y compris ce qu'il a
+de fautif, dit comme tel — plutôt qu'un état souhaité. Le remède attend une
+mesure que la sandbox, sans réseau, ne peut pas faire.
 """
 
 import sys
@@ -37,21 +43,29 @@ class PageFactice:
         return self._hrefs
 
 
-def test_un_lien_absolu_vers_www_n_est_plus_jete():
-    """LE cas : le site est déclaré sans www, ses liens sont écrits avec."""
+def test_un_lien_absolu_vers_www_est_encore_jete():
+    """L'état ACTUEL, et il est insatisfaisant — ce test décrit une limite
+    connue, pas une intention.
+
+    La comparaison a été assouplie le 11 août pour régler ce cas, puis remise
+    en l'état le soir même : le passage suivant a été tué au bout de ses
+    trente-quatre minutes, dix-huit annonces au lieu de cent. Sur un site sans
+    sitemap, l'index passait de zéro lien à quatre-vingts, dont la plupart ne
+    mènent à aucun bien, et chaque navigation perdue coûte jusqu'à vingt-cinq
+    secondes.
+
+    Le remède demande de savoir ce que contiennent ces adresses, donc
+    d'ouvrir les sites : une sonde GitHub Actions, pas une intuition. En
+    attendant, on déclare l'agence AVEC son « www. » dans la configuration,
+    ce qui ne touche qu'elle.
+    """
     page = PageFactice([
-        "https://www.immobiliersaintjoseph.com/vente/maison-ancienne-4-pieces-doudeville-76560,VM2599",
-        "https://www.immobiliersaintjoseph.com/vente/maison-de-ville-5-pieces-doudeville-76560,VM2592",
+        "https://www.immobiliersaintjoseph.com/vente/maison-4-pieces-doudeville-76560,VM2599",
     ])
-    trouves = collecteur._liens_page(page, "https://immobiliersaintjoseph.com")
-    assert len(trouves) == 2, "les deux annonces doivent être vues"
-
-
-def test_l_inverse_marche_aussi():
-    """Une agence déclarée AVEC www dont les liens n'en portent pas."""
-    page = PageFactice(["https://agence.fr/vente/maison-12"])
-    assert collecteur._liens_page(page, "https://www.agence.fr/") == [
-        "https://agence.fr/vente/maison-12"]
+    assert collecteur._liens_page(page, "https://immobiliersaintjoseph.com") == []
+    # Déclarée avec son www, la même agence retrouve ses liens.
+    assert len(collecteur._liens_page(
+        page, "https://www.immobiliersaintjoseph.com")) == 1
 
 
 def test_les_liens_relatifs_continuent_de_passer():
