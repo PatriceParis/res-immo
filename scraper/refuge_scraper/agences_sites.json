@@ -1179,9 +1179,11 @@
     },
     {
       "nom": "Agence Saint-Joseph",
-      "site": "https://immobiliersaintjoseph.com",
+      "site": "https://www.immobiliersaintjoseph.com",
       "zone": "dept 76",
-      "index": [],
+      "index": [
+        "https://www.immobiliersaintjoseph.com/vente/maison"
+      ],
       "max": 8,
       "pages": 45
     },
