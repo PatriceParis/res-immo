@@ -219,21 +219,33 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0) -> list[str]:
 def _liens_page(page, base: str) -> list[str]:
     hrefs = page.eval_on_selector_all(
         "a[href]", "els => els.map(e => e.getAttribute('href'))") or []
-    # L'hôte se compare SANS son « www. ». Cent trente-cinq agences sur
-    # deux cent trente-cinq sont déclarées sans le préfixe alors que leurs
-    # pages vivent avec — le site redirige, et les liens qu'il écrit en
-    # ABSOLU pointent tous vers `www.`. Comparés à l'identique, ils étaient
-    # tous jetés : d'une agence pareille, on ne rapportait que ce que le
-    # sitemap voulait bien donner, et rien du tout s'il n'y en avait pas.
-    # (Les liens relatifs, eux, passaient : urljoin les reconstruisait sur
-    # l'adresse déclarée. D'où une panne silencieuse, visible seulement chez
-    # les sites qui écrivent leurs liens en entier.)
-    urls, vus, hote = [], set(), historique.cle_agence(base)
+    # L'hôte se compare À L'IDENTIQUE, « www. » compris. C'est trop strict :
+    # cent trente-cinq agences sur deux cent trente-cinq sont déclarées sans
+    # le préfixe alors que leurs pages vivent avec, et les liens qu'elles
+    # écrivent en ABSOLU sont donc tous jetés. On ne rapporte d'elles que ce
+    # que leur sitemap veut bien donner.
+    #
+    # La comparaison a été assouplie le 11 août, puis REMISE COMME CECI le
+    # soir même. Le passage suivant a été tué au bout de ses trente-quatre
+    # minutes — dix-huit annonces au lieu de cent, cinq agences ayant brûlé
+    # leurs quatre minutes et demie sur une seule page. L'explication tient
+    # au repli : sur un site SANS sitemap, l'index passait de zéro lien
+    # retenu à quatre-vingts, dont la plupart ne mènent à aucun bien, et
+    # chaque navigation perdue coûte jusqu'à vingt-cinq secondes.
+    #
+    # Le correctif n'est pas faux, il est incomplet : il faut d'abord savoir
+    # ce que contiennent ces quatre-vingts adresses, et cela demande d'ouvrir
+    # les sites — impossible depuis la sandbox, qui n'a pas de réseau. La
+    # mesure se fera par une sonde GitHub Actions, comme pour les photos.
+    # En attendant, une agence peut être déclarée AVEC son « www. » dans
+    # agences_sites.json : c'est ce qui a été fait pour l'Agence Saint-Joseph,
+    # et c'est sans risque puisque cela ne touche qu'elle.
+    urls, vus, hote = [], set(), urlparse(base).netloc
     for h in hrefs:
         if not h:
             continue
         u = urljoin(base, h).split("#")[0]
-        if historique.cle_agence(u) == hote and MOTIF_BIEN.search(u) and u not in vus:
+        if urlparse(u).netloc == hote and MOTIF_BIEN.search(u) and u not in vus:
             vus.add(u)
             urls.append(u)
     return urls
