@@ -219,12 +219,21 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0) -> list[str]:
 def _liens_page(page, base: str) -> list[str]:
     hrefs = page.eval_on_selector_all(
         "a[href]", "els => els.map(e => e.getAttribute('href'))") or []
-    urls, vus, hote = [], set(), urlparse(base).netloc
+    # L'hôte se compare SANS son « www. ». Cent trente-cinq agences sur
+    # deux cent trente-cinq sont déclarées sans le préfixe alors que leurs
+    # pages vivent avec — le site redirige, et les liens qu'il écrit en
+    # ABSOLU pointent tous vers `www.`. Comparés à l'identique, ils étaient
+    # tous jetés : d'une agence pareille, on ne rapportait que ce que le
+    # sitemap voulait bien donner, et rien du tout s'il n'y en avait pas.
+    # (Les liens relatifs, eux, passaient : urljoin les reconstruisait sur
+    # l'adresse déclarée. D'où une panne silencieuse, visible seulement chez
+    # les sites qui écrivent leurs liens en entier.)
+    urls, vus, hote = [], set(), historique.cle_agence(base)
     for h in hrefs:
         if not h:
             continue
         u = urljoin(base, h).split("#")[0]
-        if urlparse(u).netloc == hote and MOTIF_BIEN.search(u) and u not in vus:
+        if historique.cle_agence(u) == hote and MOTIF_BIEN.search(u) and u not in vus:
             vus.add(u)
             urls.append(u)
     return urls
