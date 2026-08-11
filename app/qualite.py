@@ -130,6 +130,31 @@ def est_vendu(a: dict) -> bool:
     return bool(_VENDU.search(texte))
 
 
+# Une annonce porte UNE référence. Une page qui en énumère plusieurs décrit
+# plusieurs biens : c'est un catalogue, quoi qu'en dise son titre.
+#
+# Les gabarits de page catalogue se reconnaissaient jusqu'ici à leur titre
+# (« 177 Maisons à vendre », « Nos biens »). Ceux qui empruntent le titre de
+# leur premier bien passaient au travers, et le résultat est une annonce
+# FANTÔME : la page « /vente/maison » de l'Agence Saint-Joseph était publiée
+# comme une maison à 93 000 €, avec le titre et le prix de la première carte
+# mais une surface de 140 m² qui n'appartient à aucune — la première en fait
+# 105. Les autres biens de la page, dont un à 108 000 €, n'existaient nulle
+# part ailleurs : un utilisateur les a cherchés en vain sur le site.
+#
+# Le seuil est à TROIS et non à deux, et c'est mesuré : à deux, on écarterait
+# aussi trois vraies fiches d'Antony Vesque, dont chaque page porte la
+# référence de l'agence en plus de celle du bien. À trois, les sept pages
+# retenues sur le catalogue entier sont toutes d'authentiques listes.
+_REFERENCE = re.compile(r"r[ée]f[ée]?r?e?n?c?e?\.?\s*:?\s*(\d{3,6})", re.IGNORECASE)
+REFERENCES_MAXI = 2
+
+
+def enumere_plusieurs_biens(a: dict) -> bool:
+    """Vrai si le texte de la page cite plus de références qu'un bien n'en a."""
+    return len(set(_REFERENCE.findall(a.get("texte") or ""))) > REFERENCES_MAXI
+
+
 def est_bien_valide(a: dict) -> bool:
     """True uniquement pour l'annonce d'un vrai logement de type refuge."""
     titre = normaliser(a.get("titre") or "")
@@ -140,6 +165,10 @@ def est_bien_valide(a: dict) -> bool:
     if est_vendu(a):
         return False
     if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
+        return False
+    # Page catalogue qui a pris le titre de son premier bien : le titre ne la
+    # trahit pas, l'énumération de ses références, si.
+    if enumere_plusieurs_biens(a):
         return False
     # Location : ce n'est pas un bien à acheter.
     if _LOCATION_TITRE.search(titre) or _URL_LOCATION.search(a.get("url") or ""):
