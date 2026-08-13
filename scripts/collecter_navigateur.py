@@ -132,12 +132,29 @@ def _noter_visite(site: str, jour: str) -> None:
         pass    # un journal indisponible ne doit pas arrêter la collecte
 
 
-def _configurees() -> list[dict]:
+def _configurees(toutes: bool = False) -> list[dict]:
+    """Les agences de la configuration, hors celles mises en veille.
+
+    Une agence en veille (`"actif": false`) reste écrite, avec la raison, pour
+    qu'on puisse la réveiller d'un mot — la supprimer perdrait l'information.
+    Le drapeau existe parce que quelques sites coûtent leur budget entier sans
+    jamais rien rapporter : quatre minutes et demie chacun, sur les vingt-huit
+    du passage. Cinq d'entre eux se suivent dans l'alphabet, donc tombent dans
+    la même tournée : le 11 août, le passage y a laissé quatre-vingts pour
+    cent de sa récolte, et celui du 13 s'est encore fait tuer par le temps.
+
+    La désignation EXPLICITE (`-s`) passe outre : on doit toujours pouvoir
+    aller voir ce que donne une agence endormie, c'est ainsi qu'on la
+    réveillera.
+    """
     try:
-        return json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
+        agences = json.loads(CONFIG.read_text(encoding="utf-8")).get("agences", [])
     except (OSError, ValueError):
         print(f"Config illisible : {CONFIG}")
         return []
+    if toutes:
+        return agences
+    return [a for a in agences if a.get("actif", True)]
 
 
 def _cibles(site: str, nom: str, index: str) -> list[dict]:
@@ -147,7 +164,7 @@ def _cibles(site: str, nom: str, index: str) -> list[dict]:
         # « immo-ray.com » : ses biens repartaient sous un autre identifiant et
         # le catalogue se retrouvait avec 21 doublons — le même bien deux fois,
         # sous deux noms d'agence.
-        connue = next((a for a in _configurees()
+        connue = next((a for a in _configurees(toutes=True)
                        if _cle_agence(a.get("site")) == _cle_agence(site)), None)
         if connue and not nom:
             cible = dict(connue)
