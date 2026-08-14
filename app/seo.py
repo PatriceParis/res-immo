@@ -191,6 +191,17 @@ def region_du_slug(valeur: str) -> str | None:
     return None
 
 
+# « Maison pas chère à la campagne » est l'une des requêtes les plus tapées
+# du marché, et des comptes entiers vivent de l'exploiter — un prix incrusté
+# sur une photo, une commune, rien d'autre. Ils vendent le prix.
+#
+# Nous pouvons vendre le CROISEMENT, que personne d'autre ne sait faire faute
+# de données : bon marché ET bien noté. Le seuil est rond parce qu'il doit se
+# retenir, pas parce qu'un calcul l'a trouvé.
+SEUIL_PETITS_PRIX = 100_000
+URL_PETITS_PRIX = "/petits-prix"
+
+
 # --- Formulations ----------------------------------------------------------
 
 def _euros(valeur) -> str:
@@ -300,6 +311,62 @@ def reponse_terroir(region: str, nombre: int, communes: int,
         "données de risque proviennent de Géorisques, le service public de "
         "l'État ; les altitudes et les densités de population de l'IGN et "
         "de l'Insee.")
+    return " ".join(phrases)
+
+
+def titre_petits_prix(nombre: int) -> str:
+    return (f"Maisons à moins de {_euros(SEUIL_PETITS_PRIX)} — {nombre} biens "
+            f"notés face au climat")
+
+
+def description_petits_prix(nombre: int, bien_notes: int,
+                            prix_median: int | None) -> str:
+    prix = f" Prix médian {_euros(prix_median)}." if prix_median else ""
+    return (f"{nombre} maisons à vendre sous {_euros(SEUIL_PETITS_PRIX)} à "
+            f"moins de 350 km de Paris, classées par note de résilience : "
+            f"eau, chaleur, risques naturels, accès. {bien_notes} d'entre "
+            f"elles dépassent 40 sur 100.{prix}")
+
+
+def reponse_petits_prix(nombre: int, bien_notes: int, communes: int,
+                        prix_median: int | None, mediane_generale: int | None,
+                        moins_cher: int | None) -> str:
+    """Le paragraphe citable de la page — le seul angle que nous ayons en
+    propre sur cette requête.
+
+    « Maison pas chère » se répond partout, et toujours de la même façon :
+    une liste de prix. Ce qu'aucune de ces réponses ne dit, c'est si le bien
+    sera encore habitable dans vingt ans. C'est ce que ce paragraphe apporte,
+    et il ne vaut que par ses chiffres.
+    """
+    phrases = [
+        f"Refuge Immo suit {nombre} maisons à vendre sous "
+        f"{_euros(SEUIL_PETITS_PRIX)}, réparties sur {communes} communes à "
+        f"moins de 350 km de Paris."
+    ]
+    if moins_cher:
+        phrases.append(f"La moins chère est affichée à {_euros(moins_cher)}.")
+    if prix_median:
+        phrases.append(f"Le prix médian de cette sélection est de "
+                       f"{_euros(prix_median)}.")
+    phrases.append(
+        f"Un petit prix ne dit rien de la solidité d'un lieu : ces biens sont "
+        f"donc classés par note de résilience et non par prix croissant. "
+        f"{bien_notes} d'entre eux atteignent 40 sur 100 ou davantage")
+    if mediane_generale:
+        phrases[-1] += (f", quand la médiane de tout le catalogue est de "
+                        f"{mediane_generale}")
+    phrases[-1] += "."
+    phrases.append(
+        "La note se construit sur quatre piliers : la ressource en eau, "
+        "l'exposition à la chaleur et aux risques naturels, l'autonomie du "
+        "logement (chauffage au bois, puits, dépendances, terrain "
+        "cultivable) et l'accès à Paris en voiture comme en train. Les "
+        "risques proviennent de Géorisques, service public de l'État.")
+    phrases.append(
+        "Ces prix sont ceux DEMANDÉS par les agences : à ce niveau, ils "
+        "supposent presque toujours des travaux, que le catalogue ne chiffre "
+        "pas.")
     return " ".join(phrases)
 
 
@@ -426,7 +493,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
             jour: str | None = None) -> str:
     """Le plan du site : accueil, terroirs, puis chaque annonce."""
     jour = jour or date.today().isoformat()
-    entrees = [(base + "/", "1.0", "daily")]
+    entrees = [(base + "/", "1.0", "daily"),
+               (base + URL_PETITS_PRIX, "0.9", "daily")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]
@@ -510,6 +578,10 @@ def llms_txt(total: int, par_region: dict, base: str = SITE) -> str:
     lignes += ["", "## Pages", "",
                f"- [Accueil et recherche]({base}/) : carte, filtres et "
                f"classement des {total} biens.",
+               f"- [Maisons sous {_euros(SEUIL_PETITS_PRIX)}]"
+               f"({base}{URL_PETITS_PRIX}) : la sélection à petit prix, "
+               f"classée par note de résilience et non par prix — un bien "
+               f"bon marché n'est pas forcément un bien vivable.",
                f"- [Plan du site]({base}/sitemap.xml) : toutes les annonces.",
                ""]
     return "\n".join(lignes)

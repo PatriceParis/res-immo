@@ -332,3 +332,94 @@ vente. Les notes observées vont aujourd'hui de 14 à 62 sur 100.</p>
         seo.jsonld_fil([("Accueil", "/"), (fiche["cherche"], seo.url_terroir(region))], base),
         seo.jsonld_organisation(base))
     return _document(titre, description, canonique, corps, structure, base)
+
+
+def page_petits_prix(biens: list[dict], stats: dict,
+                     base: str = seo.SITE) -> str:
+    """La sélection à petit prix, classée par RÉSILIENCE et non par prix.
+
+    « Maison pas chère à la campagne » est l'une des requêtes les plus
+    tapées du marché, et des comptes entiers en vivent : un prix incrusté sur
+    une photo, une commune, rien d'autre. Ils répondent tous la même chose,
+    une liste de prix croissants.
+
+    Aucun ne peut dire si le lieu tiendra. C'est la seule chose que nous
+    ayons en propre, alors le tri de cette page l'affirme dès la première
+    ligne : le moins cher n'ouvre pas la liste, le mieux noté l'ouvre. Une
+    page triée par prix croissant serait la millième de son espèce.
+    """
+    canonique = f"{base}{seo.URL_PETITS_PRIX}"
+    titre = seo.titre_petits_prix(len(biens))
+    description = seo.description_petits_prix(
+        len(biens), stats.get("bien_notes", 0), stats.get("prix_median"))
+    reponse = seo.reponse_petits_prix(
+        len(biens), stats.get("bien_notes", 0), stats.get("communes", 0),
+        stats.get("prix_median"), stats.get("mediane_generale"),
+        stats.get("moins_cher"))
+
+    lignes = "".join(
+        f'<tr><td><a href="{_e(base + seo.url_annonce(b))}">'
+        f'{_e(seo.titre_annonce(b))}</a></td>'
+        f'<td>{_e(seo._euros(b.get("prix")))}</td>'
+        f'<td>{_e(round(b["score_total"]) if b.get("score_total") else "—")}</td></tr>'
+        for b in biens[:60])
+
+    terroirs = "".join(
+        f'<li><a href="{_e(base + seo.url_terroir(r))}">'
+        f'{_e(seo.TERROIRS[r]["cherche"])}</a></li>' for r in seo.TERROIRS)
+
+    seuil = seo._euros(seo.SEUIL_PETITS_PRIX)
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Maisons sous {_e(seuil)}</nav>
+
+<h1>Maisons à vendre sous {_e(seuil)}, classées par résilience</h1>
+<p class="chapeau">{_e(reponse)}</p>
+
+<p>
+<a class="bouton" href="{_e(base)}/?prix_max={seo.SEUIL_PETITS_PRIX}">Voir ces {len(biens)} biens sur la carte</a>
+</p>
+
+<h2>Ce que contient cette sélection</h2>
+<table>
+<tr><th>Biens sous {_e(seuil)}</th><td>{len(biens)}</td></tr>
+<tr><th>Communes couvertes</th><td>{_e(stats.get("communes", 0))}</td></tr>
+{f'<tr><th>Le moins cher</th><td>{_e(seo._euros(stats["moins_cher"]))}</td></tr>' if stats.get("moins_cher") else ""}
+{f'<tr><th>Prix médian de la sélection</th><td>{_e(seo._euros(stats["prix_median"]))}</td></tr>' if stats.get("prix_median") else ""}
+{f'<tr><th>Surface médiane</th><td>{_e(round(stats["surface_mediane"]))} m²</td></tr>' if stats.get("surface_mediane") else ""}
+<tr><th>Notés 40 sur 100 ou plus</th><td>{_e(stats.get("bien_notes", 0))}</td></tr>
+</table>
+
+<h2>Pourquoi ce classement n'est pas par prix croissant</h2>
+<p>Un prix bas se lit en une seconde ; ce qu'il coûtera vraiment ne se lit
+nulle part. Une maison à 30 000 € sur une commune exposée au retrait des
+argiles, sans eau et loin de toute gare, n'est pas une affaire : c'est un
+engagement long qu'on prend sans le savoir. Cette page place donc en tête les
+biens les mieux notés de la tranche, et non les moins chers.</p>
+
+<h2>Les biens, du mieux noté au moins bien noté</h2>
+<table>
+<tr><th>Bien</th><th>Prix</th><th>Résilience</th></tr>
+{lignes}
+</table>
+{f'<p>… et {len(biens) - 60} autres, à parcourir sur <a href="{_e(base)}/?prix_max={seo.SEUIL_PETITS_PRIX}">la carte</a>.</p>' if len(biens) > 60 else ""}
+
+<h2>Ce que ces prix ne disent pas</h2>
+<p>Ce sont les prix <strong>demandés</strong> par les agences, relevés
+automatiquement sur leurs sites. À ce niveau, ils supposent presque toujours
+des travaux — toiture, assainissement, isolation — que ce catalogue ne chiffre
+pas et ne prétend pas estimer. Les frais de notaire, la taxe foncière et le
+coût du chauffage n'y figurent pas davantage.</p>
+<p>La note de résilience compare les biens du catalogue entre eux : elle n'est
+pas une expertise et ne remplace pas l'état des risques, obligatoire à la
+vente. Les risques recensés valent pour la <strong>commune</strong>, pas pour
+la parcelle.</p>
+
+<h2>Chercher par terroir</h2>
+<ul>{terroirs}</ul>
+"""
+    structure = _jsonld(
+        seo.jsonld_liste(biens[:60], base),
+        seo.jsonld_fil([("Accueil", "/"),
+                        (f"Maisons sous {seuil}", seo.URL_PETITS_PRIX)], base),
+        seo.jsonld_organisation(base))
+    return _document(titre, description, canonique, corps, structure, base)

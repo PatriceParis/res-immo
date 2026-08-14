@@ -363,6 +363,28 @@ def plan_du_site(requete: Request):
                     headers={"Cache-Control": "public, max-age=3600"})
 
 
+@app.get(seo.URL_PETITS_PRIX)
+def page_petits_prix(requete: Request):
+    """Le seul tri qui distingue cette page des mille autres du même sujet :
+    la note d'abord, le prix ensuite. Voir pages.page_petits_prix."""
+    catalogue = _catalogue()
+    biens = [b for b in catalogue
+             if b.get("prix") and b["prix"] <= seo.SEUIL_PETITS_PRIX]
+    if not biens:
+        raise HTTPException(status_code=404, detail="aucun bien sous ce prix")
+    biens.sort(key=lambda b: (-(b.get("score_total") or 0), b.get("prix") or 0))
+    notes = [b["score_total"] for b in catalogue if b.get("score_total")]
+    stats = _stats_terroir(biens) | {
+        "moins_cher": min(b["prix"] for b in biens),
+        "bien_notes": sum(1 for b in biens if (b.get("score_total") or 0) >= 40),
+        # La médiane de TOUT le catalogue : sans elle, « 27 biens au-dessus de
+        # 40 » ne se compare à rien et ne veut rien dire.
+        "mediane_generale": round(_mediane(notes)) if notes else None,
+    }
+    return HTMLResponse(pages.page_petits_prix(biens, stats, _base(requete)),
+                        headers={"Cache-Control": "public, max-age=1800"})
+
+
 @app.get("/terroir/{terroir}")
 def page_terroir(terroir: str, requete: Request):
     region = seo.region_du_slug(terroir)
