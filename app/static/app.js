@@ -789,8 +789,31 @@ async function initialiser() {
     await chargerGares();
   } catch (e) { /* la page reste utilisable avec les valeurs par défaut */ }
   await chargerTerroirs();
+  appliquerParametresUrl();
   majAffichagesFiltres();
   await rafraichir();
+}
+
+/* Les pages servies par le serveur — terroirs, petits prix — envoient vers
+   la carte avec un filtre dans l'adresse : `/?region=Normandie`,
+   `/?prix_max=100000`. Rien ne les lisait : on arrivait sur le catalogue
+   entier, à recommencer la sélection qu'on venait de faire. Un lien qui
+   promet un filtre doit l'appliquer, comme un lien qui promet une annonce
+   doit y mener. */
+function appliquerParametresUrl() {
+  const p = new URLSearchParams(location.search);
+  const prix = +p.get("prix_max");
+  // Au-delà du plafond du curseur, la demande vaut « tous prix » : on borne
+  // plutôt que d'ignorer, sinon un lien un peu large ne filtrerait rien.
+  if (prix > 0) $("#f-prix").value = Math.min(prix, +$("#f-prix").max);
+  const region = p.get("region");
+  // `etat.regions` contient des OBJETS, pas des noms : comparer une chaîne à
+  // la liste renverrait toujours faux, silencieusement.
+  if (region && etat.regions.some((r) => r.region === region)) {
+    etat.region = region;
+    etat.cadre = false;          // recentrer la carte sur le terroir demandé
+    majTerroirs();
+  }
 }
 
 /* ---------------- événements ---------------- */
