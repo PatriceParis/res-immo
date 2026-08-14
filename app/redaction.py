@@ -282,6 +282,74 @@ def _vigilance(bien: dict) -> str:
     return " ".join(phrases)
 
 
+def _heures(minutes) -> str:
+    """« 1 h 50 », « 45 min » — la durée telle qu'on la dit."""
+    if not minutes:
+        return ""
+    heures, reste = divmod(round(minutes), 60)
+    return f"{heures} h {reste:02d}" if heures else f"{reste} min"
+
+
+def bloc_de_faits(bien: dict) -> list[tuple[str, str]]:
+    """Les faits du bien en cinq ou six lignes, lisibles en deux secondes.
+
+    Les comptes qui diffusent des maisons bon marché ouvrent tous leurs
+    publications par le même bloc — lieu, prix, chambres, surface — et il
+    tient debout pour une raison simple : on veut d'abord savoir SI l'on
+    continue à lire. La prose vient après, la liste de définitions plus bas
+    encore.
+
+    Deux différences avec le leur. Le prix porte son PRIX AU MÈTRE CARRÉ, qui
+    dit à lui seul si l'affaire mérite un détour. Et la dernière ligne est la
+    note de résilience, que personne d'autre ne peut afficher — c'est elle
+    qui sépare ce catalogue d'une liste de bonnes affaires.
+
+    Rien n'y est écrit qui ne soit dans nos données : une ligne sans matière
+    disparaît, plutôt que d'afficher un tiret ou « n.c. ».
+    """
+    lignes: list[tuple[str, str]] = []
+
+    lieu = bien.get("commune") or ""
+    if lieu and bien.get("code_postal"):
+        lieu = f"{lieu} ({bien['code_postal']})"
+    if lieu:
+        lignes.append(("📍", lieu))
+
+    prix, surface = bien.get("prix"), bien.get("surface_m2")
+    if prix:
+        montant = f"{_nombre(prix)} €"
+        if surface:
+            montant += f" · {_nombre(prix / surface)} €/m²"
+        lignes.append(("💶", montant))
+
+    mesures = []
+    if surface:
+        mesures.append(f"{_nombre(surface)} m² habitables")
+    if bien.get("terrain_m2"):
+        mesures.append(f"{_nombre(bien['terrain_m2'])} m² de terrain")
+    if mesures:
+        lignes.append(("📐", " · ".join(mesures)))
+
+    if bien.get("pieces"):
+        pieces = bien["pieces"]
+        lignes.append(("🛏", f"{pieces} pièce{'s' if pieces > 1 else ''}"))
+
+    train = bien.get("train")
+    if isinstance(train, dict) and train.get("nom"):
+        acces = f"Gare de {train['nom']}"
+        if train.get("km") is not None:
+            acces += f" à {_distance(train['km'])}"
+        if train.get("minutes_paris"):
+            acces += f" · Paris en {_heures(train['minutes_paris'])}"
+        lignes.append(("🚉", acces))
+    elif bien.get("temps_voiture_min"):
+        lignes.append(("🚗", f"Paris en {_heures(bien['temps_voiture_min'])} de route"))
+
+    if bien.get("score_total"):
+        lignes.append(("🛡", f"Résilience {round(bien['score_total'])}/100"))
+    return lignes
+
+
 def description_longue(bien: dict, contexte: dict | None = None) -> list[str]:
     """Les paragraphes de la fiche, écrits depuis nos données.
 

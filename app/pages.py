@@ -39,6 +39,9 @@ h2 { font-size: 19px; margin: 32px 0 8px }
 dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 12px 0 }
 dt { color: #6b7663 } dd { margin: 0; font-weight: 600 }
 ul { padding-left: 20px } li { margin: 3px 0 }
+.faits-courts { list-style: none; padding: 0; margin: 10px 0 4px; font-size: 16px }
+.faits-courts li { margin: 5px 0 }
+.faits-courts span { display: inline-block; width: 24px }
 .jetons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
 .jetons li { background: #e6ece1; border-radius: 99px; padding: 3px 11px; font-size: 14px }
 .bouton { display: inline-block; background: #1b4332; color: #fff; padding: 11px 20px;
@@ -209,6 +212,12 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
     prose = "".join(f"<p>{_e(p)}</p>"
                     for p in redaction.description_longue(bien, contexte))
 
+    # Les faits avant la prose : on veut d'abord savoir SI l'on continue à
+    # lire. Voir redaction.bloc_de_faits.
+    faits_courts = "".join(
+        f'<li><span aria-hidden="true">{_e(picto)}</span> {_e(texte)}</li>'
+        for picto, texte in redaction.bloc_de_faits(bien))
+
     suite = "".join(
         f'<li><a href="{_e(base + seo.url_annonce(v))}">{_e(seo.titre_annonce(v))}</a></li>'
         for v in voisins[:8])
@@ -222,6 +231,7 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 <p class="chapeau">{_e(seo.description_annonce(bien))}</p>
 {f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy" onerror="this.remove()">' if bien.get("photo") else ""}
 <p class="prix">{_e(seo._euros(bien.get("prix")) or "Prix sur demande")}</p>
+{f'<ul class="faits-courts">{faits_courts}</ul>' if faits_courts else ""}
 
 <h2>Que disent les données sur ce bien ?</h2>
 {prose}
