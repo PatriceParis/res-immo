@@ -328,6 +328,20 @@ body {
   background: #dfe7df center/cover no-repeat;
 }
 
+/* La commune vue du ciel, sur TOUTE fiche — orthophoto IGN, Licence Ouverte.
+   C'est la seule image du site qui nous appartienne de plein droit, et elle a
+   pris la place du descriptif de l'agence, qui était republié tel quel. La
+   légende n'est pas décorative : elle dit que le cadrage est COMMUNAL, et
+   porte la mention « © IGN » due au titre de la licence. */
+.vue-ciel { margin: 0 }
+.vue-ciel img {
+  width: 100%; height: 200px; object-fit: cover;
+  border-radius: 12px; display: block; background: #dfe7df;
+}
+.vue-ciel figcaption {
+  font-size: 12.5px; color: #6b7663; margin-top: 6px; line-height: 1.45;
+}
+
 /* Vraie photo de l'agence, posée sur l'illustration de repli.
    `inset: 0` + `object-fit: cover` la font remplir exactement le cadre : sans
    ces règles, l'image s'affiche à sa taille naturelle et fait exploser la

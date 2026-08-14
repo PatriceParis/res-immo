@@ -214,7 +214,13 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
 
 def _row_vers_dict(row: sqlite3.Row) -> dict:
     d = dict(row)
-    d.pop("texte", None)  # texte de détection interne, non exposé par l'API
+    # Ni le texte intégral de la page, ni le descriptif rédigé par l'agence ne
+    # sortent de l'API. On les LIT — ils servent à détecter cave, puits et
+    # poêle, et à repérer les biens vendus — mais lire pour analyser n'est pas
+    # rediffuser. Le descriptif était republié tel quel sur la fiche modale,
+    # dernier endroit du site où le texte d'un tiers l'était encore.
+    for interne in ("texte", "description"):
+        d.pop(interne, None)
     for colonne, cle in CHAMPS_JSON.items():
         try:
             d[cle] = json.loads(d.pop(colonne) or "null")

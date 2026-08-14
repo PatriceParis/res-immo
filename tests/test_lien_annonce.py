@@ -28,9 +28,16 @@ PAGES = RACINE / "app" / "pages.py"
 
 
 def _fiche() -> str:
-    """La section « L'annonce » de la fiche, sans les commentaires."""
+    """Le bloc de provenance de la fiche, sans les commentaires.
+
+    On s'ancre sur `source-ligne`, la classe des lignes elles-mêmes, et non
+    sur le titre de la section : celui-ci a déjà changé une fois — « L'annonce »
+    est devenu « La commune vue du ciel » le jour où le descriptif de l'agence
+    a cédé la place à l'orthophoto — et trois tests sont tombés d'un coup sans
+    que rien de ce qu'ils protègent ait bougé.
+    """
     source = APP_JS.read_text(encoding="utf-8")
-    debut = source.index("<h4>L'annonce</h4>")
+    debut = source.index("Annonce publiée par")
     bloc = source[debut:source.index("</section>", debut)]
     return re.sub(r"/\*.*?\*/", "", bloc, flags=re.DOTALL)
 
