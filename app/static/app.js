@@ -149,6 +149,24 @@ function tuileAerienne(a) {
     + "&FORMAT=image/jpeg&TILEMATRIX=" + z + "&TILEROW=" + y + "&TILECOL=" + x;
 }
 
+/* La vue aérienne de la fiche, en pleine largeur et sur toute annonce.
+   Cadrée sur la COMMUNE : nos coordonnées viennent de la Base Adresse
+   Nationale à partir du nom et du code postal, l'adresse exacte ne figurant
+   presque jamais dans l'annonce. La légende le dit — la montrer comme la
+   parcelle serait inventer. La mention « © IGN » est due au titre de la
+   Licence Ouverte. */
+function vueDuCiel(a) {
+  const ciel = tuileAerienne(a);
+  if (!ciel) return "";
+  return `<figure class="vue-ciel">
+      <img src="${ciel}" loading="lazy" alt="Vue aérienne de ${echap(a.commune || "la commune")}"
+           onerror="this.parentNode.remove()">
+      <figcaption>${echap(a.commune || "La commune")} vue du ciel — orthophoto © IGN,
+        Licence Ouverte. L'emplacement exact du bien n'est pas connu :
+        l'adresse ne figure pas dans l'annonce.</figcaption>
+    </figure>`;
+}
+
 function imgPhoto(a) {
   const src = photoReelle(a);
   const ciel = tuileAerienne(a);
@@ -677,8 +695,23 @@ function ouvrirFiche(id) {
     </section>
 
     <section>
-      <h4>L'annonce</h4>
-      <p class="description">${echap(a.description)}</p>
+      <h4>La commune vue du ciel</h4>
+      ${/* Le descriptif rédigé par l'agence ne s'affiche PLUS ici. C'était le
+            seul endroit du site où le texte d'un tiers était republié tel
+            quel — les pages servies par le serveur écrivent depuis nos
+            données depuis le début (voir app/redaction.py). Il reste lu pour
+            détecter cave, puits ou poêle et repérer les biens vendus : le
+            lire pour analyser n'est pas le rediffuser, et l'API ne le sort
+            plus (voir db._row_vers_dict, qui écartait déjà le texte intégral
+            pour la même raison).
+
+            À sa place, la seule image que nous ayons de plein droit : une
+            orthophoto IGN sous Licence Ouverte. Elle montre ce que la fiche
+            analyse — le bâti, les haies, les bois, l'eau — et le fait
+            désormais sur TOUTE fiche, plus seulement quand la photo de
+            l'agence manque. La légende dit ce qu'elle est : la commune, pas
+            la parcelle. */""}
+      ${vueDuCiel(a)}
       ${/* Le seul lien qui mène VRAIMENT au bien passe en premier, et il est
             le seul à le promettre. « Voir chez l'agence » pointait sur
             `agence_url`, qui n'est jamais que la racine du site — pour les
