@@ -679,10 +679,21 @@ function ouvrirFiche(id) {
     <section>
       <h4>L'annonce</h4>
       <p class="description">${echap(a.description)}</p>
-      ${a.agence_url ? `<p class="source-ligne">Mandat : <b>${echap(a.agence)}</b> — <a href="${echap(a.agence_url)}" target="_blank" rel="noopener">voir chez l'agence</a></p>` : ""}
-      <p class="source-ligne">Source : ${echap(a.source)}${a.url
+      ${/* Le seul lien qui mène VRAIMENT au bien passe en premier, et il est
+            le seul à le promettre. « Voir chez l'agence » pointait sur
+            `agence_url`, qui n'est jamais que la racine du site — pour les
+            1143 fiches servies, sans exception : le visiteur atterrissait sur
+            une page d'accueil, donc une liste, et devait y rechercher
+            lui-même le bien qu'il venait de quitter. Le site de l'agence
+            garde son lien, mais sous son vrai nom.
+
+            « Source : iad-france-27 » disparaît au passage : c'est notre
+            identifiant interne, il ne dit rien à personne d'autre. Le nom de
+            l'agence, lui, dit d'où vient l'annonce. */""}
+      <p class="source-ligne">Annonce publiée par <b>${echap(a.agence || "l'agence")}</b>${a.url
         ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
         : ""}</p>
+      ${a.agence_url ? `<p class="source-ligne"><a href="${echap(a.agence_url)}" target="_blank" rel="noopener">Site de l'agence</a></p>` : ""}
       ${fraicheur(a)}
     </section>`;
 
