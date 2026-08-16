@@ -49,7 +49,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, mandataires  # noqa: E402
+from app import db, historique, mandataires  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
@@ -224,16 +224,23 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     vu = derniere_visite()
     deja_vues = annonces_deja_connues()
     total = 0
+    # Les départements dont on n'a PAS vu toute la liste : le plafond par
+    # département ou le budget de temps a coupé le parcours. La règle de
+    # sortie doit s'y abstenir, sinon elle supprime des annonces qu'elle
+    # n'a jamais cherchées — voir app/historique.py.
+    tronquees: set = set()
     for dept in mandataires.ordre_des_departements(groupes, vu):
         if time.monotonic() > fin_prevue:
             print("  budget de temps atteint — la suite au prochain passage.")
             break
-        lot = mandataires.ordre_dans_le_departement(
-            groupes[dept], deja_vues)[:args.max_par_departement]
+        candidats = mandataires.ordre_dans_le_departement(groupes[dept], deja_vues)
+        lot = candidats[:args.max_par_departement]
+        tronquee = len(candidats) > len(lot)
         gardes = compteurs = 0
         etats = {"garde": 0, "vendu": 0, "ecarte": 0, "illisible": 0}
         for annonce in lot:
             if time.monotonic() > fin_prevue:
+                tronquee = True
                 break
             etats[enregistrer_une(conn, annonce, reseau)] += 1
             compteurs += 1
@@ -241,6 +248,11 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         gardes = etats["garde"]
         conn.commit()
         noter_visite(f"{cle}:{dept}", date.today().isoformat())
+        if tronquee:
+            tronquees.add(historique.identite(
+                {"agence": mandataires.nom_d_agence(reseau, dept),
+                 "agence_url": reseau["site"]}))
+        historique.noter_visite_tronquee(tronquees)
         print(f"  {dept} · {gardes:3} gardé(s) sur {compteurs} visité(s)"
               f" — {etats['vendu']} vendu(s), {etats['ecarte']} hors cible,"
               f" {etats['illisible']} illisible(s)")

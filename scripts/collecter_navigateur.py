@@ -301,12 +301,20 @@ def borner(secondes: int):
     return lambda: signal.alarm(0)
 
 
+def _vivier(maxi: int) -> int:
+    """Combien d'adresses on met en réserve. Bien plus que de biens voulus :
+    beaucoup de pages sont écartées ensuite. Mais c'est un PLAFOND — atteint,
+    il signifie qu'on n'a pas vu toute la liste du site, et la règle de sortie
+    doit alors s'abstenir."""
+    return max(maxi * 8, 80)
+
+
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
                     fin_prevue: float = 0.0) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
     # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
     # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
-    vivier = max(maxi * 8, 80)
+    vivier = _vivier(maxi)
     urls = _sitemap_urls(base, fin_prevue)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
@@ -395,6 +403,7 @@ def main() -> None:
 
     conn = db.connexion()
     total = agences = 0
+    tronquees: set = set()
     deroule: list[dict] = []
     depart = time.monotonic()
     fin_prevue = depart + args.minutes_max * 60
@@ -436,21 +445,30 @@ def main() -> None:
             print(f"\n▶ {cible['nom']} — {base}")
             n, vendus, ecartes, vues = 0, 0, 0, 0
             debordement = ""
+            # Vrai dès qu'on s'arrête AVANT d'avoir épuisé la liste du site.
+            # C'est la seule chose qui permette à la règle de sortie de
+            # distinguer « ce bien a disparu » de « on n'a pas été jusqu'à lui ».
+            tronquee = False
             # Trente secondes de marge sur le budget : le temps de finir
             # proprement le bien en cours avant que le réveil ne sonne.
             desarmer = borner(args.minutes_par_agence * 60 + 30)
             try:
                 urls = _urls_a_visiter(page, cible, base, maxi, fin_agence)
+                if len(urls) >= _vivier(maxi):
+                    tronquee = True    # la réserve d'adresses elle-même est coupée
                 for u in urls:
                     if n >= maxi:          # on s'arrête sur les biens GARDÉS,
-                        break              # pas sur les pages visitées
+                        tronquee = True    # pas sur les pages visitées
+                        break
                     if vues >= pages_max:
                         print(f"  … plafond de {pages_max} pages atteint pour cette agence")
+                        tronquee = True
                         break
                     if time.monotonic() > fin_agence:
                         debordement = (" — temps de l'agence épuisé"
                                        if time.monotonic() <= fin_prevue
                                        else " — budget global épuisé")
+                        tronquee = True
                         break
                     vues += 1
                     try:
@@ -505,6 +523,7 @@ def main() -> None:
                     n += 1
                     time.sleep(args.delai)
             except TempsEcoule:
+                tronquee = True
                 debordement = " — INTERROMPUE, l'agence ne rendait pas la main"
                 print(f"  ⏱ arrêt forcé : aucun appel n'a rendu la main en "
                       f"{args.minutes_par_agence:.0f} min. On passe à la suite.")
@@ -520,6 +539,10 @@ def main() -> None:
                   f" — {vendus} déjà vendu(s), {ecartes} hors cible"
                   f" — {vues} page(s) en {duree / 60:.1f} min{debordement}")
             _noter_visite(cible["site"], date.today().isoformat())
+            if tronquee:
+                tronquees.add(historique.identite(
+                    {"agence": cible["nom"], "agence_url": base}))
+            historique.noter_visite_tronquee(tronquees)
             # Et consigné dans le dépôt, pas seulement imprimé. Le journal du
             # run n'est lisible que depuis l'onglet Actions ; ce fichier-ci
             # est committé, donc lisible depuis git seul — c'est ce qui a

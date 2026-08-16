@@ -141,7 +141,18 @@ def main() -> None:
     # collecte écourtée ne doit pas faire disparaître les biens des autres.
     # Une cible = un nom ET un domaine (voir historique.identite) : ni l'un ni
     # l'autre pris seul ne décrit ce que la collecte visite vraiment.
-    visites = {historique.identite(b) for b in biens} - {("", "")}
+    #
+    # Et une cible dont la visite s'est ARRÊTÉE AVANT LA FIN de sa liste ne
+    # fait pas autorité non plus : le plafond de biens, celui de pages, le
+    # budget de temps ou la réserve d'adresses ont pu couper le parcours avant
+    # qu'on n'atteigne l'annonce en question. Compter son absence, c'est
+    # conclure de ce qu'on n'a pas cherché — la faute qui a déjà coûté
+    # cinquante-six annonces Century 21 et deux cent six IAD, sous deux formes
+    # différentes. Ici la visite a bien eu lieu, mais tronquée : deux cent
+    # quarante et une annonces étaient en sursis pour cette raison, et le
+    # catalogue perdait une vingtaine de biens par jour.
+    visites = ({historique.identite(b) for b in biens}
+               - {("", "")} - historique.visites_tronquees())
     fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
     fusionnees = sans_doublon_d_url(fusionnees)
