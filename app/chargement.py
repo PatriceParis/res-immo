@@ -154,9 +154,18 @@ DISTANCE_MAX_KM = 350
 # Mayenne y figuraient auparavant en dur, si bien que leurs biens étaient
 # comptés dans le total mais rattachés à aucune pastille — introuvables par
 # le filtre de région. Elles relèvent désormais du terroir « Pays de la Loire ».
+# Trois départements du Grand Est sortent de la liste : leur territoire ENTIER
+# est au-delà des 350 km que l'application s'impose, mesuré avec sa propre
+# fonction — Saverne 367 km, Colmar 379, Belfort 360, et ce sont leurs points
+# les plus proches. Ils étaient donc ciblés sans qu'aucun de leurs biens ne
+# puisse jamais être servi : la collecte y aurait dépensé son budget pour des
+# annonces écartées au chargement. La Haute-Saône, elle, reste — Vesoul est à
+# 313 km, Gray à 287.
+HORS_DE_PORTEE = {"67", "68", "90"}
+
 DEPARTEMENTS_CIBLES = {
     dept for dept, region in regions.REGION_PAR_DEPT.items()
-    if region in set(regions.regions_cibles())
+    if region in set(regions.regions_cibles()) and dept not in HORS_DE_PORTEE
 }
 
 

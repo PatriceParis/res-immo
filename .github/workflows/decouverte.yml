@@ -40,7 +40,10 @@ concurrency:
 jobs:
   decouverte:
     runs-on: ubuntu-latest
-    timeout-minutes: 60   # 577 sites recensés à sonder, contre une vingtaine avant
+    # 43 zones au lieu de 19 depuis que le périmètre est couvert en entier :
+    # le recensement OpenStreetMap et le sondage des sites durent plus
+    # longtemps. Six heures sont permises, deux suffisent largement.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
