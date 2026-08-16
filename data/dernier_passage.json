@@ -1,10 +1,11 @@
 {
- "quand": "2026-08-16T18:55:46+00:00",
+ "quand": "2026-08-16T22:50:06+00:00",
  "code_collecteur": "0",
- "annonces_au_catalogue": 1580,
+ "annonces_au_catalogue": 1648,
  "fichiers_modifies": [
   "data/agences_visitees.json",
   "data/annonces_reel.json",
-  "data/deroule_collecte.json"
+  "data/deroule_collecte.json",
+  "data/visites_tronquees.json"
  ]
 }
