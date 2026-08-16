@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from app import historique  # noqa: E402
 import pytest  # noqa: E402
 
 collecteur = pytest.importorskip(
@@ -85,6 +86,8 @@ def collecte(tmp_path, monkeypatch):
     # le déroulé d'une collecte réelle. Un test qui touche au dépôt n'est pas
     # un test, c'est un effet de bord avec un nom rassurant.
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
     monkeypatch.setattr(collecteur.db, "connexion",
                         lambda: collecteur.db.connexion.__wrapped__()
                         if hasattr(collecteur.db.connexion, "__wrapped__") else _FausseBase())
@@ -258,6 +261,8 @@ def test_le_navigateur_recoit_un_plafond_de_temps(monkeypatch, tmp_path):
     monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [])
     monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
     monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
     collecteur.main()
 
@@ -308,6 +313,8 @@ def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, caps
     vrai_borner = collecteur.borner
     monkeypatch.setattr(collecteur, "borner", lambda _: vrai_borner(1))
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
     monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
 
     depart = horloge_reelle.monotonic()
@@ -352,6 +359,8 @@ def test_borner_reste_inoffensif_sans_sigalrm(monkeypatch):
 def test_le_deroule_dit_comment_chaque_agence_a_fini(collecte, monkeypatch, tmp_path):
     journal = tmp_path / "deroule.json"
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
     _lancer(monkeypatch, collecte,
             agences=["Rapide", "Lente"],
             secondes_par_page={"Rapide": 1, "Lente": 60},
@@ -371,6 +380,8 @@ def test_le_deroule_nomme_l_agence_interrompue(monkeypatch, tmp_path):
     import time as horloge_reelle
     journal = tmp_path / "deroule.json"
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
     monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [
         {"nom": "Bloquée", "site": "https://bloquee.fr"}])
 
@@ -400,6 +411,8 @@ def test_un_journal_indisponible_ne_perd_pas_la_collecte(collecte, monkeypatch,
     obstacle = tmp_path / "obstacle"
     obstacle.write_text("je ne suis pas un dossier", encoding="utf-8")
     monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", obstacle / "sous" / "x.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES",
+                        tmp_path / "tronquees.json")
 
     visitees = _lancer(monkeypatch, collecte, agences=["A"],
                        secondes_par_page={"A": 1})
