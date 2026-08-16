@@ -39,9 +39,8 @@ ZONES = [
     # tempérée l'hiver — précisément ce qu'on cherche face aux canicules.
     # Toutes ces communes sont à 2 h 40 – 3 h 10 de Paris, en Centre-Val de
     # Loire : le troglodyte n'oblige donc pas à sortir du périmètre.
-    {"nom": "Montoire-sur-le-Loir", "lat": 47.7539, "lon": 0.8672, "rayon_km": 25},
+    {"nom": "Montoire-sur-le-Loir", "lat": 47.7539, "lon": 0.8672, "rayon_km": 30},
     {"nom": "Château-Renault",  "lat": 47.5919, "lon": 0.9114, "rayon_km": 25},
-    {"nom": "Trôo",             "lat": 47.7847, "lon": 0.7936, "rayon_km": 20},
     {"nom": "Montrichard",      "lat": 47.3428, "lon": 1.1892, "rayon_km": 25},
     {"nom": "Amboise",          "lat": 47.4131, "lon": 0.9821, "rayon_km": 25},
     {"nom": "Vouvray",          "lat": 47.4108, "lon": 0.7967, "rayon_km": 20},
@@ -55,6 +54,45 @@ ZONES = [
     # voiture » est fait pour reconnaître.
     {"nom": "Chalon-sur-Saône", "lat": 46.7806, "lon": 4.8536, "rayon_km": 30},
     {"nom": "Le Creusot",       "lat": 46.8003, "lon": 4.4331, "rayon_km": 30},
+
+    # Les vingt-cinq zones qui suivent comblent le reste du périmètre. Les
+    # dix-neuf premières ne couvraient que HUIT des trente-six départements
+    # visés : la présence des autres au catalogue était accidentelle — le
+    # Calvados et la Meurthe-et-Moselle, nos deux mieux pourvus avec 174 et
+    # 171 biens, n'avaient aucune zone. Leurs agences sont arrivées par des
+    # ajouts à la main ou par les mandataires, jamais par la découverte.
+    #
+    # Chaque centre est une COMMUNE RÉELLE du département, prise dans le
+    # catalogue : ses coordonnées viennent de la Base Adresse Nationale, donc
+    # vérifiées. Vesoul fait seule exception — la Haute-Saône est dans le
+    # périmètre mais n'a aucun bien, donc aucune coordonnée à emprunter. Les
+    # vingt-cinq distances à Paris ont été contrôlées avec
+    # app.geo.distance_paris_km : toutes sous les 350 km de l'application.
+    {"nom": "Acquigny (27)",            "lat": 49.1677, "lon": 1.1813, "rayon_km": 30},
+    {"nom": "Amiens (80)",              "lat": 49.9030, "lon": 2.2926, "rayon_km": 30},
+    {"nom": "Baugy (18)",               "lat": 47.0771, "lon": 2.7481, "rayon_km": 30},
+    {"nom": "Champéon (53)",            "lat": 48.3591, "lon": -0.5182, "rayon_km": 30},
+    {"nom": "Charny-sur-Meuse (55)",    "lat": 49.2068, "lon": 5.3602, "rayon_km": 30},
+    {"nom": "Châteauneuf-sur-Loire (45)", "lat": 47.8727, "lon": 2.2232, "rayon_km": 30},
+    {"nom": "Gouville-sur-Mer (50)",    "lat": 49.1090, "lon": -1.5336, "rayon_km": 30},
+    {"nom": "La Charité-sur-Loire (58)", "lat": 47.1823, "lon": 3.0315, "rayon_km": 30},
+    {"nom": "Le Poinçonnet (36)",       "lat": 46.7785, "lon": 1.7112, "rayon_km": 30},
+    {"nom": "Montreuil (62)",           "lat": 50.4745, "lon": 1.7800, "rayon_km": 30},
+    {"nom": "Nouvion-sur-Meuse (08)",   "lat": 49.7024, "lon": 4.7932, "rayon_km": 30},
+    {"nom": "Orchies (59)",             "lat": 50.4705, "lon": 3.2408, "rayon_km": 30},
+    {"nom": "Pompey (54)",              "lat": 48.7710, "lon": 6.1249, "rayon_km": 30},
+    {"nom": "Ranville (14)",            "lat": 49.2333, "lon": -0.2500, "rayon_km": 30},
+    {"nom": "Roche-lez-Beaupré (25)",   "lat": 47.2772, "lon": 6.1080, "rayon_km": 30},
+    {"nom": "Saint-André-les-Vergers (10)", "lat": 48.2772, "lon": 4.0509, "rayon_km": 30},
+    {"nom": "Saint-Romain-de-Colbosc (76)", "lat": 49.5300, "lon": 0.3648, "rayon_km": 30},
+    {"nom": "Sainte-Sabine (21)",       "lat": 47.1912, "lon": 4.6237, "rayon_km": 30},
+    {"nom": "Tavaux (39)",              "lat": 47.0433, "lon": 5.4117, "rayon_km": 30},
+    {"nom": "Vesoul (70)",              "lat": 47.6236, "lon": 6.1556, "rayon_km": 30},
+    {"nom": "Vigy (57)",                "lat": 49.2084, "lon": 6.2980, "rayon_km": 30},
+    {"nom": "Villiers-le-Sec (52)",     "lat": 48.1065, "lon": 5.0661, "rayon_km": 30},
+    {"nom": "Écommoy (72)",             "lat": 47.8267, "lon": 0.2868, "rayon_km": 30},
+    {"nom": "Épernay (51)",             "lat": 49.0402, "lon": 3.9605, "rayon_km": 30},
+    {"nom": "Épinal (88)",              "lat": 48.1702, "lon": 6.4849, "rayon_km": 30},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence
