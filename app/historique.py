@@ -23,6 +23,8 @@ tour — mais seulement si son SITE a bien été visité, sinon une collecte
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from urllib.parse import urlparse
 
 # Une annonce absente de la dernière collecte de SON agence est considérée
@@ -47,6 +49,37 @@ def cle_agence(url: str) -> str:
     """
     hote = urlparse(url or "").netloc.lower()
     return hote[4:] if hote.startswith("www.") else hote
+
+
+JOURNAL_TRONQUEES = Path(__file__).resolve().parent.parent / "data" / "visites_tronquees.json"
+
+
+def noter_visite_tronquee(cibles: set) -> None:
+    """Écrit les cibles dont la visite s'est arrêtée AVANT la fin de leur liste.
+
+    Réécrit entièrement le fichier à chaque passage : il ne décrit jamais que
+    le passage en cours. Un journal qui traînerait d'une collecte à l'autre
+    ferait abstenir la règle de sortie sur des cibles qu'on vient pourtant de
+    parcourir en entier — l'erreur inverse, et tout aussi silencieuse.
+    """
+    try:
+        JOURNAL_TRONQUEES.parent.mkdir(parents=True, exist_ok=True)
+        JOURNAL_TRONQUEES.write_text(
+            json.dumps(sorted([list(c) for c in cibles]), ensure_ascii=False,
+                       indent=1) + "\n", encoding="utf-8")
+    except OSError:
+        pass       # un journal indisponible ne doit pas arrêter la collecte
+
+
+def visites_tronquees() -> set:
+    """Les cibles à ne PAS considérer comme parcourues, faute de les avoir vues
+    en entier. Absent ou illisible, on ne retranche rien : l'ancien
+    comportement, jamais pire."""
+    try:
+        return {tuple(c) for c in
+                json.loads(JOURNAL_TRONQUEES.read_text(encoding="utf-8"))}
+    except (OSError, ValueError, TypeError):
+        return set()
 
 
 def identite(bien: dict) -> tuple:

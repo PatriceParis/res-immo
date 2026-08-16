@@ -35,9 +35,9 @@ on:
         required: false
         default: ""
       max:
-        description: "Nombre de biens max par agence"
+        description: "Nombre de biens max par agence (défaut 12)"
         required: false
-        default: "8"
+        default: "12"
   schedule:
     - cron: "0 2,6,10,14,18,22 * * *"   # toutes les 4 h
 
@@ -202,7 +202,8 @@ jobs:
             # repartirait toujours des mêmes premières agences et ne
             # reviendrait jamais aux dernières.
             git add data/annonces_reel.json data/agences_visitees.json \
-                    data/dernier_passage.json data/deroule_collecte.json
+                    data/dernier_passage.json data/deroule_collecte.json \
+                    data/visites_tronquees.json
             # Le libellé distingue les deux cas, car la surveillance cherche
             # « ^Collecte auto » : un passage stérile ne doit pas passer pour
             # une collecte réussie, mais il doit rester VISIBLE.
@@ -229,17 +230,18 @@ jobs:
               # de l'ancien checkout et re-committerait tout le reste au
               # passage, écrasant silencieusement le travail des autres.
               for f in annonces_reel.json agences_visitees.json dernier_passage.json \
-                       deroule_collecte.json; do
+                       deroule_collecte.json visites_tronquees.json; do
                 cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
               done
               git fetch origin main
               git reset --hard origin/main
               for f in annonces_reel.json agences_visitees.json dernier_passage.json \
-                       deroule_collecte.json; do
+                       deroule_collecte.json visites_tronquees.json; do
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
               git add data/annonces_reel.json data/agences_visitees.json \
-                    data/dernier_passage.json data/deroule_collecte.json
+                    data/dernier_passage.json data/deroule_collecte.json \
+                    data/visites_tronquees.json
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
               sleep $((essai * 5))
             done
