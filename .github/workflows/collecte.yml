@@ -87,7 +87,22 @@ jobs:
           # qu'ils faisaient — impossible de savoir où le temps partait.
           PYTHONUNBUFFERED: "1"
         run: |
-          MAX="${MAXIN:-8}"
+          # Douze biens par agence et par passage, contre huit jusqu'ici.
+          #
+          # Huit avait un effet pervers, mesuré : une agence qui en a davantage
+          # ne voyait jamais rechercher les autres, qui prenaient pourtant une
+          # absence à chaque visite et finissaient supprimées alors qu'elles
+          # étaient toujours en ligne. Deux cent quarante et une annonces
+          # étaient dans ce cas, et le catalogue perdait une vingtaine de biens
+          # par jour — 1619 le 15 août au matin, 1594 le 16.
+          #
+          # Douze ne supprime pas ce défaut, il en réduit la portée : les
+          # agences de neuf à douze biens deviennent parcourues en entier, donc
+          # leurs absences redeviennent vraies. Il coûte en revanche du temps
+          # par agence, donc moins d'agences par passage et une rotation plus
+          # lente. À surveiller dans le déroulé : si le nombre d'agences
+          # visitées tombe nettement sous quinze, le prix est trop élevé.
+          MAX="${MAXIN:-12}"
           # `timeout` est le garde-fou de dernier recours. Le collecteur a son
           # propre budget de vingt-huit minutes, mais il l'a dépassé deux fois
           # — jusqu'à cinquante-neuf minutes — par une attente qu'il ne
