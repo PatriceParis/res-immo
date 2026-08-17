@@ -552,3 +552,158 @@ isolé, et l'étiquette énergétique dit souvent le contraire du confort.</p>
                         ("Maisons sans travaux", seo.URL_SANS_TRAVAUX)], base),
         seo.jsonld_organisation(base))
     return _document(titre, description, canonique, corps, structure, base)
+
+
+def page_alertes(stats: dict, prix_choisi: int | None = None,
+                 region_choisie: str = "", base: str = seo.SITE) -> str:
+    """« Soyez alerté » — le visiteur choisit, personne ne choisit pour lui.
+
+    Cette page remplace le bloc de mise en relation, retiré le 17 août 2026.
+    Celui-ci recueillait l'e-mail du visiteur pour le transmettre à l'agence,
+    contre rémunération : prêter son concours, même accessoire et même
+    rémunéré indirectement, à la recherche d'un immeuble pour autrui est
+    l'activité que la loi Hoguet réserve aux titulaires d'une carte
+    professionnelle. Écrire « nous ne sommes pas une agence » ne défait pas ce
+    qui est fait.
+
+    La différence n'est donc pas cosmétique, et la page doit la porter :
+
+    - le visiteur fixe LUI-MÊME son budget et ses terroirs ; nous ne
+      sélectionnons rien pour lui et ne conseillons aucun bien ;
+    - son adresse ne part chez personne — surtout pas chez une agence ;
+    - aucune commission n'est perçue, à aucun moment ;
+    - le lien vers l'annonce d'origine reste le seul chemin vers le vendeur.
+
+    Rien n'est enregistré sur le serveur : le formulaire ouvre le logiciel de
+    courrier du visiteur avec ses critères déjà écrits, et c'est lui qui
+    envoie. Ce n'est pas une élégance technique, c'est la seule option
+    honnête — l'hébergement n'a pas de stockage durable, et le dispositif
+    précédent recueillait des adresses dans un fichier temporaire effacé à
+    chaque redémarrage. Recueillir une donnée personnelle pour la perdre est
+    pire que ne pas la recueillir.
+    """
+    canonique = f"{base}{seo.URL_ALERTES}"
+    titre = "Soyez alerté des maisons qui entrent au catalogue"
+    description = (
+        "Choisissez un budget et des terroirs : nous vous prévenons quand une "
+        "maison résiliente y entre au catalogue. Gratuit, sans mise en "
+        "relation, sans commission.")
+
+    paliers = "".join(
+        f'<option value="{p}"{" selected" if prix_choisi == p else ""}>'
+        f'Jusqu\'à {_e(seo._euros(p))}</option>' for p in seo.PALIERS_ALERTE)
+    terroirs = "".join(
+        f'<label class="case"><input type="checkbox" name="terroir" '
+        f'value="{_e(region)}"{" checked" if region == region_choisie else ""}> '
+        f'{_e(seo.TERROIRS[region]["cherche"])}</label>' for region in seo.TERROIRS)
+
+    ouvert = bool(seo.COURRIEL_ALERTES)
+    envoi = (f"""
+<form id="form-alerte" class="alerte-form">
+  <label class="champ"><span>Mon budget maximum</span>
+    <select id="alerte-prix">{paliers}</select></label>
+  <fieldset class="champ"><legend>Les terroirs qui m'intéressent</legend>
+    {terroirs}</fieldset>
+  <label class="champ"><span>Mon adresse e-mail</span>
+    <input type="email" id="alerte-mail" placeholder="vous@exemple.fr"
+           autocomplete="email" required></label>
+  <button class="bouton" type="submit">Créer mon alerte</button>
+  <p class="alerte-note" id="alerte-note"></p>
+</form>
+<script>
+// Rien ne part vers ce site : le formulaire ouvre le logiciel de courrier du
+// visiteur avec ses critères déjà écrits. Aucune adresse n'est enregistrée
+// ici, donc aucune ne peut être perdue ni transmise.
+(function () {{
+  var f = document.getElementById("form-alerte");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {{
+    e.preventDefault();
+    var mail = (document.getElementById("alerte-mail").value || "").trim();
+    var note = document.getElementById("alerte-note");
+    if (mail.indexOf("@") < 0) {{
+      note.textContent = "Indiquez une adresse e-mail valide.";
+      return;
+    }}
+    var prix = document.getElementById("alerte-prix").value;
+    var zones = [].slice.call(f.querySelectorAll("input[name=terroir]:checked"))
+                  .map(function (c) {{ return c.value; }});
+    if (!zones.length) {{
+      note.textContent = "Choisissez au moins un terroir.";
+      return;
+    }}
+    var corps = "Bonjour,\\n\\nJe souhaite être alerté des nouvelles maisons :\\n"
+      + "\\n- budget maximum : " + prix + " EUR"
+      + "\\n- terroirs : " + zones.join(", ")
+      + "\\n- mon adresse : " + mail
+      + "\\n\\nMerci.";
+    note.textContent = "Votre logiciel de courrier s'ouvre avec votre demande. "
+      + "Il ne reste qu'à l'envoyer.";
+    window.location.href = "mailto:{seo.COURRIEL_ALERTES}"
+      + "?subject=" + encodeURIComponent("Alerte Refuge Immo")
+      + "&body=" + encodeURIComponent(corps);
+  }});
+}})();
+</script>""" if ouvert else """
+<p class="alerte-note"><strong>Les alertes ne sont pas encore ouvertes.</strong>
+Plutôt que de recueillir votre adresse pour la perdre — c'est ce que faisait le
+dispositif précédent, dont le journal vivait dans un fichier temporaire effacé
+à chaque redémarrage — cette page attend d'avoir une boîte qui les reçoive
+vraiment. En attendant, le lien ci-dessous garde vos critères : mettez-le en
+favori, la liste s'y met à jour toute seule.</p>""")
+
+    lien_carte = f"{_e(base)}/?prix_max={prix_choisi or seo.PALIERS_ALERTE[1]}"
+    if region_choisie:
+        lien_carte += f"&region={_e(region_choisie)}"
+
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Soyez alerté</nav>
+
+<h1>Soyez alerté des maisons qui entrent au catalogue</h1>
+<p class="chapeau">Choisissez un budget et les terroirs qui vous intéressent.
+Quand une maison y entre, nous vous écrivons. C'est tout : nous ne vous mettons
+en relation avec personne, nous ne transmettons votre adresse à aucune agence,
+et nous ne touchons aucune commission.</p>
+
+{envoi}
+
+<p><a class="bouton clair" href="{lien_carte}">Voir dès maintenant ce qui correspond</a></p>
+
+<h2>Ce que nous faisons, et ce que nous ne faisons pas</h2>
+<table>
+<tr><th>Vous choisissez vos critères</th><td>oui — nous n'en fixons aucun à votre place</td></tr>
+<tr><th>Votre adresse est transmise à une agence</th><td>non, jamais</td></tr>
+<tr><th>Nous vous proposons une sélection personnalisée</th><td>non : la même liste que le site, filtrée par vos critères</td></tr>
+<tr><th>Nous organisons des visites ou négocions</th><td>non</td></tr>
+<tr><th>Nous touchons une commission</th><td>non, ni de vous ni de l'agence</td></tr>
+<tr><th>Vous contactez le vendeur</th><td>vous-même, par le lien vers l'annonce d'origine</td></tr>
+</table>
+<p>Cette page a remplacé un bloc « recevez les photos, soyez recontacté » qui,
+lui, recueillait votre adresse pour la transmettre à l'agence et rémunérait le
+site à la mise en relation. C'était une activité d'entremise, que la loi
+réserve aux titulaires d'une carte professionnelle. Nous ne l'exerçons pas.</p>
+
+<h2>Votre adresse e-mail</h2>
+<p>Elle ne sert qu'à vous envoyer les alertes que vous avez demandées. Elle
+n'est ni revendue, ni transmise à une agence, ni utilisée pour autre chose.
+Vous pouvez demander son effacement à tout moment, par simple réponse à l'un
+de nos courriers — et l'effacement est immédiat et sans condition.</p>
+
+<h2>Ce que l'alerte ne vous dit pas</h2>
+<p>Une alerte signale qu'une annonce est <em>entrée au catalogue</em>, pas
+qu'elle est encore disponible : ce sont des annonces publiées par des agences,
+relevées automatiquement, et un bien peut être vendu avant que nous le
+sachions. La date de dernière vérification figure sur chaque fiche. Le prix,
+la surface et les caractéristiques sont ceux annoncés par l'agence, que nous ne
+vérifions pas sur place.</p>
+
+<h2>Chercher tout de suite</h2>
+<ul>
+<li><a href="{_e(base + seo.URL_PETITS_PRIX)}">Maisons sous {_e(seo._euros(seo.SEUIL_PETITS_PRIX))}</a></li>
+<li><a href="{_e(base + seo.URL_SANS_TRAVAUX)}">Maisons sans travaux entre {_e(seo._tranche_sans_travaux())}</a></li>
+</ul>
+"""
+    structure = _jsonld(
+        seo.jsonld_fil([("Accueil", "/"), ("Soyez alerté", seo.URL_ALERTES)], base),
+        seo.jsonld_organisation(base))
+    return _document(titre, description, canonique, corps, structure, base)

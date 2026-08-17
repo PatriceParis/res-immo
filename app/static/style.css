@@ -353,29 +353,23 @@ body {
   object-fit: cover; display: block; z-index: 1;
 }
 
-/* ---------- mise en relation (modèle : photos + contact agence) ---------- */
-.mise-en-relation {
-  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+/* ---------- « soyez alerté » (remplace la mise en relation) ----------
+   Les vignettes verrouillées ont disparu avec le bloc : elles laissaient
+   croire que d'autres photos attendaient derrière un e-mail, alors que le
+   catalogue ne détient rien de plus que ce qu'il montre. */
+.alerte-bloc {
+  display: flex; flex-direction: column; gap: 4px;
   margin: 16px 0 4px; padding: 14px; border: 1px solid var(--badge-bord);
   border-radius: 12px; background: linear-gradient(180deg, #f3f8f3, #edf3ed);
 }
-.galerie { display: grid; grid-template-columns: repeat(2, 46px); grid-auto-rows: 46px; gap: 4px; flex: none; }
-.vignette {
-  border-radius: 6px; background: #cdd9cd center/cover no-repeat;
-  display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--encre-2);
+.alerte-bloc strong { font-size: 14.5px; }
+.alerte-bloc span { font-size: 12.5px; color: var(--encre-2); }
+.btn-alerte {
+  align-self: flex-start; margin-top: 8px; padding: 8px 14px;
+  border-radius: 8px; background: var(--accent); color: #fff;
+  font-weight: 600; text-decoration: none;
 }
-.vignette.verrou { background: #e7ede7; }
-.mer-corps { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 220px; }
-.mer-corps strong { font-size: 14.5px; }
-.mer-corps span { font-size: 12.5px; color: var(--encre-2); }
-.btn-mer {
-  align-self: flex-start; margin-top: 6px; padding: 8px 14px; border: none;
-  border-radius: 8px; background: var(--accent); color: #fff; font: inherit; font-weight: 600; cursor: pointer;
-}
-.btn-mer:hover { background: var(--marque); }
-.mer-form { display: flex; gap: 6px; margin-top: 6px; }
-.mer-form input { flex: 1; padding: 8px; border: 1px solid var(--bordure); border-radius: 8px; font: inherit; }
-.mer-note { font-size: 12px; color: var(--encre-2); margin: 8px 0 0; }
+.btn-alerte:hover { background: var(--marque); }
 
 /* ---------- responsive / mobile ---------- */
 body { overflow-x: hidden; }
@@ -425,7 +419,7 @@ body { overflow-x: hidden; }
   .modale { padding: 18px 16px 22px; border-radius: 12px; }
   .modale h2 { font-size: 18px; }
   .photo-grande { height: 190px; }
-  .mise-en-relation { padding: 12px; }
+  .alerte-bloc { padding: 12px; }
   .fiche-entete { gap: 10px; }
   .score-jeton.grand { width: 54px; height: 54px; font-size: 19px; }
   .terroir { padding: 6px 10px; }

@@ -250,6 +250,18 @@ function joursDepuis(iso) {
   return Math.floor((Date.now() - d.getTime()) / 86400000);
 }
 
+function lienAlerte(a) {
+  // Le bien qu'on regarde sert de point de départ : son budget arrondi à la
+  // dizaine de milliers, et son terroir. La page d'alertes reste libre de
+  // tout changer — c'est une suggestion, pas une sélection faite pour
+  // quelqu'un.
+  const p = new URLSearchParams();
+  if (a.prix) p.set("prix_max", String(Math.ceil(a.prix / 10000) * 10000));
+  if (a.region) p.set("region", a.region);
+  const q = p.toString();
+  return "/alertes" + (q ? "?" + q : "");
+}
+
 function fraicheur(a) {
   const jours = joursDepuis(a.revue_le);
   if (jours == null) return "";
@@ -655,19 +667,24 @@ function ouvrirFiche(id) {
       ${tuile("DPE", a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>` : "n.c.")}
     </div>
 
-    <div class="mise-en-relation">
-      <div class="galerie" aria-hidden="true">
-        <div class="vignette" style="background-image:${photoReelle(a) ? `url('${photoReelle(a)}'),` : ""}url('${illustration(a)}')"></div>
-        <div class="vignette verrou">🔒</div>
-        <div class="vignette verrou">🔒</div>
-        <div class="vignette verrou">🔒</div>
-      </div>
-      <div class="mer-corps">
-        <strong>Les autres photos et le dossier complet</strong>
-        <span>Gratuit pour vous : on vous met en relation avec ${a.agence ? echap(a.agence) : "l'agence"}
-          pour recevoir toutes les photos, le DPE détaillé et organiser la visite.</span>
-        <button class="btn-mer" id="btn-mer">Recevoir les photos &amp; être recontacté</button>
-      </div>
+    <!-- Le bloc de mise en relation a été retiré le 17 août 2026. Il
+         recueillait l'e-mail du visiteur pour le transmettre à l'agence, et
+         l'annonçait lui-même : « rémunéré à la mise en relation qualifiée ».
+         Prêter son concours, même à titre accessoire et contre rémunération,
+         à la recherche d'un immeuble pour autrui, c'est l'activité que la loi
+         Hoguet réserve aux titulaires d'une carte professionnelle. Écrire
+         « nous ne sommes pas une agence » ne change rien à ce qui est fait.
+
+         Ce qui le remplace ne met personne en relation : le visiteur choisit
+         un budget et des terroirs, et c'est NOUS qui lui écrivons. Aucune
+         coordonnée ne part chez une agence, aucune commission n'est perçue,
+         et le lien vers l'annonce d'origine reste le seul chemin vers le
+         vendeur. -->
+    <div class="alerte-bloc">
+      <strong>Soyez alerté des prochaines</strong>
+      <span>Ce bien vous parle ? Choisissez un budget et des terroirs : nous
+        vous prévenons quand une maison y entre au catalogue.</span>
+      <a class="btn-alerte" href="${lienAlerte(a)}">Créer mon alerte</a>
     </div>
 
     <section class="panneau">
@@ -729,43 +746,6 @@ function ouvrirFiche(id) {
       ${a.agence_url ? `<p class="source-ligne"><a href="${echap(a.agence_url)}" target="_blank" rel="noopener">Site de l'agence</a></p>` : ""}
       ${fraicheur(a)}
     </section>`;
-
-  const btn = $("#btn-mer");
-  if (btn) btn.addEventListener("click", () => {
-    btn.parentElement.innerHTML = `
-      <strong>Être mis en relation avec ${a.agence ? echap(a.agence) : "l'agence"}</strong>
-      <div class="mer-form">
-        <input type="email" id="mer-mail" placeholder="Votre e-mail" aria-label="Votre e-mail">
-        <button class="btn-mer" id="mer-envoi">Être recontacté</button>
-      </div>
-      <p class="mer-note" id="mer-note">Modèle : la plateforme est gratuite pour vous ;
-        elle est rémunérée à la mise en relation qualifiée avec l'agence.</p>`;
-    $("#mer-envoi").addEventListener("click", async () => {
-      const mail = ($("#mer-mail").value || "").trim();
-      const note = $("#mer-note");
-      if (!mail.includes("@")) {
-        note.textContent = "Indiquez un e-mail valide pour être recontacté.";
-        return;
-      }
-      note.textContent = "Envoi…";
-      try {
-        const r = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ annonce_id: a.id, email: mail, message: "" }),
-        });
-        if (!r.ok) throw new Error(await r.text());
-        const d = await r.json();
-        // On donne aussi le lien direct : la demande aboutit même si
-        // l'agence tarde à répondre.
-        note.innerHTML = `✓ Demande transmise${d.agence ? " à " + echap(d.agence) : ""}.`
-          + (d.url ? ` En attendant, <a href="${echap(d.url)}" target="_blank"
-               rel="noopener">voir l'annonce chez l'agence</a>.` : "");
-      } catch (e) {
-        note.textContent = "L'envoi a échoué. Réessayez dans un instant.";
-      }
-    });
-  });
 
   $("#voile").hidden = false;
   document.body.style.overflow = "hidden";
