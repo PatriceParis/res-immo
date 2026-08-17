@@ -23,8 +23,8 @@ la découverte décide ensuite si le site est exploitable.
 Ce script ne branche donc rien tout seul : il remplit l'entonnoir existant par
 le haut. C'est voulu — un domaine confirmé n'est pas encore un site collectable.
 
-Trois précautions
------------------
+Quatre précautions
+------------------
 - **La confirmation prime sur la trouvaille.** Un domaine mal attribué ferait
   entrer les biens d'autrui sous le nom d'une agence, et la règle de sortie
   effacerait ensuite de vraies annonces en croyant avoir visité sa cible. Le
@@ -33,6 +33,13 @@ Trois précautions
   d'un coup : on en prend un lot par passage, les jamais essayées d'abord, puis
   les plus anciennement essayées — la même rotation que partout ailleurs, et
   pour la même raison.
+- **On publie en chemin, pas seulement à la fin.** Un passage qui n'écrit qu'au
+  dernier tour perd tout quand il est interrompu — et un sondage réseau borné à
+  quarante-cinq minutes l'est presque toujours. Le journal de rotation
+  disparaissait alors avec le reste, si bien que le passage suivant reprenait
+  les mêmes premières agences : le script a tourné toutes les nuits sans jamais
+  produire une ligne. On écrit donc tous les PAR_PUBLICATION sondages, et l'on
+  s'arrête de soi-même avant le couperet.
 - **On frappe doucement.** Une seule requête par adresse, un délai entre
   chacune, et l'on s'arrête à la première confirmée pour une agence donnée.
 
@@ -65,6 +72,11 @@ from app.chargement import DEPARTEMENTS_CIBLES  # noqa: E402
 
 RECENSEMENT = RACINE / "data" / "agences_recensees.json"
 JOURNAL = RACINE / "data" / "sites_cherches.json"
+
+# Tous les combien on verse le travail sur le disque. Assez souvent pour qu'une
+# interruption ne coûte qu'une poignée de sondages, assez rare pour ne pas
+# réécrire le recensement — six méga-octets — à chaque agence.
+PAR_PUBLICATION = 25
 ENTETES = {
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                    "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -153,12 +165,36 @@ def chercher_le_site(agence: dict, delai: float) -> dict | None:
     return None
 
 
+def publier(recensees: list[dict], trouvees: list[dict], journal: dict) -> int:
+    """Verse les sites trouvés dans le recensement et écrit les deux fichiers.
+
+    Appelée en cours de route autant qu'à la fin : c'est elle qui fait qu'un
+    passage interrompu laisse quelque chose derrière lui. Le journal est écrit
+    à chaque fois — il est petit et c'est lui qui porte la rotation ; le
+    recensement seulement quand il a vraiment changé, car il pèse six méga.
+    """
+    par_cle = {_cle(t): t for t in trouvees}
+    remplies = 0
+    for agence in recensees:
+        trouvee = par_cle.get(_cle(agence))
+        if trouvee and not agence.get("site"):
+            agence["site"] = trouvee["site"]
+            agence["source"] = "registre+domaine"
+            remplies += 1
+    if remplies:
+        _ecrire(RECENSEMENT, recensees)
+    _ecrire(JOURNAL, journal)
+    return remplies
+
+
 def main() -> None:
     parametres = argparse.ArgumentParser(description=__doc__)
     parametres.add_argument("--lot", type=int, default=200,
                             help="agences cherchées dans ce passage")
     parametres.add_argument("--delai", type=float, default=0.5,
                             help="secondes entre deux requêtes")
+    parametres.add_argument("--minutes", type=float, default=35,
+                            help="budget de temps total du passage")
     parametres.add_argument("--departements",
                             help="codes séparés par des virgules")
     parametres.add_argument("--simuler", action="store_true",
@@ -176,34 +212,39 @@ def main() -> None:
     jamais = sum(1 for a in lot if _cle(a) not in journal)
     print(f"  ce passage en cherche {len(lot)}, dont {jamais} jamais essayée(s)")
 
-    trouvees, aujourd_hui = [], date.today().isoformat()
-    for rang, agence in enumerate(lot, 1):
-        journal[_cle(agence)] = aujourd_hui
-        site = chercher_le_site(agence, args.delai)
-        if site:
-            trouvees.append(site)
-            print(f"  [{rang}/{len(lot)}] {agence['nom'][:40]} → {site['site']}")
-
-    taux = 100 * len(trouvees) / len(lot) if lot else 0
-    print(f"\n{len(trouvees)} site(s) confirmé(s) sur {len(lot)} cherchés ({taux:.0f} %)")
-    if args.simuler:
-        print("Simulation : rien n'a été écrit.")
-        return
-
     # On REMPLIT le champ manquant sur l'entrée du registre, au lieu d'ajouter
     # une liste de plus. La découverte reprend déjà toute agence recensée
     # « munie d'un site » : rien d'autre à brancher, et le sondage habituel
     # décidera si le site est exploitable. Un dispositif de moins à tenir.
-    par_cle = {_cle(t): t for t in trouvees}
-    remplies = 0
-    for agence in recensees:
-        trouvee = par_cle.get(_cle(agence))
-        if trouvee and not agence.get("site"):
-            agence["site"] = trouvee["site"]
-            agence["source"] = "registre+domaine"
-            remplies += 1
-    _ecrire(RECENSEMENT, recensees)
-    _ecrire(JOURNAL, journal)
+    trouvees, aujourd_hui = [], date.today().isoformat()
+    fin = time.monotonic() + args.minutes * 60
+    remplies = cherchees = confirmes = 0
+    for rang, agence in enumerate(lot, 1):
+        if time.monotonic() > fin:
+            print(f"  budget de temps atteint après {rang - 1} agence(s) — "
+                  f"la suite au prochain passage.")
+            break
+        # Marquée AVANT le sondage : une agence dont le domaine met quinze
+        # secondes à ne pas répondre doit compter comme essayée, sinon la
+        # rotation repasserait éternellement sur les mêmes lenteurs.
+        journal[_cle(agence)] = aujourd_hui
+        cherchees = rang
+        site = chercher_le_site(agence, args.delai)
+        if site:
+            trouvees.append(site)
+            confirmes += 1
+            print(f"  [{rang}/{len(lot)}] {agence['nom'][:40]} → {site['site']}")
+        if rang % PAR_PUBLICATION == 0 and not args.simuler:
+            remplies += publier(recensees, trouvees, journal)
+            trouvees = []          # déjà versées dans le recensement
+
+    taux = 100 * confirmes / cherchees if cherchees else 0
+    print(f"\n{confirmes} site(s) confirmé(s) sur {cherchees} cherchés ({taux:.0f} %)")
+    if args.simuler:
+        print("Simulation : rien n'a été écrit.")
+        return
+
+    remplies += publier(recensees, trouvees, journal)
     print(f"{remplies} entrée(s) du recensement complétée(s) — la découverte "
           f"les sondera au prochain passage.")
 
