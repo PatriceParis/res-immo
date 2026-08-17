@@ -1,0 +1,132 @@
+name: Retrouver le site des agences recensées
+
+# Le recensement connaît 26 452 agences du registre dans notre périmètre, et
+# pas une seule avec un site : SIRENE donne un nom, une commune et un SIRET,
+# jamais d'adresse en ligne. Elles étaient donc parfaitement connues et
+# parfaitement injoignables — CBF Conseils, qui vendait une maison au Creusot,
+# était dans nos données depuis des semaines.
+#
+# Ce passage comble ce chaînon : il fabrique les adresses plausibles d'un nom,
+# les sonde, et ne retient que celles dont la page CONFIRME l'agence. Le champ
+# `site` de l'entrée recensée est alors rempli, et la découverte — qui reprend
+# déjà toute agence recensée munie d'un site — la sondera à son tour.
+#
+# Tous les jours, à une heure creuse et hors des créneaux de collecte. Le lot
+# est borné et tourne : les jamais essayées d'abord. Vingt-six mille agences
+# se cherchent en quelques mois, pas en une nuit, et c'est très bien ainsi.
+
+on:
+  workflow_dispatch:
+    inputs:
+      lot:
+        description: "Agences cherchées dans ce passage"
+        required: false
+        default: "300"
+      departements:
+        description: "Codes séparés par des virgules (vide = tout le périmètre)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 1 * * *"
+
+permissions:
+  contents: write
+
+# Même verrou que les collectes : tous écrivent dans data/ et committent.
+concurrency:
+  group: donnees-refuge
+  cancel-in-progress: false
+
+jobs:
+  resoudre:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+
+      - name: Chercher les sites
+        env:
+          LOT: ${{ github.event.inputs.lot }}
+          DEPTS: ${{ github.event.inputs.departements }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          OPTIONS="--lot ${LOT:-300}"
+          if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
+          timeout --kill-after=30s 45m python scripts/resoudre_sites.py $OPTIONS || true
+
+      - name: Committer
+        run: |
+          git add data/agences_recensees.json data/sites_cherches.json
+          if [ -n "$(git diff --cached --name-only)" ]; then
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            N=$(python -c "import json;print(sum(1 for a in json.load(open('data/agences_recensees.json')) if a.get('site')))" 2>/dev/null || echo 0)
+            git commit -m "Sites retrouvés : $N agences recensées joignables ($(date -u +%F))"
+            # Se replacer, c'est FUSIONNER — jamais recopier nos fichiers sur
+            # ceux du dépôt. Le recensement est aussi écrit par recensement.yml,
+            # et le journal des recherches est cumulatif : les écraser
+            # effacerait le travail d'un autre passage sans rien signaler.
+            # C'est exactement ce qui a coûté 175 annonces le 17 août — voir
+            # collecte.yml. Ici la fusion est simple : on ne fait qu'AJOUTER un
+            # champ `site` à des entrées qui existent déjà des deux côtés.
+            for essai in 1 2 3 4 5; do
+              if git push; then echo "Poussé (essai $essai)."; break; fi
+              echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
+              for f in agences_recensees.json sites_cherches.json; do
+                cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
+              done
+              git fetch origin main
+              git reset --hard origin/main
+              python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          temp = Path(os.environ["RUNNER_TEMP"])
+
+          def cle(a):
+              return a.get("siret") or f"{a.get('nom','')}|{a.get('commune','')}"
+
+          # Recensement : on ne reporte que les sites que NOUS venons de
+          # trouver, sur les entrées de la version distante. Tout ce qu'un
+          # autre passage y a ajouté entre-temps reste en place.
+          distant = json.loads(Path("data/agences_recensees.json").read_text(encoding="utf-8"))
+          notre = json.loads((temp / "agences_recensees.json").read_text(encoding="utf-8"))
+          nos_sites = {cle(a): a["site"] for a in notre
+                       if a.get("site") and a.get("source") == "registre+domaine"}
+          reportes = 0
+          for agence in distant:
+              site = nos_sites.get(cle(agence))
+              if site and not agence.get("site"):
+                  agence["site"], agence["source"] = site, "registre+domaine"
+                  reportes += 1
+          Path("data/agences_recensees.json").write_text(
+              json.dumps(distant, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+          # Journal : cumulatif, on garde la date la plus récente des deux.
+          j = Path("data/sites_cherches.json")
+          journal = json.loads(j.read_text(encoding="utf-8")) if j.exists() else {}
+          for k, jour in json.loads((temp / "sites_cherches.json").read_text(encoding="utf-8")).items():
+              if jour > journal.get(k, ""):
+                  journal[k] = jour
+          j.write_text(json.dumps(journal, ensure_ascii=False, indent=1,
+                                  sort_keys=True) + "\n", encoding="utf-8")
+          print(f"{reportes} site(s) reporté(s), {len(journal)} recherche(s) au journal")
+          PY
+              git add data/agences_recensees.json data/sites_cherches.json
+              git commit -m "Sites retrouvés : $N agences recensées joignables ($(date -u +%F))" || true
+              sleep $((essai * 5))
+            done
+          else
+            echo "Aucun site nouveau."
+          fi

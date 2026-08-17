@@ -110,3 +110,19 @@ def test_les_journaux_du_passage_sont_bien_remis():
         for journal in journaux:
             assert journal in avant_export, (
                 f"{fichier} : {journal} doit être remis AVANT l'export")
+
+
+def test_le_recensement_est_fusionne_et_non_recopie():
+    """`sites.yml` ne publie pas le catalogue : il complète le recensement,
+    que `recensement.yml` écrit aussi. Recopier le nôtre par-dessus effacerait
+    ce que l'autre passage vient d'y ajouter — la faute du 17 août, transposée
+    à un autre fichier. On ne reporte donc que NOS sites, sur les entrées de la
+    version distante.
+    """
+    reprise = bloc_de_reprise(script_de_publication("sites.yml"))
+    avant_commit = reprise[:reprise.index("git commit")]
+    assert 'cp "$RUNNER_TEMP/' not in avant_commit, (
+        "sites.yml recopie ses fichiers sur la version distante au lieu de "
+        "les fusionner")
+    assert "nos_sites" in avant_commit and "reportes" in avant_commit, (
+        "la fusion doit reporter nos sites sur les entrées distantes")
