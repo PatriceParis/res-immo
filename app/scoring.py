@@ -312,13 +312,26 @@ LIBELLES_PILIERS = {
 
 
 def classe_score(total: float) -> str:
+    """Le libellé d'une note — pas un jugement sur le bien.
+
+    « Excellent potentiel refuge » se lisait comme un constat : cette maison
+    EST un bon refuge. Or nous ne visitons rien, nos risques valent pour la
+    commune, et la note ne fait que classer les biens de ce catalogue les uns
+    par rapport aux autres sur six critères. Le libellé doit dire cela, et
+    seulement cela : « très bien noté » renvoie à la note, « excellent
+    potentiel » renvoyait à la maison.
+
+    La nuance n'est pas rhétorique. Une présentation susceptible d'induire en
+    erreur sur les résultats attendus d'un bien engage celui qui la publie —
+    et ici, elle pourrait décider un achat.
+    """
     if total >= 70:
-        return "Excellent potentiel refuge"
+        return "Très bien noté"
     if total >= 55:
-        return "Bon potentiel"
+        return "Bien noté"
     if total >= 40:
-        return "Potentiel moyen"
-    return "Potentiel limité"
+        return "Moyennement noté"
+    return "Faiblement noté"
 
 
 def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
