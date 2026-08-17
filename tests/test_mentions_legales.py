@@ -149,14 +149,40 @@ def test_l_application_elle_meme_mene_aux_pages_legales():
         assert f'href="{page}"' in index, page
 
 
-def test_le_menu_du_haut_tient_en_deux_entrees():
-    """Deux, et deux seulement : la méthode, parce qu'une note sur 100 qui ne
-    dit pas comment elle est faite n'est pas crédible ; les informations
-    légales, parce qu'une agence qui veut le retrait de ses annonces doit
-    trouver l'éditeur sans chercher. En ajouter d'autres diluerait les deux."""
+def test_le_menu_du_haut_sert_a_chercher():
+    """Deux portes d'entrée, la géographie et le budget : les deux façons dont
+    on cherche une maison. Ce qui EXPLIQUE le site descend au pied de page."""
     import re
     index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
     menu = re.search(r'<nav class="menu-haut".*?</nav>', index, re.S)
     assert menu, "le menu du haut doit exister"
-    liens = re.findall(r'href="([^"]+)"', menu.group(0))
-    assert liens == [seo.URL_METHODE, seo.URL_MENTIONS], liens
+    assert re.findall(r"<summary>([^<]+)</summary>", menu.group(0)) == [
+        "Explorer par région", "Explorer par budget"]
+    for legale in (seo.URL_MENTIONS, seo.URL_CONFIDENTIALITE):
+        assert legale not in menu.group(0), "le juridique n'est pas une porte d'entrée"
+
+
+def test_le_menu_du_haut_mene_a_tous_les_terroirs():
+    """Un menu qui n'en montrerait que trois laisserait les autres pages sans
+    aucun lien depuis l'accueil — elles existeraient sans être trouvables."""
+    import re
+    index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
+    menu = re.search(r'<nav class="menu-haut".*?</nav>', index, re.S).group(0)
+    for region in seo.TERROIRS:
+        assert seo.url_terroir(region) in menu, region
+    for page in (seo.URL_PETITS_PRIX, seo.URL_SANS_TRAVAUX):
+        assert page in menu, page
+
+
+def test_les_liens_du_menu_sont_dans_la_page_et_non_construits_au_clic():
+    """Un menu déroulant en JavaScript cacherait ces liens aux robots, qui
+    n'exécutent pas de script — c'est toute la raison des pages servies."""
+    index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
+    assert "<details class=\"menu-groupe\">" in index
+
+
+def test_le_pied_de_page_porte_ce_qui_explique_le_site():
+    index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
+    pied = index[index.index("<footer"):]
+    for page in (seo.URL_METHODE, seo.URL_MENTIONS, seo.URL_CONFIDENTIALITE):
+        assert f'href="{page}"' in pied, page
