@@ -449,5 +449,36 @@ def page_annonce(descriptif: str, identifiant: str, requete: Request):
         headers={"Cache-Control": "public, max-age=1800"})
 
 
+class StatiquesDatees(StaticFiles):
+    """Les fichiers de l'interface, avec une consigne de cache explicite.
+
+    Sans elle, `StaticFiles` n'envoie AUCUN `Cache-Control`. Le navigateur
+    applique alors sa règle par défaut — garder la page un dixième de son âge —
+    et l'hébergeur peut en faire autant. Résultat observé le 17 août : le site
+    servait encore l'ancien slogan et l'ancien menu plusieurs heures après le
+    déploiement, alors que les données affichées, elles, étaient à jour. Le
+    plus trompeur des symptômes : la page a l'air vivante, mais son habillage
+    date d'avant.
+
+    `no-cache` ne veut pas dire « ne garde rien » : cela veut dire « garde,
+    mais demande-moi si c'est encore bon ». Avec l'ETag que `StaticFiles`
+    envoie déjà, cette vérification coûte une réponse vide de 304 octets, et
+    l'utilisateur ne voit jamais une version périmée.
+
+    La page et ses deux fichiers ne portent aucune empreinte dans leur nom :
+    ils doivent donc rester solidaires. Les bibliothèques de `vendor/`, elles,
+    sont figées à une version — on peut les garder longtemps sans risque.
+    """
+
+    async def get_response(self, path: str, scope):
+        reponse = await super().get_response(path, scope)
+        if path.startswith("vendor/"):
+            reponse.headers["Cache-Control"] = "public, max-age=604800, immutable"
+        else:
+            reponse.headers["Cache-Control"] = "no-cache"
+        return reponse
+
+
 # L'interface web (fichiers statiques) est servie en dernier, sous la racine.
-app.mount("/", StaticFiles(directory=RACINE / "app" / "static", html=True), name="static")
+app.mount("/", StatiquesDatees(directory=RACINE / "app" / "static", html=True),
+          name="static")
