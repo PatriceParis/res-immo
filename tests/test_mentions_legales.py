@@ -137,3 +137,26 @@ def test_le_canal_provisoire_previent_qu_il_est_public():
     if not seo.EDITEUR["courriel"]:
         assert "aucune donnée sensible" in html
         assert "la page est publique" in html
+
+
+def test_l_application_elle_meme_mene_aux_pages_legales():
+    """Elles n'étaient reliées que depuis les pages servies par le serveur —
+    donc invisibles depuis l'application, qui est pourtant la porte d'entrée
+    de tout le monde. Une mention légale que rien ne relie n'existe pas."""
+    index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
+    for page in (seo.URL_METHODE, seo.URL_MENTIONS, seo.URL_CONFIDENTIALITE,
+                 seo.URL_ALERTES):
+        assert f'href="{page}"' in index, page
+
+
+def test_le_menu_du_haut_tient_en_deux_entrees():
+    """Deux, et deux seulement : la méthode, parce qu'une note sur 100 qui ne
+    dit pas comment elle est faite n'est pas crédible ; les informations
+    légales, parce qu'une agence qui veut le retrait de ses annonces doit
+    trouver l'éditeur sans chercher. En ajouter d'autres diluerait les deux."""
+    import re
+    index = (RACINE / "app" / "static" / "index.html").read_text(encoding="utf-8")
+    menu = re.search(r'<nav class="menu-haut".*?</nav>', index, re.S)
+    assert menu, "le menu du haut doit exister"
+    liens = re.findall(r'href="([^"]+)"', menu.group(0))
+    assert liens == [seo.URL_METHODE, seo.URL_MENTIONS], liens
