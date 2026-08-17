@@ -2024,6 +2024,17 @@
   "note": 69
  },
  {
+  "nom": "Champanelle Immobilier",
+  "site": "https://champanelleimmo.com",
+  "zone": "Plottes (71)",
+  "joignable": true,
+  "sitemap": true,
+  "schema_org": true,
+  "nb_biens": 28,
+  "motif": "",
+  "note": 68
+ },
+ {
   "nom": "Angledroit.immo",
   "site": "https://angledroit.immo",
   "zone": "dept 54",
@@ -2338,9 +2349,9 @@
   "joignable": true,
   "sitemap": true,
   "schema_org": false,
-  "nb_biens": 29,
+  "nb_biens": 30,
   "motif": "",
-  "note": 49
+  "note": 50
  },
  {
   "nom": "Foch immobilier",
@@ -2596,6 +2607,17 @@
   "note": 40
  },
  {
+  "nom": "Lemaistre Immobilier Yvetot",
+  "site": "https://lemaistre-immo.fr",
+  "zone": "dept 76",
+  "joignable": true,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 40,
+  "motif": "",
+  "note": 40
+ },
+ {
   "nom": "Apirem",
   "site": "https://apirem.fr",
   "zone": "dept 54",
@@ -2647,17 +2669,6 @@
   "sitemap": true,
   "schema_org": false,
   "nb_biens": 18,
-  "motif": "",
-  "note": 38
- },
- {
-  "nom": "Lemaistre Immobilier Yvetot",
-  "site": "https://lemaistre-immo.fr",
-  "zone": "dept 76",
-  "joignable": true,
-  "sitemap": false,
-  "schema_org": false,
-  "nb_biens": 38,
   "motif": "",
   "note": 38
  },
@@ -9138,6 +9149,72 @@
   "schema_org": false,
   "nb_biens": 0,
   "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Maisons D'en France Bourgogne",
+  "site": "https://modulisbourgogne.fr",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Louhans Agence",
+  "site": "https://louhansagence.com",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Libertissimmo",
+  "site": "https://libertissimmo.com",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectionError",
+  "note": 0
+ },
+ {
+  "nom": "Dynamic Immobilier",
+  "site": "https://dynamicimmobilier.fr",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "HTTP 502",
+  "note": 0
+ },
+ {
+  "nom": "Quartz Immobilier",
+  "site": "https://quartz-immobilier.com",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ConnectTimeout",
+  "note": 0
+ },
+ {
+  "nom": "Placyr-Immo",
+  "site": "https://placyr-immo.fr",
+  "zone": "Plottes (71)",
+  "joignable": false,
+  "sitemap": false,
+  "schema_org": false,
+  "nb_biens": 0,
+  "motif": "ReadTimeout",
   "note": 0
  }
 ]
