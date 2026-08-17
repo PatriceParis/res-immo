@@ -39,16 +39,35 @@
            2 h 30 de route (jusqu'à 3 h 35). -->
       <div class="slogan">Des maisons à moins de 350 km de Paris, notées sur six critères face au climat</div>
     </div>
-    <!-- Deux entrées, et deux seulement. « La méthode » parce qu'une note
-         sur 100 qui ne dit pas comment elle est faite n'est pas crédible, et
-         « Informations légales » parce qu'un visiteur — ou une agence qui
-         veut le retrait de ses annonces — doit trouver l'éditeur sans
-         chercher. Elles étaient en bas des pages servies par le serveur, donc
-         invisibles depuis l'application elle-même, qui est pourtant la porte
-         d'entrée de tout le monde. -->
-    <nav class="menu-haut" aria-label="À propos du site">
-      <a href="/methode">La méthode</a>
-      <a href="/mentions-legales">Informations légales</a>
+    <!-- Le menu du haut sert à CHERCHER : deux portes d'entrée, la géographie
+         et le budget, qui sont les deux façons dont on cherche une maison.
+         Ce qui explique le site — méthode, mentions légales, confidentialité —
+         descend au pied de page, où l'on va quand on se pose une question sur
+         le site plutôt que sur une maison.
+
+         Des `<details>` plutôt qu'un menu déroulant en JavaScript : c'est du
+         HTML natif, donc utilisable au clavier, lisible par un lecteur
+         d'écran, et surtout les liens sont DANS la page — un robot les suit,
+         ce qu'il ne ferait pas d'un menu construit au clic. -->
+    <nav class="menu-haut" aria-label="Explorer le catalogue">
+      <details class="menu-groupe">
+        <summary>Explorer par région</summary>
+        <ul>
+          <li><a href="/terroir/normandie">Normandie</a></li>
+          <li><a href="/terroir/centre-val-de-loire">Val de Loire et Berry</a></li>
+          <li><a href="/terroir/grand-est">Lorraine, Champagne et Ardennes</a></li>
+          <li><a href="/terroir/hauts-de-france">Picardie et Hauts-de-France</a></li>
+          <li><a href="/terroir/bourgogne-franche-comte">Bourgogne et Franche-Comté</a></li>
+          <li><a href="/terroir/pays-de-la-loire">Sarthe et Pays de la Loire</a></li>
+        </ul>
+      </details>
+      <details class="menu-groupe">
+        <summary>Explorer par budget</summary>
+        <ul>
+          <li><a href="/petits-prix">Moins de 100 000 €</a></li>
+          <li><a href="/sans-travaux">Sans travaux, 90 000 à 175 000 €</a></li>
+        </ul>
+      </details>
     </nav>
     <span class="pastille-source" id="bandeau-source"></span>
   </div>
@@ -181,28 +200,10 @@
      fiches. Ils servent aussi aux visiteurs : c'est la navigation par
      région qui manquait. -->
 <footer class="pied">
-  <nav aria-label="Terroirs">
-    <h2>Explorer par terroir</h2>
-    <ul>
-      <li><a href="/terroir/normandie">Maisons à vendre en Normandie</a></li>
-      <li><a href="/terroir/centre-val-de-loire">Val de Loire et Berry</a></li>
-      <li><a href="/terroir/grand-est">Lorraine, Champagne et Ardennes</a></li>
-      <li><a href="/terroir/hauts-de-france">Picardie et Hauts-de-France</a></li>
-      <li><a href="/terroir/bourgogne-franche-comte">Bourgogne et Franche-Comté</a></li>
-      <li><a href="/terroir/pays-de-la-loire">Sarthe et Pays de la Loire</a></li>
-    </ul>
-  </nav>
-  <nav aria-label="Petits prix">
-    <h2>Explorer par budget</h2>
-    <ul>
-      <li><a href="/petits-prix">Maisons à moins de 100 000 €, classées par résilience</a></li>
-      <li><a href="/sans-travaux">Maisons sans travaux entre 90 000 € et 175 000 €</a></li>
-    </ul>
-  </nav>
   <nav aria-label="À propos">
     <h2>À propos de ce site</h2>
     <ul>
-      <li><a href="/methode">Comment la note de résilience est calculée</a></li>
+      <li><a href="/methode">Méthodologie de la note de résilience</a></li>
       <li><a href="/mentions-legales">Mentions légales</a></li>
       <li><a href="/confidentialite">Politique de confidentialité</a></li>
       <li><a href="/alertes">Soyez alerté des nouvelles maisons</a></li>

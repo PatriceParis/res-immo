@@ -85,13 +85,31 @@ body {
 
 .legende-score { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bordure); font-size: 12.5px; color: var(--encre-2); }
 .menu-haut { display: flex; gap: 18px; align-items: center; }
-.menu-haut a {
-  color: var(--fond); text-decoration: none; font-size: 13.5px; font-weight: 600;
-  opacity: .88; border-bottom: 1px solid transparent; padding-bottom: 2px;
+.menu-groupe { position: relative; }
+.menu-groupe > summary {
+  color: var(--fond); font-size: 13.5px; font-weight: 600; opacity: .88;
+  cursor: pointer; list-style: none; padding: 4px 0; white-space: nowrap;
 }
-.menu-haut a:hover { opacity: 1; border-bottom-color: currentColor; }
+.menu-groupe > summary::-webkit-details-marker { display: none; }
+.menu-groupe > summary::after { content: " ▾"; opacity: .7; }
+.menu-groupe[open] > summary { opacity: 1; }
+.menu-groupe > ul {
+  position: absolute; z-index: 900; top: 100%; left: 0; margin: 6px 0 0;
+  padding: 8px; min-width: 232px; list-style: none;
+  background: var(--carte, #fff); border: 1px solid var(--bordure);
+  border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+.menu-groupe > ul a {
+  display: block; padding: 7px 10px; border-radius: 7px;
+  color: var(--encre); text-decoration: none; font-size: 13.5px; font-weight: 500;
+}
+.menu-groupe > ul a:hover { background: var(--badge-fond, #e6ece1); }
 @media (max-width: 640px) {
-  .menu-haut { gap: 12px; font-size: 12.5px; flex-wrap: wrap; }
+  .menu-haut { gap: 12px; flex-wrap: wrap; }
+  .menu-groupe > summary { font-size: 12.5px; }
+  /* Sur mobile le menu se déplie DANS le flux : une liste flottante sortirait
+     de l'écran, et l'en-tête est déjà en plusieurs lignes. */
+  .menu-groupe > ul { position: static; min-width: 0; box-shadow: none; }
 }
 .legende-note { margin: 10px 0 0; line-height: 1.45; }
 .legende-note a { color: var(--marque); }
