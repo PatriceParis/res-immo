@@ -50,6 +50,15 @@ MOTIFS = {
         r"poeles?|cheminees?|inserts?|chaudieres? (?:a )?bois"
         r"|granules|bois de chauffage"
     ),
+    # Le poêle de MASSE n'est pas un poêle à bois de plus. Il restitue par
+    # rayonnement pendant douze à vingt-quatre heures après une flambée d'une
+    # heure, ne demande ni ventilateur ni électronique — donc fonctionne sans
+    # électricité — et porte souvent un four. C'est le seul chauffage qui
+    # tienne une panne de réseau en hiver, et il se nomme dans les annonces.
+    "poele_de_masse": (
+        r"poeles? de masse|poeles? a (?:forte )?inertie|poeles? a accumulation"
+        r"|steatite|pierre ollaire|rocket stove|poeles? maconnes?"
+    ),
     "solaire": r"photovoltaiques?|panneaux? solaires?|energie solaire",
     "verger_potager": r"vergers?|potagers?|arbres? fruitiers?|\bfruitiers\b",
     "serre": r"\bserres?\b",
@@ -109,14 +118,33 @@ def _pilier_eau(f: dict) -> float:
     return min(points, 12)
 
 
-def _pilier_abri(f: dict) -> float:
+def _pilier_abri(f: dict, r: dict | None = None) -> float:
     """18 points. La cave est l'atout signature de l'application — et elle est
-    réellement mentionnée dans les annonces, donc elle trie vraiment."""
+    réellement mentionnée dans les annonces, donc elle trie vraiment.
+
+    Mais une cave n'est un atout QUE si l'eau ne l'atteint pas. En zone
+    inondable, elle cesse d'être un cellier pour devenir le point faible du
+    bâti : la nappe en charge pousse sur les parois enterrées, décolle les
+    étanchéités et peut soulever la dalle. La bonifier sans regarder l'eau
+    revenait à récompenser une vulnérabilité — et c'est précisément sur les
+    biens bon marché en fond de vallée que l'erreur se produisait.
+
+    On ne l'annule pas : le stockage reste réel, et notre donnée d'inondation
+    vaut pour la COMMUNE, pas pour la parcelle. On retire la moitié du bonus
+    quand la commune est documentée inondable, la totalité quand le bien
+    lui-même l'est.
+    """
+    r = r or {}
     points = 0
     if f.get("troglodyte"):
         points += 8      # habitat troglodyte : abri enterré, frais, cellier naturel
     if f.get("cave"):
-        points += 9
+        if r.get("inondation"):
+            points += 0          # le bien est en zone inondable : la cave est un risque
+        elif r.get("inondation_commune"):
+            points += 4          # commune documentée : on tempère, sans trancher
+        else:
+            points += 9
     if f.get("grange_dependance"):
         points += 5
     if f.get("atelier"):
@@ -128,7 +156,9 @@ def _pilier_energie(f: dict, dpe: str | None) -> float:
     """17 points. Le chauffage au bois est très souvent indiqué (poêle, insert,
     cheminée) : c'est un critère lisible dans les annonces."""
     points = 0
-    if f.get("bois"):
+    if f.get("poele_de_masse"):
+        points += 10     # tient une panne de réseau en hiver, et cuit les repas
+    elif f.get("bois"):
         points += 7
     if f.get("solaire"):
         points += 5
@@ -400,7 +430,7 @@ def calculer_score(annonce: dict) -> dict:
     r = annonce.get("risques", {})
     valeurs = {
         "eau": _pilier_eau(f),
-        "abri": _pilier_abri(f),
+        "abri": _pilier_abri(f, r),
         "energie": _pilier_energie(f, annonce.get("dpe")),
         "alimentation": _pilier_alimentation(f, annonce.get("terrain_m2")),
         "risques": _pilier_risques(r),
