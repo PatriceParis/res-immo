@@ -55,6 +55,14 @@ def main() -> None:
             print(f"✘ {annonce['commune']}: API injoignable")
             continue
 
+        # Le NIVEAU d'argile vient d'un point d'accès distinct : le rapport
+        # général ne dit que « documenté sur la commune », et le traduire en
+        # niveau donnait la même valeur à 99 % des biens. Un appel de plus,
+        # mais c'est le seul risque du barème qui distingue vraiment un
+        # terrain d'un autre — et sa carte vient d'être révisée.
+        resultat["argile"] = georisques.exposition_argile(
+            annonce["lat"], annonce["lon"])
+
         # On conserve la distance à la centrale déjà calculée localement.
         resultat["nucleaire_km"] = risques.get("nucleaire_km")
         resultat["nucleaire_nom"] = risques.get("nucleaire_nom")
