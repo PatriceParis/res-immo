@@ -201,6 +201,26 @@ def region_du_slug(valeur: str) -> str | None:
 SEUIL_PETITS_PRIX = 100_000
 URL_PETITS_PRIX = "/petits-prix"
 
+# Deuxième croisement, sur la même idée : une tranche de prix ET un état.
+#
+# « Maison sans travaux » est la requête de l'acheteur pressé — celui qui ne
+# peut pas se loger ailleurs pendant un chantier, ou qui n'a pas le second
+# budget. Les portails y répondent par une case à cocher que le vendeur remplit
+# lui-même et que personne ne vérifie.
+#
+# Nous n'avons pas de case : nous avons le texte des annonces, et nous ne
+# retenons que celles qui l'AFFIRMENT (voir app/etat_du_bien.py). Le silence
+# n'est pas une bonne nouvelle — cent soixante-deux annonces de la tranche ne
+# disent rien de leur état — et cette page ne le compte pas comme telle. C'est
+# ce qui la distingue, et c'est ce qu'elle doit écrire noir sur blanc.
+#
+# La borne basse existe parce qu'en dessous « sans travaux » n'est presque
+# jamais vrai ; la borne haute, parce qu'au-delà l'acheteur pressé n'est plus
+# celui-là. Toutes deux sont rondes pour se retenir.
+PLANCHER_SANS_TRAVAUX = 90_000
+PLAFOND_SANS_TRAVAUX = 175_000
+URL_SANS_TRAVAUX = "/sans-travaux"
+
 
 # --- Formulations ----------------------------------------------------------
 
@@ -370,6 +390,66 @@ def reponse_petits_prix(nombre: int, bien_notes: int, communes: int,
     return " ".join(phrases)
 
 
+def _tranche_sans_travaux() -> str:
+    return (f"{_euros(PLANCHER_SANS_TRAVAUX)} et "
+            f"{_euros(PLAFOND_SANS_TRAVAUX)}")
+
+
+def titre_sans_travaux(nombre: int) -> str:
+    return (f"Maisons sans travaux entre {_tranche_sans_travaux()} — "
+            f"{nombre} biens qui l'annoncent")
+
+
+def description_sans_travaux(nombre: int, bien_notes: int,
+                             prix_median: int | None) -> str:
+    prix = f" Prix médian {_euros(prix_median)}." if prix_median else ""
+    return (f"{nombre} maisons à vendre entre {_tranche_sans_travaux()} à "
+            f"moins de 350 km de Paris dont l'annonce indique qu'il n'y a pas "
+            f"de travaux à prévoir, classées par note de résilience. "
+            f"{bien_notes} dépassent 40 sur 100.{prix}")
+
+
+def reponse_sans_travaux(nombre: int, dans_la_tranche: int, muettes: int,
+                         communes: int, prix_median: int | None,
+                         bien_notes: int) -> str:
+    """Le paragraphe citable — et l'aveu qui le rend crédible.
+
+    Toutes les réponses à « maison sans travaux » reposent sur une case cochée
+    par le vendeur. La nôtre repose sur ce que l'annonce écrit, ce qui est plus
+    honnête mais incomplet : la plupart des annonces ne disent rien. Le dire
+    dans le paragraphe même est le seul moyen que la page ne promette pas plus
+    qu'elle ne tient.
+    """
+    phrases = [
+        f"Refuge Immo suit {dans_la_tranche} maisons à vendre entre "
+        f"{_tranche_sans_travaux()} à moins de 350 km de Paris. "
+        f"{nombre} d'entre elles indiquent explicitement, dans leur annonce, "
+        f"qu'aucun travaux n'est à prévoir — « habitable de suite », "
+        f"« entièrement rénovée », « aucun travaux à prévoir » — et ce sont "
+        f"celles que liste cette page, réparties sur {communes} communes."
+    ]
+    phrases.append(
+        f"Les {muettes} autres ne sont pas écartées parce qu'elles auraient "
+        f"des travaux : elles n'en parlent tout simplement pas. Une annonce "
+        f"muette n'est pas une bonne nouvelle, et cette page ne la compte pas "
+        f"comme telle.")
+    if prix_median:
+        phrases.append(f"Le prix médian de la sélection est de "
+                       f"{_euros(prix_median)}.")
+    phrases.append(
+        f"Le classement se fait par note de résilience et non par prix : "
+        f"{bien_notes} de ces biens atteignent 40 sur 100 ou davantage. La "
+        f"note se construit sur quatre piliers — la ressource en eau, "
+        f"l'exposition à la chaleur et aux risques naturels, l'autonomie du "
+        f"logement et l'accès à Paris. Les risques proviennent de Géorisques, "
+        f"service public de l'État.")
+    phrases.append(
+        "« Sans travaux » est ici la parole de l'agence, relevée dans son "
+        "annonce, et non un constat que nous aurions fait sur place. Elle ne "
+        "remplace ni une visite ni les diagnostics obligatoires.")
+    return " ".join(phrases)
+
+
 # --- Données structurées ---------------------------------------------------
 
 def jsonld_annonce(bien: dict, base: str = SITE) -> dict:
@@ -494,7 +574,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
     """Le plan du site : accueil, terroirs, puis chaque annonce."""
     jour = jour or date.today().isoformat()
     entrees = [(base + "/", "1.0", "daily"),
-               (base + URL_PETITS_PRIX, "0.9", "daily")]
+               (base + URL_PETITS_PRIX, "0.9", "daily"),
+               (base + URL_SANS_TRAVAUX, "0.9", "daily")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]
@@ -582,6 +663,10 @@ def llms_txt(total: int, par_region: dict, base: str = SITE) -> str:
                f"({base}{URL_PETITS_PRIX}) : la sélection à petit prix, "
                f"classée par note de résilience et non par prix — un bien "
                f"bon marché n'est pas forcément un bien vivable.",
+               f"- [Maisons sans travaux entre {_tranche_sans_travaux()}]"
+               f"({base}{URL_SANS_TRAVAUX}) : les biens dont l'annonce indique "
+               f"explicitement qu'aucun travaux n'est à prévoir. Les annonces "
+               f"muettes sur ce point ne sont pas comptées comme sans travaux.",
                f"- [Plan du site]({base}/sitemap.xml) : toutes les annonces.",
                ""]
     return "\n".join(lignes)
