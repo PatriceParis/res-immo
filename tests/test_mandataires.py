@@ -89,9 +89,13 @@ def test_le_decoupage_par_departement_donne_une_agence_par_departement():
 
 
 def test_les_departements_vus_il_y_a_le_plus_longtemps_passent_devant():
+    """Le journal est indexé PAR RÉSEAU — « iad:71 », jamais « 71 ». Ce test
+    passait un journal à clés nues, qui n'existe nulle part : il validait donc
+    une fiction, et la rotation était morte en production sans qu'il bronche.
+    Voir tests/test_rotation_departements.py."""
     groupes = {"71": [], "89": [], "61": []}
-    vu = {"71": "2026-08-07", "89": "2026-08-01"}      # 61 jamais visité
-    assert mandataires.ordre_des_departements(groupes, vu) == ["61", "89", "71"]
+    vu = {"iad:71": "2026-08-07", "iad:89": "2026-08-01"}   # 61 jamais visité
+    assert mandataires.ordre_des_departements(groupes, vu, "iad") == ["61", "89", "71"]
 
 
 def test_une_commune_trop_courte_ne_cree_pas_de_faux_rapprochement():
