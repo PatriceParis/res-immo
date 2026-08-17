@@ -164,8 +164,12 @@ def test_un_nombre_de_pieces_invraisemblable_n_est_pas_affiche(tmp_path, monkeyp
             "code_postal": "61130", "lat": 48.373, "lon": 0.560}
     conn = db.connexion()
     charger_liste(conn, [
+        # Le prix n'est qu'un décor : le sujet est le rapport 520 m² pour une
+        # pièce. Il valait 1 100 000 € et tombait donc sous le nouveau plafond
+        # PRIX_MAXI, qui écartait le bien avant que la règle des pièces ait son
+        # mot à dire. Baissé sous le plafond, sujet intact.
         {**base, "id": "absurde", "titre": "Propriété de grand caractère",
-         "prix": 1100000, "surface_m2": 520, "pieces": 1},
+         "prix": 690000, "surface_m2": 520, "pieces": 1},
         {**base, "id": "credible", "titre": "Longère rénovée avec cave",
          "prix": 245000, "surface_m2": 160, "pieces": 6},
     ])

@@ -111,6 +111,17 @@ _LETTRES = re.compile(r"[a-z]")
 # En-deçà, un « prix » trahit une extraction ratée (référence, n° de téléphone).
 PRIX_MINI = 15000
 
+# Au-delà, ce n'est plus le projet. L'application cherche un refuge habitable
+# et résilient, pas un patrimoine : cent treize biens du catalogue dépassaient
+# ce seuil — jusqu'à 4 494 000 € — et tenaient des places que personne ne vient
+# chercher ici.
+#
+# Le plafond est posé ICI, et nulle part ailleurs : c'est le seul point que
+# traversent les DEUX chemins, la collecte qui cesse d'en ramener et le
+# chargement qui écarte ceux déjà en base. Une copie posée d'un seul côté
+# laisserait le fichier et l'écran se contredire — c'est arrivé aux photos.
+PRIX_MAXI = 700000
+
 # Bien déjà vendu / sous compromis : l'annonce reste en ligne mais n'est plus
 # achetable. Le pastille « Vendu » du site est au SINGULIER ; le menu de
 # navigation, lui, dit « Biens vendus » au PLURIEL — que \b...\b ne capture pas.
@@ -183,5 +194,10 @@ def est_bien_valide(a: dict) -> bool:
     # pas de surface, et un « prix » de 3 480 € trahit une extraction ratée.
     prix = a.get("prix")
     if not a.get("surface_m2") and not (prix and prix >= PRIX_MINI and a.get("pieces")):
+        return False
+    # Hors projet par le haut. Le `prix and` n'est pas une précaution de style :
+    # cent dix-huit biens servis n'ont pas de prix lisible, et les comparer à un
+    # plafond les effacerait tous d'un coup.
+    if prix and prix > PRIX_MAXI:
         return False
     return True

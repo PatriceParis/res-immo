@@ -270,7 +270,15 @@ def main() -> None:
                             help="n'en collecter qu'un")
     parametres.add_argument("--minutes", type=float, default=30,
                             help="budget de temps total")
-    parametres.add_argument("--max-par-departement", type=int, default=25,
+    parametres.add_argument("--max-par-departement", type=int, default=50,
+                            # Vingt-cinq jusqu'ici. Le tour d'un département
+                            # avance deux fois plus vite, au prix d'un tour de
+                            # rotation deux fois plus lent : un passage couvre
+                            # cinq ou six départements au lieu d'une dizaine.
+                            # C'est le bon échange tant que la profondeur est
+                            # ce qui manque — la Saône-et-Loire compte 1 333
+                            # annonces IAD, et vingt-cinq par visite n'en
+                            # faisaient pas le tour en un an.
                             help="annonces visitées par département et par passage")
     parametres.add_argument("--delai", type=float, default=1.5,
                             help="secondes entre deux pages")
