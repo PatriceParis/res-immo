@@ -84,6 +84,15 @@ body {
 .bouton-secondaire:hover { border-color: var(--accent); color: var(--accent); }
 
 .legende-score { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bordure); font-size: 12.5px; color: var(--encre-2); }
+.menu-haut { display: flex; gap: 18px; align-items: center; }
+.menu-haut a {
+  color: var(--fond); text-decoration: none; font-size: 13.5px; font-weight: 600;
+  opacity: .88; border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.menu-haut a:hover { opacity: 1; border-bottom-color: currentColor; }
+@media (max-width: 640px) {
+  .menu-haut { gap: 12px; font-size: 12.5px; flex-wrap: wrap; }
+}
 .legende-note { margin: 10px 0 0; line-height: 1.45; }
 .legende-note a { color: var(--marque); }
 .legende-score h3 { margin: 0 0 8px; font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
