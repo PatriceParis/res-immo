@@ -50,11 +50,10 @@ RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
 from app import db, historique, mandataires  # noqa: E402
-from app.chargement import preparer_annonce  # noqa: E402
+from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.qualite import est_bien_valide, est_vendu  # noqa: E402
-from app.regions import REGION_PAR_DEPT, regions_cibles  # noqa: E402
 
 JOURNAL = RACINE / "data" / "mandataires_visites.json"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -111,11 +110,16 @@ def adresses_du_sitemap(sitemaps: list[str], motif) -> list[str]:
 
 
 def communes_des_terroirs() -> dict:
-    """Communes des départements ciblés, via l'API officielle."""
-    cibles = sorted({d for d, r in REGION_PAR_DEPT.items()
-                     if r in set(regions_cibles())})
+    """Communes des départements ciblés, via l'API officielle.
+
+    Le périmètre est celui du CHARGEMENT, pas celui des régions. Le Bas-Rhin,
+    le Haut-Rhin et le Territoire de Belfort appartiennent à une région ciblée
+    mais sont entièrement au-delà de 350 km : l'application écarte leurs biens
+    à l'affichage. Les mettre en file consommait un tour de rotation pour des
+    annonces qu'on jetait ensuite — trois départements sur trente-six.
+    """
     par_dept = {}
-    for dept in cibles:
+    for dept in sorted(DEPARTEMENTS_CIBLES):
         donnees = lire(f"https://geo.api.gouv.fr/departements/{dept}/communes?fields=nom")
         if not donnees:
             continue
@@ -229,7 +233,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     # sortie doit s'y abstenir, sinon elle supprime des annonces qu'elle
     # n'a jamais cherchées — voir app/historique.py.
     tronquees: set = set()
-    for dept in mandataires.ordre_des_departements(groupes, vu):
+    for dept in mandataires.ordre_des_departements(groupes, vu, cle):
         if time.monotonic() > fin_prevue:
             print("  budget de temps atteint — la suite au prochain passage.")
             break
@@ -247,7 +251,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             time.sleep(args.delai)
         gardes = etats["garde"]
         conn.commit()
-        noter_visite(f"{cle}:{dept}", date.today().isoformat())
+        noter_visite(mandataires.cle_journal(cle, dept), date.today().isoformat())
         if tronquee:
             tronquees.add(historique.identite(
                 {"agence": mandataires.nom_d_agence(reseau, dept),

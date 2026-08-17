@@ -164,11 +164,35 @@ def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dic
     return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""), a["url"]))
 
 
-def ordre_des_departements(groupes: dict, derniere_visite: dict) -> list[str]:
+def cle_journal(cle_reseau: str, departement: str) -> str:
+    """La clé d'une cible dans data/mandataires_visites.json.
+
+    Une seule fabrique, pour celui qui écrit comme pour celui qui lit. Les
+    deux avaient divergé : le collecteur notait « iad:71 », la rotation
+    cherchait « 71 ». Aucune recherche n'aboutissait, tous les départements
+    paraissaient neufs, l'égalité était tranchée par le code — donc « 01 »
+    d'abord, à chaque passage, jusqu'à épuisement du budget de temps. Le 71
+    n'a pas été revu pendant dix jours quand ses voisins l'étaient de la
+    veille, et une maison mise en ligne entre temps ne pouvait pas entrer.
+
+    C'est la faute qui avait déjà coûté cinquante-six annonces Century 21 :
+    deux copies d'une même règle, séparées, qui s'écartent. Même parade.
+    """
+    return f"{cle_reseau}:{departement}"
+
+
+def ordre_des_departements(groupes: dict, derniere_visite: dict,
+                           cle_reseau: str) -> list[str]:
     """Les départements vus il y a le plus longtemps d'abord.
 
     Même raison que la rotation des agences : sans elle, une collecte bornée
     par le temps repasserait éternellement sur les mêmes premiers et ne
     verrait jamais les derniers.
+
+    `cle_reseau` n'a pas de valeur par défaut à dessein : c'est justement son
+    absence qui a désarmé la rotation sans rien signaler. Mieux vaut un appel
+    qui échoue qu'un tri qui ment.
     """
-    return sorted(groupes, key=lambda d: (derniere_visite.get(d, ""), d))
+    return sorted(
+        groupes,
+        key=lambda d: (derniere_visite.get(cle_journal(cle_reseau, d), ""), d))
