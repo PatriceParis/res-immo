@@ -84,6 +84,8 @@ body {
 .bouton-secondaire:hover { border-color: var(--accent); color: var(--accent); }
 
 .legende-score { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bordure); font-size: 12.5px; color: var(--encre-2); }
+.legende-note { margin: 10px 0 0; line-height: 1.45; }
+.legende-note a { color: var(--marque); }
 .legende-score h3 { margin: 0 0 8px; font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
 .legende-score div { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
 .pastille { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--n4); flex: none; }
