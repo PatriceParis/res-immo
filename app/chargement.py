@@ -12,7 +12,8 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-from . import caviardage, db, extraction, gares, geo, marche, regions, scoring
+from . import (caviardage, db, etat_du_bien, extraction, gares, geo, marche,
+               regions, scoring)
 from .qualite import PRIX_MINI, est_bien_valide
 
 # Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
@@ -119,6 +120,13 @@ def preparer_annonce(brut: dict) -> dict:
     annonce["has_dependances"] = int(features.get("grange_dependance", False))
     annonce["has_potager"] = int(features.get("verger_potager", False))
     annonce["has_troglodyte"] = int(features.get("troglodyte", False))
+    # Ce que l'annonce DÉCLARE de l'état du bien. Détecté ici, comme la cave et
+    # le puits, parce que c'est ici qu'on a encore le texte de la page : l'API
+    # ne le laisse pas sortir, et le catalogue servi est reconstruit depuis les
+    # seules colonnes. Sans cette colonne, la page « sans travaux » n'aurait
+    # rien à lire. Le constat est publié ; le texte, jamais.
+    annonce["etat_declare"] = etat_du_bien.etat_declare(annonce)
+    annonce["sans_travaux"] = int(annonce["etat_declare"] == "sans_travaux")
     # Mémoire portée par le fichier exporté (app/historique.py) : on la
     # laisse telle quelle, c'est elle qui dit ce qui est nouveau.
     # Le filtre d'inondation lisait encore la clé `inondation`, disparue quand

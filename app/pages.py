@@ -424,6 +424,12 @@ pas une expertise et ne remplace pas l'état des risques, obligatoire à la
 vente. Les risques recensés valent pour la <strong>commune</strong>, pas pour
 la parcelle.</p>
 
+<h2>Voir aussi</h2>
+<ul>
+<li><a href="{_e(base + seo.URL_SANS_TRAVAUX)}">Maisons sans travaux entre {_e(seo._tranche_sans_travaux())}</a>
+ — la tranche du dessus, celle des biens dont l'annonce dit qu'ils sont prêts.</li>
+</ul>
+
 <h2>Chercher par terroir</h2>
 <ul>{terroirs}</ul>
 """
@@ -431,5 +437,118 @@ la parcelle.</p>
         seo.jsonld_liste(biens[:60], base),
         seo.jsonld_fil([("Accueil", "/"),
                         (f"Maisons sous {seuil}", seo.URL_PETITS_PRIX)], base),
+        seo.jsonld_organisation(base))
+    return _document(titre, description, canonique, corps, structure, base)
+
+
+def page_sans_travaux(biens: list[dict], stats: dict,
+                      base: str = seo.SITE) -> str:
+    """Les biens d'une tranche de prix dont l'annonce dit qu'ils sont prêts.
+
+    Tous les portails proposent un filtre « sans travaux ». Il repose sur une
+    case que le vendeur coche lui-même, et que personne ne vérifie. Nous
+    n'avons pas de case : nous avons le texte des annonces, et ne retenons que
+    celles qui l'affirment — « habitable de suite », « aucun travaux à
+    prévoir », « entièrement rénovée ».
+
+    Ce qui distingue cette page n'est donc pas sa liste, c'est son aveu : la
+    plupart des annonces ne disent rien de leur état, et une annonce muette
+    n'est pas une bonne nouvelle. La page l'écrit dès le chapeau plutôt que de
+    gonfler sa liste en comptant le silence comme une promesse. C'est aussi ce
+    qui la rend citable : elle est la seule à dire ce qu'elle ignore.
+    """
+    canonique = f"{base}{seo.URL_SANS_TRAVAUX}"
+    titre = seo.titre_sans_travaux(len(biens))
+    description = seo.description_sans_travaux(
+        len(biens), stats.get("bien_notes", 0), stats.get("prix_median"))
+    reponse = seo.reponse_sans_travaux(
+        len(biens), stats.get("dans_la_tranche", 0), stats.get("muettes", 0),
+        stats.get("communes", 0), stats.get("prix_median"),
+        stats.get("bien_notes", 0))
+
+    lignes = "".join(
+        f'<tr><td><a href="{_e(base + seo.url_annonce(b))}">'
+        f'{_e(seo.titre_annonce(b))}</a></td>'
+        f'<td>{_e(seo._euros(b.get("prix")))}</td>'
+        f'<td>{_e(round(b["score_total"]) if b.get("score_total") else "—")}</td></tr>'
+        for b in biens[:60])
+
+    terroirs = "".join(
+        f'<li><a href="{_e(base + seo.url_terroir(r))}">'
+        f'{_e(seo.TERROIRS[r]["cherche"])}</a></li>' for r in seo.TERROIRS)
+
+    tranche = seo._tranche_sans_travaux()
+    # Le lien vers la carte ne porte que la borne HAUTE : le filtre de
+    # l'accueil n'a pas de plancher, et lui en inventer un ferait promettre au
+    # bouton une liste qu'il ne montrerait pas.
+    vers_la_carte = f"{_e(base)}/?prix_max={seo.PLAFOND_SANS_TRAVAUX}"
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Maisons sans travaux</nav>
+
+<h1>Maisons sans travaux entre {_e(tranche)}, classées par résilience</h1>
+<p class="chapeau">{_e(reponse)}</p>
+
+<p>
+<a class="bouton" href="{vers_la_carte}">Voir les biens de cette tranche sur la carte</a>
+</p>
+
+<h2>Ce que contient cette sélection</h2>
+<table>
+<tr><th>Biens annoncés sans travaux</th><td>{len(biens)}</td></tr>
+<tr><th>Biens dans cette tranche de prix</th><td>{_e(stats.get("dans_la_tranche", 0))}</td></tr>
+<tr><th>Annonces muettes sur l'état</th><td>{_e(stats.get("muettes", 0))}</td></tr>
+<tr><th>Annonces qui signalent des travaux</th><td>{_e(stats.get("avec_travaux", 0))}</td></tr>
+<tr><th>Communes couvertes</th><td>{_e(stats.get("communes", 0))}</td></tr>
+{f'<tr><th>Prix médian de la sélection</th><td>{_e(seo._euros(stats["prix_median"]))}</td></tr>' if stats.get("prix_median") else ""}
+{f'<tr><th>Surface médiane</th><td>{_e(round(stats["surface_mediane"]))} m²</td></tr>' if stats.get("surface_mediane") else ""}
+<tr><th>Notés 40 sur 100 ou plus</th><td>{_e(stats.get("bien_notes", 0))}</td></tr>
+</table>
+
+<h2>Comment ces biens ont été retenus</h2>
+<p>Aucune case n'a été cochée par personne. Chaque annonce de la tranche a été
+lue, et seules ont été retenues celles qui <strong>affirment</strong> que le
+bien est prêt : « aucun travaux à prévoir », « habitable de suite »,
+« entièrement rénovée », « en bon état général ». Sont écartées celles qui
+annoncent des travaux — « à rénover », « travaux à prévoir », « projet de
+rénovation » — et celles qui n'en disent rien.</p>
+<p>Deux précautions ont demandé plus de soin que le reste. « Pas de travaux à
+prévoir » contient mot pour mot la formule qui annonce des travaux : la
+lecture traite donc la négation avant de conclure. Et « toiture en bon état »
+ne vaut pas pour le bien entier — on ne vante le gros œuvre que lorsque le
+second œuvre est à refaire.</p>
+
+<h2>Ce que cette page ne sait pas</h2>
+<p>Sur les {_e(stats.get("dans_la_tranche", 0))} biens de la tranche,
+{_e(stats.get("muettes", 0))} annonces ne disent rien de l'état du logement.
+Elles ne sont pas ici, et ce n'est pas un jugement : parmi elles se trouvent
+certainement des maisons parfaitement prêtes, dont l'agence n'a pas jugé utile
+de l'écrire. Une page qui les aurait ajoutées serait plus fournie et moins
+vraie.</p>
+<p>« Sans travaux » reste la parole de l'agence, relevée dans son annonce. Ce
+n'est pas un constat fait sur place : cela ne remplace ni une visite, ni les
+diagnostics obligatoires, ni un devis. Le mot recouvre d'ailleurs des réalités
+très différentes — un logement habitable en l'état n'est pas un logement
+isolé, et l'étiquette énergétique dit souvent le contraire du confort.</p>
+
+<h2>Les biens, du mieux noté au moins bien noté</h2>
+<table>
+<tr><th>Bien</th><th>Prix</th><th>Résilience</th></tr>
+{lignes}
+</table>
+{f'<p>… et {len(biens) - 60} autres, à parcourir sur <a href="{vers_la_carte}">la carte</a>.</p>' if len(biens) > 60 else ""}
+
+<h2>Voir aussi</h2>
+<ul>
+<li><a href="{_e(base + seo.URL_PETITS_PRIX)}">Maisons sous {_e(seo._euros(seo.SEUIL_PETITS_PRIX))}</a>
+ — la tranche du dessous, où les travaux sont presque toujours de la partie.</li>
+</ul>
+
+<h2>Chercher par terroir</h2>
+<ul>{terroirs}</ul>
+"""
+    structure = _jsonld(
+        seo.jsonld_liste(biens[:60], base),
+        seo.jsonld_fil([("Accueil", "/"),
+                        ("Maisons sans travaux", seo.URL_SANS_TRAVAUX)], base),
         seo.jsonld_organisation(base))
     return _document(titre, description, canonique, corps, structure, base)

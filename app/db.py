@@ -58,6 +58,8 @@ CREATE TABLE IF NOT EXISTS annonces (
     has_dependances   INTEGER DEFAULT 0,
     has_potager       INTEGER DEFAULT 0,
     has_troglodyte    INTEGER DEFAULT 0,
+    etat_declare      TEXT DEFAULT 'inconnu',
+    sans_travaux      INTEGER DEFAULT 0,
     vue_le            TEXT DEFAULT '',
     revue_le          TEXT DEFAULT '',
     prix_precedent    REAL,
@@ -134,7 +136,9 @@ def _migrer(conn: sqlite3.Connection) -> None:
                                 ("prix_m2", "REAL"),
                                 ("prix_m2_secteur", "REAL"),
                                 ("ecart_marche_pct", "REAL"),
-                                ("photos_json", "TEXT DEFAULT '[]'")):
+                                ("photos_json", "TEXT DEFAULT '[]'"),
+                                ("etat_declare", "TEXT DEFAULT 'inconnu'"),
+                                ("sans_travaux", "INTEGER DEFAULT 0")):
         if colonne not in existantes:
             conn.execute(f"ALTER TABLE annonces ADD COLUMN {colonne} {definition}")
 
@@ -194,6 +198,8 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "has_dependances": a.get("has_dependances", 0),
         "has_potager": a.get("has_potager", 0),
         "has_troglodyte": a.get("has_troglodyte", 0),
+        "etat_declare": a.get("etat_declare", "inconnu"),
+        "sans_travaux": a.get("sans_travaux", 0),
         "vue_le": a.get("vue_le", ""),
         "revue_le": a.get("revue_le", ""),
         "prix_precedent": a.get("prix_precedent"),

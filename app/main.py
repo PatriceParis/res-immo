@@ -385,6 +385,34 @@ def page_petits_prix(requete: Request):
                         headers={"Cache-Control": "public, max-age=1800"})
 
 
+@app.get(seo.URL_SANS_TRAVAUX)
+def page_sans_travaux(requete: Request):
+    """Les biens d'une tranche dont l'ANNONCE dit qu'ils sont prêts.
+
+    On compte aussi les muettes et celles qui annoncent des travaux : sans ces
+    deux nombres, « 53 biens sans travaux » ne se compare à rien, et la page ne
+    pourrait pas dire ce qu'elle ignore. Voir pages.page_sans_travaux.
+    """
+    catalogue = _catalogue()
+    tranche = [b for b in catalogue
+               if b.get("prix")
+               and seo.PLANCHER_SANS_TRAVAUX <= b["prix"] <= seo.PLAFOND_SANS_TRAVAUX]
+    biens = [b for b in tranche if b.get("sans_travaux")]
+    if not biens:
+        raise HTTPException(
+            status_code=404,
+            detail="aucun bien annoncé sans travaux dans cette tranche")
+    biens.sort(key=lambda b: (-(b.get("score_total") or 0), b.get("prix") or 0))
+    stats = _stats_terroir(biens) | {
+        "dans_la_tranche": len(tranche),
+        "muettes": sum(1 for b in tranche if b.get("etat_declare") == "inconnu"),
+        "avec_travaux": sum(1 for b in tranche if b.get("etat_declare") == "travaux"),
+        "bien_notes": sum(1 for b in biens if (b.get("score_total") or 0) >= 40),
+    }
+    return HTMLResponse(pages.page_sans_travaux(biens, stats, _base(requete)),
+                        headers={"Cache-Control": "public, max-age=1800"})
+
+
 @app.get("/terroir/{terroir}")
 def page_terroir(terroir: str, requete: Request):
     region = seo.region_du_slug(terroir)
