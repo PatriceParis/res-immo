@@ -296,13 +296,24 @@ def main() -> None:
     index = mandataires.index_des_communes(communes)
     print(f"  {len(index)} communes sur {len(communes)} département(s)")
 
-    fin_prevue = time.monotonic() + args.minutes * 60
+    fin_globale = time.monotonic() + args.minutes * 60
     conn = db.connexion()
     total = 0
-    choisis = [args.reseau] if args.reseau else sorted(mandataires.RESEAUX)
-    for cle in choisis:
+    # Les réseaux passaient dans l'ordre alphabétique, avec cette seule
+    # échéance commune : Capifrance s'abstenait, IAD prenait tout, et Safti —
+    # dernier de l'alphabet — n'a jamais eu son tour. On sert donc le plus
+    # anciennement vu d'abord, et on découpe le temps pour que le premier ne
+    # mange pas la part des suivants.
+    choisis = ([args.reseau] if args.reseau
+               else mandataires.ordre_des_reseaux(mandataires.RESEAUX,
+                                                  derniere_visite()))
+    print(f"\nOrdre des réseaux ce passage : {' → '.join(choisis)}")
+    for rang, cle in enumerate(choisis):
+        part = mandataires.part_de_budget(fin_globale - time.monotonic(),
+                                          len(choisis) - rang)
+        fin_reseau = min(time.monotonic() + part, fin_globale)
         total += collecter_un_reseau(conn, cle, mandataires.RESEAUX[cle], index,
-                                     fin_prevue, args)
+                                     fin_reseau, args)
     conn.close()
     print(f"\nTerminé : {total} bien(s) ajouté(s) depuis les réseaux de mandataires.")
 

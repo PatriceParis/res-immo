@@ -181,6 +181,49 @@ def cle_journal(cle_reseau: str, departement: str) -> str:
     return f"{cle_reseau}:{departement}"
 
 
+def derniere_visite_du_reseau(cle_reseau: str, derniere_visite: dict) -> str:
+    """La date la plus RÉCENTE parmi les cibles d'un réseau, ou "" s'il n'en a
+    aucune.
+
+    La plus récente, et non la plus ancienne : un réseau porte des dizaines de
+    cibles départementales, et la plus ancienne d'entre elles le ferait
+    paraître délaissé alors qu'on y est passé le matin même — il repasserait
+    devant à chaque tour, et les autres n'auraient jamais le leur.
+    """
+    prefixe = f"{cle_reseau}:"
+    dates = [jour for cle, jour in derniere_visite.items() if cle.startswith(prefixe)]
+    return max(dates) if dates else ""
+
+
+def ordre_des_reseaux(reseaux: dict, derniere_visite: dict) -> list[str]:
+    """Les réseaux vus il y a le plus longtemps d'abord.
+
+    Ils étaient parcourus dans l'ordre alphabétique, avec une seule échéance
+    commune : Capifrance s'abstenait en premier, IAD prenait tout le budget, et
+    Safti — dernier de l'alphabet — n'a jamais eu son tour. Zéro annonce Safti
+    au catalogue, pour un réseau configuré depuis toujours.
+
+    Troisième apparition de la même forme, après Century 21 et les
+    départements : un ordre fixe et un budget partagé, et la queue de liste
+    n'est jamais servie.
+    """
+    return sorted(reseaux,
+                  key=lambda cle: (derniere_visite_du_reseau(cle, derniere_visite), cle))
+
+
+def part_de_budget(restant: float, reseaux_restants: int) -> float:
+    """Le temps qu'un réseau peut prendre sans affamer les suivants.
+
+    Recalculée à CHAQUE réseau, sur le temps qui reste : ainsi la part que
+    Capifrance rend en s'abstenant au bout de trois secondes revient aux
+    autres, au lieu d'être perdue. Un seul réseau demandé garde tout — c'est
+    le cas du rattrapage, qui n'est lancé que pour ça.
+    """
+    if reseaux_restants <= 1:
+        return max(restant, 0.0)
+    return max(restant, 0.0) / reseaux_restants
+
+
 def ordre_des_departements(groupes: dict, derniere_visite: dict,
                            cle_reseau: str) -> list[str]:
     """Les départements vus il y a le plus longtemps d'abord.
