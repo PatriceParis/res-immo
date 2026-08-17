@@ -100,10 +100,24 @@ def index_des_communes(communes_par_departement: dict) -> list[tuple[str, str, s
 
 
 def commune_de_l_adresse(url: str, index: list) -> tuple[str, str] | None:
-    """(commune, département) devinés depuis l'adresse, ou None."""
+    """(commune, département) devinés depuis l'adresse, ou None.
+
+    Le nom doit être délimité par des tirets ou par les bords de l'adresse.
+    Sans cette frontière, on cherchait une simple sous-chaîne, et n'importe
+    quel mot plus long contenant le nom d'une commune la faisait gagner :
+    « plai**sance**-du-touch » devenait Sancé (71), « pont**chateau** »
+    devenait Château (71). Mesuré sur le catalogue : 572 annonces IAD sur
+    1 023 portaient une étiquette de département fausse, et 283 des 474
+    annonces dites « IAD France (71) » étaient en réalité en Gironde, en
+    Loire-Atlantique ou en Seine-Saint-Denis.
+
+    Le coût n'était pas seulement cosmétique : ces pages ont été téléchargées
+    à tort, elles occupaient le budget de collecte du département visé, et le
+    site affichait « IAD France (71) » sous une maison de Bordeaux.
+    """
     chemin = normaliser(urlparse(url).path)
     for slug, commune, departement in index:
-        if slug in chemin:
+        if re.search(rf"(?:^|-){re.escape(slug)}(?:-|$)", chemin):
             return commune, departement
     return None
 
@@ -134,6 +148,18 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]
             "agence": nom_d_agence(reseau, departement),
         })
     return retenues
+
+
+def departement_du_code_postal(code_postal) -> str | None:
+    """« 33480 » → « 33 ». Le seul juge du département quand l'adresse ment.
+
+    La Corse et l'outre-mer ne sont pas dans notre périmètre : deux chiffres
+    suffisent. On refuse tout ce qui n'est pas cinq chiffres plutôt que de
+    tronquer une valeur douteuse — un département inventé serait pire qu'un
+    département inconnu.
+    """
+    code = str(code_postal or "").strip()
+    return code[:2] if len(code) == 5 and code.isdigit() else None
 
 
 def nom_d_agence(reseau: dict, departement: str) -> str:

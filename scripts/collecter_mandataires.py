@@ -178,11 +178,25 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
     # code postal mais rarement la commune, et jamais les coordonnées.
     brut.setdefault("commune", annonce["commune"])
     brut["commune"] = brut.get("commune") or annonce["commune"]
-    brut["departement"] = brut.get("departement") or annonce["departement"]
+
+    # Le département deviné depuis l'adresse ne fait pas foi : les homonymes
+    # existent — Péronne est en Saône-et-Loire ET dans la Somme, Sainte-Hélène
+    # en Saône-et-Loire ET en Gironde. Quand la PAGE donne un code postal, il
+    # tranche, et l'étiquette d'agence suit. Sans cela le site affichait
+    # « IAD France (71) » sous une maison de Bordeaux, et le bien comptait dans
+    # le budget de collecte d'un département où il n'est pas.
+    vrai = mandataires.departement_du_code_postal(brut.get("code_postal"))
+    if vrai and vrai != annonce["departement"]:
+        if vrai not in DEPARTEMENTS_CIBLES:
+            return "ecarte"            # hors périmètre : l'adresse avait menti
+        brut["departement"] = vrai
+        brut["agence"] = mandataires.nom_d_agence(reseau, vrai)
+    else:
+        brut["departement"] = brut.get("departement") or annonce["departement"]
     if not est_bien_valide(brut):
         return "ecarte"
 
-    brut["id"] = "%s-%s" % (mandataires.normaliser(annonce["agence"]),
+    brut["id"] = "%s-%s" % (mandataires.normaliser(brut["agence"]),
                             hashlib.sha1(annonce["url"].encode()).hexdigest()[:12])
     if brut.get("lat") is None:
         geo = (_geocoder(brut.get("commune"), brut.get("code_postal"))
