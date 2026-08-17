@@ -224,6 +224,7 @@ URL_SANS_TRAVAUX = "/sans-travaux"
 URL_ALERTES = "/alertes"
 URL_MENTIONS = "/mentions-legales"
 URL_CONFIDENTIALITE = "/confidentialite"
+URL_METHODE = "/methode"
 
 # --- Identification de l'éditeur (LCEN, art. 6) ----------------------------
 #
@@ -631,7 +632,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
                (base + URL_SANS_TRAVAUX, "0.9", "daily"),
                (base + URL_ALERTES, "0.5", "monthly"),
                (base + URL_MENTIONS, "0.3", "yearly"),
-               (base + URL_CONFIDENTIALITE, "0.3", "yearly")]
+               (base + URL_CONFIDENTIALITE, "0.3", "yearly"),
+               (base + URL_METHODE, "0.7", "monthly")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]

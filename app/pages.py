@@ -125,6 +125,7 @@ agences et des réseaux de mandataires, et les note sur leur résilience au
 changement climatique. Chaque fiche renvoie vers l'annonce d'origine.</p>
 <p class="pied"><a href="{_e(base)}{seo.URL_MENTIONS}">Mentions légales</a> ·
 <a href="{_e(base)}{seo.URL_CONFIDENTIALITE}">Confidentialité</a> ·
+<a href="{_e(base)}{seo.URL_METHODE}">Méthode de la note</a> ·
 <a href="{_e(base)}{seo.URL_ALERTES}">Soyez alerté</a></p>
 </main>
 </body>
@@ -913,4 +914,107 @@ discussion et sans délai.</p>
         f"{base}{seo.URL_CONFIDENTIALITE}", corps,
         _jsonld(seo.jsonld_fil([("Accueil", "/"),
                                 ("Confidentialité", seo.URL_CONFIDENTIALITE)], base)),
+        base)
+
+
+def page_methode(base: str = seo.SITE) -> str:
+    """Ce que la note mesure, d'où viennent ses données, et ce qu'elle ignore.
+
+    Le strict nécessaire, volontairement. La note est ce que ce site apporte
+    de propre : publier la formule et ses coefficients reviendrait à la
+    donner. Ce que la loi exige n'est pas la formule — c'est que l'annonce
+    faite au public ne soit pas trompeuse. Il faut donc dire les sources, leur
+    millésime, leur ÉCHELLE, le poids relatif de chaque pilier, et surtout ce
+    que la note ne dit pas. Tout cela est ici ; le barème détaillé n'y est pas.
+
+    Le point le plus important de la page est l'échelle : nos risques valent
+    pour la COMMUNE. Une note élevée ne dit rien de la parcelle, et c'est la
+    confusion qui rendrait la note réellement trompeuse.
+    """
+    from . import scoring
+    lignes = "".join(
+        f'<tr><td>{_e(scoring.LIBELLES_PILIERS[cle])}</td>'
+        f'<td>{maxi} points</td></tr>'
+        for cle, maxi in scoring.MAX_PILIERS.items())
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Méthode</nav>
+
+<h1>Comment la note de résilience est calculée</h1>
+<p class="chapeau">Une note sur 100, construite à partir de données publiques
+et du texte des annonces. C'est un <strong>indicateur éditorial de comparaison
+entre les biens de ce catalogue</strong> — ni un diagnostic, ni une expertise,
+ni une garantie.</p>
+
+<h2>Les six piliers et leur poids</h2>
+<table>
+<tr><th>Pilier</th><th>Poids</th></tr>
+{lignes}
+</table>
+<p>Le détail du barème — quels indices comptent, pour combien de points, à
+partir de quels seuils — n'est pas publié : c'est le travail propre de ce
+site. Ce qui est publié, ci-dessous, est ce qui permet de juger si la note
+mérite d'être crue.</p>
+
+<h2>D'où viennent les données</h2>
+<table>
+<tr><th>Donnée</th><th>Source</th><th>Échelle</th></tr>
+<tr><td>Risques naturels et technologiques</td><td>Géorisques (État)</td>
+    <td><strong>Commune</strong></td></tr>
+<tr><td>Communes, population, densité</td><td>Insee et data.gouv.fr</td>
+    <td>Commune</td></tr>
+<tr><td>Coordonnées et altitude</td><td>Base Adresse Nationale, IGN</td>
+    <td>Commune et code postal</td></tr>
+<tr><td>Gares et temps de trajet</td><td>Table de gares constituée par nos soins</td>
+    <td>Gare la plus proche</td></tr>
+<tr><td>Équipements du bien (cave, puits, poêle, dépendances…)</td>
+    <td>Détection automatique dans le texte de l'annonce</td>
+    <td>Ce que l'agence a écrit</td></tr>
+</table>
+
+<h2>Ce que la note ne dit pas</h2>
+<ul>
+<li><strong>Les risques valent pour la commune, pas pour la parcelle.</strong>
+C'est la limite la plus importante de toute la page. Une commune documentée
+inondable comporte des rues sèches ; une commune sans risque recensé comporte
+des points bas. La note ne remplace pas l'état des risques, obligatoire à la
+vente, ni une visite.</li>
+<li><strong>Les équipements sont ceux que l'agence a écrits.</strong> Une
+maison peut avoir une cave dont l'annonce ne parle pas : elle ne sera pas
+créditée. Nous ne vérifions rien sur place.</li>
+<li><strong>La note compare, elle ne certifie pas.</strong> Elle situe un bien
+par rapport aux autres du catalogue. Elle ne dit ni qu'une maison est sûre, ni
+qu'elle sera habitable dans vingt ans, ni ce qu'elle vaudra.</li>
+<li><strong>Elle ne chiffre aucun travaux.</strong> Ni toiture, ni isolation,
+ni assainissement, ni mise aux normes.</li>
+<li><strong>Elle ignore l'état du bâti.</strong> Fondations, structure,
+humidité, réseaux : rien de tout cela n'est observable depuis une annonce.</li>
+</ul>
+
+<h2>Ce qui a changé récemment</h2>
+<p>Le barème évolue quand les données ou la littérature le justifient. Deux
+révisions notables :</p>
+<ul>
+<li><strong>La cave n'est bonifiée que si l'eau ne l'atteint pas.</strong> En
+zone inondable, une cave cesse d'être un cellier : la nappe en charge pousse
+sur les parois enterrées et peut soulever la dalle. Le bonus est réduit quand
+la commune est documentée inondable, et supprimé quand le bien l'est.</li>
+<li><strong>Le poêle de masse est distingué du poêle à bois ordinaire.</strong>
+Il restitue sa chaleur pendant douze à vingt-quatre heures sans électricité et
+permet de cuisiner : c'est le seul chauffage qui tienne une coupure de réseau
+en hiver.</li>
+</ul>
+
+<h2>Les mots que nous employons</h2>
+<p>« Résilient » désigne ici un score de comparaison entre les biens de ce
+catalogue, sur les six piliers ci-dessus — pas une propriété du bâtiment.
+« Commune sans inondation recensée » signifie qu'<em>aucun événement
+d'inondation ne figure dans les données Géorisques que nous avons
+consultées</em>, et rien de plus.</p>
+"""
+    return _document(
+        "Méthode de la note de résilience",
+        "Sources, échelle, poids des piliers et limites de la note de "
+        "résilience de Refuge Immo.",
+        f"{base}{seo.URL_METHODE}", corps,
+        _jsonld(seo.jsonld_fil([("Accueil", "/"), ("Méthode", seo.URL_METHODE)], base)),
         base)

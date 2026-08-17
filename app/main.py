@@ -396,6 +396,14 @@ def page_mentions(requete: Request):
                         headers={"Cache-Control": "public, max-age=86400"})
 
 
+@app.get(seo.URL_METHODE)
+def page_methode(requete: Request):
+    """Le minimum qui rend la note non trompeuse : sources, millésime,
+    échelle, poids des piliers et limites. Pas le barème."""
+    return HTMLResponse(pages.page_methode(_base(requete)),
+                        headers={"Cache-Control": "public, max-age=86400"})
+
+
 @app.get(seo.URL_CONFIDENTIALITE)
 def page_confidentialite(requete: Request):
     """Ce que le site traite comme données — c'est-à-dire très peu."""
