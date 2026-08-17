@@ -222,6 +222,47 @@ PLAFOND_SANS_TRAVAUX = 175_000
 URL_SANS_TRAVAUX = "/sans-travaux"
 
 URL_ALERTES = "/alertes"
+URL_MENTIONS = "/mentions-legales"
+URL_CONFIDENTIALITE = "/confidentialite"
+
+# --- Identification de l'éditeur (LCEN, art. 6) ----------------------------
+#
+# La loi impose que l'éditeur d'un service en ligne puisse être identifié et
+# joint. Le site n'affichait rien : ni qui l'exploite, ni où le joindre, ni qui
+# répond d'une publication. Une personne dont l'annonce est reprise, ou qui
+# veut exercer un droit sur ses données, n'avait aucune porte à laquelle
+# frapper — et la phrase « Refuge Immo n'est pas une agence » ne remplace pas
+# une identité.
+#
+# Les champs vides ne sont pas des oublis : la page dit franchement ce qui
+# manque plutôt que d'inventer. Une mention légale approximative est pire
+# qu'une mention légale incomplète, parce qu'elle a l'air complète.
+EDITEUR = {
+    "nom": "Patrice Tord",
+    "forme": "entrepreneur individuel",
+    "siren": "819273178",
+    "adresse": "",
+    "courriel": "",
+    "directeur": "Patrice Tord",
+}
+
+HEBERGEUR = {
+    "nom": "Vercel Inc.",
+    "adresse": "340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis",
+    "site": "https://vercel.com",
+}
+
+
+def siren_lisible(siren: str | None = None) -> str:
+    """« 819273178 » → « 819 273 178 », comme sur un extrait Kbis.
+
+    Sans argument, celui de l'éditeur. Avec une chaîne VIDE, rien — et non
+    l'éditeur par défaut : un appelant qui dit « pas de SIREN » ne doit pas
+    recevoir celui de quelqu'un d'autre au milieu d'une mention légale.
+    """
+    n = (EDITEUR["siren"] if siren is None else siren).replace(" ", "")
+    return " ".join(n[i:i + 3] for i in range(0, len(n), 3)) if n else ""
+
 
 # L'adresse à laquelle les demandes d'alerte arrivent. Tant qu'elle est vide,
 # la page affiche les critères et dit clairement que les alertes ne sont pas
@@ -588,7 +629,9 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
     entrees = [(base + "/", "1.0", "daily"),
                (base + URL_PETITS_PRIX, "0.9", "daily"),
                (base + URL_SANS_TRAVAUX, "0.9", "daily"),
-               (base + URL_ALERTES, "0.5", "monthly")]
+               (base + URL_ALERTES, "0.5", "monthly"),
+               (base + URL_MENTIONS, "0.3", "yearly"),
+               (base + URL_CONFIDENTIALITE, "0.3", "yearly")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]

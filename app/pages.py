@@ -57,6 +57,9 @@ img { max-width: 100%; height: auto; border-radius: 10px }
 figure.aerienne { margin: 14px 0 } 
 figure.aerienne img { width: 100%; border-radius: 10px }
 figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
+.manque { color: #9a6a2b; font-style: italic }
+.pied { font-size: 13px; color: #6b7663; margin-top: 10px }
+.pied a { color: #46543f }
 """
 
 
@@ -120,6 +123,9 @@ def _document(titre: str, description: str, canonique: str, corps: str,
 rien et ne prend aucun mandat. Il recense des annonces publiées par des
 agences et des réseaux de mandataires, et les note sur leur résilience au
 changement climatique. Chaque fiche renvoie vers l'annonce d'origine.</p>
+<p class="pied"><a href="{_e(base)}{seo.URL_MENTIONS}">Mentions légales</a> ·
+<a href="{_e(base)}{seo.URL_CONFIDENTIALITE}">Confidentialité</a> ·
+<a href="{_e(base)}{seo.URL_ALERTES}">Soyez alerté</a></p>
 </main>
 </body>
 </html>
@@ -707,3 +713,204 @@ vérifions pas sur place.</p>
         seo.jsonld_fil([("Accueil", "/"), ("Soyez alerté", seo.URL_ALERTES)], base),
         seo.jsonld_organisation(base))
     return _document(titre, description, canonique, corps, structure, base)
+
+
+def _ligne(etiquette: str, valeur: str, manque: str = "") -> str:
+    """Une ligne d'identité — ou l'aveu franc qu'elle manque encore.
+
+    Une mention légale approximative est pire qu'une mention légale
+    incomplète : elle a l'air complète, et personne ne la corrige.
+    """
+    if valeur:
+        return f"<tr><th>{_e(etiquette)}</th><td>{_e(valeur)}</td></tr>"
+    return (f'<tr><th>{_e(etiquette)}</th>'
+            f'<td class="manque">{_e(manque or "à compléter")}</td></tr>')
+
+
+def page_mentions_legales(base: str = seo.SITE) -> str:
+    """Qui édite ce site, qui en répond, et où le joindre.
+
+    La loi impose que l'éditeur d'un service en ligne puisse être identifié et
+    joint. Le site n'affichait rien de tel : une agence dont l'annonce est
+    reprise, ou une personne voulant exercer un droit sur ses données, n'avait
+    aucune porte à laquelle frapper. « Refuge Immo n'est pas une agence » n'est
+    pas une identité, et une clause d'exclusion n'a jamais tenu lieu de
+    mentions légales.
+
+    La page dit aussi ce que le service EST et n'est pas — non par prudence
+    rédactionnelle, mais parce que la qualification juridique dépend de ce
+    qu'on fait, jamais de ce qu'on déclare.
+    """
+    e, h = seo.EDITEUR, seo.HEBERGEUR
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Mentions légales</nav>
+
+<h1>Mentions légales</h1>
+
+<h2>Éditeur du site</h2>
+<table>
+{_ligne("Éditeur", e["nom"])}
+{_ligne("Forme juridique", e["forme"])}
+{_ligne("SIREN", seo.siren_lisible())}
+{_ligne("Adresse", e["adresse"])}
+{_ligne("Contact", e["courriel"])}
+{_ligne("Directeur de la publication", e["directeur"])}
+</table>
+
+<h2>Hébergeur</h2>
+<table>
+{_ligne("Hébergeur", h["nom"])}
+{_ligne("Adresse", h["adresse"])}
+{_ligne("Site", h["site"])}
+</table>
+
+<h2>Ce que ce site fait, et ce qu'il ne fait pas</h2>
+<p>{seo.NOM} recense des annonces immobilières publiées par des agences et des
+réseaux de mandataires, et leur attribue une note de résilience calculée à
+partir de données publiques. Chaque fiche renvoie vers l'annonce d'origine.</p>
+<table>
+<tr><th>Vend ou loue des biens</th><td>non</td></tr>
+<tr><th>Détient un mandat</th><td>non, aucun</td></tr>
+<tr><th>Met en relation acheteur et vendeur</th><td>non</td></tr>
+<tr><th>Transmet vos coordonnées à une agence</th><td>non, jamais</td></tr>
+<tr><th>Perçoit une commission</th><td>non</td></tr>
+<tr><th>Organise des visites, négocie, rédige des actes</th><td>non</td></tr>
+</table>
+<p>Ces lignes ne sont pas une clause d'exclusion : elles décrivent le service
+réellement rendu. Un dispositif de mise en relation rémunéré, qui existait
+jusqu'au 17 août 2026, a été retiré précisément parce qu'il ne correspondait
+plus à cette description — recueillir les coordonnées d'un acheteur pour les
+transmettre à une agence contre rémunération relève de l'entremise
+immobilière, réservée aux titulaires d'une carte professionnelle.</p>
+
+<h2>Annonces : origine, fraîcheur et retrait</h2>
+<p>Les annonces proviennent des sites des agences et des réseaux qui les
+publient. Nous n'en reprenons que des <strong>faits</strong> — prix, surface,
+nombre de pièces, terrain, commune, étiquette énergétique — et le lien vers la
+page d'origine. Le texte de vente rédigé par l'agence n'est pas republié, ni
+sur les pages ni dans notre interface programmable.</p>
+<p>Les photographies restent hébergées chez l'agence et sont affichées depuis
+ses serveurs : elle voit ce trafic et peut nous en empêcher d'un réglage.</p>
+<p>Un prix, une surface ou une disponibilité peuvent avoir changé depuis notre
+dernier passage. La date de dernière vérification figure sur chaque fiche.
+<strong>Rien de ce que nous affichons ne vaut engagement</strong> : seule
+l'annonce d'origine fait foi.</p>
+<p><strong>Vous êtes une agence et souhaitez le retrait de vos annonces ?</strong>
+Écrivez-nous : le retrait est effectué sans discussion et sans délai, et le
+site est ajouté à une liste d'exclusion pour que la collecte n'y revienne pas.
+Aucune justification n'est demandée.</p>
+
+<h2>Note de résilience</h2>
+<p>La note est un <strong>indicateur éditorial</strong> construit par nos soins
+à partir de données publiques. Ce n'est ni un diagnostic immobilier, ni une
+expertise technique, ni une garantie de sécurité, d'habitabilité ou de valeur
+future. Les risques recensés valent pour la <strong>commune</strong> et non
+pour la parcelle : ils ne remplacent pas l'état des risques, obligatoire à la
+vente.</p>
+
+<h2>Propriété intellectuelle</h2>
+<p>La note de résilience, son barème, les textes de présentation et les pages
+d'analyse sont notre travail. Les annonces, leurs textes et leurs
+photographies appartiennent à leurs auteurs et à leurs ayants droit.</p>
+
+<h2>Données personnelles</h2>
+<p>Voir la <a href="{_e(base + seo.URL_CONFIDENTIALITE)}">politique de
+confidentialité</a>.</p>
+"""
+    return _document(
+        "Mentions légales", f"Éditeur, hébergeur et cadre juridique de {seo.NOM}.",
+        f"{base}{seo.URL_MENTIONS}", corps,
+        _jsonld(seo.jsonld_fil([("Accueil", "/"),
+                                ("Mentions légales", seo.URL_MENTIONS)], base)),
+        base)
+
+
+def page_confidentialite(base: str = seo.SITE) -> str:
+    """Ce que le site fait — et surtout ne fait pas — de vos données.
+
+    La page la plus courte possible, parce que le traitement l'est : à ce jour
+    le site ne demande rien, ne dépose aucun traceur de mesure d'audience et
+    n'a aucun compte. Écrire une politique bavarde décrivant des traitements
+    qui n'existent pas serait aussi trompeur qu'en omettre.
+    """
+    e = seo.EDITEUR
+    alertes_ouvertes = bool(seo.COURRIEL_ALERTES)
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Confidentialité</nav>
+
+<h1>Politique de confidentialité</h1>
+<p class="chapeau">Le site ne vous demande rien pour être consulté : ni compte,
+ni inscription, ni adresse. Cette page dit ce qui est traité malgré tout, et
+par qui.</p>
+
+<h2>Responsable du traitement</h2>
+<table>
+{_ligne("Responsable", e["nom"])}
+{_ligne("SIREN", seo.siren_lisible())}
+{_ligne("Adresse", e["adresse"])}
+{_ligne("Contact", e["courriel"])}
+</table>
+
+<h2>Ce que nous ne faisons pas</h2>
+<ul>
+<li>Aucun compte, aucun identifiant, aucun mot de passe.</li>
+<li>Aucune régie publicitaire, aucun pixel de réseau social.</li>
+<li>Aucune revente, aucune location, aucun partage de données à des tiers
+à des fins commerciales.</li>
+<li>Aucun profilage, aucune décision automatisée vous concernant.</li>
+</ul>
+
+<h2>Ce qui est traité</h2>
+<table>
+<tr><th>Donnée</th><th>Pourquoi</th><th>Combien de temps</th></tr>
+<tr><td>Adresse IP et journaux techniques</td>
+    <td>Faire fonctionner le site et le protéger des abus. Ces journaux sont
+        tenus par l'hébergeur, non par nous.</td>
+    <td>Selon la politique de l'hébergeur</td></tr>
+<tr><td>Vos filtres de recherche</td>
+    <td>Ils voyagent dans l'adresse de la page et restent dans votre
+        navigateur. Ils ne nous parviennent pas sous une forme qui vous
+        désigne.</td>
+    <td>Non conservés</td></tr>
+<tr><td>Adresse e-mail d'alerte</td>
+    <td>{"Vous envoyer les alertes que vous avez demandées, et rien d'autre."
+        if alertes_ouvertes else
+        "Aucune n'est recueillie : les alertes ne sont pas encore ouvertes."}</td>
+    <td>{"Jusqu'à votre demande d'arrêt" if alertes_ouvertes else "—"}</td></tr>
+</table>
+
+<h2>Cookies et traceurs</h2>
+<p>Le site ne dépose <strong>aucun cookie de mesure d'audience, de publicité
+ou de réseau social</strong>. Il n'y a donc pas de bandeau de consentement à
+afficher : il n'y a rien à consentir.</p>
+<p>Deux services extérieurs sont sollicités par votre navigateur quand vous
+consultez une fiche, et ils voient de ce fait votre adresse IP :</p>
+<ul>
+<li><strong>Les photographies</strong>, qui restent hébergées chez l'agence
+qui publie l'annonce.</li>
+<li><strong>Les fonds de carte et les vues aériennes</strong>, servis par
+l'IGN et par les serveurs de tuiles cartographiques.</li>
+</ul>
+
+<h2>Vos droits</h2>
+<p>Vous disposez d'un droit d'accès, de rectification, d'effacement,
+d'opposition et de portabilité. Pour l'exercer, écrivez à l'adresse de contact
+ci-dessus. S'agissant d'une alerte e-mail, l'effacement est immédiat et sans
+condition — une simple réponse à l'un de nos courriers suffit.</p>
+<p>Vous pouvez également introduire une réclamation auprès de la Commission
+nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy,
+75007 Paris — <a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>.</p>
+
+<h2>Vous êtes une agence</h2>
+<p>Le nom de votre agence et le lien vers vos annonces figurent sur ce site.
+Pour en demander le retrait, voir les
+<a href="{_e(base + seo.URL_MENTIONS)}">mentions légales</a> : c'est fait sans
+discussion et sans délai.</p>
+"""
+    return _document(
+        "Politique de confidentialité",
+        f"Ce que {seo.NOM} traite comme données, pourquoi, et vos droits.",
+        f"{base}{seo.URL_CONFIDENTIALITE}", corps,
+        _jsonld(seo.jsonld_fil([("Accueil", "/"),
+                                ("Confidentialité", seo.URL_CONFIDENTIALITE)], base)),
+        base)

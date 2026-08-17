@@ -388,6 +388,21 @@ def page_alertes(requete: Request, prix_max: int | None = None,
         headers={"Cache-Control": "public, max-age=3600"})
 
 
+@app.get(seo.URL_MENTIONS)
+def page_mentions(requete: Request):
+    """Qui édite ce site et qui en répond. La loi l'exige, et une agence qui
+    veut le retrait de ses annonces doit avoir une porte où frapper."""
+    return HTMLResponse(pages.page_mentions_legales(_base(requete)),
+                        headers={"Cache-Control": "public, max-age=86400"})
+
+
+@app.get(seo.URL_CONFIDENTIALITE)
+def page_confidentialite(requete: Request):
+    """Ce que le site traite comme données — c'est-à-dire très peu."""
+    return HTMLResponse(pages.page_confidentialite(_base(requete)),
+                        headers={"Cache-Control": "public, max-age=86400"})
+
+
 @app.get("/terroir/{terroir}")
 def page_terroir(terroir: str, requete: Request):
     region = seo.region_du_slug(terroir)
