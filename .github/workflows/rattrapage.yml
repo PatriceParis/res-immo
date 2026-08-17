@@ -1,0 +1,172 @@
+name: Rattrapage d'un département
+
+# Le tour normal lit cinquante annonces par département et par passage :
+# de quoi avancer partout sans jamais peser sur personne. Mais un département
+# peut être très en retard — la Saône-et-Loire compte 1 333 annonces IAD, et
+# cinquante par visite n'en font pas le tour avant des mois.
+#
+# Cette tâche est là pour ces cas-là, et seulement pour eux : elle lit UN
+# département en entier, une fois, à la demande. Jamais de déclenchement
+# automatique — c'est une exception, pas un régime.
+#
+# L'espacement entre deux pages ne bouge pas. C'est lui qui rend la lecture
+# correcte vis-à-vis du site tiers, pas le volume : mille trois cents pages
+# étalées sur une heure, cela reste moins d'une requête toutes les deux
+# secondes, et le sitemap qui les annonce est publié pour être lu.
+
+on:
+  workflow_dispatch:
+    inputs:
+      departements:
+        description: "Codes séparés par des virgules"
+        required: true
+        default: "71"
+      reseau:
+        description: "iad, capifrance, safti, ou vide pour tous"
+        required: false
+        default: "iad"
+      max_par_departement:
+        description: "Plafond par département (2000 = tout)"
+        required: false
+        default: "2000"
+      delai:
+        description: "Secondes entre deux pages"
+        required: false
+        default: "1.5"
+
+permissions:
+  contents: write
+
+jobs:
+  # Étape longue, SANS le verrou partagé. Un rattrapage tient l'unité centrale
+  # pendant une heure : le lui faire tenir en plus le verrou d'écriture ferait
+  # manquer son tour à la collecte d'agences, qui passe six fois par jour et
+  # prime. Cette étape n'écrit que dans une base locale, jamais dans le dépôt.
+  lire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+
+      - name: Lire le département en entier
+        env:
+          DEPTS: ${{ github.event.inputs.departements }}
+          RESEAU: ${{ github.event.inputs.reseau }}
+          MAXDEPT: ${{ github.event.inputs.max_par_departement }}
+          DELAI: ${{ github.event.inputs.delai }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          OPTIONS="--minutes 110 --departements $DEPTS"
+          OPTIONS="$OPTIONS --max-par-departement ${MAXDEPT:-2000}"
+          OPTIONS="$OPTIONS --delai ${DELAI:-1.5}"
+          if [ -n "$RESEAU" ]; then OPTIONS="$OPTIONS --reseau $RESEAU"; fi
+          timeout --kill-after=30s 120m python scripts/collecter_mandataires.py $OPTIONS || true
+
+      - name: Enrichir les risques officiels (Géorisques)
+        run: python scripts/enrichir_risques.py --max 200 || true
+
+      - name: Vérifier que chaque photo se charge et montre bien une maison
+        run: python scripts/verifier_photos.py || true
+
+      # La base est ignorée par git : sans ce transfert, l'étape de publication
+      # repartirait d'une base vide et ne committerait rien.
+      - name: Transmettre la récolte
+        uses: actions/upload-artifact@v4
+        with:
+          name: recolte
+          path: |
+            data/refuge.db
+            data/mandataires_visites.json
+          retention-days: 1
+          if-no-files-found: error
+
+  # Étape courte, AVEC le verrou : elle seule écrit dans le dépôt, et ne le
+  # tient que le temps d'un export.
+  publier:
+    needs: lire
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: donnees-refuge
+      cancel-in-progress: false
+    steps:
+      # Volontairement APRÈS la lecture : on repart de l'état le plus récent
+      # de `main`, pour fusionner avec ce que les collectes régulières ont
+      # commité pendant l'heure écoulée plutôt que de l'écraser.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: recolte
+          path: recolte
+
+      - name: Replacer la récolte
+        run: |
+          mkdir -p data
+          # `upload-artifact` réduit les chemins à leur racine commune : les
+          # deux fichiers étant dans data/, l'archive les contient à plat. On
+          # les cherche plutôt que de parier sur leur profondeur.
+          DB=$(find recolte -name refuge.db | head -1)
+          JOURNAL=$(find recolte -name mandataires_visites.json | head -1)
+          test -n "$DB" || { echo "Base absente de l'archive."; exit 1; }
+          test -n "$JOURNAL" || { echo "Journal absent de l'archive."; exit 1; }
+          cp "$DB" data/refuge.db
+          # Le journal des visites est FUSIONNÉ, pas recopié : une collecte
+          # régulière a pu noter ses propres départements pendant l'heure de
+          # lecture, et les écraser les ferait paraître jamais visités.
+          RECOLTE="$JOURNAL" python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          depot = Path("data/mandataires_visites.json")
+          journal = json.loads(depot.read_text(encoding="utf-8")) if depot.exists() else {}
+          recolte = json.loads(Path(os.environ["RECOLTE"]).read_text(encoding="utf-8"))
+          for cle, jour in recolte.items():
+              if jour > journal.get(cle, ""):
+                  journal[cle] = jour
+          depot.write_text(json.dumps(journal, ensure_ascii=False, indent=2,
+                                      sort_keys=True) + "\n", encoding="utf-8")
+          print(f"{len(journal)} cible(s) au journal")
+          PY
+
+      - name: Auditer la cohérence des données collectées
+        run: python scripts/auditer.py || true
+
+      - name: Exporter et committer
+        run: |
+          python scripts/exporter_reel.py
+          # On ne committe que ce que ce rattrapage a le droit de dire : le
+          # catalogue et le journal des visites. Les autres fichiers de data/
+          # appartiennent aux collectes régulières.
+          git add data/annonces_reel.json data/mandataires_visites.json
+          if [ -n "$(git diff --cached --name-only)" ]; then
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
+            git commit -m "Rattrapage ${{ github.event.inputs.departements }} : $N annonces au catalogue ($(date -u +%F))"
+            for essai in 1 2 3 4 5; do
+              if git push; then echo "Poussé (essai $essai)."; break; fi
+              echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; git reset --hard origin/main; }
+              sleep $((essai * 5))
+            done
+          else
+            echo "Aucune annonce nouvelle."
+          fi
