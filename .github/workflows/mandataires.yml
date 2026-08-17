@@ -25,6 +25,16 @@ on:
         description: "Codes séparés par des virgules (vide = tour normal)"
         required: false
         default: ""
+      max_par_departement:
+        # Le tour normal en lit 25 par département et par passage : de quoi
+        # avancer partout sans jamais peser sur personne. Mais pour rattraper
+        # un département resté en arrière — la Saône-et-Loire compte 1 333
+        # annonces IAD à elle seule — 25 ne suffit pas, et il fallait jusqu'ici
+        # modifier le script pour y toucher. L'espacement entre deux pages,
+        # lui, ne bouge pas : c'est lui qui rend la chose courtoise.
+        description: "Annonces lues par département (défaut 25)"
+        required: false
+        default: ""
   schedule:
     # Juste APRÈS les créneaux de la collecte d'agences (2 h et 14 h), jamais
     # avant : les trois workflows partagent un verrou d'écriture, et celui-ci
@@ -61,11 +71,13 @@ jobs:
           RESEAU: ${{ github.event.inputs.reseau }}
           MINUTES: ${{ github.event.inputs.minutes }}
           DEPTS: ${{ github.event.inputs.departements }}
+          MAXDEPT: ${{ github.event.inputs.max_par_departement }}
           PYTHONUNBUFFERED: "1"
         run: |
           OPTIONS="--minutes ${MINUTES:-20}"
           if [ -n "$RESEAU" ]; then OPTIONS="$OPTIONS --reseau $RESEAU"; fi
           if [ -n "$DEPTS" ]; then OPTIONS="$OPTIONS --departements $DEPTS"; fi
+          if [ -n "$MAXDEPT" ]; then OPTIONS="$OPTIONS --max-par-departement $MAXDEPT"; fi
           # Même garde-fou que la collecte d'agences : la commande s'arrête à
           # coup sûr, pour que l'export ait toujours lieu.
           timeout --kill-after=30s 26m python scripts/collecter_mandataires.py $OPTIONS || true
