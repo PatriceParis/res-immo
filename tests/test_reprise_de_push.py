@@ -31,7 +31,8 @@ import yaml
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-PUBLICATIONS = ("collecte.yml", "mandataires.yml", "rattrapage.yml")
+PUBLICATIONS = ("collecte.yml", "mandataires.yml", "rattrapage.yml",
+                "verifier-liens.yml")
 
 
 def script_de_publication(fichier: str) -> str:
@@ -104,7 +105,8 @@ def test_les_journaux_du_passage_sont_bien_remis():
     for fichier, journaux in (
             ("collecte.yml", ("agences_visitees.json", "visites_tronquees.json")),
             ("mandataires.yml", ("mandataires_visites.json", "visites_tronquees.json")),
-            ("rattrapage.yml", ("mandataires_visites.json",))):
+            ("rattrapage.yml", ("mandataires_visites.json",)),
+            ("verifier-liens.yml", ("liens_morts.json", "liens_verifies.json"))):
         reprise = bloc_de_reprise(script_de_publication(fichier))
         avant_export = reprise[:reprise.index("scripts/exporter_reel.py")]
         for journal in journaux:

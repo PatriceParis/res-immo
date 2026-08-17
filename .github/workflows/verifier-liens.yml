@@ -1,0 +1,86 @@
+name: Vérification des liens d'annonces
+
+# Chaque fiche promet « voir l'annonce d'origine ». Quand le bien est vendu,
+# beaucoup de sites suppriment ou redirigent la page — et la règle de sortie
+# ne le voit pas sur les gros départements, tronqués à chaque passage. Ce
+# passage vérifie les liens en rotation (suspects d'abord), note les constats,
+# et l'export retire au DEUXIÈME constat — jamais au premier : un site peut
+# tousser une heure sans que ses annonces soient mortes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      cibles:
+        description: "Ne vérifier que les URL contenant ce texte (vide = rotation)"
+        required: false
+        default: ""
+      max:
+        description: "Liens vérifiés (défaut 150)"
+        required: false
+        default: ""
+  schedule:
+    - cron: "0 5 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: donnees-refuge
+  cancel-in-progress: false
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+      - name: Vérifier les liens
+        env:
+          CIBLES: ${{ github.event.inputs.cibles }}
+          MAXI: ${{ github.event.inputs.max }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          OPTIONS="--max ${MAXI:-150}"
+          if [ -n "$CIBLES" ]; then OPTIONS="$OPTIONS --cibles $CIBLES"; fi
+          timeout --kill-after=30s 25m python scripts/verifier_liens.py $OPTIONS || true
+      - name: Exporter et committer
+        run: |
+          python scripts/exporter_reel.py
+          git add data/annonces_reel.json data/liens_morts.json data/liens_verifies.json
+          if [ -n "$(git diff --cached --name-only)" ]; then
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
+            git commit -m "Liens vérifiés : $N annonces au catalogue ($(date -u +%F))"
+            # Se replacer, c'est REFAIRE l'export sur la version distante — les
+            # journaux de CE passage sont remis d'abord, car l'export les lit.
+            # Voir collecte.yml pour l'incident qui a fixé ce motif.
+            for essai in 1 2 3 4 5; do
+              if git push; then echo "Poussé (essai $essai)."; break; fi
+              echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
+              for f in liens_morts.json liens_verifies.json; do
+                cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
+              done
+              git fetch origin main
+              git reset --hard origin/main
+              for f in liens_morts.json liens_verifies.json; do
+                cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
+              done
+              python scripts/exporter_reel.py
+              N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
+              git add data/annonces_reel.json data/liens_morts.json data/liens_verifies.json
+              git commit -m "Liens vérifiés : $N annonces au catalogue ($(date -u +%F))" || true
+              sleep $((essai * 5))
+            done
+          else
+            echo "Aucun changement."
+          fi
