@@ -18,7 +18,7 @@ sys.path.insert(0, str(RACINE))
 
 from datetime import date  # noqa: E402
 
-from app import caviardage, chargement, db, historique  # noqa: E402
+from app import caviardage, chargement, db, historique, liens  # noqa: E402
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
@@ -155,6 +155,18 @@ def main() -> None:
                - {("", "")} - historique.visites_tronquees())
     fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
+    # Les annonces dont le LIEN est mort — vérifié deux fois, à deux passages
+    # distincts (scripts/verifier_liens.py) — sortent du catalogue, quelle que
+    # soit la règle de sortie : sur les gros départements tronqués à chaque
+    # passage, elle s'abstient, et un bien vendu resterait sinon pour toujours.
+    chemin_morts = RACINE / "data" / "liens_morts.json"
+    try:
+        journal_morts = json.loads(chemin_morts.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        journal_morts = {}
+    fusionnees, liens_morts = liens.sans_liens_morts(fusionnees, journal_morts)
+    if liens_morts:
+        print(f"  {liens_morts} annonce(s) retirée(s) — lien mort confirmé")
     fusionnees = sans_doublon_d_url(fusionnees)
     fusionnees = _photo_publiee_egale_photo_affichee(fusionnees)
 
