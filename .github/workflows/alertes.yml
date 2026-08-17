@@ -1,0 +1,48 @@
+name: Envoi des alertes e-mail
+
+# Une fois par jour, après la collecte du matin (02:00) et sa vérification de
+# photos : chaque abonné confirmé reçoit les biens apparus depuis son dernier
+# envoi, selon SES critères. Pas de nouveauté = pas de courriel.
+#
+# Pas de verrou partagé : ce passage ne commit rien — l'état des abonnements
+# vit dans la base externe, jamais dans le dépôt, parce qu'une adresse e-mail
+# est une donnée personnelle et que le dépôt est public.
+#
+# Tant que les trois secrets ne sont pas posés (Settings → Secrets and
+# variables → Actions : DATABASE_URL, ALERTES_SECRET, RESEND_API_KEY), le
+# script dit qu'il n'a rien à faire et sort en succès. Voir
+# BRANCHER_LES_ALERTES.md à la racine du dépôt.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  envoyer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-local.txt
+      - name: Envoyer les alertes du jour
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ALERTES_SECRET: ${{ secrets.ALERTES_SECRET }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERTES_EXPEDITEUR: ${{ secrets.ALERTES_EXPEDITEUR }}
+          PYTHONUNBUFFERED: "1"
+        # Les journaux de ce dépôt sont publics : le script n'imprime jamais
+        # une adresse, seulement des comptes.
+        run: python scripts/envoyer_alertes.py

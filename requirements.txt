@@ -2,3 +2,7 @@
 # Pour l'utilisation locale complète (robots de collecte, tests…),
 # c'est requirements-local.txt qui est utilisé par demarrer.sh / demarrer.bat.
 fastapi>=0.110,<1.0
+# Pilote Postgres en Python pur : s'installe sans compilation, sur la
+# fonction Vercel comme sur le runner GitHub. Sert aux alertes e-mail —
+# les adresses vivent dans une base externe, jamais dans ce dépôt public.
+pg8000>=1.30,<2.0

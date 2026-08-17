@@ -8,6 +8,7 @@ Au premier démarrage, la base est remplie avec les annonces RÉELLES collectée
 from __future__ import annotations
 
 import json
+import os
 import re
 from collections import Counter
 from contextlib import asynccontextmanager
@@ -21,7 +22,7 @@ from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import db, pages, redaction, regions, seo
+from . import alertes, alertes_db, courriels, db, pages, redaction, regions, seo
 from .chargement import charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -372,6 +373,14 @@ def page_sans_travaux(requete: Request):
                         headers={"Cache-Control": "public, max-age=1800"})
 
 
+def _alertes_configurees() -> bool:
+    """Les trois clés, ou rien. Une configuration partielle serait le pire
+    état : un formulaire qui encaisse des adresses qu'aucun courriel ne peut
+    confirmer — recueillir pour perdre, la faute déjà commise une fois."""
+    return all(os.environ.get(cle, "").strip()
+               for cle in ("DATABASE_URL", "ALERTES_SECRET", "RESEND_API_KEY"))
+
+
 @app.get(seo.URL_ALERTES)
 def page_alertes(requete: Request, prix_max: int | None = None,
                  region: str = ""):
@@ -379,13 +388,103 @@ def page_alertes(requete: Request, prix_max: int | None = None,
 
     Les paramètres ne servent qu'à PRÉ-REMPLIR le formulaire depuis la fiche
     d'où l'on vient : le visiteur reste libre de tout changer. Rien n'est
-    enregistré ici — voir pages.page_alertes pour le pourquoi.
+    enregistré ici — l'inscription passe par l'API ci-dessous, et seulement
+    quand les trois clés existent.
     """
     if region and region not in seo.TERROIRS:
         region = ""
     return HTMLResponse(
-        pages.page_alertes({}, prix_max, region, _base(requete)),
-        headers={"Cache-Control": "public, max-age=3600"})
+        pages.page_alertes({}, prix_max, region, _base(requete),
+                           api_active=_alertes_configurees()),
+        headers={"Cache-Control": "public, max-age=600"})
+
+
+class DemandeAlerte(BaseModel):
+    """Une alerte = les critères que le visiteur a fixés, et son adresse."""
+
+    email: str = Field(min_length=5, max_length=180)
+    prix_max: int | None = None
+    terroirs: list[str] = Field(min_length=1, max_length=12)
+
+
+@app.post("/api/alertes")
+def creer_alerte(demande: DemandeAlerte, requete: Request):
+    """Enregistre l'inscription NON confirmée et envoie le lien d'activation.
+
+    Rien ne part vers une agence, rien n'est vendu : le seul courriel émis va
+    au demandeur lui-même, et tant qu'il n'a pas cliqué, il ne se passera
+    plus rien — n'importe qui peut taper l'adresse d'autrui dans un
+    formulaire public, l'activation prouve que le destinataire est d'accord.
+    """
+    if not _alertes_configurees():
+        raise HTTPException(status_code=503,
+                            detail="Les alertes ne sont pas encore ouvertes.")
+    try:
+        email, prix, terroirs = alertes.valider(
+            demande.email, demande.prix_max, demande.terroirs)
+    except ValueError as erreur:
+        raise HTTPException(status_code=422, detail=str(erreur))
+    secret = os.environ["ALERTES_SECRET"]
+    conn = alertes_db.connexion()
+    try:
+        alertes_db.preparer(conn)
+        alertes_db.inscrire(conn, email, prix, terroirs)
+    finally:
+        conn.close()
+    sujet, texte = alertes.corps_confirmation(email, prix, terroirs, secret,
+                                              _base(requete))
+    if not courriels.envoyer(email, sujet, texte):
+        # L'inscription attend en base ; sans courriel d'activation elle est
+        # inerte. Le dire vaut mieux qu'un « merci » mensonger.
+        raise HTTPException(status_code=502,
+                            detail="Le courriel d'activation n'a pas pu partir. "
+                                   "Réessayez dans un instant.")
+    return {"ok": True}
+
+
+@app.get("/api/alertes/confirmer")
+def confirmer_alerte(requete: Request, email: str = "", jeton: str = ""):
+    """Le clic d'activation. Le jeton prouve que le lien vient de NOS courriels."""
+    if not _alertes_configurees():
+        raise HTTPException(status_code=503,
+                            detail="Les alertes ne sont pas encore ouvertes.")
+    if not alertes.jeton_valide(email, os.environ["ALERTES_SECRET"], jeton):
+        raise HTTPException(status_code=403, detail="Lien d'activation invalide.")
+    conn = alertes_db.connexion()
+    try:
+        alertes_db.preparer(conn)
+        connue = alertes_db.confirmer(conn, email.strip().lower())
+    finally:
+        conn.close()
+    if not connue:
+        raise HTTPException(status_code=404, detail="Inscription introuvable.")
+    return HTMLResponse(pages.page_message(
+        "Alerte activée",
+        "C'est fait : vous recevrez un courriel quand une maison entrera au "
+        "catalogue dans vos critères. Chaque envoi contient son lien de "
+        "désinscription — l'effacement est immédiat et sans condition.",
+        _base(requete)))
+
+
+@app.get("/api/alertes/desinscrire")
+def desinscrire_alerte(requete: Request, email: str = "", jeton: str = ""):
+    """L'effacement promis par la politique de confidentialité : immédiat."""
+    if not _alertes_configurees():
+        raise HTTPException(status_code=503,
+                            detail="Les alertes ne sont pas encore ouvertes.")
+    if not alertes.jeton_valide(email, os.environ["ALERTES_SECRET"], jeton):
+        raise HTTPException(status_code=403, detail="Lien invalide.")
+    conn = alertes_db.connexion()
+    try:
+        alertes_db.preparer(conn)
+        alertes_db.supprimer(conn, email.strip().lower())
+    finally:
+        conn.close()
+    return HTMLResponse(pages.page_message(
+        "Alerte supprimée",
+        "Votre adresse vient d'être effacée : plus aucun courriel ne partira. "
+        "Il n'en reste aucune trace chez nous.",
+        _base(requete)))
 
 
 @app.get(seo.URL_MENTIONS)
