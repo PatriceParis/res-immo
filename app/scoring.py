@@ -220,11 +220,11 @@ def _pilier_risques(r: dict) -> float:
         points -= 8
     elif r.get("inondation_commune"):
         points -= 2
-    argile = r.get("argile") or 0
-    if argile >= 2:
-        points -= 3
-    elif argile == 1:
-        points -= 1
+    # Niveau d'exposition au retrait-gonflement (carte BRGM). None = inconnu :
+    # on ne retire rien, mais on ne blanchit pas non plus — l'alerte le dira.
+    argile = r.get("argile")
+    if argile is not None:
+        points -= {3: 5, 2: 3, 1: 1}.get(int(argile), 0)
     seveso = r.get("seveso_km")
     if seveso is not None:
         if seveso < 5:
@@ -384,8 +384,10 @@ def _alertes(r: dict, dpe: str | None) -> list[str]:
     alertes = []
     if r.get("inondation"):
         alertes.append("Zone inondable")
-    if (r.get("argile") or 0) >= 2:
-        alertes.append("Sols argileux (retrait-gonflement)")
+    argile = r.get("argile")
+    if argile is not None and argile >= 2:
+        alertes.append("Sols argileux (retrait-gonflement)"
+                       + (" — exposition forte" if argile >= 3 else ""))
     seveso = r.get("seveso_km")
     if seveso is not None and seveso < 10:
         alertes.append(f"Site industriel Seveso à {seveso:.0f} km")

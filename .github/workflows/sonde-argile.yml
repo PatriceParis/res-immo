@@ -1,0 +1,55 @@
+name: Sonde — forme de la réponse argile
+
+# Cette session de développement n'a pas de réseau sortant : la forme exacte
+# de la réponse de Géorisques n'a pas pu être observée, et le parseur a été
+# écrit pour encaisser plusieurs écritures plausibles. Cette sonde relève la
+# vraie, sur des points d'exposition connue, et dit ce que le parseur en tire.
+#
+# Elle n'écrit rien dans le dépôt : elle affiche, on lit, on ajuste.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sonder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Interroger Géorisques
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          sys.path.insert(0, ".")
+          import requests
+          from app import georisques
+
+          # Trois points de nos terroirs, choisis pour couvrir des contextes
+          # géologiques différents plutôt que pour confirmer une attente.
+          POINTS = [
+              ("Bellême (61)", 48.3730, 0.5600),
+              ("Chalon-sur-Saône (71)", 46.7806, 4.8536),
+              ("Beauvais (60)", 49.4295, 2.0807),
+          ]
+          for nom, lat, lon in POINTS:
+              print(f"\n=== {nom}")
+              try:
+                  r = requests.get(georisques.URL_ARGILE,
+                                   params={"latlon": f"{lon},{lat}"}, timeout=20,
+                                   headers={"User-Agent": "RefugeImmo-POC/0.1"})
+                  print("  HTTP", r.status_code)
+                  brut = r.json()
+                  print("  réponse :", json.dumps(brut, ensure_ascii=False)[:600])
+                  print("  niveau lu par le parseur :", georisques.niveau_argile(brut))
+              except Exception as e:
+                  print(f"  échec : {e.__class__.__name__} — {e}")
+          PY
