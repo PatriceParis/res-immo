@@ -29,7 +29,10 @@ ZONES = [
     {"nom": "Château-Thierry", "lat": 49.0450, "lon": 3.4028, "rayon_km": 30},
     {"nom": "Soissons",        "lat": 49.3817, "lon": 3.3236, "rayon_km": 25},
     {"nom": "Noyon",           "lat": 49.5836, "lon": 3.0000, "rayon_km": 25},
-    {"nom": "Compiègne",       "lat": 49.4179, "lon": 2.8261, "rayon_km": 25},
+    # Rayon porté de 25 à 30 km : seize biens du catalogue tombaient dans
+    # l'anneau manquant. Élargir vaut mieux qu'ajouter un second cercle
+    # à côté — deux centres voisins paient deux fois le même territoire.
+    {"nom": "Compiègne",       "lat": 49.4179, "lon": 2.8261, "rayon_km": 30},
     {"nom": "Beauvais",        "lat": 49.4295, "lon": 2.0807, "rayon_km": 30},
     {"nom": "Vendôme",         "lat": 47.7931, "lon": 1.0656, "rayon_km": 30},
     {"nom": "Nogent-le-Rotrou", "lat": 48.3230, "lon": 0.8175, "rayon_km": 25},
@@ -93,6 +96,42 @@ ZONES = [
     {"nom": "Écommoy (72)",             "lat": 47.8267, "lon": 0.2868, "rayon_km": 30},
     {"nom": "Épernay (51)",             "lat": 49.0402, "lon": 3.9605, "rayon_km": 30},
     {"nom": "Épinal (88)",              "lat": 48.1702, "lon": 6.4849, "rayon_km": 30},
+
+    # Les quinze zones qui suivent ne sont pas devinées : elles sont CALCULÉES
+    # sur les biens que le catalogue contient déjà et qu'aucune zone ne
+    # couvrait. Mesuré le 17 août : 443 des 1 459 biens servis et géolocalisés
+    # — trente pour cent — étaient hors de toute zone. Pas dans des lieux
+    # obscurs : Rouen, Bayeux, Lisieux, Charolles, Digoin. Ils étaient arrivés
+    # par les réseaux de mandataires, qui travaillent par département, ou par
+    # des ajouts à la main. La découverte par OpenStreetMap, elle, n'avait
+    # jamais regardé là — et n'y trouvait donc aucune agence locale.
+    #
+    # Le placement est glouton : on prend la commune qui couvre le plus de
+    # biens orphelins, on la retire du décompte, on recommence. Les
+    # coordonnées viennent du catalogue, donc de la Base Adresse Nationale.
+    # Résultat mesuré : l'angle mort tombe de 443 à 147 biens.
+    {"nom": "Vitry-en-Charollais (71)",  "lat": 46.4607, "lon": 4.0676, "rayon_km": 30},
+    {"nom": "Le Trait (76)",             "lat": 49.4842, "lon": 0.8023, "rayon_km": 30},
+    {"nom": "Villers-Bocage (14)",       "lat": 49.0798, "lon": -0.6560, "rayon_km": 30},
+    {"nom": "Saint-Georges-sur-Eure (28)", "lat": 48.4178, "lon": 1.3555, "rayon_km": 30},
+    {"nom": "Plottes (71)",              "lat": 46.5431, "lon": 4.8875, "rayon_km": 30},
+    {"nom": "Lignières (18)",            "lat": 46.7618, "lon": 2.1959, "rayon_km": 30},
+    {"nom": "Saint-Valery-sur-Somme (80)", "lat": 50.1751, "lon": 1.6320, "rayon_km": 30},
+    {"nom": "Broglie (27)",              "lat": 49.0012, "lon": 0.5316, "rayon_km": 30},
+    {"nom": "Mussy-sur-Seine (10)",      "lat": 47.9794, "lon": 4.4972, "rayon_km": 30},
+    {"nom": "Villerupt (54)",            "lat": 49.4644, "lon": 5.9269, "rayon_km": 30},
+    {"nom": "Rosières-en-Santerre (80)", "lat": 49.8162, "lon": 2.7018, "rayon_km": 30},
+    {"nom": "Thénioux (18)",             "lat": 47.2610, "lon": 1.9396, "rayon_km": 30},
+    {"nom": "Crouzilles (37)",           "lat": 47.1309, "lon": 0.4787, "rayon_km": 30},
+    # Le bassin de Montbard, ajouté nommément et non par le calcul : le
+    # catalogue n'y contient aucun bien, donc aucun orphelin à couvrir — et
+    # c'est précisément le symptôme. Montbard est à 1 h de Paris par TGV, ce
+    # que le pilier « accès sans voiture » est fait pour reconnaître, et une
+    # agence de Venarey-les-Laumes y vendait une maison que nous ne voyions
+    # pas. Le centre est Saint-Rémy, à quatre kilomètres, parce que ses
+    # coordonnées sont dans notre catalogue donc vérifiées — celles de
+    # Montbard, non.
+    {"nom": "Montbard – Saint-Rémy (21)", "lat": 47.6450, "lon": 4.2974, "rayon_km": 30},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence
