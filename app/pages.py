@@ -128,6 +128,7 @@ changement climatique. Chaque fiche renvoie vers l'annonce d'origine.</p>
 <a href="{_e(base)}{seo.URL_METHODE}">Méthode de la note</a> ·
 <a href="{_e(base)}{seo.URL_ALERTES}">Soyez alerté</a></p>
 </main>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """
@@ -562,7 +563,8 @@ isolé, et l'étiquette énergétique dit souvent le contraire du confort.</p>
 
 
 def page_alertes(stats: dict, prix_choisi: int | None = None,
-                 region_choisie: str = "", base: str = seo.SITE) -> str:
+                 region_choisie: str = "", base: str = seo.SITE,
+                 api_active: bool = False) -> str:
     """« Soyez alerté » — le visiteur choisit, personne ne choisit pour lui.
 
     Cette page remplace le bloc de mise en relation, retiré le 17 août 2026.
@@ -603,6 +605,53 @@ def page_alertes(stats: dict, prix_choisi: int | None = None,
         f'<label class="case"><input type="checkbox" name="terroir" '
         f'value="{_e(region)}"{" checked" if region == region_choisie else ""}> '
         f'{_e(seo.TERROIRS[region]["cherche"])}</label>' for region in seo.TERROIRS)
+
+    formulaire_api = f"""
+<form id="form-alerte" class="alerte-form">
+  <label class="champ"><span>Mon budget maximum</span>
+    <select id="alerte-prix">{paliers}</select></label>
+  <fieldset class="champ"><legend>Les terroirs qui m'intéressent</legend>
+    {terroirs}</fieldset>
+  <label class="champ"><span>Mon adresse e-mail</span>
+    <input type="email" id="alerte-mail" placeholder="vous@exemple.fr"
+           autocomplete="email" required></label>
+  <button class="bouton" type="submit">Créer mon alerte</button>
+  <p class="alerte-note" id="alerte-note">Vous recevrez un unique courriel
+    d'activation : sans clic de votre part, rien ne sera envoyé et l'adresse
+    ne sera pas conservée active. Chaque alerte contient son lien de
+    désinscription — effacement immédiat, sans condition.</p>
+</form>
+<script>
+(function () {{
+  var f = document.getElementById("form-alerte");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {{
+    e.preventDefault();
+    var note = document.getElementById("alerte-note");
+    var mail = (document.getElementById("alerte-mail").value || "").trim();
+    var zones = [].slice.call(f.querySelectorAll("input[name=terroir]:checked"))
+                  .map(function (c) {{ return c.value; }});
+    if (!zones.length) {{ note.textContent = "Choisissez au moins un terroir."; return; }}
+    note.textContent = "Enregistrement…";
+    fetch("/api/alertes", {{
+      method: "POST",
+      headers: {{ "Content-Type": "application/json" }},
+      body: JSON.stringify({{ email: mail, terroirs: zones,
+        prix_max: parseInt(document.getElementById("alerte-prix").value, 10) || null }}),
+    }}).then(function (r) {{
+      if (r.ok) {{
+        note.textContent = "Un courriel d'activation vient de partir : "
+          + "ouvrez-le et cliquez le lien pour démarrer l'alerte.";
+        f.querySelector("button").disabled = true;
+      }} else {{
+        return r.json().then(function (d) {{
+          note.textContent = (d && d.detail) || "L'enregistrement a échoué. Réessayez.";
+        }});
+      }}
+    }}).catch(function () {{ note.textContent = "L'enregistrement a échoué. Réessayez."; }});
+  }});
+}})();
+</script>"""
 
     ouvert = bool(seo.COURRIEL_ALERTES)
     envoi = (f"""
@@ -658,6 +707,9 @@ dispositif précédent, dont le journal vivait dans un fichier temporaire effac�
 à chaque redémarrage — cette page attend d'avoir une boîte qui les reçoive
 vraiment. En attendant, le lien ci-dessous garde vos critères : mettez-le en
 favori, la liste s'y met à jour toute seule.</p>""")
+
+    if api_active:
+        envoi = formulaire_api
 
     lien_carte = f"{_e(base)}/?prix_max={prix_choisi or seo.PALIERS_ALERTE[1]}"
     if region_choisie:
@@ -893,6 +945,11 @@ par qui.</p>
         navigateur. Ils ne nous parviennent pas sous une forme qui vous
         désigne.</td>
     <td>Non conservés</td></tr>
+<tr><td>Pages vues</td>
+    <td>Mesure de fréquentation de l'hébergeur (Vercel Web Analytics), sans
+        cookie ni identifiant durable : elle compte les visites sans suivre
+        le visiteur, ni ici ni ailleurs.</td>
+    <td>Statistiques agrégées</td></tr>
 <tr><td>Adresse e-mail d'alerte</td>
     <td>{"Vous envoyer les alertes que vous avez demandées, et rien d'autre."
         if alertes_ouvertes else
@@ -1038,3 +1095,19 @@ consultées</em>, et rien de plus.</p>
         f"{base}{seo.URL_METHODE}", corps,
         _jsonld(seo.jsonld_fil([("Accueil", "/"), ("Méthode", seo.URL_METHODE)], base)),
         base)
+
+
+def page_message(titre: str, texte: str, base: str = seo.SITE) -> str:
+    """Une page d'une phrase — la réponse aux liens d'activation et de
+    désinscription. Elle dit ce qui vient de se passer, et ramène à l'accueil.
+    Volontairement sans balisage riche : personne ne doit indexer ces pages.
+    """
+    corps = f"""
+<h1>{_e(titre)}</h1>
+<p class="chapeau">{_e(texte)}</p>
+<p><a class="bouton" href="{_e(base)}/">Retour au catalogue</a></p>
+"""
+    page = _document(titre, texte, f"{base}{seo.URL_ALERTES}", corps, "", base)
+    # Ces pages portent une action sur une adresse précise : les moteurs n'ont
+    # rien à y faire.
+    return page.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1)
