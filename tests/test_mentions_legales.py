@@ -57,10 +57,13 @@ def test_la_page_decrit_le_service_et_pas_seulement_une_clause():
 def test_une_agence_sait_comment_demander_le_retrait():
     """Sans porte de sortie visible, le premier recours d'une agence est la
     mise en demeure. C'est le point le plus concret de toute la page."""
-    html = pages.page_mentions_legales(BASE)
-    assert "retrait" in html.lower()
-    assert "sans discussion et sans délai" in html
-    assert "Aucune justification n'est demandée" in html
+    # Espaces normalisés : la phrase est coupée par un retour à la ligne, et
+    # un test ancré sur le texte brut casse au premier reformatage sans que
+    # rien n'ait changé pour le lecteur.
+    plat = " ".join(pages.page_mentions_legales(BASE).split())
+    assert "retrait" in plat.lower()
+    assert "sans discussion et sans délai" in plat
+    assert "Aucune justification n'est demandée" in plat
 
 
 def test_la_note_est_presentee_comme_editoriale_et_non_comme_un_diagnostic():
@@ -108,3 +111,29 @@ def test_chaque_page_servie_mene_aux_mentions_legales():
         page = client.get(chemin).text
         assert seo.URL_MENTIONS in page, chemin
         assert seo.URL_CONFIDENTIALITE in page, chemin
+
+
+def test_une_promesse_de_retrait_a_toujours_une_destination():
+    """Les mentions promettent aux agences un retrait « sans discussion et sans
+    délai ». Tant que le courriel n'existe pas, cette promesse ne pointe nulle
+    part — et c'est justement celle dont dépend la tranquillité du projet.
+
+    Le canal provisoire n'est pas une élégance : c'est le seul qui fonctionne
+    aujourd'hui sans exposer d'adresse personnelle. Il doit exister tant que le
+    courriel n'existe pas, et disparaître le jour où il existe."""
+    html = pages.page_mentions_legales(BASE)
+    if not seo.EDITEUR["courriel"]:
+        assert seo.CONTACT_PROVISOIRE in html
+        assert "sans destinataire" in html
+    else:
+        assert seo.CONTACT_PROVISOIRE not in html, (
+            "le canal provisoire doit s'effacer dès que le courriel existe")
+
+
+def test_le_canal_provisoire_previent_qu_il_est_public():
+    """On y invite des demandes RGPD : dire qu'elles seront lisibles de tous
+    n'est pas un détail."""
+    html = pages.page_confidentialite(BASE)
+    if not seo.EDITEUR["courriel"]:
+        assert "aucune donnée sensible" in html
+        assert "la page est publique" in html

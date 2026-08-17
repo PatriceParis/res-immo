@@ -743,6 +743,18 @@ def page_mentions_legales(base: str = seo.SITE) -> str:
     qu'on fait, jamais de ce qu'on déclare.
     """
     e, h = seo.EDITEUR, seo.HEBERGEUR
+    # Une porte ouverte tant que le courriel n'existe pas : les mentions
+    # promettent le retrait « sans discussion et sans délai », et une promesse
+    # sans destination ne vaut rien.
+    provisoire = "" if e["courriel"] else (
+        "<p>L'adresse postale et le courriel de contact seront publiés dès "
+        "l'ouverture de la domiciliation et du nom de domaine. En attendant, "
+        "et pour qu'aucune demande ne reste sans destinataire, toute "
+        "sollicitation — retrait d'annonces, exercice d'un droit sur vos "
+        "données, signalement d'une erreur — peut être déposée publiquement "
+        f'ici : <a href="{_e(seo.CONTACT_PROVISOIRE)}" rel="noopener">'
+        f"{_e(seo.CONTACT_PROVISOIRE)}</a>. Les demandes y sont horodatées et "
+        "consultables par tous.</p>")
     corps = f"""
 <nav class="fil"><a href="{_e(base)}/">Accueil</a> › Mentions légales</nav>
 
@@ -754,9 +766,10 @@ def page_mentions_legales(base: str = seo.SITE) -> str:
 {_ligne("Forme juridique", e["forme"])}
 {_ligne("SIREN", seo.siren_lisible())}
 {_ligne("Adresse", e["adresse"])}
-{_ligne("Contact", e["courriel"])}
+{_ligne("Contact", e["courriel"], "en cours d'ouverture — voir ci-dessous")}
 {_ligne("Directeur de la publication", e["directeur"])}
 </table>
+{provisoire}
 
 <h2>Hébergeur</h2>
 <table>
@@ -797,7 +810,8 @@ dernier passage. La date de dernière vérification figure sur chaque fiche.
 <strong>Rien de ce que nous affichons ne vaut engagement</strong> : seule
 l'annonce d'origine fait foi.</p>
 <p><strong>Vous êtes une agence et souhaitez le retrait de vos annonces ?</strong>
-Écrivez-nous : le retrait est effectué sans discussion et sans délai, et le
+Écrivez à l'adresse de contact ci-dessus : le retrait est effectué sans
+discussion et sans délai, et le
 site est ajouté à une liste d'exclusion pour que la collecte n'y revienne pas.
 Aucune justification n'est demandée.</p>
 
@@ -836,6 +850,11 @@ def page_confidentialite(base: str = seo.SITE) -> str:
     """
     e = seo.EDITEUR
     alertes_ouvertes = bool(seo.COURRIEL_ALERTES)
+    provisoire = "" if e["courriel"] else (
+        "<p>En attendant l'ouverture du courriel, toute demande relative à vos "
+        f'données peut être déposée ici : <a href="{_e(seo.CONTACT_PROVISOIRE)}" '
+        f'rel="noopener">{_e(seo.CONTACT_PROVISOIRE)}</a>. N\'y écrivez aucune '
+        "donnée sensible : la page est publique.</p>")
     corps = f"""
 <nav class="fil"><a href="{_e(base)}/">Accueil</a> › Confidentialité</nav>
 
@@ -849,8 +868,9 @@ par qui.</p>
 {_ligne("Responsable", e["nom"])}
 {_ligne("SIREN", seo.siren_lisible())}
 {_ligne("Adresse", e["adresse"])}
-{_ligne("Contact", e["courriel"])}
+{_ligne("Contact", e["courriel"], "en cours d'ouverture")}
 </table>
+{provisoire}
 
 <h2>Ce que nous ne faisons pas</h2>
 <ul>
