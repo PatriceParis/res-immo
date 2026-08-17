@@ -46,7 +46,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 150
     steps:
+      # Même raison qu'à la publication : le catalogue lu ici sert à savoir
+      # quelles annonces sont déjà connues, donc à servir les inédites en
+      # premier. Un catalogue périmé fait relire ce qu'on vient de voir.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -98,10 +103,17 @@ jobs:
       group: donnees-refuge
       cancel-in-progress: false
     steps:
-      # Volontairement APRÈS la lecture : on repart de l'état le plus récent
-      # de `main`, pour fusionner avec ce que les collectes régulières ont
-      # commité pendant l'heure écoulée plutôt que de l'écraser.
+      # `ref: main` n'est pas décoratif. Sans lui, `checkout` prend le commit
+      # qui a DÉCLENCHÉ le run — celui d'il y a une heure — et l'export part
+      # alors d'un catalogue périmé. C'est ce qui est arrivé au premier
+      # rattrapage : le fichier produit était en retard, son push a été
+      # rejeté, et la reprise d'alors a jeté l'heure de lecture.
+      #
+      # Le filet reste la reprise, qui refait l'export sur la version
+      # distante ; mais mieux vaut partir juste que compter sur le filet.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
