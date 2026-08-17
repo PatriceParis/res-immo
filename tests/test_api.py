@@ -100,33 +100,19 @@ def test_un_bien_d_ile_de_france_n_est_pas_charge(tmp_path, monkeypatch):
     assert charges == 0
 
 
-def test_mise_en_relation(client, tmp_path):
-    """C'est le modèle économique : la demande doit réellement aboutir."""
-    r = client.post("/api/contact",
-                    json={"annonce_id": "t-1", "email": "jean@exemple.fr",
-                          "message": "Je souhaite visiter."})
-    assert r.status_code == 200
-    d = r.json()
-    assert d["ok"] is True
-    assert d["annonce"].startswith("Fermette")
+def test_la_mise_en_relation_ne_repond_plus():
+    """Ces deux tests décrivaient « le modèle économique : la demande doit
+    réellement aboutir ». Le modèle a été retiré le 17 août 2026 : recueillir
+    l'e-mail d'un acheteur pour le transmettre à l'agence contre rémunération
+    est une activité d'entremise, que la loi Hoguet réserve aux titulaires
+    d'une carte professionnelle.
 
-    # La demande est journalisée hors du dépôt (elle contient un e-mail).
-    journal = tmp_path / "demandes_contact.jsonl"
-    assert journal.exists()
-    assert "jean@exemple.fr" in journal.read_text(encoding="utf-8")
-
-
-def test_mise_en_relation_refuse_les_entrees_invalides(client):
-    assert client.post("/api/contact",
-                       json={"annonce_id": "t-1", "email": "pas-un-email"}
-                       ).status_code == 422
-    assert client.post("/api/contact",
-                       json={"annonce_id": "inconnu", "email": "jean@exemple.fr"}
-                       ).status_code == 404
-    # Message démesuré : refusé avant d'atteindre le disque.
-    assert client.post("/api/contact",
-                       json={"annonce_id": "t-1", "email": "jean@exemple.fr",
-                             "message": "x" * 5000}).status_code == 422
+    On ne les supprime pas en silence : ce qui les remplace vérifie que la
+    route a bien disparu — voir tests/test_alertes.py, qui tient la frontière
+    dans les deux sens.
+    """
+    from app.main import app
+    assert "/api/contact" not in [getattr(r, "path", "") for r in app.routes]
 
 
 def test_les_pastilles_de_terroir_comptent_avec_les_filtres(client):

@@ -221,6 +221,18 @@ PLANCHER_SANS_TRAVAUX = 90_000
 PLAFOND_SANS_TRAVAUX = 175_000
 URL_SANS_TRAVAUX = "/sans-travaux"
 
+URL_ALERTES = "/alertes"
+
+# L'adresse à laquelle les demandes d'alerte arrivent. Tant qu'elle est vide,
+# la page affiche les critères et dit clairement que les alertes ne sont pas
+# encore ouvertes — plutôt qu'un formulaire qui recueille une adresse pour la
+# perdre. C'est exactement ce que faisait la mise en relation retirée : son
+# journal vivait dans /tmp sur l'hébergement, effacé à chaque redémarrage.
+COURRIEL_ALERTES = ""
+
+# Budgets proposés. Ronds, parce qu'ils doivent se choisir sans réfléchir.
+PALIERS_ALERTE = (100_000, 150_000, 200_000, 300_000, 500_000, 700_000)
+
 
 # --- Formulations ----------------------------------------------------------
 
@@ -575,7 +587,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
     jour = jour or date.today().isoformat()
     entrees = [(base + "/", "1.0", "daily"),
                (base + URL_PETITS_PRIX, "0.9", "daily"),
-               (base + URL_SANS_TRAVAUX, "0.9", "daily")]
+               (base + URL_SANS_TRAVAUX, "0.9", "daily"),
+               (base + URL_ALERTES, "0.5", "monthly")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]
@@ -667,6 +680,10 @@ def llms_txt(total: int, par_region: dict, base: str = SITE) -> str:
                f"({base}{URL_SANS_TRAVAUX}) : les biens dont l'annonce indique "
                f"explicitement qu'aucun travaux n'est à prévoir. Les annonces "
                f"muettes sur ce point ne sont pas comptées comme sans travaux.",
+               f"- [Soyez alerté]({base}{URL_ALERTES}) : choisir un budget et "
+               f"des terroirs pour être prévenu des nouvelles maisons. Aucune "
+               f"mise en relation, aucune commission, aucune adresse transmise "
+               f"à une agence.",
                f"- [Plan du site]({base}/sitemap.xml) : toutes les annonces.",
                ""]
     return "\n".join(lignes)

@@ -211,67 +211,26 @@ def agences():
         conn.close()
 
 
-RE_EMAIL = re.compile(r"^[^@\s]+@[^@\s.]+\.[a-z]{2,}$", re.IGNORECASE)
-
-
-class DemandeContact(BaseModel):
-    """Demande de mise en relation avec l'agence qui détient le mandat."""
-
-    annonce_id: str = Field(min_length=1, max_length=120)
-    email: str = Field(min_length=5, max_length=180)
-    message: str = Field(default="", max_length=1000)
-
-
-@app.post("/api/contact")
-def demander_contact(demande: DemandeContact):
-    """Enregistre une demande de mise en relation et renvoie de quoi aboutir.
-
-    C'est le modèle économique du service : gratuit pour l'acheteur, rémunéré
-    à la mise en relation qualifiée. On ne conserve que l'e-mail et le
-    message — le strict nécessaire pour recontacter — et la réponse contient
-    le lien vers l'annonce d'origine, pour que la démarche aboutisse même si
-    l'agence tarde.
-    """
-    if not RE_EMAIL.match(demande.email.strip()):
-        raise HTTPException(status_code=422, detail="Adresse e-mail invalide")
-
-    assurer_donnees()
-    conn = db.connexion()
-    try:
-        row = conn.execute(
-            "SELECT titre, commune, agence, agence_url, url FROM annonces WHERE id = ?",
-            (demande.annonce_id,)).fetchone()
-    finally:
-        conn.close()
-    if row is None:
-        raise HTTPException(status_code=404, detail="Annonce introuvable")
-
-    # Journal des demandes, hors du dépôt (et hors de /tmp en local) : il
-    # contient une donnée personnelle, il n'a rien à faire dans Git.
-    ligne = {
-        "recu_le": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "annonce_id": demande.annonce_id,
-        "email": demande.email.strip(),
-        "message": demande.message.strip()[:1000],
-        "agence": row["agence"],
-    }
-    try:
-        journal = db.chemin_db().parent / "demandes_contact.jsonl"
-        journal.parent.mkdir(parents=True, exist_ok=True)
-        with journal.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(ligne, ensure_ascii=False) + "\n")
-    except OSError:
-        # Un journal indisponible ne doit pas faire échouer la demande de
-        # l'utilisateur : il a droit à sa réponse et au lien vers l'agence.
-        pass
-
-    return {
-        "ok": True,
-        "agence": row["agence"],
-        "annonce": row["titre"],
-        "commune": row["commune"],
-        "url": row["url"] or row["agence_url"] or "",
-    }
+# La mise en relation a été retirée le 17 août 2026, endpoint compris.
+#
+# Elle recueillait l'e-mail du visiteur pour le transmettre à l'agence, et le
+# disait sans détour : « gratuit pour l'acheteur, rémunéré à la mise en
+# relation qualifiée ». Prêter son concours, même à titre accessoire et contre
+# rémunération, à la recherche d'un immeuble pour autrui, c'est l'activité que
+# la loi Hoguet réserve aux titulaires d'une carte professionnelle. La phrase
+# « Refuge Immo n'est pas une agence immobilière » ne décrivait pas ce que le
+# site faisait — et une clause ne défait pas une qualification.
+#
+# Retirer le bouton sans retirer l'endpoint n'aurait rien réglé : la route
+# restait ouverte, et le journal des e-mails avec elle. Ce journal vivait
+# d'ailleurs à côté de la base, donc dans /tmp sur l'hébergement, effacé à
+# chaque redémarrage : les adresses recueillies étaient perdues sans que
+# personne le sache. Collecter une donnée personnelle pour la perdre est le
+# pire des deux mondes.
+#
+# Ce qui remplace : /alertes, où le visiteur choisit lui-même un budget et des
+# terroirs, et où c'est NOUS qui lui écrivons. Aucune coordonnée ne part chez
+# une agence, aucune commission n'est perçue.
 
 
 # Le relais /api/photo a été retiré le 10 août 2026. Il republiait chaque
@@ -411,6 +370,22 @@ def page_sans_travaux(requete: Request):
     }
     return HTMLResponse(pages.page_sans_travaux(biens, stats, _base(requete)),
                         headers={"Cache-Control": "public, max-age=1800"})
+
+
+@app.get(seo.URL_ALERTES)
+def page_alertes(requete: Request, prix_max: int | None = None,
+                 region: str = ""):
+    """« Soyez alerté » — ce qui remplace la mise en relation retirée.
+
+    Les paramètres ne servent qu'à PRÉ-REMPLIR le formulaire depuis la fiche
+    d'où l'on vient : le visiteur reste libre de tout changer. Rien n'est
+    enregistré ici — voir pages.page_alertes pour le pourquoi.
+    """
+    if region and region not in seo.TERROIRS:
+        region = ""
+    return HTMLResponse(
+        pages.page_alertes({}, prix_max, region, _base(requete)),
+        headers={"Cache-Control": "public, max-age=3600"})
 
 
 @app.get("/terroir/{terroir}")
