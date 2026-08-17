@@ -214,31 +214,50 @@ jobs:
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" \
                 || echo "Aucun changement."
             fi
-            # La collecte dure ~20 min : un commit poussé pendant ce temps
-            # faisait rejeter ce push, et TOUT le travail était perdu.
-            # On rejoue alors notre fichier de données (le seul commité ici)
-            # par-dessus la version distante, puis on réessaie.
+            # La collecte dure ~20 min : un commit poussé pendant ce temps fait
+            # rejeter ce push. On se replace alors sur la version distante et
+            # on REFAIT l'export par-dessus elle.
+            #
+            # Recopier notre fichier sur celui du dépôt, comme on le faisait,
+            # n'était pas se replacer : c'était écraser. Le 17 août, la
+            # collecte de 7 h 46 a ainsi effacé les 175 annonces IAD de
+            # Saône-et-Loire que le passage mandataires venait d'ajouter — le
+            # catalogue est passé de 199 à 24 pour ce département, revenant
+            # exactement à la valeur d'avant. Aucune alerte : le fichier avait
+            # l'air normal, il était simplement en retard d'un passage.
+            #
+            # Refaire l'export est la seule fusion correcte, parce qu'il passe
+            # par `historique.fusionner` : le fichier distant devient le
+            # « précédent », notre base le « nouveau », et la règle de sortie
+            # ne touche QUE les cibles réellement visitées par ce passage. Ce
+            # qu'un autre collecteur a rapporté pendant ce temps est conservé
+            # par construction, sans que personne ait à y penser.
+            #
+            # La base (data/refuge.db, ignorée par git) survit au reset : c'est
+            # elle qui porte notre récolte, pas le fichier exporté.
             for essai in 1 2 3 4 5; do
               if git push; then
                 echo "Poussé (essai $essai)."
                 break
               fi
               echo "Push rejeté : la branche a bougé pendant la collecte, on se replace dessus ($essai/5)…"
-              # On met notre fichier de côté, on se cale EXACTEMENT sur la
-              # version distante, puis on le remet : ainsi notre commit ne
-              # contient que ce fichier. Un « reset --soft » laisserait l'index
-              # de l'ancien checkout et re-committerait tout le reste au
-              # passage, écrasant silencieusement le travail des autres.
-              for f in annonces_reel.json agences_visitees.json dernier_passage.json \
+              # Ces quatre journaux décrivent NOTRE passage et n'appartiennent
+              # qu'à lui : on les remet tels quels. Le catalogue, lui, est
+              # commun — il se refusionne, il ne se recopie pas.
+              for f in agences_visitees.json dernier_passage.json \
                        deroule_collecte.json visites_tronquees.json; do
                 cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
               done
               git fetch origin main
               git reset --hard origin/main
-              for f in annonces_reel.json agences_visitees.json dernier_passage.json \
+              for f in agences_visitees.json dernier_passage.json \
                        deroule_collecte.json visites_tronquees.json; do
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
+              # `visites_tronquees.json` doit être en place AVANT : l'export le
+              # lit pour savoir sur quelles cibles s'abstenir.
+              python scripts/exporter_reel.py
+              N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
               git add data/annonces_reel.json data/agences_visitees.json \
                     data/dernier_passage.json data/deroule_collecte.json \
                     data/visites_tronquees.json
