@@ -247,6 +247,19 @@ EDITEUR = {
     "directeur": "Patrice Tord",
 }
 
+# En attendant l'adresse de domiciliation et le courriel du domaine, il faut
+# malgré tout une porte ouverte. Les mentions légales promettent aux agences
+# de retirer leurs annonces « sans discussion et sans délai » : une promesse
+# sans destination ne vaut rien, et c'est justement celle dont dépend la
+# tranquillité du projet.
+#
+# Le dépôt est public : son suivi de questions est une adresse permanente,
+# horodatée, consultable par tous — et qui n'expose aucune adresse
+# personnelle. Ce n'est pas une élégance, c'est le seul canal disponible qui
+# fonctionne réellement aujourd'hui. Il disparaîtra le jour où le courriel
+# existera.
+CONTACT_PROVISOIRE = "https://github.com/PatriceParis/res-immo/issues"
+
 HEBERGEUR = {
     "nom": "Vercel Inc.",
     "adresse": "340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis",
