@@ -55,7 +55,12 @@ jobs:
       - name: Exporter et committer
         run: |
           python scripts/exporter_reel.py
-          git add data/annonces_reel.json data/liens_morts.json data/liens_verifies.json
+          # Marquer avant d'indexer : un passage qui n'a trouvé aucun lien mort
+          # doit laisser une trace, faute de quoi son silence est indiscernable
+          # d'une panne. Voir scripts/marquer_passage.py.
+          python scripts/marquer_passage.py liens || true
+          git add data/annonces_reel.json data/liens_morts.json \
+                  data/liens_verifies.json data/dernier_passage_liens.json
           if [ -n "$(git diff --cached --name-only)" ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -76,8 +81,10 @@ jobs:
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
               python scripts/exporter_reel.py
+              python scripts/marquer_passage.py liens || true
               N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
-              git add data/annonces_reel.json data/liens_morts.json data/liens_verifies.json
+              git add data/annonces_reel.json data/liens_morts.json \
+                      data/liens_verifies.json data/dernier_passage_liens.json
               git commit -m "Liens vérifiés : $N annonces au catalogue ($(date -u +%F))" || true
               sleep $((essai * 5))
             done

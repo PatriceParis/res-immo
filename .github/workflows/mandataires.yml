@@ -97,6 +97,11 @@ jobs:
       - name: Exporter et committer
         run: |
           python scripts/exporter_reel.py
+          # Marquer AVANT de tester s'il y a de quoi committer : un passage qui
+          # n'a rien trouvé doit tout de même laisser une trace, sinon il est
+          # indiscernable d'un passage qui a planté. C'est exactement ce qui a
+          # rendu indécidable l'absence du 17 août à 15 h.
+          python scripts/marquer_passage.py mandataires || true
           if [ -n "$(git status --porcelain data/)" ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -123,6 +128,7 @@ jobs:
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
               python scripts/exporter_reel.py
+              python scripts/marquer_passage.py mandataires || true
               N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
               git add data/
               git commit -m "Mandataires : $N annonces au catalogue ($(date -u +%F))" || true
