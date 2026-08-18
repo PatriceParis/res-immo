@@ -218,9 +218,19 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
 def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
                         fin_prevue: float, args) -> int:
     print(f"\n=== {reseau['nom']}")
+    # Céder son tour AVANT de dépenser. Lire les sitemaps d'un réseau coûte
+    # plusieurs minutes — vingt mille adresses chez IAD — et ce coût était payé
+    # hors budget : un réseau dont la part était déjà vide la dépensait quand
+    # même en téléchargement, puis s'arrêtait au premier contrôle sans avoir
+    # visité un seul département.
+    if time.monotonic() > fin_prevue:
+        print("  part de budget déjà consommée : ce réseau passe son tour.")
+        noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
+        return 0
     sitemaps = sitemaps_declares(reseau["site"])
     if not sitemaps:
         print("  robots.txt ne déclare aucun sitemap : on s'abstient.")
+        noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
         return 0
     voulus = reseau.get("sitemaps_voulus")
     if voulus:
@@ -238,6 +248,13 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         groupes = {d: lot for d, lot in groupes.items() if d in voulus}
         print(f"  restreint à {sorted(voulus)} — {len(groupes)} département(s) trouvé(s)")
     print(f"  {len(a_visiter)} dans nos terroirs, sur {len(groupes)} département(s)")
+
+    # La tentative est notée ICI, une fois le sitemap lu et avant le premier
+    # département : ce réseau a bel et bien eu sa chance ce passage-ci, qu'il
+    # aboutisse ou non. Sans cette marque, un réseau qui n'atteint jamais un
+    # département reste « jamais vu » à jamais, repasse en tête à chaque
+    # passage, et prend la part de ceux qui produisent.
+    noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
 
     vu = derniere_visite()
     deja_vues = annonces_deja_connues()
