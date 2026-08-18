@@ -89,11 +89,30 @@ def sitemaps_declares(site: str) -> list[str]:
     return re.findall(r"(?im)^\s*Sitemap:\s*(\S+)", donnees.decode("utf-8", "replace"))
 
 
-def adresses_du_sitemap(sitemaps: list[str], motif) -> list[str]:
+def adresses_du_sitemap(sitemaps: list[str], motif,
+                        fin_prevue: float | None = None) -> tuple[list[str], bool]:
+    """(adresses trouvées, arbre entièrement parcouru).
+
+    Cette lecture n'était bornée par rien. Un réseau publie son catalogue en
+    arbre de sitemaps — des centaines de fichiers chez les gros — et le
+    parcours entier se payait HORS budget : le 18 août, Capifrance a consommé
+    tout le passage sans visiter une seule annonce, et ni IAD ni Safti n'ont eu
+    leur tour. Le processus a fini tué par `timeout`, à mi-parcours.
+
+    D'où l'échéance. Et surtout le second membre du couple : un arbre lu à
+    moitié rend moins d'adresses, donc moins d'annonces par département — sans
+    rien dire. La règle de sortie prendrait cette liste écourtée pour la liste
+    complète et retirerait des annonces qu'on n'a jamais cherchées. C'est la
+    faute qui a coûté cent soixante-quinze annonces, transposée à la lecture
+    du sitemap. On dit donc toujours si l'on a tout vu, et l'appelant marque
+    les départements tronqués quand ce n'est pas le cas.
+    """
     a_lire, annonces, vus = list(sitemaps), [], set()
     for _ in range(PROFONDEUR):
         suivants = []
         for sitemap in a_lire:
+            if fin_prevue is not None and time.monotonic() > fin_prevue:
+                return annonces, False
             if sitemap in vus:
                 continue
             vus.add(sitemap)
@@ -105,8 +124,10 @@ def adresses_du_sitemap(sitemaps: list[str], motif) -> list[str]:
             annonces += [u for u in liens if motif.search(u)]
         a_lire = suivants
         if not a_lire:
-            break
-    return annonces
+            return annonces, True
+    # La profondeur est épuisée alors qu'il restait des sitemaps à ouvrir :
+    # on n'a pas tout vu non plus.
+    return annonces, not a_lire
 
 
 def communes_des_terroirs() -> dict:
@@ -239,8 +260,15 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             print(f"  {len(retenus)} sitemap(s) retenu(s) sur {len(sitemaps)} "
                   f"— on ne lit que ce qui nous concerne")
             sitemaps = retenus
-    adresses = adresses_du_sitemap(sitemaps, reseau["motif_annonce"])
-    print(f"  {len(adresses)} annonce(s) au sitemap")
+    # La moitié de la part pour DÉCOUVRIR, l'autre pour VISITER. Sans ce
+    # partage, la lecture du sitemap pouvait manger le tour entier et le
+    # réseau n'ouvrait pas une annonce — c'est ce qui s'est produit.
+    fin_sitemap = min(time.monotonic() + (fin_prevue - time.monotonic()) / 2,
+                      fin_prevue)
+    adresses, sitemap_complet = adresses_du_sitemap(
+        sitemaps, reseau["motif_annonce"], fin_sitemap)
+    print(f"  {len(adresses)} annonce(s) au sitemap"
+          f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
     a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index)
     groupes = mandataires.par_departement(a_visiter)
     if args.departements:
@@ -260,9 +288,9 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     deja_vues = annonces_deja_connues()
     total = 0
     # Les départements dont on n'a PAS vu toute la liste : le plafond par
-    # département ou le budget de temps a coupé le parcours. La règle de
-    # sortie doit s'y abstenir, sinon elle supprime des annonces qu'elle
-    # n'a jamais cherchées — voir app/historique.py.
+    # département, le budget de temps, ou — depuis le 18 août — un sitemap lu
+    # à moitié. La règle de sortie doit s'y abstenir, sinon elle supprime des
+    # annonces qu'elle n'a jamais cherchées — voir app/historique.py.
     tronquees: set = set()
     for dept in mandataires.ordre_des_departements(groupes, vu, cle):
         if time.monotonic() > fin_prevue:
@@ -270,7 +298,10 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             break
         candidats = mandataires.ordre_dans_le_departement(groupes[dept], deja_vues)
         lot = candidats[:args.max_par_departement]
-        tronquee = len(candidats) > len(lot)
+        # Un sitemap écourté rend une liste écourtée pour CHAQUE département
+        # du réseau : aucun n'a été vu en entier, quand bien même son lot
+        # tiendrait sous le plafond.
+        tronquee = not sitemap_complet or len(candidats) > len(lot)
         gardes = compteurs = 0
         etats = {"garde": 0, "vendu": 0, "ecarte": 0, "illisible": 0}
         for annonce in lot:
