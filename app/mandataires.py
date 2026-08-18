@@ -207,6 +207,31 @@ def cle_journal(cle_reseau: str, departement: str) -> str:
     return f"{cle_reseau}:{departement}"
 
 
+# Une TENTATIVE de réseau, par opposition à la visite d'un de ses
+# départements. Aucun département ne s'appelle « * » : la clé est donc comptée
+# par `derniere_visite_du_reseau`, qui balaie le préfixe, et jamais cherchée
+# par `ordre_des_departements`, qui n'interroge que des codes réels.
+TENTATIVE = "*"
+
+
+def cle_tentative(cle_reseau: str) -> str:
+    """La clé qui dit « on a essayé ce réseau ce jour-là », abouti ou non.
+
+    Sans elle, un réseau qui épuise sa part de budget avant d'avoir terminé un
+    seul département ne laisse aucune trace — donc reste éternellement « jamais
+    vu », donc repasse en tête au passage suivant, et affame ceux qui, eux,
+    produisent. C'est ce qui est arrivé les 17 et 18 août : Safti et Capifrance
+    partaient devant à chaque fois, dépensaient leur part à lire des sitemaps
+    sans jamais atteindre un département, et IAD — le seul réseau qui
+    rapportait — se retrouvait dernier avec un budget déjà vide. Le passage
+    entier a fini par ne plus rien rapporter du tout.
+
+    Céder son tour n'est pas être servi : la tentative ne dit pas qu'on a
+    collecté, seulement qu'on a eu sa chance.
+    """
+    return cle_journal(cle_reseau, TENTATIVE)
+
+
 def derniere_visite_du_reseau(cle_reseau: str, derniere_visite: dict) -> str:
     """La date la plus RÉCENTE parmi les cibles d'un réseau, ou "" s'il n'en a
     aucune.
