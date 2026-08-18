@@ -66,12 +66,16 @@ jobs:
 
       - name: Committer
         run: |
+          # Marquer d'abord : un passage qui n'a confirmé aucun domaine doit
+          # laisser une trace, sans quoi son silence ressemble à une panne.
+          python scripts/marquer_passage.py sites || true
           # N'indexer que ce qui existe. « git add » sur un chemin absent sort
           # en 128 SANS RIEN INDEXER, ce qui tuait l'étape entière : le journal
           # des recherches n'ayant jamais été écrit, ce passage n'a pas produit
           # un seul commit depuis sa création. Un fichier manquant se constate,
           # il ne doit pas faire échouer la publication de l'autre.
-          for f in data/agences_recensees.json data/sites_cherches.json; do
+          for f in data/agences_recensees.json data/sites_cherches.json \
+                   data/dernier_passage_sites.json; do
             if [ -f "$f" ]; then git add "$f"; else echo "$f absent."; fi
           done
           if [ -n "$(git diff --cached --name-only)" ]; then
@@ -130,7 +134,9 @@ jobs:
                                   sort_keys=True) + "\n", encoding="utf-8")
           print(f"{reportes} site(s) reporté(s), {len(journal)} recherche(s) au journal")
           PY
-              for f in data/agences_recensees.json data/sites_cherches.json; do
+              python scripts/marquer_passage.py sites || true
+              for f in data/agences_recensees.json data/sites_cherches.json \
+                       data/dernier_passage_sites.json; do
                 if [ -f "$f" ]; then git add "$f"; fi
               done
               git commit -m "Sites retrouvés : $N agences recensées joignables ($(date -u +%F))" || true
