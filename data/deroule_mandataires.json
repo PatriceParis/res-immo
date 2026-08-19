@@ -1,0 +1,41 @@
+[
+ {
+  "etape": "demarrage",
+  "seconde": 0.0,
+  "minutes": 20.0
+ },
+ {
+  "etape": "communes",
+  "seconde": 16.5,
+  "departements": 33,
+  "communes": 16182
+ },
+ {
+  "etape": "ordre_des_reseaux",
+  "seconde": 16.5,
+  "ordre": [
+   "safti",
+   "iad",
+   "capifrance"
+  ]
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 16.5,
+  "reseau": "safti",
+  "part_secondes": 400
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 16.9,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 17.7,
+  "reseau": "safti",
+  "n": 28184,
+  "complet": true
+ }
+]
