@@ -99,7 +99,51 @@ def index_des_communes(communes_par_departement: dict) -> list[tuple[str, str, s
     return index
 
 
-def commune_de_l_adresse(url: str, index: list) -> tuple[str, str] | None:
+def table_des_communes(index: list) -> dict:
+    """slug → (commune, département), construite une fois par passage.
+
+    L'index reste trié du plus long au plus court : à slug identique — deux
+    homonymes dans deux départements — c'est donc le premier de l'index qui
+    l'emporte, comme avec l'ancienne boucle.
+    """
+    table: dict = {}
+    for rang, (slug, commune, departement) in enumerate(index):
+        table.setdefault(slug, (rang, commune, departement))
+    return table
+
+
+def _suites_de_mots(chemin: str) -> list[str]:
+    """Les suites de mots contiguës de l'adresse, les plus longues d'abord.
+
+    `normaliser` ne laisse que [a-z0-9-] : une adresse normalisée est donc une
+    simple suite de mots séparés par des tirets. Or la frontière
+    `(?:^|-)slug(?:-|$)` est vraie exactement quand le slug couvre une suite
+    entière de ces mots — jamais une portion de mot. Énumérer les suites et
+    les chercher dans une table donne donc le même résultat que d'essayer
+    chaque commune.
+
+    « Le même » au sens strict, arbitrages compris. J'avais d'abord tenu la
+    différence pour négligeable — à longueur égale entre deux communes sans
+    rapport dans la même adresse, l'ancienne boucle tranchait par l'ordre de
+    l'index et celle-ci par la position dans l'adresse. Un tirage de deux
+    mille adresses a produit le contre-exemple en quelques millisecondes :
+    « sancerre-montbard » partait en Côte-d'Or avant, dans le Cher après. On
+    conserve donc le rang de l'index dans la table et l'on tranche comme
+    avant : la suite la plus longue, puis le plus petit rang.
+    """
+    mots = [m for m in chemin.split("-") if m]
+    suites = []
+    for longueur in range(len(mots), 0, -1):
+        for debut in range(len(mots) - longueur + 1):
+            suite = "-".join(mots[debut:debut + longueur])
+            if len(suite) >= LONGUEUR_MINIMALE_COMMUNE:
+                suites.append(suite)
+    suites.sort(key=lambda s: -len(s))
+    return suites
+
+
+def commune_de_l_adresse(url: str, index: list,
+                         table: dict | None = None) -> tuple[str, str] | None:
     """(commune, département) devinés depuis l'adresse, ou None.
 
     Le nom doit être délimité par des tirets ou par les bords de l'adresse.
@@ -114,12 +158,35 @@ def commune_de_l_adresse(url: str, index: list) -> tuple[str, str] | None:
     Le coût n'était pas seulement cosmétique : ces pages ont été téléchargées
     à tort, elles occupaient le budget de collecte du département visé, et le
     site affichait « IAD France (71) » sous une maison de Bordeaux.
+
+    Le prix de cette frontière, non mesuré à l'époque : la recherche essayait
+    CHAQUE commune contre CHAQUE adresse, en compilant une expression par
+    essai — seize mille communes contre vingt-huit mille adresses, soit
+    quatre cent cinquante millions de compilations. Mesuré le 19 août :
+    37 ms par adresse, 17,5 minutes pour le seul sitemap de Safti, quand le
+    réseau dispose de 400 secondes. Le passage mandataires n'a rien rapporté
+    pendant trois jours pour cette seule raison, et j'ai cherché ailleurs
+    deux fois avant de le mesurer.
+
+    On énumère donc les suites de mots de l'adresse au lieu des communes du
+    pays. C'est le même résultat par construction — voir `_suites_de_mots` —
+    au prix du carré du nombre de mots d'une adresse, une dizaine.
     """
     chemin = normaliser(urlparse(url).path)
-    for slug, commune, departement in index:
-        if re.search(rf"(?:^|-){re.escape(slug)}(?:-|$)", chemin):
-            return commune, departement
-    return None
+    if table is None:
+        table = table_des_communes(index)
+    lieu = longueur = meilleur_rang = None
+    for suite in _suites_de_mots(chemin):
+        if longueur is not None and len(suite) < longueur:
+            break            # plus court que le gagnant : la suite est vaine
+        trouve = table.get(suite)
+        if trouve is None:
+            continue
+        rang, commune, departement = trouve
+        if longueur is None or rang < meilleur_rang:
+            longueur, meilleur_rang = len(suite), rang
+            lieu = (commune, departement)
+    return lieu
 
 
 def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]:
@@ -128,13 +195,16 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]
     Renvoie un dict par annonce retenue, avec la commune et le département
     déduits — ce que la page elle-même ne donne pas toujours.
     """
+    # Construite UNE fois, pas une par adresse : c'est tout l'objet du
+    # correctif du 19 août.
+    table = table_des_communes(index)
     retenues, vues = [], set()
     for url in urls:
         if not reseau["motif_annonce"].search(url):
             continue
         if not TYPES_VOULUS.search(normaliser(urlparse(url).path)):
             continue
-        lieu = commune_de_l_adresse(url, index)
+        lieu = commune_de_l_adresse(url, index, table)
         if not lieu:
             continue                      # hors des terroirs ciblés
         if url in vues:
