@@ -130,6 +130,41 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
     return annonces, not a_lire
 
 
+DEROULE = RACINE / "data" / "deroule_mandataires.json"
+_deroule: list[dict] = []
+_depart: float | None = None
+
+
+def etape(nom: str, **details) -> None:
+    """Consigne OÙ en est le passage, à chaque étape, immédiatement.
+
+    Ce passage n'a rien rapporté trois jours de suite. J'ai posé deux
+    diagnostics — la rotation qui affamait IAD, puis la lecture de sitemap sans
+    borne — et corrigé les deux ; l'un et l'autre étaient réels, aucun n'a
+    suffi. Le passage du 19 août n'a même pas écrit sa marque de tentative,
+    ce qui veut dire qu'il meurt AVANT le premier réseau, quelque part que je
+    ne fais que supposer.
+
+    Deviner une troisième fois serait la même faute : conclure de ce qu'on n'a
+    pas cherché. On écrit donc le déroulé à mesure, et le prochain passage dira
+    lui-même où part son temps — la trace de passage a déjà tranché une
+    question qui tenait depuis trois points d'étape, celle-ci va un cran plus
+    bas.
+
+    Écrit à CHAQUE étape, pas à la fin : un processus tué n'écrit rien.
+    """
+    _deroule.append({
+        "etape": nom,
+        "seconde": round(time.monotonic() - _depart, 1) if _depart else 0.0,
+        **details})
+    try:
+        DEROULE.parent.mkdir(parents=True, exist_ok=True)
+        DEROULE.write_text(json.dumps(_deroule, ensure_ascii=False, indent=1)
+                           + "\n", encoding="utf-8")
+    except OSError:
+        pass
+
+
 def communes_des_terroirs() -> dict:
     """Communes des départements ciblés, via l'API officielle.
 
@@ -249,6 +284,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
         return 0
     sitemaps = sitemaps_declares(reseau["site"])
+    etape("sitemaps_declares", reseau=cle, n=len(sitemaps))
     if not sitemaps:
         print("  robots.txt ne déclare aucun sitemap : on s'abstient.")
         noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
@@ -267,6 +303,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
                       fin_prevue)
     adresses, sitemap_complet = adresses_du_sitemap(
         sitemaps, reseau["motif_annonce"], fin_sitemap)
+    etape("adresses_du_sitemap", reseau=cle, n=len(adresses),
+          complet=sitemap_complet)
     print(f"  {len(adresses)} annonce(s) au sitemap"
           f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
     a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index)
@@ -283,9 +321,11 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     # département reste « jamais vu » à jamais, repasse en tête à chaque
     # passage, et prend la part de ceux qui produisent.
     noter_visite(mandataires.cle_tentative(cle), date.today().isoformat())
+    etape("tentative_notee", reseau=cle, departements=len(groupes))
 
     vu = derniere_visite()
     deja_vues = annonces_deja_connues()
+    etape("catalogue_relu", reseau=cle, connues=len(deja_vues))
     total = 0
     # Les départements dont on n'a PAS vu toute la liste : le plafond par
     # département, le budget de temps, ou — depuis le 18 août — un sitemap lu
@@ -319,6 +359,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
                 {"agence": mandataires.nom_d_agence(reseau, dept),
                  "agence_url": reseau["site"]}))
         historique.noter_visite_tronquee(tronquees)
+        etape("departement", reseau=cle, departement=dept, visitees=compteurs,
+              gardes=gardes, tronquee=tronquee)
         print(f"  {dept} · {gardes:3} gardé(s) sur {compteurs} visité(s)"
               f" — {etats['vendu']} vendu(s), {etats['ecarte']} hors cible,"
               f" {etats['illisible']} illisible(s)")
@@ -349,13 +391,22 @@ def main() -> None:
                                  "un terroir précis sans attendre son tour")
     args = parametres.parse_args()
 
+    global _depart
+    _depart = time.monotonic()
+    etape("demarrage", minutes=args.minutes)
+
     print("Communes des terroirs ciblés…")
+    # Trente-trois appels à l'API officielle, en file, avant quoi que ce soit
+    # d'autre : c'est le premier endroit où un passage peut mourir sans laisser
+    # de trace, et l'abstention ci-dessous est silencieuse dans le journal git.
     communes = communes_des_terroirs()
     if not communes:
+        etape("communes_indisponibles")
         print("Liste des communes indisponible : sans elle on ne sait pas ce qui")
         print("relève de nos terroirs. On s'arrête plutôt que de tout collecter.")
         raise SystemExit(1)
     index = mandataires.index_des_communes(communes)
+    etape("communes", departements=len(communes), communes=len(index))
     print(f"  {len(index)} communes sur {len(communes)} département(s)")
 
     fin_globale = time.monotonic() + args.minutes * 60
@@ -370,13 +421,16 @@ def main() -> None:
                else mandataires.ordre_des_reseaux(mandataires.RESEAUX,
                                                   derniere_visite()))
     print(f"\nOrdre des réseaux ce passage : {' → '.join(choisis)}")
+    etape("ordre_des_reseaux", ordre=choisis)
     for rang, cle in enumerate(choisis):
         part = mandataires.part_de_budget(fin_globale - time.monotonic(),
                                           len(choisis) - rang)
         fin_reseau = min(time.monotonic() + part, fin_globale)
+        etape("reseau_debut", reseau=cle, part_secondes=round(part))
         total += collecter_un_reseau(conn, cle, mandataires.RESEAUX[cle], index,
                                      fin_reseau, args)
     conn.close()
+    etape("fin", gardes=total)
     print(f"\nTerminé : {total} bien(s) ajouté(s) depuis les réseaux de mandataires.")
 
 
