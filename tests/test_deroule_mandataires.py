@@ -83,6 +83,25 @@ def test_le_deroule_couvre_les_deux_diagnostics_precedents():
             f"l'étape « {attendu} » n'est pas consignée")
 
 
+def test_un_departement_sans_recolte_dit_pourquoi():
+    """Le 20 août, Safti a visité 180 pages et n'en a gardé aucune — 270
+    secondes de budget et 180 requêtes chez un tiers pour rien.
+
+    « Illisible » (la page ne s'extrait pas, c'est notre défaut) et « écarté »
+    (le bien ne nous convient pas, c'est le fonctionnement normal) appellent
+    des réponses opposées. Le total gardé ne les distingue pas ; le détail des
+    états, si. Sans lui je devinerais, ce qui m'a déjà coûté trois diagnostics
+    faux cette semaine.
+    """
+    source = (RACINE / "scripts" / "collecter_mandataires.py").read_text(
+        encoding="utf-8")
+    appel = source[source.index('etape("departement"'):]
+    appel = appel[:appel.index(")\n")]
+    assert "etats=" in appel, (
+        "un département qui ne rapporte rien ne dit pas si les pages étaient "
+        "illisibles ou simplement hors cible")
+
+
 def test_le_deroule_horodate_chaque_etape(deroule_jetable, monkeypatch):
     """Sans les secondes écoulées, on saurait où le passage meurt mais pas ce
     qui a mangé le temps — la question posée depuis trois jours."""
