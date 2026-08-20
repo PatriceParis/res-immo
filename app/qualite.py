@@ -166,38 +166,57 @@ def enumere_plusieurs_biens(a: dict) -> bool:
     return len(set(_REFERENCE.findall(a.get("texte") or ""))) > REFERENCES_MAXI
 
 
-def est_bien_valide(a: dict) -> bool:
-    """True uniquement pour l'annonce d'un vrai logement de type refuge."""
+def motif_de_rejet(a: dict) -> str | None:
+    """Le nom de la première règle qui refuse ce bien, ou None s'il passe.
+
+    Une seule fabrique pour la décision ET pour son explication.
+    `est_bien_valide` délègue ici : écrire à côté une seconde fonction qui
+    « refait les mêmes tests pour dire lesquels » serait la faute que ce projet
+    a déjà payée trois fois — deux copies d'une règle finissent toujours par
+    diverger, et cela a coûté cinquante-six annonces Century 21, dix jours de
+    rotation en Saône-et-Loire, et un test qui validait une fiction.
+
+    L'utilité immédiate : le 20 août, Safti a visité 212 pages, toutes
+    écartées, zéro illisible. Les pages se lisent donc parfaitement et c'est ce
+    filtre qui dit non, cent fois sur cent — le catalogue ne contient pas une
+    seule annonce Safti depuis l'origine. Savoir LAQUELLE des neuf règles
+    refuse fait toute la différence entre corriger et deviner.
+    """
     titre = normaliser(a.get("titre") or "")
     # Titre vide ou indigent (numéro de référence seul, « 389 ») : inexploitable.
     if len(_LETTRES.findall(titre)) < 5:
-        return False
+        return "titre_indigent"
     # Déjà vendu : l'annonce traîne en ligne, mais on ne la propose pas.
     if est_vendu(a):
-        return False
+        return "vendu"
     if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
-        return False
+        return "titre_hors_cible"
     # Page catalogue qui a pris le titre de son premier bien : le titre ne la
     # trahit pas, l'énumération de ses références, si.
     if enumere_plusieurs_biens(a):
-        return False
+        return "page_catalogue"
     # Location : ce n'est pas un bien à acheter.
     if _LOCATION_TITRE.search(titre) or _URL_LOCATION.search(a.get("url") or ""):
-        return False
+        return "location"
     # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
     if _URL_TYPE_EXCLU.search(a.get("url") or ""):
-        return False
+        return "url_type_exclu"
     if (a.get("type_bien") or "maison") not in TYPES_REFUGE:
-        return False
+        return "type_bien"
     # Un vrai logement a une surface habitable, ou au minimum un prix crédible
     # (≥ 15 000 €) ET un nombre de pièces. Les pages de blog / catalogue n'ont
     # pas de surface, et un « prix » de 3 480 € trahit une extraction ratée.
     prix = a.get("prix")
     if not a.get("surface_m2") and not (prix and prix >= PRIX_MINI and a.get("pieces")):
-        return False
+        return "ni_surface_ni_prix_credible"
     # Hors projet par le haut. Le `prix and` n'est pas une précaution de style :
     # cent dix-huit biens servis n'ont pas de prix lisible, et les comparer à un
     # plafond les effacerait tous d'un coup.
     if prix and prix > PRIX_MAXI:
-        return False
-    return True
+        return "prix_trop_haut"
+    return None
+
+
+def est_bien_valide(a: dict) -> bool:
+    """True uniquement pour l'annonce d'un vrai logement de type refuge."""
+    return motif_de_rejet(a) is None
