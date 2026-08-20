@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.5,
+  "seconde": 16.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.5,
+  "seconde": 16.6,
   "ordre": [
    "safti",
    "iad",
@@ -21,7 +21,7 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.5,
+  "seconde": 16.6,
   "reseau": "safti",
   "part_secondes": 400
  },
@@ -33,9 +33,142 @@
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.7,
+  "seconde": 17.3,
   "reseau": "safti",
-  "n": 28184,
+  "n": 28147,
   "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 18.1,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 18.2,
+  "reseau": "safti",
+  "connues": 2506
+ },
+ {
+  "etape": "departement",
+  "seconde": 129.2,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true
+ },
+ {
+  "etape": "departement",
+  "seconde": 240.8,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true
+ },
+ {
+  "etape": "departement",
+  "seconde": 351.7,
+  "reseau": "safti",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true
+ },
+ {
+  "etape": "departement",
+  "seconde": 417.7,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 30,
+  "gardes": 0,
+  "tronquee": true
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 417.7,
+  "reseau": "iad",
+  "part_secondes": 399
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 418.1,
+  "reseau": "iad",
+  "n": 1
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 427.3,
+  "reseau": "iad",
+  "n": 91877,
+  "complet": false
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 429.2,
+  "reseau": "iad",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 429.4,
+  "reseau": "iad",
+  "connues": 2506
+ },
+ {
+  "etape": "departement",
+  "seconde": 659.2,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 35,
+  "tronquee": true
+ },
+ {
+  "etape": "departement",
+  "seconde": 818.6,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 35,
+  "gardes": 21,
+  "tronquee": true
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 818.6,
+  "reseau": "capifrance",
+  "part_secondes": 398
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 819.2,
+  "reseau": "capifrance",
+  "n": 1
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 819.5,
+  "reseau": "capifrance",
+  "n": 0,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 819.5,
+  "reseau": "capifrance",
+  "departements": 0
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 819.7,
+  "reseau": "capifrance",
+  "connues": 2506
+ },
+ {
+  "etape": "fin",
+  "seconde": 819.7,
+  "gardes": 56
  }
 ]
