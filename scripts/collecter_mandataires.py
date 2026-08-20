@@ -42,6 +42,7 @@ import re
 import sys
 import time
 import urllib.request
+from collections import Counter
 from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -53,7 +54,7 @@ from app import db, historique, mandataires  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
-from app.qualite import est_bien_valide, est_vendu  # noqa: E402
+from app.qualite import est_vendu, motif_de_rejet  # noqa: E402
 
 JOURNAL = RACINE / "data" / "mandataires_visites.json"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -244,13 +245,16 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
     vrai = mandataires.departement_du_code_postal(brut.get("code_postal"))
     if vrai and vrai != annonce["departement"]:
         if vrai not in DEPARTEMENTS_CIBLES:
-            return "ecarte"            # hors périmètre : l'adresse avait menti
+            return "ecarte:hors_perimetre"   # l'adresse avait menti
         brut["departement"] = vrai
         brut["agence"] = mandataires.nom_d_agence(reseau, vrai)
     else:
         brut["departement"] = brut.get("departement") or annonce["departement"]
-    if not est_bien_valide(brut):
-        return "ecarte"
+    # Le motif, pas seulement le refus : Safti se fait écarter cent fois sur
+    # cent et rien ne disait par quelle règle.
+    motif = motif_de_rejet(brut)
+    if motif:
+        return f"ecarte:{motif}"
 
     brut["id"] = "%s-%s" % (mandataires.normaliser(brut["agence"]),
                             hashlib.sha1(annonce["url"].encode()).hexdigest()[:12])
@@ -344,11 +348,16 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         tronquee = not sitemap_complet or len(candidats) > len(lot)
         gardes = compteurs = 0
         etats = {"garde": 0, "vendu": 0, "ecarte": 0, "illisible": 0}
+        motifs: Counter = Counter()
         for annonce in lot:
             if time.monotonic() > fin_prevue:
                 tronquee = True
                 break
-            etats[enregistrer_une(conn, annonce, reseau)] += 1
+            resultat = enregistrer_une(conn, annonce, reseau)
+            etat, _, motif = resultat.partition(":")
+            etats[etat] += 1
+            if motif:
+                motifs[motif] += 1
             compteurs += 1
             time.sleep(args.delai)
         gardes = etats["garde"]
@@ -364,7 +373,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         # page ne s'extrait pas) et « écarté » (le bien ne nous convient pas)
         # appellent des réponses opposées, et rien ne permettait de trancher.
         etape("departement", reseau=cle, departement=dept, visitees=compteurs,
-              gardes=gardes, tronquee=tronquee, etats=dict(etats))
+              gardes=gardes, tronquee=tronquee, etats=dict(etats),
+              motifs=dict(motifs))
         print(f"  {dept} · {gardes:3} gardé(s) sur {compteurs} visité(s)"
               f" — {etats['vendu']} vendu(s), {etats['ecarte']} hors cible,"
               f" {etats['illisible']} illisible(s)")
