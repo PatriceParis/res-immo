@@ -359,8 +359,12 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
                 {"agence": mandataires.nom_d_agence(reseau, dept),
                  "agence_url": reseau["site"]}))
         historique.noter_visite_tronquee(tronquees)
+        # Le détail des états, et pas seulement le total gardé : le 20 août,
+        # Safti a visité 180 pages et n'en a gardé aucune. « Illisible » (la
+        # page ne s'extrait pas) et « écarté » (le bien ne nous convient pas)
+        # appellent des réponses opposées, et rien ne permettait de trancher.
         etape("departement", reseau=cle, departement=dept, visitees=compteurs,
-              gardes=gardes, tronquee=tronquee)
+              gardes=gardes, tronquee=tronquee, etats=dict(etats))
         print(f"  {dept} · {gardes:3} gardé(s) sur {compteurs} visité(s)"
               f" — {etats['vendu']} vendu(s), {etats['ecarte']} hors cible,"
               f" {etats['illisible']} illisible(s)")
