@@ -132,6 +132,33 @@ ZONES = [
     # coordonnées sont dans notre catalogue donc vérifiées — celles de
     # Montbard, non.
     {"nom": "Montbard – Saint-Rémy (21)", "lat": 47.6450, "lon": 4.2974, "rayon_km": 30},
+
+    # Treize zones ajoutées le 21 août, calculées comme les précédentes. La
+    # collecte des mandataires, morte quatre jours et rétablie le 20, a repris
+    # en ramenant des départements où nous n'avions jamais cherché d'agence :
+    # l'angle mort est remonté de 12 % à 15,5 %, et le garde-fou de
+    # test_couverture_zones l'a signalé au premier passage — c'est exactement
+    # ce pour quoi il avait été écrit.
+    #
+    # Le centre n'est pas le point qui couvre le plus de biens, mais le BOURG
+    # LE PLUS DENSE parmi ceux qui en couvrent presque autant : la découverte
+    # cherche des agences, et une agence a pignon sur rue dans un chef-lieu,
+    # pas dans un hameau. C'est ce qui remplace Landrethun par Creil en tête de
+    # liste. Toutes ces coordonnées viennent du catalogue, donc sont vérifiées,
+    # et aucun de ces centres n'est à moins de 30 km d'une zone existante.
+    {"nom": "Creil (60)",                  "lat": 49.2575, "lon": 2.4788, "rayon_km": 30},
+    {"nom": "Landrethun-lès-Ardres (62)",  "lat": 50.8130, "lon": 1.9667, "rayon_km": 30},
+    {"nom": "Beaumont-sur-Sarthe (72)",    "lat": 48.2234, "lon": 0.1199, "rayon_km": 30},
+    {"nom": "Bracieux (41)",               "lat": 47.5507, "lon": 1.5447, "rayon_km": 30},
+    {"nom": "Bully-les-Mines (62)",        "lat": 50.4481, "lon": 2.7215, "rayon_km": 30},
+    {"nom": "Valognes (50)",               "lat": 49.5151, "lon": -1.4781, "rayon_km": 30},
+    {"nom": "Saint-Loup-sur-Semouse (70)", "lat": 47.8815, "lon": 6.2749, "rayon_km": 30},
+    {"nom": "Saint-Ouen-sur-Iton (61)",    "lat": 48.7345, "lon": 0.6659, "rayon_km": 30},
+    {"nom": "Vouziers (08)",               "lat": 49.4143, "lon": 4.6977, "rayon_km": 30},
+    {"nom": "Rives Dervoises (52)",        "lat": 48.4885, "lon": 4.7002, "rayon_km": 30},
+    {"nom": "Insming (57)",                "lat": 48.9550, "lon": 6.8770, "rayon_km": 30},
+    {"nom": "Guise (02)",                  "lat": 49.9015, "lon": 3.6282, "rayon_km": 30},
+    {"nom": "Le Fresne-Poret (50)",        "lat": 48.7115, "lon": -0.8221, "rayon_km": 30},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence
