@@ -189,8 +189,15 @@ def motif_de_rejet(a: dict) -> str | None:
     # Déjà vendu : l'annonce traîne en ligne, mais on ne la propose pas.
     if est_vendu(a):
         return "vendu"
-    if _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre):
-        return "titre_hors_cible"
+    # On nomme le FRAGMENT qui a déclenché le refus, et pas seulement la règle.
+    # Ces deux expressions comptent une soixantaine d'alternatives : savoir que
+    # « le titre est hors cible » ne dit rien d'exploitable quand 217 pages
+    # Safti sur 257 tombent ici et aucune page IAD. Le fragment, lui, désigne
+    # la coupable — et la liste des alternatives étant fixe, la cardinalité du
+    # compteur reste bornée.
+    hors_cible = _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre)
+    if hors_cible:
+        return f"titre_hors_cible:{hors_cible.group(0)}"
     # Page catalogue qui a pris le titre de son premier bien : le titre ne la
     # trahit pas, l'énumération de ses références, si.
     if enumere_plusieurs_biens(a):
