@@ -219,18 +219,28 @@ def noter_visite(cle: str, jour: str) -> None:
         pass
 
 
-def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
-    """Renvoie « garde », « vendu », « ecarte » ou « illisible »."""
+def enregistrer_une(conn, annonce: dict, reseau: dict) -> tuple[str, str]:
+    """(état, titre lu). L'état vaut « garde », « vendu », « illisible », ou
+    « ecarte:<motif> ».
+
+    Le titre est renvoyé pour que le déroulé puisse en garder UN exemple par
+    motif. Le fragment de règle dit quelle alternative refuse ; il ne dit pas
+    si elle a raison. Safti pourrait très bien publier de vraies pages
+    catalogue, auquel cas le filtre fonctionne et il n'y a rien à corriger.
+    Sans exemple, trancher demanderait un tour de plus — et chaque tour coûte
+    une demi-journée.
+    """
     donnees = lire(annonce["url"])
     if not donnees:
-        return "illisible"
+        return "illisible", ""
     brut = extraire_annonce(donnees.decode("utf-8", "replace"), annonce["url"],
                             source=mandataires.normaliser(annonce["agence"]),
                             agence=annonce["agence"], agence_url=reseau["site"])
     if not brut:
-        return "illisible"
+        return "illisible", ""
+    titre = (brut.get("titre") or "")[:120]
     if est_vendu(brut):
-        return "vendu"
+        return "vendu", titre
     # La commune vient de l'ADRESSE, pas de la page : ces réseaux publient le
     # code postal mais rarement la commune, et jamais les coordonnées.
     brut.setdefault("commune", annonce["commune"])
@@ -245,7 +255,7 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
     vrai = mandataires.departement_du_code_postal(brut.get("code_postal"))
     if vrai and vrai != annonce["departement"]:
         if vrai not in DEPARTEMENTS_CIBLES:
-            return "ecarte:hors_perimetre"   # l'adresse avait menti
+            return "ecarte:hors_perimetre", titre   # l'adresse avait menti
         brut["departement"] = vrai
         brut["agence"] = mandataires.nom_d_agence(reseau, vrai)
     else:
@@ -254,7 +264,7 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
     # cent et rien ne disait par quelle règle.
     motif = motif_de_rejet(brut)
     if motif:
-        return f"ecarte:{motif}"
+        return f"ecarte:{motif}", titre
 
     brut["id"] = "%s-%s" % (mandataires.normaliser(brut["agence"]),
                             hashlib.sha1(annonce["url"].encode()).hexdigest()[:12])
@@ -272,7 +282,7 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> str:
     if brut.get("altitude") is None and brut.get("lat") is not None:
         brut["altitude"] = _altitude(brut["lat"], brut["lon"])
     db.upsert_annonce(conn, preparer_annonce(brut))
-    return "garde"
+    return "garde", titre
 
 
 def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
@@ -349,15 +359,17 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         gardes = compteurs = 0
         etats = {"garde": 0, "vendu": 0, "ecarte": 0, "illisible": 0}
         motifs: Counter = Counter()
+        exemples: dict = {}
         for annonce in lot:
             if time.monotonic() > fin_prevue:
                 tronquee = True
                 break
-            resultat = enregistrer_une(conn, annonce, reseau)
+            resultat, titre = enregistrer_une(conn, annonce, reseau)
             etat, _, motif = resultat.partition(":")
             etats[etat] += 1
             if motif:
                 motifs[motif] += 1
+                exemples.setdefault(motif, titre)
             compteurs += 1
             time.sleep(args.delai)
         gardes = etats["garde"]
@@ -374,7 +386,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         # appellent des réponses opposées, et rien ne permettait de trancher.
         etape("departement", reseau=cle, departement=dept, visitees=compteurs,
               gardes=gardes, tronquee=tronquee, etats=dict(etats),
-              motifs=dict(motifs))
+              motifs=dict(motifs), exemples=exemples)
         print(f"  {dept} · {gardes:3} gardé(s) sur {compteurs} visité(s)"
               f" — {etats['vendu']} vendu(s), {etats['ecarte']} hors cible,"
               f" {etats['illisible']} illisible(s)")
