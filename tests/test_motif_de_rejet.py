@@ -60,6 +60,30 @@ def test_chaque_regle_se_nomme():
             f"pour {a['titre']!r}")
 
 
+def test_un_titre_hors_cible_nomme_le_fragment_fautif():
+    """Ces deux expressions comptent une soixantaine d'alternatives. Savoir que
+    « le titre est hors cible » ne dit rien d'exploitable — c'est ce qui manque
+    pour comprendre pourquoi 217 pages Safti sur 257 tombent là, et aucune
+    page IAD."""
+    cas = [("Appartement T3 à Autun", "appartement"),
+           ("Nos biens à vendre", "nos biens"),
+           ("Vente de maisons et villas | Agence du Centre", "vente de"),
+           ("Terrain à bâtir à Autun", "terrain a batir")]
+    for titre, fragment in cas:
+        motif = qualite.motif_de_rejet(bien(titre=titre, type_bien="maison"))
+        assert motif == f"titre_hors_cible:{fragment}", (
+            f"pour {titre!r} : obtenu « {motif} », attendu le fragment "
+            f"« {fragment} »")
+
+
+def test_le_fragment_ne_casse_pas_le_decoupage_du_collecteur():
+    """Le collecteur découpe « ecarte:<motif> » sur le PREMIER deux-points.
+    Un motif qui en contient un lui-même doit rester lisible."""
+    motif = qualite.motif_de_rejet(bien(titre="Appartement T3 à Autun"))
+    etat, _, reste = f"ecarte:{motif}".partition(":")
+    assert etat == "ecarte" and reste == motif
+
+
 def test_la_decision_et_son_explication_ne_peuvent_pas_diverger():
     """LE test. `est_bien_valide` doit être exactement « aucun motif ».
 
