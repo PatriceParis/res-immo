@@ -102,6 +102,24 @@ def test_un_departement_sans_recolte_dit_pourquoi():
         "illisibles ou simplement hors cible")
 
 
+def test_un_motif_garde_un_exemple_de_titre():
+    """Le fragment de règle dit quelle alternative refuse ; il ne dit pas si
+    elle a RAISON. Safti pourrait publier de vraies pages catalogue, auquel cas
+    le filtre fonctionne et il n'y a rien à corriger.
+
+    Sans exemple, trancher demanderait un tour de plus — et chaque tour coûte
+    une demi-journée. Trois tours y sont déjà passés.
+    """
+    source = (RACINE / "scripts" / "collecter_mandataires.py").read_text(
+        encoding="utf-8")
+    appel = source[source.index('etape("departement"'):]
+    assert "exemples=" in appel[:appel.index(")\n")], (
+        "aucun exemple de titre n'est conservé : on saura quelle règle refuse, "
+        "pas si elle a raison de refuser")
+    assert "exemples.setdefault(motif, titre)" in source, (
+        "l'exemple doit être le PREMIER titre vu pour ce motif, pas le dernier")
+
+
 def test_le_deroule_horodate_chaque_etape(deroule_jetable, monkeypatch):
     """Sans les secondes écoulées, on saurait où le passage meurt mais pas ce
     qui a mangé le temps — la question posée depuis trois jours."""
