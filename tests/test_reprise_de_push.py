@@ -23,6 +23,7 @@ formes : l'écrasement ici, l'abandon pur et simple là-bas.
 """
 
 
+import re
 import sys
 from pathlib import Path
 
@@ -96,6 +97,36 @@ def test_le_nombre_du_message_est_recalcule():
         reprise = bloc_de_reprise(script_de_publication(fichier))
         assert reprise.index("N=$(python") < reprise.index("git commit"), (
             f"{fichier} : le compte doit être refait avant le message")
+
+
+def test_le_deroule_du_passage_survit_a_la_reprise():
+    """Ce que le passage a MESURÉ doit survivre comme ce qu'il a récolté.
+
+    Le 21 août, le passage mandataires de 15 h a collecté quatre-vingts
+    annonces et mesuré, pour la première fois, quel fragment de règle refusait
+    les pages Safti. Son push a été rejeté ; la reprise a remis les deux
+    journaux qu'elle connaissait, et le « reset --hard » a rendu au déroulé sa
+    version PRÉCÉDENTE. La mesure était faite, elle a été jetée.
+
+    J'ai alors lu ce déroulé périmé à deux points d'étape de suite en concluant
+    « le passage vient de démarrer » — deux fois faux, et une journée perdue à
+    attendre un chiffre déjà obtenu. `collecte.yml` remet bien son propre
+    `deroule_collecte.json` ; j'ai ajouté celui des mandataires sans toucher à
+    sa reprise.
+
+    Le nom du fichier est lu dans le SCRIPT et non écrit ici : une constante
+    renommée d'un côté et pas de l'autre est la faute que ce projet a déjà
+    payée quatre fois.
+    """
+    for fichier, script in (("mandataires.yml", "collecter_mandataires.py"),):
+        source = (RACINE / "scripts" / script).read_text(encoding="utf-8")
+        deroules = set(re.findall(r'"(deroule_[a-z_]+\.json)"', source))
+        assert deroules, f"{script} : aucun déroulé trouvé, le test ne mesure rien"
+        reprise = bloc_de_reprise(script_de_publication(fichier))
+        for deroule in deroules:
+            assert deroule in reprise, (
+                f"{fichier} : {deroule} est écrit par le passage mais n'est pas "
+                f"remis après le reset — sa mesure est jetée en silence")
 
 
 def test_les_journaux_du_passage_sont_bien_remis():

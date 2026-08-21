@@ -119,12 +119,14 @@ jobs:
             for essai in 1 2 3 4 5; do
               if git push; then echo "Poussé (essai $essai)."; break; fi
               echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
-              for f in mandataires_visites.json visites_tronquees.json; do
+              for f in mandataires_visites.json visites_tronquees.json \
+                       deroule_mandataires.json; do
                 cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
               done
               git fetch origin main
               git reset --hard origin/main
-              for f in mandataires_visites.json visites_tronquees.json; do
+              for f in mandataires_visites.json visites_tronquees.json \
+                       deroule_mandataires.json; do
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
               python scripts/exporter_reel.py
