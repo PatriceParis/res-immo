@@ -67,7 +67,9 @@ def test_un_titre_hors_cible_nomme_le_fragment_fautif():
     page IAD."""
     cas = [("Appartement T3 à Autun", "appartement"),
            ("Nos biens à vendre", "nos biens"),
-           ("Vente de maisons et villas | Agence du Centre", "vente de"),
+           # Le fragment porte désormais le PLURIEL, parce que c'est lui qui
+           # distingue le catalogue de l'annonce — voir test_titre_de_safti.
+           ("Vente de maisons et villas | Agence du Centre", "vente de maisons"),
            ("Terrain à bâtir à Autun", "terrain a batir")]
     for titre, fragment in cas:
         motif = qualite.motif_de_rejet(bien(titre=titre, type_bien="maison"))

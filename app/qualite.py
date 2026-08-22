@@ -33,7 +33,18 @@ _NON_ANNONCE = re.compile(
     # villas | Agence du Centre », « Biens immobiliers à vendre | Berry
     # Immobilier ». L'extraction y prend le prix et la surface de la première
     # vignette, ce qui les faisait passer pour un bien à part entière.
-    r"|^vente (?:de|d')|^biens immobiliers\b|\bbiens immobiliers a vendre\b"
+    #
+    # Le PLURIEL est exigé, et c'est tout le correctif du 22 août. Écrite
+    # « ^vente (?:de|d') », la règle refusait aussi « Vente de maison 7 pièces
+    # à Abreschviller 57560 : 150m², prix 144 000 €. Réf : 1650646 » — le
+    # gabarit de titre de Safti, c'est-à-dire de TOUTES ses annonces. Le réseau
+    # n'a jamais versé une seule ligne au catalogue depuis qu'il est branché,
+    # et cette règle en était la cause unique : 217 pages sur 257 tombaient là,
+    # aucune page IAD. Le pluriel sépare le catalogue de l'annonce, exactement
+    # comme deux lignes plus haut pour « 177 Maisons à vendre ».
+    r"|^vente (?:de|d')\s*(?:maisons|villas|biens|proprietes|appartements"
+    r"|logements|terrains|immeubles)\b"
+    r"|^biens immobiliers\b|\bbiens immobiliers a vendre\b"
     r"|\bvillas et maisons\b|\bmaisons et villas\b"
     r"|\bblog\b|actualit|\bconseils?\b|\bguides?\b|quel mandat|estimation"
     r"|qui sommes|contactez|mentions legales|notre agence|vendre (sa|votre|ma|leur) "
