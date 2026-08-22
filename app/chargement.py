@@ -195,6 +195,11 @@ def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
     return {cle for cle, n in compte.items() if n >= seuil}
 
 
+# En deçà, des images de même nom sur une annonce restent du mobilier ; au-delà,
+# c'est une galerie, et un réseau qui numérote ses fichiers.
+PHOTOS_POUR_UNE_GALERIE = 4
+
+
 def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
     """Repère les images qui reviennent d'une annonce à l'autre chez une agence.
 
@@ -241,9 +246,22 @@ def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
             mobilier.add(photo)
     noms_communs = {nom for (_, nom), vues in par_nom.items() if len(vues) >= seuil_nom}
     for a in annonces:
-        for photo in _candidates(a):
-            if _nom_de_fichier(photo) in noms_communs:
-                mobilier.add(photo)
+        candidates = list(dict.fromkeys(_candidates(a)))
+        suspectes = [p for p in candidates if _nom_de_fichier(p) in noms_communs]
+        # Un bien dont TOUTES les images portent un nom commun, et qui en a une
+        # galerie entière, n'est pas un bien sans photo : c'est un réseau qui
+        # nomme ses fichiers par POSITION. Safti sert `rg_nobn-2.jpg`,
+        # `rg_nobn-3.jpg`… à chacune de ses annonces, sous des chemins pourtant
+        # tous distincts — soixante-dix-sept annonces sont entrées le 22 août
+        # avec douze à vingt-deux photos chacune, et pas une seule affichée.
+        #
+        # Le critère du NOM est une heuristique, celui de l'URL identique une
+        # preuve. On admet donc que la preuve vide une annonce de ses photos,
+        # jamais l'heuristique seule. Le seuil de galerie garde le cas
+        # d'origine : une page qui ne porte qu'une cloche ou deux reste
+        # filtrée, puisqu'une cloche ne vient pas par douze.
+        if len(suspectes) < len(candidates) or len(candidates) < PHOTOS_POUR_UNE_GALERIE:
+            mobilier.update(suspectes)
     return mobilier
 
 
