@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 19.5,
+  "seconde": 15.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 19.5,
+  "seconde": 15.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,160 +21,194 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.5,
+  "seconde": 15.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 20.2,
+  "seconde": 16.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 20.7,
+  "seconde": 16.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.8,
+  "seconde": 16.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.9,
+  "seconde": 16.8,
   "reseau": "capifrance",
-  "connues": 2607
+  "connues": 2743
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.9,
+  "seconde": 16.8,
   "reseau": "iad",
-  "part_secondes": 599
+  "part_secondes": 600
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.2,
+  "seconde": 17.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 32.1,
+  "seconde": 26.7,
   "reseau": "iad",
-  "n": 91970,
+  "n": 91935,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 34.1,
+  "seconde": 28.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 34.3,
+  "seconde": 28.8,
   "reseau": "iad",
-  "connues": 2607
+  "connues": 2743
  },
  {
   "etape": "departement",
-  "seconde": 216.3,
+  "seconde": 247.5,
   "reseau": "iad",
-  "departement": "60",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 19,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 19,
-   "vendu": 6,
-   "ecarte": 25,
+   "garde": 28,
+   "vendu": 15,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "location": 4,
-   "hors_perimetre": 12,
-   "prix_trop_haut": 9
+   "location": 1,
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 464.6,
+  "seconde": 443.5,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 35,
+  "gardes": 22,
   "tronquee": true,
   "etats": {
-   "garde": 35,
-   "vendu": 7,
-   "ecarte": 8,
+   "garde": 22,
+   "vendu": 5,
+   "ecarte": 23,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 23
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 623.7,
+  "seconde": 619.3,
   "reseau": "iad",
-  "departement": "62",
-  "visitees": 34,
-  "gardes": 19,
+  "departement": "89",
+  "visitees": 35,
+  "gardes": 26,
   "tronquee": true,
   "etats": {
-   "garde": 19,
-   "vendu": 4,
-   "ecarte": 11,
+   "garde": 26,
+   "vendu": 2,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
    "location": 3,
-   "hors_perimetre": 7,
-   "prix_trop_haut": 1
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 623.7,
+  "seconde": 619.3,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 624.1,
+  "seconde": 619.5,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 624.9,
+  "seconde": 620.0,
   "reseau": "safti",
-  "n": 28140,
+  "n": 28097,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 625.6,
+  "seconde": 620.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 625.8,
+  "seconde": 620.9,
   "reseau": "safti",
-  "connues": 2607
+  "connues": 2743
  },
  {
   "etape": "departement",
-  "seconde": 739.9,
+  "seconde": 733.1,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 2,
+   "ecarte": 48,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:vente de": 43,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 7 pièces à Abreschviller 57560 : 150m², prix 144 000 €. Réf : 1650646",
+   "hors_perimetre": "Vente de maison 5 pièces à Albefeuille-Lagarde 82290 : 156m², prix 174 900 €. Réf : 1647065"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 838.4,
+  "reseau": "safti",
+  "departement": "58",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
@@ -185,33 +219,42 @@
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible": 36,
-   "hors_perimetre": 14
+   "titre_hors_cible:vente de": 46,
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 1 pièce à Alligny-Cosne 58200 : 60m², prix 74 000 €. Réf : 1675787",
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
   }
  },
  {
   "etape": "departement",
-  "seconde": 855.0,
+  "seconde": 951.9,
   "reseau": "safti",
-  "departement": "37",
+  "departement": "59",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 0,
-   "ecarte": 50,
+   "vendu": 2,
+   "ecarte": 48,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible": 50
+   "titre_hors_cible:vente de": 45,
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 8 pièces à Abancourt 59268 : 221m², prix 408 000 €. Réf : 1695843",
+   "hors_perimetre": "Vente de maison 5 pièces à Beaufort-En-Anjou 49250 : 120m², prix 309 900 €. Réf : 1630405"
   }
  },
  {
   "etape": "departement",
-  "seconde": 971.3,
+  "seconde": 1069.1,
   "reseau": "safti",
-  "departement": "39",
+  "departement": "60",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
@@ -222,69 +265,61 @@
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible": 48,
+   "titre_hors_cible:vente de": 31,
+   "hors_perimetre": 18
+  },
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 8 pièces à Agnetz 60600 : 142m², prix 261 000 €. Réf : 1576532",
+   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1196.8,
+  "reseau": "safti",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 49,
+   "illisible": 1
+  },
+  "motifs": {
+   "titre_hors_cible:vente de": 48,
    "hors_perimetre": 1
+  },
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 7 pièces à Alencon 61000 : 150m², prix 238 000 €. Réf : 1583044",
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1086.9,
+  "seconde": 1217.5,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
+  "departement": "62",
+  "visitees": 9,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
    "vendu": 0,
-   "ecarte": 50,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible": 33,
-   "hors_perimetre": 17
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1205.2,
-  "reseau": "safti",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 0,
-   "ecarte": 50,
-   "illisible": 0
+   "titre_hors_cible:vente de": 9
   },
-  "motifs": {
-   "titre_hors_cible": 43,
-   "hors_perimetre": 7
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1220.9,
-  "reseau": "safti",
-  "departement": "50",
-  "visitees": 7,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 0,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible": 7
+  "exemples": {
+   "titre_hors_cible:vente de": "Vente de maison 6 pièces à Ablain-Saint-Nazaire 62153 : 109m², prix 214 000 €. Réf : 1679632"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1220.9,
-  "gardes": 73
+  "seconde": 1217.5,
+  "gardes": 76
  }
 ]
