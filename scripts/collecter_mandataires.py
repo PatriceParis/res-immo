@@ -219,9 +219,12 @@ def noter_visite(cle: str, jour: str) -> None:
         pass
 
 
-def enregistrer_une(conn, annonce: dict, reseau: dict) -> tuple[str, str]:
+def enregistrer_une(conn, annonce: dict, reseau: dict,
+                    reaffectees: set) -> tuple[str, str]:
     """(état, titre lu). L'état vaut « garde », « vendu », « illisible », ou
     « ecarte:<motif> ».
+
+    `reaffectees` recueille les cibles atteintes par ricochet — voir plus bas.
 
     Le titre est renvoyé pour que le déroulé puisse en garder UN exemple par
     motif. Le fragment de règle dit quelle alternative refuse ; il ne dit pas
@@ -258,6 +261,11 @@ def enregistrer_une(conn, annonce: dict, reseau: dict) -> tuple[str, str]:
             return "ecarte:hors_perimetre", titre   # l'adresse avait menti
         brut["departement"] = vrai
         brut["agence"] = mandataires.nom_d_agence(reseau, vrai)
+        # Cette cible-là, on ne l'a PAS énumérée : on est tombé sur une de ses
+        # annonces par ricochet, en parcourant un autre département. Le
+        # signaler est vital — voir la boucle appelante.
+        reaffectees.add(historique.identite(
+            {"agence": brut["agence"], "agence_url": reseau["site"]}))
     else:
         brut["departement"] = brut.get("departement") or annonce["departement"]
     # Le motif, pas seulement le refus : Safti se fait écarter cent fois sur
@@ -346,6 +354,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     # à moitié. La règle de sortie doit s'y abstenir, sinon elle supprime des
     # annonces qu'elle n'a jamais cherchées — voir app/historique.py.
     tronquees: set = set()
+    reaffectees: set = set()
     for dept in mandataires.ordre_des_departements(groupes, vu, cle):
         if time.monotonic() > fin_prevue:
             print("  budget de temps atteint — la suite au prochain passage.")
@@ -364,7 +373,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             if time.monotonic() > fin_prevue:
                 tronquee = True
                 break
-            resultat, titre = enregistrer_une(conn, annonce, reseau)
+            resultat, titre = enregistrer_une(conn, annonce, reseau,
+                                              reaffectees)
             etat, _, motif = resultat.partition(":")
             etats[etat] += 1
             if motif:
@@ -379,6 +389,15 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             tronquees.add(historique.identite(
                 {"agence": mandataires.nom_d_agence(reseau, dept),
                  "agence_url": reseau["site"]}))
+        # Une cible atteinte par RICOCHET n'a jamais été énumérée : on n'y est
+        # entré que parce qu'une annonce d'un autre département portait son
+        # code postal. Sans cette marque, la règle de sortie la croit visitée
+        # en entier et retire tout ce qu'elle n'a pas revu — le 23 août, une
+        # seule annonce reclassée en Saône-et-Loire a suffi à en effacer 461,
+        # dans le département même que l'on cherchait à couvrir. C'est la
+        # faute des 175 annonces, sous une forme nouvelle : la cible n'était
+        # pas tronquée, elle était fortuite.
+        tronquees |= reaffectees
         historique.noter_visite_tronquee(tronquees)
         # Le détail des états, et pas seulement le total gardé : le 20 août,
         # Safti a visité 180 pages et n'en a gardé aucune. « Illisible » (la
