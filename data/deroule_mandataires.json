@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.9,
+  "seconde": 22.4,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.9,
+  "seconde": 22.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,219 +21,217 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.9,
+  "seconde": 22.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.8,
+  "seconde": 23.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.3,
+  "seconde": 23.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.3,
+  "seconde": 23.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.5,
+  "seconde": 24.1,
   "reseau": "capifrance",
-  "connues": 2799
+  "connues": 2938
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.5,
+  "seconde": 24.1,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.0,
+  "seconde": 24.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 41.2,
+  "seconde": 39.9,
   "reseau": "iad",
-  "n": 91935,
+  "n": 91866,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 43.2,
+  "seconde": 41.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 43.3,
+  "seconde": 42.0,
   "reseau": "iad",
-  "connues": 2799
+  "connues": 2938
  },
  {
   "etape": "departement",
-  "seconde": 215.0,
+  "seconde": 231.4,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 11,
+  "gardes": 15,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 14,
-   "ecarte": 25,
+   "garde": 15,
+   "vendu": 8,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 22,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 12 pièces de 403 m² à Saint-Pierre-de-Bœuf (42520)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 455.0,
-  "reseau": "iad",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 24,
-  "tronquee": true,
-  "etats": {
-   "garde": 24,
-   "vendu": 4,
-   "ecarte": 22,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 10,
-   "titre_hors_cible:murs commerciaux": 1,
-   "hors_perimetre": 8,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "hors_perimetre": "Maison 1 pièce de 70 m² à Montereau-Fault-Yonne (77130)",
-   "prix_trop_haut": "Domaine 11 pièces de 313 m² à Olivet (45160)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 625.8,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 30,
-  "gardes": 19,
-  "tronquee": true,
-  "etats": {
-   "garde": 19,
-   "vendu": 3,
-   "ecarte": 8,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 3,
+   "hors_perimetre": 19,
    "location": 2,
-   "prix_trop_haut": 3
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison 4 pièces de 62 m² à Couvains (50680)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 492.1,
+  "reseau": "iad",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 30,
+  "tronquee": true,
+  "etats": {
+   "garde": 30,
+   "vendu": 9,
+   "ecarte": 11,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 10
+  },
+  "exemples": {
+   "location": "Maison 6 pièces de 122 m² à Saint-Dizier (52100)",
+   "hors_perimetre": "Demeure 10 pièces de 260 m² à Saint-Maurice (94410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 628.1,
+  "reseau": "iad",
+  "departement": "53",
+  "visitees": 29,
+  "gardes": 14,
+  "tronquee": true,
+  "etats": {
+   "garde": 14,
+   "vendu": 9,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "location": "Maison de ville 2 pièces de 49 m² à Laval (53000)",
+   "hors_perimetre": "Maison de campagne 3 pièces de 64 m² à Saint-Léger-sur-Vouzance (03130)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.8,
+  "seconde": 628.1,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 626.5,
+  "seconde": 628.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 627.5,
+  "seconde": 630.5,
   "reseau": "safti",
-  "n": 28097,
+  "n": 28067,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 628.2,
+  "seconde": 631.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 628.4,
+  "seconde": 631.4,
   "reseau": "safti",
-  "connues": 2799
+  "connues": 2938
  },
  {
   "etape": "departement",
-  "seconde": 994.6,
+  "seconde": 924.2,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 1,
+   "garde": 38,
+   "vendu": 2,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1
+   "hors_perimetre": 9,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
+   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1225.5,
+  "seconde": 1224.5,
   "reseau": "safti",
-  "departement": "71",
-  "visitees": 39,
-  "gardes": 28,
+  "departement": "76",
+  "visitees": 47,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 28,
-   "vendu": 0,
-   "ecarte": 11,
+   "garde": 42,
+   "vendu": 1,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 11
+   "prix_trop_haut": 1,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
+   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
+   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 115m², prix 249 900 €. Réf : 1610736"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1225.5,
-  "gardes": 131
+  "seconde": 1224.5,
+  "gardes": 139
  }
 ]
