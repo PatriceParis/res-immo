@@ -132056,7 +132056,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-08-21",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -132120,7 +132120,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-en-pierre-r%C3%A9nov%C3%A9e/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-08-21",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -132150,6 +132150,16 @@
   "densite_hab_km2": 166.7,
   "dpe": "G",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 104.4,
    "nucleaire_nom": "Flamanville"
   },
@@ -132179,7 +132189,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-ancienne-%C3%A0-rafra%C3%AEchir/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-08-21",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -132530,7 +132540,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-r%C3%A9cente-de-plain-pied/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-08-12",
-  "revue_le": "2026-08-21",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -150800,6 +150810,16 @@
   "densite_hab_km2": 616.7,
   "dpe": "G",
   "risques": {
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 121.8,
    "nucleaire_nom": "Bugey"
   },
@@ -150814,7 +150834,7 @@
    "https://cdn.printfriendly.com/buttons/printfriendly-pdf-email-button-notext.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -150844,6 +150864,16 @@
   "densite_hab_km2": 616.7,
   "dpe": "E",
   "risques": {
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 121.8,
    "nucleaire_nom": "Bugey"
   },
@@ -150858,7 +150888,7 @@
    "https://cdn.printfriendly.com/buttons/printfriendly-pdf-email-button-notext.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -150914,7 +150944,7 @@
    "https://cdn.printfriendly.com/buttons/printfriendly-pdf-email-button-notext.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -150944,6 +150974,16 @@
   "densite_hab_km2": 616.7,
   "dpe": "D",
   "risques": {
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 121.8,
    "nucleaire_nom": "Bugey"
   },
@@ -150959,7 +150999,7 @@
    "https://cdn.printfriendly.com/buttons/printfriendly-pdf-email-button-notext.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -150989,6 +151029,16 @@
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151003,7 +151053,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/9f/elise-4-9fd24484.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151033,6 +151083,16 @@
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151047,7 +151107,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/69/visite-virtuelle-capucine-1-695d3afa.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151073,10 +151133,20 @@
   "texte": " Maison Camille - Construction idéale pour un investir en Normandie Nous respectons votre vie privée. Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des publicités ou des contenus personnalisés et analyser notre trafic. En cliquant sur « Tout accepter », vous consentez à notre utilisation des cookies. Personnaliser Tout rejeter Accepter tout Personnaliser les préférences en matière de consentement Nous utilisons des cookies pour vous aider à naviguer efficacement et à exécuter certaines fonctionnalités. Vous trouverez des informations détaillées sur tous les cookies sous chaque catégorie de consentement ci-dessous. Les cookies qui sont catégorisés comme « nécessaires » sont stockés sur votre navigateur car ils sont essentiels pour permettre les fonctionnalités de base du site. ...&nbsp; Afficher plus Nécessaire Toujours actif Les cookies nécessaires sont cruciaux pour les fonctions de base du site Web et celui-ci ne fonctionnera pas comme prévu sans eux.Ces cookies ne stockent aucune donnée personnellement identifiable. Cookie cookieyes-consent durée 1 an la description CookieYes place ce témoin pour mémoriser les préférences des utilisateurs en matière de consentement afin que leurs préférences soient respectées lors des visites ultérieures de ce site. Il ne collecte ni ne stocke aucune information personnelle sur les visiteurs du site. Cookie wpEmojiSettingsSupports durée session la description WordPress sets this cookie when a user interacts with emojis on a WordPress site. It helps determine if the user's browser can display emojis properly. Cookie didomi_token durée jamais la description This cookie is set by the provider Didomi. This cookie contains consent information for custom purposes and vendors along with the Didomi-specific information. Cookie connect.sid durée 3 minute la description This cookie is used for authentication and for secure log-in. It registers the log-in information. Cookie JSESSIONID durée session la description New Relic utilise ce témoin pour stocker un identifiant de session afin que New Relic puisse surveiller le nombre de sessions pour une application. Fonctionnelle Les cookies fonctionnels permettent d'exécuter certaines fonctionnalités telles que le partage du contenu du site Web sur des plateformes de médias sociaux, la collecte de commentaires et d'autres fonctionnalités tierces. Aucun cookie à afficher. Analytique Les cookies analytiques sont utilisés pour comprendre comment les visiteurs interagissent avec le site Web. Ces cookies aident à fournir des informations sur le nombre de visiteurs, le taux de rebond, la source de trafic, etc. Cookie _gcl_au durée 3 mois la description Google Tag Manager place le témoin pour expérimenter l’efficacité publicitaire des sites web utilisant leurs services. Cookie _ga_* durée 1 an 1 mois 4 jour la description Google Analytics sets this cookie to store and count page views. Cookie _ga durée 1 an 1 mois 4 jour la description Google Anal",
   "lat": 49.52998,
   "lon": 0.364753,
-  "altitude": 121.0,
+  "altitude": 122.0,
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151091,7 +151161,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/56/camille-4-562ae50d.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151121,6 +151191,16 @@
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151136,7 +151216,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/65/visite-virtuelle-helene-65c67740.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151166,6 +151246,16 @@
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151180,7 +151270,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/60/aurelia1-60f5abd4.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151233,7 +151323,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/fd/cassandre-6-fd36e342.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151263,6 +151353,16 @@
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 41.3,
    "nucleaire_nom": "Paluel"
   },
@@ -151277,7 +151377,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/c5/charlotte-4-c5f48f96.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151332,7 +151432,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/fc/visite-virtuelle-fc0b4f9e.webp"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151430,10 +151530,10 @@
   "agence": "Novadimm",
   "agence_url": "https://novadimm.com",
   "photo": "https://img.netty.immo/productw/company56144dmy/2/VA2644/appartement-t2-2-pieces-nancy-54000-1784104507-VA2644_10_l.jpg",
-  "texte": " À vendre - T2, 2 pièces situé à Nancy (54000) Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation + de photos Nancy – Parc Sainte-Marie / Lycée Chopin – T2 de 40 m² 95 000 € Vente Appartement Nancy 54000 Appartement à vendre, 2 pièces - Nancy 54000 Retour Calculatrice Ajouter aux favoris Imprimer Descriptif du bien Surface : 40 m² Pièces : 2 Salle de bains : 1 Ascenseur : Non Nancy – Parc Sainte-Marie / Lycée Chopin – T2 de 40 m² vendu loué Idéal investisseur ! À deux pas du Parc Sainte-Marie et du lycée Chopin, découvrez ce T2 de 40 m² situé en rez-de-chaussée d'une petite copropriété à faibles charges. En bon état général, il comprend une pièce de vie, une cuisine aménagée et équipée, une chambre et une salle d'eau avec WC. Chauffage électrique. Le bien est vendu loué, avec un loyer de 520 € hors charges + 40 € de provisions sur charges, offrant une rentabilité immédiate. Les + : Petite copropriété Faibles charges Bon état général Cuisine équipée Secteur recherché Proche commerces, transports, Parc Sainte-Marie et lycée Chopin Une belle opportunité d'investissement à découvrir avec Novadimm. +33 6 29 93 54 92 Envoyer un mail Caractéristiques techniques Chambres 1 WC 1 Cave Oui Localisation Nancy 54000 Référence VA2938 Informations complémentaires Honoraires inclus de 7.95% TTC à la charge de l'acquéreur. Prix hors honoraires 88 000 €. Dans une copropriété de 3 lots. Aucune procédure n'est en cours. DPE en cours. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : georisques.gouv.fr. Nos honoraires Intéressé par ce bien ? Contactez-nous Merci de remplir le formulaire, nous reviendrons vers vous dans les plus brefs délais. Prénom Nom Email Téléphone Empty Votre commune - Vous souhaitez Votre message J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Envoyer Sylvain MAGOTT Dirigeant Nancy et alentours +33 6 29 93 54 92 Envoyer un e-mail Vous apprécierez également 175 000 € 3 pièces 69 m² Nancy 54000 200 000 € 3 pièces 71 m² Nancy 54000 Exclusivité 209 000 € 3 pièces 66 m² Nancy 54000 279 000 € 5 pièces 103 m² Nancy 54000 279 000 € 4 pièces 112.8 m² Nancy 54000 99 000 € 2 pièces 42.89 m² Vandoeuvre-lès-Nancy 54500 69 500 € 2 pièces 40 m² Rozérieulles 57160 530 € /mois CC 2 pièces 40 m² Nancy 54000 470 € /mois CC 2 pièces 35 m² Nancy 54000 590 € /mois CC 2 pièces 30 m² Nancy 54000 Vous ne trouvez pas la propriété de vos rêves ? Ne manquez plus aucun bien corresponda",
+  "texte": " À vendre - T2, 2 pièces situé à Nancy (54000) Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation + de photos Nancy – Parc Sainte-Marie / Lycée Chopin – T2 de 40 m² 95 000 € Vente Appartement Nancy 54000 Appartement à vendre, 2 pièces - Nancy 54000 Retour Calculatrice Ajouter aux favoris Imprimer Descriptif du bien Surface : 40 m² Pièces : 2 Salle de bains : 1 Ascenseur : Non Nancy – Parc Sainte-Marie / Lycée Chopin – T2 de 40 m² vendu loué Idéal investisseur ! À deux pas du Parc Sainte-Marie et du lycée Chopin, découvrez ce T2 de 40 m² situé en rez-de-chaussée d'une petite copropriété à faibles charges. En bon état général, il comprend une pièce de vie, une cuisine aménagée et équipée, une chambre et une salle d'eau avec WC. Chauffage électrique. Le bien est vendu loué, avec un loyer de 520 € hors charges + 40 € de provisions sur charges, offrant une rentabilité immédiate. Les + : Petite copropriété Faibles charges Bon état général Cuisine équipée Secteur recherché Proche commerces, transports, Parc Sainte-Marie et lycée Chopin Une belle opportunité d'investissement à découvrir avec Novadimm. +33 6 29 93 54 92 Envoyer un mail Caractéristiques techniques Chambres 1 WC 1 Cave Oui Localisation Nancy 54000 Référence VA2938 Informations complémentaires Honoraires inclus de 7.95% TTC à la charge de l'acquéreur. Prix hors honoraires 88 000 €. Dans une copropriété de 3 lots. Aucune procédure n'est en cours. DPE en cours. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : georisques.gouv.fr. Nos honoraires Intéressé par ce bien ? Contactez-nous Merci de remplir le formulaire, nous reviendrons vers vous dans les plus brefs délais. Prénom Nom Email Téléphone Empty Votre commune - Vous souhaitez Votre message J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Envoyer Sylvain MAGOTT Dirigeant Nancy et alentours +33 6 29 93 54 92 Envoyer un e-mail Vous apprécierez également 199 000 € 3 pièces 66 m² Nancy 54000 105 900 € 4 pièces 65 m² Nancy 54000 175 000 € 3 pièces 69 m² Nancy 54000 200 000 € 3 pièces 71 m² Nancy 54000 Exclusivité 279 000 € 5 pièces 103 m² Nancy 54000 279 000 € 4 pièces 112.8 m² Nancy 54000 99 000 € 2 pièces 42.89 m² Vandoeuvre-lès-Nancy 54500 69 500 € 2 pièces 40 m² Rozérieulles 57160 680 € /mois CC 1 pièce 33 m² Nancy 54000 530 € /mois CC 2 pièces 40 m² Nancy 54000 Vous ne trouvez pas la propriété de vos rêves ? Ne manquez plus aucun bien correspondant à v",
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 216.0,
+  "altitude": 221.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -151457,21 +151557,21 @@
    "https://img.netty.immo/productw/company56144dmy/2/VA2644/appartement-t2-2-pieces-nancy-54000-1784104503-VA2644_6_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2644/appartement-t2-2-pieces-nancy-54000-1784104506-VA2644_9_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/indoor/shutterstock_73428649@2560.jpg",
+   "https://img.netty.immo/productw/company56144dmy/2/VA2062/appartement-t3-3-pieces-nancy-54000-1784642138-VA2062_19_original.jpg",
+   "https://img.netty.immo/productw/company56144dmy/2/VA3019/appartement-t3-4-4-pieces-nancy-54000-1787064418-VA3019_3_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2987/appartement-t3-3-pieces-nancy-54000-1785339914-VA2987_26_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA3006/appartement-t3-3-pieces-nancy-54000-1784213497-VA3006_3_original.jpg",
-   "https://img.netty.immo/productw/company56144dmy/2/VA2062/appartement-t3-3-pieces-nancy-54000-1784642138-VA2062_19_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2886/1774276539-VA2886_1_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2912/1774276637-VA2912_1_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2014/appartement-t2-2-pieces-vandoeuvre-les-nancy-54500-1774274717-VA2014_1_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VA2250/1774274821-VA2250_1_original.jpg",
+   "https://img.netty.immo/productw/company56144dmy/2/LA2860/appartement-t1-1-piece-nancy-54000-1774276414-LA2860_1_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/LA2914/appartement-t2-2-pieces-nancy-54000-1774276659-LA2914_1_original.jpg",
-   "https://img.netty.immo/productw/company56144dmy/2/LA3012/appartement-2-pieces-nancy-54000-1785313051-LA3012_1_original.jpg",
-   "https://img.netty.immo/productw/company56144dmy/2/LA2650/appartement-t2-2-pieces-nancy-54000-1774275056-LA2650_1_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-18",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151483,7 +151583,7 @@
   "titre": "Superbe 3 pièces dans un immeuble Art Déco",
   "description": null,
   "type_bien": "maison",
-  "prix": 209000,
+  "prix": 199000,
   "surface_m2": 66.0,
   "terrain_m2": null,
   "pieces": 3,
@@ -151494,10 +151594,10 @@
   "agence": "Novadimm",
   "agence_url": "https://novadimm.com",
   "photo": "https://img.netty.immo/productw/company56144dmy/2/VA2062/appartement-t3-3-pieces-nancy-54000-1784642138-VA2062_19_l.jpg",
-  "texte": " À vendre - T3, 3 pièces situé à Nancy (54000) Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation + de photos Superbe 3 pièces dans un immeuble Art Déco 209 000 € Vente Appartement Nancy 54000 Appartement à vendre, 3 pièces - Nancy 54000 Retour Calculatrice Ajouter aux favoris Imprimer Descriptif du bien Surface : 66 m² Pièces : 3 Salle de bains : 1 Ascenseur : Oui Au cœur du quartier Clemenceau, découvrez ce magnifique appartement de trois pièces, situé au premier étage d’un immeuble de standing au charme Art Déco affirmé. Traversant et lumineux, il se compose d’une vaste entrée desservant : une salle de bains et un WC indépendant ; une chambre ainsi qu’une cuisine équipée ouvrant sur un spacieux balcon côté cour ; un double espace de réception pouvant accueillir un salon et une seconde chambre, côté rue. Un garage fermé et une cave complètent ce bien, véritables atouts au quotidien. L’immeuble dispose également d’un ascenseur. Les plus : fenêtres récentes en double vitrage ; rénovation de qualité ; décoration soignée. chauffage et eau chaude collectifs inclus dans les charges. Un bien de caractère à découvrir sans tarder. +33 6 25 03 93 40 Envoyer un mail Caractéristiques techniques Chauffage Gaz/Collectif Ouvertures PVC/Double vitrage Autres Fibre optique, Interphone Séjour 17 m² Chambres 1 WC 1 Étage 1 Construction 1935 État intérieur En excellent état Cuisine Equipée/Indépendante Exposition Traversant Stationnement intérieur 1 Cave Oui Balcon 1 Localisation Nancy 54000 Référence VA2466 Détail des pièces chambre 14,9 m² wc 1,4 m² salle de bains 3,6 m² cuisine 8,4 m² salle a manger 12,7 m² salon 17,4 m² entrée 7,4 m² balcon 4 m² Informations complémentaires Honoraires à la charge du vendeur. Dans une copropriété de 10 lots. Aucune procédure n'est en cours. Classe énergie D, Classe climat D Montant moyen estimé des dépenses annuelles d'énergie pour un usage standard, établi à partir des prix de l'énergie de l'année 2021 : entre 800.00 et 1300.00 €. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : georisques.gouv.fr. Nos honoraires Intéressé par ce bien ? Contactez-nous Merci de remplir le formulaire, nous reviendrons vers vous dans les plus brefs délais. Prénom Nom Email Téléphone Empty Votre commune - Vous souhaitez Votre message J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Envoyer Clément MAGOTT Gérant associé +33 6 25 03 93 40 Envoyer un e-mail Vous",
+  "texte": " À vendre - T3, 3 pièces situé à Nancy (54000) Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation + de photos Superbe 3 pièces dans un immeuble Art Déco 199 000 € Vente Appartement Nancy 54000 Appartement à vendre, 3 pièces - Nancy 54000 Retour Calculatrice Ajouter aux favoris Imprimer Descriptif du bien Surface : 66 m² Pièces : 3 Salle de bains : 1 Ascenseur : Oui Au cœur du quartier Clemenceau, découvrez ce magnifique appartement de trois pièces, situé au premier étage d’un immeuble de standing au charme Art Déco affirmé. Traversant et lumineux, il se compose d’une vaste entrée desservant : une salle de bains et un WC indépendant ; une chambre ainsi qu’une cuisine équipée ouvrant sur un spacieux balcon côté cour ; un double espace de réception pouvant accueillir un salon et une seconde chambre, côté rue. Un garage fermé et une cave complètent ce bien, véritables atouts au quotidien. L’immeuble dispose également d’un ascenseur. Les plus : fenêtres récentes en double vitrage ; rénovation de qualité ; décoration soignée. chauffage et eau chaude collectifs inclus dans les charges. Un bien de caractère à découvrir sans tarder. +33 6 25 03 93 40 Envoyer un mail Caractéristiques techniques Chauffage Gaz/Collectif Ouvertures PVC/Double vitrage Autres Fibre optique, Interphone Séjour 17 m² Chambres 1 WC 1 Étage 1 Construction 1935 État intérieur En excellent état Cuisine Equipée/Indépendante Exposition Traversant Stationnement intérieur 1 Cave Oui Balcon 1 Localisation Nancy 54000 Référence VA2466 Détail des pièces chambre 14,9 m² wc 1,4 m² salle de bains 3,6 m² cuisine 8,4 m² salle a manger 12,7 m² salon 17,4 m² entrée 7,4 m² balcon 4 m² Informations complémentaires Honoraires à la charge du vendeur. Dans une copropriété de 10 lots. Aucune procédure n'est en cours. Classe énergie D, Classe climat D Montant moyen estimé des dépenses annuelles d'énergie pour un usage standard, établi à partir des prix de l'énergie de l'année 2021 : entre 800.00 et 1300.00 €. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : georisques.gouv.fr. Nos honoraires Intéressé par ce bien ? Contactez-nous Merci de remplir le formulaire, nous reviendrons vers vous dans les plus brefs délais. Prénom Nom Email Téléphone Empty Votre commune - Vous souhaitez Votre message J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Envoyer Clément MAGOTT Gérant associé +33 6 25 03 93 40 Envoyer un e-mail Vous",
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 221.0,
+  "altitude": 216.0,
   "densite_hab_km2": 6938.4,
   "dpe": "D",
   "risques": {
@@ -151526,10 +151626,10 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-18",
+  "revue_le": "2026-08-23",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
+  "prix_precedent": 209000,
+  "prix_baisse_le": "2026-08-23"
  },
  {
   "id": "novadimm-66ea86fb9f98",
@@ -151635,7 +151735,7 @@
   "texte": " Fonds de commerce en vente Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation Fonds de commerce en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Fonds de commerce Type de bien Empty Activités Empty Localisation Budget max (€) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 80 000 € Restaurants Nancy 54000 Opportunité exceptionnelle. Nous proposons à la reprise, dans l'un des secteurs les plus prisés et touristiques, plusieurs établissements de restauration. Bénéficiant d'emplacements stratégiques à forte fréquentation touristique et locale 127 500 € Restaurant Nancy 54000 À VENDRE – RESTAURANT EN EMPLACEMENT PREMIUM AU CŒUR DE NANCY Opportunité rare de reprise d'un restaurant idéalement situé en centre-ville de Nancy, à proximité immédiate de la Place Charles III, dans une rue piétonne dynamique, commerçante et parfaitement entretenue. L'établissement bénéficie d'une excellente visibilité et d'un flux régulier de clientèle composée d'actifs, d'habitants du centre-ville, et de touristes. Le restaurant dispose d'un outil de travail fonctionnel et bien agencé permettant une exploitation efficace. Son organisation est particulièrement adaptée à une gestion par un couple de professionnels souhaitant développer une activité rentable dans un cadre de vie agréable. Les atouts : Emplacement recherché en hypercentre. Rue piétonne attractive et bien fréquentée. Clientèle fidèle et potentiel de développement. Exploitation idéale pour un couple de restaurateurs. Activité clé en main. Environnement commercial dynamique. Dossier complet et renseignements complémentaires sur demande après premier échange. 42 000 € Commerce de Cadeaux ustensiles de cuisine Nancy 54000 Venez découvrir ce fonds de commerce de cadeaux, ustensiles de cuisine, situé au cœur du centre ville dans une rue piétonne, avec une forte visibilité et un passage régulier de clientèle locale et touristique. Le magasin est bien aménagé, dispose d'une clientèle fidèle et d'une excellente réputation. 98 000 € Baisse de prix restaurant salon de thé Saint-Avold 57500 Saint Avold centre : Ce restaurant / salon de thé en parfait état de 145 m² + 2 terrasses très accueillantes est exploité , avec succès, depuis de nombreuses années . Belle réputation , super emplacement sur une jolie place pleine de vie . Matériel de qualité valorisé à environ 70000 € , grand parking à proximité ... Belle rentabilité Pour + d'informations, merci de me contacter. 341 000 € Murs commerciaux à vendre au cœur de la Ville ville Nancy 54000 Découvrez cette opprtunité rare au sein du patrimoine historique de Nany : Murs commerciaux idéalement situé au coeur de la vieille ville dans un secteur à forte activité touristique et locale. Le bien accueille actuellement un restaurant de qualité, bénéficiant d'une clientèle fidèle et d'un excellent positionnement Une occasion idéale pour investisseurs à la recherche d’un actif sécurisé, rentabl",
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 221.0,
+  "altitude": 216.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -151667,7 +151767,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151723,7 +151823,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-18",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -151911,7 +152011,7 @@
   "region": "Grand Est",
   "agence": "Novadimm",
   "agence_url": "https://novadimm.com",
-  "photo": "https://img.netty.immo/productw/company56144dmy/2/VA3019/appartement-t3-4-4-pieces-nancy-54000-1787064418-VA3019_3_original.jpg",
+  "photo": "https://img.netty.immo/productw/company56144dmy/2/VA2986/appartement-3-pieces-laxou-54520-1787145024-VA2986_17_original.jpg",
   "texte": " Appartements en vente Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation Appartements en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Appartement Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 199 000 € Superbe 3 pièces dans un immeuble Art Déco Nancy 54000 3 pièces Au cœur du quartier Clemenceau, découvrez ce magnifique appartement de trois pièces, situé au premier étage d’un immeuble de standing au charme Art Déco affirmé. Traversant et lumineux, il se compose d’une vaste entrée desservant : une salle de bains et un WC indépendant ;une chambre ainsi qu’une cuisine équipée ouvrant sur un spacieux balcon côté cour ;un double espace de réception pouvant accueillir un salon et une seconde chambre, côté rue. Un garage fermé et une cave complètent ce bien, véritables atouts au quotidien. L’immeuble dispose également d’un ascenseur. Les plus : fenêtres récentes en double vitrage ;rénovation de qualité ;décoration soignée. chauffage et eau chaude collectifs inclus dans les charges. Un bien de caractère à découvrir sans tarder. 105 900 € NANCY - F3/F4 lumineux dans résidence sécurisée Nancy 54000 4 pièces 65 m² à Nancy ; une vraie opportunité, au prix d'un deux pièces ! Situé 100 avenue du Général Leclerc – Résidence de l’Étoile, cet appartement lumineux de 65 m², au 2ème étage avec ascenseur, offre un excellent rapport surface / emplacement / prix. Actuellement aménagé en F4 avec 3 chambres, il peut facilement retrouver sa configuration initiale en F3 avec 2 chambres, séjour et cuisine indépendante. Possibilité également d’ouvrir la cuisine sur le séjour pour créer une belle pièce de vie. Les points forts : Prix : 105 900 € seulement65 m² – F3/F4 modulableAppartement très lumineuxForte baisse récente des charges grâce au raccordement de la résidence au réseau de chauffage urbainCharges comprenant notamment chauffage, eau chaude, ascenseur, gardien et sécurité de nuitQuelques travaux permettront de moderniser et valoriser facilement l’appartementEmplacement pratique, à proximité des commodités, transports, axes routiers et grandes écolesUne opportunité particulièrement intéressante pour une résidence principale ou un investissement locatif traditionnel. 175 000 € Nancy – Avenue de Boufflers | Superbe T3 entièrement rénové avec balcon et vue panoramique Nancy 54000 3 pièces Situé au 3ᵉ étage, avenue de Boufflers à Nancy, découvrez ce magnifique appartement T3 entièrement rénové, offrant une vue dégagée exceptionnelle sur la ville et un grand balcon pour en profiter pleinement. Dès l'entrée, vous serez séduits par une spacieuse pièce de vie baignée de lumière, ouverte sur une cuisine moderne entièrement équipée, créant un espace convivial et contemporain. L'appartement comprend également : Deux chambres confortables,Une salle d'eau moderne avec douche à l'italienne,Un grand balcon avec une vue impr",
   "lat": 48.688135,
   "lon": 6.171263,
@@ -151951,7 +152051,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -152085,6 +152185,16 @@
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 81.0,
    "nucleaire_nom": "Cattenom"
   },
@@ -152096,7 +152206,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-18",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -152158,7 +152268,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-18",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -152321,7 +152431,7 @@
   "texte": " Maisons en vente Accueil Vente Vendus Location Gestion Vendre Estimer Syndic Agence Estimation Maisons en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 547 000 € Maison sur terrain 1185m2, idéal investisseur, profession libérale… Saint Pierre 97410 6 pièces Idéalement bien placée sur l’axe principale de la ligne paradis, cette maison des année 90 implantée sur un terrain de 1185 m2 offre de nombreuses possibilités d’aménagement. D’une surface habitable d’environ 110 m2 elle se compose de 3 chambres, d’un séjour, d’une cuisine, d’une dépendance, d’un vide sanitaire de 90 m2, de combles aménageables. Son véritable atout réside dans son vide sanitaire de 90 m 2 avec une hauteur de 2,30 mètres facilement exploitable. Cet espace peut être aménagé en atelier, bureau, stockage, local professionnel, habitation ou encore à un espace dédié à une activité artisanale ou profession libérale avec un grand parking !!! Le terrain de 1185 m 2 offre également de nombreuses possibilités : possibilité de scinder la parcelle en deux, d’y faire un parking ou bien d’ aménager un grand jardin Mandat exclusif : a la demande des propriétaires, ne pas venir démarcher ! Novadimm diffuse quotidiennement de nombreuses annonces immobilières, afin de faciliter la vente de votre bien et de vous proposer le logement de vos rêves… 285 000 € Maison Individuelle à Moivrons Moivrons 54760 4 pièces A découvrir sur la commune de MOIVRONS (54760), charmant pavillon individuel construit en 2019, offrant 98m² habitables sur un magnifique terrain de 1280m². Cette maison récente se distingue par ses volumes agréables et son environnement offrant un bel espace extérieur. Au rez-de-chaussée, vous profiterez d'une spacieuse pièce de vie de 46m², composée d'un séjour convivial avec cuisine ouverte, aménagée et équipée. Cet espace bénéficie d'un accès direct à la terras et au jardin, idéal pour profiter pleinement des beaux jours et recevoir famille et amis. A l'étage, la partie nuit se compose de trois chambres, d'une salle de bains et d'un WC indépendant, l'ensemble étant regroupé sur un même niveau pour davantage de confort au quotidien. La maison dispose également d'un sous-sol, comprenant un grand garage ainsi qu'une pièce pouvant être aménagée selon vos besoins. Le tout est implanté sur un terrain de 1280m², offrant de nombreuses possibilités d'aménagement extérieur. Pour plus de renseignements, n'hésitez pas à contacter Gérald TRUNZLER agent commercial de NOVADIMM IMMOBILIER immatriculé au RCAS de Nancy sous le numéro 815205190. 189 000 € Maison Maizeroy Maizeroy 57530 4 pièces Importante baisse de prix. Maizeroy ( proche de Metz ) Maison au potentiel très intéressant composé1 ) D'une maison F4 d'environ 135 m² , chauffage au Fioul , garage 2 véhicules , grande cuisine équipée de 22 m² , double vitrage , c",
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 221.0,
+  "altitude": 216.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -152351,13 +152461,13 @@
    "https://img.netty.immo/productw/company56144dmy/2/VM944/maison-5-pieces-fey-57420-1774276858-VM944_1_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VM888/maison-individuelle-5-pieces-silly-sur-nied-57530-1774276599-VM888_4_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VM958/maison-individuelle-8-pieces-sanilhac-24660-1775941166-VM958_20_original.jpg",
-   "https://img.netty.immo/productw/company56144dmy/2/VM968/maison-individuelle-4-pieces-saint-front-de-pradoux-24400-1780391074-VM968_12_original.jpg",
    "https://img.netty.immo/productw/company56144dmy/2/VM960/maison-traditionnelle-4-pieces-agonac-24460-1779780336-VM960_15_original.jpg",
+   "https://img.netty.immo/productw/company56144dmy/2/VM963/maison-individuelle-5-pieces-pommerieux-57420-1776848077-VM963_24_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -152974,7 +153084,7 @@
    "https://www.opidom-immobilier.fr/wp-content/uploads/2022/10/media-base.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153025,7 +153135,7 @@
    "https://www.opidom-immobilier.fr/wp-content/uploads/2022/10/media-base.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153093,58 +153203,8 @@
    "https://www.opidom-immobilier.fr/wp-content/uploads/2022/10/media-base.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "opidom-889d5764112f",
-  "source": "opidom",
-  "url": "https://www.opidom-immobilier.fr/acheter/maison-de-maitre-vieux-lille/",
-  "titre": "MAISON DE MAÎTRE – VIEUX LILLE",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 1490000,
-  "surface_m2": 333.0,
-  "terrain_m2": 100.0,
-  "pieces": null,
-  "commune": null,
-  "code_postal": "59800",
-  "departement": "59",
-  "region": "Hauts-de-France",
-  "agence": "Opidom",
-  "agence_url": "https://opidom-immobilier.fr",
-  "photo": "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/jardin-maison-cahon-scaled.jpg",
-  "texte": " MAISON DE MAÎTRE – VIEUX LILLE Acheter Vendre Nos dernières ventes Notre équipe Contact --> Acheter Vendre Nos dernières ventes Services Groupe Contact Close the sidebar MAISON DE MAÎTRE – VIEUX LILLE 59800 Lille 360m 2 surface 6 chambres 3 salles d’eau 1 490 000 € prix de vente Description du bien : LILLE – VIEUX LILLE &nbsp; Située dans une rue calme à quelques mètres de la Place Louise de Bettignies, de ses commerces et de ses restaurants, venez découvrir cette maison de maître de 4 niveaux et 333m2. &nbsp; L’entrée donne accès à une grande pièce de vie composée d’un double séjour lumineux avec cheminée et espace dinatoire, puis d’une grande cuisine toute équipée s’ouvrant sur la terrasse et le jardin arboré d’environ 100m². Un espace buanderie, un bureau et un WC complètent le RDC. &nbsp; Au premier niveau, un large palier distribue trois chambres spacieuses et une grande salle de bain avec un WC, une baignoire ilot et une douche. Le deuxième niveau est lui composé d’un palier avec dressing, trois chambres supplémentaires, une salle d’eau et des WC séparés. Enfin le dernier étage est un grand espace de 80 m2 modulable en différentes activités: travail, espace détente, et salle cinéma. &nbsp; Sous-sol total avec de nombreux rangements. &nbsp; Un BOX pouvant accueillir 2 voitures à proximité immédiate + un second BOX en location s’ajoutent à la maison. &nbsp; Cette magnifique demeure possède tout le charme de l’ancien : hauteur sous plafond, moulures, parquet en orme, cheminées, poutres apparentes, briques typiques du Vieux Lille. &nbsp; Ce bien rare sur le secteur est idéalement située et au calme tout en étant dans le quartier le plus recherché et dynamique de Lille. &nbsp; Opidom prend en charge votre déménagement à hauteur de 5% des honoraires agences grâce à notre partenariat exclusif avec une société spécialisée. &nbsp; N’hésitez pas à nous contacter pour plus d’informations sur ce bien et nos services exclusifs Opidom. Informations complémentaires : Chauffage individuel GAZ BOX double Notre Maison avec tout le charme de l'ancien à deux pas de la rue de Gand. Jardin extérieur avec une belle exposition. Très rare sur le secteur , bien d'exception. Diagnostics de performance énergetique : DPE Bâtiment économe Created by Pascalz (http://pascalz.github.io/dpeges/) A 70 B 71 à 110 175 C 111 à 180 D 181 à 250 E 251 à 330 F 331 à 420 G &gt; 420 Bâtiment énergivore en kWh.an.m2.an GES Faible émission de GES* Created by Pascalz (http://pascalz.github.io/dpeges/) A 6 B 7 à 11 C 12 à 30 35 D 31 à 50 E 51 à 70 F 71 à 100 G &gt; 100 Forte émission de GES* * Gaz à effet de serre en KgeqCO2/m2.an Ce bien m’intéresse : Agence Lille Gambetta Retrouvez-nous sur les réseaux sociaux La newsletter Inscrivez-vous pour être informé des nouveautés de l’agence --> Acheter Vendre Nos dernières ventes Notre équipe Contact Copyright : Opidom 2026 Copyright : Opidom 2022 webdesign : Joe Carry | développement : Atelier météorite Mentions légales ",
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
-  "dpe": "B",
-  "risques": {},
-  "photos": [
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/jardin-maison-cahon-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/jardin-ok-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cuisine-ok-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508337-08372-2a0fa00-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508216-08241-81b6cde-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508242-08274-e5da491-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507816-07839-e5da9d5-2-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507785-07816-9e08428-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507839-07867-a5e3ce5-2-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507868-07907-9367a16-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507937-07971-fc97c75-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507756-07784-aacfcaf-2-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508012-08044-8a792c6-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675507907-07936-ab9da62-2-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508102-08132-5aee69a-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2023/02/cahon-1675507632-1675508045-08063-b383f2e-scaled.jpg",
-   "https://www.opidom-immobilier.fr/wp-content/uploads/2022/10/media-base.png"
-  ],
-  "vue_le": "2026-08-17",
-  "revue_le": "2026-08-17",
-  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -153269,51 +153329,61 @@
   "region": "Hauts-de-France",
   "agence": "Orpi",
   "agence_url": "https://quentimmo.fr",
-  "photo": "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605000.jpg",
-  "texte": " Vente Maison 10 minutes GUISE 4 pièce(s) 85 m2 | Quentimmo 10 agences immobilières dans les hauts-de-france 1 er réseau d’agences locales Achat - vente - location - gestion Saint-quentin 03 23 61 19 01 Bohain 03 23 07 17 57 Laon 03 23 20 17 55 Chauny 03 23 38 01 01 Guise 03 23 04 02 82 Vervins-marle 03 23 23 89 83 Ribemont 03 75 21 00 80 Ham 03 60 63 01 20 Noyon 03 44 09 61 00 Acheter Louer Vendre Nos prestations Agences immobilières Investissements Gestion locative Partenaires Travaux Accès client Nous contacter Nous rejoindre Accueil Acheter Maison 10 minutes GUISE 4 pièce(s) 85 m2 Retour aux résultats de recherche Description Maison sans travaux... Idéal pour un jeune couple L'agence Quentimmo de Guise vous propose cette charmante maison de champagne au bord de l'eau avec un très beau terrain sans vis à vis. Vous trouverez, au Rez de Chaussée, un lumineux double salon-séjour avec poêle à bois, une cuisine entièrement aménagée, une salle de bains avec douche et baignoire et WC séparés. L'étage se compose de la chambre avec un dressing. Pour une visite ou pour plus de renseignements, veuillez nous contacter au 07x81x53x94x02 Céline HAINGUE (EI) Agent Commercial - Numéro RSAC : - . Informations énergétiques Consommation énergétiques D Émissions de gaz à effet de serre A Maison 10 minutes GUISE 4 pièce(s) 85 m2 Étreux - 02510 Réf.6290ACBFG 143 500 € Prix hors frais notariés, d'enregistrement et de publicité foncière Pour consulter les barèmes d'honoraires de l'agence, cliquez ici Nombre de pièces 5 Nombre de chambres 1 Surface 78m² Surface terrain 847m² Agence de guise 41 rue Camille Desmoulins - 02120 Tél: +33 3 23 04 02 82 Contactez-nous Facebook LinkedIn Twitter Partager Demande de contact Nom Prénom Email Téléphone Votre message Envoyer La société Quentimmo traite vos données personnelles dans le cadre de son activité de transaction sur immeubles et fonds de commerce. Informé(e) de la possibilité de m’opposer à l’utilisation de mes coordonnées téléphoniques à des fins de prospection commerciale (www.bloctel.gouv.fr), j’autorise la société Quentimmo à me contacter au numéro renseigné. Pour en savoir plus, consultez notre politique de protection des données personnelles 10 agences immobilières dans les hauts-de-france 1 er réseau d’agences locales Achat - vente - location - gestion À propos QUENTIMMO, société à responsabilité limitée et active depuis 21 ans . Implantée à SAINT-QUENTIN (02100), elle est spécialisée dans le secteur d'activité des agences immobilières. Suivez-nous : Les agences 8 Rue de l'Etat Major 02100 Saint-quentin 03 23 61 19 01 1 Rue Francis de Pressencé 02110 Bohain 03 23 07 17 57 87 rue Pasteur 02000 Laon 03 23 20 17 55 4 place de l'Hotel de Ville 02300 Chauny 03 23 38 01 01 41 rue Camille Desmoulins 02120 Guise 03 23 04 02 82 9 Rue Lehault 02250 Vervins-marle 03 23 23 89 83 1 Rue Condorcet 02240 Ribemont 03 75 21 00 80 31 Rue de Noyon 80400 Ham 03 60 63 01 20 13 Rue de Paris 60400 Noyon 03 44 09 61 00 Contact Mentions lég",
+  "photo": "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886640.jpg",
+  "texte": " Vente Maison 10 minutes GUISE 4 pièce(s) 85 m2 | Quentimmo 10 agences immobilières dans les hauts-de-france 1 er réseau d’agences locales Achat - vente - location - gestion Saint-quentin 03 23 61 19 01 Bohain 03 23 07 17 57 Laon 03 23 20 17 55 Chauny 03 23 38 01 01 Guise 03 23 04 02 82 Vervins-marle 03 23 23 89 83 Ribemont 03 75 21 00 80 Ham 03 60 63 01 20 Noyon 03 44 09 61 00 Acheter Louer Vendre Nos prestations Agences immobilières Investissements Gestion locative Partenaires Travaux Accès client Nous contacter Nous rejoindre Accueil Acheter Maison 10 minutes GUISE 4 pièce(s) 85 m2 Retour aux résultats de recherche Description Maison sans travaux... Idéal pour un jeune couple L'agence Quentimmo de Guise vous propose cette charmante maison de champagne au bord de l'eau avec un très beau terrain sans vis à vis. Vous trouverez, au Rez de Chaussée, un lumineux double salon-séjour avec poêle à bois, une cuisine entièrement aménagée, une salle de bains avec douche et baignoire et WC séparés. L'étage se compose de la chambre avec un dressing. Pour une visite ou pour plus de renseignements, veuillez nous contacter au 07x81x53x94x02 Informations énergétiques Consommation énergétiques D Émissions de gaz à effet de serre A Maison 10 minutes GUISE 4 pièce(s) 85 m2 Étreux - 02510 Réf.6290ACBFG 143 500 € Prix hors frais notariés, d'enregistrement et de publicité foncière Pour consulter les barèmes d'honoraires de l'agence, cliquez ici Nombre de pièces 5 Nombre de chambres 1 Surface 78m² Surface terrain 847m² Agence de guise 41 rue Camille Desmoulins - 02120 Tél: +33 3 23 04 02 82 Contactez-nous Facebook LinkedIn Twitter Partager Demande de contact Nom Prénom Email Téléphone Votre message Envoyer La société Quentimmo traite vos données personnelles dans le cadre de son activité de transaction sur immeubles et fonds de commerce. Informé(e) de la possibilité de m’opposer à l’utilisation de mes coordonnées téléphoniques à des fins de prospection commerciale (www.bloctel.gouv.fr), j’autorise la société Quentimmo à me contacter au numéro renseigné. Pour en savoir plus, consultez notre politique de protection des données personnelles 10 agences immobilières dans les hauts-de-france 1 er réseau d’agences locales Achat - vente - location - gestion À propos QUENTIMMO, société à responsabilité limitée et active depuis 21 ans . Implantée à SAINT-QUENTIN (02100), elle est spécialisée dans le secteur d'activité des agences immobilières. Suivez-nous : Les agences 8 Rue de l'Etat Major 02100 Saint-quentin 03 23 61 19 01 1 Rue Francis de Pressencé 02110 Bohain 03 23 07 17 57 87 rue Pasteur 02000 Laon 03 23 20 17 55 4 place de l'Hotel de Ville 02300 Chauny 03 23 38 01 01 41 rue Camille Desmoulins 02120 Guise 03 23 04 02 82 9 Rue Lehault 02250 Vervins-marle 03 23 23 89 83 1 Rue Condorcet 02240 Ribemont 03 75 21 00 80 31 Rue de Noyon 80400 Ham 03 60 63 01 20 13 Rue de Paris 60400 Noyon 03 44 09 61 00 Contact Mentions légales Gestion des cookies Accès client Les services Quenti",
   "lat": 49.901511,
   "lon": 3.628179,
-  "altitude": 97.0,
+  "altitude": 98.0,
   "densite_hab_km2": 276.8,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 85.6,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605000.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605021.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605032.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605043.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605054.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605075.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605086.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605097.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605108.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605119.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051310.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051411.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051512.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051613.jpg",
-   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051714.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605000.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605021.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605032.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605043.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605054.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605075.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605086.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605097.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605108.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17855605119.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051310.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051411.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051512.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051613.jpg",
-   "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178556051714.jpg"
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886640.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886661.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886672.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886683.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886704.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886715.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886726.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886747.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886758.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886769.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728867710.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728867911.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868012.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868113.jpg",
+   "https://quentimmo.fr/media/cache/filter_539_400/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868214.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886640.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886661.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886672.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886683.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886704.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886715.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886726.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886747.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886758.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-17872886769.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728867710.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728867911.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868012.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868113.jpg",
+   "https://quentimmo.fr/media/cache/resolve/filter_100_74/uploads/annonce/visuel/2676-quentimmo-annonce-treux-178728868214.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153437,6 +153507,16 @@
   "densite_hab_km2": 71.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 101.0,
    "nucleaire_nom": "Chooz"
   },
@@ -153475,7 +153555,7 @@
    "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/1375-quentimmo-annonce-Ribemont-178426456915.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153505,6 +153585,16 @@
   "densite_hab_km2": 71.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 101.0,
    "nucleaire_nom": "Chooz"
   },
@@ -153533,7 +153623,7 @@
    "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/582-quentimmo-annonce-Ribemont-176439607710.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153615,6 +153705,16 @@
   "densite_hab_km2": 68.2,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 96.5,
    "nucleaire_nom": "Chooz"
   },
@@ -153651,7 +153751,7 @@
    "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/1790-quentimmo-annonce-Origny-Sainte-Benoite-178659730314.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153733,6 +153833,16 @@
   "densite_hab_km2": 71.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 101.0,
    "nucleaire_nom": "Chooz"
   },
@@ -153771,7 +153881,7 @@
    "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/3028-quentimmo-annonce-Ribemont-178115417615.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -153801,6 +153911,16 @@
   "densite_hab_km2": 71.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 101.0,
    "nucleaire_nom": "Chooz"
   },
@@ -153843,7 +153963,7 @@
    "https://quentimmo.fr/media/cache/filter_100_74/uploads/annonce/visuel/1271-quentimmo-annonce-Origny-Sainte-Benoite-178478287317.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154358,6 +154478,86 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "paffoni-immobilier-011a0e615ca3",
+  "source": "paffoni-immobilier",
+  "url": "https://www.paffoni-immo.com/vente/103-ancemont/maison/t7/153-belle-maison-familiale-refaite-en-2002-5-chambres-terrain-de-2-785-m-ancemont/",
+  "titre": "Belle maison familiale refaite en 2002 – 5 chambres – Terrain de 2 785 m² – Ancemont",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 352000,
+  "surface_m2": 238.0,
+  "terrain_m2": 2785.0,
+  "pieces": 7,
+  "commune": "Dieue-sur-Meuse",
+  "code_postal": "55320",
+  "departement": "55",
+  "region": "Grand Est",
+  "agence": "Paffoni Immobilier",
+  "agence_url": "https://paffoni-immo.com",
+  "photo": "https://paffoni-immobilier.staticlbi.com/1200xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/af841612919731d694535eb7f7017dc3.jpg",
+  "texte": " Belle maison familiale refaite en 2002 – 5 chambres – Terrain de 2 785 m² – Ancemont | PAFFONI IMMOBILIER Fermer Langue fr en fr x fr en 0 Biens d'habitation Locaux professionnels VENDRE LOUER ESTIMER FAIRE GÉRER MON BIEN Notre agence Vendus Recherche --> Langue fr en fr x fr en 0 Contact Acheter De l'ancien De l'ancien De l'immo pro Louer à l'année De l'immo pro Estimer Créez votre alerte e-mail Type de bien Appartement Immeuble Maison Terrain Terrain à batir Maison x 1 Appartement Immeuble Maison Terrain Terrain à batir 55320 - Ancemont x 1 Localisation ville-21495 ville-21495 x ville-21495 55320 - Ancemont x Dans un rayon de 5 km 10 km 15 km 20 km 25 km 30 km Budget Budget Mini € Maxi € Réinitialiser ce filtre Filtrer Voir les 1 annonces Maison 55320 - Ancemont 7 Pièces Réinitialiser les filtres Faites estimer votre bien par un professionnel Estimer votre bien Accueil Vente Ancemont Maison T7 Belle maison familiale refaite en 2002 5 chambres terrain de 2 785 m ancemont Retour aux résultats 01 02 03 04 05 06 07 08 09 10 11 Ancemont (55320) Belle maison familiale refaite en 2002 – 5 chambres – Terrain de 2 785 m² – Ancemont Réf : 260402 352 000 € Située dans un environnement calme et recherché à Ancemont , cette belle maison, reconstruite en 2002 , vous séduira par ses volumes généreux, ses prestations de qualité et son magnifique terrain de 2 785 m² . Dès l'entrée, vous découvrirez un intérieur chaleureux et parfaitement entretenu. Le rez-de-chaussée offre une belle entrée , un WC avec lave-mains , une cuisine équipée fonctionnelle, ainsi qu'un vaste séjour-salon baigné de lumière , ouvert sur une agréable terrasse couverte , idéale pour profiter des beaux jours en toute saison. Ce niveau comprend également une chambre , une salle de bains avec douche et WC , ainsi qu'une chaufferie-buanderie , permettant une vie de plain-pied. À l'étage, l'espace nuit se compose de quatre belles chambres , d'une salle d'eau , d'un WC indépendant , d'un dressing et d'une salle de jeux , offrant tout le confort nécessaire à une grande famille. Pour un confort optimal au quotidien, la maison est équipée d'une aspiration centralisée . Le chauffage est assuré par un plancher chauffant au rez-de-chaussée , alimenté par une pompe à chaleur avec appoint au gaz , garantissant confort et maîtrise des consommations. Les atouts du bien : Maison reconstruite en 2002 Terrain de 2 785 m² 5 chambres, dont une au rez-de-chaussée Vaste séjour-salon lumineux Terrasse couverte Dressing et salle de jeux Aspiration centralisée Plancher chauffant au rez-de-chaussée Pompe à chaleur avec appoint au gaz Consommation énergétique (EDF + gaz) : environ 225 €/mois Taxe foncière : 1 196 € Prix de vente : 352 000 € Une maison spacieuse, confortable et parfaitement adaptée à une famille en quête de calme, d'espace et de prestations de qualité. Contactez-nous dès maintenant pour organiser une visite. général détails + financier DPE général détails + financier DPE général x général détails + f",
+  "lat": 49.068036,
+  "lon": 5.427982,
+  "altitude": 206.0,
+  "densite_hab_km2": 90.6,
+  "dpe": null,
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 69.2,
+   "nucleaire_nom": "Cattenom"
+  },
+  "photos": [
+   "https://paffoni-immobilier.staticlbi.com/1200xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/af841612919731d694535eb7f7017dc3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9b95e3371fdf3722035cfc5fbd8bf9e8.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/3a9fe0f821ce9be8ea661fa6f349ebcb.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/af841612919731d694535eb7f7017dc3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/b8315e46f598cb5c88b282a334d6b869.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/bda21972adb0070b14ff13728566b989.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/762c6eac2ab4d6b6db10f2e4e301ebf9.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4d6dfb41a7d02fb02c624f10901e4778.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/ff59e79394ffe3a8ef19e12d493598c3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9273c838d6b7ee1e7c0f17c0c87e4584.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4b0d7d4cb4a41c484cd42c1f5b43c152.jpg",
+   "https://paffoni-immobilier.staticlbi.com/1600xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/df40ae953ac107405404733ded1cd86f.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9b95e3371fdf3722035cfc5fbd8bf9e8.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/3a9fe0f821ce9be8ea661fa6f349ebcb.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/af841612919731d694535eb7f7017dc3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/b8315e46f598cb5c88b282a334d6b869.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/bda21972adb0070b14ff13728566b989.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/762c6eac2ab4d6b6db10f2e4e301ebf9.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4d6dfb41a7d02fb02c624f10901e4778.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/ff59e79394ffe3a8ef19e12d493598c3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9273c838d6b7ee1e7c0f17c0c87e4584.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4b0d7d4cb4a41c484cd42c1f5b43c152.jpg",
+   "https://paffoni-immobilier.staticlbi.com/980xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/df40ae953ac107405404733ded1cd86f.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9b95e3371fdf3722035cfc5fbd8bf9e8.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/3a9fe0f821ce9be8ea661fa6f349ebcb.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/af841612919731d694535eb7f7017dc3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/b8315e46f598cb5c88b282a334d6b869.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/bda21972adb0070b14ff13728566b989.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/762c6eac2ab4d6b6db10f2e4e301ebf9.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4d6dfb41a7d02fb02c624f10901e4778.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/ff59e79394ffe3a8ef19e12d493598c3.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/9273c838d6b7ee1e7c0f17c0c87e4584.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/4b0d7d4cb4a41c484cd42c1f5b43c152.jpg",
+   "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/f106b7f99d2cb30c3db1c3cc0fde9ccb/df40ae953ac107405404733ded1cd86f.jpg"
+  ],
+  "vue_le": "2026-08-23",
+  "revue_le": "2026-08-23",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "paffoni-immobilier-7c79c2924540",
   "source": "paffoni-immobilier",
   "url": "https://www.paffoni-immo.com/vente/12-verdun/maison/t5/146-maison-familiale-de-104-3-m-sur-superbe-terrain-arbore-de-1-800-m/",
@@ -154382,6 +154582,16 @@
   "densite_hab_km2": 532.5,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -154436,7 +154646,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/fb8feff253bb6c834deb61ec76baa893/9d521cc738551f1ab3f94adca3e3fbd2.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154459,13 +154669,23 @@
   "agence": "Paffoni Immobilier",
   "agence_url": "https://paffoni-immo.com",
   "photo": "https://paffoni-immobilier.staticlbi.com/1200xauto/images/biens/4/8b0d268963dd0cfb808aac48a549829f/7c8f6d43287df3535c817a3d03f9735c.jpg",
-  "texte": " Maison Verdun 85 m2 | PAFFONI IMMOBILIER Fermer Langue fr en fr x fr en 0 Biens d'habitation Locaux professionnels VENDRE LOUER ESTIMER FAIRE GÉRER MON BIEN Notre agence Vendus Recherche --> Langue fr en fr x fr en 0 Contact Acheter De l'ancien De l'ancien De l'immo pro Louer à l'année De l'immo pro Estimer Créez votre alerte e-mail Type de bien Appartement Immeuble Maison Terrain Terrain à batir Maison x 1 Appartement Immeuble Maison Terrain Terrain à batir 55100 - Verdun x 1 Localisation ville-21371 ville-21371 x ville-21371 55100 - Verdun x Dans un rayon de 5 km 10 km 15 km 20 km 25 km 30 km Budget Budget Mini € Maxi € Réinitialiser ce filtre Filtrer Voir les 2 annonces Maison 55100 - Verdun 4 Pièces Réinitialiser les filtres Faites estimer votre bien par un professionnel Estimer votre bien Accueil Vente Verdun Maison T4 Maison verdun 85 m2 Retour aux résultats Sous-compromis Exclusif 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 Verdun (55100) Maison Verdun 85 m2 Réf : 251011-FC 177 000 € Maison individuelle de plain-pied sur sous sol complet implantée sur un terrain clos de 738 m2. Elle comprend une entrée avec placard, une cuisine aménagée, un séjour, 2 chambres et un bureau (ou chambre), une salle d'eau et un WC séparé. Point fort, la maison est sur sous-sol complet, située dans un quartier calme de Verdun. Surface habitable : 83.85 m² Surface terrain : 738 m² Chauffage central fuel, production eau chaude avec chaudière Annonce proposée par un agent commercial général détails + financier DPE général détails + financier DPE général x général détails + financier DPE TRAD_SIROCCO_Caracteristique Valeurs Code postal 55100 Surface habitable (m²) 85 m² surface terrain 738 m² Nombre de chambre(s) 3 Nombre de pièces 4 TRAD_SIROCCO_Caracteristique Valeurs Nb de salle d'eau 1 Mode de chauffage Fioul Type de chauffage Radiateur Format de chauffage Individuel Année de construction 1973 TRAD_SIROCCO_Caracteristique Valeurs Prix de vente 177 000 € Les honoraires d'agence seront intégralement à la charge du vendeur &nbsp; DPE en cours Nos outils Sélectionner Calculatrice Imprimer Partager ce bien Facebook Twitter Intéressé(e) par Ce bien ? Intéressé(e) par Ce bien ? --> Nom * Prénom * E-mail * Téléphone * Message * J'ai pris connaissance de la Politique de confidentialité et des informations relatives au traitement de mes données personnelles (*)* J'accepte d'être contacté(e) par téléphone par l'Agence / le Réseau. Ce consentement est libre et peut être retiré à tout moment. * Champ obligatoire Envoyer contacter l'agence 03 29 86 76 77 Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par La Boite Immo agissant comme Sous-traitant du traitement pour la gestion de la clientèle/prospects de l'Agence / du Réseau qui reste Responsable du Traitement de vos Données personnelles. La base légale du traitement repose sur l'intérêt légitime de l'Agence / du Réseau. Elles sont conservées jusqu'à demande de suppres",
+  "texte": " Maison Verdun 85 m2 | PAFFONI IMMOBILIER Fermer Langue fr en fr x fr en 0 Biens d'habitation Locaux professionnels VENDRE LOUER ESTIMER FAIRE GÉRER MON BIEN Notre agence Vendus Recherche --> Langue fr en fr x fr en 0 Contact Acheter De l'ancien De l'ancien De l'immo pro Louer à l'année De l'immo pro Estimer Créez votre alerte e-mail Type de bien Appartement Immeuble Maison Terrain Terrain à batir Maison x 1 Appartement Immeuble Maison Terrain Terrain à batir 55100 - Verdun x 1 Localisation ville-21371 ville-21371 x ville-21371 55100 - Verdun x Dans un rayon de 5 km 10 km 15 km 20 km 25 km 30 km Budget Budget Mini € Maxi € Réinitialiser ce filtre Filtrer Voir les 1 annonces Maison 55100 - Verdun 4 Pièces Réinitialiser les filtres Faites estimer votre bien par un professionnel Estimer votre bien Accueil Vente Verdun Maison T4 Maison verdun 85 m2 Retour aux résultats Sous-compromis Exclusif 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 Verdun (55100) Maison Verdun 85 m2 Réf : 251011-FC 177 000 € Maison individuelle de plain-pied sur sous sol complet implantée sur un terrain clos de 738 m2. Elle comprend une entrée avec placard, une cuisine aménagée, un séjour, 2 chambres et un bureau (ou chambre), une salle d'eau et un WC séparé. Point fort, la maison est sur sous-sol complet, située dans un quartier calme de Verdun. Surface habitable : 83.85 m² Surface terrain : 738 m² Chauffage central fuel, production eau chaude avec chaudière Annonce proposée par un agent commercial général détails + financier DPE général détails + financier DPE général x général détails + financier DPE TRAD_SIROCCO_Caracteristique Valeurs Code postal 55100 Surface habitable (m²) 85 m² surface terrain 738 m² Nombre de chambre(s) 3 Nombre de pièces 4 TRAD_SIROCCO_Caracteristique Valeurs Nb de salle d'eau 1 Mode de chauffage Fioul Type de chauffage Radiateur Format de chauffage Individuel Année de construction 1973 TRAD_SIROCCO_Caracteristique Valeurs Prix de vente 177 000 € Les honoraires d'agence seront intégralement à la charge du vendeur &nbsp; DPE en cours Nos outils Sélectionner Calculatrice Imprimer Partager ce bien Facebook Twitter Intéressé(e) par Ce bien ? Intéressé(e) par Ce bien ? --> Nom * Prénom * E-mail * Téléphone * Message * J'ai pris connaissance de la Politique de confidentialité et des informations relatives au traitement de mes données personnelles (*)* J'accepte d'être contacté(e) par téléphone par l'Agence / le Réseau. Ce consentement est libre et peut être retiré à tout moment. * Champ obligatoire Envoyer contacter l'agence 03 29 86 76 77 Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par La Boite Immo agissant comme Sous-traitant du traitement pour la gestion de la clientèle/prospects de l'Agence / du Réseau qui reste Responsable du Traitement de vos Données personnelles. La base légale du traitement repose sur l'intérêt légitime de l'Agence / du Réseau. Elles sont conservées jusqu'à demande de suppres",
   "lat": 49.153914,
   "lon": 5.365593,
   "altitude": 209.0,
   "densite_hab_km2": 532.5,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -154529,7 +154749,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/4/8b0d268963dd0cfb808aac48a549829f/100396eb194219ef56ffd11b481e77e7.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154613,7 +154833,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/7f53f8c6c730af6aeb52e66eb74d8507/62bc70160d1bd31d75b97d752d60be40.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154643,6 +154863,16 @@
   "densite_hab_km2": 532.5,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -154670,7 +154900,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/ff1418e8cc993fe8abcfe3ce2003e5c5/230e9e06f17c5a4f23ada707291328e9.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154784,10 +155014,20 @@
   "texte": " Maison individuelle F6 dans quartier prisé, calme assuré | PAFFONI IMMOBILIER Fermer Langue fr en fr x fr en 0 Biens d'habitation Locaux professionnels VENDRE LOUER ESTIMER FAIRE GÉRER MON BIEN Notre agence Vendus Recherche --> Langue fr en fr x fr en 0 Contact Acheter De l'ancien De l'ancien De l'immo pro Louer à l'année De l'immo pro Estimer Créez votre alerte e-mail Type de bien Appartement Immeuble Maison Terrain Terrain à batir Maison x 1 Appartement Immeuble Maison Terrain Terrain à batir 55100 - Verdun x 1 Localisation ville-21371 ville-21371 x ville-21371 55100 - Verdun x Dans un rayon de 5 km 10 km 15 km 20 km 25 km 30 km Budget Budget Mini € Maxi € Réinitialiser ce filtre Filtrer Voir les 2 annonces Maison 55100 - Verdun 6 Pièces Réinitialiser les filtres Faites estimer votre bien par un professionnel Estimer votre bien Accueil Vente Verdun Maison T6 Maison individuelle f6 dans quartier prise calme assure Retour aux résultats Sous-offre 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 Verdun (55100) Maison individuelle F6 dans quartier prisé, calme assuré Réf : 260306-FL 163 000 € VERDUN, Maison familiale lumineuse et fonctionnelle, idéalement située dans un quartier calme. Elle se compose d'une entrée, d'une cuisine aménagée, d'une salle à manger et d'un grand salon baigné de lumière avec bureau ouvert, parfait pour le télétravail. Vous trouverez également un WC indépendant et une salle de bains avec douche. Côté nuit : 3 chambres, dont 2 avec placards. Vous profiterez de grandes baies vitrées donnant sur une terrasse agréable et un jardin, idéal pour les beaux jours. Sous-sol complet comprenant : buanderie, cave, pièce supplémentaire (salle de jeux, bureau, atelier) et garage avec porte électrique. Maison lumineuse Beaux volumes Jardin + terrasse Demi Sous-sol Idéal famille À visiter sans tarder ! PRIX : 163 000 € Honoraires d'agence à la charge du vendeur. Taxes foncières : 1863 € Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : www.geoportail.gouv.fr général détails + copropriété financier DPE général détails + copropriété financier DPE général x général détails + copropriété financier DPE TRAD_SIROCCO_Caracteristique Valeurs Code postal 55100 Surface habitable (m²) 95 m² surface terrain 604 m² Nombre de chambre(s) 3 Nombre de pièces 6 TRAD_SIROCCO_Caracteristique Valeurs Nb de salle de bains 1 Mode de chauffage Electrique Type de chauffage Convecteur Format de chauffage Individuel Nombre de parking 1 TRAD_SIROCCO_Caracteristique Valeurs Copropriété NON TRAD_SIROCCO_Caracteristique Valeurs Prix de vente 163 000 € Les honoraires d'agence seront intégralement à la charge du vendeur &nbsp; Taxe foncière annuelle 1 863 € DPE en cours Nos outils Sélectionner Calculatrice Imprimer Partager ce bien Facebook Twitter Intéressé(e) par Ce bien ? Intéressé(e) par Ce bien ? --> Nom * Prénom * E-mail * Téléphone * Message * J'ai pris connaissance de la Politique de confidentialité et des informat",
   "lat": 49.153914,
   "lon": 5.365593,
-  "altitude": 201.0,
+  "altitude": 209.0,
   "densite_hab_km2": 532.5,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -154841,7 +155081,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/eb163727917cbba1eea208541a643e74/184513cbecd7f9c9c309181de9b80ce3.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154867,10 +155107,20 @@
   "texte": " Espace commercial à Verdun | PAFFONI IMMOBILIER Fermer Langue fr en fr x fr en 0 Biens d'habitation Locaux professionnels VENDRE LOUER ESTIMER FAIRE GÉRER MON BIEN Notre agence Vendus Recherche --> Langue fr en fr x fr en 0 Contact Acheter De l'immo pro De l'ancien De l'immo pro Louer à l'année De l'immo pro Estimer Créez votre alerte e-mail Type de commerce Local commercial Fonds de commerce Local commercial x 1 Local commercial Fonds de commerce 55100 - Verdun x 1 Localisation ville-21371 ville-21371 x ville-21371 55100 - Verdun x Dans un rayon de 5 km 10 km 15 km 20 km 25 km 30 km Budget Budget Mini € Maxi € Réinitialiser ce filtre Filtrer Voir les 2 annonces Local commercial 55100 - Verdun Réinitialiser les filtres Faites estimer votre bien par un professionnel Estimer votre bien Accueil Vente pro Verdun Local commercial Retour aux résultats Exclusif 01 02 03 04 05 06 07 08 09 10 11 Verdun (55100) Espace commercial à Verdun Réf : 260206 53 000 € Beau petit local commercial, idéal pour des professions libérales ou comme espace de stockage. Ce local est bien placé avec un grand parking, proche d'une route avec beaucoup de passage donnant une bonne visibilité. général détails + copropriété financier Activités DPE général détails + copropriété financier Activités DPE général x général détails + copropriété financier Activités DPE TRAD_SIROCCO_Caracteristique Valeurs Type de transac Local commercial Code postal 55100 Surface habitable (m²) 19 m² Nombre de pièces 2 Superficie (m²) 19 TRAD_SIROCCO_Caracteristique Valeurs Mode de chauffage Electrique Type de chauffage Convecteur Format de chauffage Individuel TRAD_SIROCCO_Caracteristique Valeurs Copropriété NON TRAD_SIROCCO_Caracteristique Valeurs Prix de vente honoraires inclus 53 000 € Les honoraires d'agence seront intégralement à la charge du vendeur &nbsp; Charges 40 € TRAD_SIROCCO_Caracteristique Valeurs type d'activité - Divers DPE en cours Nos outils Sélectionner Calculatrice Imprimer Partager ce bien Facebook Twitter Intéressé(e) par Ce bien ? Intéressé(e) par Ce bien ? --> Nom * Prénom * E-mail * Téléphone * Message * J'ai pris connaissance de la Politique de confidentialité et des informations relatives au traitement de mes données personnelles (*)* J'accepte d'être contacté(e) par téléphone par l'Agence / le Réseau. Ce consentement est libre et peut être retiré à tout moment. * Champ obligatoire Envoyer contacter l'agence 03 29 86 76 77 Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par La Boite Immo agissant comme Sous-traitant du traitement pour la gestion de la clientèle/prospects de l'Agence / du Réseau qui reste Responsable du Traitement de vos Données personnelles. La base légale du traitement repose sur l'intérêt légitime de l'Agence / du Réseau. Elles sont conservées jusqu'à demande de suppression et sont destinées à l'Agence / au Réseau. Conformément à la loi « informatique et libertés », vous disposez des droits d’accès, de rectific",
   "lat": 49.153914,
   "lon": 5.365593,
-  "altitude": 209.0,
+  "altitude": 201.0,
   "densite_hab_km2": 532.5,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -154911,7 +155161,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/e0ab531ec312161511493b002f9be2ee/5f5136bec5df6992ddf2d825f1edd796.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -154941,6 +155191,16 @@
   "densite_hab_km2": 274.7,
   "dpe": "A",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 68.0,
    "nucleaire_nom": "Cattenom"
   },
@@ -155006,7 +155266,7 @@
    "https://paffoni-immobilier.staticlbi.com/580xauto/images/biens/1/a89cf525e1d9f04d16ce31165e139a4b/cb94ddc7d8883871e5558395a6017b2a.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158367,13 +158627,23 @@
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
   "photo": null,
-  "texte": " Fermes en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Fermes en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Ferme Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 116 800 € Longère à rénover 2 chambres grand terrain / Hangar – Au cœur de l’Avesnois 4 pièces 110 m² Prisches 59550 Longère à rénover 2 chambres grand terrain / Hangar – Fort potentiel au cœur de l’Avesnois Idéalement située dans un environnement verdoyant, cette charmante longère d’environ 110 m² habitables séduira les amateurs de rénovation et de beaux volumes. Sur une parcelle entièrement clôturée de 2000 m², la maison offre au rez-de-chaussée une entrée, un séjour chaleureux, un salon avec poêle à bois, une cuisine avec arrière-cuisine, une salle de bains ainsi que deux chambres de 21 m² et 10 m². À l’étage, un vaste grenier aménageable d’environ 120 m² au sol laisse libre cours à tous vos projets : création de plusieurs chambres, bureau, suite parentale ou salle de bains supplémentaire. La propriété dispose également de nombreuses dépendances représentant un véritable atout : Garage de 34 m²Étable de 38 m²Hangar / grangeSoit près de 250 m² de dépendances au total. Chauffage actuel au fuel et au bois. Maison non raccordée au tout-à-l’égout. Une belle opportunité pour primo-accédants, artisans, investisseurs ou amoureux de la campagne souhaitant créer un lieu de vie à leur image. Pour plus de renseignements, contactez votre conseillère Mme MARLOT Julie au 06. 44. 05. 58. 32 . Vous ne trouvez pas le bien de vos rêves ? Ne manquez plus aucun bien correspondant à votre recherche en vous inscrivant à notre alerte mail ! ﻿ Prénom Nom Email Vente Type d'offre Ferme Type de bien Empty Localisation Budget max (€) Surface min (m²) Pièces min J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Recevoir des annonces Je recherche un bien Vente maison mitoyenne 2 côtés Denain (59220) Vente maison individuelle Preux-au-Bois (59288) Vente maison mitoyenne 1 côté Haspres (59198) Location maison m",
+  "texte": " Fermes en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Fermes en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Ferme Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 116 800 € Longère à rénover 2 chambres grand terrain / Hangar – Au cœur de l’Avesnois 4 pièces 110 m² Prisches 59550 Longère à rénover 2 chambres grand terrain / Hangar – Fort potentiel au cœur de l’Avesnois Idéalement située dans un environnement verdoyant, cette charmante longère d’environ 110 m² habitables séduira les amateurs de rénovation et de beaux volumes. Sur une parcelle entièrement clôturée de 2000 m², la maison offre au rez-de-chaussée une entrée, un séjour chaleureux, un salon avec poêle à bois, une cuisine avec arrière-cuisine, une salle de bains ainsi que deux chambres de 21 m² et 10 m². À l’étage, un vaste grenier aménageable d’environ 120 m² au sol laisse libre cours à tous vos projets : création de plusieurs chambres, bureau, suite parentale ou salle de bains supplémentaire. La propriété dispose également de nombreuses dépendances représentant un véritable atout : Garage de 34 m²Étable de 38 m²Hangar / grangeSoit près de 250 m² de dépendances au total. Chauffage actuel au fuel et au bois. Maison non raccordée au tout-à-l’égout. Une belle opportunité pour primo-accédants, artisans, investisseurs ou amoureux de la campagne souhaitant créer un lieu de vie à leur image. Pour plus de renseignements, contactez votre conseillère Mme MARLOT Julie au 06. 44. 05. 58. 32 . Vous ne trouvez pas le bien de vos rêves ? Ne manquez plus aucun bien correspondant à votre recherche en vous inscrivant à notre alerte mail ! ﻿ Prénom Nom Email Vente Type d'offre Ferme Type de bien Empty Localisation Budget max (€) Surface min (m²) Pièces min J'accepte le traitement de mes données personnelles conformément au RGPD. Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez vous inscrire gratuitement sur la liste d'opposition au démarchage téléphonique, prévu par l'article L223-1 du code de la consommation, sur le site Internet www.bloctel.gouv.fr ou par courrier adressé à : Société Worldline, Service Bloctel, CS 61311, 41013 BLOIS CEDEX. Pour en savoir plus sur le traitement de vos données personnelles, veuillez consulter notre politique de confidentialité . Recevoir des annonces Je recherche un bien Vente maison mitoyenne 2 côtés Denain (59220) Vente maison individuelle Preux-au-Bois (59288) Vente maison plain-pied Hérin (59195) Vente maison mitoyenne 1 ",
   "lat": 50.330176,
   "lon": 3.392754,
-  "altitude": 37.0,
+  "altitude": 38.0,
   "densite_hab_km2": 1795.9,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 102.9,
    "nucleaire_nom": "Chooz"
   },
@@ -158383,7 +158653,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158392,13 +158662,13 @@
   "id": "pierre-notarianni-immobilier-382f0f71930a",
   "source": "pierre-notarianni-immobilier",
   "url": "https://www.notarianni-immobilier.fr/vente/maison-mitoyenne-2-cotes",
-  "titre": "Maison de ville 4 chambres avec jardin",
+  "titre": "Maison de ville 3 chambres 96m²",
   "description": null,
   "type_bien": "maison",
   "prix": 85900,
-  "surface_m2": 144.0,
-  "terrain_m2": 158.0,
-  "pieces": 5,
+  "surface_m2": 96.0,
+  "terrain_m2": 200.0,
+  "pieces": 4,
   "commune": "Denain",
   "code_postal": "59220",
   "departement": "59",
@@ -158406,20 +158676,31 @@
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
   "photo": "https://img.netty.immo/productw/notarianni2/2/VM3053/maison-mitoyenne-2-cotes-4-pieces-denain-59220-1773846534-VM3053_9_original.jpg",
-  "texte": " Maisons mitoyennes 2 côtés en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons mitoyennes 2 côtés en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Mitoyenne 2 côtés Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 85 900 € Nouveauté Maison de ville 4 chambres avec jardin 5 pièces 120 m² Denain 59220 A vendre sur la commune de Denain, cette maison de ville offre des grands volumes ouverts à vivre comprenant au rez-de-chaussée un espace salon, une grande cuisine équipée avec un séjour, une salle de bains et des wc séparés. Au 1er étage, vous trouverez 2 chambres indépendantes ainsi que des wc. Au 2nd étage, vous trouverez encore 2 chambres indépendantes. La maison possède également une cave, une terrasse et un jardin avec une dépendance. Pour votre confort, toutes les fenêtres sont en double vitrage avec volets roulants + une chaudière au gaz pour le chauffage central et la production d'eau chaude. Cette maison offre un fort potentiel, idéal pour les amateurs de projets, avec quelques travaux de rafraîchissement à prévoir pour révéler tout son charme. Contactez-nous rapidement pour programmer une visite ! 137 000 € Maison mitoyenne 2 côtés à vendre, 5 pièces - Denain 59220 5 pièces 130 m² Denain 59220 Découvrez cette maison mitoyenne familiale Une maison qui respire l'histoire et le caractère, Construite en 1930, cette maison ancienne a su conserver toute son âme tout en s'offrant une rénovation soignée en 2016 qui allie respect du patrimoine et modernité discrète. Avec ses 130 m² de surface habitable, elle s'étend sur 2 niveaux, offrant une circulation fluide et des espaces de vie généreux. Imaginez-vous franchir le seuil de cette demeure où les murs en pierre apparente côtoient des touches contemporaines. Le séjour , baigné de lumière grâce à ses ouvertures en bois avec double vitrage, est le cœur battant de la maison. Ici, les repas en famille se transforment en moments magiques, les soirées entre amis en souvenirs inoubliables. Les 5 pièces dont 4 chambres offrent un espace de vie idéal pour une famille ou pour recevoir vos proches avec élégance. Un extérieur qui offre une belle surpriseÀ l'arrière, un jardin, vous attend, un havre de paix où le temps semble suspendu. Que vous soyez amateur de jardinage ou simplement en quête d'un coin de détente, ce vaste espace vert vous promet des après-midi bercés par le chant des oiseaux. La terrasse de 25 m², idéale pour les barbecues estivaux ou les petits-déjeuners au soleil, est le prolongement par",
+  "texte": " Maisons mitoyennes 2 côtés en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons mitoyennes 2 côtés en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Mitoyenne 2 côtés Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte Nous contacter Exclusivité Maison de ville 3 chambres 96m² 4 pièces 96 m² La Sentinelle 59174 Charmante Maison secteur le vignobleDécouvrez cette ravissante maison mitoyenne 2 côtés, baignée de lumière et d'histoire, construite en 1930. Avec ses 96 m² de surface habitable répartis sur 2 niveaux, cette demeure allie charme d'antan et confort moderne. Imaginez-vous dans le spacieux séjour de 39 m², parfait pour des soirées conviviales ou des moments de détente autour du poêle à pellets. La cuisine américaine aménagée et équipée, ouverte sur la vie quotidienne, est un véritable atout pour les amateurs de cuisine et de convivialité. Cette maison partiellement meublée comprend 3 chambres douillettes, une salle de bains moderne et un WC indépendant, offrant tout le confort nécessaire pour une vie quotidienne agréable. La terrasse de 25 m² et le jardin de 200 m² sont des espaces extérieurs idylliques, parfaits pour les barbecues d'été ou les moments de relaxation. La maison est en excellent état, avec une isolation en laine de verre en toiture, des ouvertures en PVC à double vitrage, et une toiture en tuiles terre cuite et bac acier. Le haut plafond de 2,50 m ajoute une touche de grandeur à chaque pièce. En plus, cette propriété dispose d'une cave de 10 m² et d'un grenier, offrant des espaces de rangement supplémentaires. Située dans un quartier bien desservi, cette maison est à proximité de plusieurs commodités : un bus à 5 min à pied, un tramway à 10 min en voiture, une crèche à 5 min en voiture, des écoles maternelles et élémentaires à 10 min à pied, des collèges à 5 min en voiture, des restaurants à 5 min à pied, un parc et jardin à 5 min en voiture, un hôpital à 5 min en voiture, des médecins généralistes à 15 min à pied, et plusieurs commerces à 10 min à pied. La fibre est également éligible. Ne manquez pas cette opportunité de vivre dans une maison pleine de charme et de potentiel. Contactez Audrey PETIT dès maintenant pour une visite ! 85 900 € Nouveauté Maison de ville 4 chambres avec jardin 5 pièces 120 m² Denain 59220 A vendre sur la commune de Denain, cette maison de ville offre des grands volumes ouverts à vivre comprenant au rez-de-chaussée un espace salon, une grande cuisine équipée avec un séjour, une salle de bains et des ",
   "lat": 50.330176,
   "lon": 3.392754,
-  "altitude": 37.0,
+  "altitude": 38.0,
   "densite_hab_km2": 1795.9,
   "dpe": "B",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 102.9,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
-   "https://img.netty.immo/productw/notarianni2/2/VM3144/maison-mitoyenne-2-cotes-5-pieces-denain-59220-1780521721-VM3144_1_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3241/maison-mitoyenne-2-cotes-4-pieces-la-sentinelle-59174-1787389807-VM3241_7_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3144/maison-mitoyenne-2-cotes-5-pieces-denain-59220-1780521721-VM3144_1_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3187/maison-mitoyenne-2-cotes-5-pieces-denain-59220-1783348587-VM3187_1_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3178/maison-mitoyenne-2-cotes-3-pieces-denain-59220-1787175192-VM3178_30_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3053/maison-mitoyenne-2-cotes-4-pieces-denain-59220-1773846534-VM3053_9_original.jpg",
@@ -158435,11 +158716,10 @@
    "https://img.netty.immo/productw/notarianni2/2/VM2939/maison-mitoyenne-2-cotes-3-pieces-denain-59220-1779051837-VM2939_10_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM2984/maison-mitoyenne-2-cotes-3-pieces-wallers-59135-1777666457-VM2984_16_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM2682/maison-mitoyenne-2-cotes-3-pieces-lourches-59156-1768511947-VM2682_6_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM2897/maison-mitoyenne-2-cotes-6-pieces-denain-59220-1765213418-VM2897_1_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM2995/maison-mitoyenne-2-cotes-3-pieces-bruay-sur-l-escaut-59860-1773756874-VM2995_1_original.jpg"
+   "https://img.netty.immo/productw/notarianni2/2/VM2897/maison-mitoyenne-2-cotes-6-pieces-denain-59220-1765213418-VM2897_1_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158448,34 +158728,45 @@
   "id": "pierre-notarianni-immobilier-46c11eaea2e4",
   "source": "pierre-notarianni-immobilier",
   "url": "https://www.notarianni-immobilier.fr/vente/maison-individuelle",
-  "titre": "PAVILLON INDIVIDUEL PLAIN PIED 3 CHAMBRES",
+  "titre": "Maison individuelle à vendre, 8 pièces - Hérin 59195",
   "description": null,
-  "type_bien": "pavillon",
-  "prix": 229900,
-  "surface_m2": 400.0,
-  "terrain_m2": 800.0,
-  "pieces": 4,
-  "commune": "Denain",
-  "code_postal": "59220",
+  "type_bien": "maison",
+  "prix": 250700,
+  "surface_m2": 800.0,
+  "terrain_m2": 748.0,
+  "pieces": 8,
+  "commune": "Hérin",
+  "code_postal": "59195",
   "departement": "59",
   "region": "Hauts-de-France",
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
-  "photo": "https://img.netty.immo/productw/notarianni2/2/VM3110/maison-individuelle-4-pieces-marquette-en-ostrevant-59252-1781253373-VM3110_1_original.jpg",
-  "texte": " Maisons individuelles en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons individuelles en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Individuelle Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 229 900 € Exclusivité PAVILLON INDIVIDUEL PLAIN PIED 3 CHAMBRES 4 pièces 98 m² Hornaing 59171 Maison individuelle plain-pied 98 m² – Hornaing À vendre à Hornaing, jolie maison individuelle de plain-pied construite en 2009, d’environ 98 m² habitables sans travaux. Elle se compose d’une entrée, d’une belle pièce de vie avec cuisine ouverte de 40m², de 3 chambres, d’une salle de bains, d’un WC indépendant ainsi que d’une buanderie et d'un bureau. La maison bénéficie de plusieurs équipements récents : - Ouvertures en PVC double vitrage remplacées en 2021 - Poêle à pellets installé en 2021 - Cumulus de 2022 - Portail motorisé installé en 2024 À l’extérieur, vous profiterez d’un jardin, d’une terrasse carrelée, d’un chalet de jardin ainsi que d’une piscine hors-sol. La propriété dispose également de 4 places de stationnement extérieures. Une maison fonctionnelle et agréable, idéale pour une famille à la recherche d’un plain-pied avec 3 chambres et un extérieur, tout en bénéficiant d’équipements récents. 📍 Hornaing 📐 98 m² habitables 🛏️ 3 chambres 🚗 4 stationnements 🌿 Jardin + terrasse carrelée 🏊 Piscine hors-sol 🏡 Maison individuelle de plain-pied Pour plus d’informations ou pour organiser une visite, contactez Léa Notarianni 415 000 € Coup de cœur Maison familiale 250m² 7 pièces 250 m² Ghissignies 59530 A vendre dans le charmant village de Ghissignies, à quelques minutes de Le Quesnoy, je vous propose cette magnifique maison familiale de 250m². Elle se compose d'un séjour lumineux et spacieux de 60m², d'une cuisine aménagée et équipée avec une vue sur le jardin, 6 chambres dont 2 au RDC, une salle de bains spacieuse, une salle de douche, un sous-sol complet équipé d'une laverie, des emplacements voitures, une véranda, une pergola, un jardin clos avec une vue imprenable sur la campagne, Plus qu'une maison, c'est un style de vie apaisant que vous procurera cette maison. Visitez là et laissez-vous porter ! 188 900 € Maison individuelle 3 chambres , garage et jardin 5 pièces 175 m² Forest-en-Cambrésis 59222 Charmante longère de 175 m² - 3 chambres , garage et jardin Volumes généreux et cadre paisible À découvrir sur la commune de Forest-en-Cambrésis, cette longère pleine de charme vous séduira par ses beaux volumes, son cachet et son environnement calme. D",
-  "lat": 50.330176,
-  "lon": 3.392754,
-  "altitude": 38.0,
-  "densite_hab_km2": 1795.9,
+  "photo": "https://img.netty.immo/productw/notarianni2/2/VM3087/maison-individuelle-5-pieces-vervins-02140-1776888787-VM3087_15_original.jpg",
+  "texte": " Maisons individuelles en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons individuelles en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Individuelle Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 250 700 € Maison individuelle à vendre, 8 pièces - Hérin 59195 8 pièces 150 m² Hérin 59195 Maison individuelle 150 m² – 6 chambres – Terrain de 748 m² – Fort potentiel de rénovation250 700 € À découvrir, cette maison individuelle de 150 m² habitables, implantée sur un terrain de 748 m², offre un beau potentiel pour un projet familial ou une rénovation selon vos envies. Construite en 1979, elle propose de beaux volumes et une configuration familiale avec 6 chambres, un séjour de 29 m², une salle de bains et un WC indépendant. La maison bénéficie également d’un balcon d’environ 10 m², d’une terrasse et d’un jardin, ainsi que de nombreuses possibilités de stationnement avec 2 places intérieures et 4 places extérieures. Un beau potentiel de rénovation. La maison est classée G au DPE et nécessite des travaux de rénovation. Ce classement peut toutefois permettre, sous conditions, de bénéficier d’aides à la rénovation énergétique potentiellement importantes, offrant ainsi une belle opportunité d’améliorer le confort et la performance du logement tout en le valorisant. Les atouts du bien: -150 m² habitables -6 chambres -Séjour de 29 m² -Terrain de 748 m² -Jardin -Terrasse/Balcon d’environ 10 m² -2 stationnements intérieurs -4 stationnements extérieurs -Chauffe-eau électrique -Tout-à-l’égout -Construction de 1979 -Maison individuelle -Beau potentiel de rénovation et de valorisation Une propriété qui s’adresse aussi bien à une famille à la recherche de beaux volumes qu’à un acquéreur souhaitant créer un intérieur à son image et révéler tout le potentiel de cette maison. Prix de vente : 250 700 € *Les aides à la rénovation sont soumises à conditions et devront faire l’objet d’une étude personnalisée. 229 900 € Exclusivité PAVILLON INDIVIDUEL PLAIN PIED 3 CHAMBRES 4 pièces 98 m² Hornaing 59171 Maison individuelle plain-pied 98 m² – Hornaing À vendre à Hornaing, jolie maison individuelle de plain-pied construite en 2009, d’environ 98 m² habitables sans travaux. Elle se compose d’une entrée, d’une belle pièce de vie avec cuisine ouverte de 40m², de 3 chambres, d’une salle de bains, d’un WC indépendant ainsi que d’une buanderie et d'un bureau. La maison bénéficie de plusieurs équipements récents : - Ouvertures en PVC double vitrage remplacées en 2021 - Poêle à p",
+  "lat": 50.362078,
+  "lon": 3.44533,
+  "altitude": 45.0,
+  "densite_hab_km2": 932.2,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 102.9,
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 100.3,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
-   "https://img.netty.immo/productw/notarianni2/2/VM3166/maison-individuelle-4-pieces-hornaing-59171-1786470922-VM3166_8_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3161/maison-individuelle-8-pieces-herin-59195-1787390521-VM3161_15_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3166/maison-individuelle-4-pieces-hornaing-59171-1786470922-VM3166_8_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3010/maison-individuelle-7-pieces-ghissignies-59530-1772659644-VM3010_4_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3057/maison-individuelle-5-pieces-forest-en-cambresis-59222-1783338924-VM3057_2_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3158/maison-individuelle-5-pieces-saint-waast-59570-1781040293-VM3158_16_original.jpg",
@@ -158492,7 +158783,7 @@
    "https://img.netty.immo/productw/notarianni2/2/VM2961/maison-individuelle-5-pieces-douchy-les-mines-59282-1770630639-VM2961_10_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158514,14 +158805,24 @@
   "region": "Hauts-de-France",
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
-  "photo": "https://img.netty.immo/productw/notarianni2/2/VM3038/maison-ancienne-6-pieces-douchy-les-mines-59282-1773996004-VM3038_2_original.jpg",
+  "photo": "https://img.netty.immo/productw/notarianni2/2/VM3138/maison-ancienne-8-pieces-denain-59220-1780045484-VM3138_2_original.jpg",
   "texte": " Maisons anciennes en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons anciennes en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Ancienne Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 127 000 € A saisir Maison ancienne à vendre, 4 pièces - Quiévrechain 59920 4 pièces 100 m² Quiévrechain 59920 Une maison ancienne qui respire l'authenticité Imaginez-vous franchir le seuil d'une maison ancienne de 100 m², où chaque pierre raconte une histoire et chaque recoin murmure des secrets d'autrefois. Cette demeure, est un véritable témoin du temps, alliant le charme rustique des matériaux d'antan à une structure solide et chaleureuse. A un prix de 130000 EUROS HAI Avec ses pièces lumineuses, cette maison ancienne est conçue pour ceux qui recherchent un espace de vie pratique et harmonieux. Un cadre de vie où l'histoire et le confort se mêlent Cette maison ancienne est bien plus qu'un simple logement : c'est un projet de vie qui vous invite à réinventer votre quotidien. Imaginez vos matins dans une cuisine pratique et fonctionelle. Les 3 chambres dans cette maison sont un atout pour une famille ou pour accueillir des proches; Acquérir une maison ancienne comme celle-ci, c'est faire le choix d'un patrimoine durable. Contrairement aux constructions modernes standardisées, cette demeure possède une âme, une identité qui la rend unique. En la rénovant avec soin, vous lui redonnerez toute sa splendeur d'antan tout en l'adaptant à vos envies et besoins moderne. Cette maison ancienne est une page blanche qui n'attend que vous pour écrire son prochain chapitre. Les atouts qui font la différence • Un emplacement recherché : Cette maison ancienne est idéalement située, à proximité de commodités essentielles et à 10 minutes de la frontière belge, ainsi que des autoroutes. • Un potentiel de rénovation illimité : Que vous rêviez de moderniser la cuisine ouverte, d'aménager le grand grenier ... cette maison ancienne est une toile vierge qui s'adaptera à tous vos désirs. Laissez libre cours à votre imagination ! • Un investissement durable : Une maison ancienne bien entretenue est un patrimoine qui traverse les générations. En choisissant cette demeure, vous optez pour un bien rare et précieux, qui prendra de la valeur avec le temps tout en vous offrant un cadre de vie unique. Votre projet, notre passion Chez Pierre Notarianni Immobilier, nous comprenons que l'achat d'une maison ancienne est bien plus qu'une transaction : c'est l'aboutissement d'un rêve, d'une quête ",
   "lat": 50.392116,
   "lon": 3.660097,
-  "altitude": 38.0,
+  "altitude": 39.0,
   "densite_hab_km2": 1267.6,
   "dpe": "C",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 87.0,
    "nucleaire_nom": "Chooz"
   },
@@ -158535,7 +158836,7 @@
    "https://img.netty.immo/productw/notarianni2/2/VM3034/maison-ancienne-4-pieces-somain-59490-1773652552-VM3034_7_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158544,34 +158845,45 @@
   "id": "pierre-notarianni-immobilier-6e20e60ffdb2",
   "source": "pierre-notarianni-immobilier",
   "url": "https://www.notarianni-immobilier.fr/vente/maison-mitoyenne-1-cote",
-  "titre": "Maison idéal primo ou investisseurs",
+  "titre": "Maison semi-mitoyenne avec des grands volumes",
   "description": null,
   "type_bien": "maison",
-  "prix": 75000,
+  "prix": 84800,
   "surface_m2": 192.0,
   "terrain_m2": 300.0,
-  "pieces": 3,
-  "commune": "Rœulx",
-  "code_postal": "59172",
+  "pieces": 5,
+  "commune": "Denain",
+  "code_postal": "59220",
   "departement": "59",
   "region": "Hauts-de-France",
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
-  "photo": "https://img.netty.immo/productw/notarianni2/2/VM2819/maison-mitoyenne-1-cote-3-pieces-escaudain-59124-1768171096-VM2819_6_original.jpg",
-  "texte": " Maisons mitoyennes 1 côté en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons mitoyennes 1 côté en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Mitoyenne 1 côté Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 75 000 € Exclusivité Maison idéal primo ou investisseurs 3 pièces 60 m² La Sentinelle 59174 Dans un secteur calme de La Sentinelle et proche des axes autoroutiers, nous vous proposons une maison de ville en retrait de rue offrant une grande pièce de vie, un bureau, des wc, une salle de bains puis à l'étage vous trouverez un palier et une chambre. Face à la maison, il y a garage avec un jardin non attenant. Quelques travaux de confort seront à prévoir. Une opportunité sur le secteur en Exclusivité ! 199 000 € Exclusivité Maison semi plain-pied 4 chambres, hangar, jardin 5 pièces 192 m² Roeulx 59172 🏡 EN EXCLUSIVITÉ – Maison semi plain-pied de 192 m² – Roeulx – 4 chambres – Jardin – Hangar Venez découvrir cette magnifique maison semi-mitoyenne des années 1930, développant 192 m² habitables, qui saura vous séduire par ses volumes et son potentiel. Elle se compose comme suit : 👉 Au rez-de-chaussée :Vous serez accueilli par une vaste entrée de 8 m² avec rangements, desservant : Un salon lumineux de 31,5 m²Une grande pièce de vie avec cuisine ouverte de 46,6 m², idéale pour partager des moments conviviaux en familleUn cellierUne chambre de 15,44 m²Un WC indépendant👉 À l’étage :Un large palier dessert : 3 belles chambresUn dressingUne salle de bains moderne, rénovée avec goûtUn second WCLes + de cette maison :✔ Véranda✔ Terrasse✔ Jardin clos de 300m2✔ Garage traversant pouvant accueillir plusieurs véhicules✔ Hangar / Dépendance offrant de nombreuses possibilités d’aménagement (atelier, stockage, projet professionnel…) ✨ Une véritable opportunité pour une famille à la recherche d’un bien alliant charme, espace et fonctionnalité. 📍 Un cadre de vie agréable où confort et praticité se rencontrent. 📞 Contactez-moi dès maintenant pour organiser une visite !Léa Notarianni – 06 40 94 85 61 148 000 € Coup de cœur Maison mitoyenne 1 côté à vendre, 3 pièces - Bruay-sur-l'Escaut 59860 3 pièces 130 m² Bruay-sur-l'Escaut 59860 Découvrez votre futur cocon : une maison spacieuse, semi individuelle et chaleureuse Imaginez-vous ouvrir les yeux chaque matin dans une maison de 130 m², où chaque détail a été pensé pour votre confort et votre bien-être. Cette résidence spacieuse et lumineuse, allie modernité et charme intemporel. Dès votre entrée, vous serez sédui",
-  "lat": 50.309614,
-  "lon": 3.336243,
-  "altitude": 34.0,
-  "densite_hab_km2": 925.1,
+  "photo": "https://img.netty.immo/productw/notarianni2/2/VM3172/maison-mitoyenne-1-cote-3-pieces-bruay-sur-l-escaut-59860-1781860038-VM3172_4_original.jpg",
+  "texte": " Maisons mitoyennes 1 côté en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons mitoyennes 1 côté en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Mitoyenne 1 côté Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 84 800 € Nouveauté Maison semi-mitoyenne avec des grands volumes 5 pièces 120 m² Denain 59220 A vendre sur la commune de Denain, proche de la gare, une grande maison de ville avec quelques travaux à prévoir. La maison dispose d'un séjour de 40m² donnant sur un espace cuisine avec une grande baie vitrée et une salle de bains + wc au rez-de-chaussée. Au premier étage, un palier spacieux dessert 3 chambres indépendantes, puis le palier du second étage distribue une chambre supplémentaire et un grand grenier. Cave. A l'extérieur, la maison dispose d'un jardin clos. Cette maison dispose d'un beau potentiel à exploiter ! Contactez nous pour organiser une visite ! 75 000 € Exclusivité Maison idéal primo ou investisseurs 3 pièces 60 m² La Sentinelle 59174 Dans un secteur calme de La Sentinelle et proche des axes autoroutiers, nous vous proposons une maison de ville en retrait de rue offrant une grande pièce de vie, un bureau, des wc, une salle de bains puis à l'étage vous trouverez un palier et une chambre. Face à la maison, il y a garage avec un jardin non attenant. Quelques travaux de confort seront à prévoir. Une opportunité sur le secteur en Exclusivité ! 199 000 € Exclusivité Maison semi plain-pied 4 chambres, hangar, jardin 5 pièces 192 m² Roeulx 59172 🏡 EN EXCLUSIVITÉ – Maison semi plain-pied de 192 m² – Roeulx – 4 chambres – Jardin – Hangar Venez découvrir cette magnifique maison semi-mitoyenne des années 1930, développant 192 m² habitables, qui saura vous séduire par ses volumes et son potentiel. Elle se compose comme suit : 👉 Au rez-de-chaussée :Vous serez accueilli par une vaste entrée de 8 m² avec rangements, desservant : Un salon lumineux de 31,5 m²Une grande pièce de vie avec cuisine ouverte de 46,6 m², idéale pour partager des moments conviviaux en familleUn cellierUne chambre de 15,44 m²Un WC indépendant👉 À l’étage :Un large palier dessert : 3 belles chambresUn dressingUne salle de bains moderne, rénovée avec goûtUn second WCLes + de cette maison :✔ Véranda✔ Terrasse✔ Jardin clos de 300m2✔ Garage traversant pouvant accueillir plusieurs véhicules✔ Hangar / Dépendance offrant de nombreuses possibilités d’aménagement (atelier, stockage, projet professionnel…) ✨ Une véritable opportunité pour une famille à la recherche d’un bien al",
+  "lat": 50.330176,
+  "lon": 3.392754,
+  "altitude": 37.0,
+  "densite_hab_km2": 1795.9,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 106.2,
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 102.9,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
-   "https://img.netty.immo/productw/notarianni2/2/VM2912/maison-mitoyenne-1-cote-3-pieces-la-sentinelle-59174-1766484736-VM2912_5_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3195/maison-mitoyenne-1-cote-5-pieces-denain-59220-1787175432-VM3195_1_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM2912/maison-mitoyenne-1-cote-3-pieces-la-sentinelle-59174-1766484736-VM2912_5_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM2710/maison-mitoyenne-1-cote-5-pieces-roeulx-59172-1776931583-VM2710_2_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3172/maison-mitoyenne-1-cote-3-pieces-bruay-sur-l-escaut-59860-1781860038-VM3172_4_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM2819/maison-mitoyenne-1-cote-3-pieces-escaudain-59124-1768171096-VM2819_6_original.jpg",
@@ -158583,10 +158895,10 @@
    "https://img.netty.immo/productw/notarianni2/2/VM3004/maison-mitoyenne-1-cote-4-pieces-rosult-59230-1773475497-VM3004_8_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
-  "prix_precedent": 199000,
-  "prix_baisse_le": "2026-08-20"
+  "prix_precedent": null,
+  "prix_baisse_le": ""
  },
  {
   "id": "pierre-notarianni-immobilier-780d219bc7a5",
@@ -158599,31 +158911,31 @@
   "surface_m2": 770.0,
   "terrain_m2": 200.0,
   "pieces": null,
-  "commune": "Douchy-les-Mines",
-  "code_postal": "59282",
+  "commune": "Hérin",
+  "code_postal": "59195",
   "departement": "59",
   "region": "Hauts-de-France",
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
   "photo": "https://img.netty.immo/productw/notarianni2/2/VM3103/maison-plain-pied-4-pieces-wallers-59135-1777831508-VM3103_1_original.jpg",
   "texte": " Maisons plain-pied en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons plain-pied en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Plain-pied Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 235 000 € Exclusivité Plain Pied individuel RE 2020 5 pièces 87 m² Hérin 59195 Découvrez cette magnifique maison individuelle de standing, construite en 2026, offrant un cadre de vie exceptionnel et une luminosité optimale grâce à son exposition . Avec une surface habitable de 87 m² , cette propriété de plain-pied vous offre un cadre de vie exceptionnel. Elle se compose d'une agréable pièce de vie de 35m², baigné de lumière grâce à ses grandes ouvertures en double vitrage. La cuisine américaine, aménagée et entièrement équipée, est un véritable espace de vie où les repas en famille deviennent des moments inoubliables. Cette maison comprend 3 chambres confortables (de 9 à 11. 5 m²), une salle d'eau moderne avec douche à l'italienne et double vasque et un WC indépendant, garantissant intimité et praticité. Le jardin de 200 m² est un véritable havre de paix, idéal pour les soirées d'été ou les moments de détente en famille. La maison est conforme à la RE 2020, assurant une isolation optimale et des économies d'énergie. La toiture en tuiles terres cuites ajoute une touche d'élégance à cette propriété. Les + de la maison : DPE en A ( très rare), construction de qualité sous garantie décennale jusqu'en 2036 , Chauffage au sol avec pompe à chaleur et les menuiseries aluminium + volets électriques centralisés et pilotable à distance, alarme, vide sanitaire. Située dans un quartier résidentiel, cette maison est proche de toutes les commodités : écoles, commerces, et transports en commun sont accessibles en quelques minutes. Ne manquez pas cette opportunité de vivre dans une maison neuve, prête à vous accueillir. 286 000 € Coup de cœur Plain-pied individuel 4 chambres 5 pièces 137 m² Hérin 59195 Découvrez une Oasis de Sérénité et de Confort Une maison plain-pied d'exception à votre mesure, entre modernité et charme intemporelUne Maison Conçue pour le Bien-être au Quotidien Imaginez-vous chaque matin, accueilli par la douce lumière du jour filtrant à travers les grandes baies vitrées de votre maison plain-pied de 137m², nichée dans un écrin de verdure de 770m². Cette demeure, construite en 2018 selon les normes RT2012, allie modernité, fonctionnalité et élégance pour offrir un cadre de vie incomparable. Dès l'entrée, vous serez saisi par la chaleur et l'harmonie de ",
-  "lat": 50.300811,
-  "lon": 3.388782,
+  "lat": 50.362078,
+  "lon": 3.44533,
   "altitude": 45.0,
-  "densite_hab_km2": 1100.4,
+  "densite_hab_km2": 932.2,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
    "argile_commune": true,
-   "argile": 2,
+   "argile": 1,
    "feu_foret_commune": false,
    "seisme_commune": true,
    "radon_commune": true,
    "seveso_km": null,
-   "icpe_commune": true,
+   "icpe_commune": false,
    "portee": "commune",
    "source": "georisques",
-   "nucleaire_km": 102.4,
+   "nucleaire_km": 100.3,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
@@ -158635,7 +158947,7 @@
    "https://img.netty.immo/productw/notarianni2/2/VM2954/maison-plain-pied-4-pieces-douchy-les-mines-59282-1770281853-VM2954_23_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158644,34 +158956,47 @@
   "id": "pierre-notarianni-immobilier-8d745e080417",
   "source": "pierre-notarianni-immobilier",
   "url": "https://www.notarianni-immobilier.fr/vente/maison",
-  "titre": "Maison idéal primo ou investisseurs",
+  "titre": "Maison individuelle à vendre, 8 pièces - Hérin 59195",
   "description": null,
   "type_bien": "maison",
-  "prix": 75000,
-  "surface_m2": 250.0,
-  "terrain_m2": 800.0,
-  "pieces": 3,
-  "commune": "Denain",
-  "code_postal": "59220",
+  "prix": 250700,
+  "surface_m2": 770.0,
+  "terrain_m2": 748.0,
+  "pieces": 8,
+  "commune": "Hérin",
+  "code_postal": "59195",
   "departement": "59",
   "region": "Hauts-de-France",
   "agence": "Pierre Notarianni Immobilier",
   "agence_url": "https://notarianni-immobilier.fr",
   "photo": "https://img.netty.immo/productw/notarianni2/2/VM3107/maison-3-pieces-haspres-59198-1785478544-VM3107_1_original.jpg",
-  "texte": " Maisons en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 75 000 € Exclusivité Maison idéal primo ou investisseurs 3 pièces 60 m² La Sentinelle 59174 Dans un secteur calme de La Sentinelle et proche des axes autoroutiers, nous vous proposons une maison de ville en retrait de rue offrant une grande pièce de vie, un bureau, des wc, une salle de bains puis à l'étage vous trouverez un palier et une chambre. Face à la maison, il y a garage avec un jardin non attenant. Quelques travaux de confort seront à prévoir. Une opportunité sur le secteur en Exclusivité ! 69 900 € Maison mitoyenne à rénover 3 pièces 104 m² Haspres 59198 🏡 Maison 2 chambres avec cour, cave et grenier – 104 m² – Haspres Vous recherchez un bien à rénover avec de beaux volumes ? Découvrez cette maison mitoyenne de 104 m² habitables, située sur la commune d'Haspres, idéale pour un premier achat ou un investissement locatif. Au rez-de-chaussée : Une entrée desservant un salon de 18 m² ;Une cuisine de 21,4 m², offrant un bel espace à aménager selon vos envies ;Une salle de bains ;Un WC indépendant. À l'étage : Un vaste palier de 13,8 m², pouvant accueillir un espace bureau ou de rangement ;Deux grandes chambres de 21 m² et 17,7 m². La maison dispose également d'une cave, idéale pour le stockage offrant un espace de rangement supplémentaire ou un potentiel d'aménagement selon votre projet. À l'extérieur, vous profiterez d'une cour, parfaite pour aménager un espace détente. Un géomètre est récemment intervenu afin de redéfinir les limites de la propriété, permettant ainsi d’agrandir la surface de la cour avec le nouveau découpage cadastral réalisé Les atouts : ✅ 104 m² habitables ✅ Deux grandes chambres ✅ Cave et grenier ✅ Cour extérieure ✅ Potentiel de rénovation ✅ Idéal premier achat ou investissement Informations complémentaires : Menuiseries en double et simple vitrage bois ;Maison entièrement à rénover, laissant libre cours à vos envies pour créer un intérieur à votre image. 📞 Pour plus d'informations ou pour organiser une visite, contactez Léa Notarianni dès maintenant ! 📍 Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : www. georisques. gouv. fr. 229 900 € Exclusivité PAVILLON INDIVIDUEL PLAIN PIED 3 CHAMBRES 4 pièces 98 m² Hornaing 59171 Maison individuelle plain-pied 98 m² – Hornaing À vendre à Hornaing, jolie maison individ",
-  "lat": 50.330176,
-  "lon": 3.392754,
-  "altitude": 38.0,
-  "densite_hab_km2": 1795.9,
+  "texte": " Maisons en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 250 700 € Maison individuelle à vendre, 8 pièces - Hérin 59195 8 pièces 150 m² Hérin 59195 Maison individuelle 150 m² – 6 chambres – Terrain de 748 m² – Fort potentiel de rénovation250 700 € À découvrir, cette maison individuelle de 150 m² habitables, implantée sur un terrain de 748 m², offre un beau potentiel pour un projet familial ou une rénovation selon vos envies. Construite en 1979, elle propose de beaux volumes et une configuration familiale avec 6 chambres, un séjour de 29 m², une salle de bains et un WC indépendant. La maison bénéficie également d’un balcon d’environ 10 m², d’une terrasse et d’un jardin, ainsi que de nombreuses possibilités de stationnement avec 2 places intérieures et 4 places extérieures. Un beau potentiel de rénovation. La maison est classée G au DPE et nécessite des travaux de rénovation. Ce classement peut toutefois permettre, sous conditions, de bénéficier d’aides à la rénovation énergétique potentiellement importantes, offrant ainsi une belle opportunité d’améliorer le confort et la performance du logement tout en le valorisant. Les atouts du bien: -150 m² habitables -6 chambres -Séjour de 29 m² -Terrain de 748 m² -Jardin -Terrasse/Balcon d’environ 10 m² -2 stationnements intérieurs -4 stationnements extérieurs -Chauffe-eau électrique -Tout-à-l’égout -Construction de 1979 -Maison individuelle -Beau potentiel de rénovation et de valorisation Une propriété qui s’adresse aussi bien à une famille à la recherche de beaux volumes qu’à un acquéreur souhaitant créer un intérieur à son image et révéler tout le potentiel de cette maison. Prix de vente : 250 700 € *Les aides à la rénovation sont soumises à conditions et devront faire l’objet d’une étude personnalisée. Nous contacter Exclusivité Maison de ville 3 chambres 96m² 4 pièces 96 m² La Sentinelle 59174 Charmante Maison secteur le vignobleDécouvrez cette ravissante maison mitoyenne 2 côtés, baignée de lumière et d'histoire, construite en 1930. Avec ses 96 m² de surface habitable répartis sur 2 niveaux, cette demeure allie charme d'antan et confort moderne. Imaginez-vous dans le spacieux séjour de 39 m², parfait pour des soirées conviviales ou des moments de détente autour du poêle à pellets. La cuisine américaine aménagée et équipée, ouverte sur la vie quotidienne, est un véritable atout pour les amateurs de ",
+  "lat": 50.362078,
+  "lon": 3.44533,
+  "altitude": 45.0,
+  "densite_hab_km2": 932.2,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 102.9,
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 100.3,
    "nucleaire_nom": "Chooz"
   },
   "photos": [
-   "https://img.netty.immo/productw/notarianni2/2/VM2912/maison-mitoyenne-1-cote-3-pieces-la-sentinelle-59174-1766484736-VM2912_5_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3161/maison-individuelle-8-pieces-herin-59195-1787390521-VM3161_15_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/cuisine/11tij0jtg6do@5180x3457.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3241/maison-mitoyenne-2-cotes-4-pieces-la-sentinelle-59174-1787389807-VM3241_7_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM3195/maison-mitoyenne-1-cote-5-pieces-denain-59220-1787175432-VM3195_1_original.jpg",
+   "https://img.netty.immo/productw/notarianni2/2/VM2912/maison-mitoyenne-1-cote-3-pieces-la-sentinelle-59174-1766484736-VM2912_5_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3107/maison-3-pieces-haspres-59198-1785478544-VM3107_1_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3166/maison-individuelle-4-pieces-hornaing-59171-1786470922-VM3166_8_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3217/maison-maison-de-campagne-6-pieces-bousies-59222-1786111868-VM3217_4_original.jpg",
@@ -158685,13 +159010,10 @@
    "https://img.netty.immo/productw/notarianni2/2/VM3057/maison-individuelle-5-pieces-forest-en-cambresis-59222-1783338924-VM3057_2_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3126/maison-plain-pied-5-pieces-herin-59195-1779381396-VM3126_14_original.jpg",
    "https://img.netty.immo/productw/notarianni2/2/VM3158/maison-individuelle-5-pieces-saint-waast-59570-1781040293-VM3158_16_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM3178/maison-mitoyenne-2-cotes-3-pieces-denain-59220-1787175192-VM3178_30_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM3138/maison-ancienne-8-pieces-denain-59220-1780045484-VM3138_2_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM3087/maison-individuelle-5-pieces-vervins-02140-1776888787-VM3087_15_original.jpg",
-   "https://img.netty.immo/productw/notarianni2/2/VM3172/maison-mitoyenne-1-cote-3-pieces-bruay-sur-l-escaut-59860-1781860038-VM3172_4_original.jpg"
+   "https://img.netty.immo/productw/notarianni2/2/VM3178/maison-mitoyenne-2-cotes-3-pieces-denain-59220-1787175192-VM3178_30_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158717,10 +159039,20 @@
   "texte": " Maisons de campagne en vente Accueil Acheter Louer Nos bien à louer Mettre en location Demander un devis Gestion locative Vendre Contact Nos conseillers Liens utiles Liens utiles Blog Mes favoris Espace propriétaire Estimation Estimation Être rappelé Estimation Accueil Acheter Nos bien à louer Louer Demander un devis Mettre en location Gestion locative Vendre Nos conseillers Contact Liens utiles Blog Liens utiles Estimation Être rappelé Maisons de campagne en vente Découvrez toutes nos offres immobilières Ouvrir la recherche Vente Type d'offre Maison de campagne Type de bien Empty Localisation Budget max (€) Surface min (m²) Rechercher Galerie Type d'affichage Pertinence Trier par Créer une alerte 271 300 € VÉRITABLE COUP DE CŒUR À BOUSIES – MAGNIFIQUE MAISON FAMILIALE DE 145 M² 6 pièces 145 m² Bousies 59222 EN EXCLUSIVITÉ ! VÉRITABLE COUP DE CŒUR À BOUSIES – MAGNIFIQUE MAISON FAMILIALE DE 145 M² Située dans un environnement calme et agréable sur la commune de Bousies cette superbe maison de 145 m² est idéale pour accueillir une famille à la recherche d’espace, de confort et de tranquillité. Dès l’entrée, vous serez séduits par sa belle pièce de vie lumineuse de 50 m², ouverte sur une cuisine meublée et équipée. Cet espace convivial, véritable cœur de la maison, offre un accès direct à la terrasse et au jardin, parfaits pour partager de beaux moments en famille. Le rez-de-chaussée dispose également d’une suite parentale de 25 m², offrant confort et intimité. À l’étage, l’espace nuit comprend quatre chambres, une salle d’eau et un WC indépendant : chacun pourra ainsi profiter de son propre espace. La maison bénéficie d’un chauffage économique par chaudière à granulés. A l'extérieur , vous profiterez d'un jardin d'environ 800 m2 entièrement clôturé accompagné d'un garage, un local technique et d'une remise. Vous n’avez plus qu’à poser vos meubles et profiter immédiatement de votre nouveau chez-vous ! Une maison chaleureuse, fonctionnelle et pensée pour la vie de famille, où il fait bon vivre au quotidien. Un véritable coup de cœur, à découvrir sans tarder ! Pour plus de renseignements, contactez votre conseillère Mme MARLOT Julie au 06. 44. 05. 58. 32 . 175 000 € A saisir Fermette 2 chambres et grange 5 pièces 130 m² Preux-au-Bois 59288 Maison de campagne chaleureuse et spacieuse - 2 chambres de plain pied - Grange - Grenier aménageable. Imaginez-vous dans cette charmante maison de campagne, où le charme rustique rencontre un grand potentiel à exploiter. Avec une surface habitable de 130 m², cette propriété offre un espace de vie généreux et accueillant. La maison, de semi plain-pied, se compose de 5 pièces, dont une cuisine aménagée et indépendante ouverte sur une salle à manger de plus de ....... m2 , un salon avec cheminée ouverte, 2 chambres confortables, une salle de bains et un WC séparé. La maison dispose également d'une cave et d'un grenier aménageable, offrant la possibilité de créer des pièces supplémentaires à l'étage. Une grange est at",
   "lat": 50.330176,
   "lon": 3.392754,
-  "altitude": 38.0,
+  "altitude": 37.0,
   "densite_hab_km2": 1795.9,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 102.9,
    "nucleaire_nom": "Chooz"
   },
@@ -158731,7 +159063,7 @@
    "https://img.netty.immo/productw/notarianni2/2/VM3005/maison-maison-de-campagne-5-pieces-preux-au-bois-59288-1770908798-VM3005_9_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158766,7 +159098,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4601-4700/4654/15769-2-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158809,7 +159141,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4601-4700/4683/15790-15-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158850,7 +159182,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4601-4700/4675/15787-13-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158884,7 +159216,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4501-4600/4572/15680-1-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158923,7 +159255,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4401-4500/4460/15557-11-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158959,7 +159291,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4601-4700/4655/15770-3-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -158993,7 +159325,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/4601-4700/4676/15788-1-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159016,7 +159348,7 @@
   "agence": "Pierrimmo Ascq",
   "agence_url": "https://pierrimmo.com",
   "photo": "https://www.pierrimmo.com/media/immobilier_bien/2801-2900/2868/13871-1-g-bien.jpg",
-  "texte": " Vente Maison à Ronchin LILLE ET ENVIRONS - RONC-499k-13871 Agence Immobilière Gruson Alerte email Vente Location Nouveautés et exclusivités Demande d'estimation Nos agences Villeneuve d'Ascq Nos villes Anstaing Baisieux Bondues Bourghelles Bouvines Camphin-en-Pévèle Chéreng Croix Cysoing Forest sur Marque Fretin Gruson Hellemmes Hem Lannoy Lesquin Lezennes Louvil Mouvaux Nomain Sailly-lez-Lannoy Sainghin-en-Mélantois Templeuve Toufflers Tourcoing Tressin Villeneuve d'Ascq Wannehain Wasquehal Willems Contact Accueil &gt; Vente &gt; TB PRESTATIONS RONCHIN RETOUR A LA RECHERCHE TB PRESTATIONS RONCHIN Ronchin &lt; Bien précédent Bien suivant &gt; Ref : RONC-499k-13871 8 photos Maison individuelle de 130 m² située dans un environnement résidentiel calme et recherché, en fond d’allée, offrant un cadre de vie privilégié alliant confort, luminosité et prestations de qualité. Parfaitement entretenue, cette maison séduira les familles en quête d’un bien fonctionnel, chaleureux et économe en énergie. Dès l’entrée, vous découvrirez une vaste pièce de vie d’environ 70 m² baignée de lumière, composée d’un salon avec poêle à bois, d’un espace séjour convivial, d’une véranda ouverte sur le jardin ainsi que d’une cuisine indépendante haut de gamme, entièrement aménagée et équipée. Les volumes généreux et l’agencement harmonieux créent une atmosphère idéale pour la vie de famille comme pour recevoir. L’étage accueille trois belles chambres avec rangements intégrés, placards et dressing, ainsi qu’une salle de bains élégante réalisée avec des matériaux de qualité. Les combles aménagés offrent une quatrième chambre mansardée pouvant parfaitement convenir à une chambre d’amis, un espace bureau ou une chambre d’adolescent. La maison dispose également de prestations recherchées : chauffage au gaz, cumulus thermodynamique, panneaux solaires, climatisation réversible, garage fermé et deux places de stationnement privatives. À l’extérieur, vous profiterez d’un agréable jardin exposé plein Sud, sans vis-à-vis. En excellent état général, le bien bénéficie d’un DPE classé C, garantissant confort de vie et maîtrise des consommations énergétiques. Un bien rare sur le secteur, réunissant calme, qualité de construction et équipements modernes. Pour plus d’informations ou organiser une visite : Sébastien VERQUERRE 06 63 29 76 25 seb@pierrimmo.com RSAC : 2023AC00403 – SIRET : 98214025300013 &nbsp; Informations sur les risques disponibles sur le site Géorisques. Honoraires à la charge du vendeur. DPE : C 499 000 € honoraires charge vendeur SARL Pierrimmo - SIREN : 439851015 Les informations sur les risques auxquels ce bien est expose sont disponibles Sur le site georisques http://www.georisques.gouv.fr/ 499 000 € Modifier la recherche Partager par Email Ajouter à la selection Publier sur Facebook Imprimer la fiche du bien Contacter l'agence par Email Retour à la liste de résultats DIAGNOSTICS ÉNERGÉTIQUE 170 Voir les biens du secteur Bien ajouté avec succès à votre sélection Contin",
+  "texte": " Vente Maison à Ronchin LILLE ET ENVIRONS - RONC-499k-13871 Agence Immobilière Gruson Alerte email Vente Location Nouveautés et exclusivités Demande d'estimation Nos agences Villeneuve d'Ascq Nos villes Anstaing Baisieux Bondues Bourghelles Bouvines Camphin-en-Pévèle Chéreng Croix Cysoing Forest sur Marque Fretin Gruson Hellemmes Hem Lannoy Lesquin Lezennes Louvil Mouvaux Nomain Sailly-lez-Lannoy Sainghin-en-Mélantois Templeuve Toufflers Tourcoing Tressin Villeneuve d'Ascq Wannehain Wasquehal Willems Contact Accueil &gt; Vente &gt; TB PRESTATIONS RONCHIN RETOUR A LA RECHERCHE TB PRESTATIONS RONCHIN Ronchin Bien suivant &gt; Ref : RONC-499k-13871 8 photos Maison individuelle de 130 m² située dans un environnement résidentiel calme et recherché, en fond d’allée, offrant un cadre de vie privilégié alliant confort, luminosité et prestations de qualité. Parfaitement entretenue, cette maison séduira les familles en quête d’un bien fonctionnel, chaleureux et économe en énergie. Dès l’entrée, vous découvrirez une vaste pièce de vie d’environ 70 m² baignée de lumière, composée d’un salon avec poêle à bois, d’un espace séjour convivial, d’une véranda ouverte sur le jardin ainsi que d’une cuisine indépendante haut de gamme, entièrement aménagée et équipée. Les volumes généreux et l’agencement harmonieux créent une atmosphère idéale pour la vie de famille comme pour recevoir. L’étage accueille trois belles chambres avec rangements intégrés, placards et dressing, ainsi qu’une salle de bains élégante réalisée avec des matériaux de qualité. Les combles aménagés offrent une quatrième chambre mansardée pouvant parfaitement convenir à une chambre d’amis, un espace bureau ou une chambre d’adolescent. La maison dispose également de prestations recherchées : chauffage au gaz, cumulus thermodynamique, panneaux solaires, climatisation réversible, garage fermé et deux places de stationnement privatives. À l’extérieur, vous profiterez d’un agréable jardin exposé plein Sud, sans vis-à-vis. En excellent état général, le bien bénéficie d’un DPE classé C, garantissant confort de vie et maîtrise des consommations énergétiques. Un bien rare sur le secteur, réunissant calme, qualité de construction et équipements modernes. Pour plus d’informations ou organiser une visite : Sébastien VERQUERRE 06 63 29 76 25 seb@pierrimmo.com RSAC : 2023AC00403 – SIRET : 98214025300013 &nbsp; Informations sur les risques disponibles sur le site Géorisques. Honoraires à la charge du vendeur. DPE : C 499 000 € honoraires charge vendeur SARL Pierrimmo - SIREN : 439851015 Les informations sur les risques auxquels ce bien est expose sont disponibles Sur le site georisques http://www.georisques.gouv.fr/ 499 000 € Modifier la recherche Partager par Email Ajouter à la selection Publier sur Facebook Imprimer la fiche du bien Contacter l'agence par Email Retour à la liste de résultats DIAGNOSTICS ÉNERGÉTIQUE 170 Voir les biens du secteur Bien ajouté avec succès à votre sélection Continuer vers votre sélec",
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -159034,7 +159366,7 @@
    "https://www.pierrimmo.com/media/immobilier_bien/2801-2900/2868/13871-13-g-bien.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159791,7 +160123,7 @@
    "https://img.netty.immo/productcw/company51822zzx/2/VF037/fonds-de-commerce-restaurant-bar-le-touquet-paris-plage-62520-1742480744-VF037_1_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159821,6 +160153,16 @@
   "densite_hab_km2": 6856.2,
   "dpe": "D",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 77.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -159844,7 +160186,7 @@
    "https://img.netty.immo/productcw/company51822zzx/2/VA1977/appartement-2-pieces-lille-59000-1750761203-VA1977_3_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159881,7 +160223,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/hall_d_entree/6e12fsq3oru0@5180x2339.jpeg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159911,6 +160253,16 @@
   "densite_hab_km2": 6856.2,
   "dpe": "F",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 77.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -159924,7 +160276,7 @@
    "https://img.netty.immo/company51822zzx/assets/nego/001@1440x1920.jpg?cache=1732705914"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -159975,7 +160327,7 @@
    "https://img.netty.immo/company51822zzx/assets/nego/001@1440x1920.jpg?cache=1732705914"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -160005,6 +160357,16 @@
   "densite_hab_km2": 6856.2,
   "dpe": "E",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 77.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -160016,7 +160378,7 @@
    "https://img.netty.immo/productcw/company51822zzx/2/VA2011/appartement-t2-2-pieces-lille-59000-1768492277-VA2011_4_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -160098,6 +160460,16 @@
   "densite_hab_km2": 6856.2,
   "dpe": "E",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 77.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -160121,7 +160493,7 @@
    "https://img.netty.immo/productcw/company51822zzx/2/VA2014/appartement-3-pieces-lille-59800-1759309844-VA2014_2_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -160151,6 +160523,16 @@
   "densite_hab_km2": 6856.2,
   "dpe": "E",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 77.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -160162,7 +160544,7 @@
    "https://img.netty.immo/company51822zzx/assets/nego/001@1440x1920.jpg?cache=1732705914"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -168639,6 +169021,16 @@
   "densite_hab_km2": 6528.9,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 79.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -168652,8 +169044,8 @@
    "https://stchristophe.staticlbi.com/980xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_fa7d68148412b658515d6ae4187f4f86.jpg",
    "https://stchristophe.staticlbi.com/980xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_217a4bcc47bda34c50116b056aa6a3e0.jpg",
    "https://stchristophe.staticlbi.com/980xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_27ddb6061e0484f9ab57f3eee21e89d8.jpg",
+   "https://stchristophe.staticlbi.com/800xauto/images/biens/1/275ab9cdb9f0607a21db628456f91f37/photo_003efc352749ce23f782bdea003badcd.jpg",
    "https://stchristophe.staticlbi.com/800xauto/images/biens/1/9f75c7f84010c5ae186235924dd597a4/photo_25fca9cb7fb1bfd72d4464d5676dd396.jpg",
-   "https://stchristophe.staticlbi.com/800xauto/images/biens/1/8d70577e5dc74e430b4001af172f81a4/photo_90e80a589abfab7ef815978bb2dc4dfb.jpg",
    "https://stchristophe.staticlbi.com/580xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_3740f336e5ca57c32793b35caf498c80.jpg",
    "https://stchristophe.staticlbi.com/580xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_fa7d68148412b658515d6ae4187f4f86.jpg",
    "https://stchristophe.staticlbi.com/580xauto/images/biens/1/ef86ff53500eb83a4efdfbe8ebedcd68/photo_217a4bcc47bda34c50116b056aa6a3e0.jpg",
@@ -168662,7 +169054,7 @@
    "https://www.saint-christophe-immobilier.com/vente/59-nord/1-tourcoing/20-autre/1460-a-vendre-tourcoing-hangar-160-m-viabilise-toiture-neuve-acces-camion-149-000-fai/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -168737,7 +169129,7 @@
   ],
   "vue_le": "2026-08-17",
   "revue_le": "2026-08-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -168766,6 +169158,16 @@
   "densite_hab_km2": 6528.9,
   "dpe": "C",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 79.2,
    "nucleaire_nom": "Gravelines"
   },
@@ -168812,7 +169214,7 @@
    "https://www.saint-christophe-immobilier.com/vente/59-nord/1-tourcoing/1-maison/t5/1463-urgent-a-vendre-maison-tourcoing-110-m-cour-10-m-4-chambres-a-raffraichir/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169731,7 +170133,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169774,7 +170176,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169817,7 +170219,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169859,7 +170261,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169904,7 +170306,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169940,7 +170342,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -169981,7 +170383,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -170022,7 +170424,7 @@
    "https://sgl-immo.com/app/themes/SGL-immo/img/tiktok.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -176779,7 +177181,7 @@
   "type_bien": "maison",
   "prix": 228000,
   "surface_m2": 86.0,
-  "terrain_m2": 200.0,
+  "terrain_m2": 285.0,
   "pieces": 5,
   "commune": null,
   "code_postal": null,
@@ -176788,7 +177190,7 @@
   "agence": "Vacherand Immobilier - Vauban / Nationale",
   "agence_url": "https://vacherand.fr",
   "photo": "https://www.vacherand.fr/immobilier/vente-maison-faches-thumesnil/img/biens/2122/1786368898_VM7085_10_original_compressed.webp",
-  "texte": " Vente MAISON DE LOTISSEMENT - Annonce immobilière VM7085-VACHERAND Nos services Transaction d'exception Immobilier d'entreprise Investissement immobilier Maîtrise d'oeuvre Prix immobilier Nord et Hauts-de-France À propos Nous rejoindre Nos cabinets L'actualité Mon compte Gestion locative Syndic de copropriété Estimation Louer/acheter Accueil Louer / acheter MAISON DE LOTISSEMENT vente - Maison - Faches Thumesnil MAISON DE LOTISSEMENT Réf : VM7085-VACHERAND 228 000 € HAI 1 2 3 4 5 6 7 8 9 10 11 Maison 86 m² Terrain de 200 m² 5 pieces 4 chambres 1 salle de bain Conditions financières Diagnostics énergétiques Prix net vendeur : 215 000 € Honoraires TTC à la charge de l'acquéreur: 6.05% soit 13 000 € Date de réalisation DPE : 20/07/2026 Consommation énergétique : 238 kWh / m² / an A B C D E F G d'informations Émission de Co2 : 9 kg Co2 / m² / an A B C D E F G d'informations + − Leaflet | © OpenStreetMap Nadège DUPREZ&nbsp; nadege@vacherand.fr 06 27 57 32 55 Contactez-nous Programmez une visite Ce bien vous intéresse ? Contactez-nous Programmez une visite Ce bien vous intéresse ? Contactez-nous Nom* Prénom* Téléphone* Email* Objet* Message* Bonjour, Je souhaiterais plus d'informations sur le bien VM7085-VACHERAND. Merci. J'accepte que mes données personnelles saisies dans ce formulaire soient utilisées par VACHERAND IMMOBILIER pour traiter ma demande. Ne pas cocher (anti-spam) *Tous les champs sont obligatoires Conformément à la législation en vigueur, remplir ce formulaire entraîne le traitement de vos données personnelles par VACHERAND IMMOBILIER, fondé sur votre consentement, uniquement afin de vous contacter. Pour l’exercice de vos droits, la durée de conservation et tout autre renseignement, retrouvez toutes les informations ici . Envoyer Merci, votre demande a bien été envoyée et sera traitée dans les plus brefs délais. Plus de biens similaires : Suivez-nous sur @vacherandimmobilier Gestion locative Syndic de copropriété Estimation Louer/acheter Transaction d'exception Immobilier d'entreprise Investissement immobilier Maîtrise d'oeuvre Prix immobilier Nord et Hauts-de-France À propos Nous rejoindre Nos cabinets L'actualité Nos villes Tarifs Politique de confidentialité Mentions légales Gestion des cookies Vacherand Immobilier est membre des associations Nash And Young Ce site utilise des cookies pour partager des données d'analyse, de publicité, de l'utilisateur et de personnalisation de la publicité avec Google ; et pour suivre les statistiques et mesure d'audience. Je refuse tout Je personnalise J'accepte tout Stockage d'analyse i Autoriser Google Analytics à mesurer comment j'utilise le site pour améliorer les fonctionnalités et le service. Stockage de publicité i Autoriser Google à sauvegarder des informations publicitaires sur mon appareil pour une meilleure pertinence des publicités. Données utilisateur de publicité d'analyse i Partager mes données d'activité avec Google pour des publicités ciblées. Personnalisation des publicités i Perso",
+  "texte": " Vente MAISON DE LOTISSEMENT - Annonce immobilière VM7085-VACHERAND Nos services Transaction d'exception Immobilier d'entreprise Investissement immobilier Maîtrise d'oeuvre Prix immobilier Nord et Hauts-de-France À propos Nous rejoindre Nos cabinets L'actualité Mon compte Gestion locative Syndic de copropriété Estimation Louer/acheter Accueil Louer / acheter MAISON DE LOTISSEMENT vente - Maison - Faches Thumesnil MAISON DE LOTISSEMENT Réf : VM7085-VACHERAND 228 000 € HAI 1 2 3 4 5 6 7 8 9 10 11 Maison 86 m² Terrain de 285 m² 5 pieces 4 chambres 1 salle de bain FACHES THUMESNIL BELLE MAISON DE LOTISSEMENT A RAFRAICHIR COMPRENANT UNE BELLE PIECE DE VIE LUMINEUSE CUISINE/VERANDA AMENAGEE DONNANT SUR UN BEAU JARDIN EXPOSE SUD OUEST SALLE DE BAINS EN RDC 4 CHAMBRES SUR LE MEME PALIER CAVE Conditions financières Diagnostics énergétiques Prix net vendeur : 215 000 € Honoraires TTC à la charge de l'acquéreur: 6.05% soit 13 000 € Date de réalisation DPE : 20/07/2026 Consommation énergétique : 238 kWh / m² / an A B C D E F G d'informations Émission de Co2 : 9 kg Co2 / m² / an A B C D E F G d'informations + − Leaflet | © OpenStreetMap Nadège DUPREZ&nbsp; nadege@vacherand.fr 06 27 57 32 55 Contactez-nous Programmez une visite Ce bien vous intéresse ? Contactez-nous Programmez une visite Ce bien vous intéresse ? Contactez-nous Nom* Prénom* Téléphone* Email* Objet* Message* Bonjour, Je souhaiterais plus d'informations sur le bien VM7085-VACHERAND. Merci. J'accepte que mes données personnelles saisies dans ce formulaire soient utilisées par VACHERAND IMMOBILIER pour traiter ma demande. Ne pas cocher (anti-spam) *Tous les champs sont obligatoires Conformément à la législation en vigueur, remplir ce formulaire entraîne le traitement de vos données personnelles par VACHERAND IMMOBILIER, fondé sur votre consentement, uniquement afin de vous contacter. Pour l’exercice de vos droits, la durée de conservation et tout autre renseignement, retrouvez toutes les informations ici . Envoyer Merci, votre demande a bien été envoyée et sera traitée dans les plus brefs délais. Plus de biens similaires : Suivez-nous sur @vacherandimmobilier Gestion locative Syndic de copropriété Estimation Louer/acheter Transaction d'exception Immobilier d'entreprise Investissement immobilier Maîtrise d'oeuvre Prix immobilier Nord et Hauts-de-France À propos Nous rejoindre Nos cabinets L'actualité Nos villes Tarifs Politique de confidentialité Mentions légales Gestion des cookies Vacherand Immobilier est membre des associations Nash And Young Ce site utilise des cookies pour partager des données d'analyse, de publicité, de l'utilisateur et de personnalisation de la publicité avec Google ; et pour suivre les statistiques et mesure d'audience. Je refuse tout Je personnalise J'accepte tout Stockage d'analyse i Autoriser Google Analytics à mesurer comment j'utilise le site pour améliorer les fonctionnalités et le service. Stockage de publicité i Autoriser Google à sauvegarder des informations public",
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -176837,7 +177239,7 @@
    "https://tile.openstreetmap.org/13/4167/2758.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -176897,7 +177299,7 @@
    "https://tile.openstreetmap.org/13/4168/2756.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -176960,7 +177362,7 @@
    "https://tile.openstreetmap.org/13/4152/2741.png"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178596,7 +178998,7 @@
    "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178671,7 +179073,7 @@
    "https://villerssaintpaulimmo.fr/vente/36-verneuil-en-halatte/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178734,7 +179136,7 @@
    "https://villerssaintpaulimmo.fr/vente/12-creil/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178797,7 +179199,74 @@
    "https://villerssaintpaulimmo.fr/vente/32-la-neuville-en-hez/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "villers-st-paul-immobilier-ba78f4dbed0a",
+  "source": "villers-st-paul-immobilier",
+  "url": "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/41-maison-type-3-vendu-loue",
+  "titre": "MAISON TYPE 3 VENDU LOUE",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 115000,
+  "surface_m2": 63.0,
+  "terrain_m2": null,
+  "pieces": 3,
+  "commune": "Villers-Saint-Paul",
+  "code_postal": "60870",
+  "departement": "60",
+  "region": "Hauts-de-France",
+  "agence": "Villers St Paul Immobilier",
+  "agence_url": "https://villerssaintpaulimmo.fr",
+  "photo": "https://villerssaintpaulimmobilier.staticlbi.com/1200xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_c34671fbbc3485ff4a931a00ceb32462.jpg",
+  "texte": " MAISON TYPE 3 VENDU LOUE | Villers Saint Paul Immobilier 0 Menu Accueil Ventes Retour Immobilier classique Immobilier professionnel locations Alerte e-mail Contact Accueil Vente Villers st paul Maison GESTION SITE VILLERS SAINT PAUL IMMOBILIER Agence Appeler l'agence Contacter l'agence Contacter l'agence Nom et prénom * Téléphone E-mail * Message * J'ai pris connaissance de la Politique de confidentialité et des informations relatives au traitement de mes données personnelles * J'accepte d'être contacté(e) par téléphone par l'Agence / le Réseau. Ce consentement est libre et peut être retiré à tout moment. * Champs obligatoires Envoyer Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par La Boite Immo agissant comme Sous-traitant du traitement pour la gestion de la clientèle/prospects de l'Agence / du Réseau qui reste Responsable du Traitement de vos Données personnelles. La base légale du traitement repose sur l'intérêt légitime de l'Agence / du Réseau. Elles sont conservées jusqu'à demande de suppression et sont destinées à l'Agence / au Réseau. Conformément à la loi « informatique et libertés », vous disposez des droits d’accès, de rectification, d’effacement, d’opposition, de limitation et de portabilité de vos données. Vous pouvez retirer votre consentement à tout moment en contactant directement l’Agence / Le Réseau. Consultez le site https://cnil.fr/fr pour plus d’informations sur vos droits. Si vous estimez, après avoir contacté l'Agence / le Réseau, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL. Nous vous informons de l’existence de la liste d'opposition au démarchage téléphonique « Bloctel », sur laquelle vous pouvez vous inscrire ici : https://www.bloctel.gouv.fr . Dans le cadre de la protection des Données personnelles, nous vous invitons à ne pas inscrire de Données sensibles dans le champ de saisie libre. Ce site est protégé par reCAPTCHA, les Politiques de Confidentialité et es Conditions d'utilisation de Google s'appliquent. Retour aux résultats Télécharger la fiche Partager ce bien Afficher toutes les photos 1 / 7 --> Maison 3 pièce(s) 2 chambre(s) 60 m² Villers-Saint-Paul (60870) 115 000 € Référence 4331 A propos de ce bien VILLERS ST PAUL .EXCLUSIVITE SPECIAL INVESTISSEUR!!! Charmante maison de ville de 60m2, rénovée offrant: Hall d'entrée avec placards, séjour, cuisine équipée et aménagée salle d'eau avec wc. A l 'étage 2 chambres. petite courette fermée.chauffage électrique dpe D. REF 4331 (VENDU LOUE: 750€/mois.) PRIX: 115 000€ fai. BELLE OPPORTUNITE! honoraires inclus charge vendeur. Caractéristiques de ce bien Surface 60 m² carrez 55 m² 2 chambre(s) 1 salle(s) d'eau construit en 1945 cuisine séparée (équipée) Chauffage individuel : convecteur (electrique) 1 côté(s) mitoyen(s) 1 niveau(x) Diagnostics énergétiques Montant estimé des dépenses annuelles d'énergie de ce logement pour un usage standard est compris entr",
+  "lat": 49.288257,
+  "lon": 2.491239,
+  "altitude": 36.0,
+  "densite_hab_km2": 1307.1,
+  "dpe": null,
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 114.1,
+   "nucleaire_nom": "Nogent-sur-Seine"
+  },
+  "photos": [
+   "https://villerssaintpaulimmobilier.staticlbi.com/1200xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_c34671fbbc3485ff4a931a00ceb32462.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_c34671fbbc3485ff4a931a00ceb32462.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_928ad9724fad6ead214db92861479637.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_bfd5bf96af8f9d8575bbe1c55597f4f4.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_48db752d5fe7dc66636d2927241e6d91.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_feb8ae47a6f64989880c6ff1970978df.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_55be08134b627a2799bba59a608889f8.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1600xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_7c0e5704ab0358c486e84e4b85abde37.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1200xauto/images/biens/1/55743cc0393b1cb4b8b37d09ae48d097/photo_6d1368a9130e8a676f7c4294b50dd891.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/1200xauto/images/biens/1/c6bff625bdb0393992c9d4db0c6bbe45/photo_36eb2203d73f0c73bedc0d927eb04991.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/768xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_c34671fbbc3485ff4a931a00ceb32462.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_c34671fbbc3485ff4a931a00ceb32462.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_928ad9724fad6ead214db92861479637.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_bfd5bf96af8f9d8575bbe1c55597f4f4.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_48db752d5fe7dc66636d2927241e6d91.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_feb8ae47a6f64989880c6ff1970978df.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_55be08134b627a2799bba59a608889f8.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/160xauto/images/biens/1/e0ec453e28e061cc58ac43f91dc2f3f0/photo_7c0e5704ab0358c486e84e4b85abde37.jpg",
+   "https://villerssaintpaulimmobilier.staticlbi.com/original/images/default-mandataire.png",
+   "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/1.jpg",
+   "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/2.jpg"
+  ],
+  "vue_le": "2026-08-23",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178862,7 +179331,7 @@
    "https://villerssaintpaulimmo.fr/vente/26-cambronne-les-clermont/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178929,7 +179398,7 @@
    "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -178994,7 +179463,7 @@
    "https://villerssaintpaulimmo.fr/vente/38-rantigny/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-08-20",
+  "revue_le": "2026-08-23",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
