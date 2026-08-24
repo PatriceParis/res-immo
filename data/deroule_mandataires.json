@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 15.8,
+  "seconde": 28.2,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 15.8,
+  "seconde": 28.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,255 +21,215 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 15.8,
+  "seconde": 28.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.4,
+  "seconde": 29.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.8,
+  "seconde": 29.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.8,
+  "seconde": 29.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.0,
+  "seconde": 29.9,
   "reseau": "capifrance",
-  "connues": 3222
+  "connues": 3235
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.0,
+  "seconde": 29.9,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.1,
+  "seconde": 30.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.6,
+  "seconde": 45.4,
   "reseau": "iad",
   "n": 91890,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.4,
+  "seconde": 47.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.6,
+  "seconde": 47.5,
   "reseau": "iad",
-  "connues": 3222
+  "connues": 3235
  },
  {
   "etape": "departement",
-  "seconde": 226.1,
+  "seconde": 238.4,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 14,
+  "tronquee": true,
+  "etats": {
+   "garde": 14,
+   "vendu": 9,
+   "ecarte": 27,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 26,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 100 m² à Boussy-Saint-Antoine (91800)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 468.7,
+  "reseau": "iad",
+  "departement": "27",
   "visitees": 50,
   "gardes": 23,
   "tronquee": true,
   "etats": {
    "garde": 23,
-   "vendu": 18,
-   "ecarte": 9,
+   "vendu": 17,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 2,
-   "hors_perimetre": 6
+   "location": 5,
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)"
+   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "prix_trop_haut": "Domaine 12 pièces de 342 m² à La Haye-du-Theil (27370)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 409.3,
+  "seconde": 632.4,
   "reseau": "iad",
-  "departement": "14",
-  "visitees": 50,
+  "departement": "28",
+  "visitees": 32,
   "gardes": 18,
   "tronquee": true,
   "etats": {
    "garde": 18,
-   "vendu": 14,
-   "ecarte": 18,
+   "vendu": 7,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 15,
-   "prix_trop_haut": 3
+   "location": 3,
+   "hors_perimetre": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 186 m² à Cernay-la-Ville (78720)",
-   "prix_trop_haut": "Demeure 10 pièces de 350 m² à Honfleur (14600)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 604.2,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 22,
-  "tronquee": true,
-  "etats": {
-   "garde": 22,
-   "vendu": 16,
-   "ecarte": 12,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 12
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 8 pièces de 165 m² à La Celle-Saint-Cloud (78170)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 624.3,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 6,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 1,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 3,
-   "location": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
-   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.3,
+  "seconde": 632.5,
   "reseau": "safti",
-  "part_secondes": 591
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 624.6,
+  "seconde": 633.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 625.4,
+  "seconde": 634.3,
   "reseau": "safti",
   "n": 28045,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 626.1,
+  "seconde": 635.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 626.2,
+  "seconde": 635.2,
   "reseau": "safti",
-  "connues": 3222
+  "connues": 3235
  },
  {
   "etape": "departement",
-  "seconde": 926.3,
+  "seconde": 970.1,
   "reseau": "safti",
-  "departement": "02",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 1,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1185.6,
-  "reseau": "safti",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 38,
-  "tronquee": true,
-  "etats": {
-   "garde": 38,
-   "vendu": 1,
+   "garde": 39,
+   "vendu": 0,
    "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 11
+   "hors_perimetre": 6,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 315 000 €. Réf : 1657051"
+   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1216.2,
+  "seconde": 1230.6,
   "reseau": "safti",
-  "departement": "10",
-  "visitees": 7,
-  "gardes": 3,
+  "departement": "18",
+  "visitees": 46,
+  "gardes": 27,
   "tronquee": true,
   "etats": {
-   "garde": 3,
+   "garde": 27,
    "vendu": 0,
-   "ecarte": 4,
+   "ecarte": 19,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4
+   "hors_perimetre": 19
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1216.2,
-  "gardes": 151
+  "seconde": 1230.6,
+  "gardes": 121
  }
 ]
