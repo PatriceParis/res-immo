@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 18.3,
+  "seconde": 15.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 18.3,
+  "seconde": 15.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,152 +21,221 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.3,
+  "seconde": 15.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 18.9,
+  "seconde": 16.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.3,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.3,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.4,
+  "seconde": 17.0,
   "reseau": "capifrance",
-  "connues": 3056
+  "connues": 3222
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.4,
+  "seconde": 17.0,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.8,
+  "seconde": 17.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 29.0,
+  "seconde": 26.6,
   "reseau": "iad",
-  "n": 91866,
+  "n": 91890,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 30.9,
+  "seconde": 28.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 31.1,
+  "seconde": 28.6,
   "reseau": "iad",
-  "connues": 3056
+  "connues": 3222
  },
  {
   "etape": "departement",
-  "seconde": 195.1,
+  "seconde": 226.1,
   "reseau": "iad",
-  "departement": "54",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 14,
-   "vendu": 10,
-   "ecarte": 26,
+   "garde": 23,
+   "vendu": 18,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 24,
-   "prix_trop_haut": 2
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 6
   },
   "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 403.4,
+  "seconde": 409.3,
   "reseau": "iad",
-  "departement": "37",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 25,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 13,
-   "ecarte": 11,
-   "illisible": 1
+   "garde": 18,
+   "vendu": 14,
+   "ecarte": 18,
+   "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "prix_trop_haut": 5,
-   "hors_perimetre": 5
+   "hors_perimetre": 15,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 4 pièces de 90 m² à Saché (37190)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)",
-   "hors_perimetre": "Maison 11 pièces de 311 m² à Varennes-sur-Allier (03150)"
+   "hors_perimetre": "Maison 10 pièces de 186 m² à Cernay-la-Ville (78720)",
+   "prix_trop_haut": "Demeure 10 pièces de 350 m² à Honfleur (14600)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 543.0,
+  "seconde": 604.2,
   "reseau": "iad",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 22,
+  "tronquee": true,
+  "etats": {
+   "garde": 22,
+   "vendu": 16,
+   "ecarte": 12,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 12
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 8 pièces de 165 m² à La Celle-Saint-Cloud (78170)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 624.3,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 6,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 1,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 3,
+   "location": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
+   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 624.3,
+  "reseau": "safti",
+  "part_secondes": 591
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 624.6,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 625.4,
+  "reseau": "safti",
+  "n": 28045,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 626.1,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 626.2,
+  "reseau": "safti",
+  "connues": 3222
+ },
+ {
+  "etape": "departement",
+  "seconde": 926.3,
+  "reseau": "safti",
   "departement": "02",
   "visitees": 50,
-  "gardes": 10,
+  "gardes": 46,
   "tronquee": true,
   "etats": {
-   "garde": 10,
-   "vendu": 3,
-   "ecarte": 37,
+   "garde": 46,
+   "vendu": 1,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 19,
-   "location": 3,
-   "hors_perimetre": 14,
-   "prix_trop_haut": 1
+   "hors_perimetre": 3
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 4 pièces de 90 m² à CHARLY-SUR-MARNE (02310)",
-   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
-   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
   }
  },
  {
   "etape": "departement",
-  "seconde": 624.7,
-  "reseau": "iad",
+  "seconde": 1185.6,
+  "reseau": "safti",
   "departement": "08",
-  "visitees": 28,
-  "gardes": 4,
+  "visitees": 50,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 13,
+   "garde": 38,
+   "vendu": 1,
    "ecarte": 11,
    "illisible": 0
   },
@@ -174,106 +243,33 @@
    "hors_perimetre": 11
   },
   "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 315 000 €. Réf : 1657051"
   }
  },
  {
-  "etape": "reseau_debut",
-  "seconde": 624.7,
-  "reseau": "safti",
-  "part_secondes": 594
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 625.0,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 625.5,
-  "reseau": "safti",
-  "n": 28067,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 626.2,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 626.4,
-  "reseau": "safti",
-  "connues": 3056
- },
- {
   "etape": "departement",
-  "seconde": 911.6,
+  "seconde": 1216.2,
   "reseau": "safti",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 45,
+  "departement": "10",
+  "visitees": 7,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 45,
+   "garde": 3,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
    "hors_perimetre": 4
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
-   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
+   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
   }
- },
- {
-  "etape": "departement",
-  "seconde": 1188.5,
-  "reseau": "safti",
-  "departement": "88",
-  "visitees": 50,
-  "gardes": 44,
-  "tronquee": true,
-  "etats": {
-   "garde": 44,
-   "vendu": 1,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
-   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1220.9,
-  "reseau": "safti",
-  "departement": "89",
-  "visitees": 4,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1220.9,
-  "gardes": 146
+  "seconde": 1216.2,
+  "gardes": 151
  }
 ]
