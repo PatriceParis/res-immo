@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 28.2,
+  "seconde": 16.3,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 28.2,
+  "seconde": 16.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,173 +21,192 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 28.2,
+  "seconde": 16.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 29.1,
+  "seconde": 16.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 29.6,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.7,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.9,
+  "seconde": 17.4,
   "reseau": "capifrance",
-  "connues": 3235
+  "connues": 3278
  },
  {
   "etape": "reseau_debut",
-  "seconde": 29.9,
+  "seconde": 17.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 30.3,
+  "seconde": 17.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 45.4,
+  "seconde": 27.0,
   "reseau": "iad",
-  "n": 91890,
+  "n": 91952,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 47.3,
+  "seconde": 28.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 47.5,
+  "seconde": 29.0,
   "reseau": "iad",
-  "connues": 3235
+  "connues": 3278
  },
  {
   "etape": "departement",
-  "seconde": 238.4,
+  "seconde": 203.9,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 19,
   "tronquee": true,
   "etats": {
-   "garde": 14,
-   "vendu": 9,
-   "ecarte": 27,
+   "garde": 19,
+   "vendu": 11,
+   "ecarte": 20,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 26,
-   "prix_trop_haut": 1
+   "hors_perimetre": 20
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 100 m² à Boussy-Saint-Antoine (91800)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 468.7,
+  "seconde": 320.3,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 23,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 23,
-   "vendu": 17,
-   "ecarte": 10,
+   "garde": 4,
+   "vendu": 23,
+   "ecarte": 23,
    "illisible": 0
   },
   "motifs": {
-   "location": 5,
-   "hors_perimetre": 4,
-   "prix_trop_haut": 1
+   "hors_perimetre": 21,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "prix_trop_haut": "Domaine 12 pièces de 342 m² à La Haye-du-Theil (27370)"
+   "hors_perimetre": "Appartement 2 pièces de 35 m² à Neauphle-le-Château (78640)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 632.4,
+  "seconde": 547.4,
   "reseau": "iad",
-  "departement": "28",
-  "visitees": 32,
-  "gardes": 18,
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 18,
-   "vendu": 7,
-   "ecarte": 7,
+   "garde": 30,
+   "vendu": 6,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 4
+   "location": 2,
+   "prix_trop_haut": 7,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
+   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 624.9,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 23,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 8,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 8
+  },
+  "exemples": {
+   "hors_perimetre": "Demeure 10 pièces de 393 m² à Verdun-sur-Garonne (82600)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 632.5,
+  "seconde": 624.9,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 591
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 633.0,
+  "seconde": 625.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 634.3,
+  "seconde": 625.9,
   "reseau": "safti",
-  "n": 28045,
+  "n": 28171,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 635.0,
+  "seconde": 626.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 635.2,
+  "seconde": 626.8,
   "reseau": "safti",
-  "connues": 3235
+  "connues": 3278
  },
  {
   "etape": "departement",
-  "seconde": 970.1,
+  "seconde": 886.9,
   "reseau": "safti",
-  "departement": "14",
+  "departement": "21",
   "visitees": 50,
   "gardes": 39,
   "tronquee": true,
@@ -198,38 +217,59 @@
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6,
-   "prix_trop_haut": 5
+   "hors_perimetre": 11
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
-   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1230.6,
+  "seconde": 1104.1,
   "reseau": "safti",
-  "departement": "18",
-  "visitees": 46,
-  "gardes": 27,
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 27,
+   "garde": 29,
    "vendu": 0,
-   "ecarte": 19,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 19
+   "hors_perimetre": 21
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813"
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1216.4,
+  "reseau": "safti",
+  "departement": "27",
+  "visitees": 28,
+  "gardes": 11,
+  "tronquee": true,
+  "etats": {
+   "garde": 11,
+   "vendu": 0,
+   "ecarte": 17,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 16,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1230.6,
-  "gardes": 121
+  "seconde": 1216.4,
+  "gardes": 139
  }
 ]
