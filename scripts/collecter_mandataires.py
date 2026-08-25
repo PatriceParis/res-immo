@@ -294,7 +294,7 @@ def enregistrer_une(conn, annonce: dict, reseau: dict,
 
 
 def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
-                        fin_prevue: float, args) -> int:
+                        fin_prevue: float, args, tronquees: set) -> int:
     print(f"\n=== {reseau['nom']}")
     # Céder son tour AVANT de dépenser. Lire les sitemaps d'un réseau coûte
     # plusieurs minutes — vingt mille adresses chez IAD — et ce coût était payé
@@ -349,11 +349,18 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     deja_vues = annonces_deja_connues()
     etape("catalogue_relu", reseau=cle, connues=len(deja_vues))
     total = 0
+    # `tronquees` est fourni par l'appelant et PARTAGÉ par tous les réseaux du
+    # passage. Local à un réseau, il repartait vide au réseau suivant, dont la
+    # première écriture effaçait les marques du précédent : le 25 août, Safti a
+    # ainsi effacé celle d'« IAD France (71) », posée quelques minutes plus
+    # tôt, et l'export a retiré 463 annonces d'un département qu'on venait de
+    # parcourir et de déclarer tronqué. Le journal ne décrit qu'un passage,
+    # mais il doit en décrire la TOTALITÉ.
+    #
     # Les départements dont on n'a PAS vu toute la liste : le plafond par
     # département, le budget de temps, ou — depuis le 18 août — un sitemap lu
     # à moitié. La règle de sortie doit s'y abstenir, sinon elle supprime des
     # annonces qu'elle n'a jamais cherchées — voir app/historique.py.
-    tronquees: set = set()
     reaffectees: set = set()
     for dept in mandataires.ordre_des_departements(groupes, vu, cle):
         if time.monotonic() > fin_prevue:
@@ -462,6 +469,8 @@ def main() -> None:
     # dernier de l'alphabet — n'a jamais eu son tour. On sert donc le plus
     # anciennement vu d'abord, et on découpe le temps pour que le premier ne
     # mange pas la part des suivants.
+    # Partagé par tous les réseaux : voir collecter_un_reseau.
+    tronquees: set = set()
     choisis = ([args.reseau] if args.reseau
                else mandataires.ordre_des_reseaux(mandataires.RESEAUX,
                                                   derniere_visite()))
@@ -473,7 +482,7 @@ def main() -> None:
         fin_reseau = min(time.monotonic() + part, fin_globale)
         etape("reseau_debut", reseau=cle, part_secondes=round(part))
         total += collecter_un_reseau(conn, cle, mandataires.RESEAUX[cle], index,
-                                     fin_reseau, args)
+                                     fin_reseau, args, tronquees)
     conn.close()
     etape("fin", gardes=total)
     print(f"\nTerminé : {total} bien(s) ajouté(s) depuis les réseaux de mandataires.")
