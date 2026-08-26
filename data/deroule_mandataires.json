@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 32.0,
+  "seconde": 99.0,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 32.1,
+  "seconde": 99.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,228 +21,221 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 32.1,
+  "seconde": 99.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 32.9,
+  "seconde": 100.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 33.4,
+  "seconde": 100.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.4,
+  "seconde": 100.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.7,
+  "seconde": 100.7,
   "reseau": "capifrance",
-  "connues": 3563
+  "connues": 3653
  },
  {
   "etape": "reseau_debut",
-  "seconde": 33.7,
+  "seconde": 100.7,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 33.9,
+  "seconde": 101.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 46.0,
+  "seconde": 116.0,
   "reseau": "iad",
   "n": 92031,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 48.0,
+  "seconde": 118.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 48.2,
+  "seconde": 118.2,
   "reseau": "iad",
-  "connues": 3563
+  "connues": 3653
  },
  {
   "etape": "departement",
-  "seconde": 269.4,
+  "seconde": 367.8,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 26,
+  "gardes": 22,
   "tronquee": true,
   "etats": {
-   "garde": 26,
-   "vendu": 12,
-   "ecarte": 12,
+   "garde": 22,
+   "vendu": 10,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 12
+   "location": 1,
+   "hors_perimetre": 12,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Demeure 10 pièces de 385 m² à Bois-Guillaume (76420)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 493.9,
+  "seconde": 488.2,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 25,
-  "tronquee": true,
-  "etats": {
-   "garde": 25,
-   "vendu": 14,
-   "ecarte": 11,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 7,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 629.0,
-  "reseau": "iad",
-  "departement": "70",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 11,
-   "ecarte": 34,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 34
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 233 m² à Buthiers (77760)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 633.3,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 2,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 2,
-   "ecarte": 0,
+   "vendu": 14,
+   "ecarte": 36,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 33,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Demeure 10 pièces de 320 m² à Saint-Pierre-du-Palais (17270)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 705.1,
+  "reseau": "iad",
+  "departement": "45",
+  "visitees": 49,
+  "gardes": 15,
+  "tronquee": true,
+  "etats": {
+   "garde": 15,
+   "vendu": 11,
+   "ecarte": 23,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 1,
+   "location": 10,
+   "titre_hors_cible:murs commerciaux": 1,
+   "hors_perimetre": 8,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
+   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
+   "hors_perimetre": "Maison 5 pièces de 125 m² à Montereau-Fault-Yonne (77130)",
+   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)"
+  }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 633.3,
+  "seconde": 705.1,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 633.8,
+  "seconde": 706.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 634.6,
+  "seconde": 707.6,
   "reseau": "safti",
   "n": 28212,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 635.4,
+  "seconde": 708.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 635.6,
+  "seconde": 708.6,
   "reseau": "safti",
-  "connues": 3563
+  "connues": 3653
  },
  {
   "etape": "departement",
-  "seconde": 974.9,
+  "seconde": 1090.3,
   "reseau": "safti",
-  "departement": "39",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 1,
-   "ecarte": 1,
+   "garde": 43,
+   "vendu": 0,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1
+   "hors_perimetre": 7
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 646 000 €. Réf : 1557797"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1233.6,
+  "seconde": 1299.6,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 42,
-  "gardes": 32,
+  "departement": "50",
+  "visitees": 30,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 32,
+   "garde": 24,
    "vendu": 0,
-   "ecarte": 10,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9,
-   "prix_trop_haut": 1
+   "prix_trop_haut": 1,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
+   "hors_perimetre": "Vente de maison 7 pièces à Beauvoir-De-Marc 38440 : 222m², prix 680 000 €. Réf : 1700796"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1233.6,
-  "gardes": 136
+  "seconde": 1299.6,
+  "gardes": 104
  }
 ]
