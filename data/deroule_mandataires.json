@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 49.9,
+  "seconde": 32.0,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 49.9,
+  "seconde": 32.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,255 +21,228 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 49.9,
+  "seconde": 32.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 50.5,
+  "seconde": 32.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 50.8,
+  "seconde": 33.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 50.9,
+  "seconde": 33.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 51.0,
+  "seconde": 33.7,
   "reseau": "capifrance",
-  "connues": 3415
+  "connues": 3563
  },
  {
   "etape": "reseau_debut",
-  "seconde": 51.0,
+  "seconde": 33.7,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 51.3,
+  "seconde": 33.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 57.0,
+  "seconde": 46.0,
   "reseau": "iad",
-  "n": 91952,
+  "n": 92031,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 58.9,
+  "seconde": 48.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 59.1,
+  "seconde": 48.2,
   "reseau": "iad",
-  "connues": 3415
+  "connues": 3563
  },
  {
   "etape": "departement",
-  "seconde": 205.1,
+  "seconde": 269.4,
   "reseau": "iad",
-  "departement": "57",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 10,
+  "gardes": 26,
   "tronquee": true,
   "etats": {
-   "garde": 10,
-   "vendu": 11,
-   "ecarte": 29,
+   "garde": 26,
+   "vendu": 12,
+   "ecarte": 12,
    "illisible": 0
   },
   "motifs": {
-   "location": 4,
-   "hors_perimetre": 23,
-   "prix_trop_haut": 2
+   "hors_perimetre": 12
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
-   "hors_perimetre": "Grange 1 pièce de 100 m² à Chapelle-Viviers (86300)",
-   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
+   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 360.6,
+  "seconde": 493.9,
   "reseau": "iad",
-  "departement": "58",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 13,
+  "gardes": 25,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 9,
-   "ecarte": 28,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 28
-  },
-  "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 547.3,
-  "reseau": "iad",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
+   "garde": 25,
    "vendu": 14,
-   "ecarte": 16,
+   "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "location": 5,
-   "prix_trop_haut": 9,
-   "hors_perimetre": 2
+   "location": 3,
+   "hors_perimetre": 7,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 3 pièces de 75 m² à MAUBEUGE (59600)",
-   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
-   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
+   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 655.5,
+  "seconde": 629.0,
   "reseau": "iad",
-  "departement": "60",
-  "visitees": 41,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 4,
-   "ecarte": 31,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "hors_perimetre": 16,
-   "prix_trop_haut": 10
-  },
-  "exemples": {
-   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
-   "hors_perimetre": "Maison 7 pièces de 210 m² à Saint-Maximin-la-Sainte-Baume (83470)",
-   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 655.5,
-  "reseau": "safti",
-  "part_secondes": 594
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 655.9,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 656.6,
-  "reseau": "safti",
-  "n": 28171,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 657.3,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 657.5,
-  "reseau": "safti",
-  "connues": 3415
- },
- {
-  "etape": "departement",
-  "seconde": 949.9,
-  "reseau": "safti",
-  "departement": "28",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 0,
-   "ecarte": 9,
+   "garde": 5,
+   "vendu": 11,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9
+   "hors_perimetre": 34
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390"
+   "hors_perimetre": "Maison 10 pièces de 233 m² à Buthiers (77760)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1225.0,
-  "reseau": "safti",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 37,
+  "seconde": 633.3,
+  "reseau": "iad",
+  "departement": "72",
+  "visitees": 2,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 37,
-   "vendu": 0,
-   "ecarte": 13,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 13
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1253.4,
-  "reseau": "safti",
-  "departement": "37",
-  "visitees": 5,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 0,
+   "garde": 0,
+   "vendu": 2,
    "ecarte": 0,
-   "illisible": 1
+   "illisible": 0
   },
   "motifs": {},
   "exemples": {}
  },
  {
+  "etape": "reseau_debut",
+  "seconde": 633.3,
+  "reseau": "safti",
+  "part_secondes": 599
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 633.8,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 634.6,
+  "reseau": "safti",
+  "n": 28212,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 635.4,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 635.6,
+  "reseau": "safti",
+  "connues": 3563
+ },
+ {
+  "etape": "departement",
+  "seconde": 974.9,
+  "reseau": "safti",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 48,
+  "tronquee": true,
+  "etats": {
+   "garde": 48,
+   "vendu": 1,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1233.6,
+  "reseau": "safti",
+  "departement": "41",
+  "visitees": 42,
+  "gardes": 32,
+  "tronquee": true,
+  "etats": {
+   "garde": 32,
+   "vendu": 0,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 9,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+  }
+ },
+ {
   "etape": "fin",
-  "seconde": 1253.4,
-  "gardes": 131
+  "seconde": 1233.6,
+  "gardes": 136
  }
 ]
