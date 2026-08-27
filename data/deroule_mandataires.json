@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 99.0,
+  "seconde": 17.9,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 99.0,
+  "seconde": 17.9,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,221 +21,259 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 99.0,
+  "seconde": 17.9,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 100.0,
+  "seconde": 18.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 100.5,
+  "seconde": 19.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 100.5,
+  "seconde": 19.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 100.7,
+  "seconde": 19.2,
   "reseau": "capifrance",
-  "connues": 3653
+  "connues": 3760
  },
  {
   "etape": "reseau_debut",
-  "seconde": 100.7,
+  "seconde": 19.2,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 101.3,
+  "seconde": 19.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 116.0,
+  "seconde": 30.8,
   "reseau": "iad",
-  "n": 92031,
+  "n": 92109,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 118.0,
+  "seconde": 32.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 118.2,
+  "seconde": 32.8,
   "reseau": "iad",
-  "connues": 3653
+  "connues": 3760
  },
  {
   "etape": "departement",
-  "seconde": 367.8,
+  "seconde": 212.2,
   "reseau": "iad",
-  "departement": "76",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 22,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 22,
-   "vendu": 10,
-   "ecarte": 18,
+   "garde": 18,
+   "vendu": 15,
+   "ecarte": 17,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 12,
+   "location": 2,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
+   "location": "Maison 4 pièces de 62 m² à Couvains (50680)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 407.6,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 21,
+  "tronquee": true,
+  "etats": {
+   "garde": 21,
+   "vendu": 22,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 12,
-   "prix_trop_haut": 5
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Demeure 10 pièces de 385 m² à Bois-Guillaume (76420)"
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 488.2,
+  "seconde": 563.6,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 0,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 14,
-   "ecarte": 36,
+   "garde": 10,
+   "vendu": 8,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33,
-   "prix_trop_haut": 3
+   "hors_perimetre": 32
   },
   "exemples": {
-   "hors_perimetre": "Demeure 10 pièces de 320 m² à Saint-Pierre-du-Palais (17270)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+   "hors_perimetre": "108 518 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 705.1,
+  "seconde": 624.2,
   "reseau": "iad",
-  "departement": "45",
-  "visitees": 49,
-  "gardes": 15,
+  "departement": "89",
+  "visitees": 15,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 15,
-   "vendu": 11,
-   "ecarte": 23,
+   "garde": 6,
+   "vendu": 2,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 10,
-   "titre_hors_cible:murs commerciaux": 1,
-   "hors_perimetre": 8,
-   "prix_trop_haut": 3
+   "location": 3,
+   "hors_perimetre": 4
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "hors_perimetre": "Maison 5 pièces de 125 m² à Montereau-Fault-Yonne (77130)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)"
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 705.1,
+  "seconde": 624.2,
   "reseau": "safti",
   "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 706.1,
+  "seconde": 624.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 707.6,
+  "seconde": 625.5,
   "reseau": "safti",
-  "n": 28212,
+  "n": 28239,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 708.4,
+  "seconde": 626.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 708.6,
+  "seconde": 626.4,
   "reseau": "safti",
-  "connues": 3653
+  "connues": 3760
  },
  {
   "etape": "departement",
-  "seconde": 1090.3,
+  "seconde": 857.1,
   "reseau": "safti",
-  "departement": "45",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
-   "vendu": 0,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 7
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 646 000 €. Réf : 1557797"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1299.6,
-  "reseau": "safti",
-  "departement": "50",
-  "visitees": 30,
   "gardes": 24,
   "tronquee": true,
   "etats": {
    "garde": 24,
    "vendu": 0,
-   "ecarte": 6,
+   "ecarte": 26,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 5
+   "hors_perimetre": 26
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 7 pièces à Beauvoir-De-Marc 38440 : 222m², prix 680 000 €. Réf : 1700796"
+   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1016.2,
+  "reseau": "safti",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 11,
+  "tronquee": true,
+  "etats": {
+   "garde": 11,
+   "vendu": 0,
+   "ecarte": 38,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 38
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1218.7,
+  "reseau": "safti",
+  "departement": "53",
+  "visitees": 29,
+  "gardes": 23,
+  "tronquee": true,
+  "etats": {
+   "garde": 23,
+   "vendu": 1,
+   "ecarte": 4,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 3,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378",
+   "prix_trop_haut": "Vente de maison 6 pièces à Chateau Gontier Sur Mayenne 53200 : 180m², prix 748 000 €. Réf : 1620784"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1299.6,
-  "gardes": 104
+  "seconde": 1218.7,
+  "gardes": 113
  }
 ]
