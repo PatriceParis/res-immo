@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 21.3,
+  "seconde": 41.5,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 21.4,
+  "seconde": 41.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,284 +21,240 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.4,
+  "seconde": 41.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.0,
+  "seconde": 42.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 22.8,
+  "seconde": 43.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.8,
+  "seconde": 43.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.0,
+  "seconde": 43.2,
   "reseau": "capifrance",
-  "connues": 3845
+  "connues": 3980
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.0,
+  "seconde": 43.2,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.4,
+  "seconde": 43.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 30.8,
+  "seconde": 54.5,
   "reseau": "iad",
-  "n": 92109,
+  "n": 92044,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.7,
+  "seconde": 55.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 32.9,
+  "seconde": 55.9,
   "reseau": "iad",
-  "connues": 3845
+  "connues": 3980
  },
  {
   "etape": "departement",
-  "seconde": 167.6,
+  "seconde": 222.6,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "53",
   "visitees": 50,
-  "gardes": 6,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 7,
-   "ecarte": 37,
+   "garde": 16,
+   "vendu": 18,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 19,
-   "location": 3,
-   "hors_perimetre": 14,
-   "prix_trop_haut": 1
+   "location": 1,
+   "hors_perimetre": 15
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 4 pièces de 90 m² à CHARLY-SUR-MARNE (02310)",
-   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
-   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
+   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
+   "hors_perimetre": "Maison de campagne 3 pièces de 64 m² à Saint-Léger-sur-Vouzance (03130)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 315.4,
+  "seconde": 369.3,
   "reseau": "iad",
-  "departement": "08",
+  "departement": "54",
   "visitees": 50,
   "gardes": 11,
   "tronquee": true,
   "etats": {
    "garde": 11,
-   "vendu": 15,
-   "ecarte": 24,
+   "vendu": 12,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 24
+   "hors_perimetre": 25,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 476.3,
+  "seconde": 597.3,
   "reseau": "iad",
-  "departement": "37",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 12,
+  "gardes": 26,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 16,
-   "ecarte": 22,
+   "garde": 26,
+   "vendu": 5,
+   "ecarte": 19,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "prix_trop_haut": 5,
-   "hors_perimetre": 16
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 90 m² à Saché (37190)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)",
-   "hors_perimetre": "Maison d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 618.2,
-  "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 13,
-   "ecarte": 28,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 20,
+   "titre_hors_cible:appartement": 1,
    "location": 2,
-   "prix_trop_haut": 6
+   "hors_perimetre": 15,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
+   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 622.8,
+  "seconde": 645.1,
   "reseau": "iad",
-  "departement": "52",
-  "visitees": 2,
-  "gardes": 0,
+  "departement": "14",
+  "visitees": 11,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 0,
+   "garde": 4,
    "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "location": 2
+   "hors_perimetre": 5,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)"
+   "hors_perimetre": "108 613 biens immobiliers à vendre",
+   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 622.8,
+  "seconde": 645.1,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.4,
+  "seconde": 645.5,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 624.4,
+  "seconde": 646.8,
   "reseau": "safti",
-  "n": 28239,
+  "n": 28166,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 625.1,
+  "seconde": 647.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 625.2,
+  "seconde": 647.4,
   "reseau": "safti",
-  "connues": 3845
+  "connues": 3980
  },
  {
   "etape": "departement",
-  "seconde": 843.9,
+  "seconde": 946.6,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 22,
+  "gardes": 46,
   "tronquee": true,
   "etats": {
-   "garde": 22,
+   "garde": 46,
    "vendu": 0,
-   "ecarte": 28,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 28
+   "hors_perimetre": 4
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1150.4,
+  "seconde": 1242.9,
   "reseau": "safti",
-  "departement": "55",
-  "visitees": 50,
-  "gardes": 45,
+  "departement": "59",
+  "visitees": 45,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 0,
-   "ecarte": 5,
+   "garde": 40,
+   "vendu": 1,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
    "prix_trop_haut": 1,
-   "hors_perimetre": 4
+   "hors_perimetre": 3
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 6 pièces à Claye-Souilly 77410 : 150m², prix 473 000 €. Réf : 1556864"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1222.4,
-  "reseau": "safti",
-  "departement": "57",
-  "visitees": 11,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 0,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Albefeuille-Lagarde 82290 : 156m², prix 174 900 €. Réf : 1647065"
+   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
+   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1222.4,
-  "gardes": 115
+  "seconde": 1242.9,
+  "gardes": 143
  }
 ]
