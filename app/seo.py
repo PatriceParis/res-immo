@@ -225,6 +225,7 @@ URL_ALERTES = "/alertes"
 URL_MENTIONS = "/mentions-legales"
 URL_CONFIDENTIALITE = "/confidentialite"
 URL_METHODE = "/methode"
+URL_PROFESSIONNELS = "/professionnels"
 
 # --- Identification de l'éditeur (LCEN, art. 6) ----------------------------
 #
@@ -284,6 +285,14 @@ def siren_lisible(siren: str | None = None) -> str:
 # perdre. C'est exactement ce que faisait la mise en relation retirée : son
 # journal vivait dans /tmp sur l'hébergement, effacé à chaque redémarrage.
 COURRIEL_ALERTES = ""
+
+# L'adresse à laquelle écrivent les professionnels. Séparée de celle des
+# alertes : ce ne sont ni les mêmes correspondants ni le même volume, et le
+# jour où l'une déborde l'autre ne doit pas en pâtir. Même règle tant qu'elle
+# est vide — la page dit que l'adresse est en cours d'ouverture et renvoie au
+# canal provisoire, plutôt que d'afficher un formulaire qui n'aboutit nulle
+# part.
+COURRIEL_PRO = ""
 
 # Budgets proposés. Ronds, parce qu'ils doivent se choisir sans réfléchir.
 PALIERS_ALERTE = (100_000, 150_000, 200_000, 300_000, 500_000, 700_000)
@@ -646,7 +655,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
                (base + URL_ALERTES, "0.5", "monthly"),
                (base + URL_MENTIONS, "0.3", "yearly"),
                (base + URL_CONFIDENTIALITE, "0.3", "yearly"),
-               (base + URL_METHODE, "0.7", "monthly")]
+               (base + URL_METHODE, "0.7", "monthly"),
+               (base + URL_PROFESSIONNELS, "0.5", "monthly")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]

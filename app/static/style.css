@@ -479,6 +479,17 @@ body { overflow-x: hidden; }
 .pied a { color: var(--marque, #1b4332); font-weight: 600 }
 .pied p { max-width: 70ch; margin: 0 }
 
+/* Le bloc professionnel : fond BLANC sur le beige du pied, pour qu'il se voie
+   sans crier. Il ne s'adresse pas au visiteur qui cherche une maison mais à
+   l'agence qui en publie — le fondre dans la liste des mentions le rendrait
+   invisible pour les uns comme pour les autres. */
+.pied .pied-pro { background: #fff; border: 1px solid #ddd8cc; border-radius: 10px;
+                  padding: 14px 18px; margin-top: 20px; max-width: 70ch;
+                  display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline }
+.pied .pied-pro a { font-size: 15px; text-decoration: none; white-space: nowrap }
+.pied .pied-pro a:hover { text-decoration: underline }
+.pied .pied-pro span { color: #6b7663; font-size: 13.5px }
+
 /* La marque : pictogramme + nom, alignés sur la même ligne de base optique.
    Le dessin remplace l'emoji ⛰️, qui appartenait à tout le monde, changeait
    d'aspect d'un système à l'autre et ne disait rien du projet. */

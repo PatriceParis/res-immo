@@ -60,6 +60,21 @@ figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .manque { color: #9a6a2b; font-style: italic }
 .pied { font-size: 13px; color: #6b7663; margin-top: 10px }
 .pied a { color: #46543f }
+/* Le bloc professionnel, sur fond blanc : il ne s'adresse pas au même
+   visiteur que le reste du pied, et se distingue donc au lieu de se fondre
+   dans la liste des mentions. */
+.pied-pro { background: #fff; border: 1px solid #e2e6dc; border-radius: 10px;
+            padding: 12px 16px; margin-top: 14px; font-size: 14px }
+.pied-pro a { color: #46543f; font-weight: 600; text-decoration: none }
+.pied-pro a:hover { text-decoration: underline }
+.engagement { background: #fff; border-left: 3px solid #46543f;
+              padding: 12px 16px; border-radius: 0 8px 8px 0 }
+ul.offres { list-style: none; padding: 0; display: grid; gap: 14px }
+ul.offres li { background: #fff; border: 1px solid #e2e6dc; border-radius: 10px;
+               padding: 14px 18px }
+ul.offres h3 { margin: 0 0 6px; font-size: 16px }
+ul.offres p { margin: 0 0 4px }
+.modalite { font-size: 13px; color: #6b7663; font-style: italic }
 """
 
 
@@ -127,6 +142,8 @@ changement climatique. Chaque fiche renvoie vers l'annonce d'origine.</p>
 <a href="{_e(base)}{seo.URL_CONFIDENTIALITE}">Confidentialité</a> ·
 <a href="{_e(base)}{seo.URL_METHODE}">Méthode de la note</a> ·
 <a href="{_e(base)}{seo.URL_ALERTES}">Soyez alerté</a></p>
+<p class="pied-pro"><a href="{_e(base)}{seo.URL_PROFESSIONNELS}">Professionnel
+de l'immo ?</a></p>
 </main>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
@@ -1094,6 +1111,159 @@ consultées</em>, et rien de plus.</p>
         "résilience de Refuge Immo.",
         f"{base}{seo.URL_METHODE}", corps,
         _jsonld(seo.jsonld_fil([("Accueil", "/"), ("Méthode", seo.URL_METHODE)], base)),
+        base)
+
+
+def page_professionnels(nombre: int = 0, base: str = seo.SITE) -> str:
+    """Ce que le site fait, et ce qu'un professionnel peut en acheter.
+
+    Une règle gouverne cette page, et elle est écrite dessus : **rien de ce
+    qui est vendu ne modifie une note ni un classement**. Un site qui promet
+    une sélection objective et vend de la mise en avant ment sur les deux.
+    Les prestations proposées portent donc toutes sur ce que l'agence fait de
+    NOS données chez elle — jamais sur sa place dans nos listes.
+
+    Le formulaire suit la règle des alertes : tant qu'aucune boîte ne reçoit,
+    on ne recueille rien. Il ouvre le logiciel de courrier du visiteur, ou —
+    si l'adresse n'est pas encore ouverte — renvoie au canal provisoire en le
+    disant. Recueillir une donnée pour la perdre est pire que ne pas la
+    recueillir : c'est la leçon de la mise en relation retirée le 17 août.
+    """
+    canonique = f"{base}{seo.URL_PROFESSIONNELS}"
+    titre = "Professionnel de l'immobilier ?"
+    description = (
+        "Refuge Immo note la résilience climatique des maisons publiées par "
+        "les agences. Ce que le site fait de vos annonces, ce qu'il ne fera "
+        "jamais, et ce que vous pouvez en obtenir.")
+
+    catalogue = (f"{nombre:,}".replace(",", " ") if nombre
+                 else "Plusieurs milliers de")
+
+    offres = [
+        ("Rapport de résilience à votre marque",
+         "Le rapport complet d'un bien — risques Géorisques, exposition "
+         "argile, autonomie en eau et en chauffage, accès sans voiture — mis "
+         "en page à vos couleurs, à joindre à votre dossier de vente.",
+         "à l'unité ou par lot"),
+        ("Vos annonces relevées en priorité",
+         "Vos nouvelles annonces sont relevées à chaque passage plutôt qu'à "
+         "leur tour de rotation, et vos retraits pris en compte le jour même. "
+         "Cela change la FRAÎCHEUR de vos fiches, jamais leur note.",
+         "abonnement mensuel"),
+        ("Les données de résilience pour votre propre site",
+         "Un export ou un accès programmatique aux indicateurs que nous "
+         "calculons, pour les afficher chez vous. Vous restez maître de la "
+         "présentation, nous restons la source citée.",
+         "sur devis"),
+        ("Une étude de votre secteur",
+         "Ce que vaut votre zone de chalandise sur nos critères, comparée aux "
+         "communes voisines : où sont les biens qui tiendront, et lesquels de "
+         "vos mandats sortent du lot.",
+         "prestation ponctuelle"),
+    ]
+    liste_offres = "".join(
+        f'<li><h3>{_e(nom)}</h3><p>{_e(texte)}</p>'
+        f'<p class="modalite">{_e(modalite)}</p></li>'
+        for nom, texte, modalite in offres)
+
+    ouvert = bool(seo.COURRIEL_PRO)
+    formulaire = f"""
+<form id="form-pro" class="alerte-form">
+  <label class="champ"><span>Votre agence ou votre réseau</span>
+    <input type="text" id="pro-agence" autocomplete="organization" required></label>
+  <label class="champ"><span>Votre nom</span>
+    <input type="text" id="pro-nom" autocomplete="name" required></label>
+  <label class="champ"><span>Votre adresse e-mail</span>
+    <input type="email" id="pro-mail" placeholder="vous@votre-agence.fr"
+           autocomplete="email" required></label>
+  <label class="champ"><span>Ce qui vous intéresse</span>
+    <textarea id="pro-message" rows="4"
+      placeholder="En deux lignes : ce que vous cherchez."></textarea></label>
+  <button class="bouton" type="submit">Écrire</button>
+  <p class="alerte-note" id="pro-note">Votre message part depuis votre propre
+    logiciel de courrier : rien n'est enregistré sur ce site.</p>
+</form>
+<script>
+// Rien ne transite par ce serveur : le formulaire compose un courriel que le
+// visiteur envoie lui-même. Aucune coordonnée professionnelle n'est stockée
+// ici, donc aucune ne peut être perdue.
+(function () {{
+  var f = document.getElementById("form-pro");
+  if (!f) return;
+  f.addEventListener("submit", function (e) {{
+    e.preventDefault();
+    var note = document.getElementById("pro-note");
+    var val = function (id) {{
+      return (document.getElementById(id).value || "").trim();
+    }};
+    if (val("pro-mail").indexOf("@") < 0) {{
+      note.textContent = "Indiquez une adresse e-mail valide.";
+      return;
+    }}
+    var corps = "Bonjour,\\n\\n"
+      + "Agence : " + val("pro-agence") + "\\n"
+      + "Nom : " + val("pro-nom") + "\\n"
+      + "E-mail : " + val("pro-mail") + "\\n\\n"
+      + val("pro-message") + "\\n";
+    note.textContent = "Votre logiciel de courrier s'ouvre avec votre message. "
+      + "Il ne reste qu'à l'envoyer.";
+    window.location.href = "mailto:{seo.COURRIEL_PRO}"
+      + "?subject=" + encodeURIComponent("Refuge Immo — professionnel")
+      + "&body=" + encodeURIComponent(corps);
+  }});
+}})();
+</script>""" if ouvert else f"""
+<p class="alerte-note"><strong>L'adresse professionnelle est en cours
+d'ouverture.</strong> Plutôt qu'un formulaire qui recueillerait vos
+coordonnées sans boîte pour les recevoir, voici le canal qui fonctionne
+aujourd'hui : <a href="{_e(seo.CONTACT_PROVISOIRE)}">le suivi de questions du
+dépôt public</a>. Il est horodaté, consultable par tous, et n'expose aucune
+adresse personnelle. Il disparaîtra le jour où le courriel existera.</p>"""
+
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Professionnels</nav>
+<h1>Professionnel de l'immobilier ?</h1>
+<p class="chapeau">{_e(catalogue)} maisons sont au catalogue. Refuge Immo les
+lit là où vous les publiez et les note sur leur résilience au changement
+climatique — sécheresse, inondation, argile, autonomie en eau et en
+chauffage, accès sans voiture.</p>
+
+<h2>Ce que le site fait de vos annonces</h2>
+<p>Il les lit là où vous les publiez — votre site, votre sitemap — au rythme
+d'une rotation qui repasse sur chaque agence. Il en extrait les faits (prix,
+surface, terrain, pièces, commune), les croise avec des données publiques
+(Géorisques pour les risques naturels, l'Insee pour les communes, l'IGN pour
+les vues aériennes), et en tire une note.</p>
+<p>Chaque fiche renvoie vers <strong>votre</strong> annonce. Le visiteur qui
+veut visiter passe par vous : le site ne prend aucun mandat, ne perçoit
+aucune commission et n'intervient dans aucune transaction.</p>
+
+<h2>Ce que le site ne fera jamais</h2>
+<p class="engagement"><strong>Aucune des prestations ci-dessous ne modifie une
+note ni un classement.</strong> Un site qui promet une sélection objective et
+vend de la mise en avant ment sur les deux. Ce qui se vend ici porte sur ce
+que vous faites de nos données chez vous — jamais sur votre place dans nos
+listes. Une prestation qui viendrait contredire cette règle n'existerait
+pas.</p>
+
+<h2>Ce que vous pouvez en obtenir</h2>
+<ul class="offres">{liste_offres}</ul>
+<p class="note">Ces prestations sont en cours de mise en place : tarifs et
+conditions se fixeront avec les premiers professionnels intéressés. Écrivez si
+l'une d'elles vous parle — ou si vous en voyez une meilleure.</p>
+
+<h2>Faire corriger ou retirer une annonce</h2>
+<p>C'est gratuit, et cela le restera. Si l'une de vos annonces est mal lue,
+mal située, ou si vous ne souhaitez pas y figurer, dites-le et ce sera fait.
+Aucune contrepartie n'est demandée pour cela.</p>
+
+<h2>Nous écrire</h2>
+{formulaire}
+"""
+    return _document(
+        titre, description, canonique, corps,
+        _jsonld(seo.jsonld_fil([("Accueil", "/"),
+                                ("Professionnels", seo.URL_PROFESSIONNELS)], base)),
         base)
 
 

@@ -503,6 +503,26 @@ def page_methode(requete: Request):
                         headers={"Cache-Control": "public, max-age=86400"})
 
 
+@app.get(seo.URL_PROFESSIONNELS)
+def page_professionnels(requete: Request):
+    """Ce que le site fait des annonces d'une agence, ce qu'il n'en fera
+    jamais, et ce qu'elle peut en obtenir.
+
+    Le nombre de biens vient de la base et non d'un chiffre écrit à la main :
+    une page qui s'adresse à des professionnels ne peut pas annoncer un
+    catalogue qu'elle ne mesure pas. Cache d'une heure, comme le catalogue
+    bouge six fois par jour.
+    """
+    assurer_donnees()
+    conn = db.connexion()
+    try:
+        total, _ = db.chercher(conn, {"limit": 1})
+    finally:
+        conn.close()
+    return HTMLResponse(pages.page_professionnels(total, _base(requete)),
+                        headers={"Cache-Control": "public, max-age=3600"})
+
+
 @app.get(seo.URL_CONFIDENTIALITE)
 def page_confidentialite(requete: Request):
     """Ce que le site traite comme données — c'est-à-dire très peu."""
