@@ -159,6 +159,36 @@ ZONES = [
     {"nom": "Insming (57)",                "lat": 48.9550, "lon": 6.8770, "rayon_km": 30},
     {"nom": "Guise (02)",                  "lat": 49.9015, "lon": 3.6282, "rayon_km": 30},
     {"nom": "Le Fresne-Poret (50)",        "lat": 48.7115, "lon": -0.8221, "rayon_km": 30},
+
+    # Quatorze de plus le 28 août, même calcul et même raison qu'une semaine
+    # plus tôt : le catalogue est passé de 1 968 à 3 317 biens géolocalisés,
+    # surtout par Safti, dont le sitemap national amène des départements où
+    # nous n'avions jamais cherché d'agence. L'angle mort était remonté à
+    # 17,5 % et le garde-fou l'a signalé — deux fois maintenant, ce qui est
+    # exactement son office : la couverture doit suivre la croissance du
+    # catalogue, elle ne s'y ajuste pas toute seule.
+    #
+    # Le calcul a d'abord proposé Doucier (39) et Montbéliard (25), à 355 et
+    # 362 km de Paris. Le contrôle de périmètre les a refusés, et il a eu
+    # raison : un bien peut être dans le Jura à moins de 350 km sans que le
+    # CENTRE de son amas y soit, et chercher des agences au-delà prépare des
+    # annonces que le chargement jettera. Le centre est donc choisi parmi les
+    # seuls biens dans le périmètre — Arlay (333 km) et Appenans (350 km)
+    # couvrent les mêmes amas depuis l'intérieur.
+    {"nom": "Châtillon-Coligny (45)",      "lat": 47.8260, "lon": 2.8685, "rayon_km": 30},
+    {"nom": "Arlay (39)",                  "lat": 46.7597, "lon": 5.5423, "rayon_km": 30},
+    {"nom": "Fayl-Billot (52)",            "lat": 47.7845, "lon": 5.6148, "rayon_km": 30},
+    {"nom": "Patay (45)",                  "lat": 48.0427, "lon": 1.6983, "rayon_km": 30},
+    {"nom": "Senones (88)",                "lat": 48.3915, "lon": 6.9741, "rayon_km": 30},
+    {"nom": "Châtenois (88)",              "lat": 48.3048, "lon": 5.8377, "rayon_km": 30},
+    {"nom": "Appenans (25)",               "lat": 47.4455, "lon": 6.5677, "rayon_km": 30},
+    {"nom": "Astillé (53)",                "lat": 47.9623, "lon": -0.8578, "rayon_km": 30},
+    {"nom": "Amifontaine (02)",            "lat": 49.4876, "lon": 3.9192, "rayon_km": 30},
+    {"nom": "Anglure (51)",                "lat": 48.5850, "lon": 3.8133, "rayon_km": 30},
+    {"nom": "Argentan (61)",               "lat": 48.7300, "lon": -0.0130, "rayon_km": 30},
+    {"nom": "Luneray (76)",                "lat": 49.8230, "lon": 0.9197, "rayon_km": 30},
+    {"nom": "Gaillefontaine (76)",         "lat": 49.6576, "lon": 1.6116, "rayon_km": 30},
+    {"nom": "Aubigny-sur-Nère (18)",       "lat": 47.4825, "lon": 2.4284, "rayon_km": 30},
 ]
 
 # Portails nationaux et réseaux sociaux : ce ne sont pas des sites d'agence

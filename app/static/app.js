@@ -758,9 +758,17 @@ function fermerFiche() {
 
 /* ---------------- chargement des données ---------------- */
 
+// Ce que la page d'accueil charge d'un coup. Le catalogue a dépassé trois
+// mille biens servis : les demander tous, c'était plusieurs méga-octets de
+// JSON, autant de marqueurs sur la carte, et un premier affichage qui
+// s'alourdissait à mesure que la collecte progressait. Le compteur continue
+// de dire combien de biens répondent aux filtres ET combien sont montrés —
+// affiner les filtres reste le chemin vers les autres.
+const BIENS_PAR_PAGE = 250;
+
 async function rafraichir() {
   const p = lireFiltres();
-  p.set("limit", "500");           // plafond de l'API : on demande tout
+  p.set("limit", String(BIENS_PAR_PAGE));
   const data = await (await fetch("/api/annonces?" + p.toString())).json();
   etat.annonces = data.items;
 
