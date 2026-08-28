@@ -1,142 +1,135 @@
 {
- "minutes": 28.1,
+ "minutes": 28.2,
  "agences": [
   {
-   "agence": "J.B. Immobilier",
+   "agence": "Sotheby's",
+   "secondes": 101,
+   "pages": 28,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Sotheby's",
+   "secondes": 75,
+   "pages": 17,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Sotheby’s Bayeux",
+   "secondes": 115,
+   "pages": 39,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Square Habitat",
+   "secondes": 31,
+   "pages": 4,
+   "gardes": 2,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Stradim",
+   "secondes": 25,
+   "pages": 9,
+   "gardes": 2,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Thillard & Duhamel",
+   "secondes": 88,
+   "pages": 45,
+   "gardes": 0,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Topaze immobilier",
+   "secondes": 117,
+   "pages": 32,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Toul’immo",
    "secondes": 74,
-   "pages": 12,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "JF Meyer",
-   "secondes": 134,
-   "pages": 43,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Office B.",
-   "secondes": 62,
-   "pages": 10,
-   "gardes": 6,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Orpi",
-   "secondes": 73,
    "pages": 11,
    "gardes": 8,
    "fin": "terminée"
   },
   {
-   "agence": "Ozenne immobilier",
-   "secondes": 95,
+   "agence": "Toutabitat",
+   "secondes": 153,
    "pages": 45,
    "gardes": 0,
    "fin": "terminée"
   },
   {
-   "agence": "PBH Immo",
-   "secondes": 61,
-   "pages": 10,
-   "gardes": 4,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Paillette Immobilier",
-   "secondes": 104,
-   "pages": 26,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Panther'Immo",
-   "secondes": 99,
-   "pages": 25,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Pas-de-Calais Habitat (Bailleur social)",
-   "secondes": 117,
+   "agence": "Transacom",
+   "secondes": 92,
    "pages": 45,
    "gardes": 0,
    "fin": "terminée"
   },
   {
-   "agence": "Pays d'Auge Sotheby's International Realty",
-   "secondes": 98,
-   "pages": 23,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Perch'Immo",
-   "secondes": 50,
+   "agence": "Triplex",
+   "secondes": 57,
    "pages": 12,
-   "gardes": 4,
+   "gardes": 8,
    "fin": "terminée"
   },
   {
-   "agence": "Perche et Demeures",
-   "secondes": 65,
-   "pages": 12,
-   "gardes": 4,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Picart Immobilier",
-   "secondes": 103,
-   "pages": 45,
-   "gardes": 2,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Pisani Immobilier",
-   "secondes": 85,
-   "pages": 45,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Propriétés de Sologne",
-   "secondes": 45,
-   "pages": 5,
-   "gardes": 3,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Saint-Roch immobilier",
-   "secondes": 118,
-   "pages": 45,
-   "gardes": 4,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Sarl C2Si",
+   "agence": "Trybe Immobilier",
    "secondes": 80,
-   "pages": 25,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Sauvage Gestion",
-   "secondes": 192,
    "pages": 45,
    "gardes": 0,
    "fin": "terminée"
   },
   {
-   "agence": "Sedelka",
-   "secondes": 6,
-   "pages": 1,
+   "agence": "Ulyssimmo",
+   "secondes": 107,
+   "pages": 45,
+   "gardes": 1,
+   "fin": "terminée"
+  },
+  {
+   "agence": "VAI LPI",
+   "secondes": 151,
+   "pages": 43,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "VIP Immobilier",
+   "secondes": 94,
+   "pages": 20,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "VIP Immobilier",
+   "secondes": 88,
+   "pages": 21,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Valoire Habîtat",
+   "secondes": 107,
+   "pages": 25,
+   "gardes": 8,
+   "fin": "terminée"
+  },
+  {
+   "agence": "Versus Immobilier",
+   "secondes": 93,
+   "pages": 45,
    "gardes": 0,
    "fin": "terminée"
   },
   {
-   "agence": "Societe Immobiliere Grand Hainaut",
-   "secondes": 23,
+   "agence": ".la petite agence",
+   "secondes": 39,
    "pages": 3,
    "gardes": 1,
    "fin": "budget global épuisé"
