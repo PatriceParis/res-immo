@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.1,
+  "seconde": 25.2,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.1,
+  "seconde": 25.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,253 +21,257 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.1,
+  "seconde": 25.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.7,
+  "seconde": 26.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.1,
+  "seconde": 26.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.1,
+  "seconde": 26.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.3,
+  "seconde": 26.9,
   "reseau": "capifrance",
-  "connues": 4106
+  "connues": 4280
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.3,
+  "seconde": 26.9,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.7,
+  "seconde": 27.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.5,
+  "seconde": 39.1,
   "reseau": "iad",
   "n": 92106,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.0,
+  "seconde": 40.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.1,
+  "seconde": 41.0,
   "reseau": "iad",
-  "connues": 4106
+  "connues": 4280
  },
  {
   "etape": "departement",
-  "seconde": 183.3,
+  "seconde": 245.1,
   "reseau": "iad",
-  "departement": "18",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 13,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 16,
-   "ecarte": 21,
+   "garde": 23,
+   "vendu": 11,
+   "ecarte": 16,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 12,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)",
+   "prix_trop_haut": "Maison 12 pièces de 340 m² à Montreuil (62170)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 389.7,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 13,
+   "ecarte": 27,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 27
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 592.5,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 21,
+  "tronquee": true,
+  "etats": {
+   "garde": 21,
+   "vendu": 10,
+   "ecarte": 19,
    "illisible": 0
   },
   "motifs": {
    "location": 2,
-   "hors_perimetre": 19
+   "prix_trop_haut": 7,
+   "hors_perimetre": 10
   },
   "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
+   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 346.5,
+  "seconde": 630.3,
   "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 15,
+  "departement": "55",
+  "visitees": 12,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 15,
-   "vendu": 12,
-   "ecarte": 23,
+   "garde": 3,
+   "vendu": 5,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 22,
-   "location": 1
+   "hors_perimetre": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
-   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 461.3,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 7,
-   "ecarte": 39,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 38,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 100 m² à Boussy-Saint-Antoine (91800)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 622.7,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 46,
-  "gardes": 17,
-  "tronquee": true,
-  "etats": {
-   "garde": 17,
-   "vendu": 16,
-   "ecarte": 13,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "hors_perimetre": 6,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+   "hors_perimetre": "Demeure 10 pièces de 393 m² à Verdun-sur-Garonne (82600)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 622.7,
+  "seconde": 630.3,
   "reseau": "safti",
-  "part_secondes": 593
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.1,
+  "seconde": 630.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 623.6,
+  "seconde": 631.6,
   "reseau": "safti",
   "n": 28215,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 624.2,
+  "seconde": 632.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 624.3,
+  "seconde": 632.5,
   "reseau": "safti",
-  "connues": 4106
+  "connues": 4280
  },
  {
   "etape": "departement",
-  "seconde": 862.3,
+  "seconde": 842.0,
   "reseau": "safti",
-  "departement": "60",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 19,
   "tronquee": true,
   "etats": {
-   "garde": 30,
+   "garde": 19,
    "vendu": 2,
-   "ecarte": 18,
+   "ecarte": 29,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 18
+   "hors_perimetre": 29
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
+   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1170.6,
+  "seconde": 1040.7,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 19,
   "tronquee": true,
   "etats": {
-   "garde": 48,
+   "garde": 19,
    "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 31,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "hors_perimetre": 31
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730"
+   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1224.0,
+  "seconde": 1227.6,
   "reseau": "safti",
-  "departement": "62",
-  "visitees": 8,
-  "gardes": 8,
+  "departement": "72",
+  "visitees": 38,
+  "gardes": 22,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 22,
+   "vendu": 5,
+   "ecarte": 11,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 10,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 1224.0,
-  "gardes": 135
+  "seconde": 1227.6,
+  "gardes": 116
  }
 ]
