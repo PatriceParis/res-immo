@@ -173,7 +173,15 @@ jobs:
 
       - name: Exporter et committer si des annonces ont été trouvées
         run: |
-          python scripts/exporter_reel.py
+          # Une étape `run` tourne sous `bash -e` : un export sorti en erreur
+          # tuait l'étape ICI, avant même le calcul de N, donc avant la trace.
+          # Le passage disparaissait alors sans un mot. On recueille le code au
+          # lieu de le subir — comme le fait déjà le collecteur plus haut.
+          CODE_EXPORT=0
+          python scripts/exporter_reel.py || CODE_EXPORT=$?
+          if [ "$CODE_EXPORT" -ne 0 ]; then
+            echo "::error::Export sorti EN ERREUR (code $CODE_EXPORT) — le catalogue de ce passage ne sera pas publié."
+          fi
           N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
           echo "Annonces réelles collectées : $N"
           # TOUJOURS laisser une trace dans le dépôt, même quand la collecte
@@ -182,15 +190,16 @@ jobs:
           # passage qui n'a pas eu lieu d'un passage qui n'a rien trouvé. Ce
           # fichier tranche, et il tient dans une ligne.
           CODE=$(cat "$RUNNER_TEMP/code_collecteur" 2>/dev/null || echo "?")
-          python - "$N" "$CODE" <<'PY'
+          python - "$N" "$CODE" "$CODE_EXPORT" <<'PY'
           import json, subprocess, sys, datetime, pathlib
-          annonces, code = sys.argv[1], sys.argv[2]
+          annonces, code, code_export = sys.argv[1], sys.argv[2], sys.argv[3]
           vus = subprocess.run(["git", "diff", "--name-only", "--", "data/"],
                                capture_output=True, text=True).stdout.split()
           pathlib.Path("data/dernier_passage.json").write_text(json.dumps({
               "quand": datetime.datetime.now(datetime.timezone.utc)
                        .replace(microsecond=0).isoformat(),
               "code_collecteur": code,
+              "code_export": code_export,
               "annonces_au_catalogue": int(annonces),
               "fichiers_modifies": sorted(vus),
           }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -201,9 +210,18 @@ jobs:
             # Le journal des visites porte la ROTATION : sans lui, la collecte
             # repartirait toujours des mêmes premières agences et ne
             # reviendrait jamais aux dernières.
-            git add data/annonces_reel.json data/agences_visitees.json \
-                    data/dernier_passage.json data/deroule_collecte.json \
-                    data/visites_tronquees.json
+            #
+            # N'indexer que ce qui existe. « git add » sur un chemin absent
+            # sort en 128 SANS RIEN INDEXER : sous `bash -e`, un seul journal
+            # manquant tuait donc l'étape entière, catalogue compris, et le
+            # passage ne poussait rien du tout. C'est la faute qui avait déjà
+            # empêché `sites.yml` de committer une seule fois depuis sa
+            # création ; elle dormait ici sous la même forme.
+            for f in data/annonces_reel.json data/agences_visitees.json \
+                     data/dernier_passage.json data/deroule_collecte.json \
+                     data/visites_tronquees.json; do
+              if [ -f "$f" ]; then git add "$f"; else echo "$f absent."; fi
+            done
             # Le libellé distingue les deux cas, car la surveillance cherche
             # « ^Collecte auto » : un passage stérile ne doit pas passer pour
             # une collecte réussie, mais il doit rester VISIBLE.
@@ -256,15 +274,52 @@ jobs:
               done
               # `visites_tronquees.json` doit être en place AVANT : l'export le
               # lit pour savoir sur quelles cibles s'abstenir.
-              python scripts/exporter_reel.py
+              python scripts/exporter_reel.py || echo "::error::Export refait EN ERREUR — cet essai ne publiera pas."
               N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
-              git add data/annonces_reel.json data/agences_visitees.json \
-                    data/dernier_passage.json data/deroule_collecte.json \
-                    data/visites_tronquees.json
+              for f in data/annonces_reel.json data/agences_visitees.json \
+                       data/dernier_passage.json data/deroule_collecte.json \
+                       data/visites_tronquees.json; do
+                if [ -f "$f" ]; then git add "$f"; fi
+              done
               git commit -m "Collecte auto : $N annonces réelles ($(date -u +%F))" || true
               sleep $((essai * 5))
             done
           else
             echo "Aucune annonce collectée (les sites ont peut-être bloqué, ou aucune URL d'annonce trouvée)."
             echo "Astuce : relancez en indiquant des 'sites' d'agences et éventuellement une page 'index' de leurs biens."
+            # Un passage sans catalogue reste un passage. La trace était bien
+            # écrite juste au-dessus, mais elle n'était indexée que dans la
+            # branche d'à côté : ce chemin-ci ne poussait RIEN, et le journal
+            # git — seul signal de surveillance des tâches programmées — ne
+            # permettait plus de distinguer ce passage d'un run qui n'a jamais
+            # démarré. Du 27 au 29 août, quatre créneaux sur six sont restés
+            # muets de cette façon.
+            #
+            # On ne pousse ici que les journaux de diagnostic. Le catalogue,
+            # lui, n'a pas été reconstruit : le fichier présent sur le disque
+            # n'est plus digne de foi et ne doit surtout pas partir.
+            git config user.name "refuge-immo-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            LIBELLE="Collecte : passage sans publication (collecteur $CODE, export $CODE_EXPORT, $(date -u +%F\ %H:%MZ))"
+            for f in data/dernier_passage.json data/deroule_collecte.json; do
+              if [ -f "$f" ]; then git add "$f"; else echo "$f absent."; fi
+            done
+            if [ -n "$(git diff --cached --name-only)" ]; then
+              git commit -m "$LIBELLE" || echo "Aucun changement."
+              for essai in 1 2 3; do
+                if git push; then echo "Trace poussée (essai $essai)."; break; fi
+                echo "Push rejeté : la branche a bougé, on se replace dessus ($essai/3)…"
+                for f in dernier_passage.json deroule_collecte.json; do
+                  cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
+                done
+                git fetch origin main
+                git reset --hard origin/main
+                for f in dernier_passage.json deroule_collecte.json; do
+                  cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
+                  if [ -f "data/$f" ]; then git add "data/$f"; fi
+                done
+                git commit -m "$LIBELLE" || echo "Aucun changement."
+                sleep $((essai * 5))
+              done
+            fi
           fi
