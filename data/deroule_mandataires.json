@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 25.2,
+  "seconde": 22.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 25.2,
+  "seconde": 22.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,221 +21,102 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.2,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.0,
+  "seconde": 23.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.6,
+  "seconde": 23.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.6,
+  "seconde": 24.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.9,
+  "seconde": 24.2,
   "reseau": "capifrance",
-  "connues": 4280
+  "connues": 4438
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.9,
+  "seconde": 24.2,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.4,
+  "seconde": 24.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 39.1,
+  "seconde": 36.8,
   "reseau": "iad",
-  "n": 92106,
+  "n": 92122,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 40.8,
+  "seconde": 38.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 41.0,
+  "seconde": 38.9,
   "reseau": "iad",
-  "connues": 4280
+  "connues": 4438
  },
  {
   "etape": "departement",
-  "seconde": 245.1,
+  "seconde": 168.5,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 23,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 23,
-   "vendu": 11,
-   "ecarte": 16,
+   "garde": 5,
+   "vendu": 12,
+   "ecarte": 33,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 12,
-   "prix_trop_haut": 1
+   "location": 5,
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)",
-   "prix_trop_haut": "Maison 12 pièces de 340 m² à Montreuil (62170)"
+   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 389.7,
+  "seconde": 306.0,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 9,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 9,
-   "vendu": 13,
-   "ecarte": 27,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 27
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 592.5,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 21,
-  "tronquee": true,
-  "etats": {
-   "garde": 21,
-   "vendu": 10,
-   "ecarte": 19,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "prix_trop_haut": 7,
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
-   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
-   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 630.3,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 12,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 5,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Demeure 10 pièces de 393 m² à Verdun-sur-Garonne (82600)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 630.3,
-  "reseau": "safti",
-  "part_secondes": 595
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 630.8,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 631.6,
-  "reseau": "safti",
-  "n": 28215,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 632.3,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 632.5,
-  "reseau": "safti",
-  "connues": 4280
- },
- {
-  "etape": "departement",
-  "seconde": 842.0,
-  "reseau": "safti",
-  "departement": "70",
-  "visitees": 50,
-  "gardes": 19,
-  "tronquee": true,
-  "etats": {
-   "garde": 19,
-   "vendu": 2,
-   "ecarte": 29,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 29
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1040.7,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 19,
-  "tronquee": true,
-  "etats": {
-   "garde": 19,
-   "vendu": 0,
+   "garde": 7,
+   "vendu": 12,
    "ecarte": 31,
    "illisible": 0
   },
@@ -243,35 +124,183 @@
    "hors_perimetre": 31
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
+   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1227.6,
-  "reseau": "safti",
-  "departement": "72",
-  "visitees": 38,
-  "gardes": 22,
+  "seconde": 487.6,
+  "reseau": "iad",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 22,
-   "vendu": 5,
-   "ecarte": 11,
+   "garde": 16,
+   "vendu": 17,
+   "ecarte": 17,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 10,
-   "prix_trop_haut": 1
+   "location": 6,
+   "prix_trop_haut": 9,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
-   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+   "location": "Maison 3 pièces de 75 m² à MAUBEUGE (59600)",
+   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 621.7,
+  "reseau": "iad",
+  "departement": "60",
+  "visitees": 50,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 6,
+   "ecarte": 37,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 9,
+   "hors_perimetre": 18,
+   "prix_trop_haut": 10
+  },
+  "exemples": {
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "hors_perimetre": "Maison 7 pièces de 210 m² à Saint-Maximin-la-Sainte-Baume (83470)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 624.0,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 1,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 2 pièces de 35 m² à Neauphle-le-Château (78640)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 624.0,
+  "reseau": "safti",
+  "part_secondes": 599
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 624.4,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 625.4,
+  "reseau": "safti",
+  "n": 28194,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 626.1,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 626.3,
+  "reseau": "safti",
+  "connues": 4438
+ },
+ {
+  "etape": "departement",
+  "seconde": 902.2,
+  "reseau": "safti",
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 35,
+  "tronquee": true,
+  "etats": {
+   "garde": 35,
+   "vendu": 1,
+   "ecarte": 14,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 13
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
+   "hors_perimetre": "Vente de maison 6 pièces à Brive-La-Gaillarde 19100 : 107m², prix 229 000 €. Réf : 1645382"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1167.5,
+  "reseau": "safti",
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 32,
+  "tronquee": true,
+  "etats": {
+   "garde": 32,
+   "vendu": 0,
+   "ecarte": 18,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2,
+   "hors_perimetre": 16
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
+   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1224.4,
+  "reseau": "safti",
+  "departement": "88",
+  "visitees": 13,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 1,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 4,
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
+   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.6,
-  "gardes": 116
+  "seconde": 1224.4,
+  "gardes": 107
  }
 ]
