@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 241.8,
-  "departements": 32,
-  "communes": 15428
+  "seconde": 16.3,
+  "departements": 33,
+  "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 241.8,
+  "seconde": 16.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,215 +21,261 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 241.8,
+  "seconde": 16.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 242.4,
+  "seconde": 16.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 243.1,
+  "seconde": 17.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 243.1,
+  "seconde": 17.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 243.4,
+  "seconde": 17.5,
   "reseau": "capifrance",
-  "connues": 4640
+  "connues": 4670
  },
  {
   "etape": "reseau_debut",
-  "seconde": 243.4,
+  "seconde": 17.5,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 243.7,
+  "seconde": 17.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 253.5,
+  "seconde": 27.1,
   "reseau": "iad",
   "n": 92120,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 255.4,
+  "seconde": 28.9,
   "reseau": "iad",
-  "departements": 32
+  "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 255.7,
+  "seconde": 29.2,
   "reseau": "iad",
-  "connues": 4640
+  "connues": 4670
  },
  {
   "etape": "departement",
-  "seconde": 379.6,
+  "seconde": 165.4,
   "reseau": "iad",
-  "departement": "70",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 9,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 12,
-   "ecarte": 36,
+   "garde": 9,
+   "vendu": 19,
+   "ecarte": 22,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 35,
-   "titre_hors_cible:biens immobiliers a vendre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 233 m² à Buthiers (77760)",
-   "titre_hors_cible:biens immobiliers a vendre": "108 583 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 706.5,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 28,
-  "tronquee": true,
-  "etats": {
-   "garde": 28,
-   "vendu": 15,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 7
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 10 pièces de 226 m² à Avèze (30120)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 852.4,
-  "reseau": "iad",
-  "departement": "76",
-  "visitees": 37,
-  "gardes": 7,
-  "tronquee": true,
-  "etats": {
-   "garde": 7,
-   "vendu": 12,
-   "ecarte": 18,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 13,
+   "hors_perimetre": 16,
+   "location": 2,
    "prix_trop_haut": 4
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
+   "location": "Maison 4 pièces de 62 m² à Couvains (50680)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 319.7,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 14,
+  "tronquee": true,
+  "etats": {
+   "garde": 14,
+   "vendu": 26,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 7,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 458.9,
+  "reseau": "iad",
+  "departement": "88",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 9,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 33
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 621.5,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 36,
+  "gardes": 23,
+  "tronquee": true,
+  "etats": {
+   "garde": 23,
+   "vendu": 5,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 852.4,
+  "seconde": 621.5,
   "reseau": "safti",
-  "part_secondes": 589
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 853.0,
+  "seconde": 621.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 853.6,
+  "seconde": 622.7,
   "reseau": "safti",
   "n": 28153,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 854.4,
+  "seconde": 623.4,
   "reseau": "safti",
-  "departements": 32
+  "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 854.6,
+  "seconde": 623.6,
   "reseau": "safti",
-  "connues": 4640
+  "connues": 4670
  },
  {
   "etape": "departement",
-  "seconde": 1241.2,
+  "seconde": 796.7,
   "reseau": "safti",
-  "departement": "14",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 29,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 29,
+   "garde": 18,
+   "vendu": 0,
+   "ecarte": 32,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 32
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1002.7,
+  "reseau": "safti",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 23,
+  "tronquee": true,
+  "etats": {
+   "garde": 23,
    "vendu": 1,
+   "ecarte": 26,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 26
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1224.9,
+  "reseau": "safti",
+  "departement": "27",
+  "visitees": 47,
+  "gardes": 27,
+  "tronquee": true,
+  "etats": {
+   "garde": 27,
+   "vendu": 0,
    "ecarte": 19,
    "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 12,
-   "prix_trop_haut": 7
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
-   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1451.5,
-  "reseau": "safti",
-  "departement": "18",
-  "visitees": 35,
-  "gardes": 15,
-  "tronquee": true,
-  "etats": {
-   "garde": 15,
-   "vendu": 0,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 19,
+   "hors_perimetre": 18,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
-   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1451.5,
-  "gardes": 81
+  "seconde": 1224.9,
+  "gardes": 122
  }
 ]
