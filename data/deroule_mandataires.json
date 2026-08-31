@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.1,
-  "departements": 33,
-  "communes": 16182
+  "seconde": 241.8,
+  "departements": 32,
+  "communes": 15428
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.1,
+  "seconde": 241.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,215 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.1,
+  "seconde": 241.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.6,
+  "seconde": 242.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.0,
+  "seconde": 243.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.0,
+  "seconde": 243.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.2,
+  "seconde": 243.4,
   "reseau": "capifrance",
-  "connues": 4546
+  "connues": 4640
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.2,
+  "seconde": 243.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.5,
+  "seconde": 243.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.9,
+  "seconde": 253.5,
   "reseau": "iad",
-  "n": 92122,
+  "n": 92120,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.8,
+  "seconde": 255.4,
   "reseau": "iad",
-  "departements": 33
+  "departements": 32
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.0,
+  "seconde": 255.7,
   "reseau": "iad",
-  "connues": 4546
+  "connues": 4640
  },
  {
   "etape": "departement",
-  "seconde": 142.5,
+  "seconde": 379.6,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "70",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 14,
-   "ecarte": 34,
+   "vendu": 12,
+   "ecarte": 36,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 31,
-   "prix_trop_haut": 3
+   "hors_perimetre": 35,
+   "titre_hors_cible:biens immobiliers a vendre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 10 pièces de 160 m² à Châtillon (69380)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+   "hors_perimetre": "Maison 10 pièces de 233 m² à Buthiers (77760)",
+   "titre_hors_cible:biens immobiliers a vendre": "108 583 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 275.1,
+  "seconde": 706.5,
   "reseau": "iad",
-  "departement": "45",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 8,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 17,
-   "ecarte": 25,
+   "garde": 28,
+   "vendu": 15,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 9,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 3,
-   "hors_perimetre": 11
+   "hors_perimetre": 7
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
+   "hors_perimetre": "Maison de village 10 pièces de 226 m² à Avèze (30120)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 490.5,
+  "seconde": 852.4,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 50,
-  "gardes": 27,
+  "departement": "76",
+  "visitees": 37,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 27,
-   "vendu": 13,
-   "ecarte": 10,
+   "garde": 7,
+   "vendu": 12,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 10
+   "location": 1,
+   "hors_perimetre": 13,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 617.1,
-  "reseau": "iad",
-  "departement": "62",
-  "visitees": 42,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 20,
-   "ecarte": 12,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 8,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 617.1,
+  "seconde": 852.4,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 589
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 617.5,
+  "seconde": 853.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.1,
+  "seconde": 853.6,
   "reseau": "safti",
-  "n": 28194,
+  "n": 28153,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 618.8,
+  "seconde": 854.4,
   "reseau": "safti",
-  "departements": 33
+  "departements": 32
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.0,
+  "seconde": 854.6,
   "reseau": "safti",
-  "connues": 4546
+  "connues": 4640
  },
  {
   "etape": "departement",
-  "seconde": 907.8,
+  "seconde": 1241.2,
   "reseau": "safti",
-  "departement": "89",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 0,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Bagneaux-Sur-Loing 77167 : 245m², prix 450 000 €. Réf : 1666861"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1038.0,
-  "reseau": "safti",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
+   "garde": 29,
    "vendu": 1,
-   "ecarte": 44,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 44
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1159.0,
-  "reseau": "safti",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 1,
-   "ecarte": 46,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 46
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 315 000 €. Réf : 1657051"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1216.4,
-  "reseau": "safti",
-  "departement": "10",
-  "visitees": 24,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 0,
-   "ecarte": 21,
+   "ecarte": 19,
    "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 21
+   "hors_perimetre": 12,
+   "prix_trop_haut": 7
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1451.5,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 35,
+  "gardes": 15,
+  "tronquee": true,
+  "etats": {
+   "garde": 15,
+   "vendu": 0,
+   "ecarte": 20,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 19,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1216.4,
-  "gardes": 98
+  "seconde": 1451.5,
+  "gardes": 81
  }
 ]
