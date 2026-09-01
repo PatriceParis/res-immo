@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.3,
+  "seconde": 15.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.3,
+  "seconde": 15.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,44 +21,44 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.3,
+  "seconde": 15.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.9,
+  "seconde": 16.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.3,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.3,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.5,
+  "seconde": 17.1,
   "reseau": "capifrance",
-  "connues": 4670
+  "connues": 4811
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.5,
+  "seconde": 17.1,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.8,
+  "seconde": 17.3,
   "reseau": "iad",
   "n": 1
  },
@@ -66,7 +66,7 @@
   "etape": "adresses_du_sitemap",
   "seconde": 27.1,
   "reseau": "iad",
-  "n": 92120,
+  "n": 92202,
   "complet": false
  },
  {
@@ -79,203 +79,228 @@
   "etape": "catalogue_relu",
   "seconde": 29.2,
   "reseau": "iad",
-  "connues": 4670
+  "connues": 4811
  },
  {
   "etape": "departement",
-  "seconde": 165.4,
+  "seconde": 130.2,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "02",
   "visitees": 50,
-  "gardes": 9,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 9,
-   "vendu": 19,
-   "ecarte": 22,
+   "garde": 1,
+   "vendu": 8,
+   "ecarte": 41,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 16,
-   "location": 2,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison 4 pièces de 62 m² à Couvains (50680)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 319.7,
-  "reseau": "iad",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 14,
-  "tronquee": true,
-  "etats": {
-   "garde": 14,
-   "vendu": 26,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 7,
+   "titre_hors_cible:appartement": 19,
+   "location": 3,
+   "hors_perimetre": 18,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
-   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
-   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "location": "Maison 4 pièces de 90 m² à CHARLY-SUR-MARNE (02310)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 458.9,
+  "seconde": 248.2,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 14,
+   "ecarte": 31,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 31
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 393.8,
+  "reseau": "iad",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 10,
+  "tronquee": true,
+  "etats": {
+   "garde": 10,
+   "vendu": 18,
+   "ecarte": 21,
+   "illisible": 1
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 17,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
+   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 526.2,
+  "reseau": "iad",
+  "departement": "14",
   "visitees": 50,
   "gardes": 8,
   "tronquee": true,
   "etats": {
    "garde": 8,
-   "vendu": 9,
-   "ecarte": 33,
+   "vendu": 10,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33
+   "hors_perimetre": 22,
+   "prix_trop_haut": 10
   },
   "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+   "hors_perimetre": "Maison de ville 10 pièces de 346 m² à Castillon-la-Bataille (33350)",
+   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 621.5,
+  "seconde": 616.9,
   "reseau": "iad",
-  "departement": "89",
-  "visitees": 36,
-  "gardes": 23,
+  "departement": "37",
+  "visitees": 38,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 23,
-   "vendu": 5,
-   "ecarte": 8,
-   "illisible": 0
+   "garde": 4,
+   "vendu": 14,
+   "ecarte": 18,
+   "illisible": 2
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 4,
-   "prix_trop_haut": 1
+   "prix_trop_haut": 6,
+   "hors_perimetre": 12
   },
   "exemples": {
-   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
-   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
-   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)",
+   "hors_perimetre": "Maison d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 621.5,
+  "seconde": 616.9,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 621.8,
+  "seconde": 617.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 622.7,
+  "seconde": 618.1,
   "reseau": "safti",
-  "n": 28153,
+  "n": 28192,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 623.4,
+  "seconde": 618.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 623.6,
+  "seconde": 619.0,
   "reseau": "safti",
-  "connues": 4670
+  "connues": 4811
  },
  {
   "etape": "departement",
-  "seconde": 796.7,
+  "seconde": 871.8,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 18,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 18,
+   "garde": 34,
    "vendu": 0,
-   "ecarte": 32,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 32
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1002.7,
-  "reseau": "safti",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 23,
-  "tronquee": true,
-  "etats": {
-   "garde": 23,
-   "vendu": 1,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 26
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1224.9,
-  "reseau": "safti",
-  "departement": "27",
-  "visitees": 47,
-  "gardes": 27,
-  "tronquee": true,
-  "etats": {
-   "garde": 27,
-   "vendu": 0,
-   "ecarte": 19,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 18,
+   "hors_perimetre": 15,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
-   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
+   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390",
+   "prix_trop_haut": "Vente de maison 8 pièces à Gallardon 28320 : 224m², prix 750 000 €. Réf : 1676013"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1081.3,
+  "reseau": "safti",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 22,
+  "tronquee": true,
+  "etats": {
+   "garde": 22,
+   "vendu": 0,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 28
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1218.6,
+  "reseau": "safti",
+  "departement": "37",
+  "visitees": 22,
+  "gardes": 21,
+  "tronquee": true,
+  "etats": {
+   "garde": 21,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1224.9,
-  "gardes": 122
+  "seconde": 1218.6,
+  "gardes": 104
  }
 ]
