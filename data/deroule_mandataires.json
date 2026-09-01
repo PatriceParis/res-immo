@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 15.8,
+  "seconde": 21.9,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 15.8,
+  "seconde": 22.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,286 +21,282 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 15.8,
+  "seconde": 22.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.4,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.8,
+  "seconde": 23.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.8,
+  "seconde": 23.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.1,
+  "seconde": 23.5,
   "reseau": "capifrance",
-  "connues": 4811
+  "connues": 4886
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.1,
+  "seconde": 23.5,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.3,
+  "seconde": 23.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 27.1,
+  "seconde": 34.5,
   "reseau": "iad",
   "n": 92202,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.9,
+  "seconde": 36.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.2,
+  "seconde": 36.2,
   "reseau": "iad",
-  "connues": 4811
+  "connues": 4886
  },
  {
   "etape": "departement",
-  "seconde": 130.2,
+  "seconde": 166.7,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 8,
-   "ecarte": 41,
+   "garde": 5,
+   "vendu": 15,
+   "ecarte": 30,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 19,
-   "location": 3,
-   "hors_perimetre": 18,
-   "prix_trop_haut": 1
+   "hors_perimetre": 23,
+   "location": 1,
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 4 pièces de 90 m² à CHARLY-SUR-MARNE (02310)",
-   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
-   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
+   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 248.2,
+  "seconde": 339.7,
   "reseau": "iad",
-  "departement": "08",
+  "departement": "52",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 14,
-   "ecarte": 31,
-   "illisible": 1
+   "garde": 20,
+   "vendu": 11,
+   "ecarte": 19,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 31
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 393.8,
-  "reseau": "iad",
-  "departement": "10",
-  "visitees": 50,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 18,
-   "ecarte": 21,
-   "illisible": 1
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
    "location": 2,
-   "hors_perimetre": 17,
-   "prix_trop_haut": 1
+   "hors_perimetre": 17
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
-   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
+   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 526.2,
+  "seconde": 481.2,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "53",
   "visitees": 50,
-  "gardes": 8,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 10,
+   "garde": 11,
+   "vendu": 15,
+   "ecarte": 23,
+   "illisible": 1
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 22
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
+   "hors_perimetre": "Maison de campagne 3 pièces de 64 m² à Saint-Léger-sur-Vouzance (03130)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 597.2,
+  "reseau": "iad",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 15,
    "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 22,
-   "prix_trop_haut": 10
+   "hors_perimetre": 30,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 10 pièces de 346 m² à Castillon-la-Bataille (33350)",
-   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 616.9,
+  "seconde": 623.1,
   "reseau": "iad",
-  "departement": "37",
-  "visitees": 38,
-  "gardes": 4,
+  "departement": "18",
+  "visitees": 12,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 14,
-   "ecarte": 18,
-   "illisible": 2
+   "garde": 0,
+   "vendu": 2,
+   "ecarte": 10,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6,
-   "hors_perimetre": 12
+   "location": 2,
+   "hors_perimetre": 8
   },
   "exemples": {
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)",
-   "hors_perimetre": "Maison d"
+   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
+   "hors_perimetre": "Maison 1 pièce de 53 m² à Saint-Just-de-Claix (38680)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 616.9,
+  "seconde": 623.1,
   "reseau": "safti",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 617.2,
+  "seconde": 623.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.1,
+  "seconde": 625.3,
   "reseau": "safti",
   "n": 28192,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 618.8,
+  "seconde": 625.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.0,
+  "seconde": 626.2,
   "reseau": "safti",
-  "connues": 4811
+  "connues": 4886
  },
  {
   "etape": "departement",
-  "seconde": 871.8,
+  "seconde": 895.0,
   "reseau": "safti",
-  "departement": "28",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 34,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 34,
-   "vendu": 0,
-   "ecarte": 16,
+   "garde": 40,
+   "vendu": 1,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 15,
-   "prix_trop_haut": 1
+   "hors_perimetre": 9
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390",
-   "prix_trop_haut": "Vente de maison 8 pièces à Gallardon 28320 : 224m², prix 750 000 €. Réf : 1676013"
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1081.3,
+  "seconde": 1120.2,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 22,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 22,
+   "garde": 29,
    "vendu": 0,
-   "ecarte": 28,
-   "illisible": 0
+   "ecarte": 20,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 28
+   "hors_perimetre": 19,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1218.6,
+  "seconde": 1223.7,
   "reseau": "safti",
-  "departement": "37",
-  "visitees": 22,
-  "gardes": 21,
+  "departement": "45",
+  "visitees": 23,
+  "gardes": 15,
   "tronquee": true,
   "etats": {
-   "garde": 21,
+   "garde": 15,
    "vendu": 0,
-   "ecarte": 1,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "hors_perimetre": 8
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1218.6,
-  "gardes": 104
+  "seconde": 1223.7,
+  "gardes": 123
  }
 ]
