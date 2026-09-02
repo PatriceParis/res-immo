@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 21.9,
+  "seconde": 24.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 22.1,
+  "seconde": 24.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,142 +21,71 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.1,
+  "seconde": 24.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.7,
+  "seconde": 25.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.3,
+  "seconde": 26.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 23.3,
+  "seconde": 26.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.5,
+  "seconde": 26.3,
   "reseau": "capifrance",
-  "connues": 4886
+  "connues": 5061
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.5,
+  "seconde": 26.3,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.8,
+  "seconde": 26.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 34.5,
+  "seconde": 41.3,
   "reseau": "iad",
-  "n": 92202,
+  "n": 92358,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 36.0,
+  "seconde": 43.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 36.2,
+  "seconde": 43.5,
   "reseau": "iad",
-  "connues": 4886
+  "connues": 5061
  },
  {
   "etape": "departement",
-  "seconde": 166.7,
+  "seconde": 170.7,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 15,
-   "ecarte": 30,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 23,
-   "location": 1,
-   "prix_trop_haut": 6
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 339.7,
-  "reseau": "iad",
-  "departement": "52",
-  "visitees": 50,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
-   "vendu": 11,
-   "ecarte": 19,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 17
-  },
-  "exemples": {
-   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 481.2,
-  "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 11,
-  "tronquee": true,
-  "etats": {
-   "garde": 11,
-   "vendu": 15,
-   "ecarte": 23,
-   "illisible": 1
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 22
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
-   "hors_perimetre": "Maison de campagne 3 pièces de 64 m² à Saint-Léger-sur-Vouzance (03130)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 597.2,
-  "reseau": "iad",
-  "departement": "54",
+  "departement": "21",
   "visitees": 50,
   "gardes": 3,
   "tronquee": true,
@@ -167,136 +96,186 @@
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 30,
-   "prix_trop_haut": 2
+   "hors_perimetre": 31,
+   "location": 1
   },
   "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
+   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 623.1,
+  "seconde": 283.5,
   "reseau": "iad",
-  "departement": "18",
-  "visitees": 12,
-  "gardes": 0,
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 2,
-   "ecarte": 10,
+   "garde": 1,
+   "vendu": 7,
+   "ecarte": 42,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 41,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 1 pièce de 170 m² à Talmont-Saint-Hilaire (85440)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 482.5,
+  "reseau": "iad",
+  "departement": "27",
+  "visitees": 50,
+  "gardes": 17,
+  "tronquee": true,
+  "etats": {
+   "garde": 17,
+   "vendu": 19,
+   "ecarte": 14,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 5,
+   "hors_perimetre": 8,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 632.2,
+  "reseau": "iad",
+  "departement": "28",
+  "visitees": 49,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 16,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
    "location": 2,
-   "hors_perimetre": 8
+   "hors_perimetre": 22
   },
   "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison 1 pièce de 53 m² à Saint-Just-de-Claix (38680)"
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 623.1,
+  "seconde": 632.2,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.8,
+  "seconde": 632.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 625.3,
+  "seconde": 634.8,
   "reseau": "safti",
-  "n": 28192,
+  "n": 28240,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 625.9,
+  "seconde": 635.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 626.2,
+  "seconde": 635.8,
   "reseau": "safti",
-  "connues": 4886
+  "connues": 5061
  },
  {
   "etape": "departement",
-  "seconde": 895.0,
+  "seconde": 895.3,
   "reseau": "safti",
-  "departement": "39",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 1,
-   "ecarte": 9,
+   "garde": 30,
+   "vendu": 0,
+   "ecarte": 20,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9
+   "prix_trop_haut": 1,
+   "hors_perimetre": 19
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
+   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
+   "hors_perimetre": "Vente de maison 7 pièces à Beauvoir-De-Marc 38440 : 222m², prix 680 000 €. Réf : 1700796"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1120.2,
+  "seconde": 1112.0,
   "reseau": "safti",
-  "departement": "41",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 29,
+  "gardes": 17,
   "tronquee": true,
   "etats": {
-   "garde": 29,
-   "vendu": 0,
-   "ecarte": 20,
-   "illisible": 1
+   "garde": 17,
+   "vendu": 1,
+   "ecarte": 32,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 19,
+   "hors_perimetre": 31,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743",
+   "prix_trop_haut": "Vente de maison 8 pièces à Champigny 51370 : 250m², prix 749 000 €. Réf : 1657134"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1223.7,
+  "seconde": 1228.1,
   "reseau": "safti",
-  "departement": "45",
-  "visitees": 23,
-  "gardes": 15,
+  "departement": "52",
+  "visitees": 42,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 15,
+   "garde": 3,
    "vendu": 0,
-   "ecarte": 8,
+   "ecarte": 39,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 39
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797"
+   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1223.7,
-  "gardes": 123
+  "seconde": 1228.2,
+  "gardes": 80
  }
 ]
