@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 22.1,
+  "seconde": 24.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 22.1,
+  "seconde": 24.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,196 +21,192 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.1,
+  "seconde": 24.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.9,
+  "seconde": 25.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.7,
+  "seconde": 26.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 23.7,
+  "seconde": 26.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 24.0,
+  "seconde": 26.4,
   "reseau": "capifrance",
-  "connues": 5138
+  "connues": 5285
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.0,
+  "seconde": 26.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.2,
+  "seconde": 26.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 35.2,
+  "seconde": 38.0,
   "reseau": "iad",
-  "n": 92358,
+  "n": 92482,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 37.1,
+  "seconde": 40.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 37.4,
+  "seconde": 40.3,
   "reseau": "iad",
-  "connues": 5138
+  "connues": 5285
  },
  {
   "etape": "departement",
-  "seconde": 149.4,
+  "seconde": 160.4,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "57",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 13,
-   "ecarte": 32,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 32
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 296.1,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 15,
-   "ecarte": 26,
+   "vendu": 12,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "prix_trop_haut": 7,
-   "hors_perimetre": 17
+   "location": 5,
+   "hors_perimetre": 26,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
-   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
-   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
+   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 453.9,
+  "seconde": 289.5,
   "reseau": "iad",
-  "departement": "55",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 11,
+   "ecarte": 34,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 34
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 464.6,
+  "reseau": "iad",
+  "departement": "59",
   "visitees": 50,
   "gardes": 14,
   "tronquee": true,
   "etats": {
    "garde": 14,
-   "vendu": 16,
-   "ecarte": 20,
+   "vendu": 22,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 19,
-   "titre_hors_cible:biens immobiliers a vendre": 1
+   "location": 3,
+   "prix_trop_haut": 8,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)",
-   "titre_hors_cible:biens immobiliers a vendre": "109 498 biens immobiliers à vendre"
+   "location": "Maison 3 pièces de 75 m² à MAUBEUGE (59600)",
+   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 563.5,
+  "seconde": 596.7,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "60",
   "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 6,
+   "ecarte": 40,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 8,
+   "hors_perimetre": 21,
+   "prix_trop_haut": 11
+  },
+  "exemples": {
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "hors_perimetre": "Maison 7 pièces de 210 m² à Saint-Maximin-la-Sainte-Baume (83470)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 626.3,
+  "reseau": "iad",
+  "departement": "61",
+  "visitees": 11,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 13,
-   "ecarte": 36,
+   "vendu": 7,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33,
-   "prix_trop_haut": 3
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 3 pièces de 68 m² à Viry-Châtillon (91170)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 626.7,
-  "reseau": "iad",
-  "departement": "45",
-  "visitees": 28,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 6,
-   "ecarte": 19,
-   "illisible": 1
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 9,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 3,
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison traditionnelle 10 pièces de 169 m² à Sainte-Geneviève-des-Bois (91700)"
+   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 626.7,
+  "seconde": 626.3,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 627.1,
+  "seconde": 627.0,
   "reseau": "safti",
   "n": 15
  },
@@ -218,91 +214,89 @@
   "etape": "adresses_du_sitemap",
   "seconde": 628.2,
   "reseau": "safti",
-  "n": 28240,
+  "n": 28313,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 628.9,
+  "seconde": 629.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.1,
+  "seconde": 629.2,
   "reseau": "safti",
-  "connues": 5138
+  "connues": 5285
  },
  {
   "etape": "departement",
-  "seconde": 935.2,
+  "seconde": 957.1,
   "reseau": "safti",
-  "departement": "53",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 41,
+   "garde": 39,
    "vendu": 2,
-   "ecarte": 7,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6,
+   "hors_perimetre": 8,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378",
-   "prix_trop_haut": "Vente de maison 6 pièces à Chateau Gontier Sur Mayenne 53200 : 180m², prix 748 000 €. Réf : 1620784"
+   "hors_perimetre": "Vente de maison 5 pièces à Albefeuille-Lagarde 82290 : 156m², prix 174 900 €. Réf : 1647065",
+   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1109.4,
+  "seconde": 1221.4,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 13,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 1,
-   "ecarte": 36,
+   "garde": 30,
+   "vendu": 0,
+   "ecarte": 20,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 36
+   "hors_perimetre": 20
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1222.8,
+  "seconde": 1233.5,
   "reseau": "safti",
-  "departement": "55",
-  "visitees": 21,
-  "gardes": 16,
+  "departement": "59",
+  "visitees": 2,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 16,
+   "garde": 1,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 4
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 6 pièces à Claye-Souilly 77410 : 150m², prix 473 000 €. Réf : 1556864"
+   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1222.8,
-  "gardes": 100
+  "seconde": 1233.5,
+  "gardes": 98
  }
 ]
