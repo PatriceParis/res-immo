@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.8,
+  "seconde": 20.0,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.8,
+  "seconde": 20.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,274 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.8,
+  "seconde": 20.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.6,
+  "seconde": 21.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.1,
+  "seconde": 21.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.1,
+  "seconde": 21.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.4,
+  "seconde": 21.9,
   "reseau": "capifrance",
-  "connues": 5285
+  "connues": 5335
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.4,
+  "seconde": 21.9,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.7,
+  "seconde": 22.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 38.0,
+  "seconde": 32.9,
   "reseau": "iad",
   "n": 92482,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 40.0,
+  "seconde": 34.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 40.3,
+  "seconde": 35.2,
   "reseau": "iad",
-  "connues": 5285
+  "connues": 5335
  },
  {
   "etape": "departement",
-  "seconde": 160.4,
+  "seconde": 202.7,
   "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 12,
-   "ecarte": 34,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "hors_perimetre": 26,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 289.5,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 11,
-   "ecarte": 34,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 34
-  },
-  "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 464.6,
-  "reseau": "iad",
-  "departement": "59",
+  "departement": "62",
   "visitees": 50,
   "gardes": 14,
   "tronquee": true,
   "etats": {
    "garde": 14,
-   "vendu": 22,
-   "ecarte": 14,
+   "vendu": 20,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
    "location": 3,
-   "prix_trop_haut": 8,
-   "hors_perimetre": 3
+   "hors_perimetre": 11,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison 3 pièces de 75 m² à MAUBEUGE (59600)",
-   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
-   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
+   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 596.7,
+  "seconde": 320.1,
   "reseau": "iad",
-  "departement": "60",
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 19,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 2 pièces de 28 m² à Château-Bernard (38650)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 463.6,
+  "reseau": "iad",
+  "departement": "50",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 21,
+   "ecarte": 21,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 15,
+   "location": 2,
+   "prix_trop_haut": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
+   "location": "Maison de village 4 pièces de 75 m² à Saint-Joseph (97480)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 589.4,
+  "reseau": "iad",
+  "departement": "70",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 6,
-   "ecarte": 40,
+   "vendu": 11,
+   "ecarte": 35,
    "illisible": 0
   },
   "motifs": {
-   "location": 8,
-   "hors_perimetre": 21,
-   "prix_trop_haut": 11
+   "hors_perimetre": 35
   },
   "exemples": {
-   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
-   "hors_perimetre": "Maison 7 pièces de 210 m² à Saint-Maximin-la-Sainte-Baume (83470)",
-   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 626.3,
+  "seconde": 627.1,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 11,
-  "gardes": 1,
+  "departement": "72",
+  "visitees": 14,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 1,
+   "garde": 2,
    "vendu": 7,
-   "ecarte": 3,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 3
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
+   "hors_perimetre": "Maison de village 10 pièces de 226 m² à Avèze (30120)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 626.3,
+  "seconde": 627.1,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 627.0,
+  "seconde": 627.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 628.2,
+  "seconde": 629.6,
   "reseau": "safti",
   "n": 28313,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 629.0,
+  "seconde": 630.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.2,
+  "seconde": 630.6,
   "reseau": "safti",
-  "connues": 5285
+  "connues": 5335
  },
  {
   "etape": "departement",
-  "seconde": 957.1,
+  "seconde": 859.7,
   "reseau": "safti",
-  "departement": "57",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 39,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 2,
-   "ecarte": 9,
+   "garde": 24,
+   "vendu": 0,
+   "ecarte": 26,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8,
-   "prix_trop_haut": 1
+   "hors_perimetre": 26
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Albefeuille-Lagarde 82290 : 156m², prix 174 900 €. Réf : 1647065",
-   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384"
+   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1221.4,
+  "seconde": 1186.5,
   "reseau": "safti",
-  "departement": "58",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 30,
+   "garde": 44,
    "vendu": 0,
-   "ecarte": 20,
-   "illisible": 0
+   "ecarte": 5,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 20
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1233.5,
+  "seconde": 1229.0,
   "reseau": "safti",
-  "departement": "59",
-  "visitees": 2,
-  "gardes": 1,
+  "departement": "62",
+  "visitees": 6,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 1,
+   "garde": 6,
    "vendu": 0,
-   "ecarte": 1,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1233.5,
-  "gardes": 98
+  "seconde": 1229.0,
+  "gardes": 105
  }
 ]
