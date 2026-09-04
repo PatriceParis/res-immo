@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 20.0,
+  "seconde": 27.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 20.0,
+  "seconde": 27.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,150 +21,127 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.0,
+  "seconde": 27.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.1,
+  "seconde": 28.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 21.6,
+  "seconde": 29.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 21.6,
+  "seconde": 29.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.9,
+  "seconde": 29.8,
   "reseau": "capifrance",
-  "connues": 5335
+  "connues": 5462
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.9,
+  "seconde": 29.8,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.1,
+  "seconde": 30.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 32.9,
+  "seconde": 40.9,
   "reseau": "iad",
-  "n": 92482,
+  "n": 92591,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 34.9,
+  "seconde": 42.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 35.2,
+  "seconde": 43.0,
   "reseau": "iad",
-  "connues": 5335
+  "connues": 5462
  },
  {
   "etape": "departement",
-  "seconde": 202.7,
+  "seconde": 227.3,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 17,
+  "tronquee": true,
+  "etats": {
+   "garde": 17,
+   "vendu": 14,
+   "ecarte": 19,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 14,
+   "prix_trop_haut": 4
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 410.9,
+  "reseau": "iad",
+  "departement": "80",
   "visitees": 50,
   "gardes": 14,
   "tronquee": true,
   "etats": {
    "garde": 14,
-   "vendu": 20,
-   "ecarte": 16,
+   "vendu": 28,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 11,
-   "prix_trop_haut": 2
+   "location": 1,
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 320.1,
+  "seconde": 552.1,
   "reseau": "iad",
-  "departement": "71",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 19,
-   "ecarte": 28,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 25,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Appartement 2 pièces de 28 m² à Château-Bernard (38650)",
-   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 463.6,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
-   "vendu": 21,
-   "ecarte": 21,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 15,
-   "location": 2,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison de village 4 pièces de 75 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 589.4,
-  "reseau": "iad",
-  "departement": "70",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 11,
+   "garde": 5,
+   "vendu": 10,
    "ecarte": 35,
    "illisible": 0
   },
@@ -172,123 +149,133 @@
    "hors_perimetre": 35
   },
   "exemples": {
-   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 627.1,
+  "seconde": 637.3,
   "reseau": "iad",
-  "departement": "72",
-  "visitees": 14,
-  "gardes": 2,
+  "departement": "89",
+  "visitees": 17,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 7,
-   "ecarte": 5,
+   "garde": 6,
+   "vendu": 3,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "location": 3,
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison de village 10 pièces de 226 m² à Avèze (30120)"
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 627.1,
+  "seconde": 637.3,
   "reseau": "safti",
-  "part_secondes": 593
+  "part_secondes": 590
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 627.7,
+  "seconde": 637.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 629.6,
+  "seconde": 639.0,
   "reseau": "safti",
-  "n": 28313,
+  "n": 28310,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 630.4,
+  "seconde": 639.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 630.6,
+  "seconde": 640.0,
   "reseau": "safti",
-  "connues": 5335
+  "connues": 5462
  },
  {
   "etape": "departement",
-  "seconde": 859.7,
+  "seconde": 845.4,
   "reseau": "safti",
-  "departement": "60",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 24,
+  "gardes": 17,
   "tronquee": true,
   "etats": {
-   "garde": 24,
-   "vendu": 0,
-   "ecarte": 26,
+   "garde": 17,
+   "vendu": 2,
+   "ecarte": 31,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 26
+   "hors_perimetre": 31
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
+   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1186.5,
+  "seconde": 1039.3,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 44,
+   "garde": 16,
    "vendu": 0,
-   "ecarte": 5,
-   "illisible": 1
+   "ecarte": 34,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 34
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730"
+   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1229.0,
+  "seconde": 1230.1,
   "reseau": "safti",
-  "departement": "62",
-  "visitees": 6,
-  "gardes": 6,
+  "departement": "72",
+  "visitees": 38,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 20,
+   "vendu": 6,
+   "ecarte": 12,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 10,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 1229.0,
-  "gardes": 105
+  "seconde": 1230.1,
+  "gardes": 95
  }
 ]
