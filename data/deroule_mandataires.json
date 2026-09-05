@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 20.8,
+  "seconde": 17.1,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 20.9,
+  "seconde": 17.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,284 +21,328 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.9,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.6,
+  "seconde": 17.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 22.1,
+  "seconde": 18.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.1,
+  "seconde": 18.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 22.4,
+  "seconde": 18.6,
   "reseau": "capifrance",
-  "connues": 5616
+  "connues": 5763
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.4,
+  "seconde": 18.6,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.8,
+  "seconde": 18.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 34.0,
+  "seconde": 28.6,
   "reseau": "iad",
   "n": 92671,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 35.5,
+  "seconde": 30.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 35.7,
+  "seconde": 30.9,
   "reseau": "iad",
-  "connues": 5616
+  "connues": 5763
  },
  {
   "etape": "departement",
-  "seconde": 164.9,
+  "seconde": 127.5,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 11,
-   "ecarte": 35,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 26,
-   "location": 3,
-   "prix_trop_haut": 6
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 309.3,
-  "reseau": "iad",
-  "departement": "52",
-  "visitees": 50,
-  "gardes": 7,
-  "tronquee": true,
-  "etats": {
-   "garde": 7,
-   "vendu": 16,
-   "ecarte": 27,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 25
-  },
-  "exemples": {
-   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 441.5,
-  "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 21,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 19
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 551.2,
-  "reseau": "iad",
-  "departement": "54",
+  "departement": "25",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 15,
-   "ecarte": 35,
+   "vendu": 7,
+   "ecarte": 43,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33,
-   "prix_trop_haut": 2
+   "hors_perimetre": 42,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 100 m² à Boussy-Saint-Antoine (91800)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 624.5,
+  "seconde": 260.7,
   "reseau": "iad",
-  "departement": "21",
-  "visitees": 31,
+  "departement": "27",
+  "visitees": 50,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 25,
+   "ecarte": 16,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 5,
+   "hors_perimetre": 9,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 383.3,
+  "reseau": "iad",
+  "departement": "28",
+  "visitees": 50,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 18,
+   "ecarte": 25,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 23
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 496.6,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 14,
+   "ecarte": 33,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 33
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 596.5,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 8,
-   "ecarte": 22,
+   "vendu": 13,
+   "ecarte": 36,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 21,
-   "location": 1
+   "hors_perimetre": 33,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
-   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
+   "hors_perimetre": "Maison traditionnelle 10 pièces de 160 m² à Châtillon (69380)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 618.2,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 11,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 11,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "prix_trop_haut": 7,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 2 pièces de 39 m² à Romorantin-Lanthenay (41200)",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
+   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.5,
+  "seconde": 618.2,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 625.0,
+  "seconde": 618.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 626.2,
+  "seconde": 619.4,
   "reseau": "safti",
   "n": 28361,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 626.7,
+  "seconde": 620.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 627.0,
+  "seconde": 620.5,
   "reseau": "safti",
-  "connues": 5616
+  "connues": 5763
  },
  {
   "etape": "departement",
-  "seconde": 876.6,
+  "seconde": 796.1,
   "reseau": "safti",
-  "departement": "80",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 32,
+  "gardes": 14,
   "tronquee": true,
   "etats": {
-   "garde": 32,
+   "garde": 14,
+   "vendu": 1,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 28,
+   "prix_trop_haut": 7
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 972.7,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 16,
+  "tronquee": true,
+  "etats": {
+   "garde": 16,
    "vendu": 0,
-   "ecarte": 18,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 16
+   "hors_perimetre": 33,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
-   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1086.1,
+  "seconde": 1127.8,
   "reseau": "safti",
-  "departement": "88",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 23,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 23,
+   "garde": 11,
    "vendu": 1,
-   "ecarte": 26,
+   "ecarte": 38,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6,
-   "hors_perimetre": 20
+   "hors_perimetre": 38
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
-   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320"
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1222.8,
+  "seconde": 1219.0,
   "reseau": "safti",
-  "departement": "89",
-  "visitees": 28,
-  "gardes": 19,
+  "departement": "25",
+  "visitees": 30,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 19,
-   "vendu": 1,
-   "ecarte": 8,
+   "garde": 3,
+   "vendu": 0,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 27
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Beugnon Thireuil 79130 : 70m², prix 45 333 €. Réf : 1542904"
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1222.8,
-  "gardes": 95
+  "seconde": 1219.0,
+  "gardes": 63
  }
 ]
