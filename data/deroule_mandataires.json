@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.0,
+  "seconde": 16.5,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.1,
+  "seconde": 16.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,288 +21,263 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.1,
+  "seconde": 16.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.0,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.4,
+  "seconde": 17.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.4,
+  "seconde": 17.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.6,
+  "seconde": 17.9,
   "reseau": "capifrance",
-  "connues": 5876
+  "connues": 5913
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.6,
+  "seconde": 18.0,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.0,
+  "seconde": 18.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 41.3,
+  "seconde": 27.7,
   "reseau": "iad",
   "n": 92740,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.3,
+  "seconde": 29.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 42.5,
+  "seconde": 29.9,
   "reseau": "iad",
-  "connues": 5876
+  "connues": 5913
  },
  {
   "etape": "departement",
-  "seconde": 182.8,
+  "seconde": 175.2,
   "reseau": "iad",
-  "departement": "45",
+  "departement": "59",
   "visitees": 50,
-  "gardes": 8,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 16,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 9,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 4,
-   "hors_perimetre": 11
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 333.9,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 16,
-   "ecarte": 25,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 25
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 461.8,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
+   "garde": 12,
    "vendu": 22,
-   "ecarte": 23,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 17,
-   "location": 2,
-   "prix_trop_haut": 4
+   "location": 4,
+   "prix_trop_haut": 9,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison de village 4 pièces de 75 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+   "location": "Maison 3 pièces de 75 m² à MAUBEUGE (59600)",
+   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 591.9,
+  "seconde": 299.9,
   "reseau": "iad",
-  "departement": "57",
+  "departement": "60",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 12,
-   "ecarte": 34,
+   "vendu": 5,
+   "ecarte": 41,
    "illisible": 0
   },
   "motifs": {
-   "location": 5,
-   "hors_perimetre": 26,
-   "prix_trop_haut": 3
+   "location": 9,
+   "hors_perimetre": 20,
+   "prix_trop_haut": 12
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "hors_perimetre": "Maison 7 pièces de 210 m² à Saint-Maximin-la-Sainte-Baume (83470)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 625.3,
+  "seconde": 509.4,
   "reseau": "iad",
-  "departement": "58",
-  "visitees": 15,
-  "gardes": 1,
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 27,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 4,
-   "ecarte": 10,
+   "garde": 27,
+   "vendu": 14,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 10
+   "hors_perimetre": 9
   },
   "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
+   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 626.4,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 46,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 22,
+   "ecarte": 18,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 12,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.3,
+  "seconde": 626.4,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 590
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 625.8,
+  "seconde": 626.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 627.5,
+  "seconde": 627.6,
   "reseau": "safti",
   "n": 28299,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 627.9,
+  "seconde": 628.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 628.1,
+  "seconde": 628.6,
   "reseau": "safti",
-  "connues": 5876
+  "connues": 5913
  },
  {
   "etape": "departement",
-  "seconde": 863.4,
+  "seconde": 938.2,
   "reseau": "safti",
-  "departement": "27",
+  "departement": "37",
   "visitees": 50,
-  "gardes": 28,
+  "gardes": 47,
   "tronquee": true,
   "etats": {
-   "garde": 28,
+   "garde": 47,
    "vendu": 0,
-   "ecarte": 22,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 21,
+   "prix_trop_haut": 1,
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
+   "hors_perimetre": "Vente de maison 7 pièces à Bordes-De-Riviere 31210 : 260m², prix 440 000 €. Réf : 1588610"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1135.2,
+  "reseau": "safti",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 20,
+  "tronquee": true,
+  "etats": {
+   "garde": 20,
+   "vendu": 1,
+   "ecarte": 29,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 29
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1217.1,
+  "reseau": "safti",
+  "departement": "41",
+  "visitees": 25,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 0,
+   "ecarte": 18,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 17,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
-   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1033.6,
-  "reseau": "safti",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 11,
-  "tronquee": true,
-  "etats": {
-   "garde": 11,
-   "vendu": 0,
-   "ecarte": 39,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 37,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390",
-   "prix_trop_haut": "Vente de maison 8 pièces à Gallardon 28320 : 224m², prix 750 000 €. Réf : 1676013"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1228.2,
-  "reseau": "safti",
-  "departement": "36",
-  "visitees": 47,
-  "gardes": 19,
-  "tronquee": true,
-  "etats": {
-   "garde": 19,
-   "vendu": 0,
-   "ecarte": 28,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 28
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1228.2,
-  "gardes": 85
+  "seconde": 1217.1,
+  "gardes": 123
  }
 ]
