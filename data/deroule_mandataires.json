@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.6,
+  "seconde": 16.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.6,
+  "seconde": 16.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,284 +21,240 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.6,
+  "seconde": 16.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.6,
+  "seconde": 17.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.1,
+  "seconde": 17.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.1,
+  "seconde": 17.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.4,
+  "seconde": 17.8,
   "reseau": "capifrance",
-  "connues": 6035
+  "connues": 6108
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.5,
+  "seconde": 17.8,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.1,
+  "seconde": 18.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 40.2,
+  "seconde": 27.8,
   "reseau": "iad",
-  "n": 92815,
+  "n": 92960,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.2,
+  "seconde": 29.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 42.5,
+  "seconde": 29.9,
   "reseau": "iad",
-  "connues": 6035
+  "connues": 6108
  },
  {
   "etape": "departement",
-  "seconde": 162.7,
+  "seconde": 182.6,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 13,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 21,
-   "ecarte": 26,
+   "garde": 13,
+   "vendu": 26,
+   "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 1,
-   "hors_perimetre": 23,
+   "location": 2,
+   "hors_perimetre": 8,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 4 pièces de 85 m² à Salon-de-Provence (13300)",
-   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 276.5,
+  "seconde": 288.1,
   "reseau": "iad",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 9,
-   "ecarte": 40,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 29,
-   "prix_trop_haut": 11
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 10 pièces de 346 m² à Castillon-la-Bataille (33350)",
-   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 398.9,
-  "reseau": "iad",
-  "departement": "18",
+  "departement": "88",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 18,
-   "ecarte": 30,
+   "vendu": 10,
+   "ecarte": 38,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 28
+   "hors_perimetre": 38
   },
   "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 570.8,
+  "seconde": 510.0,
   "reseau": "iad",
-  "departement": "37",
+  "departement": "89",
   "visitees": 50,
-  "gardes": 12,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 18,
-   "ecarte": 20,
+   "garde": 28,
+   "vendu": 13,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6,
-   "hors_perimetre": 14
+   "location": 3,
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)",
-   "hors_perimetre": "Maison d"
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 625.5,
+  "seconde": 617.4,
   "reseau": "iad",
-  "departement": "76",
-  "visitees": 25,
-  "gardes": 0,
+  "departement": "21",
+  "visitees": 47,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 9,
-   "ecarte": 16,
+   "garde": 1,
+   "vendu": 13,
+   "ecarte": 33,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 11,
-   "prix_trop_haut": 4
+   "hors_perimetre": 32,
+   "location": 1
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
+   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.5,
+  "seconde": 617.4,
   "reseau": "safti",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 626.0,
+  "seconde": 617.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 628.3,
+  "seconde": 618.5,
   "reseau": "safti",
-  "n": 28320,
+  "n": 28445,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 629.0,
+  "seconde": 619.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.3,
+  "seconde": 619.5,
   "reseau": "safti",
-  "connues": 6035
+  "connues": 6108
  },
  {
   "etape": "departement",
-  "seconde": 779.9,
+  "seconde": 996.0,
   "reseau": "safti",
-  "departement": "52",
+  "departement": "55",
   "visitees": 50,
-  "gardes": 6,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 1,
-   "ecarte": 43,
-   "illisible": 0
+   "garde": 44,
+   "vendu": 0,
+   "ecarte": 3,
+   "illisible": 3
   },
   "motifs": {
-   "hors_perimetre": 43
+   "hors_perimetre": 2,
+   "page_catalogue": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
+   "hors_perimetre": "Vente de maison 6 pièces à Claye-Souilly 77410 : 150m², prix 473 000 €. Réf : 1556864",
+   "page_catalogue": "Vente de maison 9 pièces à Louppy-Sur-Loison 55600 : 180m², prix 299 000 €. Réf : 1606861"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1086.8,
+  "seconde": 1217.5,
   "reseau": "safti",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 38,
+  "departement": "57",
+  "visitees": 41,
+  "gardes": 22,
   "tronquee": true,
   "etats": {
-   "garde": 38,
+   "garde": 22,
    "vendu": 3,
-   "ecarte": 8,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 8
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1227.5,
-  "reseau": "safti",
-  "departement": "54",
-  "visitees": 44,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 1,
-   "ecarte": 37,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 37
+   "prix_trop_haut": 2,
+   "hors_perimetre": 14
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
+   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384",
+   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.5,
-  "gardes": 68
+  "seconde": 1217.5,
+  "gardes": 110
  }
 ]
