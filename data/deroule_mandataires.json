@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.5,
+  "seconde": 18.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.5,
+  "seconde": 18.9,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,265 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.5,
+  "seconde": 18.9,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.4,
+  "seconde": 19.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.9,
+  "seconde": 20.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.0,
+  "seconde": 20.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.3,
+  "seconde": 20.4,
   "reseau": "capifrance",
-  "connues": 6206
+  "connues": 6334
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.3,
+  "seconde": 20.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.5,
+  "seconde": 20.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 40.1,
+  "seconde": 29.9,
   "reseau": "iad",
-  "n": 92960,
+  "n": 92981,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.1,
+  "seconde": 31.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 42.4,
+  "seconde": 32.2,
   "reseau": "iad",
-  "connues": 6206
+  "connues": 6334
  },
  {
   "etape": "departement",
-  "seconde": 168.3,
+  "seconde": 170.1,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 0,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 8,
-   "ecarte": 42,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 41,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 100 m² à Boussy-Saint-Antoine (91800)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 318.4,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 26,
-   "ecarte": 18,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "hors_perimetre": 11,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 466.4,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 18,
-   "ecarte": 26,
+   "garde": 10,
+   "vendu": 15,
+   "ecarte": 25,
    "illisible": 0
   },
   "motifs": {
    "location": 2,
-   "hors_perimetre": 24
+   "prix_trop_haut": 7,
+   "hors_perimetre": 16
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)",
+   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 589.4,
+  "seconde": 286.9,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 14,
-   "ecarte": 34,
-   "illisible": 1
+   "garde": 2,
+   "vendu": 13,
+   "ecarte": 35,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 34
+   "hors_perimetre": 26,
+   "location": 3,
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 625.6,
+  "seconde": 413.5,
   "reseau": "iad",
-  "departement": "39",
-  "visitees": 14,
-  "gardes": 1,
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 3,
-   "ecarte": 10,
+   "garde": 6,
+   "vendu": 17,
+   "ecarte": 27,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 25
+  },
+  "exemples": {
+   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
+   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 536.2,
+  "reseau": "iad",
+  "departement": "53",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 24,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 7,
+   "hors_perimetre": 19,
+   "titre_hors_cible:biens immobiliers a vendre": 1
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
+   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)",
+   "titre_hors_cible:biens immobiliers a vendre": "110 273 biens immobiliers à vendre"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 620.8,
+  "reseau": "iad",
+  "departement": "54",
+  "visitees": 40,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 11,
+   "ecarte": 29,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 27,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.6,
+  "seconde": 620.8,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 626.4,
+  "seconde": 621.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 628.1,
+  "seconde": 621.9,
   "reseau": "safti",
-  "n": 28445,
+  "n": 28490,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 628.9,
+  "seconde": 622.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.2,
+  "seconde": 623.0,
   "reseau": "safti",
-  "connues": 6206
+  "connues": 6334
  },
  {
   "etape": "departement",
-  "seconde": 864.6,
+  "seconde": 935.6,
   "reseau": "safti",
-  "departement": "58",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 22,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 22,
-   "vendu": 0,
-   "ecarte": 28,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 28
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1195.6,
-  "reseau": "safti",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
+   "garde": 40,
    "vendu": 2,
-   "ecarte": 5,
-   "illisible": 0
+   "ecarte": 7,
+   "illisible": 1
   },
   "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 3
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
-   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730",
+   "prix_trop_haut": "Vente de maison 10 pièces à Mortagne-Au-Perche 61400 : 480m², prix 945 000 €. Réf : 1498758"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1226.5,
+  "seconde": 1224.1,
   "reseau": "safti",
-  "departement": "60",
-  "visitees": 11,
-  "gardes": 0,
+  "departement": "62",
+  "visitees": 23,
+  "gardes": 21,
   "tronquee": true,
   "etats": {
-   "garde": 0,
+   "garde": 21,
    "vendu": 0,
-   "ecarte": 11,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 11
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
+   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1226.5,
-  "gardes": 79
+  "seconde": 1224.1,
+  "gardes": 84
  }
 ]
