@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.8,
+  "seconde": 19.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.8,
+  "seconde": 19.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,328 +21,265 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.8,
+  "seconde": 19.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.6,
+  "seconde": 20.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 18.3,
+  "seconde": 20.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.3,
+  "seconde": 20.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.6,
+  "seconde": 21.2,
   "reseau": "capifrance",
-  "connues": 6438
+  "connues": 6500
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.6,
+  "seconde": 21.2,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.0,
+  "seconde": 21.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.4,
+  "seconde": 31.8,
   "reseau": "iad",
-  "n": 92981,
+  "n": 92995,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.2,
+  "seconde": 33.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 27.6,
+  "seconde": 34.1,
   "reseau": "iad",
-  "connues": 6438
+  "connues": 6500
  },
  {
   "etape": "departement",
-  "seconde": 159.6,
+  "seconde": 179.0,
   "reseau": "iad",
-  "departement": "45",
+  "departement": "59",
   "visitees": 50,
-  "gardes": 8,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 16,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 9,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 4,
-   "hors_perimetre": 11
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 277.1,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 21,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 20,
-   "location": 2,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison de village 4 pièces de 75 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 407.2,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 18,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 26
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 530.8,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 10,
-   "ecarte": 35,
+   "garde": 10,
+   "vendu": 23,
+   "ecarte": 17,
    "illisible": 0
   },
   "motifs": {
    "location": 5,
-   "hors_perimetre": 26,
-   "prix_trop_haut": 3,
-   "titre_hors_cible:biens immobiliers a vendre": 1
+   "prix_trop_haut": 9,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)",
-   "titre_hors_cible:biens immobiliers a vendre": "110 373 biens immobiliers à vendre"
+   "location": "Maison de ville 3 pièces de 109 m² à Grand-Fort-Philippe (59153)",
+   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 618.7,
+  "seconde": 284.7,
   "reseau": "iad",
-  "departement": "58",
-  "visitees": 39,
+  "departement": "60",
+  "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 8,
-   "ecarte": 30,
+   "vendu": 7,
+   "ecarte": 42,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 30
+   "hors_perimetre": 22,
+   "location": 8,
+   "prix_trop_haut": 12
   },
   "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
+   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 510.4,
+  "reseau": "iad",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 27,
+  "tronquee": true,
+  "etats": {
+   "garde": 27,
+   "vendu": 15,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 8
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 627.9,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 46,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 23,
+   "ecarte": 17,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 12,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 618.7,
+  "seconde": 627.9,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 619.2,
+  "seconde": 628.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 620.6,
+  "seconde": 629.4,
   "reseau": "safti",
-  "n": 28490,
+  "n": 28512,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 621.3,
+  "seconde": 630.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 621.6,
+  "seconde": 630.5,
   "reseau": "safti",
-  "connues": 6438
+  "connues": 6500
  },
  {
   "etape": "departement",
-  "seconde": 750.0,
+  "seconde": 885.4,
   "reseau": "safti",
-  "departement": "02",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 1,
-   "ecarte": 47,
+   "garde": 30,
+   "vendu": 5,
+   "ecarte": 15,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 47
+   "hors_perimetre": 12,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
   }
  },
  {
   "etape": "departement",
-  "seconde": 864.1,
+  "seconde": 1107.0,
   "reseau": "safti",
-  "departement": "08",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 0,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 1,
-   "ecarte": 46,
-   "illisible": 3
-  },
-  "motifs": {
-   "hors_perimetre": 46
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 315 000 €. Réf : 1657051"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1025.4,
-  "reseau": "safti",
-  "departement": "10",
-  "visitees": 50,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 0,
-   "ecarte": 37,
+   "garde": 23,
+   "vendu": 2,
+   "ecarte": 25,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 37
+   "prix_trop_haut": 3,
+   "hors_perimetre": 22
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
+   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 105m², prix 240 000 €. Réf : 1704998"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1180.2,
+  "seconde": 1221.6,
   "reseau": "safti",
-  "departement": "70",
-  "visitees": 50,
-  "gardes": 12,
+  "departement": "14",
+  "visitees": 38,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 3,
-   "ecarte": 34,
-   "illisible": 1
+   "garde": 4,
+   "vendu": 1,
+   "ecarte": 33,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 34
+   "hors_perimetre": 26,
+   "prix_trop_haut": 7
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1218.2,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 17,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 0,
-   "ecarte": 16,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 16
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
+   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1218.2,
-  "gardes": 50
+  "seconde": 1221.6,
+  "gardes": 101
  }
 ]
