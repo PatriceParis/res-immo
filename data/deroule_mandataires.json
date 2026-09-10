@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 19.8,
+  "seconde": 16.4,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 19.8,
+  "seconde": 16.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,265 +21,336 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.8,
+  "seconde": 16.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 20.4,
+  "seconde": 17.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 20.8,
+  "seconde": 17.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.8,
+  "seconde": 17.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.2,
+  "seconde": 18.0,
   "reseau": "capifrance",
-  "connues": 6500
+  "connues": 6522
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.2,
+  "seconde": 18.0,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.5,
+  "seconde": 18.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.8,
+  "seconde": 27.8,
   "reseau": "iad",
   "n": 92995,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.7,
+  "seconde": 29.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 34.1,
+  "seconde": 29.6,
   "reseau": "iad",
-  "connues": 6500
+  "connues": 6522
  },
  {
   "etape": "departement",
-  "seconde": 179.0,
+  "seconde": 125.4,
   "reseau": "iad",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 23,
-   "ecarte": 17,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "prix_trop_haut": 9,
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "location": "Maison de ville 3 pièces de 109 m² à Grand-Fort-Philippe (59153)",
-   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
-   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 284.7,
-  "reseau": "iad",
-  "departement": "60",
+  "departement": "02",
   "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 7,
-   "ecarte": 42,
+   "vendu": 5,
+   "ecarte": 44,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 22,
-   "location": 8,
-   "prix_trop_haut": 12
+   "titre_hors_cible:appartement": 22,
+   "titre_hors_cible:murs commerciaux": 1,
+   "location": 4,
+   "hors_perimetre": 16,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
-   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
-   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 160 m² à Château-Thierry (02400)",
+   "location": "Maison 2 pièces de 60 m² à Sissy (02240)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 510.4,
+  "seconde": 237.0,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "08",
   "visitees": 50,
-  "gardes": 27,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 27,
-   "vendu": 15,
-   "ecarte": 8,
+   "garde": 3,
+   "vendu": 16,
+   "ecarte": 31,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 31
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
+   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 627.9,
+  "seconde": 341.8,
   "reseau": "iad",
-  "departement": "62",
-  "visitees": 46,
-  "gardes": 6,
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 23,
-   "ecarte": 17,
+   "garde": 3,
+   "vendu": 20,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 12,
-   "prix_trop_haut": 2
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 23,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
+   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 445.1,
+  "reseau": "iad",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 9,
+   "ecarte": 40,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 29,
+   "prix_trop_haut": 11
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de ville 10 pièces de 346 m² à Castillon-la-Bataille (33350)",
+   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 553.7,
+  "reseau": "iad",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 16,
+   "ecarte": 31,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 29
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 617.4,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 32,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 11,
+   "ecarte": 20,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 11,
+   "location": 2,
+   "prix_trop_haut": 7
+  },
+  "exemples": {
+   "hors_perimetre": "110 662 biens immobiliers à vendre",
+   "location": "Maison traditionnelle 5 pièces de 126 m² à Ballan-Miré (37510)",
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 627.9,
+  "seconde": 617.4,
   "reseau": "safti",
-  "part_secondes": 592
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 628.4,
+  "seconde": 617.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 629.4,
+  "seconde": 618.7,
   "reseau": "safti",
   "n": 28512,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 630.1,
+  "seconde": 619.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 630.5,
+  "seconde": 619.5,
   "reseau": "safti",
-  "connues": 6500
+  "connues": 6522
  },
  {
   "etape": "departement",
-  "seconde": 885.4,
+  "seconde": 795.7,
   "reseau": "safti",
-  "departement": "72",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 13,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 5,
-   "ecarte": 15,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 12,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Champagne-En-Valromey 01260 : 211m², prix 350 000 €. Réf : 1618925",
-   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1107.0,
-  "reseau": "safti",
-  "departement": "76",
-  "visitees": 50,
-  "gardes": 23,
-  "tronquee": true,
-  "etats": {
-   "garde": 23,
+   "garde": 13,
    "vendu": 2,
-   "ecarte": 25,
+   "ecarte": 35,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 3,
-   "hors_perimetre": 22
+   "hors_perimetre": 34,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
-   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 105m², prix 240 000 €. Réf : 1704998"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1221.6,
+  "seconde": 944.4,
   "reseau": "safti",
-  "departement": "14",
-  "visitees": 38,
-  "gardes": 4,
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 4,
+   "garde": 7,
    "vendu": 1,
-   "ecarte": 33,
+   "ecarte": 42,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 26,
-   "prix_trop_haut": 7
+   "hors_perimetre": 42
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
-   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1113.8,
+  "reseau": "safti",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 13,
+  "tronquee": true,
+  "etats": {
+   "garde": 13,
+   "vendu": 1,
+   "ecarte": 36,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 36
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1224.7,
+  "reseau": "safti",
+  "departement": "80",
+  "visitees": 27,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 0,
+   "ecarte": 18,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2,
+   "hors_perimetre": 16
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
+   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1221.6,
-  "gardes": 101
+  "seconde": 1224.7,
+  "gardes": 54
  }
 ]
