@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.4,
+  "seconde": 25.3,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.5,
+  "seconde": 25.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,336 +21,280 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.5,
+  "seconde": 25.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.0,
+  "seconde": 25.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.5,
+  "seconde": 26.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.7,
+  "seconde": 26.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.0,
+  "seconde": 26.6,
   "reseau": "capifrance",
-  "connues": 6522
+  "connues": 6592
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.0,
+  "seconde": 26.6,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 18.4,
+  "seconde": 26.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 27.8,
+  "seconde": 37.1,
   "reseau": "iad",
-  "n": 92995,
+  "n": 93015,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.3,
+  "seconde": 38.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.6,
+  "seconde": 39.2,
   "reseau": "iad",
-  "connues": 6522
+  "connues": 6592
  },
  {
   "etape": "departement",
-  "seconde": 125.4,
+  "seconde": 145.4,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 5,
-   "ecarte": 44,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 22,
-   "titre_hors_cible:murs commerciaux": 1,
-   "location": 4,
-   "hors_perimetre": 16,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 160 m² à Château-Thierry (02400)",
-   "location": "Maison 2 pièces de 60 m² à Sissy (02240)",
-   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
-   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 237.0,
-  "reseau": "iad",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 16,
-   "ecarte": 31,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 31
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 341.8,
-  "reseau": "iad",
-  "departement": "10",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 20,
-   "ecarte": 27,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 2,
-   "hors_perimetre": 23,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
-   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 445.1,
-  "reseau": "iad",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
+   "garde": 2,
    "vendu": 9,
-   "ecarte": 40,
+   "ecarte": 39,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 29,
-   "prix_trop_haut": 11
+   "hors_perimetre": 39
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 10 pièces de 346 m² à Castillon-la-Bataille (33350)",
-   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 553.7,
+  "seconde": 274.8,
   "reseau": "iad",
-  "departement": "18",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 16,
-   "ecarte": 31,
+   "garde": 5,
+   "vendu": 17,
+   "ecarte": 28,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 29
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+   "hors_perimetre": "Appartement 2 pièces de 28 m² à Château-Bernard (38650)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 617.4,
+  "seconde": 451.9,
   "reseau": "iad",
-  "departement": "37",
-  "visitees": 32,
+  "departement": "72",
+  "visitees": 50,
+  "gardes": 16,
+  "tronquee": true,
+  "etats": {
+   "garde": 16,
+   "vendu": 21,
+   "ecarte": 13,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 13
+  },
+  "exemples": {
+   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 600.2,
+  "reseau": "iad",
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 11,
+  "tronquee": true,
+  "etats": {
+   "garde": 11,
+   "vendu": 20,
+   "ecarte": 19,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 14,
+   "prix_trop_haut": 4
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 627.5,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 12,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 11,
-   "ecarte": 20,
+   "vendu": 2,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 11,
-   "location": 2,
-   "prix_trop_haut": 7
+   "hors_perimetre": 8,
+   "location": 1
   },
   "exemples": {
-   "hors_perimetre": "110 662 biens immobiliers à vendre",
-   "location": "Maison traditionnelle 5 pièces de 126 m² à Ballan-Miré (37510)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
+   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 617.4,
+  "seconde": 627.5,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 617.7,
+  "seconde": 627.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.7,
+  "seconde": 629.2,
   "reseau": "safti",
-  "n": 28512,
+  "n": 28492,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 619.2,
+  "seconde": 629.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.5,
+  "seconde": 630.3,
   "reseau": "safti",
-  "connues": 6522
+  "connues": 6592
  },
  {
   "etape": "departement",
-  "seconde": 795.7,
+  "seconde": 815.1,
   "reseau": "safti",
-  "departement": "18",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 13,
+  "gardes": 17,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 2,
-   "ecarte": 35,
+   "garde": 17,
+   "vendu": 1,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 34,
+   "prix_trop_haut": 6,
+   "hors_perimetre": 26
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
+   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1046.7,
+  "reseau": "safti",
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 27,
+  "tronquee": true,
+  "etats": {
+   "garde": 27,
+   "vendu": 1,
+   "ecarte": 22,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 22
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 3 pièces à Beugnon Thireuil 79130 : 70m², prix 45 333 €. Réf : 1542904"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1225.4,
+  "reseau": "safti",
+  "departement": "27",
+  "visitees": 41,
+  "gardes": 20,
+  "tronquee": true,
+  "etats": {
+   "garde": 20,
+   "vendu": 0,
+   "ecarte": 21,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 20,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
-   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 944.4,
-  "reseau": "safti",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 7,
-  "tronquee": true,
-  "etats": {
-   "garde": 7,
-   "vendu": 1,
-   "ecarte": 42,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 42
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1113.8,
-  "reseau": "safti",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 1,
-   "ecarte": 36,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 36
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1224.7,
-  "reseau": "safti",
-  "departement": "80",
-  "visitees": 27,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 0,
-   "ecarte": 18,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 16
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
-   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1224.7,
-  "gardes": 54
+  "seconde": 1225.4,
+  "gardes": 99
  }
 ]
