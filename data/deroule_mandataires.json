@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.7,
+  "seconde": 22.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.7,
+  "seconde": 22.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,286 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.7,
+  "seconde": 22.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.8,
+  "seconde": 24.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.3,
+  "seconde": 25.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.3,
+  "seconde": 25.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.6,
+  "seconde": 25.4,
   "reseau": "capifrance",
-  "connues": 6670
+  "connues": 6824
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.6,
+  "seconde": 25.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.1,
+  "seconde": 25.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 41.2,
+  "seconde": 37.0,
   "reseau": "iad",
-  "n": 93015,
+  "n": 93102,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.6,
+  "seconde": 38.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 42.9,
+  "seconde": 39.1,
   "reseau": "iad",
-  "connues": 6670
+  "connues": 6824
  },
  {
   "etape": "departement",
-  "seconde": 165.8,
+  "seconde": 187.7,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 9,
-   "ecarte": 39,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 38,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 1 pièce de 170 m² à Talmont-Saint-Hilaire (85440)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 326.9,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 24,
-   "ecarte": 17,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 5,
-   "hors_perimetre": 10,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 496.3,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 12,
-   "ecarte": 28,
+   "garde": 11,
+   "vendu": 26,
+   "ecarte": 13,
    "illisible": 0
   },
   "motifs": {
    "location": 2,
-   "hors_perimetre": 26
+   "hors_perimetre": 10,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 619.2,
+  "seconde": 314.7,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 14,
-   "ecarte": 34,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 34
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 626.1,
-  "reseau": "iad",
-  "departement": "39",
-  "visitees": 3,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 1,
-   "ecarte": 2,
+   "garde": 4,
+   "vendu": 9,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 37
   },
   "exemples": {
-   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 524.4,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 24,
+  "tronquee": true,
+  "etats": {
+   "garde": 24,
+   "vendu": 16,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 625.3,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 34,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 9,
+   "ecarte": 19,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 10,
+   "prix_trop_haut": 7
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
+   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 626.1,
+  "seconde": 625.3,
   "reseau": "safti",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 626.7,
+  "seconde": 625.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 628.8,
+  "seconde": 627.0,
   "reseau": "safti",
-  "n": 28492,
+  "n": 28484,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 629.3,
+  "seconde": 627.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.6,
+  "seconde": 628.0,
   "reseau": "safti",
-  "connues": 6670
+  "connues": 6824
  },
  {
   "etape": "departement",
-  "seconde": 797.5,
+  "seconde": 777.4,
   "reseau": "safti",
-  "departement": "28",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 10,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 10,
+   "garde": 7,
+   "vendu": 1,
+   "ecarte": 42,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 42
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 979.3,
+  "reseau": "safti",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 18,
+  "tronquee": true,
+  "etats": {
+   "garde": 18,
    "vendu": 0,
-   "ecarte": 40,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 39,
-   "prix_trop_haut": 1
+   "hors_perimetre": 30,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390",
-   "prix_trop_haut": "Vente de maison 8 pièces à Gallardon 28320 : 224m², prix 750 000 €. Réf : 1676013"
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1017.7,
+  "seconde": 1214.4,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 21,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 21,
+   "garde": 23,
    "vendu": 1,
-   "ecarte": 28,
+   "ecarte": 26,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 28
+   "hors_perimetre": 24,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
+   "prix_trop_haut": "Vente de maison 6 pièces à Fay-Aux-Loges 45450 : 205m², prix 709 000 €. Réf : 1660464"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1223.8,
+  "seconde": 1223.9,
   "reseau": "safti",
-  "departement": "37",
-  "visitees": 37,
-  "gardes": 25,
+  "departement": "50",
+  "visitees": 4,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 1,
-   "ecarte": 11,
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 6
+   "prix_trop_haut": 1,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
-   "hors_perimetre": "Vente de maison 7 pièces à Bordes-De-Riviere 31210 : 260m², prix 440 000 €. Réf : 1588610"
+   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
+   "hors_perimetre": "Vente de maison 7 pièces à Beauvoir-De-Marc 38440 : 222m², prix 680 000 €. Réf : 1700796"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1223.8,
-  "gardes": 77
+  "seconde": 1223.9,
+  "gardes": 93
  }
 ]
