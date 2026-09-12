@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 22.8,
+  "seconde": 22.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 22.8,
+  "seconde": 22.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,286 +21,311 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.8,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.2,
+  "seconde": 23.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.0,
+  "seconde": 24.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.1,
+  "seconde": 24.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.4,
+  "seconde": 24.5,
   "reseau": "capifrance",
-  "connues": 6824
+  "connues": 6933
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.4,
+  "seconde": 24.5,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.9,
+  "seconde": 24.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 37.0,
+  "seconde": 33.2,
   "reseau": "iad",
   "n": 93102,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 38.8,
+  "seconde": 35.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 39.1,
+  "seconde": 35.6,
   "reseau": "iad",
-  "connues": 6824
+  "connues": 6933
  },
  {
   "etape": "departement",
-  "seconde": 187.7,
+  "seconde": 188.5,
   "reseau": "iad",
-  "departement": "80",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 11,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 26,
-   "ecarte": 13,
+   "garde": 10,
+   "vendu": 16,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 10,
-   "prix_trop_haut": 1
+   "titre_hors_cible:appartement": 1,
+   "location": 7,
+   "titre_hors_cible:murs commerciaux": 1,
+   "prix_trop_haut": 4,
+   "hors_perimetre": 11
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 40 m² à Amiens (80000)",
-   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
-   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
+   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
+   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
+   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
+   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 314.7,
+  "seconde": 316.2,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "50",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 9,
-   "ecarte": 37,
+   "vendu": 20,
+   "ecarte": 26,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 37
+   "hors_perimetre": 19,
+   "location": 3,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
+   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 524.4,
+  "seconde": 444.1,
   "reseau": "iad",
-  "departement": "89",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 24,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 24,
-   "vendu": 16,
+   "garde": 4,
+   "vendu": 11,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 26,
+   "location": 3,
+   "prix_trop_haut": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 573.5,
+  "reseau": "iad",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 17,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 27
+  },
+  "exemples": {
+   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
+   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 623.8,
+  "reseau": "iad",
+  "departement": "53",
+  "visitees": 20,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 9,
    "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 6,
-   "prix_trop_haut": 1
+   "location": 1,
+   "hors_perimetre": 9
   },
   "exemples": {
-   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
-   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
-   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 625.3,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 34,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 9,
-   "ecarte": 19,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 10,
-   "prix_trop_haut": 7
-  },
-  "exemples": {
-   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
-   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
-   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)"
+   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
+   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.3,
+  "seconde": 623.8,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 625.7,
+  "seconde": 624.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 627.0,
+  "seconde": 625.6,
   "reseau": "safti",
   "n": 28484,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 627.6,
+  "seconde": 626.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 628.0,
+  "seconde": 626.7,
   "reseau": "safti",
-  "connues": 6824
+  "connues": 6933
  },
  {
   "etape": "departement",
-  "seconde": 777.4,
+  "seconde": 814.6,
   "reseau": "safti",
-  "departement": "39",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 7,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 7,
+   "garde": 16,
    "vendu": 1,
-   "ecarte": 42,
+   "ecarte": 33,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 42
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 979.3,
-  "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 18,
-  "tronquee": true,
-  "etats": {
-   "garde": 18,
-   "vendu": 0,
-   "ecarte": 32,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 30,
+   "hors_perimetre": 31,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743",
+   "prix_trop_haut": "Vente de maison 8 pièces à Champigny 51370 : 250m², prix 749 000 €. Réf : 1657134"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1214.4,
+  "seconde": 933.2,
   "reseau": "safti",
-  "departement": "45",
+  "departement": "52",
   "visitees": 50,
-  "gardes": 23,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 23,
+   "garde": 0,
    "vendu": 1,
-   "ecarte": 26,
+   "ecarte": 49,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 24,
-   "prix_trop_haut": 2
+   "hors_perimetre": 49
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
-   "prix_trop_haut": "Vente de maison 6 pièces à Fay-Aux-Loges 45450 : 205m², prix 709 000 €. Réf : 1660464"
+   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1223.9,
+  "seconde": 1222.0,
   "reseau": "safti",
-  "departement": "50",
-  "visitees": 4,
+  "departement": "53",
+  "visitees": 50,
+  "gardes": 37,
+  "tronquee": true,
+  "etats": {
+   "garde": 37,
+   "vendu": 2,
+   "ecarte": 10,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 10
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1224.6,
+  "reseau": "safti",
+  "departement": "54",
+  "visitees": 1,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
    "vendu": 0,
-   "ecarte": 4,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 3
+   "hors_perimetre": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 7 pièces à Beauvoir-De-Marc 38440 : 222m², prix 680 000 €. Réf : 1700796"
+   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1223.9,
-  "gardes": 93
+  "seconde": 1224.6,
+  "gardes": 77
  }
 ]
