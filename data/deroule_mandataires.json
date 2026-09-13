@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 22.7,
+  "seconde": 16.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 22.7,
+  "seconde": 16.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,298 +21,196 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.7,
+  "seconde": 16.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.6,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.1,
+  "seconde": 17.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.1,
+  "seconde": 17.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 24.5,
+  "seconde": 18.0,
   "reseau": "capifrance",
-  "connues": 6933
+  "connues": 7043
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.5,
+  "seconde": 18.0,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.8,
+  "seconde": 18.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 33.2,
+  "seconde": 27.5,
   "reseau": "iad",
-  "n": 93102,
+  "n": 93124,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 35.2,
+  "seconde": 29.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 35.6,
+  "seconde": 30.0,
   "reseau": "iad",
-  "connues": 6933
+  "connues": 7043
  },
  {
   "etape": "departement",
-  "seconde": 188.5,
+  "seconde": 137.8,
   "reseau": "iad",
-  "departement": "45",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 10,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 10,
-   "vendu": 16,
-   "ecarte": 24,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 7,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 4,
-   "hors_perimetre": 11
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 316.2,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 20,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 19,
-   "location": 3,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 444.1,
-  "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 11,
+   "garde": 2,
+   "vendu": 13,
    "ecarte": 35,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 26,
-   "location": 3,
-   "prix_trop_haut": 6
+   "hors_perimetre": 33,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison de village 11 pièces de 900 m² à Mailly-Champagne (51500)"
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 573.5,
+  "seconde": 256.2,
   "reseau": "iad",
-  "departement": "52",
+  "departement": "55",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 17,
+   "garde": 6,
+   "vendu": 16,
    "ecarte": 28,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 27
+   "hors_perimetre": 28
   },
   "exemples": {
-   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
+   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 623.8,
+  "seconde": 390.6,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 20,
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 11,
+   "ecarte": 31,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 24,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 84 m² à Montdidier (80500)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 264 m² à Marly (57155)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 509.7,
+  "reseau": "iad",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 10,
+   "ecarte": 36,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 36
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 70 m² à Saint-Sulpice-le-Guérétois (23000)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 611.2,
+  "reseau": "iad",
+  "departement": "02",
+  "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 9,
-   "ecarte": 10,
+   "vendu": 5,
+   "ecarte": 44,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 9
+   "titre_hors_cible:appartement": 22,
+   "titre_hors_cible:murs commerciaux": 1,
+   "location": 4,
+   "hors_perimetre": 16,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 623.8,
-  "reseau": "safti",
-  "part_secondes": 599
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 624.4,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 625.6,
-  "reseau": "safti",
-  "n": 28484,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 626.3,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 626.7,
-  "reseau": "safti",
-  "connues": 6933
- },
- {
-  "etape": "departement",
-  "seconde": 814.6,
-  "reseau": "safti",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 16,
-  "tronquee": true,
-  "etats": {
-   "garde": 16,
-   "vendu": 1,
-   "ecarte": 33,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 31,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743",
-   "prix_trop_haut": "Vente de maison 8 pièces à Champigny 51370 : 250m², prix 749 000 €. Réf : 1657134"
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 160 m² à Château-Thierry (02400)",
+   "location": "Maison 2 pièces de 60 m² à Sissy (02240)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 933.2,
-  "reseau": "safti",
-  "departement": "52",
-  "visitees": 50,
+  "seconde": 617.8,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 3,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 1,
-   "ecarte": 49,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 49
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1222.0,
-  "reseau": "safti",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 37,
-  "tronquee": true,
-  "etats": {
-   "garde": 37,
    "vendu": 2,
-   "ecarte": 10,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1224.6,
-  "reseau": "safti",
-  "departement": "54",
-  "visitees": 1,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
@@ -320,12 +218,110 @@
    "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
+   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 617.8,
+  "reseau": "safti",
+  "part_secondes": 599
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 617.9,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 619.1,
+  "reseau": "safti",
+  "n": 28489,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 619.9,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 620.3,
+  "reseau": "safti",
+  "connues": 7043
+ },
+ {
+  "etape": "departement",
+  "seconde": 870.6,
+  "reseau": "safti",
+  "departement": "55",
+  "visitees": 50,
+  "gardes": 33,
+  "tronquee": true,
+  "etats": {
+   "garde": 33,
+   "vendu": 1,
+   "ecarte": 16,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 15
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
+   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1111.7,
+  "reseau": "safti",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 30,
+  "tronquee": true,
+  "etats": {
+   "garde": 30,
+   "vendu": 3,
+   "ecarte": 17,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2,
+   "hors_perimetre": 15
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384",
+   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1217.1,
+  "reseau": "safti",
+  "departement": "58",
+  "visitees": 36,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 34,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 34
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1224.6,
-  "gardes": 77
+  "seconde": 1217.1,
+  "gardes": 86
  }
 ]
