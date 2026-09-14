@@ -6,7 +6,10 @@ peut pas s'en apercevoir sur les gros départements, tronqués à chaque passage
 (voir app/liens.py). Ce passage-ci regarde le lien lui-même.
 
 Rotation : les suspects d'abord (un constat de mort attend sa confirmation),
-puis les plus anciennement vérifiés. Chaque URL est notée dans
+puis chaque domaine à proportion de sa taille — départager sur l'URL revenait
+à servir les réseaux dans l'ordre alphabétique, et Safti, 39 % du catalogue,
+n'a pas eu un seul lien vérifié en un mois (voir app.liens). Au sein d'un
+domaine, les plus anciennement vérifiés. Chaque URL est notée dans
 data/liens_verifies.json ; les constats de mort dans data/liens_morts.json —
 au deuxième, l'export retire l'annonce.
 
