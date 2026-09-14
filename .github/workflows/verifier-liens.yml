@@ -18,6 +18,10 @@ on:
         description: "Liens vérifiés (défaut 150)"
         required: false
         default: ""
+      minutes:
+        description: "Budget de temps en minutes, chiffres seuls (défaut 15)"
+        required: false
+        default: ""
   schedule:
     - cron: "0 5 * * *"
 
@@ -31,7 +35,7 @@ concurrency:
 jobs:
   verifier:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: ${{ fromJSON(github.event.inputs.minutes || '15') + 25 }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,11 +51,18 @@ jobs:
         env:
           CIBLES: ${{ github.event.inputs.cibles }}
           MAXI: ${{ github.event.inputs.max }}
+          MINUTES: ${{ github.event.inputs.minutes }}
           PYTHONUNBUFFERED: "1"
         run: |
-          OPTIONS="--max ${MAXI:-150}"
+          # Une saisie non numérique donnerait un filet « m » sans nombre,
+          # c'est-à-dire sans limite : on retombe sur le budget par défaut.
+          case "${MINUTES}" in ''|*[!0-9]*) MINUTES=15 ;; esac
+          OPTIONS="--max ${MAXI:-150} --minutes $MINUTES"
           if [ -n "$CIBLES" ]; then OPTIONS="$OPTIONS --cibles $CIBLES"; fi
-          timeout --kill-after=30s 25m python scripts/verifier_liens.py $OPTIONS || true
+          # Le filet laisse dix minutes de marge : le script regarde son budget
+          # ENTRE deux liens, il peut donc le dépasser d'une requête.
+          timeout --kill-after=30s "$((MINUTES + 10))m" \
+                  python scripts/verifier_liens.py $OPTIONS || true
       - name: Exporter et committer
         run: |
           python scripts/exporter_reel.py
