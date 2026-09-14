@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 20.0,
+  "seconde": 23.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 20.0,
+  "seconde": 23.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,259 +21,280 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.0,
+  "seconde": 23.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 20.6,
+  "seconde": 24.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 21.0,
+  "seconde": 25.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 21.0,
+  "seconde": 25.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.5,
+  "seconde": 25.6,
   "reseau": "capifrance",
-  "connues": 7148
+  "connues": 7141
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.5,
+  "seconde": 25.6,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.5,
+  "seconde": 25.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.8,
+  "seconde": 40.5,
   "reseau": "iad",
   "n": 93108,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.8,
+  "seconde": 42.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 34.2,
+  "seconde": 42.3,
   "reseau": "iad",
-  "connues": 7148
+  "connues": 7141
  },
  {
   "etape": "departement",
-  "seconde": 145.0,
+  "seconde": 157.9,
   "reseau": "iad",
-  "departement": "60",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 9,
+   "ecarte": 41,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 40,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 288.3,
+  "reseau": "iad",
+  "departement": "27",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 27,
+   "ecarte": 19,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 13,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 426.7,
+  "reseau": "iad",
+  "departement": "28",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 12,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 31
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 544.8,
+  "reseau": "iad",
+  "departement": "36",
   "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 7,
-   "ecarte": 42,
-   "illisible": 0
+   "vendu": 14,
+   "ecarte": 34,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 22,
-   "location": 10,
-   "prix_trop_haut": 10
+   "hors_perimetre": 34
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
-   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
-   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 388.1,
+  "seconde": 626.7,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 50,
-  "gardes": 28,
+  "departement": "39",
+  "visitees": 32,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 28,
-   "vendu": 15,
-   "ecarte": 7,
+   "garde": 1,
+   "vendu": 9,
+   "ecarte": 22,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 7
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 92 m² à Orgères (35230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 516.0,
-  "reseau": "iad",
-  "departement": "62",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 25,
-   "ecarte": 19,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 14,
+   "location": 1,
+   "hors_perimetre": 19,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 620.7,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 42,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 12,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 25,
-   "location": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
-   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
+   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 620.7,
+  "seconde": 626.7,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 621.3,
+  "seconde": 627.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 622.3,
+  "seconde": 628.7,
   "reseau": "safti",
   "n": 28441,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 623.1,
+  "seconde": 629.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 623.5,
+  "seconde": 629.5,
   "reseau": "safti",
-  "connues": 7148
+  "connues": 7141
  },
  {
   "etape": "departement",
-  "seconde": 788.3,
+  "seconde": 961.2,
   "reseau": "safti",
-  "departement": "08",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 0,
+  "gardes": 46,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 1,
-   "ecarte": 49,
+   "garde": 46,
+   "vendu": 0,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 49
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 315 000 €. Réf : 1657051"
+   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
   }
  },
  {
   "etape": "departement",
-  "seconde": 989.3,
+  "seconde": 1120.5,
   "reseau": "safti",
-  "departement": "10",
+  "departement": "70",
   "visitees": 50,
   "gardes": 8,
   "tronquee": true,
   "etats": {
    "garde": 8,
-   "vendu": 0,
-   "ecarte": 42,
-   "illisible": 0
+   "vendu": 3,
+   "ecarte": 38,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 42
+   "hors_perimetre": 38
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+   "hors_perimetre": "Vente de maison 4 pièces à Bonnac-La-Cote 87270 : 89m², prix 158 000 €. Réf : 1710398"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1231.1,
+  "seconde": 1232.9,
   "reseau": "safti",
-  "departement": "61",
-  "visitees": 36,
-  "gardes": 27,
+  "departement": "71",
+  "visitees": 37,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 27,
-   "vendu": 2,
-   "ecarte": 7,
+   "garde": 4,
+   "vendu": 0,
+   "ecarte": 33,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6,
-   "prix_trop_haut": 1
+   "hors_perimetre": 33
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730",
-   "prix_trop_haut": "Vente de maison 10 pièces à Mortagne-Au-Perche 61400 : 480m², prix 945 000 €. Réf : 1498758"
+   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1231.1,
-  "gardes": 74
+  "seconde": 1232.9,
+  "gardes": 69
  }
 ]
