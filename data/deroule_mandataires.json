@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.7,
+  "seconde": 26.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.7,
+  "seconde": 26.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,71 +21,71 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.7,
+  "seconde": 26.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.8,
+  "seconde": 27.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.3,
+  "seconde": 28.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.3,
+  "seconde": 28.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.6,
+  "seconde": 28.5,
   "reseau": "capifrance",
-  "connues": 7141
+  "connues": 7225
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.6,
+  "seconde": 28.5,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.8,
+  "seconde": 28.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 40.5,
+  "seconde": 43.4,
   "reseau": "iad",
-  "n": 93108,
+  "n": 93168,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.0,
+  "seconde": 45.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 42.3,
+  "seconde": 45.8,
   "reseau": "iad",
-  "connues": 7141
+  "connues": 7225
  },
  {
   "etape": "departement",
-  "seconde": 157.9,
+  "seconde": 152.0,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "70",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
@@ -96,205 +96,228 @@
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 40,
-   "prix_trop_haut": 1
+   "hors_perimetre": 41
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 288.3,
+  "seconde": 266.5,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 27,
-   "ecarte": 19,
+   "garde": 2,
+   "vendu": 20,
+   "ecarte": 28,
    "illisible": 0
   },
   "motifs": {
-   "location": 4,
-   "hors_perimetre": 13,
-   "prix_trop_haut": 2
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Grange 1 pièce de 14 m² à Louviers (27400)",
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+   "hors_perimetre": "Appartement 2 pièces de 28 m² à Château-Bernard (38650)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 426.7,
+  "seconde": 394.2,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "72",
   "visitees": 50,
   "gardes": 5,
   "tronquee": true,
   "etats": {
    "garde": 5,
-   "vendu": 12,
-   "ecarte": 33,
+   "vendu": 21,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 31
+   "hors_perimetre": 24
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "hors_perimetre": "110 987 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 544.8,
+  "seconde": 541.2,
   "reseau": "iad",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 14,
-   "ecarte": 34,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 34
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 626.7,
-  "reseau": "iad",
-  "departement": "39",
-  "visitees": 32,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 9,
-   "ecarte": 22,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 19,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 626.7,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 627.3,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 628.7,
-  "reseau": "safti",
-  "n": 28441,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 629.3,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 629.5,
-  "reseau": "safti",
-  "connues": 7141
- },
- {
-  "etape": "departement",
-  "seconde": 961.2,
-  "reseau": "safti",
-  "departement": "62",
-  "visitees": 50,
-  "gardes": 46,
-  "tronquee": true,
-  "etats": {
-   "garde": 46,
-   "vendu": 0,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1120.5,
-  "reseau": "safti",
-  "departement": "70",
+  "departement": "76",
   "visitees": 50,
   "gardes": 8,
   "tronquee": true,
   "etats": {
    "garde": 8,
-   "vendu": 3,
-   "ecarte": 38,
-   "illisible": 1
+   "vendu": 23,
+   "ecarte": 19,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 38
+   "location": 1,
+   "hors_perimetre": 14,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bonnac-La-Cote 87270 : 89m², prix 158 000 €. Réf : 1710398"
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1232.9,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 37,
+  "seconde": 629.4,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 32,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 0,
-   "ecarte": 33,
+   "vendu": 8,
+   "ecarte": 20,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33
+   "location": 2,
+   "hors_perimetre": 11,
+   "prix_trop_haut": 7
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
+   "location": "Maison 5 pièces de 96 m² à Romorantin-Lanthenay (41200)",
+   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
+   "prix_trop_haut": "Domaine 10 pièces de 280 m² à Lamotte-Beuvron (41600)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 629.4,
+  "reseau": "safti",
+  "part_secondes": 597
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 630.4,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 631.9,
+  "reseau": "safti",
+  "n": 28499,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 632.7,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 633.1,
+  "reseau": "safti",
+  "connues": 7225
+ },
+ {
+  "etape": "departement",
+  "seconde": 823.1,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 13,
+  "tronquee": true,
+  "etats": {
+   "garde": 13,
+   "vendu": 1,
+   "ecarte": 36,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 29,
+   "prix_trop_haut": 7
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Angerville 91670 : 80m², prix 184 000 €. Réf : 1658045",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 997.2,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 11,
+  "tronquee": true,
+  "etats": {
+   "garde": 11,
+   "vendu": 0,
+   "ecarte": 37,
+   "illisible": 2
+  },
+  "motifs": {
+   "hors_perimetre": 36,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1135.6,
+  "reseau": "safti",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 48,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 48
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1227.1,
+  "reseau": "safti",
+  "departement": "25",
+  "visitees": 34,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 0,
+   "ecarte": 32,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 32
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1232.9,
-  "gardes": 69
+  "seconde": 1227.1,
+  "gardes": 46
  }
 ]
