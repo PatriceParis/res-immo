@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.0,
+  "seconde": 16.0,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.3,
+  "seconde": 16.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,265 +21,305 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.3,
+  "seconde": 16.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.2,
+  "seconde": 16.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.2,
+  "seconde": 16.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.2,
+  "seconde": 16.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.6,
+  "seconde": 17.1,
   "reseau": "capifrance",
-  "connues": 7588
+  "connues": 7644
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.6,
+  "seconde": 17.1,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.1,
+  "seconde": 17.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 41.1,
+  "seconde": 26.5,
   "reseau": "iad",
   "n": 92381,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 42.8,
+  "seconde": 28.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 43.2,
+  "seconde": 28.7,
   "reseau": "iad",
-  "connues": 7588
+  "connues": 7644
  },
  {
   "etape": "departement",
-  "seconde": 268.0,
+  "seconde": 139.8,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 25,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 15,
-   "ecarte": 10,
+   "garde": 4,
+   "vendu": 21,
+   "ecarte": 25,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 10
+   "location": 3,
+   "hors_perimetre": 19,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
+   "hors_perimetre": "Maison 5 pièces de 127 m² à Chanteloup-les-Vignes (78570)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 411.9,
+  "seconde": 254.1,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "51",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 13,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 25,
+   "location": 2,
+   "prix_trop_haut": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 377.7,
+  "reseau": "iad",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 16,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 26
+  },
+  "exemples": {
+   "location": "Maison de village 4 pièces de 75 m² à Bayard-sur-Marne (52170)",
+   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 496.4,
+  "reseau": "iad",
+  "departement": "53",
   "visitees": 50,
   "gardes": 5,
   "tronquee": true,
   "etats": {
    "garde": 5,
-   "vendu": 23,
-   "ecarte": 22,
+   "vendu": 21,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
-   "location": 4,
-   "hors_perimetre": 16,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 557.3,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
-   "vendu": 17,
-   "ecarte": 25,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 18,
    "location": 1,
-   "prix_trop_haut": 6
+   "hors_perimetre": 23
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
-   "location": "Maison de ville 6 pièces de 97 m² à Fréteval (41160)",
-   "prix_trop_haut": "Domaine 11 pièces de 520 m² à LA FERTE-SAINT-CYR (41220)"
+   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
+   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 624.6,
+  "seconde": 602.8,
   "reseau": "iad",
-  "departement": "45",
-  "visitees": 26,
+  "departement": "70",
+  "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 5,
-   "ecarte": 19,
+   "vendu": 11,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 7,
-   "titre_hors_cible:murs commerciaux": 1,
-   "prix_trop_haut": 4,
-   "hors_perimetre": 6
+   "hors_perimetre": 37
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
-   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 618.3,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 8,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 6,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.6,
+  "seconde": 618.3,
   "reseau": "safti",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 625.1,
+  "seconde": 618.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 626.5,
+  "seconde": 619.9,
   "reseau": "safti",
   "n": 28620,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 627.1,
+  "seconde": 620.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 627.5,
+  "seconde": 621.0,
   "reseau": "safti",
-  "connues": 7588
+  "connues": 7644
  },
  {
   "etape": "departement",
-  "seconde": 795.7,
+  "seconde": 843.9,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 9,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 9,
-   "vendu": 1,
-   "ecarte": 40,
+   "garde": 29,
+   "vendu": 3,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 40
+   "prix_trop_haut": 2,
+   "hors_perimetre": 16
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 145m², prix 359 000 €. Réf : 1658740"
+   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384",
+   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624"
   }
  },
  {
   "etape": "departement",
-  "seconde": 971.0,
+  "seconde": 970.9,
   "reseau": "safti",
-  "departement": "02",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 1,
-   "ecarte": 44,
+   "garde": 3,
+   "vendu": 0,
+   "ecarte": 47,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 44
+   "hors_perimetre": 47
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1229.1,
+  "seconde": 1218.7,
   "reseau": "safti",
-  "departement": "55",
-  "visitees": 44,
-  "gardes": 28,
+  "departement": "59",
+  "visitees": 48,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 28,
-   "vendu": 1,
-   "ecarte": 15,
-   "illisible": 0
+   "garde": 36,
+   "vendu": 3,
+   "ecarte": 8,
+   "illisible": 1
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 14
+   "prix_trop_haut": 3,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
+   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
+   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1229.1,
-  "gardes": 82
+  "seconde": 1218.7,
+  "gardes": 89
  }
 ]
