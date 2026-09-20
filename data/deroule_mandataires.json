@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 21.3,
+  "seconde": 23.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 21.3,
+  "seconde": 23.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,278 +21,280 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.3,
+  "seconde": 23.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 22.0,
+  "seconde": 24.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 22.4,
+  "seconde": 25.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.4,
+  "seconde": 25.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 22.9,
+  "seconde": 25.7,
   "reseau": "capifrance",
-  "connues": 7854
+  "connues": 7970
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.9,
+  "seconde": 25.7,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.2,
+  "seconde": 26.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.4,
+  "seconde": 40.7,
   "reseau": "iad",
   "n": 92474,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.4,
+  "seconde": 42.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.8,
+  "seconde": 42.4,
   "reseau": "iad",
-  "connues": 7854
+  "connues": 7970
  },
  {
   "etape": "departement",
-  "seconde": 140.9,
+  "seconde": 203.1,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 9,
-   "ecarte": 40,
+   "garde": 10,
+   "vendu": 30,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 29,
-   "prix_trop_haut": 11
+   "hors_perimetre": 9,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
-   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 271.1,
+  "seconde": 340.9,
   "reseau": "iad",
-  "departement": "18",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 15,
-   "ecarte": 30,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 28
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 396.8,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 21,
-   "ecarte": 24,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 15,
-   "location": 1,
-   "prix_trop_haut": 8
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
-   "location": "Maison traditionnelle 5 pièces de 126 m² à Ballan-Miré (37510)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 511.0,
-  "reseau": "iad",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 13,
-   "ecarte": 36,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 34,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 622.7,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 48,
   "gardes": 3,
   "tronquee": true,
   "etats": {
    "garde": 3,
-   "vendu": 15,
-   "ecarte": 30,
+   "vendu": 11,
+   "ecarte": 36,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 30
+   "hors_perimetre": 36
   },
   "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 536.6,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 17,
+  "tronquee": true,
+  "etats": {
+   "garde": 17,
+   "vendu": 21,
+   "ecarte": 12,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 5,
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 2 pièces de 54 m² à Vermenton (89270)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 626.0,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 37,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 10,
+   "ecarte": 26,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 25,
+   "location": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 118 m² à CHÂTEAUNEUF-LES-BAINS (63390)",
+   "location": "Maison 4 pièces de 140 m² à Fontaine-lès-Dijon (21121)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 622.7,
+  "seconde": 626.0,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.3,
+  "seconde": 626.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 624.4,
+  "seconde": 628.2,
   "reseau": "safti",
-  "n": 28691,
+  "n": 28617,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 625.2,
+  "seconde": 628.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 625.6,
+  "seconde": 629.0,
   "reseau": "safti",
-  "connues": 7854
+  "connues": 7970
  },
  {
   "etape": "departement",
-  "seconde": 951.6,
+  "seconde": 817.5,
   "reseau": "safti",
-  "departement": "62",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 44,
-   "vendu": 0,
-   "ecarte": 6,
+   "garde": 12,
+   "vendu": 1,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6
+   "hors_perimetre": 30,
+   "prix_trop_haut": 7
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
+   "hors_perimetre": "Vente de maison 4 pièces à Annecy-Le-Vieux 74940 : 80m², prix 895 000 €. Réf : 1641377",
+   "prix_trop_haut": "Vente de maison 7 pièces à Bayeux 14400 : 190m², prix 880 000 €. Réf : 1611707"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1104.4,
+  "seconde": 981.2,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 4,
-   "ecarte": 40,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 40
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1227.6,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 39,
   "gardes": 7,
   "tronquee": true,
   "etats": {
    "garde": 7,
    "vendu": 0,
-   "ecarte": 32,
+   "ecarte": 43,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 32
+   "hors_perimetre": 42,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Baignes-Sainte-Radegonde 16360 : 90m², prix 66 000 €. Réf : 1506946"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1108.7,
+  "reseau": "safti",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 0,
+   "ecarte": 49,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 49
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1224.1,
+  "reseau": "safti",
+  "departement": "25",
+  "visitees": 38,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 0,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 33
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.6,
-  "gardes": 72
+  "seconde": 1224.1,
+  "gardes": 56
  }
 ]
