@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.4,
+  "seconde": 24.1,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.4,
+  "seconde": 24.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,309 +21,286 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.4,
+  "seconde": 24.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.8,
+  "seconde": 25.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.1,
+  "seconde": 25.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.1,
+  "seconde": 25.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.6,
+  "seconde": 26.0,
   "reseau": "capifrance",
-  "connues": 8097
+  "connues": 8190
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.6,
+  "seconde": 26.0,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.8,
+  "seconde": 26.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.3,
+  "seconde": 41.6,
   "reseau": "iad",
-  "n": 92513,
+  "n": 92533,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.3,
+  "seconde": 43.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.7,
+  "seconde": 43.9,
   "reseau": "iad",
-  "connues": 8097
+  "connues": 8190
  },
  {
   "etape": "departement",
-  "seconde": 134.1,
+  "seconde": 195.4,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 22,
+   "ecarte": 22,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 18,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison 12 pièces de 340 m² à Sorrus (62170)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 324.9,
+  "reseau": "iad",
+  "departement": "70",
   "visitees": 50,
   "gardes": 3,
   "tronquee": true,
   "etats": {
    "garde": 3,
-   "vendu": 22,
-   "ecarte": 25,
+   "vendu": 10,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 19,
-   "prix_trop_haut": 3
+   "hors_perimetre": 37
   },
   "exemples": {
-   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
-   "hors_perimetre": "Maison 5 pièces de 127 m² à Chanteloup-les-Vignes (78570)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 245.5,
+  "seconde": 451.4,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 11,
-   "ecarte": 33,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 26,
-   "location": 1,
-   "prix_trop_haut": 6
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 79 m² à Athis-Mons (91200)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 355.9,
-  "reseau": "iad",
-  "departement": "52",
+  "departement": "71",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 17,
-   "ecarte": 30,
+   "vendu": 18,
+   "ecarte": 29,
    "illisible": 1
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 28,
-   "titre_hors_cible:biens immobiliers a vendre": 1
+   "hors_perimetre": 26,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison de village 4 pièces de 84 m² à Bayard-sur-Marne (52170)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)",
-   "titre_hors_cible:biens immobiliers a vendre": "109 279 biens immobiliers à vendre"
+   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 452.3,
+  "seconde": 568.5,
   "reseau": "iad",
-  "departement": "53",
+  "departement": "02",
   "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 4,
+   "ecarte": 46,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 20,
+   "titre_hors_cible:murs commerciaux": 1,
+   "location": 7,
+   "hors_perimetre": 17,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 160 m² à Château-Thierry (02400)",
+   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
+   "hors_perimetre": "Maison de campagne 4 pièces de 105 m² à Orgeval (78630)",
+   "prix_trop_haut": "Maison 15 pièces de 427 m² à Château-Thierry (02400)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 627.2,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 23,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 23,
-   "ecarte": 26,
+   "vendu": 10,
+   "ecarte": 12,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 25
+   "hors_perimetre": 12
   },
   "exemples": {
-   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 618.6,
-  "reseau": "iad",
-  "departement": "61",
-  "visitees": 46,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
-   "vendu": 16,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 618.6,
+  "seconde": 627.2,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 619.1,
+  "seconde": 627.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 620.0,
+  "seconde": 629.0,
   "reseau": "safti",
-  "n": 28659,
+  "n": 28647,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 620.7,
+  "seconde": 629.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 621.2,
+  "seconde": 630.2,
   "reseau": "safti",
-  "connues": 8097
+  "connues": 8190
  },
  {
   "etape": "departement",
-  "seconde": 810.6,
+  "seconde": 777.1,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 19,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 19,
-   "vendu": 0,
-   "ecarte": 29,
-   "illisible": 2
-  },
-  "motifs": {
-   "hors_perimetre": 29
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1076.8,
-  "reseau": "safti",
-  "departement": "37",
-  "visitees": 50,
-  "gardes": 37,
-  "tronquee": true,
-  "etats": {
-   "garde": 37,
+   "garde": 4,
    "vendu": 1,
-   "ecarte": 12,
+   "ecarte": 45,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6,
-   "hors_perimetre": 6
+   "hors_perimetre": 45
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
-   "hors_perimetre": "Vente de maison 7 pièces à Bordes-De-Riviere 31210 : 260m², prix 440 000 €. Réf : 1588610"
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1196.3,
+  "seconde": 1001.7,
   "reseau": "safti",
-  "departement": "88",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 2,
-   "ecarte": 41,
-   "illisible": 2
+   "garde": 20,
+   "vendu": 0,
+   "ecarte": 30,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6,
-   "hors_perimetre": 34,
-   "ni_surface_ni_prix_credible": 1
+   "hors_perimetre": 28,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
-   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320",
-   "ni_surface_ni_prix_credible": "Vente de maison 1 pièce à Morizecourt 88320 : 56m², prix 14 000 €. Réf : 1618260"
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1217.3,
+  "seconde": 1235.0,
   "reseau": "safti",
-  "departement": "89",
-  "visitees": 9,
-  "gardes": 0,
+  "departement": "45",
+  "visitees": 43,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 0,
-   "ecarte": 9,
+   "garde": 12,
+   "vendu": 1,
+   "ecarte": 30,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9
+   "hors_perimetre": 29,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Beugnon Thireuil 79130 : 70m², prix 45 333 €. Réf : 1542904"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
+   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1217.3,
-  "gardes": 92
+  "seconde": 1235.0,
+  "gardes": 48
  }
 ]
