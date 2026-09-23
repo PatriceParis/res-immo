@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 18.9,
+  "seconde": 18.2,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 18.9,
+  "seconde": 18.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,330 +21,307 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.9,
+  "seconde": 18.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.4,
+  "seconde": 18.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.8,
+  "seconde": 19.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.9,
+  "seconde": 19.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.3,
+  "seconde": 19.4,
   "reseau": "capifrance",
-  "connues": 8219
+  "connues": 8315
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.3,
+  "seconde": 19.4,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 20.7,
+  "seconde": 19.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.2,
+  "seconde": 30.6,
   "reseau": "iad",
-  "n": 92533,
+  "n": 92601,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.1,
+  "seconde": 32.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.5,
+  "seconde": 32.4,
   "reseau": "iad",
-  "connues": 8219
+  "connues": 8315
  },
  {
   "etape": "departement",
-  "seconde": 150.3,
+  "seconde": 159.3,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 5,
+   "garde": 8,
    "vendu": 19,
-   "ecarte": 26,
+   "ecarte": 23,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 2,
-   "hors_perimetre": 22,
-   "prix_trop_haut": 1
+   "hors_perimetre": 23
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
-   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 250.3,
+  "seconde": 296.1,
   "reseau": "iad",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 8,
-   "ecarte": 42,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 32,
-   "prix_trop_haut": 10
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
-   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 359.0,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 16,
-   "ecarte": 32,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 30
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 468.2,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 19,
-   "ecarte": 27,
-   "illisible": 1
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 17,
-   "prix_trop_haut": 8
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 85 m² à Betz-le-Château (37600)",
-   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 567.0,
-  "reseau": "iad",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 12,
-   "ecarte": 38,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 36,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 621.1,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 23,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 7,
-   "ecarte": 13,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 13
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 621.1,
-  "reseau": "safti",
-  "part_secondes": 598
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 621.7,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 622.9,
-  "reseau": "safti",
-  "n": 28647,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 623.6,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 624.0,
-  "reseau": "safti",
-  "connues": 8219
- },
- {
-  "etape": "departement",
-  "seconde": 780.2,
-  "reseau": "safti",
-  "departement": "50",
+  "departement": "76",
   "visitees": 50,
   "gardes": 9,
   "tronquee": true,
   "etats": {
    "garde": 9,
-   "vendu": 0,
-   "ecarte": 41,
+   "vendu": 21,
+   "ecarte": 20,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 40
+   "location": 1,
+   "hors_perimetre": 14,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
+   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 908.8,
-  "reseau": "safti",
-  "departement": "51",
+  "seconde": 395.6,
+  "reseau": "iad",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 1,
-   "ecarte": 46,
+   "garde": 0,
+   "vendu": 14,
+   "ecarte": 35,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 34,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 5 pièces de 287 m² à Châteauneuf-Grasse (06740)",
+   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 501.2,
+  "reseau": "iad",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 8,
+   "ecarte": 40,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 44,
+   "hors_perimetre": 38,
+   "location": 1,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)",
+   "location": "Maison 3 pièces de 80 m² à Sainte-Anne (97180)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 620.6,
+  "reseau": "iad",
+  "departement": "27",
+  "visitees": 48,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 25,
+   "ecarte": 15,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 11,
+   "location": 2,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743",
-   "prix_trop_haut": "Vente de maison 8 pièces à Champigny 51370 : 250m², prix 749 000 €. Réf : 1657134"
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 1024.9,
+  "etape": "reseau_debut",
+  "seconde": 620.6,
   "reseau": "safti",
-  "departement": "52",
+  "part_secondes": 598
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 620.9,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 621.8,
+  "reseau": "safti",
+  "n": 28776,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 622.4,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 622.7,
+  "reseau": "safti",
+  "connues": 8315
+ },
+ {
+  "etape": "departement",
+  "seconde": 764.8,
+  "reseau": "safti",
+  "departement": "02",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
    "vendu": 1,
-   "ecarte": 48,
-   "illisible": 1
+   "ecarte": 49,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 48
+   "hors_perimetre": 49
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1224.7,
+  "seconde": 921.8,
   "reseau": "safti",
-  "departement": "53",
-  "visitees": 42,
-  "gardes": 27,
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 9,
   "tronquee": true,
   "etats": {
-   "garde": 27,
-   "vendu": 2,
-   "ecarte": 13,
+   "garde": 9,
+   "vendu": 1,
+   "ecarte": 38,
+   "illisible": 2
+  },
+  "motifs": {
+   "hors_perimetre": 38
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 148m², prix 430 000 €. Réf : 1673313"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1160.8,
+  "reseau": "safti",
+  "departement": "55",
+  "visitees": 50,
+  "gardes": 29,
+  "tronquee": true,
+  "etats": {
+   "garde": 29,
+   "vendu": 0,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 13
+   "prix_trop_haut": 1,
+   "hors_perimetre": 20
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
+   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
+   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1219.2,
+  "reseau": "safti",
+  "departement": "57",
+  "visitees": 21,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 3,
+   "ecarte": 15,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 14
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384",
+   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1224.7,
-  "gardes": 52
+  "seconde": 1219.2,
+  "gardes": 68
  }
 ]
