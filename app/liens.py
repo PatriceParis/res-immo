@@ -91,18 +91,70 @@ def sans_liens_morts(annonces: list[dict], journal: dict,
     return gardees, len(annonces) - len(gardees)
 
 
+def _domaine(url: str) -> str:
+    return urlparse(url or "").netloc.lower().removeprefix("www.")
+
+
 def ordre_de_verification(annonces: list[dict], verifies: dict,
                           journal: dict) -> list[dict]:
-    """Les suspects d'abord, puis les plus anciennement vérifiés.
+    """Les suspects d'abord ; ensuite chaque domaine à proportion de sa taille.
 
-    Sans la priorité aux suspects, le second constat attendrait un tour
-    complet de rotation — huit jours pour confirmer une mort déjà vue une
-    fois. Avec elle, un bien vendu sort en deux passages.
+    La priorité aux suspects ne change pas : sans elle, le second constat
+    attendrait un tour complet de rotation — huit jours pour confirmer une
+    mort déjà vue une fois. Avec elle, un bien vendu sort en deux passages.
+
+    Ce qui change, c'est le départage des AUTRES. Il se faisait sur l'URL,
+    faute de mieux — les jamais-vérifiés partagent tous la même date vide,
+    et il fallait bien trancher. Trancher par ordre alphabétique revenait à
+    servir les domaines dans l'ordre de leur nom :
+
+        iadfrance.fr   2 549 annonces   855 vérifiées   34 %
+        safti.fr       2 784 annonces     0 vérifiée     0 %
+
+    Toute la fin de l'alphabet était à zéro, et la frontière tombait au
+    milieu d'iadfrance — là où le budget s'était arrêté. Safti attendait au
+    rang 2 388 sur 5 898.
+
+    Ce n'était pas un retard, c'était une famine. Le catalogue absorbe ~170
+    annonces par jour quand le passage en vérifie ~60 : la file des
+    jamais-vérifiés s'allonge, et chaque nouvelle annonce d'un domaine mieux
+    placé dans l'alphabet repasse devant celles qui attendaient. Safti
+    n'attendait pas son tour, il ne l'aurait jamais eu — un mois après la
+    mise en service, pas une de ses annonces n'avait été regardée.
+
+    D'où le rang RELATIF : chaque annonce est placée selon sa position dans
+    son domaine, divisée par la taille de ce domaine. Un domaine de 2 784
+    annonces pose ses jalons tous les 1/2784, un de 20 tous les 1/20 ; le
+    tri les entrelace, et un lot de 150 liens se répartit alors dans les
+    mêmes proportions que le catalogue. Aucun domaine ne peut plus en
+    affamer un autre, quel que soit son nom ou son poids.
+
+    À l'intérieur d'un domaine, l'ordre promis est intact : les
+    jamais-vérifiés d'abord (date vide), puis les plus anciennement vus.
     """
-    return sorted(
-        (a for a in annonces if a.get("url")),
-        key=lambda a: (a["url"] not in journal,
-                       verifies.get(a["url"], ""), a["url"]))
+    suspects, reste = [], []
+    for annonce in annonces:
+        if annonce.get("url"):
+            (suspects if annonce["url"] in journal else reste).append(annonce)
+    suspects.sort(key=lambda a: (verifies.get(a["url"], ""), a["url"]))
+
+    groupes: dict[str, list[dict]] = {}
+    for annonce in reste:
+        groupes.setdefault(_domaine(annonce["url"]), []).append(annonce)
+
+    etale = []
+    for groupe in groupes.values():
+        groupe.sort(key=lambda a: (verifies.get(a["url"], ""), a["url"]))
+        taille = len(groupe)
+        for rang, annonce in enumerate(groupe):
+            # +0.5 : on vise le milieu de la tranche, pour qu'un domaine de
+            # deux annonces ne devance pas systématiquement un domaine de
+            # mille sur le seul fait que 0/2 == 0/1000.
+            etale.append(((rang + 0.5) / taille, annonce["url"], annonce))
+    # L'URL départage les égalités — deux domaines de même taille sinon
+    # s'ordonneraient au gré du hasard, et le lot ne serait pas reproductible.
+    etale.sort(key=lambda place: (place[0], place[1]))
+    return suspects + [annonce for _, _, annonce in etale]
 
 
 def nettoyer(journal: dict, urls_du_fichier: set) -> dict:
