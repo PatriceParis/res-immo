@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 18.2,
+  "seconde": 15.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 18.2,
+  "seconde": 15.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,307 +21,328 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.2,
+  "seconde": 15.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 18.8,
+  "seconde": 16.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.1,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.1,
+  "seconde": 16.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.4,
+  "seconde": 17.3,
   "reseau": "capifrance",
-  "connues": 8315
+  "connues": 8400
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.4,
+  "seconde": 17.3,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.8,
+  "seconde": 17.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 30.6,
+  "seconde": 25.1,
   "reseau": "iad",
   "n": 92601,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.1,
+  "seconde": 27.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 32.4,
+  "seconde": 27.5,
   "reseau": "iad",
-  "connues": 8315
+  "connues": 8400
  },
  {
   "etape": "departement",
-  "seconde": 159.3,
+  "seconde": 139.3,
   "reseau": "iad",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
-   "vendu": 19,
-   "ecarte": 23,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 23
-  },
-  "exemples": {
-   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 296.1,
-  "reseau": "iad",
-  "departement": "76",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 21,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 14,
-   "prix_trop_haut": 5
-  },
-  "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 395.6,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 14,
-   "ecarte": 35,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 34,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 287 m² à Châteauneuf-Grasse (06740)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 501.2,
-  "reseau": "iad",
-  "departement": "25",
+  "departement": "28",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 8,
-   "ecarte": 40,
+   "vendu": 14,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 38,
    "location": 1,
-   "prix_trop_haut": 1
+   "hors_perimetre": 33
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)",
-   "location": "Maison 3 pièces de 80 m² à Sainte-Anne (97180)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 620.6,
+  "seconde": 249.1,
   "reseau": "iad",
-  "departement": "27",
-  "visitees": 48,
-  "gardes": 8,
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 8,
-   "vendu": 25,
+   "garde": 2,
+   "vendu": 17,
+   "ecarte": 30,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 30
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 358.1,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 12,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 32,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 483.2,
+  "reseau": "iad",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 13,
+   "ecarte": 31,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 24,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 607.3,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 28,
    "ecarte": 15,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 11,
-   "location": 2,
-   "prix_trop_haut": 2
+   "location": 1,
+   "hors_perimetre": 12,
+   "prix_trop_haut": 1,
+   "titre_hors_cible:biens immobiliers a vendre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+   "location": "Maison 3 pièces de 82 m² à Allonville (80260)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)",
+   "titre_hors_cible:biens immobiliers a vendre": "109 351 biens immobiliers à vendre"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 616.6,
+  "reseau": "iad",
+  "departement": "88",
+  "visitees": 5,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 620.6,
+  "seconde": 616.6,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 620.9,
+  "seconde": 617.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 621.8,
+  "seconde": 618.1,
   "reseau": "safti",
   "n": 28776,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 622.4,
+  "seconde": 618.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 622.7,
+  "seconde": 619.4,
   "reseau": "safti",
-  "connues": 8315
+  "connues": 8400
  },
  {
   "etape": "departement",
-  "seconde": 764.8,
+  "seconde": 743.1,
   "reseau": "safti",
-  "departement": "02",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 46,
+   "illisible": 2
+  },
+  "motifs": {
+   "hors_perimetre": 46
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1027.6,
+  "reseau": "safti",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 2,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 3,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
+   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1143.8,
+  "reseau": "safti",
+  "departement": "08",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
    "vendu": 1,
-   "ecarte": 49,
-   "illisible": 0
+   "ecarte": 48,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 49
+   "hors_perimetre": 48
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
   }
  },
  {
   "etape": "departement",
-  "seconde": 921.8,
+  "seconde": 1217.4,
   "reseau": "safti",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 9,
+  "departement": "10",
+  "visitees": 32,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 9,
-   "vendu": 1,
-   "ecarte": 38,
-   "illisible": 2
-  },
-  "motifs": {
-   "hors_perimetre": 38
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 148m², prix 430 000 €. Réf : 1673313"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1160.8,
-  "reseau": "safti",
-  "departement": "55",
-  "visitees": 50,
-  "gardes": 29,
-  "tronquee": true,
-  "etats": {
-   "garde": 29,
+   "garde": 0,
    "vendu": 0,
-   "ecarte": 21,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 20
+   "hors_perimetre": 32
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1219.2,
-  "reseau": "safti",
-  "departement": "57",
-  "visitees": 21,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 3,
-   "ecarte": 15,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 14
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 6 pièces à Argancy 57640 : 253m², prix 879 000 €. Réf : 1678384",
-   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624"
+   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1219.2,
-  "gardes": 68
+  "seconde": 1217.4,
+  "gardes": 62
  }
 ]
