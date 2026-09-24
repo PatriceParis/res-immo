@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 15.8,
+  "seconde": 24.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 15.8,
+  "seconde": 24.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,265 +21,250 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 15.8,
+  "seconde": 24.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 16.5,
+  "seconde": 25.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.8,
+  "seconde": 26.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.8,
+  "seconde": 26.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.3,
+  "seconde": 26.8,
   "reseau": "capifrance",
-  "connues": 8400
+  "connues": 8485
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.3,
+  "seconde": 26.9,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.7,
+  "seconde": 27.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.1,
+  "seconde": 44.7,
   "reseau": "iad",
-  "n": 92601,
+  "n": 92776,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.0,
+  "seconde": 46.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 27.5,
+  "seconde": 47.1,
   "reseau": "iad",
-  "connues": 8400
+  "connues": 8485
  },
  {
   "etape": "departement",
-  "seconde": 139.3,
+  "seconde": 218.5,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "89",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 15,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 14,
-   "ecarte": 34,
+   "garde": 15,
+   "vendu": 20,
+   "ecarte": 15,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 33
+   "location": 6,
+   "hors_perimetre": 8,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "location": "Maison de ville 2 pièces de 54 m² à Vermenton (89270)",
+   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d",
+   "prix_trop_haut": "Demeure 20 pièces de 725 m² à Joigny (89300)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 249.1,
+  "seconde": 369.2,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 17,
-   "ecarte": 30,
-   "illisible": 1
+   "garde": 10,
+   "vendu": 18,
+   "ecarte": 22,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 30
+   "hors_perimetre": 16,
+   "location": 1,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
+   "location": "Maison de ville 6 pièces de 97 m² à Fréteval (41160)",
+   "prix_trop_haut": "Domaine 11 pièces de 520 m² à LA FERTE-SAINT-CYR (41220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 358.1,
+  "seconde": 507.3,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "45",
+  "visitees": 50,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 13,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 1,
+   "location": 8,
+   "titre_hors_cible:murs commerciaux": 1,
+   "prix_trop_haut": 4,
+   "hors_perimetre": 14
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
+   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
+   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
+   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 617.0,
+  "reseau": "iad",
+  "departement": "50",
   "visitees": 50,
   "gardes": 3,
   "tronquee": true,
   "etats": {
    "garde": 3,
-   "vendu": 12,
-   "ecarte": 35,
+   "vendu": 22,
+   "ecarte": 25,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 32,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 483.2,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 13,
-   "ecarte": 31,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 4,
-   "hors_perimetre": 24,
+   "location": 3,
+   "hors_perimetre": 19,
    "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
+   "hors_perimetre": "Maison 5 pièces de 127 m² à Chanteloup-les-Vignes (78570)",
+   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 607.3,
+  "seconde": 626.6,
   "reseau": "iad",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 7,
-  "tronquee": true,
-  "etats": {
-   "garde": 7,
-   "vendu": 28,
-   "ecarte": 15,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 12,
-   "prix_trop_haut": 1,
-   "titre_hors_cible:biens immobiliers a vendre": 1
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 82 m² à Allonville (80260)",
-   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
-   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)",
-   "titre_hors_cible:biens immobiliers a vendre": "109 351 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 616.6,
-  "reseau": "iad",
-  "departement": "88",
+  "departement": "51",
   "visitees": 5,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 0,
-   "ecarte": 5,
+   "vendu": 1,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 3,
+   "location": 1
   },
   "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 616.6,
+  "seconde": 626.6,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 617.2,
+  "seconde": 627.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.1,
+  "seconde": 629.2,
   "reseau": "safti",
-  "n": 28776,
+  "n": 28753,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 618.9,
+  "seconde": 629.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.4,
+  "seconde": 630.4,
   "reseau": "safti",
-  "connues": 8400
+  "connues": 8485
  },
  {
   "etape": "departement",
-  "seconde": 743.1,
+  "seconde": 821.3,
   "reseau": "safti",
-  "departement": "58",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 2,
+   "garde": 12,
    "vendu": 0,
-   "ecarte": 46,
-   "illisible": 2
+   "ecarte": 38,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 46
+   "hors_perimetre": 38
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1027.6,
+  "seconde": 1135.4,
   "reseau": "safti",
-  "departement": "59",
+  "departement": "61",
   "visitees": 50,
   "gardes": 40,
   "tronquee": true,
@@ -290,59 +275,38 @@
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 3,
-   "hors_perimetre": 5
+   "hors_perimetre": 6,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
-   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730",
+   "prix_trop_haut": "Vente de maison 15 pièces à Bagnoles de l'Orne Normandie 61140 : 790m², prix 4 326 000 €. Réf : 1702731"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1143.8,
+  "seconde": 1233.2,
   "reseau": "safti",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 0,
+  "departement": "62",
+  "visitees": 18,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 1,
-   "ecarte": 48,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 48
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1217.4,
-  "reseau": "safti",
-  "departement": "10",
-  "visitees": 32,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
+   "garde": 12,
    "vendu": 0,
-   "ecarte": 32,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 32
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1217.4,
-  "gardes": 62
+  "seconde": 1233.2,
+  "gardes": 101
  }
 ]
