@@ -65,18 +65,47 @@ jobs:
                   python scripts/verifier_liens.py $OPTIONS || true
       - name: Exporter et committer
         run: |
-          python scripts/exporter_reel.py
+          # Une étape `run` tourne sous `bash -e` : un export sorti en erreur
+          # tuait l'étape ICI, avant même le marquage, et le passage
+          # disparaissait sans un mot. C'est ce qui a rendu le créneau du
+          # 23 septembre indiscernable d'un run qui n'a jamais démarré — la
+          # faute déjà refermée dans collecte.yml le 29 août, qui dormait ici
+          # sous la même forme. On recueille le code au lieu de le subir.
+          CODE_EXPORT=0
+          python scripts/exporter_reel.py || CODE_EXPORT=$?
+          if [ "$CODE_EXPORT" -ne 0 ]; then
+            echo "::error::Export sorti EN ERREUR (code $CODE_EXPORT) — le catalogue de ce passage ne sera pas publié, seuls ses journaux partiront."
+          fi
           # Marquer avant d'indexer : un passage qui n'a trouvé aucun lien mort
           # doit laisser une trace, faute de quoi son silence est indiscernable
           # d'une panne. Voir scripts/marquer_passage.py.
           python scripts/marquer_passage.py liens || true
-          git add data/annonces_reel.json data/liens_morts.json \
-                  data/liens_verifies.json data/dernier_passage_liens.json
+          # Le catalogue ne part QUE si l'export l'a reconstruit : sinon le
+          # fichier resté sur le disque n'est plus digne de foi. Les journaux,
+          # eux, décrivent ce passage-ci et partent dans tous les cas.
+          A_INDEXER="data/liens_morts.json data/liens_verifies.json data/dernier_passage_liens.json"
+          if [ "$CODE_EXPORT" -eq 0 ]; then
+            A_INDEXER="data/annonces_reel.json $A_INDEXER"
+          fi
+          # N'indexer que ce qui existe. « git add » sur un chemin absent sort
+          # en 128 SANS RIEN INDEXER : un seul journal manquant tuait l'étape
+          # entière, catalogue compris.
+          for f in $A_INDEXER; do
+            if [ -f "$f" ]; then git add "$f"; else echo "$f absent."; fi
+          done
           if [ -n "$(git diff --cached --name-only)" ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
-            git commit -m "Liens vérifiés : $N annonces au catalogue ($(date -u +%F))"
+            # Le libellé distingue les deux cas : la surveillance cherche
+            # « ^Liens vérifiés », un passage qui n'a rien publié ne doit pas
+            # s'en réclamer, mais il doit rester VISIBLE.
+            if [ "$CODE_EXPORT" -eq 0 ]; then
+              LIBELLE="Liens vérifiés : $N annonces au catalogue ($(date -u +%F))"
+            else
+              LIBELLE="Liens : passage sans publication (export $CODE_EXPORT, $(date -u +%F\ %H:%MZ))"
+            fi
+            git commit -m "$LIBELLE"
             # Se replacer, c'est REFAIRE l'export sur la version distante — les
             # journaux de CE passage sont remis d'abord, car l'export les lit.
             # Voir collecte.yml pour l'incident qui a fixé ce motif.
@@ -91,12 +120,13 @@ jobs:
               for f in liens_morts.json liens_verifies.json; do
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
-              python scripts/exporter_reel.py
+              python scripts/exporter_reel.py || CODE_EXPORT=$?
               python scripts/marquer_passage.py liens || true
               N=$(python -c "import json; print(len(json.load(open('data/annonces_reel.json'))))" 2>/dev/null || echo 0)
-              git add data/annonces_reel.json data/liens_morts.json \
-                      data/liens_verifies.json data/dernier_passage_liens.json
-              git commit -m "Liens vérifiés : $N annonces au catalogue ($(date -u +%F))" || true
+              for f in $A_INDEXER; do
+                if [ -f "$f" ]; then git add "$f"; fi
+              done
+              git commit -m "$LIBELLE" || true
               sleep $((essai * 5))
             done
           else
