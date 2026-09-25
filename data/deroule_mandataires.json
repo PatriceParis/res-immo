@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.3,
+  "seconde": 16.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.4,
+  "seconde": 16.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,330 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.4,
+  "seconde": 16.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.6,
+  "seconde": 17.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.4,
+  "seconde": 17.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.4,
+  "seconde": 17.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.7,
+  "seconde": 18.2,
   "reseau": "capifrance",
-  "connues": 8668
+  "connues": 8724
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.7,
+  "seconde": 18.2,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.0,
+  "seconde": 18.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 45.2,
+  "seconde": 29.6,
   "reseau": "iad",
   "n": 92816,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 46.3,
+  "seconde": 31.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 46.5,
+  "seconde": 32.0,
   "reseau": "iad",
-  "connues": 8668
+  "connues": 8724
  },
  {
   "etape": "departement",
-  "seconde": 265.9,
+  "seconde": 132.5,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 50,
-  "gardes": 26,
-  "tronquee": true,
-  "etats": {
-   "garde": 26,
-   "vendu": 15,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 383.4,
-  "reseau": "iad",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 3,
-   "ecarte": 46,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 30,
-   "location": 6,
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
-   "hors_perimetre": "Maison de campagne 4 pièces de 105 m² à Orgeval (78630)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 504.1,
-  "reseau": "iad",
-  "departement": "08",
+  "departement": "14",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
-   "vendu": 11,
-   "ecarte": 37,
+   "vendu": 10,
+   "ecarte": 38,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 37
+   "hors_perimetre": 28,
+   "prix_trop_haut": 10
   },
   "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 93 m² à Saint-Laurent-d"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
+   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 630.0,
+  "seconde": 246.6,
   "reseau": "iad",
-  "departement": "10",
-  "visitees": 46,
-  "gardes": 5,
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 14,
-   "ecarte": 26,
-   "illisible": 1
+   "garde": 2,
+   "vendu": 15,
+   "ecarte": 33,
+   "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
    "location": 2,
-   "hors_perimetre": 22,
-   "prix_trop_haut": 1
+   "hors_perimetre": 31
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison 8 pièces de 148 m² à Saint-Germain-en-Laye (78112)",
-   "prix_trop_haut": "Château 25 pièces de 1 272 m² à Saint-Pouange (10120)"
+   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 355.5,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 19,
+   "ecarte": 27,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 17,
+   "prix_trop_haut": 8
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 85 m² à Betz-le-Château (37600)",
+   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 460.0,
+  "reseau": "iad",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 11,
+   "ecarte": 38,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 36,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 568.5,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 17,
+   "ecarte": 30,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 30
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 618.5,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 25,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 11,
+   "ecarte": 13,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 8,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 630.0,
+  "seconde": 618.5,
   "reseau": "safti",
-  "part_secondes": 594
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 630.5,
+  "seconde": 618.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 632.3,
+  "seconde": 619.8,
   "reseau": "safti",
   "n": 28711,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 632.7,
+  "seconde": 620.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 633.0,
+  "seconde": 621.0,
   "reseau": "safti",
-  "connues": 8668
+  "connues": 8724
  },
  {
   "etape": "departement",
-  "seconde": 776.9,
+  "seconde": 869.3,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 27,
   "tronquee": true,
   "etats": {
-   "garde": 3,
+   "garde": 27,
    "vendu": 0,
-   "ecarte": 47,
+   "ecarte": 23,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 47
+   "prix_trop_haut": 4,
+   "hors_perimetre": 19
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
+   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
   }
  },
  {
   "etape": "departement",
-  "seconde": 948.7,
+  "seconde": 1053.0,
   "reseau": "safti",
-  "departement": "25",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 15,
   "tronquee": true,
   "etats": {
-   "garde": 14,
+   "garde": 15,
    "vendu": 1,
-   "ecarte": 35,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 35
+   "hors_perimetre": 33,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1132.3,
+  "seconde": 1196.6,
   "reseau": "safti",
-  "departement": "72",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 14,
-   "vendu": 5,
-   "ecarte": 31,
+   "garde": 6,
+   "vendu": 0,
+   "ecarte": 44,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 28,
-   "prix_trop_haut": 3
+   "hors_perimetre": 43,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Aigne 34210 : 141m², prix 449 000 €. Réf : 1714286",
-   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390",
+   "prix_trop_haut": "Vente de maison 8 pièces à Gallardon 28320 : 224m², prix 750 000 €. Réf : 1676013"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1225.9,
+  "seconde": 1217.5,
   "reseau": "safti",
-  "departement": "76",
-  "visitees": 33,
-  "gardes": 3,
+  "departement": "36",
+  "visitees": 6,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 1,
-   "ecarte": 29,
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 3,
-   "hors_perimetre": 26
+   "hors_perimetre": 4
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
-   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 105m², prix 240 000 €. Réf : 1704998"
+   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1225.9,
-  "gardes": 68
+  "seconde": 1217.6,
+  "gardes": 63
  }
 ]
