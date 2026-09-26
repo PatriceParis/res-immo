@@ -150,6 +150,31 @@ def test_un_passage_rate_ne_se_reclame_pas_d_une_verification(tmp_path):
         f"« {message_du_dernier_commit(distant)} »")
 
 
+def test_aucun_workflow_ne_calcule_son_plafond_de_temps():
+    """L'angle mort de toute notre instrumentation.
+
+    `timeout-minutes` au niveau du job est évalué par GitHub AVANT le premier
+    pas. Une expression qui échoue là crée un run qui meurt en zéro seconde,
+    sans job et sans étape : aucune trace, aucun commit de diagnostic, et le
+    cron cesse même de se déclencher tant que le fichier reste invalide.
+
+    Mesuré : du 23 au 26 septembre, `verifier-liens` a été à l'arrêt complet
+    avec `timeout-minutes: ${{ fromJSON(github.event.inputs.minutes || '15')
+    + 25 }}` — deux runs à 0 s, 0 job, et plus une seule exécution programmée.
+    Un budget se règle dans le shell, où il est visible et testable ; ce
+    plafond-ci reste un nombre écrit en clair.
+    """
+    for fichier in sorted((RACINE / ".github" / "workflows").glob("*.yml")):
+        plan = yaml.safe_load(fichier.read_text(encoding="utf-8"))
+        for nom, travail in plan["jobs"].items():
+            plafond = travail.get("timeout-minutes")
+            assert not isinstance(plafond, str), (
+                f"{fichier.name} · job « {nom} » calcule son plafond de temps "
+                f"— « {plafond} ». Une expression y est évaluée avant le "
+                f"premier pas : si elle échoue, le workflow s'arrête sans "
+                f"laisser la moindre trace.")
+
+
 def test_le_passage_normal_publie_toujours_son_catalogue(tmp_path):
     """L'autre sens de la mesure. Rendre le silence visible ne doit rien
     changer au cas ordinaire : le catalogue part, la trace l'accompagne, et le
