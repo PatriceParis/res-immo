@@ -35,7 +35,20 @@ concurrency:
 jobs:
   verifier:
     runs-on: ubuntu-latest
-    timeout-minutes: ${{ fromJSON(github.event.inputs.minutes || '15') + 25 }}
+    # Plafond FIXE, jamais calculé. Une expression à cet endroit est évaluée
+    # par GitHub AVANT le premier pas : si elle échoue, le run est créé puis
+    # meurt en zéro seconde, sans job, sans étape — donc sans aucune de nos
+    # traces, et le cron cesse de se déclencher. C'est ce qui a mis ce passage
+    # à l'arrêt du 23 au 26 septembre, avec
+    # `timeout-minutes: ${{ fromJSON(github.event.inputs.minutes || '15') + 25 }}` :
+    # deux runs à 0 s, 0 job, et plus une seule exécution programmée.
+    #
+    # Le vrai budget reste réglable, mais là où il est visible et testable :
+    # dans le shell, où MINUTES est déjà ramené à des chiffres et vaut 15 par
+    # défaut. Ce plafond-ci n'est qu'un filet de dernier recours — 150 comme
+    # dans rattrapage.yml, pour qu'un rattrapage manuel d'un réseau entier
+    # tienne dedans.
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
         with:
