@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.0,
+  "seconde": 22.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.0,
+  "seconde": 22.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,307 +21,284 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.0,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.0,
+  "seconde": 23.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.4,
+  "seconde": 24.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.4,
+  "seconde": 24.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 24.7,
+  "seconde": 24.5,
   "reseau": "capifrance",
-  "connues": 8827
+  "connues": 8879
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.7,
+  "seconde": 24.5,
   "reseau": "iad",
   "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.3,
+  "seconde": 25.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 43.5,
+  "seconde": 42.9,
   "reseau": "iad",
-  "n": 92910,
+  "n": 92990,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 44.9,
+  "seconde": 44.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 45.3,
+  "seconde": 44.7,
   "reseau": "iad",
-  "connues": 8827
+  "connues": 8879
  },
  {
   "etape": "departement",
-  "seconde": 154.8,
+  "seconde": 198.2,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 17,
-   "ecarte": 31,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 31
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 266.0,
-  "reseau": "iad",
-  "departement": "39",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 13,
-   "ecarte": 37,
+   "garde": 8,
+   "vendu": 28,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 34,
-   "prix_trop_haut": 2
+   "hors_perimetre": 12,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 4 pièces de 95 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+   "location": "Maison 3 pièces de 82 m² à Allonville (80260)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 389.3,
+  "seconde": 330.8,
   "reseau": "iad",
-  "departement": "57",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 14,
-   "ecarte": 34,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 6,
-   "hors_perimetre": 25,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 547.1,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
-   "vendu": 20,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 20
-  },
-  "exemples": {
-   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 624.4,
-  "reseau": "iad",
-  "departement": "76",
-  "visitees": 26,
   "gardes": 3,
   "tronquee": true,
   "etats": {
    "garde": 3,
-   "vendu": 7,
-   "ecarte": 16,
+   "vendu": 9,
+   "ecarte": 38,
    "illisible": 0
   },
   "motifs": {
+   "hors_perimetre": 38
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 495.6,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 9,
+  "tronquee": true,
+  "etats": {
+   "garde": 9,
+   "vendu": 20,
+   "ecarte": 21,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 15,
    "location": 1,
-   "hors_perimetre": 10,
    "prix_trop_haut": 5
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+   "hors_perimetre": "Maison 5 pièces de 120 m² à Saint-Ouen-d",
+   "location": "Maison de ville 6 pièces de 97 m² à Fréteval (41160)",
+   "prix_trop_haut": "Domaine 11 pièces de 520 m² à LA FERTE-SAINT-CYR (41220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 630.0,
+  "reseau": "iad",
+  "departement": "45",
+  "visitees": 47,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 15,
+   "ecarte": 27,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 1,
+   "location": 8,
+   "titre_hors_cible:murs commerciaux": 1,
+   "prix_trop_haut": 4,
+   "hors_perimetre": 13
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
+   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
+   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)",
+   "hors_perimetre": "Maison 10 pièces de 305 m² à Montereau-Fault-Yonne (77130)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.4,
+  "seconde": 630.0,
   "reseau": "safti",
-  "part_secondes": 599
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 624.8,
+  "seconde": 630.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 626.4,
+  "seconde": 632.2,
   "reseau": "safti",
-  "n": 28769,
+  "n": 28703,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 627.0,
+  "seconde": 632.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 627.3,
+  "seconde": 633.1,
   "reseau": "safti",
-  "connues": 8827
+  "connues": 8879
  },
  {
   "etape": "departement",
-  "seconde": 850.2,
+  "seconde": 763.5,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
-   "vendu": 0,
-   "ecarte": 30,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 28,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1050.7,
-  "reseau": "safti",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 17,
-  "tronquee": true,
-  "etats": {
-   "garde": 17,
-   "vendu": 1,
-   "ecarte": 32,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 28,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
-   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1192.0,
-  "reseau": "safti",
-  "departement": "50",
+  "departement": "52",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 0,
-   "ecarte": 46,
+   "vendu": 1,
+   "ecarte": 45,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
    "hors_perimetre": 45
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
+   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1225.4,
+  "seconde": 1032.5,
   "reseau": "safti",
-  "departement": "51",
-  "visitees": 13,
+  "departement": "53",
+  "visitees": 50,
+  "gardes": 33,
+  "tronquee": true,
+  "etats": {
+   "garde": 33,
+   "vendu": 2,
+   "ecarte": 15,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 15
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1153.1,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 0,
-   "ecarte": 13,
+   "vendu": 1,
+   "ecarte": 49,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 13
+   "hors_perimetre": 49
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743"
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1223.6,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 25,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 1,
+   "ecarte": 22,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 22
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1225.4,
-  "gardes": 57
+  "seconde": 1223.6,
+  "gardes": 64
  }
 ]
