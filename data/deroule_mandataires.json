@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 25.0,
+  "seconde": 17.1,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 25.0,
+  "seconde": 17.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,276 +21,328 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.0,
+  "seconde": 17.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.1,
+  "seconde": 17.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 28.7,
+  "seconde": 17.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.7,
+  "seconde": 17.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.3,
+  "seconde": 18.4,
   "reseau": "capifrance",
-  "connues": 9058
+  "connues": 9072
  },
  {
   "etape": "reseau_debut",
-  "seconde": 29.3,
+  "seconde": 18.5,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 29.8,
+  "seconde": 18.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 47.6,
+  "seconde": 25.8,
   "reseau": "iad",
   "n": 93081,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 49.5,
+  "seconde": 27.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 50.0,
+  "seconde": 28.3,
   "reseau": "iad",
-  "connues": 9058
+  "connues": 9072
  },
  {
   "etape": "departement",
-  "seconde": 299.6,
+  "seconde": 146.9,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 50,
-  "gardes": 26,
-  "tronquee": true,
-  "etats": {
-   "garde": 26,
-   "vendu": 13,
-   "ecarte": 11,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 11
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 451.5,
-  "reseau": "iad",
-  "departement": "62",
+  "departement": "27",
   "visitees": 50,
   "gardes": 7,
   "tronquee": true,
   "etats": {
    "garde": 7,
-   "vendu": 22,
-   "ecarte": 21,
+   "vendu": 19,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "hors_perimetre": 16,
+   "hors_perimetre": 20,
+   "location": 2,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison 2 pièces de 60 m² à Saint-Venant (62350)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 571.6,
+  "seconde": 248.6,
   "reseau": "iad",
-  "departement": "21",
+  "departement": "28",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 13,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 34
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 347.6,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 17,
+   "ecarte": 31,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 31
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 105 m² à Saint-Médard-de-Guizières (33230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 449.8,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 14,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 32,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 551.7,
+  "reseau": "iad",
+  "departement": "57",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
    "vendu": 12,
-   "ecarte": 35,
-   "illisible": 1
+   "ecarte": 34,
+   "illisible": 2
   },
   "motifs": {
-   "hors_perimetre": 35
+   "location": 5,
+   "hors_perimetre": 26,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 77 m² à Brétigny-sur-Orge (91220)"
+   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 629.0,
+  "seconde": 617.8,
   "reseau": "iad",
-  "departement": "25",
-  "visitees": 21,
+  "departement": "70",
+  "visitees": 34,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 1,
-   "ecarte": 19,
+   "vendu": 9,
+   "ecarte": 24,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 2,
-   "hors_perimetre": 17
+   "hors_perimetre": 24
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 629.0,
+  "seconde": 617.8,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 599
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 629.9,
+  "seconde": 618.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 631.4,
+  "seconde": 619.4,
   "reseau": "safti",
   "n": 28752,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 632.1,
+  "seconde": 620.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 632.6,
+  "seconde": 620.7,
   "reseau": "safti",
-  "connues": 9058
+  "connues": 9072
  },
  {
   "etape": "departement",
-  "seconde": 765.8,
+  "seconde": 780.6,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 3,
-   "ecarte": 45,
-   "illisible": 0
+   "garde": 10,
+   "vendu": 1,
+   "ecarte": 38,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 45
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 964.3,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 15,
-  "tronquee": true,
-  "etats": {
-   "garde": 15,
-   "vendu": 0,
-   "ecarte": 33,
-   "illisible": 2
-  },
-  "motifs": {
-   "hors_perimetre": 32,
+   "hors_perimetre": 37,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Baignes-Sainte-Radegonde 16360 : 87m², prix 90 000 €. Réf : 1629692",
-   "prix_trop_haut": "Vente de maison 12 pièces à Dracy-Les-Couches 71490 : 350m², prix 720 000 €. Réf : 1665483"
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1095.9,
+  "seconde": 922.2,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 0,
-   "ecarte": 49,
+   "garde": 6,
+   "vendu": 1,
+   "ecarte": 43,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 49
+   "hors_perimetre": 43
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1228.1,
+  "seconde": 1065.9,
   "reseau": "safti",
-  "departement": "25",
-  "visitees": 45,
-  "gardes": 3,
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 3,
+   "garde": 6,
    "vendu": 1,
-   "ecarte": 41,
+   "ecarte": 43,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 41
+   "hors_perimetre": 43
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1217.5,
+  "reseau": "safti",
+  "departement": "72",
+  "visitees": 46,
+  "gardes": 12,
+  "tronquee": true,
+  "etats": {
+   "garde": 12,
+   "vendu": 5,
+   "ecarte": 28,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 26,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 6 pièces à Aigne 34210 : 141m², prix 449 000 €. Réf : 1714286",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1228.1,
-  "gardes": 57
+  "seconde": 1217.5,
+  "gardes": 48
  }
 ]
