@@ -431,7 +431,39 @@ depuis longtemps, et peut fort bien être vendu."""
 JOURS_AVANT_PEREMPTION = 45
 
 
-def verifier_fraicheur(biens: list[dict], audit: Audit) -> None:
+def _journal(nom: str) -> dict:
+    """Un journal du vérificateur de liens ; absent ou illisible, vide."""
+    chemin = Path(__file__).resolve().parent.parent / "data" / nom
+    try:
+        return json.loads(chemin.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def reconstate_le(bien: dict, verifies: dict, morts: dict) -> str:
+    """La dernière fois qu'on a VU ce bien en ligne, par l'un ou l'autre œil.
+
+    La collecte le voit en le relevant (`revue_le`). Le vérificateur de liens
+    le voit en ouvrant sa page et en la trouvant vivante — et c'est le SEUL
+    œil qui reste sur les gros départements, tronqués à chaque passage, où la
+    collecte n'atteint plus les mêmes annonces. Mesuré le 1er octobre : 336
+    biens servis revus par la collecte pour la dernière fois le 17 août, que
+    le vérificateur allait regarder dans les jours suivants ; sans cette
+    règle, l'audit les aurait comptés périmés APRÈS que leur lien eut été
+    trouvé vivant, et aurait contredit le vérificateur sur 4 % du catalogue.
+
+    Un lien au journal des morts n'est pas une reconstatation : il a été
+    regardé, et c'est précisément ce qu'on y a vu qui est douteux.
+    """
+    dates = [bien.get("revue_le") or ""]
+    url = bien.get("url")
+    if url and url not in (morts or {}):
+        dates.append(verifies.get(url, "") if verifies else "")
+    return max(dates)
+
+
+def verifier_fraicheur(biens: list[dict], audit: Audit,
+                       verifies: dict | None = None, morts: dict | None = None) -> None:
     """Un bien affiché doit avoir été revu en ligne récemment.
 
     La collecte s'arrête sur un budget de temps : sans rotation, elle
@@ -442,11 +474,18 @@ def verifier_fraicheur(biens: list[dict], audit: Audit) -> None:
     Ce contrôle rend la chose visible plutôt que supposée — c'est ce point
     aveugle qui a fait conclure à tort qu'un correctif d'extraction s'était
     appliqué à tout le catalogue.
+
+    « Revu en ligne » compte les deux yeux du projet : la collecte et le
+    vérificateur de liens (voir `reconstate_le`).
     """
     from datetime import date, timedelta
 
+    if verifies is None:
+        verifies = _journal("liens_verifies.json")
+    if morts is None:
+        morts = _journal("liens_morts.json")
     limite = (date.today() - timedelta(days=JOURS_AVANT_PEREMPTION)).isoformat()
-    perimes = [b for b in biens if (b.get("revue_le") or "") < limite]
+    perimes = [b for b in biens if reconstate_le(b, verifies, morts) < limite]
     if perimes:
         par_agence: dict = defaultdict(int)
         for b in perimes:

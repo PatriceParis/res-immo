@@ -112,3 +112,46 @@ def test_le_lot_est_reproductible():
     premier = [a["url"] for a in liens.ordre_de_verification(annonces, {}, {})]
     second = [a["url"] for a in liens.ordre_de_verification(annonces[::-1], {}, {})]
     assert premier == second
+
+
+def test_un_bien_vu_absent_par_la_collecte_passe_avant_la_rotation():
+    """Mesuré le 1er octobre : 336 biens servis non reconstatés depuis le
+    17 août, tous marqués absents une fois par la collecte puis gelés — leur
+    département est tronqué à chaque passage et la règle de sortie
+    s'abstient. Le vérificateur de liens était le seul à pouvoir trancher,
+    et il les laissait attendre parmi deux mille cinq cents jamais-vérifiés
+    du même domaine. Ils passent désormais juste après les suspects, les plus
+    anciennement revus d'abord."""
+    annonces = catalogue(**{"iadfrance.fr": 400, "safti.fr": 400})
+    recent, ancien = annonces[-1], annonces[-2]      # deux safti, mal placés
+    recent.update(absences=1, revue_le="2026-09-01")
+    ancien.update(absences=1, revue_le="2026-08-17")
+    ordre = [a["url"] for a in liens.ordre_de_verification(annonces, {}, {})]
+    assert ordre[:2] == [ancien["url"], recent["url"]]
+
+
+def test_le_palier_des_absents_se_vide_une_fois_le_lien_regarde():
+    """Sans cela, 336 biens occuperaient le lot à perpétuité : une absence ne
+    se lève que par une visite complète, qui ne viendra peut-être jamais sur
+    un département tronqué. Une vérification POSTÉRIEURE à la dernière revue
+    a tranché ; le bien retombe dans la rotation ordinaire."""
+    annonces = catalogue(**{"iadfrance.fr": 400, "safti.fr": 400})
+    douteux = annonces[-1]
+    douteux.update(absences=1, revue_le="2026-08-17")
+    verifie_apres = {douteux["url"]: "2026-10-02"}
+    ordre = [a["url"] for a in liens.ordre_de_verification(annonces, verifie_apres, {})]
+    assert ordre[0] != douteux["url"], "vérifié après l'absence : plus prioritaire"
+    verifie_avant = {douteux["url"]: "2026-08-01"}
+    ordre = [a["url"] for a in liens.ordre_de_verification(annonces, verifie_avant, {})]
+    assert ordre[0] == douteux["url"], "vérifié AVANT l'absence : rien n'a tranché"
+
+
+def test_les_suspects_passent_toujours_avant_les_absents():
+    """Un constat de mort en attente reste la priorité absolue : sa
+    confirmation attend déjà un passage, pas un palier de plus."""
+    annonces = catalogue(**{"safti.fr": 50})
+    suspect, absent = annonces[10], annonces[20]
+    absent.update(absences=1, revue_le="2026-08-01")
+    ordre = [a["url"] for a in liens.ordre_de_verification(
+        annonces, {}, {suspect["url"]: {"constats": 1}})]
+    assert ordre[:2] == [suspect["url"], absent["url"]]

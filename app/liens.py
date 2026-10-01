@@ -131,12 +131,32 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
 
     À l'intérieur d'un domaine, l'ordre promis est intact : les
     jamais-vérifiés d'abord (date vide), puis les plus anciennement vus.
+
+    Entre les suspects et la rotation, un palier : les biens que la COLLECTE
+    a vus absents (`absences` ≥ 1) et dont le lien n'a pas été regardé
+    depuis. Mesuré le 1er octobre : 336 biens servis n'avaient pas été
+    reconstatés depuis le 17 août — 191 pour la seule IAD (71) —, tous
+    marqués absents une fois, puis gelés là parce que leur département est
+    tronqué à chaque passage et que la règle de sortie s'abstient à bon
+    droit. La collecte ne pouvait plus trancher ; le vérificateur pouvait,
+    mais les laissait attendre leur tour parmi deux mille cinq cents
+    jamais-vérifiés du même domaine. Le palier se vide de lui-même : une
+    fois le lien regardé après l'absence, le bien retombe dans la rotation.
     """
-    suspects, reste = [], []
+    suspects, douteux, reste = [], [], []
     for annonce in annonces:
-        if annonce.get("url"):
-            (suspects if annonce["url"] in journal else reste).append(annonce)
+        if not annonce.get("url"):
+            continue
+        if annonce["url"] in journal:
+            suspects.append(annonce)
+        elif vu_absent_sans_verification(annonce, verifies):
+            douteux.append(annonce)
+        else:
+            reste.append(annonce)
     suspects.sort(key=lambda a: (verifies.get(a["url"], ""), a["url"]))
+    # Les plus anciennement reconstatés d'abord : ce sont eux qui ont le plus
+    # de chances d'être partis.
+    douteux.sort(key=lambda a: (a.get("revue_le") or "", a["url"]))
 
     groupes: dict[str, list[dict]] = {}
     for annonce in reste:
@@ -154,7 +174,21 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
     # L'URL départage les égalités — deux domaines de même taille sinon
     # s'ordonneraient au gré du hasard, et le lot ne serait pas reproductible.
     etale.sort(key=lambda place: (place[0], place[1]))
-    return suspects + [annonce for _, _, annonce in etale]
+    return suspects + douteux + [annonce for _, _, annonce in etale]
+
+
+def vu_absent_sans_verification(annonce: dict, verifies: dict) -> bool:
+    """La collecte a vu ce bien absent, et personne n'a regardé son lien depuis.
+
+    Deux dates se comparent : `revue_le`, dernière fois que la collecte l'a vu
+    en ligne — l'absence est postérieure —, et la date de vérification du
+    lien. Une vérification postérieure à la dernière revue a déjà tranché, dans
+    un sens ou dans l'autre : le bien n'est plus douteux, seulement à revoir à
+    son tour.
+    """
+    if int(annonce.get("absences") or 0) < 1:
+        return False
+    return verifies.get(annonce.get("url"), "") <= (annonce.get("revue_le") or "")
 
 
 def nettoyer(journal: dict, urls_du_fichier: set) -> dict:

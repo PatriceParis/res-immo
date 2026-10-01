@@ -31,6 +31,7 @@ import re
 import socket
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 from pathlib import Path
@@ -291,10 +292,17 @@ def main() -> int:
     else:
         port = _port_libre()
         base = f"http://127.0.0.1:{port}"
+        # La sortie d'erreur du serveur est GARDÉE, pas jetée : un serveur qui
+        # ne démarre pas doit dire pourquoi. Le 1er octobre, « Serveur
+        # injoignable » a coûté trois essais avant qu'on lise, ailleurs, que
+        # uvicorn n'était pas installé — l'erreur était imprimée à la seule
+        # place où personne ne la lisait : /dev/null.
+        journal_serveur = tempfile.TemporaryFile(mode="w+", encoding="utf-8",
+                                                 errors="replace")
         serveur = subprocess.Popen(
             [sys.executable, "-m", "uvicorn", "app.main:app",
              "--host", "127.0.0.1", "--port", str(port), "--log-level", "warning"],
-            cwd=RACINE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            cwd=RACINE, stdout=subprocess.DEVNULL, stderr=journal_serveur)
 
     def appeler(chemin: str, params: dict) -> dict:
         from urllib.parse import urlencode
@@ -306,6 +314,13 @@ def main() -> int:
     try:
         if not _attendre(base):
             print(f"Serveur injoignable : {base}")
+            if serveur is not None:
+                journal_serveur.seek(0)
+                dernieres = journal_serveur.read().strip().splitlines()[-12:]
+                print("Ce que le serveur a dit :" if dernieres
+                      else "Le serveur n'a rien dit.")
+                for ligne in dernieres:
+                    print(f"  {ligne}")
             return 2
 
         print(f"Audit de l'interface — {base}\n")
