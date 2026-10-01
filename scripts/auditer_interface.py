@@ -123,6 +123,39 @@ def _nombre(texte: str) -> int | None:
     return int(re.sub(r"\D", "", m.group(1)) or 0)
 
 
+def plafond_d_affichage(cartes: int, total: int, compteur: str) -> int | None:
+    """Le nombre de fiches que la page accepte d'afficher — déduit de la page.
+
+    L'accueil se borne à 250 fiches depuis le 28 août (BIENS_PAR_PAGE, dans
+    app.js) et le dit dans son compteur : « 250 premiers affichés ». L'audit
+    comparait l'écran à `min(attendu, PLAFOND_API)` — 500, le plafond de
+    l'API, qui n'est pas celui de l'écran. Toute case qui laissait plus de
+    250 biens montrait 250 fiches là où l'audit en attendait 500 ou 3 877,
+    et six promesses sur six étaient déclarées non tenues alors que
+    l'interface tenait parole. On ne recopie pas la constante de l'écran :
+    on lit l'écran, qui l'annonce lui-même. None quand rien n'est tronqué.
+    """
+    return cartes if total > cartes and "premiers affichés" in compteur else None
+
+
+def attendu_a_l_ecran(attendu: int, plafond: int | None) -> int:
+    """Combien de fiches doivent être à l'écran pour `attendu` biens trouvés."""
+    return min(attendu, plafond) if plafond else attendu
+
+
+def case_sans_effet(avec_la_case: int, sans_la_case: int) -> bool:
+    """Vrai si cocher la case ne retire aucun bien — jugé sur les TOTAUX de
+    l'API, observables quel que soit le plafond de l'écran.
+
+    L'ancien contrôle comparait deux comptes de fiches à l'écran, « avant »
+    et « après ». Dès que le catalogue a dépassé le plafond d'affichage, les
+    deux butaient dessus — 500 avant comme après, le 13 août — et une case
+    parfaitement opérante passait pour inerte. C'est la première des deux
+    causes qui ont tenu « Vérification » au rouge sept semaines.
+    """
+    return avec_la_case == sans_la_case and sans_la_case > 20
+
+
 def verifier_page(page, appeler, constat: Constat) -> None:
     """Compare ce qui est écrit à l'écran avec ce que l'API répond."""
 
@@ -170,12 +203,14 @@ def verifier_page(page, appeler, constat: Constat) -> None:
         else:
             constat.promesse("cliquer une pastille donne exactement le nombre annoncé")
 
-    # 3. Cocher une case change vraiment ce qui est affiché.
+    # 3. Cocher une case change vraiment ce qui est affiché. L'écran est
+    #    jugé contre SON plafond, lu sur la page ; l'effet de la case, lui,
+    #    se juge sur les totaux de l'API, que le plafond ne tronque pas.
+    plafond = plafond_d_affichage(cartes, total_api, compteur)
     for param, (libelle, _) in coherence.CASES_A_COCHER.items():
         case = page.locator(f"#f-{param.replace('_', '-')}")
         if not case.count():
             continue
-        avant = page.locator(".fiche").count()
         case.check()
         page.wait_for_timeout(700)
         apres = page.locator(".fiche").count()
@@ -183,12 +218,13 @@ def verifier_page(page, appeler, constat: Constat) -> None:
                           {param: 1, "limit": coherence.PLAFOND_API})["total"]
         case.uncheck()
         page.wait_for_timeout(500)
-        if apres != min(attendu, coherence.PLAFOND_API):
+        if apres != attendu_a_l_ecran(attendu, plafond):
             constat.manque(f"case « {libelle} »",
-                           f"{apres} fiche(s) affichée(s) pour {attendu} attendue(s)")
-        elif apres == avant and avant > 20:
+                           f"{apres} fiche(s) affichée(s) pour {attendu} attendue(s)"
+                           + (f" (plafond d'affichage {plafond})" if plafond else ""))
+        elif case_sans_effet(attendu, total_api):
             constat.manque(f"case « {libelle} »",
-                           f"ne retire aucun bien ({avant} avant comme après)")
+                           f"ne retire aucun bien ({total_api} avec comme sans)")
         else:
             constat.promesse(f"la case « {libelle} » filtre réellement l'affichage")
 

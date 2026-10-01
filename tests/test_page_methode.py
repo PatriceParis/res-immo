@@ -72,8 +72,12 @@ def test_la_formule_employee_pour_l_inondation_est_explicitee():
     assert "aucun événement d'inondation ne figure dans les données" in PLAT
 
 
-def test_la_page_est_reliee_depuis_les_autres_pages_servies():
+def test_la_page_est_reliee_depuis_les_autres_pages_servies(base_avec_un_bien):
+    """Le test se donne son bien dans sa base (voir conftest.py) : il lisait
+    la base par défaut — pleine ici, vide en CI, où la page répondait un 404
+    sans bien et le test échouait à chaque push."""
     from fastapi.testclient import TestClient
     from app.main import app
-    page = TestClient(app).get("/petits-prix").text
-    assert seo.URL_METHODE in page
+    reponse = TestClient(app).get("/petits-prix")
+    assert reponse.status_code == 200, reponse.text[:120]
+    assert seo.URL_METHODE in reponse.text

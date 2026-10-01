@@ -100,17 +100,23 @@ def test_les_droits_et_la_cnil_sont_indiques():
         assert mention in html, mention
 
 
-def test_chaque_page_servie_mene_aux_mentions_legales():
+def test_chaque_page_servie_mene_aux_mentions_legales(base_avec_un_bien):
     """Une mention légale que rien ne relie n'existe pas : la loi demande
     qu'elle soit accessible depuis le service, pas qu'elle existe quelque
-    part."""
+    part.
+
+    Le test se donne son bien dans sa base (voir conftest.py). Il lisait la
+    base par défaut — pleine ici, vide en CI, où « /petits-prix » répondait
+    un 404 sans bien : échec à chaque push du 17 août au 1er octobre.
+    """
     from fastapi.testclient import TestClient
     from app.main import app
     client = TestClient(app)
     for chemin in ("/petits-prix", "/sans-travaux", "/alertes"):
-        page = client.get(chemin).text
-        assert seo.URL_MENTIONS in page, chemin
-        assert seo.URL_CONFIDENTIALITE in page, chemin
+        reponse = client.get(chemin)
+        assert reponse.status_code == 200, (chemin, reponse.text[:120])
+        assert seo.URL_MENTIONS in reponse.text, chemin
+        assert seo.URL_CONFIDENTIALITE in reponse.text, chemin
 
 
 def test_une_promesse_de_retrait_a_toujours_une_destination():
