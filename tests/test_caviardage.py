@@ -64,15 +64,31 @@ def test_le_garde_fou_nomme_les_champs_fautifs():
 
 def test_une_annonce_ordinaire_n_est_pas_abimee():
     """Aucun faux positif sur un texte d'annonce normal — les références
-    d'agences ressemblent parfois à des jetons."""
+    d'agences ressemblent parfois à des jetons, et un prix ou une surface à un
+    numéro.
+
+    Jusqu'au 1er octobre, ce test tenait une ligne « Contact : 03 85 00 00 00 —
+    contact@agence-exemple.fr » pour un contenu ordinaire à préserver. C'est
+    l'inverse : ce sont les coordonnées d'autrui, et le fichier public en
+    portait quatre mille deux cents. Elles sortent ; tout le reste doit rester
+    au caractère près.
+    """
+    from app.caviardage import MARQUE_COORDONNEES
+
     annonce = {
         "titre": "Longère 4 chambres à Bellême — réf. LR-2026-00817",
-        "description": "Maison de 140 m² sur 6 000 m² de terrain, DPE D.",
+        "description": "Maison de 140 m² sur 6 000 m² de terrain, 245 000 €, DPE D.",
         "texte": "Cave voûtée, puits, poêle à bois. Référence 71510-AB12. "
                  "Contact : 03 85 00 00 00 — contact@agence-exemple.fr",
     }
-    assert caviarder_annonce(annonce) == annonce
-    assert identifiants_restants(annonce) == []
+    propre = caviarder_annonce(annonce)
+    assert propre["titre"] == annonce["titre"]
+    assert propre["description"] == annonce["description"]
+    assert propre["texte"] == ("Cave voûtée, puits, poêle à bois. Référence 71510-AB12. "
+                               f"Contact : {MARQUE_COORDONNEES} — {MARQUE_COORDONNEES}")
+    assert identifiants_restants(annonce) == [], (
+        "des coordonnées ne sont pas un identifiant de tiers : elles "
+        "s'effacent, elles ne font pas abandonner le bien")
 
 
 def test_le_caviardage_agit_des_l_entree_en_base():

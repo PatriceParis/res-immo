@@ -40,6 +40,19 @@ MOTIFS = (
                r"[\"']?[A-Za-z0-9_\-\.]{24,}[\"']?"),
 )
 
+# Les coordonnées d'une personne : un numéro de téléphone français, un
+# courriel. Elles sont à l'agent ou au mandataire, pas à nous, et un bien n'a
+# pas besoin d'elles pour être décrit. Mesuré le 1er octobre dans le fichier
+# public : quatre mille deux cents annonces portaient un mobile dans leur
+# texte, un descriptif portait encore un numéro. On les efface des champs
+# libres — JAMAIS des adresses : un identifiant de photo fait souvent dix
+# chiffres, et ce motif n'y a rien à faire (voir CHAMPS_A_CAVIARDER).
+MARQUE_COORDONNEES = "[coordonnées retirées]"
+MOTIFS_COORDONNEES = (
+    re.compile(r"(?<![\d.])(?:\+33\s?|0)[1-9](?:[\s.\-]?\d{2}){4}(?![\d.])"),
+    re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+"),
+)
+
 # Champs qu'on nettoie. On ne touche PAS aux adresses (`url`, `photo`) : une
 # photo signée y perdrait sa signature, donc son image. Si un jour un secret
 # s'y logeait, le garde-fou de l'export le dirait plutôt que de le laisser
@@ -49,11 +62,14 @@ CHAMPS_A_CAVIARDER = ("texte", "description", "titre")
 
 
 def caviarder(texte: str) -> str:
-    """Le texte, ses identifiants remplacés par une marque explicite."""
+    """Le texte, ses identifiants et les coordonnées d'autrui remplacés par
+    une marque explicite."""
     if not texte:
         return texte
     for motif in MOTIFS:
         texte = motif.sub(MARQUE, texte)
+    for motif in MOTIFS_COORDONNEES:
+        texte = motif.sub(MARQUE_COORDONNEES, texte)
     return texte
 
 

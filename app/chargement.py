@@ -86,6 +86,14 @@ def preparer_annonce(brut: dict) -> dict:
     # (cave, puits, troglodyte…) est ailleurs dans la page.
     detection = f"{description} {annonce.get('texte', '')}"
     features = scoring.extraire_criteres(titre, detection)
+    # Le fichier publié ne porte plus le texte de la page, seulement ce qu'on
+    # y a lu à la collecte (voir scripts/exporter_reel.py). Ce qui a été vu
+    # sur la page entière reste vu ; ce qu'on relit ici — un titre, parfois un
+    # descriptif — peut seulement s'y ajouter, jamais l'effacer. À la
+    # collecte, le bien n'a encore rien hérité : cette boucle ne fait rien.
+    for cle, vu in (annonce.get("features") or {}).items():
+        if vu:
+            features[cle] = True
     annonce["features"] = features
 
     risques = dict(annonce.get("risques") or {})
@@ -125,7 +133,13 @@ def preparer_annonce(brut: dict) -> dict:
     # ne le laisse pas sortir, et le catalogue servi est reconstruit depuis les
     # seules colonnes. Sans cette colonne, la page « sans travaux » n'aurait
     # rien à lire. Le constat est publié ; le texte, jamais.
-    annonce["etat_declare"] = etat_du_bien.etat_declare(annonce)
+    #
+    # Et le constat fait à la collecte, sur la page entière, fait foi quand il
+    # existe : relu ici sur le seul titre, l'état tomberait presque toujours à
+    # « inconnu » et la page « sans travaux » se viderait — l'exact effet que
+    # la régression d'août 2026 avait eu sur les critères.
+    if annonce.get("etat_declare") not in etat_du_bien.ETATS:
+        annonce["etat_declare"] = etat_du_bien.etat_declare(annonce)
     annonce["sans_travaux"] = int(annonce["etat_declare"] == "sans_travaux")
     # Mémoire portée par le fichier exporté (app/historique.py) : on la
     # laisse telle quelle, c'est elle qui dit ce qui est nouveau.

@@ -175,7 +175,10 @@ def test_les_agences_sans_site_ne_sont_plus_jetees():
     ]}
     sans = decouverte.agences_sans_site(reponse, "dept 61")
     assert [a["nom"] for a in sans] == ["Agence du Bourg"]
-    assert sans[0]["commune"] == "Bellême" and sans[0]["telephone"]
+    assert sans[0]["commune"] == "Bellême"
+    # Le numéro, OSM le donne ; nous ne le gardons pas. Rien ne l'appelle, et
+    # le recensement est versionné dans un dépôt public.
+    assert "telephone" not in sans[0]
     # Celle qui a un site reste du ressort de l'autre fonction.
     avec = decouverte.agences_depuis_overpass(reponse, "dept 61")
     assert [a["nom"] for a in avec] == ["Terres du Perche"]

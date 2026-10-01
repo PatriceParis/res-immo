@@ -313,8 +313,14 @@ def agences_sans_site(reponse: dict, zone_nom: str) -> list[dict]:
     Elles étaient purement écartées. C'est pourtant la majorité des points :
     une agence de village a rarement pris la peine de renseigner son site dans
     OSM, ce qui ne veut pas dire qu'elle n'en a pas. On les conserve donc —
-    avec leur commune et leur téléphone quand ils sont là — comme pistes à
-    résoudre, et pour savoir ce qu'on ne couvre pas.
+    avec leur commune quand elle est là — comme pistes à résoudre, et pour
+    savoir ce qu'on ne couvre pas.
+
+    Pas le téléphone, bien qu'OpenStreetMap le donne : rien ici ne l'appelle,
+    et le recensement est versionné dans un dépôt public. Cinq cent vingt et
+    une agences y figuraient avec cette clé, cent cinquante-quatre avec un
+    numéro, quinze avec un mobile — celui d'une personne. On ne garde pas ce
+    qu'on n'utilise pas.
     """
     trouvees, vues = [], set()
     for element in (reponse or {}).get("elements", []):
@@ -333,7 +339,6 @@ def agences_sans_site(reponse: dict, zone_nom: str) -> list[dict]:
             "nom": nom,
             "commune": commune,
             "code_postal": (tags.get("addr:postcode") or "").strip(),
-            "telephone": (tags.get("phone") or tags.get("contact:phone") or "").strip(),
             "zone": zone_nom,
         })
     return trouvees

@@ -18,15 +18,25 @@ sys.path.insert(0, str(RACINE))
 
 from datetime import date  # noqa: E402
 
-from app import caviardage, chargement, db, historique, liens  # noqa: E402
+from app import (caviardage, chargement, db, etat_du_bien, historique,  # noqa: E402
+                 liens, qualite, scoring)
 
-# Champs « bruts » réinjectés dans l'app (elle recalcule score, features, distance).
+# Champs « bruts » réinjectés dans l'app (elle recalcule score et distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
 # sans réseau. Le train, lui, est recalculé au chargement (table locale des gares).
 CHAMPS = [
     "id", "source", "url", "titre", "description", "type_bien", "prix",
     "surface_m2", "terrain_m2", "pieces", "commune", "code_postal",
-    "departement", "region", "agence", "agence_url", "photo", "texte",
+    "departement", "region", "agence", "agence_url", "photo",
+    # Ce qu'on a LU dans la page, et non la page. Jusqu'au 1er octobre le
+    # fichier portait `texte` — la page entière, 3 000 caractères par bien —
+    # pour que le chargement y relise cave, puits et poêle. Vingt-six méga-
+    # octets dans un dépôt public, où quatre mille deux cents annonces
+    # portaient le numéro de mobile d'un mandataire et quatre mille sept
+    # cents un courriel nominatif : des données personnelles republiées sans
+    # finalité, car personne ne cherche « cave » dans un numéro de téléphone.
+    # Le constat voyage désormais seul ; la page reste chez l'agence.
+    "features", "etat_declare", "vendu", "plusieurs_biens",
     "lat", "lon", "altitude", "densite_hab_km2", "dpe", "risques",
     # Les autres images de la page, en réserve : si la première se révèle
     # être du mobilier de site, la suivante prend sa place au chargement.
@@ -38,18 +48,55 @@ CHAMPS = [
 ]
 
 
+ETATS = ("sans_travaux", "travaux", "inconnu")
+
+
 def _bien(row) -> dict:
     """Une ligne de base → dict exportable.
 
-    `_row_vers_dict` décode les colonnes JSON (risques_json → risques) mais
-    **retire `texte`**, réservé à l'usage interne de l'API. Or c'est ce texte
-    qui permet de détecter cave, puits, poêle… au rechargement : on le remet
-    depuis la ligne brute, sinon le scoring repart d'une description de
-    quelques lignes et tous les critères disparaissent.
+    `features` et `etat_declare` ont été constatés à la collecte, quand la page
+    entière était sous les yeux (voir chargement.preparer_annonce) : la ligne
+    les porte déjà. `vendu` et `plusieurs_biens` sont constatés ici, sur le
+    texte brut de la ligne, pour que les filtres du chargement gardent leur
+    garde-fou sans avoir à relire la page — qui ne sort plus.
     """
     bien = db._row_vers_dict(row)
-    bien["texte"] = dict(row).get("texte") or ""
+    brut = dict(row)
+    page = {"texte": brut.get("texte") or "", "description": brut.get("description") or ""}
+    bien["vendu"] = qualite.est_vendu(page)
+    bien["plusieurs_biens"] = qualite.enumere_plusieurs_biens(page)
     return {cle: bien.get(cle) for cle in CHAMPS}
+
+
+def alleger(bien: dict) -> dict:
+    """Un bien du fichier précédent, sans le texte de sa page.
+
+    Les biens déjà publiés ne seront pas tous recollectés avant des semaines —
+    une agence est revisitée tous les deux jours au mieux, et la règle de
+    sortie garde ceux dont le site n'a pas été revu. Les laisser porter leur
+    texte jusque-là, c'est garder vingt-six méga-octets de pages de tiers, et
+    leurs numéros, dans le fichier public pendant tout ce temps.
+
+    On constate donc ici, UNE dernière fois et sur la page entière, ce que le
+    chargement y aurait lu — critères, état déclaré, bien vendu, page
+    catalogue —, puis on retire le texte. Un bien exporté sous la forme
+    nouvelle n'a plus de texte : pour lui, cette fonction n'est qu'une
+    projection sur les champs publiés.
+    """
+    if not bien.get("texte"):
+        return {cle: bien.get(cle) for cle in CHAMPS}
+    allege = dict(bien)
+    if not allege.get("features"):
+        allege["features"] = scoring.extraire_criteres(
+            allege.get("titre") or "",
+            f"{allege.get('description') or ''} {allege['texte']}")
+    if allege.get("etat_declare") not in ETATS:
+        allege["etat_declare"] = etat_du_bien.etat_declare(allege)
+    if allege.get("vendu") is None:
+        allege["vendu"] = qualite.est_vendu(allege)
+    if allege.get("plusieurs_biens") is None:
+        allege["plusieurs_biens"] = qualite.enumere_plusieurs_biens(allege)
+    return {cle: allege.get(cle) for cle in CHAMPS}
 
 
 def sans_doublon_d_url(annonces: list[dict]) -> list[dict]:
@@ -191,7 +238,12 @@ def main() -> None:
               f"irréductible : {sorted({c for _, cs in abandonnes for c in cs})}")
         for identifiant, champs in abandonnes[:5]:
             print(f"    {identifiant} → {champs}")
-    fusionnees = propres
+    # Après le caviardage, qui a encore besoin du texte pour le nettoyer, et
+    # avant l'écriture : le texte de la page ne franchit jamais cette ligne.
+    allegees_du_texte = sum(1 for b in propres if b.get("texte"))
+    fusionnees = [alleger(b) for b in propres]
+    if allegees_du_texte:
+        print(f"  {allegees_du_texte} bien(s) délesté(s) du texte de leur page")
 
     # Ordre STABLE, par identifiant. Le fichier est committé six fois par jour
     # et pèse un méga-octet : sans ordre fixe, chaque export réécrit tout et

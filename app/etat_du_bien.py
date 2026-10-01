@@ -40,6 +40,10 @@ import re
 
 from .scoring import normaliser
 
+# Les trois constats possibles — et rien d'autre : un chargement qui hérite
+# d'un état venu du fichier publié vérifie qu'il est l'un des trois.
+ETATS = ("sans_travaux", "travaux", "inconnu")
+
 # Les mots qui désignent le bien DANS SON ENSEMBLE. Sans eux, « en bon état »
 # peut ne porter que sur la toiture.
 _ENTIER = (r"(?:maisons?|biens?|ensemble|propriete|pavillon|longere|fermette"

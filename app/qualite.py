@@ -173,8 +173,18 @@ REFERENCES_MAXI = 2
 
 
 def enumere_plusieurs_biens(a: dict) -> bool:
-    """Vrai si le texte de la page cite plus de références qu'un bien n'en a."""
-    return len(set(_REFERENCE.findall(a.get("texte") or ""))) > REFERENCES_MAXI
+    """Vrai si le texte de la page cite plus de références qu'un bien n'en a.
+
+    La page entière, quand elle est là, fait foi : c'est le cas à la collecte.
+    Au chargement du fichier publié, qui ne porte plus le texte, on s'en remet
+    au constat que l'export a fait sur cette même page (`plusieurs_biens`) —
+    sans quoi une page catalogue écartée hier reviendrait demain, le filtre
+    n'ayant plus rien à lire.
+    """
+    texte = a.get("texte")
+    if texte:
+        return len(set(_REFERENCE.findall(texte))) > REFERENCES_MAXI
+    return bool(a.get("plusieurs_biens"))
 
 
 def motif_de_rejet(a: dict) -> str | None:
