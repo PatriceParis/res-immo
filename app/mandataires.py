@@ -83,6 +83,17 @@ def normaliser(texte: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", sans_accent.lower()).strip("-")
 
 
+def reseaux_autorises(reseaux: dict, exclus: set) -> dict:
+    """Les réseaux dont le site n'a pas demandé son retrait.
+
+    Pure et séparée du collecteur pour être testée sans réseau : exclure
+    « iadfrance.fr » doit retirer IAD du passage, et rien d'autre.
+    """
+    from .exclusions import est_exclu
+    return {cle: reseau for cle, reseau in reseaux.items()
+            if not est_exclu(reseau.get("site", ""), exclus)}
+
+
 def index_des_communes(communes_par_departement: dict) -> list[tuple[str, str, str]]:
     """(nom normalisé, nom d'origine, département), les plus longs d'abord.
 

@@ -39,7 +39,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, historique  # noqa: E402
+from app import db, exclusions, historique  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
@@ -152,6 +152,11 @@ def _configurees(toutes: bool = False) -> list[dict]:
     except (OSError, ValueError):
         print(f"Config illisible : {CONFIG}")
         return []
+    # Une agence qui a demandé son retrait n'est plus visitée, quoi que dise
+    # la configuration — et `toutes` n'y change rien : la promesse des
+    # mentions légales n'a pas d'exception (voir app/exclusions.py).
+    exclus = exclusions.domaines_exclus()
+    agences = [a for a in agences if not exclusions.est_exclu(a.get("site"), exclus)]
     if toutes:
         return agences
     return [a for a in agences if a.get("actif", True)]

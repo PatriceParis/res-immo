@@ -33,6 +33,7 @@ from urllib.parse import urlparse
 
 import scrapy
 
+from app import exclusions
 from app.extraction import extraire_annonce
 
 ANNUAIRE = Path(__file__).resolve().parent.parent / "agences.json"
@@ -59,7 +60,14 @@ class SpiderAgence(scrapy.Spider):
         self.cibles = self._construire_cibles(agence, site, sitemap)
 
     def _construire_cibles(self, agence, site, sitemap) -> list[dict]:
+        # Une agence qui a demandé son retrait n'est plus visitée — même
+        # désignée explicitement : la promesse des mentions légales n'a pas
+        # d'exception en ligne de commande (voir app/exclusions.py).
+        exclus = exclusions.domaines_exclus()
         if site:  # agence ad hoc passée en ligne de commande
+            if exclusions.est_exclu(site, exclus):
+                self.logger.warning("Site exclu à sa demande, non visité : %s", site)
+                return []
             nom = agence or urlparse(site).netloc
             return [{"nom": nom, "site": site.rstrip("/"), "sitemap": sitemap or None}]
         try:
@@ -71,7 +79,7 @@ class SpiderAgence(scrapy.Spider):
             annuaire = [a for a in annuaire if agence.lower() in a["nom"].lower()]
             if not annuaire:
                 self.logger.warning("Aucune agence « %s » dans l'annuaire", agence)
-        return annuaire
+        return [a for a in annuaire if not exclusions.est_exclu(a.get("site"), exclus)]
 
     def start_requests(self):
         for cible in self.cibles:

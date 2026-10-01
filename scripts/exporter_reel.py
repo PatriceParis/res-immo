@@ -18,8 +18,8 @@ sys.path.insert(0, str(RACINE))
 
 from datetime import date  # noqa: E402
 
-from app import (caviardage, chargement, db, etat_du_bien, historique,  # noqa: E402
-                 liens, qualite, scoring)
+from app import (caviardage, chargement, db, etat_du_bien, exclusions,  # noqa: E402
+                 historique, liens, qualite, scoring)
 
 # Champs « bruts » réinjectés dans l'app (elle recalcule score et distance).
 # `risques` vient de Géorisques : on le conserve, l'app ne saurait pas le refaire
@@ -214,6 +214,11 @@ def main() -> None:
     fusionnees, liens_morts = liens.sans_liens_morts(fusionnees, journal_morts)
     if liens_morts:
         print(f"  {liens_morts} annonce(s) retirée(s) — lien mort confirmé")
+    # Les agences qui ont demandé leur retrait (data/agences_exclues.json) :
+    # leurs biens sortent du fichier publié, quel que soit l'état de leur page.
+    fusionnees, exclues = exclusions.sans_exclues(fusionnees)
+    if exclues:
+        print(f"  {exclues} annonce(s) retirée(s) — agence exclue à sa demande")
     fusionnees = sans_doublon_d_url(fusionnees)
     fusionnees = _photo_publiee_egale_photo_affichee(fusionnees)
 

@@ -50,7 +50,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, historique, mandataires  # noqa: E402
+from app import db, exclusions, historique, mandataires  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
@@ -471,10 +471,17 @@ def main() -> None:
     # mange pas la part des suivants.
     # Partagé par tous les réseaux : voir collecter_un_reseau.
     tronquees: set = set()
-    choisis = ([args.reseau] if args.reseau
-               else mandataires.ordre_des_reseaux(mandataires.RESEAUX,
-                                                  derniere_visite()))
-    print(f"\nOrdre des réseaux ce passage : {' → '.join(choisis)}")
+    # Un réseau qui a demandé son retrait n'est plus visité, même désigné
+    # explicitement : la promesse des mentions légales n'a pas d'exception en
+    # ligne de commande (voir app/exclusions.py).
+    autorises = mandataires.reseaux_autorises(mandataires.RESEAUX,
+                                              exclusions.domaines_exclus())
+    for cle in sorted(set(mandataires.RESEAUX) - set(autorises)):
+        print(f"  {cle} : exclu à sa demande, non visité")
+    choisis = ([args.reseau] if args.reseau and args.reseau in autorises
+               else [] if args.reseau
+               else mandataires.ordre_des_reseaux(autorises, derniere_visite()))
+    print(f"\nOrdre des réseaux ce passage : {' → '.join(choisis) or '(aucun)'}")
     etape("ordre_des_reseaux", ordre=choisis)
     for rang, cle in enumerate(choisis):
         part = mandataires.part_de_budget(fin_globale - time.monotonic(),

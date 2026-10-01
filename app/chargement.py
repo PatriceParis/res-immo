@@ -12,8 +12,8 @@ import json
 from pathlib import Path
 from urllib.parse import urlparse
 
-from . import (caviardage, db, etat_du_bien, extraction, gares, geo, marche,
-               regions, scoring)
+from . import (caviardage, db, etat_du_bien, exclusions, extraction, gares, geo,
+               marche, regions, scoring)
 from .qualite import PRIX_MINI, est_bien_valide
 
 # Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
@@ -343,8 +343,15 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     """Applique tous les filtres de qualité et de périmètre, sans écrire."""
     suspectes = _signatures_suspectes(annonces)
     mobilier = _photos_de_mobilier(annonces)
+    # Les agences qui ont demandé leur retrait (data/agences_exclues.json) ne
+    # sont plus servies — même si leurs biens figurent encore dans un fichier
+    # exporté avant la demande. L'export les retirera ; le site, lui, n'attend
+    # pas l'export.
+    exclus = exclusions.domaines_exclus()
     retenues = []
     for brut in annonces:
+        if exclus and exclusions.est_exclu(exclusions.site_du_bien(brut), exclus):
+            continue  # retrait demandé par l'agence
         retenue = photo_retenue(brut, mobilier)
         if retenue != brut.get("photo"):
             # La première candidate était du mobilier : on prend la suivante.

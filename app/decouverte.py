@@ -23,6 +23,8 @@ from __future__ import annotations
 import re
 from urllib.parse import urlparse
 
+from . import exclusions
+
 # Villes visées, avec le rayon de recherche. Ce sont les bassins accessibles
 # en train depuis Paris, plus ceux déjà couverts qu'on veut densifier.
 ZONES = [
@@ -423,18 +425,27 @@ def fusionner_rapports(ancien: list[dict], nouveau: list[dict]) -> list[dict]:
 
 
 def fusionner(existantes: list[dict], candidates: list[dict],
-              note_mini: int = 25) -> tuple[list[dict], list[dict]]:
+              note_mini: int = 25, exclus: set | None = None) -> tuple[list[dict], list[dict]]:
     """Ajoute les candidates retenues aux agences déjà configurées.
 
     Renvoie (liste complète, nouvelles ajoutées). Le dédoublonnage se fait sur
     le domaine : une agence déjà suivie n'est jamais ajoutée deux fois.
+
+    Une agence qui a demandé son retrait (data/agences_exclues.json) n'est
+    jamais ajoutée du tout : sans cela, le passage mensuel rebrancherait le
+    site qu'on venait de retirer à sa demande — et la promesse des mentions
+    légales, « la collecte n'y revient pas », ne tiendrait qu'un mois.
     """
+    if exclus is None:
+        exclus = exclusions.domaines_exclus()
     connus = {domaine(a.get("site", "")) for a in existantes}
     ajoutees = []
     for c in sorted(candidates, key=lambda x: -x.get("note", 0)):
         d = domaine(c.get("site", ""))
         if not d or d in connus or c.get("note", 0) < note_mini:
             continue
+        if exclusions.est_exclu(d, exclus):
+            continue    # retrait demandé : on ne revient pas
         if est_constructeur(c.get("nom", "")):
             continue    # maisons neuves : pas de cave, pas de dépendances
         connus.add(d)
