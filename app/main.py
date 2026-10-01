@@ -530,6 +530,15 @@ def page_confidentialite(requete: Request):
                         headers={"Cache-Control": "public, max-age=86400"})
 
 
+@app.get(seo.URL_ROBOT)
+def page_robot(requete: Request):
+    """Ce que notre robot fait chez les agences, sous quel nom, et comment
+    l'arrêter. C'est la page vers laquelle pointe son User-Agent : un
+    administrateur qui le voit passer doit trouver quelque chose derrière."""
+    return HTMLResponse(pages.page_robot(_base(requete)),
+                        headers={"Cache-Control": "public, max-age=86400"})
+
+
 @app.get("/terroir/{terroir}")
 def page_terroir(terroir: str, requete: Request):
     region = seo.region_du_slug(terroir)

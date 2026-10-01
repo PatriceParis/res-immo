@@ -39,6 +39,7 @@ from urllib.parse import quote, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
+from app import robot  # noqa: E402
 from app.chargement import _candidates  # noqa: E402
 from app.photos import ressemble_a_une_photo  # noqa: E402
 
@@ -46,8 +47,9 @@ SITE = "https://res-immo.vercel.app"
 SECONDES = 15
 PLAFOND = 8_000_000
 CANDIDATES = 4
-_NAVIGATEUR = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-               "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
+# L'identité commune des robots du projet ; le nom de la variable date du
+# temps où l'on se présentait comme un navigateur.
+_NAVIGATEUR = robot.USER_AGENT
 
 
 def _demander(url: str, referer: str | None) -> tuple[str, str, int]:

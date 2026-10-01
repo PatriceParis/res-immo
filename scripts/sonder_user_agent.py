@@ -32,16 +32,20 @@ import requests
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
+from app import robot  # noqa: E402
+
 CONFIG = RACINE / "scraper" / "refuge_scraper" / "agences_sites.json"
 RESEAUX = ["https://www.iadfrance.fr/", "https://www.safti.fr/", "https://www.century21.fr/"]
 
+# Le seul endroit du projet où la chaîne d'un navigateur subsiste : pour la
+# comparer à l'identité réelle, pas pour s'en servir.
 NAVIGATEUR = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
               "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
-ROBOT = "RefugeImmoBot/1.0 (+https://res-immo.vercel.app/robot)"
+ROBOT = robot.USER_AGENT
 # La forme des moteurs de recherche : un navigateur « compatible » qui dit son
 # nom. Certains pare-feux la traitent comme un navigateur, d'autres comme un
 # robot — c'est précisément ce qu'on mesure.
-COMPATIBLE = "Mozilla/5.0 (compatible; RefugeImmoBot/1.0; +https://res-immo.vercel.app/robot)"
+COMPATIBLE = f"Mozilla/5.0 (compatible; {robot.NOM}/{robot.VERSION}; +{robot.PAGE})"
 
 IDENTITES = {"navigateur": NAVIGATEUR, "robot": ROBOT, "compatible": COMPATIBLE}
 

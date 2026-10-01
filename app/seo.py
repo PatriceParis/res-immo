@@ -226,6 +226,11 @@ URL_MENTIONS = "/mentions-legales"
 URL_CONFIDENTIALITE = "/confidentialite"
 URL_METHODE = "/methode"
 URL_PROFESSIONNELS = "/professionnels"
+# La page vers laquelle pointe l'identité de nos robots (voir app/robot.py) :
+# ce qu'ils font chez une agence, comment les bloquer, comment obtenir un
+# retrait. Un administrateur qui voit passer « RefugeImmoBot (+…/robot) »
+# dans ses journaux doit trouver une page derrière.
+URL_ROBOT = "/robot"
 
 # --- Identification de l'éditeur (LCEN, art. 6) ----------------------------
 #
@@ -656,7 +661,8 @@ def sitemap(biens: list[dict], regions_servies: dict, base: str = SITE,
                (base + URL_MENTIONS, "0.3", "yearly"),
                (base + URL_CONFIDENTIALITE, "0.3", "yearly"),
                (base + URL_METHODE, "0.7", "monthly"),
-               (base + URL_PROFESSIONNELS, "0.5", "monthly")]
+               (base + URL_PROFESSIONNELS, "0.5", "monthly"),
+               (base + URL_ROBOT, "0.3", "yearly")]
     entrees += [(f"{base}{url_terroir(r)}", "0.9", "daily")
                 for r in regions_servies if r in TERROIRS]
     entrees += [(f"{base}{url_annonce(b)}", "0.6", "weekly") for b in biens]

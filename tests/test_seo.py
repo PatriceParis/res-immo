@@ -248,12 +248,13 @@ def test_le_plan_du_site_couvre_accueil_terroirs_et_annonces():
     assert "<loc>https://exemple.fr/mentions-legales</loc>" in xml
     assert "<loc>https://exemple.fr/methode</loc>" in xml
     assert "<loc>https://exemple.fr/professionnels</loc>" in xml
+    assert "<loc>https://exemple.fr/robot</loc>" in xml
     # Le compte exact reste une garde : le plan ne doit porter QUE l'accueil,
     # les pages de sujet et les annonces. Une entrée en trop y passerait
     # inaperçue, et un plan qui gonfle dilue ce qu'il annonce. Passé de quatre
-    # à cinq avec « sans travaux », puis de neuf à dix avec la page
-    # professionnels — la garde a signalé les deux ajouts.
-    assert xml.count("<url>") == 10
+    # à cinq avec « sans travaux », de neuf à dix avec la page professionnels,
+    # puis de dix à onze avec la page du robot — la garde a signalé les trois.
+    assert xml.count("<url>") == 11
 
 
 def test_llms_txt_dit_les_limites_autant_que_les_forces():

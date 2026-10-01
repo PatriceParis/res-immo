@@ -47,11 +47,10 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import decouverte, reseaux, sirene  # noqa: E402
+from app import decouverte, reseaux, robot, sirene  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES  # noqa: E402
 
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
+UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
 OVERPASS = ["https://overpass-api.de/api/interpreter",
             "https://overpass.kumi.systems/api/interpreter"]
 GEO_API = "https://geo.api.gouv.fr"

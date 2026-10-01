@@ -871,7 +871,9 @@ immobilière, réservée aux titulaires d'une carte professionnelle.</p>
 publient. Nous n'en reprenons que des <strong>faits</strong> — prix, surface,
 nombre de pièces, terrain, commune, étiquette énergétique — et le lien vers la
 page d'origine. Le texte de vente rédigé par l'agence n'est pas republié, ni
-sur les pages ni dans notre interface programmable.</p>
+sur les pages ni dans notre interface programmable. Notre robot se présente
+sous le nom <code>RefugeImmoBot</code> : <a href="{_e(base + seo.URL_ROBOT)}">la
+page qui le décrit</a> dit ce qu'il retient et comment le bloquer.</p>
 <p>Les photographies restent hébergées chez l'agence et sont affichées depuis
 ses serveurs : elle voit ce trafic et peut nous en empêcher d'un réglage.</p>
 <p>Un prix, une surface ou une disponibilité peuvent avoir changé depuis notre
@@ -1111,6 +1113,77 @@ consultées</em>, et rien de plus.</p>
         "résilience de Refuge Immo.",
         f"{base}{seo.URL_METHODE}", corps,
         _jsonld(seo.jsonld_fil([("Accueil", "/"), ("Méthode", seo.URL_METHODE)], base)),
+        base)
+
+
+def page_robot(base: str = seo.SITE) -> str:
+    """La page vers laquelle pointe l'identité de nos robots.
+
+    Un robot qui dit son nom doit dire aussi où lire ce qu'il fait : c'est la
+    convention des moteurs de recherche, et c'est ce qui rend le refus
+    possible. La page tient donc les trois réponses qu'un administrateur de
+    site d'agence vient chercher — qui est-ce, comment le bloquer, comment
+    obtenir un retrait — avant toute autre chose.
+    """
+    from . import robot
+    corps = f"""
+<nav class="fil"><a href="{_e(base)}/">Accueil</a> › Notre robot</nav>
+
+<h1>Notre robot : ce qu'il fait chez vous, et comment l'arrêter</h1>
+<p class="chapeau">Les annonces de ce site viennent des sites des agences et des
+réseaux qui les publient, lues par un robot qui dit son nom. Cette page est
+celle qu'il indique dans chacune de ses requêtes.</p>
+
+<h2>Comment il se présente</h2>
+<pre><code>User-Agent: {_e(robot.USER_AGENT)}</code></pre>
+<p>Il lit d'abord votre fichier <code>robots.txt</code> et le respecte. Il
+suit votre plan de site (<code>sitemap.xml</code>), celui que vous destinez
+aux moteurs de recherche, n'ouvre qu'une connexion à la fois sur votre site et
+attend quelques secondes entre deux pages. Il ne contourne aucune protection :
+une page qui lui est refusée n'est pas lue, et un site qui le refuse n'est pas
+visité sous un autre nom.</p>
+
+<h2>Ce qu'il retient, et ce qu'il ne retient pas</h2>
+<ul>
+<li>Il retient des <strong>faits</strong> : prix, surface, nombre de pièces,
+terrain, commune, étiquette énergétique — et le lien vers votre page, vers
+laquelle chaque fiche renvoie.</li>
+<li>Il lit le texte de l'annonce pour y repérer une cave, un puits, un poêle,
+des travaux à prévoir, et <strong>ne le conserve pas</strong>. Seul le constat
+est gardé ; le texte n'est ni republié ni stocké.</li>
+<li>Il n'enregistre <strong>aucune coordonnée</strong> : ni téléphone, ni
+courriel, ni nom d'agent. S'il en rencontre dans un titre, elles sont effacées
+à l'entrée.</li>
+<li>Les photographies restent chez vous : nous les affichons depuis vos
+serveurs, sans en faire de copie. Vous voyez ce trafic et pouvez le refuser
+d'un réglage.</li>
+</ul>
+
+<h2>Pour le bloquer</h2>
+<p>Deux lignes dans votre <code>robots.txt</code> suffisent ; il les lit avant
+toute page :</p>
+<pre><code>User-agent: {_e(robot.NOM)}
+Disallow: /</code></pre>
+
+<h2>Pour retirer vos annonces</h2>
+<p>Écrivez-nous — l'adresse est dans les
+<a href="{_e(base + seo.URL_MENTIONS)}">mentions légales</a>. Le retrait est
+fait sans discussion et sans délai, et votre site est ajouté à une liste
+d'exclusion que consultent tous nos robots, y compris celui qui découvre de
+nouvelles agences : nous n'y reviendrons pas. Aucune justification n'est
+demandée.</p>
+
+<h2>Pourquoi un robot qui dit son nom</h2>
+<p>Jusqu'au 1<sup>er</sup> octobre 2026, nos robots se présentaient comme un
+navigateur. Un robot qui s'annonce vous laisse le choix de le refuser ; nous
+préférons votre choix à notre confort.</p>
+"""
+    return _document(
+        "Notre robot",
+        "Ce que le robot de Refuge Immo fait sur les sites d'agences, sous quel "
+        "nom il se présente, et comment le bloquer ou obtenir un retrait.",
+        f"{base}{seo.URL_ROBOT}", corps,
+        _jsonld(seo.jsonld_fil([("Accueil", "/"), ("Notre robot", seo.URL_ROBOT)], base)),
         base)
 
 

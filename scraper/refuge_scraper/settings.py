@@ -1,16 +1,16 @@
-"""Réglages Scrapy — usage personnel, « poli mais fonctionnel » :
+"""Réglages Scrapy — « poli et déclaré » :
 
-- le collecteur se présente comme un NAVIGATEUR courant (User-Agent Chrome +
-  en-têtes de navigateur) : beaucoup de sites d'agences renvoient une erreur
-  aux clients qui s'annoncent « robot », alors qu'ils servent normalement la
-  page à un navigateur ;
+- le collecteur DIT SON NOM : une seule identité pour tous les robots du
+  projet, définie dans app/robot.py avec la page qui l'explique et dit
+  comment le bloquer. Il s'est présenté comme un navigateur Chrome jusqu'au
+  1er octobre 2026 ; la bascule a été mesurée avant d'être faite (un site sur
+  deux cent quatre-vingt-neuf refuse le robot déclaré) ;
 - une seule requête à la fois, cadence lente et adaptative (on ne surcharge
   jamais le site) ;
-- robots.txt respecté par défaut (désactivable pour un usage strictement
-  personnel) ;
+- robots.txt respecté par défaut ;
 - cache HTTP local pour ne pas re-télécharger pendant les mises au point.
 
-À réserver à une veille personnelle — voir docs/LEGAL.md.
+Voir docs/LEGAL.md.
 """
 
 import os
@@ -27,15 +27,11 @@ BOT_NAME = "refuge_immo"
 SPIDER_MODULES = ["refuge_scraper.spiders"]
 NEWSPIDER_MODULE = "refuge_scraper.spiders"
 
-# On se présente comme un navigateur récent (Chrome). Surchargeable :
-#   export REFUGE_USER_AGENT="…"
-USER_AGENT = os.environ.get(
-    "REFUGE_USER_AGENT",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
-)
+# Le robot dit son nom (voir app/robot.py). Surchargeable par REFUGE_USER_AGENT
+# pour un essai — jamais pour se déguiser.
+from app.robot import USER_AGENT  # noqa: E402
 
-# En-têtes envoyés par un vrai navigateur (langue française, types acceptés).
+# En-têtes d'un client français (langue voulue, types acceptés).
 DEFAULT_REQUEST_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,"
               "image/avif,image/webp,image/apng,*/*;q=0.8",

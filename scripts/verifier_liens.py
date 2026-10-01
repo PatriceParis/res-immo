@@ -31,13 +31,12 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import liens  # noqa: E402
+from app import liens, robot  # noqa: E402
 
 REEL = RACINE / "data" / "annonces_reel.json"
 JOURNAL_MORTS = RACINE / "data" / "liens_morts.json"
 JOURNAL_VERIFIES = RACINE / "data" / "liens_verifies.json"
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
+UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
 
 
 def _charger(chemin: Path) -> dict:

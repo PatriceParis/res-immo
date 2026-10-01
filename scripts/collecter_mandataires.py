@@ -50,15 +50,14 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, exclusions, historique, mandataires  # noqa: E402
+from app import db, exclusions, historique, mandataires, robot  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.qualite import est_vendu, motif_de_rejet  # noqa: E402
 
 JOURNAL = RACINE / "data" / "mandataires_visites.json"
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
+UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 SECONDES = 20
 PLAFOND = 20_000_000

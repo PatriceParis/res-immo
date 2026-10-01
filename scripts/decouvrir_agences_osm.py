@@ -53,9 +53,10 @@ OVERPASS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
 ]
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")
-ENTETES = {"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"}
+from app import robot  # noqa: E402
+
+UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
+ENTETES = dict(robot.ENTETES)
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 RE_JSONLD_IMMO = re.compile(
     r"realestatelisting|singlefamilyresidence|\"@type\"\s*:\s*\"(?:house|product|offer)\"",

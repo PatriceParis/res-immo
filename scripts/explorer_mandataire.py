@@ -36,11 +36,13 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
+from app import robot  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.regions import REGION_PAR_DEPT, regions_cibles  # noqa: E402
 
-_NAVIGATEUR = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-               "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+# L'identité commune des robots du projet ; le nom de la variable date du
+# temps où l'on se présentait comme un navigateur.
+_NAVIGATEUR = robot.USER_AGENT
 SECONDES = 20
 PLAFOND = 20_000_000
 

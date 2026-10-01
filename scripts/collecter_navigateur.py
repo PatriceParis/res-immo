@@ -39,7 +39,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, exclusions, historique  # noqa: E402
+from app import db, exclusions, historique, robot  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
@@ -63,11 +63,8 @@ MOTIF_BIEN = re.compile(
     r"/(annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens|detail|ref|maison|propriete)[-/]",
     re.IGNORECASE,
 )
-UA = os.environ.get(
-    "REFUGE_USER_AGENT",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
-)
+# Le robot dit son nom (voir app/robot.py) ; REFUGE_USER_AGENT y est honoré.
+UA = robot.USER_AGENT
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 
 

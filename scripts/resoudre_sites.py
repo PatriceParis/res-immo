@@ -67,7 +67,7 @@ except ImportError:                                    # pragma: no cover
     print("Le module 'requests' est nécessaire :  pip install requests")
     sys.exit(1)
 
-from app import decouverte, domaines, sirene  # noqa: E402
+from app import decouverte, domaines, robot, sirene  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES  # noqa: E402
 
 RECENSEMENT = RACINE / "data" / "agences_recensees.json"
@@ -77,12 +77,7 @@ JOURNAL = RACINE / "data" / "sites_cherches.json"
 # interruption ne coûte qu'une poignée de sondages, assez rare pour ne pas
 # réécrire le recensement — six méga-octets — à chaque agence.
 PAR_PUBLICATION = 25
-ENTETES = {
-    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                   "AppleWebKit/537.36 (KHTML, like Gecko) "
-                   "Chrome/140.0.0.0 Safari/537.36"),
-    "Accept-Language": "fr-FR,fr;q=0.9",
-}
+ENTETES = dict(robot.ENTETES)   # le robot dit son nom (voir app/robot.py)
 
 
 def _charger(chemin: Path, defaut):

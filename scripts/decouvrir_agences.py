@@ -33,16 +33,13 @@ except ImportError:  # pragma: no cover
     print("Le module 'requests' est nécessaire : pip install -r requirements-local.txt")
     sys.exit(1)
 
+from app import robot  # noqa: E402
+
 ANNUAIRE = RACINE / "scraper" / "refuge_scraper" / "agences.json"
 URL_SUGGEST = "https://res.bienici.com/suggest.json?q={q}"
 URL_ANNONCES = "https://www.bienici.com/realEstateAds.json?filters={filtres}"
-# On se présente comme un navigateur (comme le collecteur Scrapy).
-ENTETES = {
-    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                   "AppleWebKit/537.36 (KHTML, like Gecko) "
-                   "Chrome/140.0.0.0 Safari/537.36"),
-    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.8",
-}
+# Le robot dit son nom (voir app/robot.py), ici comme partout.
+ENTETES = dict(robot.ENTETES)
 
 
 def _zones(lieu: str) -> list:
