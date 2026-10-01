@@ -36,9 +36,15 @@ _spec.loader.exec_module(MARQUEUR)
 # Les passages programmés qui écrivent dans data/ et committent. `collecte`
 # tient déjà sa trace par data/dernier_passage.json, écrit dans son propre
 # script — il porte donc son marqueur sous un autre nom, et fait exception.
+#
+# `decouverte` manquait à cette liste : la première version de ce fichier
+# disait « trois passages sur quatre » en oubliant le mensuel. Son seul run
+# programmé, le 1er septembre, a été annulé au plafond de deux heures sans
+# commit ni trace — et personne ne l'a su pendant un mois.
 PASSAGES = {"mandataires.yml": "mandataires",
             "verifier-liens.yml": "liens",
-            "sites.yml": "sites"}
+            "sites.yml": "sites",
+            "decouverte.yml": "decouverte"}
 
 
 def etape_de_publication(fichier: str) -> str:
@@ -86,6 +92,38 @@ def test_la_trace_est_refaite_apres_s_etre_replace():
         reprise = script[script.index("git reset --hard origin/main"):]
         assert f"marquer_passage.py {nom}" in reprise, (
             f"{fichier} : la trace doit être refaite après le reset")
+
+
+def etape_de_publication_complete(fichier: str) -> dict:
+    plan = yaml.safe_load((RACINE / ".github" / "workflows" / fichier)
+                          .read_text(encoding="utf-8"))
+    return next(etape for travail in plan["jobs"].values()
+                for etape in travail["steps"]
+                if "run" in etape and "git push" in etape["run"])
+
+
+def test_la_decouverte_laisse_sa_trace_meme_tuee_au_plafond():
+    """Le marquage ne sert à rien s'il vit dans une étape qui ne s'exécute pas.
+
+    Mesuré sur le run du 1er septembre : le sondage a été annulé par
+    `timeout-minutes` après exactement 120 minutes, et l'étape qui committe a
+    été SAUTÉE — GitHub n'exécute pas les étapes suivantes d'un travail
+    annulé, sauf celles marquées `if: always()`. Un marqueur placé dans une
+    étape ordinaire aurait donc été aussi muet que l'absence de marqueur.
+
+    L'étape doit aussi dire POURQUOI elle publie : l'état du travail
+    (`job.status`) distingue un passage qui n'a rien trouvé d'un passage
+    tué au plafond, deux silences qui appellent des réponses opposées.
+    """
+    etape = etape_de_publication_complete("decouverte.yml")
+    assert str(etape.get("if", "")).strip() == "always()", (
+        "decouverte.yml : l'étape qui committe doit porter « if: always() », "
+        "sinon un passage annulé au plafond ne laisse aucune trace")
+    # L'état peut arriver par `env:` plutôt qu'en clair dans le script : on
+    # regarde l'étape entière, pas seulement son `run`.
+    assert "job.status" in yaml.safe_dump(etape), (
+        "decouverte.yml : la trace doit porter l'état du travail, sans quoi "
+        "un passage annulé ressemble à un passage qui n'a rien trouvé")
 
 
 def test_le_marqueur_ecrit_bien_un_fichier_par_passage(tmp_path, monkeypatch):

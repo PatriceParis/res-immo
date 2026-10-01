@@ -42,7 +42,14 @@ jobs:
     runs-on: ubuntu-latest
     # 43 zones au lieu de 19 depuis que le périmètre est couvert en entier :
     # le recensement OpenStreetMap et le sondage des sites durent plus
-    # longtemps. Six heures sont permises, deux suffisent largement.
+    # longtemps. « Deux heures suffisent largement » disait ce commentaire :
+    # mesuré faux. Le seul run programmé, le 1er septembre, a été annulé ICI
+    # au bout de 120 minutes exactement, sans commit ni trace, et le silence
+    # est passé pour « rien de neuf » pendant un mois. Le plafond reste un
+    # nombre écrit en clair (voir tests/test_trace_des_liens.py) ; il n'est
+    # pas relevé à l'aveugle, car ce travail partage le verrou donnees-refuge
+    # et chaque heure de plus fait sauter des passages de collecte. L'étape
+    # finale, elle, s'exécute désormais même quand le plafond tombe.
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -58,6 +65,12 @@ jobs:
           NOTE: ${{ github.event.inputs.note }}
           SIMULER: ${{ github.event.inputs.simuler }}
           ZONES: ${{ github.event.inputs.zones }}
+          # Hors terminal, Python garde sa sortie en tampon : le run annulé du
+          # 1er septembre n'a pas laissé UNE ligne de journal en deux heures,
+          # pas même « 1/2 — Recensement ». Impossible de savoir s'il était
+          # bloqué sur Overpass ou au milieu du sondage. Sans tampon, le
+          # prochain plafond dira au moins jusqu'où il est allé.
+          PYTHONUNBUFFERED: "1"
         run: |
           OPTIONS="--note ${NOTE:-25} --parallele 20"
           if [ "$SIMULER" = "true" ]; then OPTIONS="$OPTIONS --simuler"; fi
@@ -67,33 +80,70 @@ jobs:
           eval python scripts/decouvrir_agences_osm.py $OPTIONS
 
       - name: Committer les agences découvertes
+        # `always()` : cette étape s'exécute AUSSI quand le travail est annulé
+        # au plafond. Sans cela elle est sautée — mesuré le 1er septembre :
+        # « Committer les agences découvertes : skipped » — et un marqueur
+        # posé ici n'aurait servi à rien. Les étapes `always()` tournent
+        # après une annulation, comme les étapes de nettoyage qui, elles, ont
+        # bien tourné ce jour-là.
+        if: always()
+        env:
+          # « success » sans nouveauté et « cancelled » au plafond sont deux
+          # silences qui appellent des réponses opposées : le marqueur et le
+          # libellé portent l'état, pour que le journal git les distingue.
+          ETAT: ${{ job.status }}
         run: |
-          if [ -n "$(git status --porcelain scraper/refuge_scraper/agences_sites.json data/agences_candidates.json)" ]; then
+          # Marquer d'abord : un passage qui n'a rien trouvé doit laisser une
+          # trace, sans quoi son silence ressemble à une panne. Voir
+          # scripts/marquer_passage.py et tests/test_trace_des_passages.py.
+          python scripts/marquer_passage.py decouverte "etat=${ETAT:-inconnu}" || true
+          # N'indexer que ce qui existe : « git add » sur un chemin absent sort
+          # en 128 SANS RIEN INDEXER et tuait l'étape entière (voir sites.yml).
+          # Les deux fichiers du script ne sont écrits qu'APRÈS la dernière
+          # zone et le dernier sondage : un travail annulé en route les laisse
+          # intacts, et cette étape ne peut donc pas committer un JSON tronqué.
+          A_INDEXER="scraper/refuge_scraper/agences_sites.json data/agences_candidates.json data/dernier_passage_decouverte.json"
+          for f in $A_INDEXER; do
+            if [ -f "$f" ]; then git add "$f"; else echo "$f absent."; fi
+          done
+          if [ -n "$(git diff --cached --name-only)" ]; then
             git config user.name "refuge-immo-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add scraper/refuge_scraper/agences_sites.json data/agences_candidates.json
-            git commit -m "Découverte : agences des zones visées ($(date -u +%F))"
+            # Le libellé dit ce qui s'est passé. Un passage sans agence
+            # nouvelle — ou tué au plafond — doit rester VISIBLE sans se faire
+            # passer pour une découverte.
+            if git diff --cached --quiet -- scraper/refuge_scraper/agences_sites.json; then
+              LIBELLE="Découverte : passage sans nouveauté (état ${ETAT:-inconnu}, $(date -u +%F))"
+            else
+              LIBELLE="Découverte : agences des zones visées ($(date -u +%F))"
+            fi
+            git commit -m "$LIBELLE"
             # La branche peut avoir bougé pendant le sondage : on rejoue nos
             # fichiers par-dessus la version distante plutôt que de tout perdre.
             for essai in 1 2 3 4 5; do
               if git push; then echo "Poussé (essai $essai)."; break; fi
               echo "Push rejeté, on se replace sur la branche distante ($essai/5)…"
-              # On met nos deux fichiers de côté, on se cale EXACTEMENT sur la
+              # On met nos fichiers de côté, on se cale EXACTEMENT sur la
               # version distante, puis on les remet : notre commit ne contient
               # alors qu'eux. Un « reset --soft » laisserait l'index de
               # l'ancien checkout et re-committerait tout le reste — c'est
               # ainsi qu'une découverte a un jour annulé une collecte entière
               # (101 annonces ramenées à 77) sans le moindre message d'erreur.
-              cp scraper/refuge_scraper/agences_sites.json "$RUNNER_TEMP/agences_sites.json"
-              cp data/agences_candidates.json "$RUNNER_TEMP/agences_candidates.json"
+              cp scraper/refuge_scraper/agences_sites.json "$RUNNER_TEMP/agences_sites.json" 2>/dev/null || true
+              cp data/agences_candidates.json "$RUNNER_TEMP/agences_candidates.json" 2>/dev/null || true
               git fetch origin main
               git reset --hard origin/main
-              cp "$RUNNER_TEMP/agences_sites.json" scraper/refuge_scraper/agences_sites.json
-              cp "$RUNNER_TEMP/agences_candidates.json" data/agences_candidates.json
-              git add scraper/refuge_scraper/agences_sites.json data/agences_candidates.json
-              git commit -m "Découverte : agences des zones visées ($(date -u +%F))" || true
+              cp "$RUNNER_TEMP/agences_sites.json" scraper/refuge_scraper/agences_sites.json 2>/dev/null || true
+              cp "$RUNNER_TEMP/agences_candidates.json" data/agences_candidates.json 2>/dev/null || true
+              # Le reset a effacé la trace avec le reste : la refaire, sinon
+              # un passage qui a dû se replacer redevient muet.
+              python scripts/marquer_passage.py decouverte "etat=${ETAT:-inconnu}" || true
+              for f in $A_INDEXER; do
+                if [ -f "$f" ]; then git add "$f"; fi
+              done
+              git commit -m "$LIBELLE" || true
               sleep $((essai * 5))
             done
           else
-            echo "Aucune nouvelle agence exploitable."
+            echo "Rien à committer."
           fi
