@@ -1,0 +1,40 @@
+name: Sonder les identités du robot
+
+# Mesure, sans rien changer : chaque site de la configuration est sondé avec
+# trois User-Agent — le faux Chrome actuel, un robot qui dit son nom, et la
+# forme « compatible » des moteurs de recherche — pour savoir combien de sites
+# refuseraient un robot déclaré. Voir scripts/sonder_user_agent.py.
+#
+# Déclenchement manuel seulement : c'est une mesure ponctuelle, pas une tâche.
+# Le rapport est dans le journal du run ; rien n'est committé.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "Nombre de sites à sonder (vide = tous)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  sonder:
+    runs-on: ubuntu-latest
+    # Plafond fixe, jamais calculé (voir tests/test_trace_des_liens.py).
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Installer les dépendances
+        run: pip install requests
+      - name: Sonder
+        env:
+          MAXI: ${{ github.event.inputs.max }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          case "${MAXI}" in ''|*[!0-9]*) MAXI=0 ;; esac
+          python scripts/sonder_user_agent.py --max "$MAXI" --parallele 4
