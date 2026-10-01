@@ -15,6 +15,14 @@ pillow>=10.0
 # octets, contre une suite de tests qui ne démarre plus selon la machine.
 httpx>=0.27
 httpx2>=2.0
+# Les tests lisent les workflows GitHub (.github/workflows/*.yml) pour en
+# exécuter l'étape de publication et en vérifier les plafonds. Absent d'ici
+# depuis le premier de ces tests, le 17 août : la collecte de pytest
+# s'interrompait avant d'exécuter UN test, les deux audits suivants étaient
+# sautés, et « Vérification » est restée rouge à chaque push pendant sept
+# semaines sans que personne ne lise pourquoi — les machines de développement
+# avaient PyYAML pour d'autres raisons. Voir tests/test_dependances_declarees.py.
+pyyaml>=6.0
 
 # Optionnel — collecte via un vrai navigateur (scripts/collecter_navigateur.py),
 # pour les sites d'agences protégés par un anti-robots. À installer soi-même :
