@@ -31,7 +31,7 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import liens, robot  # noqa: E402
+from app import chargement, liens, robot  # noqa: E402
 
 REEL = RACINE / "data" / "annonces_reel.json"
 JOURNAL_MORTS = RACINE / "data" / "liens_morts.json"
@@ -68,6 +68,20 @@ def observer(url: str, timeout: int = 12) -> tuple[int, str, str]:
         return 0, url, ""
 
 
+def candidats_dans_l_ordre(biens: list[dict], verifies: dict, morts: dict,
+                           servis: set) -> list[dict]:
+    """Les liens à vérifier, ceux que le site montre d'abord.
+
+    Le fichier n'est pas le catalogue : un bien sur neuf y figure sans être
+    servi. Mesuré le 2 octobre : 73 des 126 places du palier sont allées à des
+    biens que personne ne verra. L'ordre promis — suspects, palier, rotation —
+    vaut à l'intérieur de chaque moitié (voir liens.servis_d_abord).
+    """
+    montres, autres = liens.servis_d_abord(biens, servis)
+    return (liens.ordre_de_verification(montres, verifies, morts)
+            + liens.ordre_de_verification(autres, verifies, morts))
+
+
 def main() -> None:
     parametres = argparse.ArgumentParser(description=__doc__)
     parametres.add_argument("--max", type=int, default=150,
@@ -86,12 +100,16 @@ def main() -> None:
     verifies = {u: j for u, j in _charger(JOURNAL_VERIFIES).items()
                 if u in urls_du_fichier}
 
-    candidats = liens.ordre_de_verification(biens, verifies, morts)
+    # Ce que le site montre vraiment : on rejoue ses filtres plutôt que d'en
+    # recopier une liste — une copie finirait par diverger.
+    servis = {b["id"] for b in chargement.biens_servis(biens) if b.get("id")}
+    candidats = candidats_dans_l_ordre(biens, verifies, morts, servis)
     if args.cibles:
         candidats = [b for b in candidats if args.cibles in b["url"]]
     lot = candidats[:args.max]
     print(f"{len(lot)} lien(s) à vérifier sur {len(urls_du_fichier)}"
-          f" ({len(morts)} suspect(s) au journal)")
+          f" ({len(morts)} suspect(s) au journal ; "
+          f"{sum(1 for b in lot if b.get('id') in servis)} du lot sont servis par le site)")
 
     aujourd_hui = date.today().isoformat()
     fin = time.monotonic() + args.minutes * 60

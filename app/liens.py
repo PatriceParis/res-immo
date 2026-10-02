@@ -191,6 +191,28 @@ def vu_absent_sans_verification(annonce: dict, verifies: dict) -> bool:
     return verifies.get(annonce.get("url"), "") <= (annonce.get("revue_le") or "")
 
 
+def servis_d_abord(annonces: list[dict], servis: set) -> tuple[list[dict], list[dict]]:
+    """(ce que le site montre, le reste), chacun dans l'ordre reçu.
+
+    Le fichier exporté n'est pas le catalogue : un bien sur neuf y figure sans
+    être servi — hors terroir, sans département, trop cher, écarté au
+    chargement. Le vérificateur travaillait sur le fichier entier et répartissait
+    son budget sans distinguer. Mesuré le 2 octobre, premier lot du palier des
+    absents : 126 biens regardés, 73 que personne ne verra jamais — cinquante-huit
+    pour cent du lot à vérifier des pages dont la mort ou la vie ne change rien à
+    l'écran, pendant que 199 biens servis attendaient leur tour.
+
+    Les biens servis passent donc en premier, et l'ordre promis — suspects,
+    palier, rotation — vaut à l'intérieur de chaque moitié. Les autres ne sont
+    pas abandonnés : ils prennent ce qu'il reste du budget, et une mort
+    confirmée les sort du fichier comme avant. Avec six mille liens jamais
+    vérifiés, « ce qu'il reste » est aujourd'hui zéro, et c'est le bon zéro.
+    """
+    montres = [a for a in annonces if a.get("id") in servis]
+    autres = [a for a in annonces if a.get("id") not in servis]
+    return montres, autres
+
+
 def nettoyer(journal: dict, urls_du_fichier: set) -> dict:
     """Les entrées d'annonces déjà sorties du fichier n'ont plus d'objet."""
     return {url: constat for url, constat in (journal or {}).items()
