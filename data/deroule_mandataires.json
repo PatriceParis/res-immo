@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 18.1,
+  "seconde": 18.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 18.1,
+  "seconde": 18.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,288 +21,305 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 18.1,
+  "seconde": 18.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.8,
+  "seconde": 20.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 21.4,
+  "seconde": 22.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 21.4,
+  "seconde": 22.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.7,
+  "seconde": 22.5,
   "reseau": "capifrance",
-  "connues": 9327
+  "connues": 9361
  },
  {
   "etape": "reseau_debut",
-  "seconde": 21.7,
+  "seconde": 22.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.9,
+  "seconde": 22.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 34.5,
+  "seconde": 32.8,
   "reseau": "iad",
   "n": 93117,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 36.3,
+  "seconde": 34.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 36.5,
+  "seconde": 34.4,
   "reseau": "iad",
-  "connues": 9327
+  "connues": 9361
  },
  {
   "etape": "departement",
-  "seconde": 186.9,
+  "seconde": 145.6,
   "reseau": "iad",
-  "departement": "89",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 12,
+  "gardes": 1,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 25,
-   "ecarte": 13,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "location": "Maison de ville 2 pièces de 54 m² à Vermenton (89270)",
-   "hors_perimetre": "Maison 1 pièce de 92 m² à Saint-Fargeau-Ponthierry (77310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 288.7,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 11,
-   "ecarte": 39,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 37,
-   "location": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 77 m² à Brétigny-sur-Orge (91220)",
-   "location": "Maison traditionnelle 7 pièces de 175 m² à Couternon (21560)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 391.1,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 7,
-   "ecarte": 43,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 2,
-   "hors_perimetre": 40,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 84 m² à Branne (33420)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 526.3,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 10,
-  "tronquee": true,
-  "etats": {
-   "garde": 10,
+   "garde": 1,
    "vendu": 16,
-   "ecarte": 24,
+   "ecarte": 32,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 32
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 7 pièces de 153 m² à La Celle-les-Bordes (78720)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 255.2,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 14,
+   "ecarte": 36,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 20,
-   "location": 2,
+   "location": 1,
+   "hors_perimetre": 33,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 620.1,
+  "seconde": 374.4,
   "reseau": "iad",
-  "departement": "28",
-  "visitees": 46,
-  "gardes": 0,
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 0,
+   "garde": 3,
    "vendu": 12,
-   "ecarte": 34,
+   "ecarte": 35,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 33
+   "location": 5,
+   "hors_perimetre": 27,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison de campagne 1 pièce de 26 m² à Montreuil Bellay (49260)"
+   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 590.7,
+  "reseau": "iad",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 27,
+  "tronquee": true,
+  "etats": {
+   "garde": 27,
+   "vendu": 13,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 10
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 625.3,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 13,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 5,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "location": "Maison 1 pièce de 18 m² à Heuchin (62134)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 620.1,
+  "seconde": 625.3,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 620.5,
+  "seconde": 625.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 622.0,
+  "seconde": 627.1,
   "reseau": "safti",
   "n": 28753,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 622.6,
+  "seconde": 627.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 622.9,
+  "seconde": 627.8,
   "reseau": "safti",
-  "connues": 9327
+  "connues": 9361
  },
  {
   "etape": "departement",
-  "seconde": 790.1,
+  "seconde": 788.1,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 12,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 2,
+   "garde": 11,
+   "vendu": 1,
    "ecarte": 36,
-   "illisible": 0
+   "illisible": 2
   },
   "motifs": {
-   "hors_perimetre": 36
+   "hors_perimetre": 28,
+   "prix_trop_haut": 8
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 148m², prix 430 000 €. Réf : 1673313"
+   "hors_perimetre": "Vente de maison 4 pièces à Annecy-Le-Vieux 74940 : 80m², prix 895 000 €. Réf : 1641377",
+   "prix_trop_haut": "Vente de maison 10 pièces à Arromanches-Les-Bains 14117 : 260m², prix 718 000 €. Réf : 1716723"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1032.1,
+  "seconde": 924.1,
   "reseau": "safti",
-  "departement": "55",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 28,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 28,
+   "garde": 3,
    "vendu": 0,
-   "ecarte": 22,
+   "ecarte": 47,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 21
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1219.9,
-  "reseau": "safti",
-  "departement": "57",
-  "visitees": 41,
-  "gardes": 21,
-  "tronquee": true,
-  "etats": {
-   "garde": 21,
-   "vendu": 3,
-   "ecarte": 17,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 16,
+   "hors_perimetre": 46,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624",
-   "prix_trop_haut": "Vente de maison 6 pièces à Crehange 57690 : 1 635m², prix 1 445 000 €. Réf : 1628311"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1064.5,
+  "reseau": "safti",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 0,
+   "ecarte": 46,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 46
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1222.0,
+  "reseau": "safti",
+  "departement": "59",
+  "visitees": 30,
+  "gardes": 18,
+  "tronquee": true,
+  "etats": {
+   "garde": 18,
+   "vendu": 3,
+   "ecarte": 9,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 3,
+   "hors_perimetre": 6
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
+   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1219.9,
-  "gardes": 83
+  "seconde": 1222.0,
+  "gardes": 68
  }
 ]
