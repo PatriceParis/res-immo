@@ -432,3 +432,35 @@ def test_un_journal_indisponible_ne_perd_pas_la_collecte(collecte, monkeypatch,
     visitees = _lancer(monkeypatch, collecte, agences=["A"],
                        secondes_par_page={"A": 1})
     assert visitees == ["A"], "la collecte doit aboutir malgré le journal perdu"
+
+
+def test_le_deroule_montre_la_premiere_page_illisible(collecte, monkeypatch, tmp_path):
+    """Cent neuf pages « illisibles » en deux jours chez quatre agences, et le
+    déroulé n'en disait que le nombre : rien pour distinguer un mur anti-robot
+    d'un gabarit inconnu de l'extracteur. On garde la première — adresse,
+    cause, <title> servi, taille — et seulement la première."""
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles",
+                        lambda *a, **k: [{"nom": "Agence X", "site": "https://agence-x.fr"}])
+    monkeypatch.setattr(
+        collecteur, "_urls_a_visiter",
+        lambda page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None:
+        [f"{base}/bien-{i}" for i in range(3)])
+    monkeypatch.setattr(_FaussePage, "content", lambda self: (
+        "<html><head><title>\n  Agence X — accueil </title></head>"
+        "<body>Vérification de votre navigateur…</body></html>"))
+    # L'extracteur ne lit qu'un titre, et c'est le nom du site : illisible.
+    monkeypatch.setattr(collecteur, "extraire_annonce",
+                        lambda html, url, **k: {"titre": "Agence X"})
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert agence["illisibles"] == 3 and agence["gardes"] == 0
+    exemple = agence["illisible_exemple"]
+    assert exemple["url"] == "https://agence-x.fr/bien-0", "la première, pas la dernière"
+    assert exemple["cause"] == "titre = nom du site"
+    assert exemple["titre"] == "Agence X — accueil", "le <title> servi, nettoyé"
+    assert exemple["octets"] > 0

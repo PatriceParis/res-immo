@@ -358,6 +358,27 @@ def _vivier(maxi: int) -> int:
     return max(maxi * 8, 80)
 
 
+def _noter_illisible(diag: dict, url: str, cause: str, html: str = "") -> None:
+    """Garde la PREMIÈRE page illisible de l'agence : adresse, cause, <title>
+    réellement servi et taille de la page.
+
+    Les 2 et 3 octobre 2026 : Echinard 45 pages illisibles sur 45, Nathalie
+    Forest 33 sur 45, Mikit 16 sur 30, ABL Gestion 15 sur 20 — cent neuf pages
+    en deux jours, et le déroulé n'en disait que le nombre. Rien pour
+    distinguer un mur anti-robot, qui sert au robot une page d'attente, d'un
+    gabarit que l'extracteur ne connaît pas : le premier se respecte, le
+    second se corrige. Le titre servi tranche en général à lui seul.
+    """
+    if "illisible_exemple" in diag:
+        return
+    m = re.search(r"<title[^>]*>(.*?)</title>", html or "", re.I | re.S)
+    diag["illisible_exemple"] = {
+        "url": url, "cause": cause,
+        "titre": re.sub(r"\s+", " ", m.group(1)).strip()[:120] if m else "",
+        "octets": len(html or ""),
+    }
+
+
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
                     fin_prevue: float = 0.0, permission=None,
                     diag: dict | None = None) -> list[str]:
@@ -573,8 +594,9 @@ def main() -> None:
                         page.mouse.wheel(0, 2500)
                         page.wait_for_timeout(900)
                         html = page.content()
-                    except Exception:
+                    except Exception as e:
                         illisibles += 1
+                        _noter_illisible(diag, u, f"navigation : {e.__class__.__name__}")
                         continue
                     if pause:
                         time.sleep(pause)
@@ -589,6 +611,7 @@ def main() -> None:
                         # et pour la distinguer d'une agence dont tout est vendu,
                         # qui compte ses pages dans `vendus`.
                         illisibles += 1
+                        _noter_illisible(diag, u, "aucune annonce lue", html)
                         continue
                     # Rejette les pages où l'extraction n'a pas trouvé un vrai titre
                     # d'annonce (titre = nom de l'agence / du site) : peu exploitables.
@@ -596,6 +619,7 @@ def main() -> None:
                     hote = urlparse(base).netloc.replace("www.", "")
                     if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
                         illisibles += 1
+                        _noter_illisible(diag, u, "titre = nom du site", html)
                         continue
                     # Filtre qualité : vrai logement de type refuge, encore à vendre
                     # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
