@@ -1,152 +1,293 @@
 {
- "minutes": 28.1,
+ "minutes": 28.0,
  "agences": [
   {
-   "agence": "AS Immobilier",
-   "secondes": 243,
-   "pages": 18,
-   "gardes": 5,
-   "fin": "temps de l'agence épuisé"
-  },
-  {
-   "agence": "Abbesses Immobilier",
-   "secondes": 114,
-   "pages": 45,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Abithéa",
-   "secondes": 120,
-   "pages": 33,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Abrinor Immobilier",
-   "secondes": 70,
-   "pages": 17,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Accord Immobilier",
-   "secondes": 77,
-   "pages": 45,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Action Vente 37",
-   "secondes": 112,
-   "pages": 45,
-   "gardes": 2,
-   "fin": "terminée"
-  },
-  {
-   "agence": "AdressImmo",
-   "secondes": 4,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Afico",
-   "secondes": 160,
-   "pages": 45,
-   "gardes": 4,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Albert 1er",
-   "secondes": 122,
-   "pages": 45,
-   "gardes": 3,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Armance Immobilier",
-   "secondes": 56,
-   "pages": 8,
-   "gardes": 6,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Blancoise",
-   "secondes": 72,
-   "pages": 11,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Boilot",
-   "secondes": 65,
-   "pages": 34,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Creil Immo",
-   "secondes": 47,
-   "pages": 22,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Du Centre",
-   "secondes": 127,
-   "pages": 45,
-   "gardes": 4,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Immobilière Océane Cric",
-   "secondes": 73,
-   "pages": 13,
-   "gardes": 8,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Joly",
-   "secondes": 10,
-   "pages": 4,
-   "gardes": 0,
-   "fin": "terminée"
-  },
-  {
-   "agence": "Agence Mosellane Immobilière",
+   "agence": "Agence des Lacs",
    "secondes": 5,
    "pages": 0,
    "gardes": 0,
-   "fin": "terminée"
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "index_statut": 200,
+   "index_titre": "Agence immobilière des Lacs à Brienne le Chateau."
   },
   {
-   "agence": "Agence Olleon",
-   "secondes": 13,
-   "pages": 6,
+   "agence": "Agence du Terroir",
+   "secondes": 111,
+   "pages": 60,
    "gardes": 0,
-   "fin": "terminée"
+   "vendus": 20,
+   "ecartes": 40,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap": "ok 124"
   },
   {
-   "agence": "Agence Saint-Joseph",
-   "secondes": 84,
-   "pages": 14,
+   "agence": "Logia",
+   "secondes": 88,
+   "pages": 19,
    "gardes": 8,
-   "fin": "terminée"
+   "vendus": 0,
+   "ecartes": 10,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 134"
   },
   {
-   "agence": "Agence de l'étoile",
-   "secondes": 75,
-   "pages": 10,
+   "agence": "Logimmo Conseil",
+   "secondes": 62,
+   "pages": 13,
    "gardes": 8,
-   "fin": "terminée"
+   "vendus": 1,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 156"
   },
   {
-   "agence": "Agence de la bourse",
-   "secondes": 36,
-   "pages": 6,
-   "gardes": 2,
-   "fin": "budget global épuisé"
+   "agence": "Logéal Immobilière",
+   "secondes": 95,
+   "pages": 17,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 17"
+  },
+  {
+   "agence": "Lorn Habitat",
+   "secondes": 135,
+   "pages": 45,
+   "gardes": 4,
+   "vendus": 40,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 355"
+  },
+  {
+   "agence": "Lotz",
+   "secondes": 74,
+   "pages": 21,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 13,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap": "ok 64"
+  },
+  {
+   "agence": "Maison Ancienne du Bessin",
+   "secondes": 101,
+   "pages": 29,
+   "gardes": 8,
+   "vendus": 18,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 30"
+  },
+  {
+   "agence": "Maison France Style",
+   "secondes": 38,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 282"
+  },
+  {
+   "agence": "Maison du Perche",
+   "secondes": 48,
+   "pages": 5,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 92"
+  },
+  {
+   "agence": "Maisons Arianne",
+   "secondes": 96,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 42,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 54"
+  },
+  {
+   "agence": "Maisons Nobless",
+   "secondes": 1,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Manson",
+   "secondes": 205,
+   "pages": 28,
+   "gardes": 8,
+   "vendus": 17,
+   "ecartes": 2,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 114"
+  },
+  {
+   "agence": "Marc Foujols",
+   "secondes": 125,
+   "pages": 45,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 37,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 532"
+  },
+  {
+   "agence": "Martel Expertises",
+   "secondes": 7,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 1"
+  },
+  {
+   "agence": "Mathis Mazon",
+   "secondes": 143,
+   "pages": 18,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 11,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 18"
+  },
+  {
+   "agence": "Meet Immobilier",
+   "secondes": 1,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Michaël Zingraf",
+   "secondes": 38,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 5,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 1565"
+  },
+  {
+   "agence": "Michel et Neumayer",
+   "secondes": 76,
+   "pages": 23,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 17,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 23"
+  },
+  {
+   "agence": "Mikit Moncel Les Luneville",
+   "secondes": 120,
+   "pages": 30,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 6,
+   "illisibles": 16,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 47"
+  },
+  {
+   "agence": "Mon Agence Immo",
+   "secondes": 96,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 36,
+   "ecartes": 9,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 68"
+  },
+  {
+   "agence": "Mon Saint-André",
+   "secondes": 13,
+   "pages": 5,
+   "gardes": 0,
+   "vendus": 1,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "budget global épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 80"
   }
  ]
 }
