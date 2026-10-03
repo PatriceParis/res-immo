@@ -1,9 +1,17 @@
-name: Sonde — forme de la réponse argile
+name: Sonde — Géorisques (rapport et argile)
 
 # Cette session de développement n'a pas de réseau sortant : la forme exacte
 # de la réponse de Géorisques n'a pas pu être observée, et le parseur a été
 # écrit pour encaisser plusieurs écritures plausibles. Cette sonde relève la
 # vraie, sur des points d'exposition connue, et dit ce que le parseur en tire.
+#
+# Étendue le 3 octobre 2026 : l'enrichissement des risques a passé ses dix
+# minutes du run de 01 h 24 sans obtenir UNE réponse du rapport général —
+# 59 appels, 59 « API injoignable », zéro bien enrichi — et le nombre de biens
+# enrichis stagne depuis la réécriture de l'historique. Le client avale
+# l'exception et ne dit pas laquelle. La sonde interroge donc aussi le
+# rapport, sur les deux noms d'hôte et sous nos deux identités, et dit ce
+# qu'elle obtient : statut, délai, redirection, ou la classe de l'erreur.
 #
 # Elle n'écrit rien dans le dépôt : elle affiche, on lit, on ajuste.
 
@@ -29,9 +37,10 @@ jobs:
           python - <<'PY'
           import json
           import sys
+          import time
           sys.path.insert(0, ".")
           import requests
-          from app import georisques
+          from app import georisques, robot
 
           # Trois points de nos terroirs, choisis pour couvrir des contextes
           # géologiques différents plutôt que pour confirmer une attente.
@@ -40,16 +49,29 @@ jobs:
               ("Chalon-sur-Saône (71)", 46.7806, 4.8536),
               ("Beauvais (60)", 49.4295, 2.0807),
           ]
+          ANCIENNE = "RefugeImmo-POC/0.1"          # ce que le client envoie encore
+          CIBLES = [
+              ("rapport, www, ancienne identité", georisques.URL_RAPPORT, ANCIENNE),
+              ("rapport, www, RefugeImmoBot", georisques.URL_RAPPORT, robot.USER_AGENT),
+              ("rapport, sans www", georisques.URL_RAPPORT.replace("://www.", "://"), ANCIENNE),
+              ("argile", georisques.URL_ARGILE, ANCIENNE),
+          ]
+          UTILES = ("location", "retry-after", "content-type", "server", "x-ratelimit-remaining")
           for nom, lat, lon in POINTS:
               print(f"\n=== {nom}")
-              try:
-                  r = requests.get(georisques.URL_ARGILE,
-                                   params={"latlon": f"{lon},{lat}"}, timeout=20,
-                                   headers={"User-Agent": "RefugeImmo-POC/0.1"})
-                  print("  HTTP", r.status_code)
-                  brut = r.json()
-                  print("  réponse :", json.dumps(brut, ensure_ascii=False)[:600])
-                  print("  niveau lu par le parseur :", georisques.niveau_argile(brut))
-              except Exception as e:
-                  print(f"  échec : {e.__class__.__name__} — {e}")
+              for libelle, url, identite in CIBLES:
+                  debut = time.monotonic()
+                  try:
+                      # Sans suivre les redirections : si l'hôte renvoie ailleurs,
+                      # on veut le voir, pas l'enjamber.
+                      r = requests.get(url, params={"latlon": f"{lon},{lat}"}, timeout=20,
+                                       headers={"User-Agent": identite}, allow_redirects=False)
+                      entetes = {k: v for k, v in r.headers.items() if k.lower() in UTILES}
+                      print(f"  {libelle} : HTTP {r.status_code} en {time.monotonic() - debut:.1f} s {entetes}")
+                      print("    réponse :", r.text[:300].replace("\n", " "))
+                      if libelle == "argile" and r.ok:
+                          print("    niveau lu par le parseur :", georisques.niveau_argile(r.json()))
+                  except Exception as e:
+                      print(f"  {libelle} : échec {e.__class__.__name__} en "
+                            f"{time.monotonic() - debut:.1f} s — {str(e)[:200]}")
           PY
