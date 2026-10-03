@@ -75,3 +75,41 @@ jobs:
                       print(f"  {libelle} : échec {e.__class__.__name__} en "
                             f"{time.monotonic() - debut:.1f} s — {str(e)[:200]}")
           PY
+
+      - name: Joignabilité des autres sources de données publiques
+        # Premier passage, 3 octobre 2026 : ConnectTimeout sur les douze appels
+        # à Géorisques — la connexion TCP n'aboutit pas, avec ou sans www, quel
+        # que soit le point d'accès ou l'identité. En août, 200 en une
+        # demi-seconde depuis le même type de runner. Avant de chercher une
+        # autre voie (fichiers en masse, autre hébergeur de l'État, relais),
+        # on regarde ce qui, d'ici, répond encore.
+        if: always()
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python - <<'PY'
+          import time
+          import requests
+          CIBLES = [
+              "https://www.georisques.gouv.fr/",
+              "https://georisques.gouv.fr/",
+              "https://files.georisques.fr/",
+              "https://www.data.gouv.fr/api/1/datasets/?q=georisques&page_size=1",
+              "https://static.data.gouv.fr/",
+              "https://object.files.data.gouv.fr/",
+              "https://geo.api.gouv.fr/communes?codePostal=61130&fields=code,nom",
+              "https://api-adresse.data.gouv.fr/search/?q=belleme&limit=1",
+              "https://mapsref.brgm.fr/wxs/georisques/risques?service=WFS&request=GetCapabilities",
+              "https://data.geopf.fr/wfs/ows?SERVICE=WFS&REQUEST=GetCapabilities",
+          ]
+          for url in CIBLES:
+              debut = time.monotonic()
+              try:
+                  r = requests.get(url, timeout=8, stream=True, allow_redirects=False,
+                                   headers={"User-Agent": "RefugeImmo-POC/0.1"})
+                  print(f"HTTP {r.status_code:<4} en {time.monotonic() - debut:4.1f} s  {url}"
+                        + (f"  → {r.headers['location']}" if "location" in r.headers else ""))
+                  r.close()
+              except Exception as e:
+                  print(f"{e.__class__.__name__:<9} en {time.monotonic() - debut:4.1f} s  {url}")
+          PY
