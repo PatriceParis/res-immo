@@ -33,12 +33,22 @@ qui relèverait de l'entremise immobilière (loi Hoguet) et a été retirée le
   retrait. La bascule a été mesurée avant d'être faite : sur 292 sites et
   trois réseaux, un seul refuse le robot déclaré en acceptant un navigateur ;
   son refus est respecté.
-- **Ils respectent `robots.txt`** (`ROBOTSTXT_OBEY = True` ; les collecteurs
-  de réseaux lisent les sitemaps déclarés et n'ouvrent pas les chemins
-  interdits), lisent les plans de site destinés aux moteurs, tiennent une
+- **Ils respectent `robots.txt`.** Depuis le 3 octobre 2026, le collecteur
+  de production (`scripts/collecter_navigateur.py`, Playwright) le lit sous
+  notre nom avant toute page, suit la convention — notre groupe, sinon `*`,
+  un fichier refusé vaut interdiction totale —, honore le `Crawl-delay`, et
+  consigne dans `data/deroule_collecte.json` ce que chaque site a répondu.
+  Jusqu'à cette date, seul le spider Scrapy, qui ne tournait pas, l'honorait
+  (`ROBOTSTXT_OBEY = True`) : la page `/robot` a promis pendant deux jours
+  une chose que le code ne faisait pas. Les collecteurs de réseaux lisent les
+  sitemaps déclarés et n'ouvrent pas les chemins interdits. Tous tiennent une
   connexion par site et attendent entre deux pages (2,5 s pour le robot
   générique). Ils ne contournent aucune protection : CAPTCHA, pare-feu et
-  pages refusées sont des refus, pas des obstacles.
+  pages refusées sont des refus, pas des obstacles — un site qui ferme sa
+  racine au robot n'est plus visité, et ses biens sortent du catalogue comme
+  des biens disparus. Mesuré les 1er et 3 octobre : quatre agences sur
+  quarante-six ont cessé de répondre au robot déclaré ; leur refus est
+  respecté, leurs biens sortiront.
 - **Les grands portails sont exclus** (SeLoger, Leboncoin, Logic-Immo,
   Bien'ici) : leurs conditions générales interdisent la collecte, et le projet
   ne la fait pas. Le robot Bien'ici qui subsiste dans le code n'est plus

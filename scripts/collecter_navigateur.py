@@ -39,7 +39,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, exclusions, historique, robot  # noqa: E402
+from app import db, exclusions, historique, robot, robots  # noqa: E402
 from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
@@ -197,7 +197,27 @@ def _cibles(site: str, nom: str, index: str) -> list[dict]:
     return agences
 
 
-def _sitemap_urls(base: str, fin_prevue: float = 0.0) -> list[str]:
+def _chercher_robots(url: str) -> tuple[int, str | None]:
+    """(statut, texte) de robots.txt, sous notre nom ; (0, None) si c'est
+    NOTRE réseau qui flanche — ce qui ne vaut pas interdiction."""
+    if requests is None:
+        return 0, None
+    try:
+        r = requests.get(url, headers=dict(robot.ENTETES), timeout=10)
+        return r.status_code, r.text
+    except Exception:
+        return 0, None
+
+
+def _autorisees(urls: list[str], permission) -> list[str]:
+    """Les adresses que robots.txt nous laisse ouvrir — toutes, sans règles."""
+    if permission is None:
+        return list(urls)
+    return [u for u in urls if permission.autorise(u)]
+
+
+def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
+                  diag: dict | None = None) -> list[str]:
     """URLs de pages de biens listées dans le sitemap.xml (via requests).
 
     `fin_prevue` borne la RECHERCHE elle-même. Sans cela, une agence pouvait
@@ -205,33 +225,60 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0) -> list[str]:
     quinze secondes chacune — pendant que le budget de la collecte filait.
     Quatre passages planifiés de suite ont ainsi dépassé la limite du job et
     ont été tués AVANT l'export : le travail était fait, puis jeté.
+
+    Les sitemaps que robots.txt déclare passent en premier : c'est le site qui
+    dit où lire. Et ce qu'il refuse n'est pas ouvert.
+
+    `diag` reçoit ce qui s'est passé — « ok 187 », « HTTP 403 », « sans
+    <loc> », « injoignable », « interdit par robots.txt ». Jusqu'au 3 octobre,
+    un sitemap refusé en 403 et un sitemap absent se terminaient par la même
+    ligne, « index : 0 lien(s) », et AdressImmo comme Mosellane sont passées
+    de trente pages à zéro sans qu'une ligne du journal dise pourquoi.
     """
     if requests is None:
         return []
-    entetes = {"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"}
-    for chemin in ("/sitemap.xml", "/sitemap_index.xml", "/sitemap-index.xml"):
+    diag = diag if diag is not None else {}
+    entetes = dict(robot.ENTETES)
+    candidats = list(getattr(permission, "sitemaps", None) or [])
+    candidats += [base + chemin for chemin in
+                  ("/sitemap.xml", "/sitemap_index.xml", "/sitemap-index.xml")]
+    for adresse in dict.fromkeys(candidats):
         if fin_prevue and time.monotonic() > fin_prevue:
+            diag.setdefault("sitemap", "temps épuisé")
             return []
-        try:
-            r = requests.get(base + chemin, headers=entetes, timeout=10)
-        except Exception:
+        if permission is not None and not permission.autorise(adresse):
+            diag.setdefault("sitemap", "interdit par robots.txt")
             continue
-        if r.status_code != 200 or "<loc" not in r.text.lower():
+        try:
+            r = requests.get(adresse, headers=entetes, timeout=10)
+        except Exception as e:
+            diag.setdefault("sitemap", f"injoignable ({e.__class__.__name__})")
+            continue
+        diag.setdefault("sitemap_statut", r.status_code)
+        if r.status_code != 200:
+            diag.setdefault("sitemap", f"HTTP {r.status_code}")
+            continue
+        if "<loc" not in r.text.lower():
+            diag.setdefault("sitemap", "sans <loc>")
             continue
         locs = RE_LOC.findall(r.text)
         detail, sous = [], []
         for u in locs:
             (sous if u.lower().endswith(".xml") else detail).append(u)
-        for su in sous[:8]:             # suivre les sous-sitemaps une fois
+        for su in _autorisees(sous[:8], permission):   # suivre les sous-sitemaps une fois
             if fin_prevue and time.monotonic() > fin_prevue:
                 break
             try:
                 detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=10).text)
             except Exception:
                 pass
-        biens = [u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)]
+        biens = _autorisees([u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)],
+                            permission)
         if biens:
+            diag["sitemap"] = f"ok {len(biens)}"
             return biens
+        diag.setdefault("sitemap", "aucune page de bien")
+    diag.setdefault("sitemap", "absent")
     return []
 
 
@@ -312,18 +359,21 @@ def _vivier(maxi: int) -> int:
 
 
 def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
-                    fin_prevue: float = 0.0) -> list[str]:
+                    fin_prevue: float = 0.0, permission=None,
+                    diag: dict | None = None) -> list[str]:
     # On récupère BEAUCOUP plus d'URL que de biens voulus : beaucoup de pages
     # sont écartées ensuite (biens vendus, appartements, pages catalogue). La
     # boucle d'appel s'arrête d'elle-même une fois `maxi` biens VALIDES gardés.
+    diag = diag if diag is not None else {}
     vivier = _vivier(maxi)
-    urls = _sitemap_urls(base, fin_prevue)
+    urls = _sitemap_urls(base, fin_prevue, permission, diag)
     if urls:
         print(f"  sitemap : {len(urls)} page(s) de biens")
         return urls[:vivier]
+    print(f"  sitemap : {diag.get('sitemap', '?')}")
     # repli : on parcourt les pages « nos biens »
     urls = []
-    for idx in (cible.get("index") or [base]):
+    for idx in _autorisees(cible.get("index") or [base], permission):
         # Seule boucle du collecteur qui n'avait pas d'échéance. Une agence
         # déclarant plusieurs pages d'index pouvait y passer tout le temps de
         # la collecte — trente secondes de navigation chacune — sans que le
@@ -333,19 +383,31 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
             print("  ⏱ temps épuisé pendant la recherche des pages de biens")
             break
         try:
-            page.goto(idx, wait_until="domcontentloaded", timeout=30000)
+            reponse = page.goto(idx, wait_until="domcontentloaded", timeout=30000)
             page.wait_for_timeout(1800)
         except Exception as e:
             print(f"  ✘ index injoignable {idx} ({e.__class__.__name__})")
+            diag.setdefault("index_statut", e.__class__.__name__)
             continue
-        for u in _liens_page(page, base):
+        # Le statut et le titre de la page d'index : une page d'attente
+        # anti-robot répond souvent 200 ou 202 avec un titre qui n'est pas
+        # celui du site, et zéro lien. Sans ces deux champs, elle est
+        # indiscernable d'une agence sans biens.
+        diag.setdefault("index_statut", reponse.status if reponse else None)
+        try:
+            diag.setdefault("index_titre", (page.title() or "")[:60])
+        except Exception:
+            pass
+        for u in _autorisees(_liens_page(page, base), permission):
             if u not in urls:
                 urls.append(u)
     # depuis un index, on ne garde que les liens qui ressemblent à un détail
     # (un chiffre dans le chemin) pour éviter les pages de catégorie.
     details = [u for u in urls if re.search(r"\d", urlparse(u).path)]
     choix = details or urls
-    print(f"  index : {len(choix)} lien(s) de bien repéré(s)")
+    print(f"  index : {len(choix)} lien(s) de bien repéré(s)"
+          + (f" (HTTP {diag['index_statut']}, « {diag.get('index_titre', '')} »)"
+             if diag.get("index_statut") is not None else ""))
     return choix[:vivier]
 
 
@@ -445,17 +507,45 @@ def main() -> None:
             # elle qui traîne.
             fin_agence = min(fin_prevue, debut + args.minutes_par_agence * 60)
             print(f"\n▶ {cible['nom']} — {base}")
-            n, vendus, ecartes, vues = 0, 0, 0, 0
+            n, vendus, ecartes, vues, illisibles = 0, 0, 0, 0, 0
             debordement = ""
+            # Ce qui s'est passé AVANT la première page de bien : sitemap,
+            # index, robots.txt. Consigné dans le déroulé, car c'est là que se
+            # décide « zéro page », et le journal du run ne disait rien.
+            diag: dict = {}
             # Vrai dès qu'on s'arrête AVANT d'avoir épuisé la liste du site.
             # C'est la seule chose qui permette à la règle de sortie de
             # distinguer « ce bien a disparu » de « on n'a pas été jusqu'à lui ».
             tronquee = False
+            # robots.txt d'abord, sous notre nom. Un site qui nous ferme sa
+            # racine n'est pas visité — pas une page, pas le sitemap. La page
+            # /robot le promettait depuis le 1er octobre ; le collecteur de
+            # production ne lisait rien. Ses biens ne sont pas protégés par
+            # la règle de sortie : on ne publie pas ce qu'on n'a plus le droit
+            # de lire, et ils sortiront comme des biens disparus.
+            permission = robots.lire(base, _chercher_robots)
+            diag["robots"] = ("interdit" if permission.tout_interdit(base)
+                              else "absent" if permission.statut in robots.ABSENT
+                              else "illisible" if not permission.statut
+                              else "ok")
+            if permission.tout_interdit(base):
+                print("  ⛔ robots.txt nous interdit ce site : on n'y touche pas.")
+                _noter_visite(cible["site"], date.today().isoformat())
+                deroule.append({"agence": cible["nom"], "secondes": 0,
+                                "pages": 0, "gardes": 0, "fin": "robots.txt interdit",
+                                **diag})
+                agences += 1
+                _consigner_deroule(deroule, round((time.monotonic() - depart) / 60, 1))
+                continue
+            # Le Crawl-delay demandé, s'il y en a un : on ne va jamais plus
+            # vite que ce que le site demande. Une page coûte déjà ~1,5 s de
+            # navigation ; on attend le complément.
+            pause = max(0.0, (permission.delai() or 0.0) - 1.5)
             # Trente secondes de marge sur le budget : le temps de finir
             # proprement le bien en cours avant que le réveil ne sonne.
             desarmer = borner(args.minutes_par_agence * 60 + 30)
             try:
-                urls = _urls_a_visiter(page, cible, base, maxi, fin_agence)
+                urls = _urls_a_visiter(page, cible, base, maxi, fin_agence, permission, diag)
                 if len(urls) >= _vivier(maxi):
                     tronquee = True    # la réserve d'adresses elle-même est coupée
                 for u in urls:
@@ -484,16 +574,28 @@ def main() -> None:
                         page.wait_for_timeout(900)
                         html = page.content()
                     except Exception:
+                        illisibles += 1
                         continue
+                    if pause:
+                        time.sleep(pause)
                     brut = extraire_annonce(html, u, source=_slug(cible["nom"]),
                                             agence=cible["nom"], agence_url=base)
                     if not brut:
+                        # Une page ouverte où l'on ne lit aucune annonce. Quarante-
+                        # cinq fois de suite chez Echinard les 1er et 3 octobre, là
+                        # où la semaine d'avant en donnait sept sur quarante-cinq :
+                        # la signature d'une page servie au robot qui n'est pas
+                        # celle servie au visiteur. Comptée, pour qu'on la voie —
+                        # et pour la distinguer d'une agence dont tout est vendu,
+                        # qui compte ses pages dans `vendus`.
+                        illisibles += 1
                         continue
                     # Rejette les pages où l'extraction n'a pas trouvé un vrai titre
                     # d'annonce (titre = nom de l'agence / du site) : peu exploitables.
                     titre_bas = (brut.get("titre") or "").strip().lower()
                     hote = urlparse(base).netloc.replace("www.", "")
                     if not titre_bas or titre_bas in (cible["nom"].lower(), hote):
+                        illisibles += 1
                         continue
                     # Filtre qualité : vrai logement de type refuge, encore à vendre
                     # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
@@ -538,7 +640,7 @@ def main() -> None:
             # agences — la réponse tenait dans une ligne qu'on n'écrivait pas.
             duree = time.monotonic() - debut
             print(f"  ✔ {n} bien(s) enregistré(s)"
-                  f" — {vendus} déjà vendu(s), {ecartes} hors cible"
+                  f" — {vendus} déjà vendu(s), {ecartes} hors cible, {illisibles} illisible(s)"
                   f" — {vues} page(s) en {duree / 60:.1f} min{debordement}")
             _noter_visite(cible["site"], date.today().isoformat())
             if tronquee:
@@ -549,10 +651,17 @@ def main() -> None:
             # run n'est lisible que depuis l'onglet Actions ; ce fichier-ci
             # est committé, donc lisible depuis git seul — c'est ce qui a
             # permis de comprendre les quatre passages précédents.
+            #
+            # Avec, depuis le 3 octobre, le sort de chaque page et ce qui s'est
+            # passé avant la première : « 45 pages, 0 gardé » ne suffisait pas
+            # à distinguer une agence dont tout est vendu d'une agence qui sert
+            # au robot une page qui n'est pas la sienne.
             deroule.append({
                 "agence": cible["nom"], "secondes": round(duree),
                 "pages": vues, "gardes": n,
+                "vendus": vendus, "ecartes": ecartes, "illisibles": illisibles,
                 "fin": (debordement.strip(" —") or "terminée"),
+                **diag,
             })
             total += n
             agences += 1

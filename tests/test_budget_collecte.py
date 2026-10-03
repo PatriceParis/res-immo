@@ -81,6 +81,11 @@ def collecte(tmp_path, monkeypatch):
     monkeypatch.setattr(collecteur.time, "sleep", lambda *_: None)
     monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
     monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    # Depuis le 3 octobre la boucle lit robots.txt sur le réseau avant chaque
+    # site. Ici : un site sans fichier (404), donc tout permis — ces tests
+    # mesurent le budget, pas la permission, et ne doivent rien attendre du
+    # réseau (un vrai appel passerait par le mandataire, dix secondes par site).
+    monkeypatch.setattr(collecteur, "_chercher_robots", lambda url: (404, None))
     # Sans cela, chaque test qui exécute main() écrit le VRAI journal de
     # déroulé — et un `git add -A` a committé « Bloquée / Saine » par-dessus
     # le déroulé d'une collecte réelle. Un test qui touche au dépôt n'est pas
@@ -111,7 +116,7 @@ def _lancer(monkeypatch, horloge, agences, secondes_par_page, minutes_par_agence
                         lambda *a, **k: [{"nom": n, "site": f"https://{n}.fr"}
                                          for n in agences])
 
-    def urls(page, cible, base, maxi, fin_prevue=0.0):
+    def urls(page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None):
         visitees.append(cible["nom"])
         return [f"{base}/bien-{i}" for i in range(30)]
 
@@ -298,7 +303,7 @@ def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, caps
         {"nom": "Bloquée", "site": "https://bloquee.fr"},
         {"nom": "Saine", "site": "https://saine.fr"}])
 
-    def urls(page, cible, base, maxi, fin_prevue=0.0):
+    def urls(page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None):
         visitees.append(cible["nom"])
         if cible["nom"] == "Bloquée":
             horloge_reelle.sleep(30)     # le réveil doit sonner bien avant
@@ -307,6 +312,11 @@ def test_une_agence_qui_ne_rend_jamais_la_main_est_interrompue(monkeypatch, caps
     monkeypatch.setattr(collecteur, "_urls_a_visiter", urls)
     monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
     monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    # Depuis le 3 octobre la boucle lit robots.txt sur le réseau avant chaque
+    # site. Ici : un site sans fichier (404), donc tout permis — ces tests
+    # mesurent le budget, pas la permission, et ne doivent rien attendre du
+    # réseau (un vrai appel passerait par le mandataire, dix secondes par site).
+    monkeypatch.setattr(collecteur, "_chercher_robots", lambda url: (404, None))
     monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
     # On garde la VRAIE fonction, avec un délai d'une seconde : c'est le
     # mécanisme qu'on veut éprouver, pas une imitation.
@@ -385,13 +395,18 @@ def test_le_deroule_nomme_l_agence_interrompue(monkeypatch, tmp_path):
     monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [
         {"nom": "Bloquée", "site": "https://bloquee.fr"}])
 
-    def urls(page, cible, base, maxi, fin_prevue=0.0):
+    def urls(page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None):
         horloge_reelle.sleep(30)
         return []
 
     monkeypatch.setattr(collecteur, "_urls_a_visiter", urls)
     monkeypatch.setattr(collecteur, "sync_playwright", lambda: _FauxPlaywright())
     monkeypatch.setattr(collecteur, "_noter_visite", lambda *a, **k: None)
+    # Depuis le 3 octobre la boucle lit robots.txt sur le réseau avant chaque
+    # site. Ici : un site sans fichier (404), donc tout permis — ces tests
+    # mesurent le budget, pas la permission, et ne doivent rien attendre du
+    # réseau (un vrai appel passerait par le mandataire, dix secondes par site).
+    monkeypatch.setattr(collecteur, "_chercher_robots", lambda url: (404, None))
     monkeypatch.setattr(collecteur.db, "connexion", lambda: _FausseBase())
     vrai_borner = collecteur.borner
     monkeypatch.setattr(collecteur, "borner", lambda _: vrai_borner(1))
