@@ -151,6 +151,11 @@ jobs:
       - name: Enrichir les risques officiels (Géorisques)
         # API publique de l'État : zone inondable, argiles, feux de forêt…
         # Non bloquant : sans réseau ou si l'API change, on garde l'existant.
+        # Sans tampon : le 3 octobre, les 59 lignes de l'étape portaient toutes
+        # l'horodatage de sa dernière seconde, et rien ne disait que chacune
+        # avait coûté dix secondes de délai.
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scripts/enrichir_risques.py --max 200 || true
 
       - name: Vérifier que chaque photo se charge et montre bien une maison

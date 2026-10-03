@@ -21,6 +21,14 @@ sys.path.insert(0, str(RACINE))
 
 from app import db, georisques, scoring  # noqa: E402
 
+# Au-delà de ce nombre d'échecs d'affilée, l'API ne répond pas : on rend la
+# main. Mesuré sur les journaux de collecte : depuis le 25 septembre 2026, pas
+# UNE réponse ; depuis le 29, chaque appel attend ses dix secondes de délai,
+# et l'étape passe ses dix minutes de budget à échouer cinquante-neuf fois —
+# quarante minutes de runner par jour, pour rien. Cinq délais d'affilée
+# suffisent à le savoir ; un succès remet le compteur à zéro.
+ECHECS_D_AFFILEE_MAX = 5
+
 
 def main() -> None:
     parseur = argparse.ArgumentParser(description=__doc__)
@@ -36,7 +44,7 @@ def main() -> None:
         "SELECT * FROM annonces WHERE lat IS NOT NULL AND lon IS NOT NULL"
     ).fetchall()
 
-    faits, echecs = 0, 0
+    faits, echecs, d_affilee = 0, 0, 0
     fin_prevue = time.monotonic() + args.minutes_max * 60
     for row in rows:
         if faits + echecs >= args.max:
@@ -52,8 +60,15 @@ def main() -> None:
         resultat = georisques.risques_pour(annonce["lat"], annonce["lon"])
         if resultat is None:
             echecs += 1
-            print(f"✘ {annonce['commune']}: API injoignable")
+            d_affilee += 1
+            raison = georisques.DERNIERE_ERREUR or "raison inconnue"
+            print(f"✘ {annonce['commune']}: API injoignable ({raison})")
+            if d_affilee >= ECHECS_D_AFFILEE_MAX:
+                print(f"⛔ {d_affilee} échecs d'affilée ({raison}) : l'API ne répond "
+                      "pas, on n'attend pas les autres — le budget revient à l'export.")
+                break
             continue
+        d_affilee = 0
 
         # Le NIVEAU d'argile vient d'un point d'accès distinct : le rapport
         # général ne dit que « documenté sur la commune », et le traduire en

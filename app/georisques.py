@@ -80,12 +80,31 @@ def _present(noeud) -> bool:
     return bool(isinstance(noeud, dict) and noeud.get("present"))
 
 
+# La raison du dernier échec de `risques_pour` ou `exposition_argile`, pour
+# que l'appelant puisse la dire. « API injoignable » recouvrait, le 3 octobre
+# 2026, cinquante-neuf délais dépassés d'affilée : dix minutes de runner à
+# attendre une API qui ne répondait plus depuis une semaine, et personne ne
+# pouvait le lire dans le journal. Sondé le même jour depuis un runner GitHub :
+# la connexion TCP vers georisques.gouv.fr n'aboutit jamais (ConnectTimeout),
+# avec ou sans www, quel que soit le point d'accès ou l'identité — le serveur
+# ne refuse pas, il ne répond pas. En août, le même runner obtenait 200 en une
+# demi-seconde. Ce n'est pas notre code : c'est d'où il appelle.
+DERNIERE_ERREUR: str | None = None
+
+
+def _raison(e: Exception) -> str:
+    if isinstance(e, requests.HTTPError) and e.response is not None:
+        return f"HTTP {e.response.status_code}"
+    return e.__class__.__name__
+
+
 def exposition_argile(lat: float, lon: float, timeout: int = 10) -> int | None:
     """Le NIVEAU d'exposition au retrait-gonflement pour un point (0 à 3).
 
     None si l'API est injoignable ou sa réponse illisible : l'appelant laisse
     alors le niveau inconnu plutôt que d'inventer un zéro rassurant.
     """
+    global DERNIERE_ERREUR
     try:
         reponse = requests.get(
             URL_ARGILE,
@@ -95,7 +114,8 @@ def exposition_argile(lat: float, lon: float, timeout: int = 10) -> int | None:
         )
         reponse.raise_for_status()
         return niveau_argile(reponse.json())
-    except (requests.RequestException, ValueError):
+    except (requests.RequestException, ValueError) as e:
+        DERNIERE_ERREUR = _raison(e)
         return None
 
 
@@ -105,6 +125,7 @@ def risques_pour(lat: float, lon: float, timeout: int = 10) -> dict | None:
     Renvoie un dictionnaire au format interne de l'application, ou None si
     l'API est injoignable (l'appelant garde alors les données existantes).
     """
+    global DERNIERE_ERREUR
     try:
         reponse = requests.get(
             URL_RAPPORT,
@@ -114,8 +135,10 @@ def risques_pour(lat: float, lon: float, timeout: int = 10) -> dict | None:
         )
         reponse.raise_for_status()
         data = reponse.json()
-    except (requests.RequestException, ValueError):
+    except (requests.RequestException, ValueError) as e:
+        DERNIERE_ERREUR = _raison(e)
         return None
+    DERNIERE_ERREUR = None
 
     naturels = data.get("risquesNaturels") or {}
     technologiques = data.get("risquesTechnologiques") or {}

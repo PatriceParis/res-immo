@@ -139,6 +139,18 @@ def fusionner(precedentes: list[dict], nouvelles: list[dict],
             elif ancien.get("prix_precedent") and nouveau_prix == ancien.get("prix"):
                 enrichi["prix_precedent"] = ancien["prix_precedent"]
                 enrichi["prix_baisse_le"] = ancien.get("prix_baisse_le")
+            # Les risques officiels sont un acquis : Géorisques a répondu une
+            # fois, le constat vaut encore. La fusion repartait de la ligne du
+            # jour et les perdait dès que l'API ne répondait plus — mesuré du
+            # 1er au 3 octobre 2026 : huit biens re-collectés sur huit enrichis
+            # ont perdu leurs risques, et le compte d'enrichis baissait à chaque
+            # passage sans qu'aucun bien ne soit sorti pour cette raison. Une
+            # réponse fraîche de l'API, elle, l'emporte toujours.
+            anciens_risques = ancien.get("risques") or {}
+            nouveaux_risques = bien.get("risques") or {}
+            if (anciens_risques.get("source") == "georisques"
+                    and nouveaux_risques.get("source") != "georisques"):
+                enrichi["risques"] = {**nouveaux_risques, **anciens_risques}
         gardees.append(enrichi)
 
     vus = {b.get("id") for b in nouvelles}
