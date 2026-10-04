@@ -76,9 +76,30 @@ MOTIF_HORS_BIEN = re.compile(
 )
 
 
+# Pages techniques qu'un sitemap liste à côté des annonces, et qui finissaient
+# toutes « illisibles » après ouverture — mesuré au déroulé du 4 octobre 2026 :
+# les pièces jointes d'un bien sous WordPress (« /project/maison-f5-dans-le-
+# cotentin/image002/ », Bouctot : 30 pages sur 36), la pagination d'une archive
+# (« /property/page/2/ ») et la racine de l'archive elle-même (« /property/ »,
+# Picart : 21 pages sur 45). Le dernier segment seul tranche ; un slug
+# d'annonce qui contiendrait « photo » n'est pas visé.
+MOTIF_PAGE_TECHNIQUE = re.compile(
+    r"/(?:page/\d+|feed|embed|amp|attachment)/?$"
+    r"|/(?:image|img|dsc[fn]?|photo|picture|scan|capture|screenshot)[-_]?\d+/?$",
+    re.IGNORECASE,
+)
+# Le segment qui fait ressembler l'adresse à une annonce est AUSSI le seul :
+# « /property/ », « /annonces/ », « /vente/ » — c'est l'archive, pas un bien.
+MOTIF_RACINE_D_ARCHIVE = re.compile(
+    r"^/(?:annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens"
+    r"|detail|ref|maison|propriete)/?$",
+    re.IGNORECASE,
+)
+
+
 def _est_page_de_bien(url: str) -> bool:
-    """Ressemble à une annonce, ne vit pas dans une rubrique éditoriale, et son
-    adresse ne la condamne pas d'avance.
+    """Ressemble à une annonce, ne vit pas dans une rubrique éditoriale, n'est
+    pas une page technique, et son adresse ne la condamne pas d'avance.
 
     Le filtre qualité (app/qualite.py) rejette après extraction toute page dont
     l'adresse dit « location », « appartement », « terrain », « autres »… Le
@@ -87,8 +108,11 @@ def _est_page_de_bien(url: str) -> bool:
     ne l'ouvre plus — même règle, appliquée avant au lieu d'après, donc même
     catalogue et des pages rendues au budget de l'agence.
     """
+    chemin = urlparse(url).path
     return (bool(MOTIF_BIEN.search(url))
-            and not MOTIF_HORS_BIEN.search(urlparse(url).path)
+            and not MOTIF_HORS_BIEN.search(chemin)
+            and not MOTIF_PAGE_TECHNIQUE.search(chemin)
+            and not MOTIF_RACINE_D_ARCHIVE.match(chemin)
             and motif_url_hors_cible(url) is None)
 # Le robot dit son nom (voir app/robot.py) ; REFUGE_USER_AGENT y est honoré.
 UA = robot.USER_AGENT
