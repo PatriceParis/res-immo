@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.0,
+  "seconde": 21.2,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.0,
+  "seconde": 21.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,330 +21,309 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.0,
+  "seconde": 21.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.5,
+  "seconde": 23.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.0,
+  "seconde": 25.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.0,
+  "seconde": 25.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.3,
+  "seconde": 25.2,
   "reseau": "capifrance",
-  "connues": 9517
+  "connues": 9553
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.3,
+  "seconde": 25.2,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.6,
+  "seconde": 25.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 30.9,
+  "seconde": 44.0,
   "reseau": "iad",
   "n": 93216,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.8,
+  "seconde": 45.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.0,
+  "seconde": 45.7,
   "reseau": "iad",
-  "connues": 9517
+  "connues": 9553
  },
  {
   "etape": "departement",
-  "seconde": 180.3,
+  "seconde": 186.5,
   "reseau": "iad",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
-   "vendu": 26,
-   "ecarte": 11,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 10,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
-   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 276.8,
-  "reseau": "iad",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 4,
-   "ecarte": 46,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 31,
-   "location": 6,
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
-   "hors_perimetre": "Maison de campagne 4 pièces de 105 m² à Orgeval (78630)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 371.4,
-  "reseau": "iad",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 11,
-   "ecarte": 38,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 38
-  },
-  "exemples": {
-   "hors_perimetre": "Domaine 10 pièces de 349 m² à Oloron-Sainte-Marie (64400)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 498.8,
-  "reseau": "iad",
-  "departement": "10",
+  "departement": "37",
   "visitees": 50,
   "gardes": 6,
   "tronquee": true,
   "etats": {
    "garde": 6,
-   "vendu": 17,
-   "ecarte": 27,
+   "vendu": 16,
+   "ecarte": 28,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
+   "hors_perimetre": 18,
    "location": 2,
-   "hors_perimetre": 24
+   "prix_trop_haut": 8
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
+   "hors_perimetre": "Maison 3 pièces de 71 m² à LA RIVIÈRE (97421)",
+   "location": "Longère 3 pièces de 66 m² à Tours (37100)",
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 606.9,
+  "seconde": 302.9,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 12,
+   "ecarte": 38,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 36,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 445.8,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 50,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 16,
+   "ecarte": 28,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 28
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 10 pièces de 300 m² à Saint-Bonnet-le-Chastel (63630)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 577.4,
+  "reseau": "iad",
+  "departement": "59",
   "visitees": 50,
   "gardes": 3,
   "tronquee": true,
   "etats": {
    "garde": 3,
-   "vendu": 10,
-   "ecarte": 37,
+   "vendu": 29,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 25,
-   "prix_trop_haut": 12
+   "location": 7,
+   "prix_trop_haut": 6,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
-   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
+   "location": "Maison de ville 3 pièces de 109 m² à Grand-Fort-Philippe (59153)",
+   "prix_trop_haut": "Demeure 10 pièces de 342 m² à Beaucamps-Ligny (59134)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 619.1,
+  "seconde": 624.4,
   "reseau": "iad",
-  "departement": "18",
-  "visitees": 6,
+  "departement": "60",
+  "visitees": 20,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 1,
-   "ecarte": 5,
+   "vendu": 2,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 3
+   "hors_perimetre": 10,
+   "location": 6,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 619.1,
+  "seconde": 624.4,
   "reseau": "safti",
   "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 619.4,
+  "seconde": 624.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 620.4,
+  "seconde": 626.5,
   "reseau": "safti",
   "n": 28769,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 621.2,
+  "seconde": 627.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 621.4,
+  "seconde": 627.3,
   "reseau": "safti",
-  "connues": 9517
+  "connues": 9553
  },
  {
   "etape": "departement",
-  "seconde": 768.8,
+  "seconde": 763.9,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 6,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 4,
-   "ecarte": 40,
+   "garde": 2,
+   "vendu": 1,
+   "ecarte": 47,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 40
+   "hors_perimetre": 47
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
+   "hors_perimetre": "Vente de maison 14 pièces à Chatillon-En-Diois 26410 : 290m², prix 320 000 €. Réf : 1496787"
   }
  },
  {
   "etape": "departement",
-  "seconde": 949.4,
+  "seconde": 967.7,
   "reseau": "safti",
-  "departement": "71",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 14,
+   "garde": 18,
    "vendu": 0,
-   "ecarte": 36,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 35,
-   "prix_trop_haut": 1
+   "hors_perimetre": 30,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Baignes-Sainte-Radegonde 16360 : 87m², prix 90 000 €. Réf : 1629692",
-   "prix_trop_haut": "Vente de maison 12 pièces à Dracy-Les-Couches 71490 : 350m², prix 720 000 €. Réf : 1665483"
+   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1134.8,
+  "seconde": 1168.2,
   "reseau": "safti",
-  "departement": "72",
+  "departement": "45",
   "visitees": 50,
   "gardes": 17,
   "tronquee": true,
   "etats": {
    "garde": 17,
-   "vendu": 5,
-   "ecarte": 28,
+   "vendu": 1,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 25,
-   "prix_trop_haut": 3
+   "hors_perimetre": 28,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Aigne 34210 : 141m², prix 449 000 €. Réf : 1714286",
-   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
+   "prix_trop_haut": "Vente de maison 6 pièces à Orleans 45000 : 240m², prix 725 000 €. Réf : 1682526"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1217.5,
+  "seconde": 1221.8,
   "reseau": "safti",
-  "departement": "37",
+  "departement": "50",
   "visitees": 21,
-  "gardes": 7,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 7,
-   "vendu": 1,
-   "ecarte": 13,
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 7,
-   "hors_perimetre": 6
+   "prix_trop_haut": 1,
+   "hors_perimetre": 20
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
-   "hors_perimetre": "Vente de maison 8 pièces à Castelnau-Riviere-Basse 65700 : 250m², prix 315 000 €. Réf : 1677719"
+   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
+   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1217.5,
-  "gardes": 66
+  "seconde": 1221.8,
+  "gardes": 52
  }
 ]
