@@ -1,9 +1,9 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "Alain Guyony Immobilier",
-   "secondes": 107,
+   "agence": "Aude Immo 18",
+   "secondes": 73,
    "pages": 11,
    "gardes": 8,
    "vendus": 0,
@@ -12,200 +12,275 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 120"
+   "sitemap": "ok 55"
   },
   {
-   "agence": "Alexandra Cablat",
-   "secondes": 113,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 43,
-   "ecartes": 1,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 381",
-   "illisible_exemple": {
-    "url": "https://www.cablat-immobilier.com/vente/53-messincourt/maison/t6/62-maison-individuelle/",
-    "cause": "aucune annonce lue",
-    "titre": "Maison Individuelle | ALEXANDRA CABLAT IMMOBILIER",
-    "octets": 250018
-   }
-  },
-  {
-   "agence": "Alliance Immobilier",
-   "secondes": 118,
-   "pages": 45,
-   "gardes": 2,
-   "vendus": 20,
-   "ecartes": 19,
-   "illisibles": 4,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 290",
-   "illisible_exemple": {
-    "url": "https://www.allianceimmobilier.com/vente/autre/1",
-    "cause": "aucune annonce lue",
-    "titre": "0 autres biens à vendre | Alliance Groupe Immobilier",
-    "octets": 242384
-   }
-  },
-  {
-   "agence": "Amrimmo",
-   "secondes": 242,
-   "pages": 36,
-   "gardes": 2,
-   "vendus": 29,
-   "ecartes": 4,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 168",
-   "illisible_exemple": {
-    "url": "https://www.amrimmo.com/vente/maison-mitoyenne-1-cote",
-    "cause": "aucune annonce lue",
-    "titre": "Maisons mitoyennes 1 côté en vente",
-    "octets": 768908
-   }
-  },
-  {
-   "agence": "Angledroit.immo",
-   "secondes": 81,
-   "pages": 19,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 11,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 33"
-  },
-  {
-   "agence": "Angélot Immo",
-   "secondes": 31,
-   "pages": 12,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 11,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 12"
-  },
-  {
-   "agence": "Année Hoinville",
-   "secondes": 240,
-   "pages": 37,
-   "gardes": 5,
-   "vendus": 24,
-   "ecartes": 8,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 176"
-  },
-  {
-   "agence": "Antony Vesque Immobilier",
-   "secondes": 103,
+   "agence": "Aurélie Bonnet Immobilier",
+   "secondes": 86,
    "pages": 22,
    "gardes": 8,
    "vendus": 1,
-   "ecartes": 9,
-   "illisibles": 4,
+   "ecartes": 7,
+   "illisibles": 6,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 82",
+   "sitemap": "ok 295",
    "illisible_exemple": {
-    "url": "https://www.vesque-immobilier.fr/annonces-vente-garage.html",
+    "url": "https://aureliebonnet.fr/vente/mandat-exclusif-ou-mandat-simple/",
     "cause": "aucune annonce lue",
-    "titre": "Garage à vendre Manche 50 | ANTONY VESQUE IMMOBILIER",
-    "octets": 675238
+    "titre": "Mandat exclusif VS Mandat simple",
+    "octets": 222560
    }
   },
   {
-   "agence": "Apirem",
-   "secondes": 50,
-   "pages": 19,
-   "gardes": 0,
-   "vendus": 1,
-   "ecartes": 5,
-   "illisibles": 13,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 19",
-   "illisible_exemple": {
-    "url": "https://www.apirem.fr/vente-longue-tout-savoir-sur-cette-solution-immobiliere/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente longue : Tout savoir sur cette solution immobilière - Apirem",
-    "octets": 226863
-   }
-  },
-  {
-   "agence": "Ardentes Berry Immobilier",
-   "secondes": 31,
+   "agence": "BAP Immo",
+   "secondes": 110,
    "pages": 10,
-   "gardes": 1,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 8,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 10",
-   "illisible_exemple": {
-    "url": "https://ardentes-berry-immobilier.fr/maison/sirop-cafe-aromatise/",
-    "cause": "aucune annonce lue",
-    "titre": "Sirop café | Guide du dosage et top saveurs pro 2026",
-    "octets": 107715
-   }
-  },
-  {
-   "agence": "Arsenal Immobilier",
-   "secondes": 242,
-   "pages": 40,
-   "gardes": 1,
-   "vendus": 37,
-   "ecartes": 1,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 158",
-   "illisible_exemple": {
-    "url": "https://www.arsenal-immobilier.com/vente/terrain",
-    "cause": "aucune annonce lue",
-    "titre": "Terrains en vente",
-    "octets": 667850
-   }
-  },
-  {
-   "agence": "ArthurImmo.com Agence Saint-Hubert",
-   "secondes": 91,
-   "pages": 19,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 13,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 26"
+   "sitemap": "ok 90"
   },
   {
-   "agence": "Arthurimmo",
-   "secondes": 69,
-   "pages": 8,
-   "gardes": 8,
+   "agence": "Bagnoles Immobilier",
+   "secondes": 245,
+   "pages": 40,
+   "gardes": 2,
+   "vendus": 24,
+   "ecartes": 14,
+   "illisibles": 0,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 277"
+  },
+  {
+   "agence": "Baudart Immo",
+   "secondes": 4,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": "Achat / Vente - Beauvais et ses environs - Annonces immobili"
+  },
+  {
+   "agence": "Benedic Immobilier",
+   "secondes": 65,
+   "pages": 30,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 25,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 30",
+   "illisible_exemple": {
+    "url": "https://www.benedicsa.com/blog/revue-de-presse-1/vendre-votre-bien-en-48h-des-solutions-innovantes-77",
+    "cause": "aucune annonce lue",
+    "titre": "Vendre votre bien en 48h: des solutions innovantes | Benedic",
+    "octets": 91319
+   }
+  },
+  {
+   "agence": "Cabinet Aelion immobilier",
+   "secondes": 86,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 17"
+  },
+  {
+   "agence": "Cabinet Dero Renard",
+   "secondes": 241,
+   "pages": 41,
+   "gardes": 1,
+   "vendus": 36,
+   "ecartes": 2,
+   "illisibles": 2,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 282",
+   "illisible_exemple": {
+    "url": "https://www.immorenard.com/vente/appartement-studio-1-piece-le-havre-76600,VA2242",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Studio, 1 pièce situé à LE HAVRE (76600)",
+    "octets": 808481
+   }
+  },
+  {
+   "agence": "Cabinet Faudais",
+   "secondes": 68,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 373"
+  },
+  {
+   "agence": "Cabinet JC Lebourg",
+   "secondes": 73,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 34"
+  },
+  {
+   "agence": "Cabinet Quesnée Immobilier",
+   "secondes": 100,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 27,
+   "ecartes": 16,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 55",
+   "illisible_exemple": {
+    "url": "https://www.cabinetquesnee.com/vente-pro/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 annonces de ventes immobilières professionnelles",
+    "octets": 125905
+   }
+  },
+  {
+   "agence": "Cabinet Ray",
+   "secondes": 93,
+   "pages": 29,
+   "gardes": 8,
+   "vendus": 16,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap": "ok 79"
+  },
+  {
+   "agence": "Cabinet Vasse",
+   "secondes": 29,
+   "pages": 6,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Cabinet Vasse - 2 agences immobilières à Caen dans le Calvad",
+   "illisible_exemple": {
+    "url": "https://cabinet-vasse.com/fr/propriete/location+commerce+caen+86391108",
+    "cause": "aucune annonce lue",
+    "titre": "Location immobilière : Local commercial à Caen 1 pièce 495&nbsp;€ / Mois (Charges comprises)- CABINET VASSE.",
+    "octets": 118886
+   }
+  },
+  {
+   "agence": "Cabinet de Simencourt",
+   "secondes": 100,
+   "pages": 26,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 14,
+   "illisibles": 4,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 202",
+   "illisible_exemple": {
+    "url": "https://www.de-simencourtimmobilier.fr/vente/vallee-de-la-bresle/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 annonces immobilières : Vallée de la Bresle",
+    "octets": 149909
+   }
+  },
+  {
+   "agence": "Carrara Immobilier",
+   "secondes": 103,
+   "pages": 30,
+   "gardes": 7,
+   "vendus": 1,
+   "ecartes": 20,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 30",
+   "illisible_exemple": {
+    "url": "https://www.carrara.immo/vente-immeuble/1",
+    "cause": "aucune annonce lue",
+    "titre": "Vente d'immeubles | Carrara Immobilier",
+    "octets": 158472
+   }
+  },
+  {
+   "agence": "Causeret Immobilier",
+   "secondes": 60,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 7,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 97",
+   "illisible_exemple": {
+    "url": "https://causeretimmobilier.fr/maison/",
+    "cause": "aucune annonce lue",
+    "titre": "Maisons Archive - © CAUSERET IMMOBILIER",
+    "octets": 688169
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 42,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 71"
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 66,
+   "pages": 11,
+   "gardes": 6,
+   "vendus": 1,
+   "ecartes": 4,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
@@ -213,36 +288,17 @@
    "sitemap": "ok 54"
   },
   {
-   "agence": "Arthurimmo.com",
-   "secondes": 90,
-   "pages": 19,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 12,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 19",
-   "illisible_exemple": {
-    "url": "https://metz.arthurimmo.com/annonces/achat/parking/metz-57070/33653392.htm",
-    "cause": "aucune annonce lue",
-    "titre": "Acheter immobilier 11 000 € à Metz (57070) : une annonce Arthurimmo.com",
-    "octets": 162004
-   }
-  },
-  {
-   "agence": "Arturimmo.com",
-   "secondes": 73,
-   "pages": 18,
+   "agence": "Century 21",
+   "secondes": 39,
+   "pages": 10,
    "gardes": 3,
    "vendus": 0,
-   "ecartes": 15,
+   "ecartes": 7,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 40"
+   "sitemap": "ok 71"
   }
  ]
 }
