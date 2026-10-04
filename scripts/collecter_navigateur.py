@@ -63,6 +63,22 @@ MOTIF_BIEN = re.compile(
     r"/(annonces?|biens?|vente|vendre|a-vendre|property|properties|nos-biens|detail|ref|maison|propriete)[-/]",
     re.IGNORECASE,
 )
+# Les rubriques éditoriales qu'un sitemap mêle aux annonces. Le motif ci-dessus
+# ne retient que ce qui ressemble à une annonce, et « /blog/revue-de-presse-1/
+# vendre-votre-bien-en-48h » lui ressemble. Mesuré au déroulé du 4 octobre
+# 2026 : chez Benedic, 25 pages ouvertes sur 30 étaient des articles de blog,
+# et le budget de l'agence y est passé ; la veille, Apirem 13 sur 19. Un
+# segment entier du chemin, jamais un fragment : une annonce dont le slug
+# contiendrait « guide » ou « news » n'est pas visée.
+MOTIF_HORS_BIEN = re.compile(
+    r"(^|/)(blog|actualites?|actus?|conseils?|revue-de-presse|guides?|articles?|news|magazine|agenda)(/|$)",
+    re.IGNORECASE,
+)
+
+
+def _est_page_de_bien(url: str) -> bool:
+    """Ressemble à une annonce, et ne vit pas dans une rubrique éditoriale."""
+    return bool(MOTIF_BIEN.search(url)) and not MOTIF_HORS_BIEN.search(urlparse(url).path)
 # Le robot dit son nom (voir app/robot.py) ; REFUGE_USER_AGENT y est honoré.
 UA = robot.USER_AGENT
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
@@ -272,7 +288,7 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
                 detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=10).text)
             except Exception:
                 pass
-        biens = _autorisees([u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)],
+        biens = _autorisees([u for u in dict.fromkeys(detail) if _est_page_de_bien(u)],
                             permission)
         if biens:
             diag["sitemap"] = f"ok {len(biens)}"
@@ -311,7 +327,7 @@ def _liens_page(page, base: str) -> list[str]:
         if not h:
             continue
         u = urljoin(base, h).split("#")[0]
-        if urlparse(u).netloc == hote and MOTIF_BIEN.search(u) and u not in vus:
+        if urlparse(u).netloc == hote and _est_page_de_bien(u) and u not in vus:
             vus.add(u)
             urls.append(u)
     return urls
