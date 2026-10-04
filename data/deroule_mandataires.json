@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 15.9,
+  "seconde": 16.0,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 15.9,
+  "seconde": 16.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,123 +21,125 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 15.9,
+  "seconde": 16.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.4,
+  "seconde": 17.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.2,
+  "seconde": 19.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.2,
+  "seconde": 19.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.4,
+  "seconde": 19.3,
   "reseau": "capifrance",
-  "connues": 9465
+  "connues": 9517
  },
  {
   "etape": "reseau_debut",
-  "seconde": 19.4,
+  "seconde": 19.3,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 19.5,
+  "seconde": 19.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 27.2,
+  "seconde": 30.9,
   "reseau": "iad",
-  "n": 93231,
+  "n": 93216,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.2,
+  "seconde": 32.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.4,
+  "seconde": 33.0,
   "reseau": "iad",
-  "connues": 9465
+  "connues": 9517
  },
  {
   "etape": "departement",
-  "seconde": 140.9,
+  "seconde": 180.3,
   "reseau": "iad",
-  "departement": "52",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 14,
-   "ecarte": 32,
-   "illisible": 0
+   "garde": 12,
+   "vendu": 26,
+   "ecarte": 11,
+   "illisible": 1
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 30
+   "hors_perimetre": 10,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Bungalow 2 pièces de 55 m² à Petit-Bourg (97170)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)",
+   "prix_trop_haut": "Demeure 12 pièces de 514 m² à Picquigny (80310)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 250.6,
+  "seconde": 276.8,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 21,
-   "ecarte": 27,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 26
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 91 m² à Laval (53000)",
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 346.3,
-  "reseau": "iad",
-  "departement": "58",
+  "departement": "02",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
   "etats": {
    "garde": 0,
-   "vendu": 12,
+   "vendu": 4,
+   "ecarte": 46,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 31,
+   "location": 6,
+   "hors_perimetre": 9
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
+   "hors_perimetre": "Maison de campagne 4 pièces de 105 m² à Orgeval (78630)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 371.4,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 11,
    "ecarte": 38,
    "illisible": 0
   },
@@ -145,221 +147,204 @@
    "hors_perimetre": 38
   },
   "exemples": {
-   "hors_perimetre": "Maison 1 pièce de 38 m² à Six-Fours-les-Plages (83140)"
+   "hors_perimetre": "Domaine 10 pièces de 349 m² à Oloron-Sainte-Marie (64400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 444.2,
+  "seconde": 498.8,
   "reseau": "iad",
-  "departement": "71",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 2,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 2,
+   "garde": 6,
    "vendu": 17,
-   "ecarte": 31,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 28,
-   "prix_trop_haut": 3
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 24
   },
   "exemples": {
-   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D",
-   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 589.9,
+  "seconde": 606.9,
   "reseau": "iad",
-  "departement": "72",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 11,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 21,
-   "ecarte": 18,
+   "garde": 3,
+   "vendu": 10,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 18
+   "hors_perimetre": 25,
+   "prix_trop_haut": 12
   },
   "exemples": {
-   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
+   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 617.8,
+  "seconde": 619.1,
   "reseau": "iad",
-  "departement": "76",
-  "visitees": 11,
-  "gardes": 1,
+  "departement": "18",
+  "visitees": 6,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 2,
-   "ecarte": 8,
+   "garde": 0,
+   "vendu": 1,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 5,
-   "prix_trop_haut": 2
+   "location": 2,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
+   "location": "Maison 3 pièces de 68 m² à Vierzon (18100)",
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 617.8,
+  "seconde": 619.1,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 618.0,
+  "seconde": 619.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.9,
+  "seconde": 620.4,
   "reseau": "safti",
-  "n": 28749,
+  "n": 28769,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 619.6,
+  "seconde": 621.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.8,
+  "seconde": 621.4,
   "reseau": "safti",
-  "connues": 9465
+  "connues": 9517
  },
  {
   "etape": "departement",
-  "seconde": 735.0,
+  "seconde": 768.8,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 0,
-   "ecarte": 48,
-   "illisible": 1
+   "garde": 6,
+   "vendu": 4,
+   "ecarte": 40,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 48
+   "hors_perimetre": 40
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
   }
  },
  {
   "etape": "departement",
-  "seconde": 863.5,
+  "seconde": 949.4,
   "reseau": "safti",
-  "departement": "25",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 14,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 1,
-   "ecarte": 44,
+   "garde": 14,
+   "vendu": 0,
+   "ecarte": 36,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 43,
+   "hors_perimetre": 35,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351",
-   "prix_trop_haut": "Vente de maison 34 pièces à Le Russey 25210 : 805m², prix 1 359 000 €. Réf : 1696141"
+   "hors_perimetre": "Vente de maison 4 pièces à Baignes-Sainte-Radegonde 16360 : 87m², prix 90 000 €. Réf : 1629692",
+   "prix_trop_haut": "Vente de maison 12 pièces à Dracy-Les-Couches 71490 : 350m², prix 720 000 €. Réf : 1665483"
   }
  },
  {
   "etape": "departement",
-  "seconde": 999.9,
+  "seconde": 1134.8,
   "reseau": "safti",
-  "departement": "27",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 17,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 1,
-   "ecarte": 44,
+   "garde": 17,
+   "vendu": 5,
+   "ecarte": 28,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 43,
-   "prix_trop_haut": 1
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
-   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
+   "hors_perimetre": "Vente de maison 6 pièces à Aigne 34210 : 141m², prix 449 000 €. Réf : 1714286",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1128.5,
+  "seconde": 1217.5,
   "reseau": "safti",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 5,
+  "departement": "37",
+  "visitees": 21,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 0,
-   "ecarte": 45,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 45
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 210m², prix 270 000 €. Réf : 1560390"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1218.0,
-  "reseau": "safti",
-  "departement": "36",
-  "visitees": 37,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
+   "garde": 7,
    "vendu": 1,
-   "ecarte": 34,
+   "ecarte": 13,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 34
+   "prix_trop_haut": 7,
+   "hors_perimetre": 6
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
+   "hors_perimetre": "Vente de maison 8 pièces à Castelnau-Riviere-Basse 65700 : 250m², prix 315 000 €. Réf : 1677719"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1218.0,
-  "gardes": 38
+  "seconde": 1217.5,
+  "gardes": 66
  }
 ]
