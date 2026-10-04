@@ -44,7 +44,7 @@ from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
     _altitude, _densite, _geocoder, _geocoder_cp, _geocoder_texte)
-from app.qualite import est_bien_valide, est_vendu  # noqa: E402
+from app.qualite import est_bien_valide, est_vendu, motif_url_hors_cible  # noqa: E402
 
 try:
     from playwright.sync_api import sync_playwright
@@ -77,8 +77,19 @@ MOTIF_HORS_BIEN = re.compile(
 
 
 def _est_page_de_bien(url: str) -> bool:
-    """Ressemble à une annonce, et ne vit pas dans une rubrique éditoriale."""
-    return bool(MOTIF_BIEN.search(url)) and not MOTIF_HORS_BIEN.search(urlparse(url).path)
+    """Ressemble à une annonce, ne vit pas dans une rubrique éditoriale, et son
+    adresse ne la condamne pas d'avance.
+
+    Le filtre qualité (app/qualite.py) rejette après extraction toute page dont
+    l'adresse dit « location », « appartement », « terrain », « autres »… Le
+    4 octobre 2026, 265 des 490 pages ouvertes étaient hors cible, 101 déjà
+    vendues : trois pages sur quatre pour rien. Ce que l'adresse condamne, on
+    ne l'ouvre plus — même règle, appliquée avant au lieu d'après, donc même
+    catalogue et des pages rendues au budget de l'agence.
+    """
+    return (bool(MOTIF_BIEN.search(url))
+            and not MOTIF_HORS_BIEN.search(urlparse(url).path)
+            and motif_url_hors_cible(url) is None)
 # Le robot dit son nom (voir app/robot.py) ; REFUGE_USER_AGENT y est honoré.
 UA = robot.USER_AGENT
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
@@ -288,8 +299,14 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
                 detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=10).text)
             except Exception:
                 pass
-        biens = _autorisees([u for u in dict.fromkeys(detail) if _est_page_de_bien(u)],
-                            permission)
+        candidats = [u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)]
+        retenues = [u for u in candidats if _est_page_de_bien(u)]
+        if len(candidats) > len(retenues):
+            # Adresses qui ressemblent à une annonce mais que leur chemin
+            # condamne : rubrique éditoriale, location, appartement, terrain…
+            # Consigné pour mesurer ce que le tri rend au budget.
+            diag["adresses_ecartees"] = len(candidats) - len(retenues)
+        biens = _autorisees(retenues, permission)
         if biens:
             diag["sitemap"] = f"ok {len(biens)}"
             return biens

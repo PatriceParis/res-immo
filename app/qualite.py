@@ -111,6 +111,27 @@ _URL_LOCATION = re.compile(
     re.IGNORECASE,
 )
 
+
+def motif_url_hors_cible(url: str | None) -> str | None:
+    """Ce que l'ADRESSE seule dit d'une page, avant même de l'ouvrir :
+    « location », « url_type_exclu », ou None si elle ne la condamne pas.
+
+    Une seule définition pour deux usages : `motif_de_rejet`, après
+    extraction, et le tri des adresses du collecteur, avant ouverture. Mesuré
+    au déroulé du 4 octobre 2026 : 265 des 490 pages ouvertes étaient hors
+    cible, et une bonne part le disait dans son chemin — /appartements/,
+    /autres/, /location/. Les ouvrir pour l'apprendre coûtait le budget de
+    l'agence ; ne pas les ouvrir ne change rien au catalogue, puisque la
+    règle est la même. L'ordre compte : une adresse qui dit les deux est une
+    location d'abord, comme dans `motif_de_rejet`.
+    """
+    if _URL_LOCATION.search(url or ""):
+        return "location"
+    if _URL_TYPE_EXCLU.search(url or ""):
+        return "url_type_exclu"
+    return None
+
+
 # Types de biens acceptés (habitables, avec potentiel refuge).
 TYPES_REFUGE = {
     "longère", "corps de ferme", "fermette", "moulin", "château", "manoir",
@@ -224,10 +245,11 @@ def motif_de_rejet(a: dict) -> str | None:
     if enumere_plusieurs_biens(a):
         return "page_catalogue"
     # Location : ce n'est pas un bien à acheter.
-    if _LOCATION_TITRE.search(titre) or _URL_LOCATION.search(a.get("url") or ""):
+    motif_url = motif_url_hors_cible(a.get("url"))
+    if _LOCATION_TITRE.search(titre) or motif_url == "location":
         return "location"
     # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
-    if _URL_TYPE_EXCLU.search(a.get("url") or ""):
+    if motif_url == "url_type_exclu":
         return "url_type_exclu"
     if (a.get("type_bien") or "maison") not in TYPES_REFUGE:
         return "type_bien"
