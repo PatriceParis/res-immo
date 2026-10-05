@@ -88,6 +88,12 @@ MOTIF_PAGE_TECHNIQUE = re.compile(
     r"|/(?:image|img|dsc[fn]?|photo|picture|scan|capture|screenshot)[-_]?\d+/?$",
     re.IGNORECASE,
 )
+# Mesure, pas règle : les biens déjà vendus restent le premier gaspillage du
+# budget — 162 pages sur 468 le 4 octobre 2026, 81 sur 295 le 5 — et on ne
+# sait pas s'il faut ouvrir la page pour le savoir. Certains sites l'écrivent
+# dans l'adresse (« /biens-vendus/ », « maison-vendue-caen ») ; on compte
+# combien, avant de décider si une règle d'adresse en vaut la peine.
+MOTIF_VENDU_DANS_L_ADRESSE = re.compile(r"(^|[/-])vendue?s?([/.-]|$)", re.IGNORECASE)
 # Le segment qui fait ressembler l'adresse à une annonce est AUSSI le seul :
 # « /property/ », « /annonces/ », « /vente/ » — c'est l'archive, pas un bien.
 MOTIF_RACINE_D_ARCHIVE = re.compile(
@@ -682,6 +688,8 @@ def main() -> None:
                     # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
                     if est_vendu(brut):
                         vendus += 1
+                        if MOTIF_VENDU_DANS_L_ADRESSE.search(urlparse(u).path):
+                            diag["vendus_dans_l_adresse"] = diag.get("vendus_dans_l_adresse", 0) + 1
                         continue
                     if not est_bien_valide(brut):
                         ecartes += 1

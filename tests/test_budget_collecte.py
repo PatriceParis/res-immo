@@ -464,3 +464,32 @@ def test_le_deroule_montre_la_premiere_page_illisible(collecte, monkeypatch, tmp
     assert exemple["cause"] == "titre = nom du site"
     assert exemple["titre"] == "Agence X — accueil", "le <title> servi, nettoyé"
     assert exemple["octets"] > 0
+
+
+def test_le_deroule_compte_les_vendus_que_l_adresse_annoncait(collecte, monkeypatch, tmp_path):
+    """Les biens déjà vendus sont le premier gaspillage du budget — 162 pages
+    sur 468 le 4 octobre, 81 sur 295 le 5 — et on ne sait pas s'il fallait
+    ouvrir la page pour l'apprendre. On compte ceux dont l'adresse le disait,
+    avant de décider si une règle d'adresse en vaut la peine : une mesure, pas
+    une règle."""
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles",
+                        lambda *a, **k: [{"nom": "Agence X", "site": "https://agence-x.fr"}])
+    monkeypatch.setattr(
+        collecteur, "_urls_a_visiter",
+        lambda page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None: [
+            f"{base}/biens-vendus/maison-de-ville-12",     # la rubrique le dit
+            f"{base}/vente/maison-vendue-caen-7",           # le slug le dit
+            f"{base}/vente/maison-de-bourg-3",              # rien ne le disait
+            f"{base}/vente/vendeuvre-sur-barse-maison-9",   # une commune, pas un verdict
+        ])
+    monkeypatch.setattr(collecteur, "extraire_annonce",
+                        lambda html, url, **k: {"titre": "Maison de ville avec jardin", "vendu": True})
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert agence["vendus"] == 4 and agence["gardes"] == 0
+    assert agence["vendus_dans_l_adresse"] == 2, "deux adresses sur quatre le disaient d'avance"
