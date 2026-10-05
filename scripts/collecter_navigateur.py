@@ -123,6 +123,43 @@ def _est_page_de_bien(url: str) -> bool:
 # Le robot dit son nom (voir app/robot.py) ; REFUGE_USER_AGENT y est honoré.
 UA = robot.USER_AGENT
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
+RE_URL = re.compile(r"<url>(.*?)</url>", re.IGNORECASE | re.DOTALL)
+RE_LASTMOD = re.compile(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", re.IGNORECASE)
+
+
+def _entrees_sitemap(xml: str) -> list[tuple[str, str]]:
+    """Les (adresse, date de modification) d'un sitemap, dans son ordre.
+
+    La date est celle que le site déclare (<lastmod>), tronquée à la seconde,
+    vide s'il n'en donne pas. Un fichier sans bloc <url> — un index de
+    sous-sitemaps, un gabarit exotique — rend ses <loc> sans date.
+    """
+    blocs = RE_URL.findall(xml)
+    if not blocs:
+        return [(u, "") for u in RE_LOC.findall(xml)]
+    entrees = []
+    for bloc in blocs:
+        m = RE_LOC.search(bloc)
+        if m:
+            d = RE_LASTMOD.search(bloc)
+            entrees.append((m.group(1), d.group(1)[:19] if d else ""))
+    return entrees
+
+
+def _plus_recentes_d_abord(urls: list[str], dates: dict) -> list[str]:
+    """Les adresses par <lastmod> décroissant ; l'ordre du sitemap départage
+    les égalités, et les adresses sans date viennent en dernier.
+
+    Mesuré le 5 octobre 2026 : 161 pages ouvertes sur 435 étaient des biens
+    déjà vendus — Dorimmo 39 sur 40, Du Côté de Chez Vous 39 sur 40, Ernoult
+    32 sur 39 — et trois seulement le disaient dans leur adresse. Ces agences
+    laissent leurs ventes passées dans le sitemap, et le budget de quarante-
+    cinq pages s'y épuise avant d'atteindre un bien à vendre. Une annonce
+    vendue n'est plus modifiée ; une annonce en vente l'est encore. On
+    n'exclut rien : on commence par ce qui bouge, et le déroulé dira si la
+    part de pages vendues baisse.
+    """
+    return sorted(urls, key=lambda u: dates.get(u, ""), reverse=True)
 
 
 def _slug(nom: str) -> str:
@@ -318,24 +355,32 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
         if "<loc" not in r.text.lower():
             diag.setdefault("sitemap", "sans <loc>")
             continue
-        locs = RE_LOC.findall(r.text)
         detail, sous = [], []
-        for u in locs:
-            (sous if u.lower().endswith(".xml") else detail).append(u)
+        for u, d in _entrees_sitemap(r.text):
+            (sous.append(u) if u.lower().endswith(".xml") else detail.append((u, d)))
         for su in _autorisees(sous[:8], permission):   # suivre les sous-sitemaps une fois
             if fin_prevue and time.monotonic() > fin_prevue:
                 break
             try:
-                detail += RE_LOC.findall(requests.get(su, headers=entetes, timeout=10).text)
+                detail += [(u, d) for u, d in _entrees_sitemap(
+                    requests.get(su, headers=entetes, timeout=10).text)
+                    if not u.lower().endswith(".xml")]
             except Exception:
                 pass
-        candidats = [u for u in dict.fromkeys(detail) if MOTIF_BIEN.search(u)]
+        dates: dict = {}
+        for u, d in detail:
+            dates.setdefault(u, d)             # première occurrence, ordre du sitemap
+        candidats = [u for u in dates if MOTIF_BIEN.search(u)]
         retenues = [u for u in candidats if _est_page_de_bien(u)]
         if len(candidats) > len(retenues):
             # Adresses qui ressemblent à une annonce mais que leur chemin
             # condamne : rubrique éditoriale, location, appartement, terrain…
             # Consigné pour mesurer ce que le tri rend au budget.
             diag["adresses_ecartees"] = len(candidats) - len(retenues)
+        retenues = _plus_recentes_d_abord(retenues, dates)
+        datees = sum(1 for u in retenues if dates.get(u))
+        if datees:
+            diag["sitemap_dates"] = datees      # combien le site date ses adresses
         biens = _autorisees(retenues, permission)
         if biens:
             diag["sitemap"] = f"ok {len(biens)}"
