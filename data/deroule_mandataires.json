@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 28.2,
+  "seconde": 18.4,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 28.3,
+  "seconde": 18.4,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,307 +21,324 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 28.3,
+  "seconde": 18.4,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 30.1,
+  "seconde": 20.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 32.0,
+  "seconde": 22.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.0,
+  "seconde": 22.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 32.3,
+  "seconde": 22.1,
   "reseau": "capifrance",
-  "connues": 9622
+  "connues": 9688
  },
  {
   "etape": "reseau_debut",
-  "seconde": 32.3,
+  "seconde": 22.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 32.5,
+  "seconde": 22.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 50.5,
+  "seconde": 34.9,
   "reseau": "iad",
   "n": 93230,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 52.0,
+  "seconde": 36.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 52.2,
+  "seconde": 36.1,
   "reseau": "iad",
-  "connues": 9622
+  "connues": 9688
  },
  {
   "etape": "departement",
-  "seconde": 172.6,
+  "seconde": 148.1,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "36",
   "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 16,
+   "ecarte": 31,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 31
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 7 pièces de 153 m² à La Celle-les-Bordes (78720)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 251.9,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 14,
+   "ecarte": 36,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 32,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 361.8,
+  "reseau": "iad",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 15,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 5,
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
+   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 562.1,
+  "reseau": "iad",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 26,
+  "tronquee": true,
+  "etats": {
+   "garde": 26,
+   "vendu": 13,
+   "ecarte": 11,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 11
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 622.2,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 25,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
    "vendu": 10,
-   "ecarte": 39,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 39
-  },
-  "exemples": {
-   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 287.4,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 12,
-   "ecarte": 38,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 36,
-   "location": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 77 m² à Brétigny-sur-Orge (91220)",
-   "location": "Maison traditionnelle 7 pièces de 175 m² à Couternon (21560)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 402.0,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 6,
-   "ecarte": 43,
-   "illisible": 1
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 2,
-   "hors_perimetre": 40,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
-   "hors_perimetre": "Maison de village 1 pièce de 27 m² à Le Puy-Notre-Dame (49260)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 596.8,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 14,
-  "tronquee": true,
-  "etats": {
-   "garde": 14,
-   "vendu": 14,
-   "ecarte": 21,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 17,
-   "location": 2,
+   "location": 4,
+   "hors_perimetre": 8,
    "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 632.0,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 15,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 4,
-   "ecarte": 11,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison de campagne 1 pièce de 26 m² à Montreuil Bellay (49260)"
+   "location": "Maison 1 pièce de 18 m² à Heuchin (62134)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 632.0,
+  "seconde": 622.3,
   "reseau": "safti",
   "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 632.4,
+  "seconde": 623.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 634.2,
+  "seconde": 624.7,
   "reseau": "safti",
   "n": 28768,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 634.8,
+  "seconde": 625.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 635.0,
+  "seconde": 625.2,
   "reseau": "safti",
-  "connues": 9622
+  "connues": 9688
  },
  {
   "etape": "departement",
-  "seconde": 834.7,
+  "seconde": 741.3,
   "reseau": "safti",
-  "departement": "76",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 16,
-  "tronquee": true,
-  "etats": {
-   "garde": 16,
-   "vendu": 3,
-   "ecarte": 31,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 4,
-   "hors_perimetre": 27
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
-   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 105m², prix 240 000 €. Réf : 1704998"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1083.2,
-  "reseau": "safti",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 24,
-  "tronquee": true,
-  "etats": {
-   "garde": 24,
-   "vendu": 1,
-   "ecarte": 25,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 20
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
-   "hors_perimetre": "Vente de maison 6 pièces à Bernes-Sur-Oise 95340 : 115m², prix 339 900 €. Réf : 1653437"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1222.6,
-  "reseau": "safti",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 1,
-   "ecarte": 46,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 46
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1231.6,
-  "reseau": "safti",
-  "departement": "08",
-  "visitees": 3,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
    "vendu": 0,
+   "ecarte": 49,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 49
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 856.2,
+  "reseau": "safti",
+  "departement": "51",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 1,
+   "ecarte": 49,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 49
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 969.3,
+  "reseau": "safti",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 1,
+   "ecarte": 49,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 49
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Aigremont 30350 : 120m², prix 349 000 €. Réf : 1511187"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1206.2,
+  "reseau": "safti",
+  "departement": "53",
+  "visitees": 50,
+  "gardes": 31,
+  "tronquee": true,
+  "etats": {
+   "garde": 31,
+   "vendu": 2,
+   "ecarte": 17,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 17
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Argentre-Du-Plessis 35370 : 135m², prix 239 100 €. Réf : 1665378"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1220.7,
+  "reseau": "safti",
+  "departement": "88",
+  "visitees": 5,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 1,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "prix_trop_haut": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
+   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
+   "hors_perimetre": "Vente de maison 8 pièces à Bruyères-Le-Châtel 91680 : 200m², prix 346 000 €. Réf : 1562320"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1231.6,
-  "gardes": 59
+  "seconde": 1220.7,
+  "gardes": 65
  }
 ]
