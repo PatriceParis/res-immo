@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 25.1,
+  "seconde": 19.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 25.1,
+  "seconde": 19.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,117 +21,71 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.1,
+  "seconde": 19.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.1,
+  "seconde": 21.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 28.6,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.6,
+  "seconde": 22.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.8,
+  "seconde": 22.9,
   "reseau": "capifrance",
-  "connues": 9761
+  "connues": 9853
  },
  {
   "etape": "reseau_debut",
-  "seconde": 28.8,
+  "seconde": 22.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 29.4,
+  "seconde": 23.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 48.4,
+  "seconde": 35.5,
   "reseau": "iad",
   "n": 93306,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 49.8,
+  "seconde": 36.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 50.0,
+  "seconde": 36.7,
   "reseau": "iad",
-  "connues": 9761
+  "connues": 9853
  },
  {
   "etape": "departement",
-  "seconde": 216.5,
+  "seconde": 156.6,
   "reseau": "iad",
-  "departement": "89",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 24,
-   "ecarte": 17,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 14
-  },
-  "exemples": {
-   "location": "Maison de ville 2 pièces de 54 m² à Vermenton (89270)",
-   "hors_perimetre": "Maison 1 pièce de 92 m² à Saint-Fargeau-Ponthierry (77310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 378.1,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 9,
-  "tronquee": true,
-  "etats": {
-   "garde": 9,
-   "vendu": 21,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 15
-  },
-  "exemples": {
-   "prix_trop_haut": "Domaine 11 pièces de 520 m² à LA FERTE-SAINT-CYR (41220)",
-   "hors_perimetre": "Maison 15 pièces de 477 m² à Le Temple-de-Bretagne (44360)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 525.8,
-  "reseau": "iad",
-  "departement": "45",
+  "departement": "51",
   "visitees": 50,
   "gardes": 5,
   "tronquee": true,
@@ -142,87 +96,92 @@
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 8,
-   "titre_hors_cible:murs commerciaux": 1,
-   "hors_perimetre": 18,
-   "prix_trop_haut": 4
+   "hors_perimetre": 26,
+   "location": 1,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
-   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
-   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 63 m² à Sainte-Geneviève-des-Bois (91700)",
-   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)"
+   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
+   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
+   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 628.8,
+  "seconde": 268.7,
   "reseau": "iad",
-  "departement": "50",
-  "visitees": 38,
-  "gardes": 3,
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 14,
-   "ecarte": 21,
+   "garde": 2,
+   "vendu": 16,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 15,
-   "prix_trop_haut": 4
+   "location": 1,
+   "hors_perimetre": 31
   },
   "exemples": {
-   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
-   "hors_perimetre": "Maison 5 pièces de 127 m² à Chanteloup-les-Vignes (78570)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
+   "location": "Maison 10 pièces de 298 m² à Jonchery (52000)",
+   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
   }
  },
  {
-  "etape": "reseau_debut",
-  "seconde": 628.8,
-  "reseau": "safti",
-  "part_secondes": 596
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 629.3,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 630.9,
-  "reseau": "safti",
-  "n": 28858,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 631.5,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 631.7,
-  "reseau": "safti",
-  "connues": 9761
+  "etape": "departement",
+  "seconde": 376.0,
+  "reseau": "iad",
+  "departement": "53",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 23,
+   "ecarte": 25,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 25
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 838.6,
-  "reseau": "safti",
-  "departement": "89",
+  "seconde": 489.8,
+  "reseau": "iad",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 11,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 2,
+   "garde": 2,
+   "vendu": 13,
+   "ecarte": 35,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 35
+  },
+  "exemples": {
+   "hors_perimetre": "Demeure 10 pièces de 320 m² à saint père en retz (44320)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 600.4,
+  "reseau": "iad",
+  "departement": "70",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 12,
    "ecarte": 37,
    "illisible": 0
   },
@@ -230,58 +189,131 @@
    "hors_perimetre": 37
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 3 pièces à Beugnon Thireuil 79130 : 70m², prix 45 333 €. Réf : 1542904"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1038.6,
-  "reseau": "safti",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 13,
+  "seconde": 623.5,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 11,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 1,
-   "ecarte": 36,
+   "garde": 0,
+   "vendu": 6,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 28,
-   "prix_trop_haut": 8
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Annecy-Le-Vieux 74940 : 80m², prix 895 000 €. Réf : 1641377",
-   "prix_trop_haut": "Vente de maison 10 pièces à Arromanches-Les-Bains 14117 : 260m², prix 718 000 €. Réf : 1716723"
+   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 623.5,
+  "reseau": "safti",
+  "part_secondes": 596
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 624.0,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 625.8,
+  "reseau": "safti",
+  "n": 28858,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 626.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 626.3,
+  "reseau": "safti",
+  "connues": 9853
+ },
+ {
+  "etape": "departement",
+  "seconde": 779.2,
+  "reseau": "safti",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 3,
+   "ecarte": 37,
+   "illisible": 2
+  },
+  "motifs": {
+   "hors_perimetre": 37
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 148m², prix 430 000 €. Réf : 1673313"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1227.2,
+  "seconde": 993.3,
   "reseau": "safti",
-  "departement": "18",
+  "departement": "55",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 26,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 0,
-   "ecarte": 46,
+   "garde": 26,
+   "vendu": 1,
+   "ecarte": 22,
+   "illisible": 1
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 21
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
+   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1219.9,
+  "reseau": "safti",
+  "departement": "57",
+  "visitees": 48,
+  "gardes": 29,
+  "tronquee": true,
+  "etats": {
+   "garde": 29,
+   "vendu": 3,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 45,
+   "hors_perimetre": 15,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 416 000 €. Réf : 1001813",
-   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+   "hors_perimetre": "Vente de maison 6 pièces à Aspach 68130 : 128m², prix 435 000 €. Réf : 1688624",
+   "prix_trop_haut": "Vente de maison 6 pièces à Crehange 57690 : 1 635m², prix 1 445 000 €. Réf : 1628311"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.2,
-  "gardes": 54
+  "seconde": 1219.9,
+  "gardes": 75
  }
 ]
