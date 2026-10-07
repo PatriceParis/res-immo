@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 20.6,
+  "seconde": 19.8,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 20.8,
+  "seconde": 19.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,142 +21,71 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.8,
+  "seconde": 19.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.0,
+  "seconde": 21.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.6,
+  "seconde": 22.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.7,
+  "seconde": 22.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 24.8,
+  "seconde": 23.1,
   "reseau": "capifrance",
-  "connues": 9973
+  "connues": 10044
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.8,
+  "seconde": 23.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.2,
+  "seconde": 23.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 37.7,
+  "seconde": 32.3,
   "reseau": "iad",
   "n": 93384,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 38.7,
+  "seconde": 33.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 38.9,
+  "seconde": 33.5,
   "reseau": "iad",
-  "connues": 9973
+  "connues": 10044
  },
  {
   "etape": "departement",
-  "seconde": 160.2,
+  "seconde": 138.7,
   "reseau": "iad",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 24,
-   "ecarte": 20,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 20
-  },
-  "exemples": {
-   "hors_perimetre": "Pavillon 10 pièces de 205 m² à Champagne-sur-Seine (77430)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 326.0,
-  "reseau": "iad",
-  "departement": "76",
-  "visitees": 50,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
-   "vendu": 19,
-   "ecarte": 19,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 14,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)",
-   "prix_trop_haut": "Maison 10 pièces de 300 m² à SAINTE-ADRESSE (76310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 432.5,
-  "reseau": "iad",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 4,
-   "ecarte": 46,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 31,
-   "location": 5,
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
-   "location": "Maison 3 pièces de 11 m² à Saint-Quentin (02100)",
-   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 536.9,
-  "reseau": "iad",
-  "departement": "08",
+  "departement": "14",
   "visitees": 50,
   "gardes": 0,
   "tronquee": true,
@@ -167,79 +96,192 @@
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 41
+   "hors_perimetre": 29,
+   "prix_trop_haut": 12
   },
   "exemples": {
-   "hors_perimetre": "Maison de village 2 pièces de 32 m² à SAINT LAURENT DE LA CABRERISSE (11220)"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
+   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 624.2,
+  "seconde": 262.1,
   "reseau": "iad",
-  "departement": "10",
-  "visitees": 37,
-  "gardes": 2,
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 2,
+   "garde": 5,
    "vendu": 12,
-   "ecarte": 23,
+   "ecarte": 33,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 2,
-   "hors_perimetre": 20
+   "location": 1,
+   "hors_perimetre": 32
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
+   "location": "Maison 7 pièces de 154 m² à Chaumont (52000)",
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 386.2,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 17,
+   "ecarte": 26,
+   "illisible": 2
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 16,
+   "prix_trop_haut": 8
+  },
+  "exemples": {
+   "location": "Longère 3 pièces de 66 m² à Tours (37100)",
+   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 500.8,
+  "reseau": "iad",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 10,
+   "ecarte": 37,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 35,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
+   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 624.8,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 49,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 17,
+   "ecarte": 27,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 27
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 3 pièces de 125 m² à Verdun-sur-Garonne (82600)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.2,
+  "seconde": 624.8,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 624.9,
+  "seconde": 625.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 626.0,
+  "seconde": 626.2,
   "reseau": "safti",
   "n": 28867,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 626.4,
+  "seconde": 626.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 626.6,
+  "seconde": 626.8,
   "reseau": "safti",
-  "connues": 9973
+  "connues": 10044
  },
  {
   "etape": "departement",
-  "seconde": 758.4,
+  "seconde": 760.0,
   "reseau": "safti",
-  "departement": "58",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 3,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 3,
+   "garde": 5,
+   "vendu": 1,
+   "ecarte": 44,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 43,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 879.2,
+  "reseau": "safti",
+  "departement": "28",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
    "vendu": 0,
+   "ecarte": 48,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 48
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 115m², prix 212 500 €. Réf : 1645768"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 995.8,
+  "reseau": "safti",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 1,
    "ecarte": 47,
    "illisible": 0
   },
@@ -247,77 +289,56 @@
    "hors_perimetre": 47
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1013.4,
+  "seconde": 1132.6,
   "reseau": "safti",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 35,
-  "tronquee": true,
-  "etats": {
-   "garde": 35,
-   "vendu": 3,
-   "ecarte": 11,
-   "illisible": 1
-  },
-  "motifs": {
-   "prix_trop_haut": 4,
-   "hors_perimetre": 7
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Armbouts-Cappel 59380 : 312m², prix 749 000 €. Réf : 1638594",
-   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1147.1,
-  "reseau": "safti",
-  "departement": "21",
+  "departement": "60",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
    "vendu": 0,
-   "ecarte": 46,
-   "illisible": 0
+   "ecarte": 44,
+   "illisible": 2
   },
   "motifs": {
-   "hors_perimetre": 46
+   "hors_perimetre": 44
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Beaulieu 15270 : 118m², prix 175 000 €. Réf : 1683117"
+   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1220.7,
+  "seconde": 1226.1,
   "reseau": "safti",
-  "departement": "25",
-  "visitees": 33,
-  "gardes": 0,
+  "departement": "61",
+  "visitees": 22,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 0,
-   "ecarte": 33,
+   "garde": 12,
+   "vendu": 2,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33
+   "hors_perimetre": 7,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Albigny-Sur-Saone 69250 : 55m², prix 179 000 €. Réf : 1672351"
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730",
+   "prix_trop_haut": "Vente de maison 15 pièces à Bagnoles de l'Orne Normandie 61140 : 790m², prix 4 326 000 €. Réf : 1702731"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1220.7,
-  "gardes": 62
+  "seconde": 1226.1,
+  "gardes": 43
  }
 ]
