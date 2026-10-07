@@ -39,7 +39,15 @@ on:
         required: false
         default: "12"
   schedule:
-    - cron: "0 2,6,10,14,18,22 * * *"   # toutes les 4 h
+    # Toutes les 4 h, à la minute 23 et non à l'heure pile. GitHub ne garantit
+    # pas les horaires planifiés et abandonne des déclenchements quand la
+    # minute est encombrée — et l'heure pile est la plus encombrée de toutes.
+    # Mesuré sur le journal git : les créneaux de 14 h le 4 octobre 2026, de
+    # 06 h le 6 et de 14 h le 7 n'ont jamais démarré, soit trois passages
+    # perdus en quatre jours et deux trous de plus de huit heures sans
+    # collecte. Une minute creuse ne promet rien, elle rend juste le
+    # déclenchement moins disputé.
+    - cron: "23 2,6,10,14,18,22 * * *"
 
 permissions:
   contents: write
