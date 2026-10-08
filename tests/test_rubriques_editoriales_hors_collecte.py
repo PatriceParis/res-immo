@@ -37,6 +37,10 @@ def test_les_rubriques_editoriales_ne_sont_pas_des_annonces():
         "https://www.apirem.fr/category/vente-a-remere-et-portage-immobilier/",
         f"{BASE}/tag/maison-de-caractere/",
         f"{BASE}/author/agence/vente-maison-2",
+        # Rubriques composées : Mikit, 20 pages sur 45 le 8 octobre.
+        "https://www.mikit.fr/article-agence/maison-neuve-a-tarbes-pourquoi-consomme-t-elle-moins/",
+        f"{BASE}/blog-immobilier/vendre-sa-maison-en-automne",
+        f"{BASE}/actualites-agence/maison-du-mois",
     ):
         assert not collecteur._est_page_de_bien(url), url
 

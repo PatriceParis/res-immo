@@ -74,9 +74,12 @@ MOTIF_BIEN = re.compile(
 # 8 octobre 2026 : chez Apirem, 13 pages sur 19 étaient des archives de
 # catégorie, « Archives des Vente à Réméré et Portage Immobilier », déjà vues
 # le 3 octobre sous une autre adresse.
+# Et les rubriques composées — « /article-agence/ » chez Mikit, 20 pages sur 45
+# le 8 octobre, « /blog-immobilier/ », « /actualites-agence/ » : le mot de
+# rubrique en tête du segment suffit, quel que soit son complément.
 MOTIF_HORS_BIEN = re.compile(
-    r"(^|/)(blog|actualites?|actus?|conseils?|revue-de-presse|guides?|articles?|news|magazine|agenda"
-    r"|categor(?:y|ie|ies)|tags?|author|archives?)(/|$)",
+    r"(^|/)((?:blog|actualites?|actus?|conseils?|guides?|articles?)(?:-[a-z0-9]+)*"
+    r"|revue-de-presse|news|magazine|agenda|categor(?:y|ie|ies)|tags?|author|archives?)(/|$)",
     re.IGNORECASE,
 )
 
