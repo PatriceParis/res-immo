@@ -70,8 +70,13 @@ MOTIF_BIEN = re.compile(
 # et le budget de l'agence y est passé ; la veille, Apirem 13 sur 19. Un
 # segment entier du chemin, jamais un fragment : une annonce dont le slug
 # contiendrait « guide » ou « news » n'est pas visée.
+# Les taxinomies WordPress — /category/, /tag/, /author/ — s'y ajoutent le
+# 8 octobre 2026 : chez Apirem, 13 pages sur 19 étaient des archives de
+# catégorie, « Archives des Vente à Réméré et Portage Immobilier », déjà vues
+# le 3 octobre sous une autre adresse.
 MOTIF_HORS_BIEN = re.compile(
-    r"(^|/)(blog|actualites?|actus?|conseils?|revue-de-presse|guides?|articles?|news|magazine|agenda)(/|$)",
+    r"(^|/)(blog|actualites?|actus?|conseils?|revue-de-presse|guides?|articles?|news|magazine|agenda"
+    r"|categor(?:y|ie|ies)|tags?|author|archives?)(/|$)",
     re.IGNORECASE,
 )
 

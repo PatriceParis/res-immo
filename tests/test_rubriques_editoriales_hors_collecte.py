@@ -33,6 +33,10 @@ def test_les_rubriques_editoriales_ne_sont_pas_des_annonces():
         f"{BASE}/actualites/vente-maison-nos-conseils/",
         f"{BASE}/conseils/bien-vendre-sa-maison",
         f"{BASE}/news/maison-du-mois",
+        # Taxinomies WordPress : Apirem, 13 pages sur 19 le 8 octobre.
+        "https://www.apirem.fr/category/vente-a-remere-et-portage-immobilier/",
+        f"{BASE}/tag/maison-de-caractere/",
+        f"{BASE}/author/agence/vente-maison-2",
     ):
         assert not collecteur._est_page_de_bien(url), url
 
@@ -42,6 +46,7 @@ def test_une_annonce_reste_une_annonce():
         f"{BASE}/vente/maison-4-pieces-belleme-61130/",
         f"{BASE}/biens/maison-guide-michelin-123",      # « guide » dans le slug, pas en rubrique
         f"{BASE}/annonces/news-letter-house-77",         # idem pour « news »
+        f"{BASE}/vente/maison-category-a-5",             # et pour « category »
         f"{BASE}/vente/mandat-exclusif-ou-mandat-simple/",  # rangé sous /vente/ : on ne devine pas
     ):
         assert collecteur._est_page_de_bien(url), url
