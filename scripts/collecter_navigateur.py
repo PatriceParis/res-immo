@@ -398,9 +398,34 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
     return []
 
 
+def _hrefs(page) -> list:
+    """Les href de la page, en encaissant une navigation en cours.
+
+    Le 8 octobre 2026, la troisième agence du passage de 17 h 26 a tué toute
+    la collecte : « Execution context was destroyed, most likely because of a
+    navigation » — la page d'index s'était rechargée pendant qu'on lisait ses
+    liens. Deux agences visitées, dix biens, et l'export publié par-dessus
+    comme si de rien n'était. On laisse la page se poser et on relit une
+    fois ; si elle bouge encore, on rend une liste vide : un index illisible
+    n'est pas une collecte morte.
+    """
+    for essai in (1, 2):
+        try:
+            return page.eval_on_selector_all(
+                "a[href]", "els => els.map(e => e.getAttribute('href'))") or []
+        except Exception:
+            if essai == 2:
+                return []
+            try:
+                page.wait_for_load_state("domcontentloaded", timeout=5000)
+                page.wait_for_timeout(1000)
+            except Exception:
+                pass
+    return []
+
+
 def _liens_page(page, base: str) -> list[str]:
-    hrefs = page.eval_on_selector_all(
-        "a[href]", "els => els.map(e => e.getAttribute('href'))") or []
+    hrefs = _hrefs(page)
     # L'hôte se compare À L'IDENTIQUE, « www. » compris. C'est trop strict :
     # cent trente-cinq agences sur deux cent trente-cinq sont déclarées sans
     # le préfixe alors que leurs pages vivent avec, et les liens qu'elles
@@ -773,6 +798,18 @@ def main() -> None:
                 debordement = " — INTERROMPUE, l'agence ne rendait pas la main"
                 print(f"  ⏱ arrêt forcé : aucun appel n'a rendu la main en "
                       f"{args.minutes_par_agence:.0f} min. On passe à la suite.")
+            except Exception as e:
+                # Une erreur propre à CETTE agence ne tue pas le passage. Le
+                # 8 octobre 2026, une page d'index rechargée pendant la lecture
+                # de ses liens a fait sortir le collecteur en erreur à la
+                # troisième agence : deux visitées, dix biens, et l'export
+                # publié par-dessus. L'agence est marquée tronquée — ses biens
+                # ne sont pas comptés absents — et on passe à la suivante. Le
+                # déroulé nomme l'erreur, pour qu'on la corrige à la source.
+                tronquee = True
+                debordement = f" — ERREUR {e.__class__.__name__}, on passe à la suite"
+                print(f"  ✘ erreur sur cette agence ({e.__class__.__name__} : "
+                      f"{str(e)[:120]}). On passe à la suite.")
             finally:
                 desarmer()
             conn.commit()

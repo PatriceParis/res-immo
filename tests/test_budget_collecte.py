@@ -493,3 +493,67 @@ def test_le_deroule_compte_les_vendus_que_l_adresse_annoncait(collecte, monkeypa
     agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
     assert agence["vendus"] == 4 and agence["gardes"] == 0
     assert agence["vendus_dans_l_adresse"] == 2, "deux adresses sur quatre le disaient d'avance"
+
+
+# --- Une agence en erreur ne tue pas le passage ----------------------------
+#
+# Le 8 octobre 2026, le passage de 17 h 26 s'est arrêté à sa troisième agence
+# sur « Execution context was destroyed, most likely because of a navigation » :
+# la page d'index s'était rechargée pendant qu'on lisait ses liens. Deux
+# agences visitées, dix biens, le collecteur sorti en erreur, et l'export
+# publié par-dessus comme un passage normal. Rien dans le déroulé ne le disait.
+
+
+class _PageQuiBouge(_FaussePage):
+    """Un index qui se recharge pendant qu'on lit ses liens, puis se pose."""
+
+    def __init__(self, pannes):
+        self.pannes, self.appels = pannes, 0
+
+    def eval_on_selector_all(self, *a, **k):
+        self.appels += 1
+        if self.appels <= self.pannes:
+            raise RuntimeError("Execution context was destroyed, most likely because of a navigation")
+        return ["/vente/maison-1", "/vente/maison-2"]
+
+
+def test_un_index_qui_se_recharge_se_relit_une_fois():
+    page = _PageQuiBouge(pannes=1)
+    assert collecteur._liens_page(page, "https://agence-x.fr") == [
+        "https://agence-x.fr/vente/maison-1", "https://agence-x.fr/vente/maison-2"]
+    assert page.appels == 2
+
+
+def test_un_index_qui_bouge_encore_rend_une_liste_vide_sans_lever():
+    page = _PageQuiBouge(pannes=5)
+    assert collecteur._liens_page(page, "https://agence-x.fr") == []
+
+
+def test_une_agence_en_erreur_ne_tue_pas_le_passage(collecte, monkeypatch, tmp_path):
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [
+        {"nom": "Fragile", "site": "https://fragile.fr"},
+        {"nom": "Saine", "site": "https://saine.fr"}])
+    visitees = []
+
+    def urls(page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None):
+        visitees.append(cible["nom"])
+        if cible["nom"] == "Fragile":
+            raise RuntimeError("Execution context was destroyed")
+        return [f"{base}/vente/maison-{i}" for i in range(3)]
+
+    monkeypatch.setattr(collecteur, "_urls_a_visiter", urls)
+    monkeypatch.setattr(collecteur, "extraire_annonce", lambda html, url, **k: None)
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()                        # ne doit pas lever
+
+    assert visitees == ["Fragile", "Saine"], "la suivante est visitée"
+    ecrit = json.loads(journal.read_text(encoding="utf-8"))
+    fins = {a["agence"]: a["fin"] for a in ecrit["agences"]}
+    assert "ERREUR RuntimeError" in fins["Fragile"], "le déroulé nomme l'erreur"
+    assert fins["Saine"] == "terminée"
+    tronquees = json.loads((tmp_path / "tronquees.json").read_text(encoding="utf-8"))
+    assert any("Fragile" in t for t in tronquees), \
+        "l'agence en erreur est tronquée : ses biens ne sont pas comptés absents"
