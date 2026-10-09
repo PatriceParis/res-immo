@@ -185,6 +185,18 @@ jobs:
         # collecte imparfaite reste préférable à pas de collecte du tout.
         run: python scripts/auditer.py || true
 
+      - name: Rattraper les risques des biens déjà publiés
+        # L'étape précédente n'enrichit que les biens de CE passage ; un bien
+        # dont l'appel a échoué n'était jamais retenté, la base étant recréée
+        # à chaque passage. Le 9 octobre 2026, 65 % des biens servis n'avaient
+        # aucune donnée de risque. Cette passe reprend le fichier publié, les
+        # plus récemment revus d'abord, cinq minutes au plus, et s'arrête
+        # d'elle-même si l'API ne répond pas. L'export qui suit porte ce
+        # qu'elle a acquis. Non bloquant.
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/enrichir_fichier.py --max 150 --minutes-max 5 || true
+
       - name: Exporter et committer si des annonces ont été trouvées
         run: |
           # Une étape `run` tourne sous `bash -e` : un export sorti en erreur
