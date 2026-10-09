@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 16.8,
+  "seconde": 25.7,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 16.9,
+  "seconde": 25.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,305 +21,288 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 16.9,
+  "seconde": 25.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 18.2,
+  "seconde": 27.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.7,
+  "seconde": 28.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.7,
+  "seconde": 28.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.0,
+  "seconde": 29.1,
   "reseau": "capifrance",
-  "connues": 10239
+  "connues": 10393
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.0,
+  "seconde": 29.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 20.3,
+  "seconde": 29.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 32.5,
+  "seconde": 47.4,
   "reseau": "iad",
-  "n": 93429,
+  "n": 92929,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 34.4,
+  "seconde": 49.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 34.7,
+  "seconde": 49.6,
   "reseau": "iad",
-  "connues": 10239
+  "connues": 10393
  },
  {
   "etape": "departement",
-  "seconde": 150.4,
+  "seconde": 197.6,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 13,
-   "ecarte": 32,
+   "garde": 7,
+   "vendu": 19,
+   "ecarte": 24,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 4,
+   "hors_perimetre": 18,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "location": "Maison 1 pièce de 18 m² à Heuchin (62134)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 330.7,
+  "reseau": "iad",
+  "departement": "88",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 9,
+   "ecarte": 38,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 38
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 495.6,
+  "reseau": "iad",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 10,
+  "tronquee": true,
+  "etats": {
+   "garde": 10,
+   "vendu": 19,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 31
+   "hors_perimetre": 15,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "location": "Maison de ville 6 pièces de 97 m² à Fréteval (41160)",
+   "hors_perimetre": "Maison traditionnelle 1 pièce de 99 m² à Savigny-le-Temple (77176)",
+   "prix_trop_haut": "Domaine 11 pièces de 520 m² à LA FERTE-SAINT-CYR (41220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 257.9,
+  "seconde": 632.9,
   "reseau": "iad",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 2,
+  "departement": "45",
+  "visitees": 46,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 15,
-   "ecarte": 32,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 32
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 7 pièces de 153 m² à La Celle-les-Bordes (78720)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 360.3,
-  "reseau": "iad",
-  "departement": "39",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 14,
-   "ecarte": 35,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 31,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 28 m² à Saint-Pierre (97410)",
-   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
-   "prix_trop_haut": "Domaine 13 pièces de 374 m² à Saint-Pierre (97410)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 458.6,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
+   "garde": 7,
    "vendu": 12,
-   "ecarte": 36,
+   "ecarte": 27,
    "illisible": 0
   },
   "motifs": {
-   "location": 6,
-   "hors_perimetre": 27,
+   "titre_hors_cible:appartement": 1,
+   "location": 8,
+   "titre_hors_cible:murs commerciaux": 1,
+   "hors_perimetre": 14,
    "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 3 pièces de 70 m² à Guénange (57310)",
-   "hors_perimetre": "Maison 5 pièces de 139 m² à Mareil-Marly (78750)",
-   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 619.2,
-  "reseau": "iad",
-  "departement": "61",
-  "visitees": 45,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
-   "vendu": 13,
-   "ecarte": 12,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 12
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+   "titre_hors_cible:appartement": "Appartement 4 pièces de 72 m² à Château-Renard (45220)",
+   "location": "Local d’activité de 50 m² à CHÂTEAU-RENARD (45220)",
+   "titre_hors_cible:murs commerciaux": "Murs commerciaux de 195 m² à CHÂTEAU-RENARD (45220)",
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 63 m² à Sainte-Geneviève-des-Bois (91700)",
+   "prix_trop_haut": "Manoir 10 pièces de 445 m² à Beaugency (45190)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 619.2,
+  "seconde": 632.9,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 619.7,
+  "seconde": 633.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 620.8,
+  "seconde": 635.1,
   "reseau": "safti",
-  "n": 28780,
+  "n": 28854,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 621.5,
+  "seconde": 635.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 621.8,
+  "seconde": 636.1,
   "reseau": "safti",
-  "connues": 10239
+  "connues": 10393
  },
  {
   "etape": "departement",
-  "seconde": 804.3,
+  "seconde": 806.7,
   "reseau": "safti",
-  "departement": "41",
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 10,
+  "tronquee": true,
+  "etats": {
+   "garde": 10,
+   "vendu": 0,
+   "ecarte": 40,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 39,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 4 pièces à Baignes-Sainte-Radegonde 16360 : 87m², prix 90 000 €. Réf : 1629692",
+   "prix_trop_haut": "Vente de maison 12 pièces à Dracy-Les-Couches 71490 : 350m², prix 720 000 €. Réf : 1665483"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1003.1,
+  "reseau": "safti",
+  "departement": "72",
   "visitees": 50,
   "gardes": 17,
   "tronquee": true,
   "etats": {
    "garde": 17,
-   "vendu": 0,
-   "ecarte": 33,
-   "illisible": 0
+   "vendu": 4,
+   "ecarte": 28,
+   "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 31,
-   "prix_trop_haut": 2
+   "hors_perimetre": 24,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "hors_perimetre": "Vente de maison 6 pièces à Aigne 34210 : 141m², prix 449 000 €. Réf : 1714286",
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
   }
  },
  {
   "etape": "departement",
-  "seconde": 975.9,
+  "seconde": 1155.1,
   "reseau": "safti",
-  "departement": "45",
+  "departement": "02",
   "visitees": 50,
-  "gardes": 14,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 14,
+   "garde": 5,
    "vendu": 1,
-   "ecarte": 35,
+   "ecarte": 44,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 30,
-   "prix_trop_haut": 5
+   "hors_perimetre": 44
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
-   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023"
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1117.2,
+  "seconde": 1228.2,
   "reseau": "safti",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 6,
+  "departement": "08",
+  "visitees": 25,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 0,
-   "ecarte": 43,
-   "illisible": 1
+   "garde": 3,
+   "vendu": 1,
+   "ecarte": 21,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 42
+   "hors_perimetre": 21
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1217.5,
-  "reseau": "safti",
-  "departement": "70",
-  "visitees": 40,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 2,
-   "ecarte": 36,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 36
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1217.5,
-  "gardes": 68
+  "seconde": 1228.2,
+  "gardes": 62
  }
 ]
