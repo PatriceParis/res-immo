@@ -45,14 +45,20 @@ def sitemap_xml(*urls: str) -> bytes:
 def test_la_lecture_s_arrete_a_l_echeance(monkeypatch):
     """LE test. Un arbre interminable ne doit pas manger le passage entier."""
     ouverts = []
+    horloge = [time.monotonic()]
 
     def lire_lentement(url):
         ouverts.append(url)
-        # Chaque fichier « coûte » du temps : on avance l'horloge du module.
-        COLLECTEUR.time.monotonic = lambda base=[time.monotonic()]: (
-            base.__setitem__(0, base[0] + 10) or base[0])
+        horloge[0] += 10          # chaque fichier « coûte » dix secondes
         return sitemap_xml(f"https://x.fr/annonce/{len(ouverts)}")
 
+    # Par monkeypatch, et non par affectation directe : `COLLECTEUR.time` EST
+    # le module `time` de tout le processus. Jusqu'au 10 octobre 2026, ce test
+    # y laissait une fausse horloge qui bondissait de dix secondes à chaque
+    # lecture, et le premier test venu après lui à mesurer un budget de temps
+    # le voyait épuisé en six appels — selon l'ordre de la suite, et jamais
+    # seul. Un test qui déborde de son cadre fait mentir les autres.
+    monkeypatch.setattr(COLLECTEUR.time, "monotonic", lambda: horloge[0])
     monkeypatch.setattr(COLLECTEUR, "lire", lire_lentement)
     depart = COLLECTEUR.time.monotonic()
     adresses, complet = COLLECTEUR.adresses_du_sitemap(
