@@ -25,9 +25,13 @@ from app import db, georisques, scoring  # noqa: E402
 # main. Mesuré sur les journaux de collecte : depuis le 25 septembre 2026, pas
 # UNE réponse ; depuis le 29, chaque appel attend ses dix secondes de délai,
 # et l'étape passe ses dix minutes de budget à échouer cinquante-neuf fois —
-# quarante minutes de runner par jour, pour rien. Cinq délais d'affilée
-# suffisent à le savoir ; un succès remet le compteur à zéro.
-ECHECS_D_AFFILEE_MAX = 5
+# quarante minutes de runner par jour, pour rien. Un succès remet le compteur
+# à zéro. Dix et non cinq depuis le 10 octobre : l'API est revenue par
+# à-coups — le 9 à 17 h, 39 réponses pour 15 refus ; à 23 h, une réponse
+# pour neuf refus rapides, et l'arrêt après la cinquième. Dix refus
+# d'affilée coûtent au plus cent secondes quand l'API est vraiment muette, et
+# laissent leur chance aux réponses clairsemées quand elle revient.
+ECHECS_D_AFFILEE_MAX = 10
 
 
 def main() -> None:

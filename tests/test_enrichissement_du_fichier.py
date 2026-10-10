@@ -69,7 +69,7 @@ def test_le_rattrapage_ecrit_les_risques_et_garde_la_centrale():
     assert biens[1]["risques"]["inondation_commune"] is True
 
 
-def test_cinq_echecs_d_affilee_suffisent():
+def test_dix_echecs_d_affilee_suffisent():
     biens = [_bien(f"b{i}", revue_le="2026-10-09") for i in range(12)]
     appels = []
 
@@ -80,7 +80,7 @@ def test_cinq_echecs_d_affilee_suffisent():
 
     faits, echecs = rattrapage.enrichir(biens, 200, 1.0, interroger=muette,
                                         argile=lambda *a: None, dormir=lambda s: None)
-    assert (faits, echecs) == (0, 5) and len(appels) == 5
+    assert (faits, echecs) == (0, 10) and len(appels) == 10
     assert all(not b.get("risques") for b in biens), "rien n'est inventé"
 
 

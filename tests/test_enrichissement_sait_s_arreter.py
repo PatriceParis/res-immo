@@ -50,7 +50,7 @@ def base(tmp_path, monkeypatch):
     return tmp_path
 
 
-def test_cinq_echecs_d_affilee_suffisent_a_rendre_la_main(base, monkeypatch, capsys):
+def test_dix_echecs_d_affilee_suffisent_a_rendre_la_main(base, monkeypatch, capsys):
     appels = []
 
     def api_muette(lat, lon, timeout=10):
@@ -61,10 +61,10 @@ def test_cinq_echecs_d_affilee_suffisent_a_rendre_la_main(base, monkeypatch, cap
     monkeypatch.setattr(georisques, "risques_pour", api_muette)
     enrichir.main()
     sortie = capsys.readouterr().out
-    assert len(appels) == enrichir.ECHECS_D_AFFILEE_MAX == 5, \
+    assert len(appels) == enrichir.ECHECS_D_AFFILEE_MAX == 10, \
         "on n'attend pas douze fois dix secondes pour apprendre la même chose"
     assert "ReadTimeout" in sortie, "le journal dit POURQUOI, pas seulement « injoignable »"
-    assert "⛔" in sortie and "0 annonce(s) enrichie(s), 5 échec(s)" in sortie
+    assert "⛔" in sortie and "0 annonce(s) enrichie(s), 10 échec(s)" in sortie
 
 
 def test_un_succes_remet_le_compteur_a_zero(base, monkeypatch, capsys):

@@ -12,9 +12,11 @@ pour 39 biens.
 Ce script lit le fichier publié, prend les biens SERVIS sans risques officiels
 — les plus récemment revus d'abord, ceux qui ont le plus de chances d'être
 encore en vente — et interroge l'API pour chacun, dans la limite d'un nombre
-et d'un temps. Il s'arrête de lui-même après cinq échecs d'affilée : une API
-qui ne répond pas ne mérite pas qu'on l'attende. Il récrit le fichier ; c'est
-l'export suivant, par `historique.fusionner`, qui porte les risques acquis.
+et d'un temps. Il s'arrête de lui-même après dix échecs d'affilée : une API
+qui ne répond pas ne mérite pas qu'on l'attende, mais une API qui revient par
+à-coups — une réponse pour neuf refus le 9 octobre à 23 h — mérite qu'on lui
+laisse sa chance. Il récrit le fichier ; c'est l'export suivant, par
+`historique.fusionner`, qui porte les risques acquis.
 
 Usage :  python scripts/enrichir_fichier.py [--max N] [--minutes-max M]
 """
@@ -33,7 +35,7 @@ sys.path.insert(0, str(RACINE))
 from app import chargement, georisques  # noqa: E402
 
 CATALOGUE = RACINE / "data" / "annonces_reel.json"
-ECHECS_D_AFFILEE_MAX = 5
+ECHECS_D_AFFILEE_MAX = 10
 
 
 def a_rattraper(biens: list[dict]) -> list[dict]:
