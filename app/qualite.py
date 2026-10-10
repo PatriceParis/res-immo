@@ -103,6 +103,15 @@ _URL_TYPE_EXCLU = re.compile(
 # affichait 199 800 €, un montant récupéré ailleurs sur la page, qui la
 # faisait passer pour une vraie vente.
 _LOCATION_TITRE = re.compile(r"\ba louer\b|\blocation\b|\blouer\b|\bloyer\b")
+# La location qui ne dit pas son nom : « chambre en colocation », « T1
+# meublé », « F2 MEUBLE (N°6) ». Mesuré le 10 octobre 2026 : onze de ces
+# titres servis comme des maisons à vendre, chez cinq agences — et pas un
+# n'avait de prix, le loyer n'ayant pas été lu comme un prix de vente. Les
+# cinq titres qui disent « colocation » ou « meublé » AVEC un prix sont des
+# immeubles d'investisseur, à vendre : la règle ne s'applique que SANS prix.
+# « Cuisine meublée » décrit une cuisine, pas un bail.
+_LOCATION_SANS_PRIX = re.compile(
+    r"\bcolocation\b|\bcoloc\b|\bco-?living\b|(?<!cuisine )\bmeublee?\b")
 # Le chemin de l'URL est le signal le plus sûr : /location/, /louer/, ou le
 # gabarit « maison-a-louer-Commune.htm ». On exige les séparateurs autour du
 # mot pour ne pas attraper un domaine comme « avendrealouer.fr ».
@@ -247,6 +256,8 @@ def motif_de_rejet(a: dict) -> str | None:
     # Location : ce n'est pas un bien à acheter.
     motif_url = motif_url_hors_cible(a.get("url"))
     if _LOCATION_TITRE.search(titre) or motif_url == "location":
+        return "location"
+    if not a.get("prix") and _LOCATION_SANS_PRIX.search(titre):
         return "location"
     # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
     if motif_url == "url_type_exclu":

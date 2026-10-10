@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.qualite import est_bien_valide, est_vendu  # noqa: E402
+from app.qualite import est_bien_valide, est_vendu, motif_de_rejet  # noqa: E402
 
 
 def test_detecte_les_biens_vendus():
@@ -258,3 +258,26 @@ def test_une_annonce_singuliere_reste_valide():
         {"titre": "Maison à vendre à Barentin : 5 pièces avec jardin",
          "type_bien": "maison", "surface_m2": 120, "prix": 245000,
          "url": "https://biasimmobilier.fr/maison-barentin-5p/"})
+
+
+def test_colocation_et_meuble_sans_prix_sont_des_locations():
+    """Cas réels du 10 octobre 2026 : onze chambres en colocation, F2 et T1
+    meublés servis comme des maisons à vendre, chez cinq agences — tous sans
+    prix, le loyer n'ayant pas été lu comme un prix de vente."""
+    for titre in ("Chambre en colocation &#8211; Avenue de Strasbourg &#8211; NANCY",
+                  "Co-living/Colocation &#8211; NANCY Fac de lettre / Fac de droit",
+                  "Colocation meublée - 3 chambres disponibles à deux pas de la plage",
+                  "T1 meublé", "T1 VIEILLE VILLE non meublé",
+                  "F2 MEUBLE (N°6) CHARLEVILLE MEZIERES", "MAISON MEUBLE CHARNY"):
+        assert motif_de_rejet({"titre": titre, "type_bien": "maison",
+                               "surface_m2": 45, "pieces": 3}) == "location", titre
+    # Avec un prix, « colocation » et « meublé » décrivent un immeuble
+    # d'investisseur, à vendre : on ne les touche pas.
+    for titre, prix in (("Roubaix, immeuble de colocation 4 chambres", 165800),
+                        ("Lille Esquermes - Maison 2 Chambres/Idéal colocation", 134000),
+                        ("Immeuble quartier Gare loué en meublé", 540000)):
+        assert est_bien_valide({"titre": titre, "type_bien": "maison",
+                                "surface_m2": 120, "prix": prix}), titre
+    # « Cuisine meublée » décrit une cuisine, pas un bail — même sans prix.
+    assert est_bien_valide({"titre": "F3 en duplex avec cuisine meublée et équipée",
+                            "type_bien": "maison", "surface_m2": 70})
