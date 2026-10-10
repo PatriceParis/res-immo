@@ -90,9 +90,26 @@ _TYPES_EXCLUS = re.compile(
 _URL_TYPE_EXCLU = re.compile(
     r"/(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
     r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf"
+    # Le commerce ne dit pas « local » : sa rubrique s'appelle /vente-pro/,
+    # /fonds-de-commerce/, /local-commercial/, /murs-commerciaux/,
+    # /local-professionnel/ — et chez IAD « local-commercial-vente-Commune ».
+    # Mesuré le 10 octobre 2026 : quarante-cinq commerces servis comme des
+    # maisons — restaurants, bars, salon de coiffure, garage, cellule
+    # commerciale — chez une vingtaine d'agences, parce que leur titre ne dit
+    # rien d'un local. Le mot dans le libellé d'une maison ne la condamne pas :
+    # « …/maison/3555-centre-ville-local-professionnel-ou-habitation » a sa
+    # rubrique à elle, /maison/, et reste.
+    r"|vente-pro|fonds-de-commerce|loca(?:l|ux)-commercia(?:l|ux)|murs-commerciaux"
+    r"|loca(?:l|ux)-professionnels?|local-d-activite|immobilier-professionnel"
+    r"|cession-de-droit-au-bail"
     # Page de glossaire : /lexique/biens-immobiliers/ décrivait le mot, pas
     # un bien — et repartait avec le prix lu ailleurs sur la page.
-    r"|lexique|glossaire|definitions?)/",
+    #
+    # La rubrique peut clore l'adresse : « /vente/appartement », sans barre
+    # finale, servait dix-huit appartements et vingt-quatre immeubles comme
+    # des maisons le 10 octobre 2026. Chez IAD, elle ouvre le libellé :
+    # « /annonce/immeuble-vente-chateau-thierry-73m2/… ».
+    r"|lexique|glossaire|definitions?)(?:[/?#]|$|-vente-)",
     re.IGNORECASE,
 )
 

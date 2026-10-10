@@ -5,7 +5,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.qualite import est_bien_valide, est_vendu, motif_de_rejet  # noqa: E402
+from app.qualite import (est_bien_valide, est_vendu, motif_de_rejet,  # noqa: E402
+                         motif_url_hors_cible)
 
 
 def test_detecte_les_biens_vendus():
@@ -281,3 +282,37 @@ def test_colocation_et_meuble_sans_prix_sont_des_locations():
     # « Cuisine meublée » décrit une cuisine, pas un bail — même sans prix.
     assert est_bien_valide({"titre": "F3 en duplex avec cuisine meublée et équipée",
                             "type_bien": "maison", "surface_m2": 70})
+
+
+def test_un_commerce_se_reconnait_a_sa_rubrique():
+    """Mesuré le 10 octobre 2026 : quarante-cinq commerces servis comme des
+    maisons — restaurants, bars, salon de coiffure, garage, murs commerciaux —
+    chez une vingtaine d'agences. Leur titre ne dit rien d'un local ; leur
+    adresse, si : /vente-pro/, /fonds-de-commerce/, /local-commercial/,
+    /murs-commerciaux/, /local-professionnel/, et chez IAD
+    « local-commercial-vente-Commune »."""
+    commerces = [
+        ("Restaurant à vendre à Champenoux",
+         "https://www.immobi.com/vente-pro/60-champenoux/fonds-de-commerce/3044-restaurant-a-vendre-a-champenoux"),
+        ("Axe Passant,", "https://www.cric.fr/vente/fonds-de-commerce"),
+        ("salon coiffure",
+         "https://www.aude-immo-18.com/vente-pro/1-nerondes/fonds-de-commerce/12-salon-coiffure"),
+        ("- BATIMENT COMMERCIAL -", "https://www.bapimmo.fr/vente/local-professionnel"),
+        ("Bar-brasserie de 185 m² à CHÂTEAU-RENARD (45220)",
+         "https://www.iadfrance.fr/annonce/local-commercial-vente-chateau-renard-185m2/r1956894"),
+        ("Immeuble - 340 m² - EPINAL",
+         "https://www.immobi.com/vente-pro/1-epinal/murs-commerciaux/3155-immeuble-340-m-epinal"),
+        ("Roubaix Immeuble à usage professionnel de 167 m²",
+         "https://www.vipimmobilier.fr/vente/local-commercial"),
+    ]
+    for titre, url in commerces:
+        assert motif_url_hors_cible(url) == "url_type_exclu", url
+        assert motif_de_rejet({"titre": titre, "url": url, "type_bien": "maison",
+                               "surface_m2": 120, "prix": 150000}) == "url_type_exclu", url
+    # Le mot dans le libellé d'une maison ne la condamne pas : sa rubrique à
+    # elle est /maison/, et c'est elle qui compte.
+    for url in ("https://www.agence.fr/vente/2-auxerre/maison/3555-centre-ville-local-professionnel-ou-habitation",
+                "https://www.agence.fr/vente/10-brienne/maison/9280-immeuble-mixte-avec-grand-appartement-et-local-commercial"):
+        assert motif_url_hors_cible(url) is None, url
+        assert est_bien_valide({"titre": "Maison 8 pièces 160 m² Auxerre", "url": url,
+                                "type_bien": "maison", "surface_m2": 160, "prix": 249000}), url
