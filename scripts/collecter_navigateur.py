@@ -44,7 +44,7 @@ from app.chargement import preparer_annonce  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
 from app.enrichissement import (  # noqa: E402
     _altitude, _densite, _geocoder, _geocoder_cp, _geocoder_texte)
-from app.qualite import est_bien_valide, est_vendu, motif_url_hors_cible  # noqa: E402
+from app.qualite import est_vendu, motif_de_rejet, motif_url_hors_cible  # noqa: E402
 
 try:
     from playwright.sync_api import sync_playwright
@@ -784,8 +784,19 @@ def main() -> None:
                         if MOTIF_VENDU_DANS_L_ADRESSE.search(urlparse(u).path):
                             diag["vendus_dans_l_adresse"] = diag.get("vendus_dans_l_adresse", 0) + 1
                         continue
-                    if not est_bien_valide(brut):
+                    motif = motif_de_rejet(brut)
+                    if motif:
                         ecartes += 1
+                        # Le déroulé dit POURQUOI, pas seulement combien. Le 11
+                        # octobre 2026, Agence du Terroir — Perche vendômois, en
+                        # plein dans la cible — a rendu 0 bien sur 60 pages, dont
+                        # 40 « hors cible » ; Creil Immo 22 sur 22, Habitat
+                        # Immobilier 20 sur 20. Sans le motif, il faut rouvrir
+                        # les pages pour comprendre, et le poste n'a pas le réseau.
+                        # La règle nomme déjà le fragment coupable, à cardinalité
+                        # bornée : on la compte telle quelle.
+                        motifs = diag.setdefault("motifs", {})
+                        motifs[motif] = motifs.get(motif, 0) + 1
                         continue
                     brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                             hashlib.sha1(u.encode()).hexdigest()[:12])

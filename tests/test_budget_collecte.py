@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app import historique  # noqa: E402
+from app import historique, qualite  # noqa: E402
 import pytest  # noqa: E402
 
 collecteur = pytest.importorskip(
@@ -557,3 +557,38 @@ def test_une_agence_en_erreur_ne_tue_pas_le_passage(collecte, monkeypatch, tmp_p
     tronquees = json.loads((tmp_path / "tronquees.json").read_text(encoding="utf-8"))
     assert any("Fragile" in t for t in tronquees), \
         "l'agence en erreur est tronquée : ses biens ne sont pas comptés absents"
+
+
+def test_le_deroule_dit_pourquoi_les_pages_sont_ecartees(collecte, monkeypatch, tmp_path):
+    """Le 11 octobre 2026, Agence du Terroir — Perche vendômois, en plein dans
+    la cible — a rendu 0 bien sur 60 pages, dont 40 « hors cible » ; Creil
+    Immo 22 sur 22, Habitat Immobilier 20 sur 20. Le déroulé disait combien,
+    jamais pourquoi : il fallait rouvrir les pages pour le savoir, et le poste
+    n'a pas le réseau. On compte les motifs, tels que la règle les nomme."""
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles",
+                        lambda *a, **k: [{"nom": "Agence X", "site": "https://agence-x.fr"}])
+    pages = {
+        "https://agence-x.fr/bien-1": {"titre": "Appartement T2 centre-ville", "surface_m2": 45, "prix": 95000},
+        "https://agence-x.fr/bien-2": {"titre": "Appartement T3 avec balcon", "surface_m2": 65, "prix": 120000},
+        "https://agence-x.fr/bien-3": {"titre": "Terrain à bâtir viabilisé", "surface_m2": None, "prix": 40000},
+        "https://agence-x.fr/bien-4": {"titre": "Maison à louer Savonnières", "surface_m2": 120},
+    }
+    monkeypatch.setattr(
+        collecteur, "_urls_a_visiter",
+        lambda page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None: list(pages))
+    monkeypatch.setattr(collecteur, "extraire_annonce", lambda html, url, **k: dict(pages[url]))
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert agence["ecartes"] == 4 and agence["gardes"] == 0
+    attendus = {}
+    for p in pages.values():
+        motif = qualite.motif_de_rejet(dict(p))
+        attendus[motif] = attendus.get(motif, 0) + 1
+    assert agence["motifs"] == attendus, "chaque page écartée compte sous le motif que la règle lui donne"
+    assert agence["motifs"]["location"] == 1
+    assert sum(n for m, n in agence["motifs"].items() if m.startswith("titre_hors_cible:appartement")) == 2
