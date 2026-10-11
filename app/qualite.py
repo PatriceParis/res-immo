@@ -18,6 +18,7 @@ construction il ne peut pas être un refuge résilient.
 from __future__ import annotations
 
 import re
+from urllib.parse import urlparse
 
 from .scoring import normaliser
 
@@ -136,6 +137,15 @@ _URL_LOCATION = re.compile(
     r"/locations?/|/louer/|[/-]a-louer[-/.]|[/-]locations?[-/.]",
     re.IGNORECASE,
 )
+# La version traduite d'une annonce : le chemin commence par /en/, /de/, /nl/…
+# Mesuré le 11 octobre 2026 : quarante-sept pages anglaises au fichier,
+# trente-six servies — vingt-trois doublons d'une page française déjà là,
+# treize sans prix lisible ou au titre anglais (« Cottage reimagined »), chez
+# Lotz, Sotheby's, Leforestier… Et chez Accord Immobilier, dix-neuf pages
+# anglaises refusées en 403, ouvertes pour rien. La page française existe
+# toujours : c'est elle qu'on lit. Seul le PREMIER segment compte :
+# « /vente/maison-en-pierre » n'est pas de l'anglais.
+_URL_LANGUE = re.compile(r"^/(?:en|de|nl|es|it|pt|ru|zh)(?:-[a-z]{2})?(?:/|$)", re.IGNORECASE)
 
 
 def motif_url_hors_cible(url: str | None) -> str | None:
@@ -155,6 +165,8 @@ def motif_url_hors_cible(url: str | None) -> str | None:
         return "location"
     if _URL_TYPE_EXCLU.search(url or ""):
         return "url_type_exclu"
+    if _URL_LANGUE.match(urlparse(url or "").path):
+        return "langue"
     return None
 
 
@@ -279,6 +291,10 @@ def motif_de_rejet(a: dict) -> str | None:
     # Type porté par l'URL (…/terrain/…, …/autre/…) : il prime sur le titre.
     if motif_url == "url_type_exclu":
         return "url_type_exclu"
+    # La version traduite d'une annonce : la page française existe, c'est elle
+    # qu'on garde — titre lisible, prix lu, pas de doublon.
+    if motif_url == "langue":
+        return "langue"
     if (a.get("type_bien") or "maison") not in TYPES_REFUGE:
         return "type_bien"
     # Un vrai logement a une surface habitable, ou au minimum un prix crédible

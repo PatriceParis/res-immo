@@ -83,3 +83,32 @@ def test_le_deroule_compte_les_adresses_ecartees(monkeypatch):
     urls = collecteur._sitemap_urls(BASE, 0.0, None, diag)
     assert len(urls) == 2 and diag["sitemap"] == "ok 2"
     assert diag["adresses_ecartees"] == 5, "cinq adresses condamnées, cinq pages rendues au budget"
+
+
+def test_la_version_traduite_d_une_annonce_n_est_pas_ouverte():
+    """Mesuré le 11 octobre 2026 : quarante-sept pages anglaises au fichier,
+    trente-six servies, dont vingt-trois doublons d'une page française déjà
+    là et treize sans prix lisible ou au titre anglais ; chez Accord
+    Immobilier, dix-neuf pages anglaises refusées en 403, ouvertes pour rien.
+    Le chemin le dit dès son premier segment."""
+    traduites = [
+        "https://www.fabien-lotz-immobilier.com/en/realestate-adverts/offer/epinal/propriete-12",
+        "https://www.leforestier-immobilier.com/en/property/cottage-reimagined",
+        "https://www.accord-immobilier.net/en/realestate-adverts/offer/remiremont/maison-3",
+        "https://www.rouen-sothebysrealty.com/en/sales/house-rouen-76",
+        "https://agence.fr/de/immobilien/haus-12",
+        "https://agence.fr/en-gb/property/house-12",
+    ]
+    for url in traduites:
+        assert qualite.motif_url_hors_cible(url) == "langue", url
+        assert qualite.motif_de_rejet({"titre": "Cottage reimagined near Dieppe", "url": url,
+                                       "type_bien": "maison", "surface_m2": 120,
+                                       "prix": 250000}) == "langue", url
+        assert not collecteur._est_page_de_bien(url), url
+    # La page française, ou un chemin qui contient « en » sans en être un.
+    for url in ("https://www.fabien-lotz-immobilier.com/realestate-adverts/offer/epinal/propriete-12",
+                "https://www.rouen-sothebysrealty.com/fr/ventes/maison-rouen-76",
+                "https://agence.fr/vente/maison-en-pierre-belleme-61130",
+                "https://agence.fr/vente/en-exclusivite/maison-5-pieces-12",
+                "https://agence.fr/annonces/maison/en/12"):
+        assert qualite.motif_url_hors_cible(url) is None, url
