@@ -16,3 +16,7 @@ scraper/httpcache/
 
 # Demandes de mise en relation : contiennent une donnée personnelle
 data/demandes_contact.jsonl
+
+# Journal du passage en cours : les sites qui ont fermé leur racine au robot
+# (écrit par le collecteur, lu par l'export, jamais committé)
+data/visites_fermees.json

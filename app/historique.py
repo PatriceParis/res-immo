@@ -54,6 +54,23 @@ def cle_agence(url: str) -> str:
 JOURNAL_TRONQUEES = Path(__file__).resolve().parent.parent / "data" / "visites_tronquees.json"
 
 
+def _ecrire_journal(chemin: Path, cibles: set) -> None:
+    try:
+        chemin.parent.mkdir(parents=True, exist_ok=True)
+        chemin.write_text(
+            json.dumps(sorted([list(c) for c in cibles]), ensure_ascii=False,
+                       indent=1) + "\n", encoding="utf-8")
+    except OSError:
+        pass       # un journal indisponible ne doit pas arrêter la collecte
+
+
+def _lire_journal(chemin: Path) -> set:
+    try:
+        return {tuple(c) for c in json.loads(chemin.read_text(encoding="utf-8"))}
+    except (OSError, ValueError, TypeError):
+        return set()
+
+
 def noter_visite_tronquee(cibles: set) -> None:
     """Écrit les cibles dont la visite s'est arrêtée AVANT la fin de leur liste.
 
@@ -62,24 +79,53 @@ def noter_visite_tronquee(cibles: set) -> None:
     ferait abstenir la règle de sortie sur des cibles qu'on vient pourtant de
     parcourir en entier — l'erreur inverse, et tout aussi silencieuse.
     """
-    try:
-        JOURNAL_TRONQUEES.parent.mkdir(parents=True, exist_ok=True)
-        JOURNAL_TRONQUEES.write_text(
-            json.dumps(sorted([list(c) for c in cibles]), ensure_ascii=False,
-                       indent=1) + "\n", encoding="utf-8")
-    except OSError:
-        pass       # un journal indisponible ne doit pas arrêter la collecte
+    _ecrire_journal(JOURNAL_TRONQUEES, cibles)
 
 
 def visites_tronquees() -> set:
     """Les cibles à ne PAS considérer comme parcourues, faute de les avoir vues
     en entier. Absent ou illisible, on ne retranche rien : l'ancien
     comportement, jamais pire."""
-    try:
-        return {tuple(c) for c in
-                json.loads(JOURNAL_TRONQUEES.read_text(encoding="utf-8"))}
-    except (OSError, ValueError, TypeError):
-        return set()
+    return _lire_journal(JOURNAL_TRONQUEES)
+
+
+def _journal_fermees() -> Path:
+    """Le journal des sites qui nous ont fermé leur porte, à côté de celui des
+    visites tronquées — y compris quand un test déplace celui-ci : un test qui
+    écrit dans le dépôt n'est pas un test."""
+    return JOURNAL_TRONQUEES.with_name("visites_fermees.json")
+
+
+def noter_visites_fermees(cibles: set) -> None:
+    """Écrit les cibles dont le site a fermé sa racine au robot (robots.txt)
+    ce passage-ci. Réécrit entièrement, comme le journal des visites
+    tronquées, et pour la même raison : il ne décrit que le passage en cours."""
+    _ecrire_journal(_journal_fermees(), cibles)
+
+
+def visites_fermees() -> set:
+    """Les cibles fermées au robot ce passage-ci. Absent ou illisible : aucune
+    — on ne retire rien de plus que l'ancien comportement."""
+    return _lire_journal(_journal_fermees())
+
+
+def cibles_qui_font_autorite(biens: list[dict]) -> set:
+    """Les cibles sur lesquelles la règle de sortie peut conclure.
+
+    Celles qui ont rendu des biens ce passage-ci ; plus celles qui ont fermé
+    leur porte au robot — on ne publie pas ce qu'on n'a plus le droit de
+    lire, et leurs biens sortent comme des biens disparus, c'est ce que la
+    page /robot promet depuis le 3 octobre 2026 ; moins celles qu'on n'a pas
+    vues en entier — compter l'absence d'un bien qu'on n'a pas cherché a déjà
+    coûté cinquante-six annonces Century 21 et deux cent six IAD.
+
+    Jusqu'au 11 octobre 2026, seule la première famille existait : un site
+    fermé ne rend aucun bien, donc n'était jamais « visité », et ses biens
+    restaient conservés indéfiniment. Trois sites fermés depuis une semaine
+    servaient encore vingt biens.
+    """
+    return (({identite(b) for b in biens} | visites_fermees())
+            - {("", "")} - visites_tronquees())
 
 
 def identite(bien: dict) -> tuple:

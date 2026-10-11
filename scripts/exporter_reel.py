@@ -198,8 +198,15 @@ def main() -> None:
     # différentes. Ici la visite a bien eu lieu, mais tronquée : deux cent
     # quarante et une annonces étaient en sursis pour cette raison, et le
     # catalogue perdait une vingtaine de biens par jour.
-    visites = ({historique.identite(b) for b in biens}
-               - {("", "")} - historique.visites_tronquees())
+    #
+    # Et une cible qui nous a FERMÉ sa porte (robots.txt) fait autorité sans
+    # avoir rendu un seul bien : on ne publie pas ce qu'on n'a plus le droit
+    # de lire, ses biens sortent comme des biens disparus. Jusqu'au 11 octobre
+    # 2026, la règle ne connaissait que les cibles ayant rendu des biens — un
+    # site fermé n'en rend aucun, et trois sites fermés depuis une semaine
+    # servaient encore vingt biens. Une seule définition, dans historique, de
+    # qui fait autorité.
+    visites = historique.cibles_qui_font_autorite(biens)
     fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
     # Les annonces dont le LIEN est mort — vérifié deux fois, à deux passages

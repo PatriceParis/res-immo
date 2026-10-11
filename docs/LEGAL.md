@@ -48,7 +48,12 @@ qui relèverait de l'entremise immobilière (loi Hoguet) et a été retirée le
   racine au robot n'est plus visité, et ses biens sortent du catalogue comme
   des biens disparus. Mesuré les 1er et 3 octobre : quatre agences sur
   quarante-six ont cessé de répondre au robot déclaré ; leur refus est
-  respecté, leurs biens sortiront.
+  respecté, leurs biens sortiront. Cette sortie n'est tenue par le code que
+  depuis le 11 octobre 2026 : jusque-là, un site fermé n'était plus visité,
+  mais la règle de sortie ne connaissait que les sites ayant rendu des biens,
+  et trois sites fermés depuis une semaine en servaient encore vingt. Un site
+  fermé compte désormais comme visité : ses biens prennent une absence par
+  passage, et sortent à la deuxième, comme tout bien disparu.
 - **Les grands portails sont exclus** (SeLoger, Leboncoin, Logic-Immo,
   Bien'ici) : leurs conditions générales interdisent la collecte, et le projet
   ne la fait pas. Le robot Bien'ici qui subsiste dans le code n'est plus

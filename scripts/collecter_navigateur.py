@@ -630,6 +630,10 @@ def main() -> None:
     conn = db.connexion()
     total = agences = 0
     tronquees: set = set()
+    # Les sites qui nous ferment leur racine : consignés dès le départ, vide,
+    # pour qu'aucun journal d'un passage précédent ne survive à celui-ci.
+    fermees: set = set()
+    historique.noter_visites_fermees(fermees)
     deroule: list[dict] = []
     depart = time.monotonic()
     fin_prevue = depart + args.minutes_max * 60
@@ -693,6 +697,17 @@ def main() -> None:
             if permission.tout_interdit(base):
                 print("  ⛔ robots.txt nous interdit ce site : on n'y touche pas.")
                 _noter_visite(cible["site"], date.today().isoformat())
+                # Un site fermé compte comme VISITÉ : ses biens ne sont pas
+                # protégés par la règle de sortie et sortent comme des biens
+                # disparus — ce que la page /robot et LEGAL.md promettent
+                # depuis le 3 octobre. Jusqu'au 11 octobre 2026, le code ne
+                # le faisait pas : la règle ne connaissait que les cibles
+                # ayant rendu des biens, et un site fermé n'en rend aucun.
+                # Trois sites fermés depuis une semaine servaient encore
+                # vingt biens.
+                fermees.add(historique.identite(
+                    {"agence": cible["nom"], "agence_url": base}))
+                historique.noter_visites_fermees(fermees)
                 deroule.append({"agence": cible["nom"], "secondes": 0,
                                 "pages": 0, "gardes": 0, "fin": "robots.txt interdit",
                                 **diag})
