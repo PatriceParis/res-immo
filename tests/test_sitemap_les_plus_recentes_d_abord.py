@@ -84,11 +84,13 @@ def test_un_site_qui_ne_date_rien_garde_son_ordre(monkeypatch):
 
 def test_les_sous_sitemaps_apportent_leurs_dates_aussi(monkeypatch):
     index = f"<sitemapindex><sitemap><loc>{BASE}/biens.xml</loc></sitemap></sitemapindex>"
-    sous = _sitemap([(f"{BASE}/vente/maison-ancienne", "2026-01-10"),
-                     (f"{BASE}/vente/maison-du-jour", "2026-10-05")])
+    # Des libellés d'annonce, pas des mots de type seuls : « /vente/maison-
+    # ancienne » tout court est une page de rubrique depuis le 12 octobre 2026.
+    sous = _sitemap([(f"{BASE}/vente/maison-ancienne-caen-14", "2026-01-10"),
+                     (f"{BASE}/vente/maison-du-jour-7", "2026-10-05")])
     monkeypatch.setattr(collecteur, "requests",
                         _requests({f"{BASE}/sitemap.xml": index, f"{BASE}/biens.xml": sous}))
     diag = {}
     assert collecteur._sitemap_urls(BASE, 0.0, None, diag) == [
-        f"{BASE}/vente/maison-du-jour", f"{BASE}/vente/maison-ancienne"]
+        f"{BASE}/vente/maison-du-jour-7", f"{BASE}/vente/maison-ancienne-caen-14"]
     assert diag["sitemap_dates"] == 2

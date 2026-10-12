@@ -146,6 +146,31 @@ _URL_LOCATION = re.compile(
 # toujours : c'est elle qu'on lit. Seul le PREMIER segment compte :
 # « /vente/maison-en-pierre » n'est pas de l'anglais.
 _URL_LANGUE = re.compile(r"^/(?:en|de|nl|es|it|pt|ru|zh)(?:-[a-z]{2})?(?:/|$)", re.IGNORECASE)
+# La page de RUBRIQUE prise pour une annonce : « /vente/maison »,
+# « /vente/maison-ancienne », « /immobilier/vente/maison ». Elle liste les
+# biens d'un type, et l'extracteur y lit le premier de la liste — titre, prix,
+# photo du bien du jour, sous une adresse qui ne change pas. Mesuré le
+# 12 octobre 2026 : cent deux biens servis venaient d'une telle adresse, chez
+# vingt-cinq agences du même gabarit (Alain Guyony, huit sur huit ; Cric,
+# Albert 1er, Amrimmo…) ; le même bien y figurait deux fois, sous deux
+# rubriques, et un changement de premier bien passait pour une baisse de prix.
+# Le dernier segment est un mot de type, sans chiffre et sans titre : une
+# vraie annonce a un libellé (« /vente/maison-5-pieces-belleme-61130 ») ou un
+# identifiant (« /vente/maison/3555-centre-ville »). Les slugs sans chiffre
+# sous /annonce/ ou /bien/ — « /bien/ifs-sortie-caen/ » — sont des annonces :
+# la rubrique se reconnaît au segment qui la précède, vente ou achat.
+_TYPES_DE_RUBRIQUE = (
+    r"maisons?|villas?|proprietes?|manoirs?|chateaux?|fermes?|longeres?|pavillons?|demeures?"
+    r"|maison-(?:bourgeoise|contemporaine|ancienne|de-campagne|individuelle|plain-pied"
+    r"|traditionnelle|de-ville|de-village|de-maitre|neuve|d-architecte)"
+    r"|appartements?|studios?|lofts?|duplex|immeubles?|terrains?|parkings?|garages?|stationnements?"
+    r"|bureaux?|commerces?|loca(?:l|ux)-commercia(?:l|ux)|loca(?:l|ux)-professionnels?"
+    r"|fonds-de-commerce|droit-au-bail|immobilier-pro(?:fessionnel)?|neuf|programme-neuf"
+    r"|viagers?|autres?|divers"
+)
+_URL_RUBRIQUE = re.compile(
+    r"^(?:/[a-z0-9-]+)*/(?:ventes?|achat|acheter|a-vendre|vendre|nos-ventes|immobilier)"
+    r"(?:/[a-z0-9-]+)*/(?:" + _TYPES_DE_RUBRIQUE + r")/?$", re.IGNORECASE)
 
 
 def motif_url_hors_cible(url: str | None) -> str | None:
@@ -165,8 +190,11 @@ def motif_url_hors_cible(url: str | None) -> str | None:
         return "location"
     if _URL_TYPE_EXCLU.search(url or ""):
         return "url_type_exclu"
-    if _URL_LANGUE.match(urlparse(url or "").path):
+    chemin = urlparse(url or "").path
+    if _URL_LANGUE.match(chemin):
         return "langue"
+    if _URL_RUBRIQUE.match(chemin):
+        return "rubrique"
     return None
 
 
@@ -295,6 +323,10 @@ def motif_de_rejet(a: dict) -> str | None:
     # qu'on garde — titre lisible, prix lu, pas de doublon.
     if motif_url == "langue":
         return "langue"
+    # La page de rubrique prise pour une annonce : ce qu'on y lit est le
+    # premier bien de la liste, pas un bien.
+    if motif_url == "rubrique":
+        return "rubrique"
     if (a.get("type_bien") or "maison") not in TYPES_REFUGE:
         return "type_bien"
     # Un vrai logement a une surface habitable, ou au minimum un prix crédible

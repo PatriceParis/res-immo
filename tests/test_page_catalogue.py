@@ -39,9 +39,14 @@ BIEN_REEL = (
 
 
 def _fiche(texte, **extra):
+    # L'adresse d'une vraie fiche de cette agence : un libellé et une
+    # référence. Depuis le 12 octobre 2026, « /vente/maison » tout court est
+    # reconnu comme une page de rubrique dès l'adresse ; ces tests mesurent
+    # l'énumération des références, pas l'adresse.
     base = {"titre": "Maison de Ville", "texte": texte, "prix": 93000,
             "surface_m2": 140.0, "pieces": 5, "type_bien": "maison",
-            "url": "https://www.immobiliersaintjoseph.com/vente/maison"}
+            "url": "https://www.immobiliersaintjoseph.com/vente/"
+                   "maison-de-ville-tourville-sur-sienne-50200,VM865"}
     return {**base, **extra}
 
 
@@ -49,6 +54,8 @@ def test_la_page_catalogue_n_est_plus_publiee_comme_un_bien():
     """LE cas signalé : titre d'annonce, contenu de catalogue."""
     assert enumere_plusieurs_biens(_fiche(CATALOGUE))
     assert not est_bien_valide(_fiche(CATALOGUE))
+    # Et sous son adresse réelle de rubrique, elle tombe aussi.
+    assert not est_bien_valide(_fiche(CATALOGUE, url="https://www.immobiliersaintjoseph.com/vente/maison"))
 
 
 def test_une_vraie_fiche_garde_sa_place():

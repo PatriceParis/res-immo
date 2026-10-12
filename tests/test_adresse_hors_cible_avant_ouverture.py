@@ -112,3 +112,39 @@ def test_la_version_traduite_d_une_annonce_n_est_pas_ouverte():
                 "https://agence.fr/vente/en-exclusivite/maison-5-pieces-12",
                 "https://agence.fr/annonces/maison/en/12"):
         assert qualite.motif_url_hors_cible(url) is None, url
+
+
+def test_une_page_de_rubrique_n_est_pas_une_annonce():
+    """Mesuré le 12 octobre 2026 : cent deux biens servis venaient d'une
+    adresse de rubrique — « /vente/maison », « /vente/maison-ancienne »,
+    « /immobilier/vente/maison » — chez vingt-cinq agences du même gabarit.
+    La page liste les biens d'un type ; l'extracteur y lit le premier de la
+    liste, sous une adresse qui ne change pas : le même bien deux fois sous
+    deux rubriques, et un changement de premier bien pris pour une baisse de
+    prix. Le dernier segment est un mot de type, sans chiffre et sans titre."""
+    rubriques = [
+        "https://www.cric.fr/vente/maison",
+        "https://www.alain-guyony.com/vente/maison-ancienne",
+        "https://www.amrimmo.com/vente/maison-plain-pied/",
+        "https://www.thillard-duhamel.com/immobilier/vente/maison",
+        "https://www.alain-guyony.com/vente/manoir",
+        "https://www.agence.fr/vente/76-le-havre/maison",
+        "https://www.novadimm.com/vente/fonds-de-commerce",
+    ]
+    for url in rubriques:
+        assert qualite.motif_url_hors_cible(url) in ("rubrique", "url_type_exclu"), url
+        assert qualite.motif_de_rejet({"titre": "Maison de famille avec jardin", "url": url,
+                                       "type_bien": "maison", "surface_m2": 120,
+                                       "prix": 290000}) in ("rubrique", "url_type_exclu"), url
+        assert not collecteur._est_page_de_bien(url), url
+    assert qualite.motif_url_hors_cible("https://www.cric.fr/vente/maison") == "rubrique"
+    # Une vraie annonce : un libellé, un identifiant, ou un slug sous /annonce/ ou /bien/.
+    for url in ("https://a-tri-home.fr/bien/ifs-sortie-caen/",
+                "https://aureliebonnet.fr/annonce/vue-degagee-balcon/",
+                "https://www.lhimmo.com/annonce/maison-de-ville-renovee/",
+                "https://www.agence.fr/vente/maison-5-pieces-belleme-61130",
+                "https://www.agence.fr/vente/2-auxerre/maison/3555-centre-ville-local-professionnel-ou-habitation",
+                "https://www.agence.fr/vente/maison-de-ville-renovee-caen",
+                "https://www.agence.fr/vente/maison/12-belle-maison-de-bourg/",
+                "https://www.immobiliersaintjoseph.com/vente/maison/865-tourville-sur-sienne"):
+        assert qualite.motif_url_hors_cible(url) is None, url
