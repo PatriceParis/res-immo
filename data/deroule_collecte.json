@@ -2,69 +2,100 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "Valoire Habîtat",
-   "secondes": 63,
-   "pages": 8,
+   "agence": "Bon'Appart",
+   "secondes": 73,
+   "pages": 14,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
+   "vendus": 1,
+   "ecartes": 5,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 70,
-   "sitemap": "ok 70"
-  },
-  {
-   "agence": "Versus Immobilier",
-   "secondes": 112,
-   "pages": 45,
-   "gardes": 4,
-   "vendus": 31,
-   "ecartes": 10,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 106,
-   "sitemap": "ok 106",
+   "adresses_ecartees": 1,
+   "sitemap_dates": 130,
+   "sitemap": "ok 130",
    "motifs": {
     "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:vente de maisons": 1,
-    "titre_hors_cible:appartement": 6,
-    "titre_hors_cible:terrain constructible": 1,
-    "titre_hors_cible:studio": 1
-   },
-   "vendus_dans_l_adresse": 2
-  },
-  {
-   "agence": "Viagimmo Lille Centre",
-   "secondes": 52,
-   "pages": 17,
-   "gardes": 0,
-   "vendus": 2,
-   "ecartes": 4,
-   "illisibles": 11,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 17",
-   "sitemap_dates": 17,
-   "illisible_exemple": {
-    "url": "https://viagimmo.fr/vente-a-terme-outil-patrimonial-a-redecouvrir/",
-    "cause": "aucune annonce lue",
-    "titre": "La vente à terme : un outil patrimonial à redécouvrir",
-    "octets": 98509
-   },
-   "motifs": {
-    "ni_surface_ni_prix_credible": 2,
-    "titre_hors_cible:viager": 2
+    "titre_hors_cible:terrain": 2,
+    "titre_hors_cible:appart": 1,
+    "titre_hors_cible:appartement": 1
    }
   },
   {
-   "agence": "Villers St Paul Immobilier",
-   "secondes": 51,
+   "agence": "Bonnabelle",
+   "secondes": 80,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap_dates": 56,
+   "sitemap": "ok 56"
+  },
+  {
+   "agence": "Boost Immo",
+   "secondes": 80,
+   "pages": 38,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 36,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 38,
+   "sitemap": "ok 38",
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:nos biens": 1,
+    "prix_trop_haut": 10,
+    "titre_hors_cible:immeuble de rapport": 1,
+    "ni_surface_ni_prix_credible": 15,
+    "titre_hors_cible:terrain a batir": 2,
+    "titre_hors_cible:appartement": 4,
+    "titre_hors_cible:terrain constructible": 1
+   },
+   "illisible_exemple": {
+    "url": "https://boost-immo.com/nos-biens-loues/1",
+    "cause": "aucune annonce lue",
+    "titre": "Nos biens loués | Boost Immo",
+    "octets": 78813
+   }
+  },
+  {
+   "agence": "Bouctot Immobilier & Commerces",
+   "secondes": 93,
+   "pages": 35,
+   "gardes": 0,
+   "vendus": 2,
+   "ecartes": 4,
+   "illisibles": 29,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 35,
+   "sitemap": "ok 35",
+   "illisible_exemple": {
+    "url": "https://agence-immobiliere-cherbourg.net/project/salon-de-coiffure-mixte-3/vente-salon-de-coiffure-ec2232/",
+    "cause": "aucune annonce lue",
+    "titre": "Vente salon de coiffure ec2232 - Bouctot Immobilier",
+    "octets": 167403
+   },
+   "motifs": {
+    "prix_trop_haut": 1,
+    "ni_surface_ni_prix_credible": 3
+   }
+  },
+  {
+   "agence": "Bourgogne Buxy Immobilier",
+   "secondes": 65,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -73,57 +104,108 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
+   "adresses_ecartees": 11,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "titre_hors_cible:appartement": 1
    }
   },
   {
-   "agence": "Vivest",
-   "secondes": 19,
-   "pages": 1,
-   "gardes": 0,
+   "agence": "Brique rouge",
+   "secondes": 71,
+   "pages": 13,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 4,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "adresses_ecartees": 384,
+   "sitemap_dates": 6204,
+   "sitemap": "ok 6204",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 3,
+    "titre_hors_cible:batir": 1
+   },
    "illisible_exemple": {
-    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
+    "url": "https://www.brique-rouge-immobilier.fr/acheter/maison/avelin/tous_quartiers/toutes_chambres/0-0",
     "cause": "aucune annonce lue",
-    "titre": "Nos programmes en vente à venir - Vivest",
-    "octets": 619156
+    "titre": "Acheter une maison à avelin - Brique Rouge Immobilier",
+    "octets": 207811
    }
   },
   {
-   "agence": "Vosgelis",
-   "secondes": 18,
-   "pages": 5,
+   "agence": "Brosset Immobilier",
+   "secondes": 16,
+   "pages": 7,
    "gardes": 0,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 5,
+   "ecartes": 6,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 5,
-   "sitemap": "ok 5",
+   "adresses_ecartees": 6,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
    "illisible_exemple": {
-    "url": "https://www.vosgelis.fr/annonces/gardienne-dimmeubles-2-2/",
+    "url": "https://www.brosset-immobilier.fr/vendre-son-appartement-maison",
     "cause": "aucune annonce lue",
-    "titre": "Gardien(ne) d’immeubles • Vosgelis",
-    "octets": 79070
+    "titre": "Comment bien vendre votre appartement ou maison à Tours | Brosset Immobilier",
+    "octets": 64948
+   },
+   "motifs": {
+    "titre_hors_cible:annonces": 6
    }
   },
   {
-   "agence": "action immo",
-   "secondes": 9,
+   "agence": "Bréville immobilier",
+   "secondes": 125,
+   "pages": 45,
+   "gardes": 6,
+   "vendus": 7,
+   "ecartes": 32,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 140,
+   "sitemap": "ok 140",
+   "motifs": {
+    "titre_indigent": 1,
+    "ni_surface_ni_prix_credible": 5,
+    "prix_trop_haut": 14,
+    "titre_hors_cible:parking": 2,
+    "titre_hors_cible:studio": 1,
+    "titre_hors_cible:appartement": 9
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "Cabinet Aelion immobilier",
+   "secondes": 63,
+   "pages": 10,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 7,
+   "sitemap_dates": 10,
+   "sitemap": "ok 10",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1,
+    "prix_trop_haut": 2
+   }
+  },
+  {
+   "agence": "Cabinet Choquet",
+   "secondes": 11,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -134,110 +216,149 @@
    "sitemap_statut": 200,
    "sitemap": "aucune page de bien",
    "index_statut": 200,
-   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
+   "index_titre": "Cabinet Choquet - agence immobilière à Lille"
   },
   {
-   "agence": "agence 147",
-   "secondes": 125,
-   "pages": 45,
-   "gardes": 6,
-   "vendus": 32,
-   "ecartes": 7,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 207,
-   "sitemap_dates": 50,
-   "sitemap": "ok 50",
-   "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:parking": 1,
-    "titre_hors_cible:appartement": 1,
-    "prix_trop_haut": 3,
-    "titre_hors_cible:maison neuve": 1
-   }
-  },
-  {
-   "agence": "ilm Immobilier",
-   "secondes": 50,
-   "pages": 26,
+   "agence": "Cabinet Courel",
+   "secondes": 13,
+   "pages": 1,
    "gardes": 0,
-   "vendus": 20,
-   "ecartes": 0,
-   "illisibles": 6,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 26,
-   "sitemap": "ok 26",
-   "illisible_exemple": {
-    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1811/vente-terrain-a-batir-vincelles-89290/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente Terrain à bâtir Vincelles 89290 10min sud Auxerre — ILM Immoblier",
-    "octets": 63888
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Antony Vesque Immobilier",
-   "secondes": 69,
-   "pages": 9,
-   "gardes": 8,
    "vendus": 0,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 68,
-   "sitemap": "ok 82",
+   "adresses_ecartees": 4,
+   "sitemap_dates": 1,
+   "sitemap": "ok 1",
    "motifs": {
-    "titre_hors_cible:appartement": 1
+    "page_catalogue": 1
    }
   },
   {
-   "agence": "Apirem",
-   "secondes": 45,
-   "pages": 17,
-   "gardes": 0,
-   "vendus": 1,
-   "ecartes": 5,
-   "illisibles": 11,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 17,
-   "sitemap": "ok 17",
-   "illisible_exemple": {
-    "url": "https://www.apirem.fr/vente-a-remere-les-risques-a-absolument-connaitre/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente à réméré les risques à absolument connaitre",
-    "octets": 248666
-   },
-   "motifs": {
-    "ni_surface_ni_prix_credible": 5
-   }
-  },
-  {
-   "agence": "Arsenal Immobilier",
-   "secondes": 243,
+   "agence": "Cabinet Dero Renard",
+   "secondes": 245,
    "pages": 42,
    "gardes": 0,
-   "vendus": 42,
+   "vendus": 40,
    "ecartes": 0,
-   "illisibles": 0,
+   "illisibles": 2,
    "fin": "temps de l'agence épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap": "ok 139"
+   "adresses_ecartees": 13,
+   "sitemap": "ok 267",
+   "illisible_exemple": {
+    "url": "https://www.immorenard.com/vente/appartement-studio-1-piece-le-havre-76600,VA2242",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Studio, 1 pièce situé à LE HAVRE (76600)",
+    "octets": 808702
+   }
   },
   {
-   "agence": "ArthurImmo.com Agence Saint-Hubert",
-   "secondes": 46,
+   "agence": "Cabinet Faudais",
+   "secondes": 75,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 3,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 106,
+   "sitemap_dates": 261,
+   "sitemap": "ok 261",
+   "vendus_dans_l_adresse": 1,
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:terrain": 1
+   }
+  },
+  {
+   "agence": "Cabinet JC Lebourg",
+   "secondes": 63,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 34,
+   "sitemap": "ok 34",
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:studio": 1,
+    "titre_hors_cible:appartement": 2,
+    "prix_trop_haut": 1
+   }
+  },
+  {
+   "agence": "Cabinet Lintot",
+   "secondes": 31,
+   "pages": 15,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 10,
+   "illisibles": 5,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
+   "illisible_exemple": {
+    "url": "https://www.cabinet-lintot.fr/annonces-immobilieres",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers",
+    "octets": 5018
+   },
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 10
+   }
+  },
+  {
+   "agence": "Cabinet Quesnée Immobilier",
+   "secondes": 55,
+   "pages": 12,
+   "gardes": 4,
+   "vendus": 7,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 44,
+   "sitemap_dates": 12,
+   "sitemap": "ok 12",
+   "motifs": {
+    "titre_hors_cible:51 annonces": 1
+   }
+  },
+  {
+   "agence": "Cabinet Ray",
+   "secondes": 82,
+   "pages": 17,
+   "gardes": 8,
+   "vendus": 4,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 79,
+   "sitemap": "ok 79",
+   "motifs": {
+    "prix_trop_haut": 5
+   }
+  },
+  {
+   "agence": "Cabinet Reca",
+   "secondes": 42,
    "pages": 6,
    "gardes": 6,
    "vendus": 0,
@@ -246,214 +367,129 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 16,
-   "sitemap_dates": 9,
-   "sitemap": "ok 9"
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Agence Immobilière à Noyon. Vente et location"
   },
   {
-   "agence": "Arthurimmo",
-   "secondes": 67,
-   "pages": 8,
-   "gardes": 8,
+   "agence": "Cabinet Vasse",
+   "secondes": 27,
+   "pages": 6,
+   "gardes": 1,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
+   "ecartes": 4,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap_dates": 46,
-   "sitemap": "ok 46"
-  },
-  {
-   "agence": "Arthurimmo.com",
-   "secondes": 48,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 7,
-   "sitemap": "ok 7",
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Cabinet Vasse - 2 agences immobilières à Caen dans le Calvad",
    "motifs": {
-    "prix_trop_haut": 1
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 2
+   },
+   "illisible_exemple": {
+    "url": "https://cabinet-vasse.com/fr/propriete/location+commerce+caen+86391108",
+    "cause": "aucune annonce lue",
+    "titre": "Location immobilière : Local commercial à Caen 1 pièce 495&nbsp;€ / Mois (Charges comprises)- CABINET VASSE.",
+    "octets": 118892
    }
   },
   {
-   "agence": "Arturimmo.com",
-   "secondes": 25,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 36,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3"
-  },
-  {
-   "agence": "Aude Immo 18",
-   "secondes": 70,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "motifs": {
-    "titre_indigent": 1
-   }
-  },
-  {
-   "agence": "Aurélie Bonnet Immobilier",
-   "secondes": 92,
-   "pages": 19,
+   "agence": "Cabinet de Simencourt",
+   "secondes": 90,
+   "pages": 22,
    "gardes": 8,
    "vendus": 1,
-   "ecartes": 10,
+   "ecartes": 11,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 113,
+   "sitemap_dates": 88,
+   "sitemap": "ok 88",
+   "motifs": {
+    "titre_hors_cible:140 annonces": 1,
+    "titre_hors_cible:22 annonces": 1,
+    "titre_hors_cible:57 annonces": 1,
+    "titre_hors_cible:recherche": 1,
+    "titre_hors_cible:fonds de commerce": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:studio": 2,
+    "titre_hors_cible:terrain a batir": 1,
+    "titre_hors_cible:appartement": 2
+   },
+   "illisible_exemple": {
+    "url": "https://www.de-simencourtimmobilier.fr/vente/vallee-de-la-bresle/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 annonces immobilières : Vallée de la Bresle",
+    "octets": 149906
+   }
+  },
+  {
+   "agence": "Logia",
+   "secondes": 82,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 6,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 2,
-   "sitemap_dates": 297,
-   "sitemap": "ok 297",
+   "sitemap_dates": 128,
+   "sitemap": "ok 128",
    "motifs": {
-    "titre_hors_cible:terrain constructible": 3,
-    "titre_hors_cible:batir": 1,
-    "titre_hors_cible:terrain": 3,
-    "titre_hors_cible:terrains": 1,
-    "titre_hors_cible:parking": 1,
-    "titre_hors_cible:parkings": 1
-   }
-  },
-  {
-   "agence": "BAP Immo",
-   "secondes": 91,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 21,
-   "sitemap": "ok 68",
-   "motifs": {
+    "titre_hors_cible:local commercial": 1,
+    "titre_hors_cible:appartement": 2,
+    "ni_surface_ni_prix_credible": 2,
     "titre_hors_cible:entrepot": 1
    }
   },
   {
-   "agence": "Bagnoles Immobilier",
-   "secondes": 240,
-   "pages": 41,
-   "gardes": 0,
-   "vendus": 25,
-   "ecartes": 16,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 21,
-   "sitemap": "ok 256",
-   "motifs": {
-    "titre_hors_cible:appartement": 10,
-    "titre_hors_cible:studio": 6
-   }
-  },
-  {
-   "agence": "Baudart Immo",
-   "secondes": 30,
-   "pages": 3,
-   "gardes": 2,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": "Loading https://www.baudartimmo.fr/annonces/transaction/vent",
-   "motifs": {
-    "titre_hors_cible:a vendre |": 1
-   }
-  },
-  {
-   "agence": "Benedic Immobilier",
-   "secondes": 12,
-   "pages": 1,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 0,
+   "agence": "Logimmo Conseil",
+   "secondes": 128,
+   "pages": 45,
+   "gardes": 5,
+   "vendus": 11,
+   "ecartes": 29,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 30,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Benedic immobilier Agence immobilière à Metz Nancy ... | Ben"
+   "adresses_ecartees": 7,
+   "sitemap_dates": 150,
+   "sitemap": "ok 150",
+   "motifs": {
+    "location": 2,
+    "titre_hors_cible:conseil": 2,
+    "titre_hors_cible:appartement": 21,
+    "titre_hors_cible:studio": 4
+   }
   },
   {
-   "agence": "Berry Immobilier",
-   "secondes": 57,
+   "agence": "Logéal Immobilière",
+   "secondes": 70,
    "pages": 11,
-   "gardes": 8,
-   "vendus": 3,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 179,
-   "sitemap": "ok 179",
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Bias Immobilier",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Bien chez soi immobilier",
-   "secondes": 48,
-   "pages": 15,
-   "gardes": 4,
-   "vendus": 1,
-   "ecartes": 10,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 5,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 119,
-   "sitemap": "ok 119",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
    "motifs": {
-    "ni_surface_ni_prix_credible": 1,
-    "titre_indigent": 1,
-    "titre_hors_cible:appartement": 2,
-    "prix_trop_haut": 3,
-    "titre_hors_cible:studio": 2,
-    "titre_hors_cible:studios": 1
-   },
-   "vendus_dans_l_adresse": 1
+    "titre_hors_cible:terrains a batir": 1,
+    "titre_hors_cible:appartements": 2,
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:terrain a batir": 1
+   }
   }
  ]
 }
