@@ -2,347 +2,385 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "Immo coup de coeur",
-   "secondes": 73,
-   "pages": 12,
+   "agence": "Panther'Immo",
+   "secondes": 88,
+   "pages": 16,
    "gardes": 8,
    "vendus": 3,
-   "ecartes": 1,
-   "illisibles": 0,
+   "ecartes": 4,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 55,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
+   "adresses_ecartees": 27,
+   "sitemap_dates": 22,
+   "sitemap": "ok 22",
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "titre_hors_cible:31 biens": 1,
+    "prix_trop_haut": 2,
+    "titre_hors_cible:bureaux": 1
    },
-   "vendus_dans_l_adresse": 1
+   "vendus_dans_l_adresse": 1,
+   "illisible_exemple": {
+    "url": "https://www.pantherimmo.com/vente-neuf/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 biens immobiliers neufs à vendre | Panther Immo",
+    "octets": 139835
+   }
   },
   {
-   "agence": "Immobilier Center (Fnaim)",
-   "secondes": 100,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 76,
-   "sitemap": "ok 79"
-  },
-  {
-   "agence": "Immobilier ILL",
-   "secondes": 243,
-   "pages": 35,
-   "gardes": 5,
-   "vendus": 30,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 50,
-   "sitemap": "ok 101"
-  },
-  {
-   "agence": "Immobilier Saint-Marcouf",
-   "secondes": 71,
+   "agence": "Pas-de-Calais Habitat (Bailleur social)",
+   "secondes": 61,
    "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 69,
-   "sitemap_dates": 154,
-   "sitemap": "ok 154",
-   "motifs": {
-    "titre_hors_cible:biens a vendre": 1,
-    "titre_hors_cible:appartement": 1,
-    "prix_trop_haut": 1
-   }
-  },
-  {
-   "agence": "Immobilier du Chêne",
-   "secondes": 182,
-   "pages": 21,
-   "gardes": 8,
-   "vendus": 12,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 44,
-   "sitemap": "ok 116",
-   "motifs": {
-    "titre_hors_cible:local commercial": 1
-   }
-  },
-  {
-   "agence": "Immobilière Scarponaise",
-   "secondes": 86,
-   "pages": 15,
    "gardes": 7,
-   "vendus": 7,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 32,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
-   "motifs": {
-    "titre_hors_cible:27 annonces": 1
-   }
-  },
-  {
-   "agence": "Immobilière de France",
-   "secondes": 67,
-   "pages": 12,
-   "gardes": 3,
    "vendus": 0,
-   "ecartes": 6,
+   "ecartes": 1,
    "illisibles": 3,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Trouvez le bien de vos rêves avec",
+   "adresses_ecartees": 66,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11",
    "motifs": {
-    "titre_hors_cible:entrepot": 2,
-    "titre_hors_cible:appartement": 3,
-    "titre_hors_cible:murs commerciaux": 1
+    "titre_hors_cible:nos biens": 1
    },
    "illisible_exemple": {
-    "url": "https://immobilieredefrance.com/fr/propriete/location+commerce+boulogne-sur-mer+local-face-universite+87070160",
+    "url": "https://www.pasdecalais-habitat.fr/je-cherche-un-local-professionnel/annonces-pro/",
     "cause": "aucune annonce lue",
-    "titre": "Local face université",
-    "octets": 74839
+    "titre": "Nos biens pour les pros - Pas-de-Calais habitat",
+    "octets": 177350
    }
   },
   {
-   "agence": "Immobilière de Lille",
-   "secondes": 77,
-   "pages": 23,
-   "gardes": 0,
-   "vendus": 4,
-   "ecartes": 19,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 34,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "motifs": {
-    "titre_hors_cible:maisons a vendre": 19
-   }
-  },
-  {
-   "agence": "Indicateur Vendômois",
-   "secondes": 73,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 15,
-   "sitemap_dates": 335,
-   "sitemap": "ok 335",
-   "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:vente de maisons": 1,
-    "ni_surface_ni_prix_credible": 2
-   }
-  },
-  {
-   "agence": "Investimmo",
-   "secondes": 77,
-   "pages": 10,
+   "agence": "Pays d'Auge Sotheby's International Realty",
+   "secondes": 67,
+   "pages": 9,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 50,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
+   "adresses_ecartees": 136,
+   "sitemap_dates": 110,
+   "sitemap": "ok 110",
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:recherche": 1
+    "prix_trop_haut": 1
    }
   },
   {
-   "agence": "Jacques Klein Immeubles",
-   "secondes": 101,
-   "pages": 14,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 3,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
-   "motifs": {
-    "prix_trop_haut": 1,
-    "titre_hors_cible:appartement": 1,
-    "location": 1
-   },
-   "illisible_exemple": {
-    "url": "https://jki-immo.fr/annonces/maison-individuelle-metz-queuleu/",
-    "cause": "aucune annonce lue",
-    "titre": "Maison individuelle - METZ QUEULEU - Jacques Klein Immobilier",
-    "octets": 322500
-   }
-  },
-  {
-   "agence": "Jean Jaurès Immobilier",
-   "secondes": 90,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 74,
-   "sitemap_dates": 124,
-   "sitemap": "ok 124",
-   "motifs": {
-    "titre_indigent": 1,
-    "prix_trop_haut": 2
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "L'Agence",
-   "secondes": 8,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 3,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "motifs": {
-    "prix_trop_haut": 2
-   }
-  },
-  {
-   "agence": "L'Agence Smith",
-   "secondes": 96,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 2,
-   "ecartes": 43,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 10,
-   "sitemap_dates": 170,
-   "sitemap": "ok 172",
-   "motifs": {
-    "titre_indigent": 43
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "L'Immobilière Conseils",
-   "secondes": 7,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "L’immobilière Conseils : agence immobilière Noyon, transacti"
-  },
-  {
-   "agence": "La Plaine Immobilier",
-   "secondes": 99,
-   "pages": 38,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 38,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "La Plaine Immobilier : agence immobilière Caen, achat immobi",
-   "illisible_exemple": {
-    "url": "https://laplaine-immobilier.com/fr/maison-carrouges-2-pieces-35-m2",
-    "cause": "aucune annonce lue",
-    "titre": "",
-    "octets": 154429
-   }
-  },
-  {
-   "agence": "Paffoni Immobilier",
-   "secondes": 92,
-   "pages": 10,
-   "gardes": 8,
+   "agence": "Perch'Immo",
+   "secondes": 59,
+   "pages": 6,
+   "gardes": 4,
    "vendus": 0,
    "ecartes": 1,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 24,
-   "sitemap_dates": 18,
-   "sitemap": "ok 18",
-   "motifs": {
-    "titre_hors_cible:biens a vendre": 1
-   },
+   "adresses_ecartees": 7,
+   "sitemap": "ok 119",
    "illisible_exemple": {
-    "url": "https://www.paffoni-immo.com/biens-vendus/1",
+    "url": "https://www.perch-immo.fr/vente/,VM3680",
     "cause": "aucune annonce lue",
-    "titre": "Nos biens vendus | PAFFONI IMMOBILIER",
-    "octets": 138935
+    "titre": "Perch'Immo",
+    "octets": 830115
+   },
+   "motifs": {
+    "titre_hors_cible:local professionnel": 1
    }
   },
   {
-   "agence": "Paillette Immobilier",
-   "secondes": 144,
-   "pages": 19,
-   "gardes": 6,
-   "vendus": 13,
+   "agence": "Perche et Demeures",
+   "secondes": 42,
+   "pages": 7,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 169,
+   "sitemap": "ok 170",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 2,
+    "prix_trop_haut": 1
+   }
+  },
+  {
+   "agence": "Picart Immobilier",
+   "secondes": 64,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
    "ecartes": 0,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 104,
+   "sitemap_dates": 385,
+   "sitemap": "ok 385",
+   "illisible_exemple": {
+    "url": "https://www.picartimmobilier.fr/property/maison-individuelle-dans-une-impasse/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison individuelle dans une impasse - Stéphane Picart Immobilier - Agence Immobilière",
+    "octets": 59146
+   }
+  },
+  {
+   "agence": "A Et B Conseil Immobilier",
+   "secondes": 92,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 27,
+   "ecartes": 18,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 25,
+   "sitemap_dates": 202,
+   "sitemap": "ok 202",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:vente de biens": 1,
+    "prix_trop_haut": 12,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 1
+   },
+   "vendus_dans_l_adresse": 2
+  },
+  {
+   "agence": "A Tri Home",
+   "secondes": 61,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 18,
+   "sitemap": "ok 18",
+   "motifs": {
+    "titre_hors_cible:terrain a batir": 1
+   }
+  },
+  {
+   "agence": "ACBI",
+   "secondes": 55,
+   "pages": 10,
+   "gardes": 6,
+   "vendus": 3,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 117,
+   "sitemap_dates": 694,
+   "sitemap": "ok 694",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "AFTim",
+   "secondes": 215,
+   "pages": 31,
+   "gardes": 4,
+   "vendus": 16,
+   "ecartes": 11,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 62,
+   "sitemap": "ok 31",
+   "motifs": {
+    "titre_hors_cible:programme neuf": 1,
+    "prix_trop_haut": 10
+   }
+  },
+  {
+   "agence": "AIC Immobilier",
+   "secondes": 152,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 43,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap_dates": 70,
+   "sitemap": "ok 73",
+   "motifs": {
+    "titre_hors_cible:bureaux": 1
+   },
+   "illisible_exemple": {
+    "url": "https://www.aicimmobilier.fr/property/luxury-family-home-4/",
+    "cause": "aucune annonce lue",
+    "titre": "Single family home – AIC Immobilier",
+    "octets": 105862
+   }
+  },
+  {
+   "agence": "AJC immobilier",
+   "secondes": 116,
+   "pages": 38,
+   "gardes": 8,
+   "vendus": 27,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
+   "sitemap": "ok 117",
+   "motifs": {
+    "titre_hors_cible:appartement": 2,
+    "prix_trop_haut": 1
+   }
+  },
+  {
+   "agence": "Cyril Thienpont Immobilier",
+   "secondes": 170,
+   "pages": 22,
+   "gardes": 8,
+   "vendus": 12,
+   "ecartes": 1,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 33,
+   "sitemap": "ok 113",
+   "illisible_exemple": {
+    "url": "https://www.ctimmo.fr/vente/maison-plain-pied-5-pieces-abbeville-80100,VM1394",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison plain-pied, 5 pièces située à Abbeville (80100)",
+    "octets": 847980
+   },
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   }
+  },
+  {
+   "agence": "Côté Ouest Immobilier",
+   "secondes": 125,
+   "pages": 15,
+   "gardes": 8,
+   "vendus": 4,
+   "ecartes": 2,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 74,
+   "sitemap": "ok 81",
+   "motifs": {
+    "prix_trop_haut": 1,
+    "titre_hors_cible:maison neuve": 1
+   },
+   "illisible_exemple": {
+    "url": "https://www.cote-ouest-immo.fr/vente/maison-traditionnelle-5-pieces-le-havre-76620,VM5347",
+    "cause": "aucune annonce lue",
+    "titre": "cote ouest",
+    "octets": 838565
+   }
+  },
+  {
+   "agence": "Damonte Immobilier",
+   "secondes": 26,
+   "pages": 9,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 8,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "illisible_exemple": {
+    "url": "https://www.yves-damonte.fr/bien-professionnel",
+    "cause": "aucune annonce lue",
+    "titre": "Groupe Damonte",
+    "octets": 1474
+   }
+  },
+  {
+   "agence": "De Noray Immobilier",
+   "secondes": 68,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 39,
+   "sitemap_dates": 100,
+   "sitemap": "ok 100",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1
+   }
+  },
+  {
+   "agence": "Delafosse & Associée",
+   "secondes": 100,
+   "pages": 24,
+   "gardes": 8,
+   "vendus": 10,
+   "ecartes": 5,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 168,
+   "sitemap_dates": 426,
+   "sitemap": "ok 426",
+   "illisible_exemple": {
+    "url": "https://delafosse.immo/maison-de-caractere-a-rouen-la-reconnaitre-la-choisir/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison de caractère à Rouen - la reconnaître, la choisir - Delafosse &amp; Associée",
+    "octets": 102688
+   },
+   "motifs": {
+    "prix_trop_haut": 5
+   }
+  },
+  {
+   "agence": "Delaitre immobilier",
+   "secondes": 122,
+   "pages": 11,
+   "gardes": 0,
+   "vendus": 10,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 159,
-   "sitemap": "ok 281"
+   "adresses_ecartees": 12,
+   "sitemap_dates": 346,
+   "sitemap": "ok 347",
+   "vendus_dans_l_adresse": 7,
+   "motifs": {
+    "titre_hors_cible:studio": 1
+   }
   }
  ]
 }
