@@ -309,10 +309,14 @@ def test_un_commerce_se_reconnait_a_sa_rubrique():
         assert motif_url_hors_cible(url) == "url_type_exclu", url
         assert motif_de_rejet({"titre": titre, "url": url, "type_bien": "maison",
                                "surface_m2": 120, "prix": 150000}) == "url_type_exclu", url
-    # Le mot dans le libellé d'une maison ne la condamne pas : sa rubrique à
-    # elle est /maison/, et c'est elle qui compte.
-    for url in ("https://www.agence.fr/vente/2-auxerre/maison/3555-centre-ville-local-professionnel-ou-habitation",
-                "https://www.agence.fr/vente/10-brienne/maison/9280-immeuble-mixte-avec-grand-appartement-et-local-commercial"):
-        assert motif_url_hors_cible(url) is None, url
-        assert est_bien_valide({"titre": "Maison 8 pièces 160 m² Auxerre", "url": url,
-                                "type_bien": "maison", "surface_m2": 160, "prix": 249000}), url
+    # Le mot au MILIEU du libellé d'une maison ne la condamne pas : sa rubrique
+    # à elle est /maison/, et son libellé commence par autre chose.
+    url = "https://www.agence.fr/vente/2-auxerre/maison/3555-centre-ville-local-professionnel-ou-habitation"
+    assert motif_url_hors_cible(url) is None, url
+    assert est_bien_valide({"titre": "Maison 8 pièces 160 m² Auxerre", "url": url,
+                            "type_bien": "maison", "surface_m2": 160, "prix": 249000}), url
+    # Mais un libellé qui COMMENCE par « immeuble », même sous /maison/, dit le
+    # type que l'agence lui a donné : depuis le 13 octobre 2026, il l'emporte.
+    assert motif_url_hors_cible(
+        "https://www.agence.fr/vente/10-brienne/maison/9280-immeuble-mixte-avec-grand-appartement-et-local-commercial"
+    ) == "url_type_exclu"

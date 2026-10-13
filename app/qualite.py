@@ -171,6 +171,19 @@ _TYPES_DE_RUBRIQUE = (
 _URL_RUBRIQUE = re.compile(
     r"^(?:/[a-z0-9-]+)*/(?:ventes?|achat|acheter|a-vendre|vendre|nos-ventes|immobilier)"
     r"(?:/[a-z0-9-]+)*/(?:" + _TYPES_DE_RUBRIQUE + r")/?$", re.IGNORECASE)
+# Le TYPE en tête du libellé : « appartement-t3-3-pieces-deauville-14800,VA4416 »,
+# « immeuble-de-rapport », « terrain-a-batir-vincelles », « vente-appartement-
+# lille-… », « 6537-appartement ». Le gabarit forge le libellé à partir du type
+# du bien ; le titre, lui, ne le dit pas toujours — « DEAUVILLE - 2 CHAMBRES »,
+# « F3 AVEC ASCENSEUR ET TERRASSE », « PALAIS DE JUSTICE QUAI GEORGES V ».
+# Mesuré le 13 octobre 2026 : cent vingt et un biens servis dont le libellé
+# commence par un type hors cible, quatre-vingt-cinq appartements en tête.
+# Seuls un identifiant numérique ou « vente- » peuvent précéder le type :
+# « maison-avec-appartement-independant » ou « longere-avec-garage » restent.
+_URL_SLUG_TYPE = re.compile(
+    r"^(?:\d+-)?(?:vente-|achat-|a-vendre-|acheter-)?"
+    r"(?:appartements?|apparts?|studios?|parkings?|garages?|terrains?|immeubles?|lofts?"
+    r"|duplex|bureaux?|loca(?:l|ux)|box|caves?)(?:[-_,.]|$)", re.IGNORECASE)
 
 
 def motif_url_hors_cible(url: str | None) -> str | None:
@@ -188,9 +201,10 @@ def motif_url_hors_cible(url: str | None) -> str | None:
     """
     if _URL_LOCATION.search(url or ""):
         return "location"
-    if _URL_TYPE_EXCLU.search(url or ""):
-        return "url_type_exclu"
     chemin = urlparse(url or "").path
+    libelle = chemin.rstrip("/").rsplit("/", 1)[-1]
+    if _URL_TYPE_EXCLU.search(url or "") or _URL_SLUG_TYPE.match(libelle):
+        return "url_type_exclu"
     if _URL_LANGUE.match(chemin):
         return "langue"
     if _URL_RUBRIQUE.match(chemin):

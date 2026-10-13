@@ -148,3 +148,28 @@ def test_une_page_de_rubrique_n_est_pas_une_annonce():
                 "https://www.agence.fr/vente/maison/12-belle-maison-de-bourg/",
                 "https://www.immobiliersaintjoseph.com/vente/maison/865-tourville-sur-sienne"):
         assert qualite.motif_url_hors_cible(url) is None, url
+
+
+def test_le_type_en_tete_du_libelle_condamne_l_adresse():
+    """Mesuré le 13 octobre 2026 : cent vingt et un biens servis dont le libellé
+    d'adresse commence par un type hors cible — « appartement-t2-2-pieces-
+    deauville-14800,VA4416 » sous le titre « DEAUVILLE - 2 CHAMBRES »,
+    « immeuble-de-rapport », « 6537-appartement », « vente-appartement-lille-… ».
+    Le gabarit forge le libellé à partir du type ; le titre ne le dit pas."""
+    for url in ("https://agence.fr/vente/appartement-t2-2-pieces-deauville-14800,VA4416",
+                "https://agence.fr/annonce/immeuble-de-rapport",
+                "https://agence.fr/annonces/6537-appartement",
+                "https://agence.fr/biens/vente-appartement-lille-59000-lille-647-it",
+                "https://agence.fr/annonce/terrain-a-batir-vincelles-89290/",
+                "https://agence.fr/annonce/bureau-71m%c2%b2-tours",
+                "https://agence.fr/annonce/a-vendre-locaux-commerciaux-lille/"):
+        assert qualite.motif_url_hors_cible(url) == "url_type_exclu", url
+        assert not collecteur._est_page_de_bien(url), url
+    # Le type ailleurs qu'en tête, ou une maison : rien à redire.
+    for url in ("https://agence.fr/vente/maison-5-pieces-belleme-61130",
+                "https://agence.fr/annonce/vente-maison-caen-14000-12",
+                "https://agence.fr/annonce/2658-ensemble-immobilier-amfreville-maison-principale",
+                "https://agence.fr/annonce/maison-avec-appartement-independant-12",
+                "https://agence.fr/annonce/longere-avec-garage-et-terrain-3",
+                "https://www.century21-exemple.com/trouver_logement/detail/15516812038/"):
+        assert qualite.motif_url_hors_cible(url) is None, url
