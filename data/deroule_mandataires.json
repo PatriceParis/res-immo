@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 25.6,
+  "seconde": 128.3,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 25.6,
+  "seconde": 128.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,173 +21,102 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.6,
+  "seconde": 128.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.7,
+  "seconde": 129.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 29.2,
+  "seconde": 131.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.2,
+  "seconde": 131.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.4,
+  "seconde": 131.7,
   "reseau": "capifrance",
-  "connues": 10905
+  "connues": 10966
  },
  {
   "etape": "reseau_debut",
-  "seconde": 29.4,
+  "seconde": 131.7,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 29.7,
+  "seconde": 131.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 46.1,
+  "seconde": 145.5,
   "reseau": "iad",
-  "n": 93662,
+  "n": 93780,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 47.1,
+  "seconde": 147.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 47.3,
+  "seconde": 147.3,
   "reseau": "iad",
-  "connues": 10905
+  "connues": 10966
  },
  {
   "etape": "departement",
-  "seconde": 160.2,
+  "seconde": 271.2,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 21,
+   "ecarte": 24,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 5,
+   "hors_perimetre": 18,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 1 pièce de 18 m² à Heuchin (62134)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 378.5,
+  "reseau": "iad",
+  "departement": "70",
   "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 23,
-   "ecarte": 26,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 22,
-   "location": 1,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Courtils (50220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 289.2,
-  "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
    "vendu": 12,
-   "ecarte": 35,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 29,
-   "location": 1,
-   "prix_trop_haut": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 409.7,
-  "reseau": "iad",
-  "departement": "52",
-  "visitees": 50,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 18,
-   "ecarte": 29,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 27,
-   "titre_hors_cible:biens immobiliers a vendre": 1
-  },
-  "exemples": {
-   "location": "Maison 10 pièces de 298 m² à Jonchery (52000)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)",
-   "titre_hors_cible:biens immobiliers a vendre": "111 267 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 518.7,
-  "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 23,
-   "ecarte": 27,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 27
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 629.4,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 13,
    "ecarte": 37,
    "illisible": 0
   },
@@ -195,133 +124,242 @@
    "hors_perimetre": 37
   },
   "exemples": {
-   "hors_perimetre": "Demeure 10 pièces de 320 m² à saint père en retz (44320)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 629.4,
-  "reseau": "safti",
-  "part_secondes": 596
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 630.3,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 632.1,
-  "reseau": "safti",
-  "n": 28766,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 632.4,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 632.6,
-  "reseau": "safti",
-  "connues": 10905
- },
- {
-  "etape": "departement",
-  "seconde": 833.5,
-  "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 17,
-  "tronquee": true,
-  "etats": {
-   "garde": 17,
-   "vendu": 0,
-   "ecarte": 33,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 31,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 989.0,
-  "reseau": "safti",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
-   "vendu": 1,
-   "ecarte": 41,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 36,
-   "prix_trop_haut": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
-   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1133.5,
-  "reseau": "safti",
-  "departement": "50",
+  "seconde": 502.0,
+  "reseau": "iad",
+  "departement": "88",
   "visitees": 50,
   "gardes": 4,
   "tronquee": true,
   "etats": {
    "garde": 4,
-   "vendu": 1,
-   "ecarte": 43,
-   "illisible": 2
+   "vendu": 9,
+   "ecarte": 37,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 42
+   "hors_perimetre": 37
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
-   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1227.0,
-  "reseau": "safti",
-  "departement": "62",
-  "visitees": 19,
-  "gardes": 12,
+  "seconde": 603.8,
+  "reseau": "iad",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 2,
-   "ecarte": 5,
+   "garde": 0,
+   "vendu": 8,
+   "ecarte": 42,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5
+   "titre_hors_cible:appartement": 21,
+   "location": 5,
+   "hors_perimetre": 13,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 37 m² à Château-Thierry (02400)",
+   "location": "Maison 3 pièces de 11 m² à Saint-Quentin (02100)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Domaine 10 pièces de 327 m² à Château-Thierry (02400)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 709.9,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 8,
+   "ecarte": 42,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 42
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 2 pièces de 32 m² à SAINT LAURENT DE LA CABRERISSE (11220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 731.0,
+  "reseau": "iad",
+  "departement": "10",
+  "visitees": 10,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 2,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 731.0,
+  "reseau": "safti",
+  "part_secondes": 597
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 731.6,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 732.7,
+  "reseau": "safti",
+  "n": 28850,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 733.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 733.5,
+  "reseau": "safti",
+  "connues": 10966
+ },
+ {
+  "etape": "departement",
+  "seconde": 876.5,
+  "reseau": "safti",
+  "departement": "70",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 3,
+   "ecarte": 39,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 39
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1010.6,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 1,
+   "ecarte": 44,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 44
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1130.7,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 1,
+   "ecarte": 48,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 48
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1252.9,
+  "reseau": "safti",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 0,
+   "ecarte": 47,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 47
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1329.0,
+  "reseau": "safti",
+  "departement": "51",
+  "visitees": 30,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 1,
+   "ecarte": 29,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 29
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 3 pièces à Artignosc-Sur-Verdon 83630 : 65m², prix 165 000 €. Réf : 1578743"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.0,
-  "gardes": 48
+  "seconde": 1329.0,
+  "gardes": 27
  }
 ]
