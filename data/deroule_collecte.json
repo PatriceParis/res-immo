@@ -2,437 +2,361 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "Lorn Habitat",
-   "secondes": 26,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 355,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Accueil - Lor'n Habitat Agence immobilière Custines"
-  },
-  {
-   "agence": "Lotz",
-   "secondes": 75,
-   "pages": 17,
+   "agence": "OXIA Rouen",
+   "secondes": 99,
+   "pages": 32,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 31,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
-   "motifs": {
-    "titre_hors_cible:appartement": 4,
-    "titre_hors_cible:parking": 2,
-    "titre_hors_cible:loft": 1,
-    "titre_hors_cible:local commercial": 2
-   }
-  },
-  {
-   "agence": "Maison Ancienne du Bessin",
-   "secondes": 70,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 4,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "motifs": {
-    "titre_hors_cible:biens a vendre": 1
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Maison France Style",
-   "secondes": 109,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 45,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 262,
-   "sitemap": "ok 262",
-   "motifs": {
-    "titre_hors_cible:maison neuve": 40,
-    "titre_hors_cible:terrain": 5
-   }
-  },
-  {
-   "agence": "Maison du Perche",
-   "secondes": 62,
-   "pages": 10,
-   "gardes": 4,
-   "vendus": 3,
-   "ecartes": 2,
+   "vendus": 2,
+   "ecartes": 21,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 15,
-   "sitemap_dates": 97,
-   "sitemap": "ok 97",
-   "illisible_exemple": {
-    "url": "https://www.maisonduperche.fr/iwp_type/maison/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison ⋆ Maison du Perche",
-    "octets": 107298
-   },
+   "adresses_ecartees": 6,
+   "sitemap": "ok 197",
    "motifs": {
+    "titre_hors_cible:murs commerciaux": 1,
+    "titre_hors_cible:appartement": 13,
     "prix_trop_haut": 1,
-    "titre_hors_cible:terrain constructible": 1
+    "titre_hors_cible:loft": 1,
+    "titre_hors_cible:studio": 3,
+    "titre_hors_cible:parking": 1,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "illisible_exemple": {
+    "url": "https://www.oxia.fr/biens/parking-a-vendre-paris-19e-porte-de-la-villette-2776",
+    "cause": "aucune annonce lue",
+    "titre": "Parking à vendre - Paris 19e - Porte de la Villette - oxia",
+    "octets": 67325
    }
   },
   {
-   "agence": "Maisons Arianne",
-   "secondes": 131,
-   "pages": 45,
-   "gardes": 0,
+   "agence": "Office B.",
+   "secondes": 44,
+   "pages": 8,
+   "gardes": 6,
    "vendus": 0,
-   "ecartes": 45,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "ok 23",
+   "adresses_ecartees": 4,
+   "sitemap_dates": 23,
+   "motifs": {
+    "titre_hors_cible:appartement": 2
+   }
+  },
+  {
+   "agence": "Opidom",
+   "secondes": 31,
+   "pages": 5,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 1,
-   "sitemap_dates": 53,
-   "sitemap": "ok 53",
+   "sitemap": "ok 5",
    "motifs": {
-    "titre_hors_cible:votre maison": 45
+    "prix_trop_haut": 1,
+    "ni_surface_ni_prix_credible": 1
    }
   },
   {
-   "agence": "Maisons Nobless",
-   "secondes": 45,
-   "pages": 12,
-   "gardes": 8,
+   "agence": "Orpi",
+   "secondes": 44,
+   "pages": 6,
+   "gardes": 6,
    "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 174,
-   "sitemap": "ok 174",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 1,
-    "titre_hors_cible:annonces": 2,
-    "titre_hors_cible:maison + terrain": 1
-   }
-  },
-  {
-   "agence": "Manson",
-   "secondes": 213,
-   "pages": 28,
-   "gardes": 8,
-   "vendus": 20,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 20,
-   "sitemap": "ok 92"
+   "sitemap": "ok 162"
   },
   {
-   "agence": "Marc Foujols",
-   "secondes": 77,
-   "pages": 22,
+   "agence": "Orpi",
+   "secondes": 107,
+   "pages": 11,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 14,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 531,
-   "sitemap": "ok 531",
-   "motifs": {
-    "titre_hors_cible:appartement": 7,
-    "prix_trop_haut": 4,
-    "ni_surface_ni_prix_credible": 3
-   }
-  },
-  {
-   "agence": "Martel Expertises",
-   "secondes": 7,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "illisible_exemple": {
-    "url": "https://www.martel-expertises.fr/nos-expertises/immobilier/biens-residentiels",
-    "cause": "aucune annonce lue",
-    "titre": "Expertise immobilière appartement et maison | Martel Expertises",
-    "octets": 195995
-   }
-  },
-  {
-   "agence": "Mathis Mazon",
-   "secondes": 94,
-   "pages": 10,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap": "ok 10",
-   "motifs": {
-    "titre_hors_cible:parking": 1,
-    "titre_hors_cible:immeuble de rapport": 1,
-    "titre_hors_cible:local professionnel": 2
-   }
-  },
-  {
-   "agence": "Meet Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
-  },
-  {
-   "agence": "Michaël Zingraf",
-   "secondes": 81,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 10,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap_dates": 1555,
-   "sitemap": "ok 1556",
-   "motifs": {
-    "prix_trop_haut": 9,
-    "titre_hors_cible:appartement": 1
-   }
-  },
-  {
-   "agence": "Michel et Neumayer",
-   "secondes": 24,
-   "pages": 4,
-   "gardes": 3,
-   "vendus": 0,
+   "vendus": 2,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap_dates": 4,
-   "sitemap": "ok 4",
+   "adresses_ecartees": 3,
+   "sitemap": "ok 12",
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "titre_hors_cible:terrain a batir": 1
    }
   },
   {
-   "agence": "Mikit Moncel Les Luneville",
-   "secondes": 42,
-   "pages": 13,
+   "agence": "Ozenne immobilier",
+   "secondes": 91,
+   "pages": 45,
    "gardes": 0,
-   "vendus": 0,
-   "ecartes": 10,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 37,
-   "sitemap_dates": 13,
-   "sitemap": "ok 13",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 9,
-    "titre_hors_cible:maison neuve": 1
-   },
-   "illisible_exemple": {
-    "url": "https://www.mikit.fr/maison-individuelle/lorie-maison-de-plain-pied-contemporaine/",
-    "cause": "aucune annonce lue",
-    "titre": "Construction d'une maison de plain-pied contemporaine - Maison en L - Mikit",
-    "octets": 257736
-   }
-  },
-  {
-   "agence": "Mon Agence Immo",
-   "secondes": 78,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 7,
+   "vendus": 27,
+   "ecartes": 18,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 57,
-   "sitemap": "ok 57",
+   "adresses_ecartees": 3,
+   "sitemap_dates": 94,
+   "sitemap": "ok 94",
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:local commercial": 1,
-    "prix_trop_haut": 5
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:appartement": 7,
+    "prix_trop_haut": 7,
+    "titre_hors_cible:studio": 1,
+    "ni_surface_ni_prix_credible": 1
    },
    "vendus_dans_l_adresse": 1
   },
   {
-   "agence": "Mon Saint-André",
-   "secondes": 53,
-   "pages": 19,
-   "gardes": 3,
-   "vendus": 13,
+   "agence": "PBH Immo",
+   "secondes": 70,
+   "pages": 10,
+   "gardes": 7,
+   "vendus": 1,
    "ecartes": 2,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 60,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "motifs": {
-    "titre_hors_cible:13 annonces": 1,
-    "titre_hors_cible:nos biens": 1
-   },
-   "vendus_dans_l_adresse": 1,
-   "illisible_exemple": {
-    "url": "https://www.msa-immobilier.fr/vente/11-mesnil-raoul/terrain-a-batir/331-terrain-a-batir-mesnil-raoul-terraon-hors-lotissement-602m",
-    "cause": "aucune annonce lue",
-    "titre": "Vente terrain � batir Mesnil-Raoul 0m² € | Mon Saint André",
-    "octets": 179318
-   }
-  },
-  {
-   "agence": "Morvan Immobilier",
-   "secondes": 5,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "sans <loc>",
-   "index_statut": 200,
-   "index_titre": "Tümbet Giriş 2026 – Güvenli Giriş, Bonus ve Casino İncelemes"
-  },
-  {
-   "agence": "Morvan Patrimoine",
-   "secondes": 8,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "sitemap": "aucune page de bien",
    "index_statut": 200,
-   "index_titre": "Morvan Patrimoine, agences immobilières Château Chinon et St"
+   "index_titre": "Accueil | PBH",
+   "motifs": {
+    "titre_hors_cible:appartement": 2
+   }
   },
   {
-   "agence": "Moselis OPH Moselle",
-   "secondes": 14,
-   "pages": 0,
-   "gardes": 0,
+   "agence": "Cap Immobilier",
+   "secondes": 116,
+   "pages": 14,
+   "gardes": 6,
+   "vendus": 2,
+   "ecartes": 6,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap": "ok 32",
+   "motifs": {
+    "titre_hors_cible:appartement": 6
+   }
+  },
+  {
+   "agence": "Carrara Immobilier",
+   "secondes": 63,
+   "pages": 15,
+   "gardes": 7,
+   "vendus": 1,
+   "ecartes": 6,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 17,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:parkings": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "prix_trop_haut": 3
+   },
+   "illisible_exemple": {
+    "url": "https://www.carrara.immo/vente-immeuble/1",
+    "cause": "aucune annonce lue",
+    "titre": "Vente d'immeubles | Carrara Immobilier",
+    "octets": 159538
+   }
+  },
+  {
+   "agence": "Casa",
+   "secondes": 85,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 8,
+   "sitemap_dates": 388,
+   "sitemap": "ok 388",
+   "motifs": {
+    "prix_trop_haut": 1,
+    "titre_hors_cible:maison neuve": 1
+   }
+  },
+  {
+   "agence": "Causeret Immobilier",
+   "secondes": 42,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 96,
+   "sitemap": "ok 96",
+   "motifs": {
+    "prix_trop_haut": 1
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 49,
+   "pages": 6,
+   "gardes": 6,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "adresses_ecartees": 69,
-   "index_statut": 200,
-   "index_titre": "Moselis | Location / Vente de Logements Sociaux & Locaux | O"
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 67,
+   "sitemap": "ok 68"
   },
   {
-   "agence": "NC Immo",
-   "secondes": 61,
-   "pages": 12,
-   "gardes": 4,
-   "vendus": 4,
-   "ecartes": 3,
+   "agence": "Century 21",
+   "secondes": 66,
+   "pages": 18,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 12,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 54,
+   "sitemap": "ok 54",
+   "motifs": {
+    "titre_hors_cible:appartement": 12
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 124,
+   "pages": 38,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 30,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 62,
+   "sitemap": "ok 62",
+   "motifs": {
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:appartement": 26,
+    "prix_trop_haut": 1,
+    "location": 2
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 91,
+   "pages": 34,
+   "gardes": 7,
+   "vendus": 1,
+   "ecartes": 26,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 33,
+   "sitemap": "ok 34",
+   "motifs": {
+    "titre_hors_cible:appartement": 25,
+    "titre_hors_cible:annonces": 1
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 73,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 7,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 12,
-   "sitemap": "ok 12",
-   "illisible_exemple": {
-    "url": "https://ncimmo71.fr/biens-vendus/",
-    "cause": "aucune annonce lue",
-    "titre": "BIENS VENDUS - NC immo - Agence immobilière à Montchanin 71",
-    "octets": 68139
-   },
+   "adresses_ecartees": 2,
+   "sitemap_dates": 65,
+   "sitemap": "ok 65",
    "motifs": {
-    "titre_hors_cible:appartement": 2,
-    "titre_hors_cible:appartements": 1
+    "titre_hors_cible:appartement": 6,
+    "location": 1
+   },
+   "illisible_exemple": {
+    "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/16786560619/",
+    "cause": "aucune annonce lue",
+    "titre": "Location d’appartement à Beaune – C21 – Consultez nos annonces de locations d’appartement à Beaune",
+    "octets": 247556
    }
   },
   {
-   "agence": "Nathalie Forest",
-   "secondes": 105,
-   "pages": 45,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 37,
-   "illisibles": 5,
+   "agence": "Century 21",
+   "secondes": 79,
+   "pages": 21,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 12,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 166,
-   "sitemap_dates": 194,
-   "sitemap": "ok 194",
+   "adresses_ecartees": 6,
+   "sitemap_dates": 334,
+   "sitemap": "ok 335",
    "motifs": {
-    "ni_surface_ni_prix_credible": 4,
-    "titre_hors_cible:appartement": 11,
-    "prix_trop_haut": 19,
-    "titre_hors_cible:maisons et villas": 3
-   },
-   "illisible_exemple": {
-    "url": "https://www.nathalieforest-sothebysrealty.com/fr/vente-propriete-wazemmes-immobilier-lille/&amp;new_research=1",
-    "cause": "aucune annonce lue",
-    "titre": "Immobilier Wazemmes",
-    "octets": 261323
+    "titre_hors_cible:appartement": 12
    }
   },
   {
-   "agence": "Normandie maisons individuelles",
-   "secondes": 64,
+   "agence": "Century 21",
+   "secondes": 77,
+   "pages": 17,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 9,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 70,
+   "sitemap": "ok 70",
+   "motifs": {
+    "titre_hors_cible:appartement": 9
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 62,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -440,42 +364,81 @@
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "ok 24",
-   "sitemap_dates": 24
+   "sitemap_statut": 200,
+   "sitemap_dates": 93,
+   "sitemap": "ok 93"
   },
   {
-   "agence": "Novadimm",
-   "secondes": 142,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 8,
+   "agence": "Century 21",
+   "secondes": 119,
+   "pages": 45,
+   "gardes": 7,
+   "vendus": 1,
+   "ecartes": 37,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 37,
-   "sitemap": "ok 103",
+   "adresses_ecartees": 6,
+   "sitemap_dates": 211,
+   "sitemap": "ok 212",
    "motifs": {
-    "titre_hors_cible:appartement": 7,
-    "titre_hors_cible:appartements": 1
+    "titre_hors_cible:appartement": 34,
+    "ni_surface_ni_prix_credible": 1,
+    "titre_hors_cible:terrain": 1,
+    "titre_hors_cible:parking": 1
    }
   },
   {
-   "agence": "Nuances Immobilières",
-   "secondes": 99,
-   "pages": 10,
-   "gardes": 0,
-   "vendus": 10,
+   "agence": "Century 21",
+   "secondes": 74,
+   "pages": 21,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 12,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 73,
+   "sitemap": "ok 74",
+   "motifs": {
+    "titre_hors_cible:appartement": 12
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 60,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 30,
+   "sitemap": "ok 30",
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:terrain": 3
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 16,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 301,
-   "sitemap_dates": 36,
-   "sitemap": "ok 36"
+   "sitemap_dates": 21,
+   "sitemap": "ok 21"
   }
  ]
 }
