@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 197.9,
-  "departements": 30,
-  "communes": 15093
+  "seconde": 46.1,
+  "departements": 33,
+  "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 198.0,
+  "seconde": 46.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,290 +21,305 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 198.0,
+  "seconde": 46.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 199.8,
+  "seconde": 48.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 201.2,
+  "seconde": 49.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 201.2,
+  "seconde": 49.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 201.5,
+  "seconde": 49.8,
   "reseau": "capifrance",
-  "connues": 11104
+  "connues": 11149
  },
  {
   "etape": "reseau_debut",
-  "seconde": 201.5,
+  "seconde": 49.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 201.8,
+  "seconde": 50.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 219.7,
+  "seconde": 63.5,
   "reseau": "iad",
   "n": 93859,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 221.7,
+  "seconde": 65.4,
   "reseau": "iad",
-  "departements": 30
+  "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 222.0,
+  "seconde": 65.7,
   "reseau": "iad",
-  "connues": 11104
+  "connues": 11149
  },
  {
   "etape": "departement",
-  "seconde": 369.6,
+  "seconde": 178.8,
   "reseau": "iad",
-  "departement": "89",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 5,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 21,
-   "ecarte": 24,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3,
-   "hors_perimetre": 21
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 45 m² à Armeau (89500)",
-   "hors_perimetre": "Maison de ville 10 pièces de 232 m² à Saint-Jean-d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 475.1,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 11,
-   "ecarte": 39,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 38,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 104 m² à Beaulieu sur Layon (49750)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 580.3,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 6,
-   "ecarte": 44,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 2,
-   "hors_perimetre": 40,
-   "location": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
-   "hors_perimetre": "Maison 4 pièces de 81 m² à Talmont-Saint-Hilaire (85440)",
-   "location": "Maison de ville 6 pièces de 198 m² à Blâmont (54450)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 762.7,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 11,
-  "tronquee": true,
-  "etats": {
-   "garde": 11,
-   "vendu": 17,
-   "ecarte": 21,
+   "garde": 2,
+   "vendu": 14,
+   "ecarte": 33,
    "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 17,
-   "location": 2,
-   "prix_trop_haut": 2
+   "hors_perimetre": 33
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
-   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
+   "hors_perimetre": "Maison 3 pièces de 90 m² à La Celle-les-Bordes (78720)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 812.9,
+  "seconde": 286.5,
   "reseau": "iad",
-  "departement": "28",
-  "visitees": 17,
+  "departement": "39",
+  "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 3,
-   "ecarte": 13,
+   "vendu": 17,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 12
+   "hors_perimetre": 28,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
-   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Maison de campagne 11 pièces de 405 m² à Les Rousses (39220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 398.9,
+  "reseau": "iad",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 14,
+   "ecarte": 34,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 28,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 125 m² à Marly (59770)",
+   "hors_perimetre": "Grange 1 pièce de 100 m² à Chapelle-Viviers (86300)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 534.4,
+  "reseau": "iad",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
+   "vendu": 28,
+   "ecarte": 16,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 6,
+   "prix_trop_haut": 6,
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 109 m² à Grand-Fort-Philippe (59153)",
+   "prix_trop_haut": "Maison 10 pièces de 250 m² à Lille (59000)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 646.7,
+  "reseau": "iad",
+  "departement": "72",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 27,
+   "ecarte": 20,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 20
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 10 pièces de 208 m² à Champagne-sur-Seine (77430)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 648.7,
+  "reseau": "iad",
+  "departement": "76",
+  "visitees": 1,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 812.9,
+  "seconde": 648.7,
   "reseau": "safti",
-  "part_secondes": 585
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 813.7,
+  "seconde": 649.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 815.5,
+  "seconde": 650.5,
   "reseau": "safti",
   "n": 28888,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 816.2,
+  "seconde": 651.2,
   "reseau": "safti",
-  "departements": 30
+  "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 816.5,
+  "seconde": 651.4,
   "reseau": "safti",
-  "connues": 11104
+  "connues": 11149
  },
  {
   "etape": "departement",
-  "seconde": 1013.9,
+  "seconde": 785.4,
   "reseau": "safti",
-  "departement": "76",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 13,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 3,
-   "ecarte": 34,
+   "garde": 3,
+   "vendu": 0,
+   "ecarte": 47,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 29
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
-   "hors_perimetre": "Vente de maison 4 pièces à Brive-La-Gaillarde 19100 : 105m², prix 240 000 €. Réf : 1704998"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1230.0,
-  "reseau": "safti",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 1,
-   "ecarte": 36,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 27,
-   "prix_trop_haut": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Annecy-Le-Vieux 74940 : 80m², prix 895 000 €. Réf : 1641377",
-   "prix_trop_haut": "Vente de maison 10 pièces à Arromanches-Les-Bains 14117 : 260m², prix 718 000 €. Réf : 1716723"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1398.8,
-  "reseau": "safti",
-  "departement": "54",
-  "visitees": 49,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
-   "vendu": 2,
-   "ecarte": 39,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 38,
+   "hors_perimetre": 46,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à Andilly 17230 : 148m², prix 430 000 €. Réf : 1673313",
-   "prix_trop_haut": "Vente de maison 9 pièces à Eulmont 54690 : 240m², prix 895 000 €. Réf : 1694158"
+   "hors_perimetre": "Vente de maison 7 pièces à Acheres 78260 : 121m², prix 384 000 €. Réf : 1001813",
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1046.7,
+  "reseau": "safti",
+  "departement": "55",
+  "visitees": 50,
+  "gardes": 25,
+  "tronquee": true,
+  "etats": {
+   "garde": 25,
+   "vendu": 0,
+   "ecarte": 25,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 24
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
+   "hors_perimetre": "Vente de maison 4 pièces à Claye-Souilly 77410 : 89m², prix 332 000 €. Réf : 1481524"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1247.6,
+  "reseau": "safti",
+  "departement": "57",
+  "visitees": 41,
+  "gardes": 21,
+  "tronquee": true,
+  "etats": {
+   "garde": 21,
+   "vendu": 5,
+   "ecarte": 15,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 14,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Aspach-Le-Bas 68700 : 86m², prix 99 000 €. Réf : 1568050",
+   "prix_trop_haut": "Vente de maison 6 pièces à Crehange 57690 : 1 635m², prix 1 445 000 €. Réf : 1628311"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1398.8,
-  "gardes": 51
+  "seconde": 1247.6,
+  "gardes": 63
  }
 ]
