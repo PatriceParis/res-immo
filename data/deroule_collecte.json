@@ -1,167 +1,32 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "ACI Agence Capital Immobilier",
-   "secondes": 241,
-   "pages": 18,
-   "gardes": 6,
+   "agence": "Agence Joly",
+   "secondes": 11,
+   "pages": 4,
+   "gardes": 0,
    "vendus": 0,
-   "ecartes": 11,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 67,
-   "sitemap": "ok 67",
-   "motifs": {
-    "titre_hors_cible:appartement": 2,
-    "prix_trop_haut": 1,
-    "titre_hors_cible:local commercial": 1,
-    "titre_hors_cible:murs commerciaux": 1,
-    "titre_hors_cible:viager": 1,
-    "titre_hors_cible:fonds de commerce": 3,
-    "titre_hors_cible:studio": 1,
-    "titre_hors_cible:terrain a batir": 1
-   },
-   "illisible_exemple": {
-    "url": "https://agence-aci.com/type-propriete/maison-villa/",
-    "cause": "titre = nom du site",
-    "titre": "Archives des Maison/Villa - ACI AGENCE CAPITAL IMMOBILIER",
-    "octets": 459925
-   }
-  },
-  {
-   "agence": "AS Immobilier",
-   "secondes": 82,
-   "pages": 15,
-   "gardes": 8,
-   "vendus": 7,
-   "ecartes": 0,
-   "illisibles": 0,
+   "ecartes": 1,
+   "illisibles": 3,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 46,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28"
-  },
-  {
-   "agence": "Abbesses Immobilier",
-   "secondes": 138,
-   "pages": 45,
-   "gardes": 4,
-   "vendus": 37,
-   "ecartes": 3,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 88,
-   "sitemap_dates": 99,
-   "sitemap": "ok 99",
-   "motifs": {
-    "prix_trop_haut": 1,
-    "titre_hors_cible:recherche": 1,
-    "ni_surface_ni_prix_credible": 1
-   },
+   "sitemap_dates": 4,
+   "sitemap": "ok 4",
    "illisible_exemple": {
-    "url": "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/terrain-a-batir/1539-saint-etienne-les-remiremont-terrain-d-environ-2-248-m",
+    "url": "https://www.agence-joly.com/biens-a-vendre-epron.html",
     "cause": "aucune annonce lue",
-    "titre": "SAINT ETIENNE LES REMIREMONT : Terrain d'environ 2 248 m² | ABBESSES IMMOBILIER",
-    "octets": 235437
+    "titre": "Biens à vendre à Épron : maisons et appartements avec Agence JOLY",
+    "octets": 224994
    },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Abithéa",
-   "secondes": 82,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 179,
-   "sitemap_dates": 592,
-   "sitemap": "ok 592",
    "motifs": {
-    "titre_hors_cible:biens immobiliers": 1,
-    "prix_trop_haut": 1,
     "titre_hors_cible:viager": 1
    }
   },
   {
-   "agence": "Abrinor Immobilier",
-   "secondes": 68,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 294,
-   "sitemap_dates": 271,
-   "sitemap": "ok 271",
-   "motifs": {
-    "prix_trop_haut": 4,
-    "titre_hors_cible:parking": 1
-   }
-  },
-  {
-   "agence": "Accord Immobilier",
-   "secondes": 78,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 118,
-   "sitemap_dates": 96,
-   "sitemap": "ok 96",
-   "motifs": {
-    "titre_hors_cible:appartement": 5,
-    "titre_hors_cible:appart": 2,
-    "titre_hors_cible:murs commerciaux": 2
-   },
-   "illisible_exemple": {
-    "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/dommartin-les-remiremont/bien/24306/exclu-dommartin-les-rt-terrain-constructible-de-900-m-sup2-avec-tr-egraves-belle-exposition-.html",
-    "cause": "aucune annonce lue",
-    "titre": "EXCLU : Dommartin les Rt Terrain constructible de 900 m² avec très belle exposition",
-    "octets": 53880
-   }
-  },
-  {
-   "agence": "Action Vente 37",
-   "secondes": 84,
-   "pages": 28,
-   "gardes": 3,
-   "vendus": 22,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 28",
-   "motifs": {
-    "titre_hors_cible:recherche": 1,
-    "titre_hors_cible:immeuble de rapport": 1,
-    "titre_hors_cible:appartement": 1
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "AdressImmo",
-   "secondes": 3,
+   "agence": "Agence Mosellane Immobilière",
+   "secondes": 6,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -169,183 +34,284 @@
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "sans <loc>",
-   "index_statut": 200,
-   "index_titre": "Accès interdit"
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": "Loading https://www.mosellane-immobiliere.com/"
   },
   {
-   "agence": "Agence Afico",
-   "secondes": 175,
-   "pages": 45,
-   "gardes": 8,
-   "vendus": 33,
-   "ecartes": 2,
-   "illisibles": 2,
+   "agence": "Agence Olleon",
+   "secondes": 5,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 93,
-   "sitemap_dates": 67,
-   "sitemap": "ok 67",
-   "illisible_exemple": {
-    "url": "https://www.afico.fr/iwp_type/maison-villa/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison/Villa - Afico",
-    "octets": 61296
-   },
+   "adresses_ecartees": 5,
+   "sitemap_dates": 1,
+   "sitemap": "ok 1",
    "motifs": {
-    "prix_trop_haut": 1,
-    "titre_hors_cible:appartements": 1
+    "titre_hors_cible:achat & vente": 1
    }
   },
   {
-   "agence": "Agence Albert 1er",
-   "secondes": 247,
-   "pages": 40,
-   "gardes": 2,
-   "vendus": 38,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 146,
-   "sitemap": "ok 106"
-  },
-  {
-   "agence": "Agence Armance Immobilier",
-   "secondes": 65,
-   "pages": 8,
-   "gardes": 7,
+   "agence": "Agence Saint-Joseph",
+   "secondes": 117,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 1,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Armance immobilier"
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap": "ok 140"
   },
   {
-   "agence": "Agence Blancoise",
-   "secondes": 76,
+   "agence": "Agence de l'étoile",
+   "secondes": 135,
    "pages": 10,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
+   "vendus": 2,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 49,
+   "sitemap": "ok 46"
+  },
+  {
+   "agence": "Agence de la bourse",
+   "secondes": 111,
+   "pages": 20,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 10,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 46,
-   "sitemap": "ok 46",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
+   "adresses_ecartees": 22,
+   "sitemap_dates": 64,
+   "sitemap": "ok 64",
    "illisible_exemple": {
-    "url": "https://www.agenceblancoise.com/biens-vendus/1",
+    "url": "https://agencedelabourse.com/property/bar-brasserie-en-centre-commercial-a-vendre/",
     "cause": "aucune annonce lue",
-    "titre": "Biens vendus | Agence Blancoise",
-    "octets": 169007
+    "titre": "BAR BRASSERIE EN CENTRE COMMERCIAL A VENDRE - Agence de la bourse | Agence immobilière Le Havre",
+    "octets": 257893
+   },
+   "motifs": {
+    "ni_surface_ni_prix_credible": 10
    }
   },
   {
-   "agence": "Agence Boilot",
-   "secondes": 24,
-   "pages": 11,
+   "agence": "Agence des Lacs",
+   "secondes": 7,
+   "pages": 0,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 11,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 404,
    "sitemap": "HTTP 404",
    "index_statut": 200,
-   "index_titre": "Agence immobilière à Château-Thierry 02 : vente et location ",
-   "illisible_exemple": {
-    "url": "https://www.agence-boilot.net/vente-maison-viffort.php",
-    "cause": "aucune annonce lue",
-    "titre": "Vente de maison à Viffort, dans l’Aisne (02)&nbsp;: AGENCE BOILOT",
-    "octets": 33293
+   "index_titre": "Agence immobilière des Lacs à Brienne le Chateau."
+  },
+  {
+   "agence": "Agence du Terroir",
+   "secondes": 120,
+   "pages": 60,
+   "gardes": 0,
+   "vendus": 20,
+   "ecartes": 40,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap_dates": 124,
+   "sitemap": "ok 124",
+   "motifs": {
+    "page_catalogue": 40
    }
   },
   {
-   "agence": "Agence Creil Immo",
-   "secondes": 44,
-   "pages": 21,
-   "gardes": 0,
+   "agence": "Alain Guyony Immobilier",
+   "secondes": 100,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 21,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "motifs": {
-    "titre_indigent": 1,
-    "prix_trop_haut": 8,
-    "titre_hors_cible:recherche": 2,
-    "titre_hors_cible:terrain constructible": 1,
-    "titre_hors_cible:immeuble de rapport": 1,
-    "ni_surface_ni_prix_credible": 5,
-    "titre_hors_cible:loft": 1,
-    "titre_hors_cible:appartements": 1,
-    "titre_hors_cible:maison neuve": 1
-   }
+   "adresses_ecartees": 12,
+   "sitemap": "ok 109"
   },
   {
-   "agence": "Agence Du Centre",
-   "secondes": 86,
-   "pages": 12,
+   "agence": "Alexandra Cablat",
+   "secondes": 83,
+   "pages": 11,
    "gardes": 8,
-   "vendus": 1,
+   "vendus": 2,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 132,
+   "sitemap_dates": 250,
+   "sitemap": "ok 250",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "Alliance Immobilier",
+   "secondes": 104,
+   "pages": 18,
+   "gardes": 8,
+   "vendus": 7,
    "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 51,
-   "sitemap_dates": 51,
-   "sitemap": "ok 51",
+   "adresses_ecartees": 158,
+   "sitemap_dates": 137,
+   "sitemap": "ok 137",
    "motifs": {
     "titre_indigent": 1,
-    "titre_hors_cible:27 maisons": 1,
-    "prix_trop_haut": 1
-   },
-   "vendus_dans_l_adresse": 1
+    "titre_hors_cible:72 maisons": 1,
+    "titre_hors_cible:parkings": 1
+   }
   },
   {
-   "agence": "Agence Greub",
-   "secondes": 106,
-   "pages": 8,
+   "agence": "Amrimmo",
+   "secondes": 245,
+   "pages": 40,
+   "gardes": 1,
+   "vendus": 39,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 41,
+   "sitemap": "ok 126"
+  },
+  {
+   "agence": "Angledroit.immo",
+   "secondes": 72,
+   "pages": 10,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap": "ok 10"
+   "adresses_ecartees": 18,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "motifs": {
+    "location": 2
+   }
   },
   {
-   "agence": "Agence Immobilière Océane Cric",
-   "secondes": 78,
-   "pages": 6,
-   "gardes": 6,
+   "agence": "Foch immobilier",
+   "secondes": 150,
+   "pages": 39,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 30,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "index_statut": 200,
+   "index_titre": "Immobilier Le Havre annonces immobilières en Normandie 76 | ",
+   "motifs": {
+    "titre_hors_cible:appartement": 24,
+    "ni_surface_ni_prix_credible": 6
+   }
+  },
+  {
+   "agence": "Fontette Immobilier",
+   "secondes": 164,
+   "pages": 15,
+   "gardes": 8,
+   "vendus": 5,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 42,
+   "sitemap": "ok 71",
+   "motifs": {
+    "prix_trop_haut": 2
+   }
+  },
+  {
+   "agence": "France4U",
+   "secondes": 54,
+   "pages": 23,
+   "gardes": 4,
    "vendus": 0,
+   "ecartes": 19,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 19
+   }
+  },
+  {
+   "agence": "GIN Immobilier",
+   "secondes": 94,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 112,
+   "sitemap_dates": 197,
+   "sitemap": "ok 197",
+   "motifs": {
+    "titre_hors_cible:110 annonces": 1,
+    "titre_hors_cible:terrain a batir": 3
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "GSM Immobilier",
+   "secondes": 106,
+   "pages": 15,
+   "gardes": 1,
+   "vendus": 14,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 61,
-   "sitemap": "ok 27"
+   "adresses_ecartees": 96,
+   "sitemap": "ok 236"
   }
  ]
 }
