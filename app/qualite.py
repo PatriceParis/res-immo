@@ -169,8 +169,16 @@ _TYPES_DE_RUBRIQUE = (
     r"|viagers?|autres?|divers"
 )
 _URL_RUBRIQUE = re.compile(
-    r"^(?:/[a-z0-9-]+)*/(?:ventes?|achat|acheter|a-vendre|vendre|nos-ventes|immobilier)"
-    r"(?:/[a-z0-9-]+)*/(?:" + _TYPES_DE_RUBRIQUE + r")/?$", re.IGNORECASE)
+    r"^(?:/[a-z0-9-]+)*/(?:"
+    # « /vente/maison », « /immobilier/vente/maison-ancienne »
+    r"(?:ventes?|achat|acheter|a-vendre|vendre|nos-ventes|immobilier)(?:/[a-z0-9-]+)*"
+    r"/(?:" + _TYPES_DE_RUBRIQUE + r")"
+    # « /vente-appartement/1 », « /a-vendre-proprietes/2 » : la rubrique et le
+    # numéro de sa page — deux biens servis le 14 octobre 2026, l'un titré
+    # « Vente d' ». Un libellé d'annonce mêle lettres et chiffres ; un numéro
+    # seul est une page.
+    r"|(?:ventes?|achat|acheter|a-vendre)-(?:" + _TYPES_DE_RUBRIQUE + r")/\d+"
+    r")/?$", re.IGNORECASE)
 # Le TYPE en tête du libellé : « appartement-t3-3-pieces-deauville-14800,VA4416 »,
 # « immeuble-de-rapport », « terrain-a-batir-vincelles », « vente-appartement-
 # lille-… », « 6537-appartement ». Le gabarit forge le libellé à partir du type
