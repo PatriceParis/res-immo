@@ -2,82 +2,189 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "Deletan Immobilier",
-   "secondes": 83,
-   "pages": 19,
+   "agence": "L'Hôtel Immobilier",
+   "secondes": 103,
+   "pages": 18,
    "gardes": 8,
    "vendus": 1,
    "ecartes": 9,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap_dates": 26,
+   "sitemap": "ok 26",
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "ni_surface_ni_prix_credible": 5,
+    "titre_hors_cible:investissement locatif": 1,
+    "titre_hors_cible:appartement": 1
+   }
+  },
+  {
+   "agence": "L'Immobilière Normande",
+   "secondes": 79,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 22,
+   "sitemap_dates": 126,
+   "sitemap": "ok 126"
+  },
+  {
+   "agence": "L'Immobilière du Loison",
+   "secondes": 16,
+   "pages": 2,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "motifs": {
+    "titre_hors_cible:annonces": 1
+   }
+  },
+  {
+   "agence": "L'immobilière Guignard",
+   "secondes": 108,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 69,
+   "sitemap": "ok 93"
+  },
+  {
+   "agence": "LH immo.com",
+   "secondes": 84,
+   "pages": 18,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 96,
+   "sitemap_dates": 69,
+   "sitemap": "ok 69",
+   "motifs": {
+    "titre_hors_cible:appartement": 5,
+    "location": 2,
+    "titre_indigent": 1
+   },
+   "illisible_exemple": {
+    "url": "https://www.lhimmo.com/iwp_offre/vente/",
+    "cause": "aucune annonce lue",
+    "titre": "Archives des Vente - LH immo",
+    "octets": 88607
+   }
+  },
+  {
+   "agence": "LOR Immobilier",
+   "secondes": 111,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 34",
-   "adresses_ecartees": 2,
-   "sitemap_dates": 34,
+   "adresses_ecartees": 20,
+   "sitemap": "ok 24",
    "motifs": {
-    "prix_trop_haut": 9
+    "titre_hors_cible:maison neuve": 1
    },
    "illisible_exemple": {
-    "url": "https://deletang-immobilier.com/nos-biens/hyper-centre-tours-appartement-t2-de-charme-129",
+    "url": "https://www.lorimmobilier.fr/vente/vente-maison-ansauville,LM288",
     "cause": "aucune annonce lue",
-    "titre": "Deletang Immobilier : des demeures d'exception",
-    "octets": 72667
+    "titre": "404 - Page introuvable",
+    "octets": 47717
    }
   },
   {
-   "agence": "Demeures du Perche et de Normandie",
-   "secondes": 95,
-   "pages": 27,
-   "gardes": 3,
-   "vendus": 18,
-   "ecartes": 3,
-   "illisibles": 3,
+   "agence": "La Bonne Adresse",
+   "secondes": 94,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 30,
-   "sitemap": "ok 30",
-   "illisible_exemple": {
-    "url": "https://demeures-perche-normandie.fr/demeures/propriete-a-vendre-mortagne-au-perche/",
-    "cause": "navigation : Error",
-    "titre": "",
-    "octets": 0
-   },
+   "adresses_ecartees": 7,
+   "sitemap_dates": 32,
+   "sitemap": "ok 32",
    "motifs": {
-    "titre_hors_cible:vendre sa ": 2,
-    "ni_surface_ni_prix_credible": 1
+    "titre_indigent": 1,
+    "prix_trop_haut": 1
    }
   },
   {
-   "agence": "Demonchy",
-   "secondes": 228,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 21,
-   "ecartes": 23,
-   "illisibles": 1,
+   "agence": "La Cif",
+   "secondes": 52,
+   "pages": 19,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 6,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 27,
-   "sitemap": "ok 72",
+   "adresses_ecartees": 36,
+   "sitemap_dates": 19,
+   "sitemap": "ok 19",
    "illisible_exemple": {
-    "url": "https://www.agence-demonchy.fr/nos-biens-vendus/",
+    "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre-1/soyez-recompense-en-parrainant-vos-amis-ou-votre-famille-copie",
     "cause": "aucune annonce lue",
-    "titre": "appartements, maisons, terrains vendu à Aumale,Poix de Picardie | %site_title%",
-    "octets": 151187
+    "titre": "Parrainer avec CIF Normandie, c'est simple et rapide !",
+    "octets": 92306
    },
    "motifs": {
-    "page_catalogue": 20,
-    "titre_hors_cible:fonds de commerce": 2,
-    "titre_hors_cible:murs commerciaux": 1
+    "titre_hors_cible:pourquoi choisir": 2,
+    "titre_hors_cible:maison neuve": 5,
+    "titre_hors_cible:appartement": 1
    }
   },
   {
-   "agence": "Dorimmo",
-   "secondes": 59,
+   "agence": "La Petite Agence.com",
+   "secondes": 96,
+   "pages": 15,
+   "gardes": 8,
+   "vendus": 2,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 96,
+   "sitemap": "ok 96",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "prix_trop_haut": 4
+   }
+  },
+  {
+   "agence": "La Vaux Immobilier",
+   "secondes": 133,
    "pages": 10,
    "gardes": 8,
    "vendus": 1,
@@ -86,346 +193,109 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 208,
-   "sitemap": "ok 208",
-   "motifs": {
-    "titre_hors_cible:52 annonces": 1
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Du Côté de Chez Vous",
-   "secondes": 100,
-   "pages": 40,
-   "gardes": 2,
-   "vendus": 8,
-   "ecartes": 30,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 98,
-   "sitemap_dates": 403,
-   "sitemap": "ok 403",
-   "motifs": {
-    "titre_indigent": 1,
-    "prix_trop_haut": 20,
-    "ni_surface_ni_prix_credible": 7,
-    "titre_hors_cible:appartement": 2
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "E&B Immo",
-   "secondes": 73,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 11,
-   "illisibles": 34,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 46,
-   "sitemap_dates": 118,
-   "sitemap": "ok 118",
-   "motifs": {
-    "titre_hors_cible:annonces": 10,
-    "titre_hors_cible:investissement locatif": 1
-   },
-   "illisible_exemple": {
-    "url": "https://www.ebimmo.com/immobilier/vente-maison/honfleur",
-    "cause": "aucune annonce lue",
-    "titre": "Maison à vendre Honfleur — Annonces vente maisons | E&amp;B Immo",
-    "octets": 42313
-   }
-  },
-  {
-   "agence": "Echinard",
-   "secondes": 7,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 429,
-   "index_titre": ""
-  },
-  {
-   "agence": "Eco Immo 60",
-   "secondes": 46,
-   "pages": 8,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 27,
-   "sitemap": "ok 27",
-   "motifs": {
-    "titre_hors_cible:37 annonces": 1,
-    "titre_hors_cible:villas et maisons": 1
-   }
-  },
-  {
-   "agence": "Ernoult Immobilier",
-   "secondes": 246,
-   "pages": 41,
-   "gardes": 1,
-   "vendus": 39,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 62",
-   "illisible_exemple": {
-    "url": "https://www.ernoult-immobilier.fr/vente/,VM382",
-    "cause": "aucune annonce lue",
-    "titre": "FREDERIQUE ERNOULT IMMOBILIER",
-    "octets": 813336
-   }
-  },
-  {
-   "agence": "Espace Pro",
-   "secondes": 80,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 95,
-   "sitemap_dates": 197,
-   "sitemap": "ok 197",
-   "motifs": {
-    "prix_trop_haut": 2,
-    "titre_hors_cible:viager": 1
-   }
-  },
-  {
-   "agence": "Espaces Atypiques",
-   "secondes": 84,
-   "pages": 12,
-   "gardes": 4,
-   "vendus": 1,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 13,
-   "sitemap": "ok 12",
-   "illisible_exemple": {
-    "url": "https://www.espaces-atypiques.com/architecture-et-inspiration/maison-atypique-cap-ferret-renovation/",
-    "cause": "aucune annonce lue",
-    "titre": "Visite d'une maison atypique rénovée au Cap Ferret par un architecte",
-    "octets": 160258
-   }
-  },
-  {
-   "agence": "Estime",
-   "secondes": 113,
-   "pages": 45,
-   "gardes": 5,
-   "vendus": 39,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 126,
-   "sitemap_dates": 56,
-   "sitemap": "ok 56",
-   "motifs": {
-    "titre_indigent": 1
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Flix'immo",
-   "secondes": 5,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "illisible_exemple": {
-    "url": "https://www.flix-immo.fr/fr/annonces-immobilieres",
-    "cause": "aucune annonce lue",
-    "titre": "Annonces immobilières Flixecourt – Flix’Immo",
-    "octets": 60975
-   }
-  },
-  {
-   "agence": "Flo Immobilier",
-   "secondes": 94,
-   "pages": 28,
-   "gardes": 8,
-   "vendus": 17,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 114,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
-   "vendus_dans_l_adresse": 1,
-   "motifs": {
-    "prix_trop_haut": 3
-   }
-  },
-  {
-   "agence": "France Pro Immobilier",
-   "secondes": 6,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 2,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2"
-  },
-  {
-   "agence": "Frère Immobilier",
-   "secondes": 71,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 45,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 37,
-   "sitemap": "ok 51"
-  },
-  {
-   "agence": "J.B. Immobilier",
-   "secondes": 63,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   }
-  },
-  {
-   "agence": "JF Meyer",
-   "secondes": 60,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 33,
-   "sitemap": "ok 33",
+   "adresses_ecartees": 15,
+   "sitemap_dates": 72,
+   "sitemap": "ok 74",
    "motifs": {
     "titre_hors_cible:terrain constructible": 1
    }
   },
   {
-   "agence": "Joubeaux Immobilier",
-   "secondes": 66,
-   "pages": 11,
+   "agence": "La Voile Immobilier",
+   "secondes": 154,
+   "pages": 18,
    "gardes": 8,
-   "vendus": 1,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 26,
-   "sitemap_dates": 46,
-   "sitemap": "ok 46",
-   "motifs": {
-    "titre_indigent": 1,
-    "prix_trop_haut": 1
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Jourdaine Aktion",
-   "secondes": 45,
-   "pages": 11,
-   "gardes": 4,
    "vendus": 0,
-   "ecartes": 7,
+   "ecartes": 10,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap": "ok 11",
+   "adresses_ecartees": 33,
+   "sitemap": "ok 28",
    "motifs": {
-    "titre_hors_cible:appartement": 3,
-    "titre_hors_cible:vente d'immeubles": 2,
-    "titre_hors_cible:appartements": 2
+    "prix_trop_haut": 7,
+    "titre_hors_cible:loft": 1,
+    "titre_indigent": 1,
+    "titre_hors_cible:local commercial": 1
    }
   },
   {
-   "agence": "Julie Étienne Immobilier",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
-  },
-  {
-   "agence": "L'Aribout Immobilier",
-   "secondes": 61,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
+   "agence": "Lacomblez Immobilier",
+   "secondes": 143,
+   "pages": 45,
+   "gardes": 6,
+   "vendus": 13,
+   "ecartes": 26,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
+   "adresses_ecartees": 107,
+   "sitemap_dates": 57,
+   "sitemap": "ok 57",
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "titre_hors_cible:annonces": 1,
+    "prix_trop_haut": 20,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:studio": 1,
+    "titre_hors_cible:loft": 1
+   }
+  },
+  {
+   "agence": "Landimmo Normandie",
+   "secondes": 244,
+   "pages": 34,
+   "gardes": 5,
+   "vendus": 26,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap": "ok 76",
+   "motifs": {
+    "prix_trop_haut": 2,
+    "titre_hors_cible:appartements": 1
+   }
+  },
+  {
+   "agence": "Le Havre Normandie immobilier",
+   "secondes": 247,
+   "pages": 36,
+   "gardes": 6,
+   "vendus": 29,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 37,
+   "sitemap": "ok 99",
+   "illisible_exemple": {
+    "url": "https://www.lehavre-normandie-immobilier.fr/vente/maison-individuelle-1-piece-angerville-l-orcher-76280,VM780",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison individuelle, 1 pièce située à Angerville-l'Orcher (76280)",
+    "octets": 878061
+   }
+  },
+  {
+   "agence": ".la petite agence",
+   "secondes": 15,
+   "pages": 2,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "budget global épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "motifs": {
+    "prix_trop_haut": 2
    }
   }
  ]
