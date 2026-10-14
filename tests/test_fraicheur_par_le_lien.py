@@ -64,3 +64,18 @@ def test_sans_journaux_la_regle_d_avant_est_intacte():
     frais = {"url": URL, "revue_le": _jours(10)}
     vieux = {"url": URL + "-2", "revue_le": _jours(50)}
     assert _perimes([frais, vieux], verifies={}, morts={}) == ["1 bien(s) — ? (1)"]
+
+
+def test_l_audit_et_le_verificateur_partagent_la_meme_regle():
+    """Le vérificateur ordonne son lot sur la date même que l'audit juge la
+    fraîcheur. Deux définitions auraient divergé, et l'une aurait crié à la
+    péremption de ce que l'autre venait de regarder — la contradiction que
+    cette règle a été écrite pour éteindre."""
+    from app import liens
+    bien = {"url": URL, "revue_le": _jours(60)}
+    for verifies, morts in (({}, {}),
+                            ({URL: _jours(3)}, {}),
+                            ({URL: _jours(3)}, {URL: {"constats": 1, "dernier": _jours(3)}}),
+                            ({URL: _jours(90)}, {})):
+        assert auditer.reconstate_le(bien, verifies, morts) == \
+            liens.reconstate_le(bien, verifies, morts), (verifies, morts)

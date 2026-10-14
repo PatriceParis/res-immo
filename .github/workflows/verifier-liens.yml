@@ -70,7 +70,12 @@ jobs:
           # Une saisie non numérique donnerait un filet « m » sans nombre,
           # c'est-à-dire sans limite : on retombe sur le budget par défaut.
           case "${MINUTES}" in ''|*[!0-9]*) MINUTES=15 ;; esac
-          OPTIONS="--max ${MAXI:-150} --minutes $MINUTES"
+          # Trois cents liens par passage depuis le 14 octobre 2026 : le lot de
+          # 150 se vérifiait en quatre minutes sur un budget de quinze — c'est
+          # le plafond qui bornait, pas le temps — pendant que 670 biens servis
+          # n'avaient été reconstatés par personne depuis plus de quarante-cinq
+          # jours. Le budget de temps, lui, ne change pas : c'est le garde-fou.
+          OPTIONS="--max ${MAXI:-300} --minutes $MINUTES"
           if [ -n "$CIBLES" ]; then OPTIONS="$OPTIONS --cibles $CIBLES"; fi
           # Le filet laisse dix minutes de marge : le script regarde son budget
           # ENTRE deux liens, il peut donc le dépasser d'une requête.

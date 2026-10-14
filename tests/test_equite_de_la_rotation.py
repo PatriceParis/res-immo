@@ -36,7 +36,8 @@ sys.path.insert(0, str(RACINE))
 
 from app import liens  # noqa: E402
 
-LOT = 150  # le budget d'un passage, cf. scripts/verifier_liens.py --max
+LOT = 150  # un lot assez grand pour mesurer la répartition ; le budget réel
+           # (300 depuis le 14 octobre 2026) est dans verifier-liens.yml
 
 
 def catalogue(**tailles: int) -> list[dict]:
@@ -155,3 +156,23 @@ def test_les_suspects_passent_toujours_avant_les_absents():
     ordre = [a["url"] for a in liens.ordre_de_verification(
         annonces, {}, {suspect["url"]: {"constats": 1}})]
     assert ordre[:2] == [suspect["url"], absent["url"]]
+
+
+def test_dans_un_domaine_la_collecte_compte_aussi_comme_un_oeil():
+    """Mesuré le 14 octobre 2026 : 45 des 150 liens du lot — un tiers du
+    budget — étaient des biens que la collecte avait revus dans les sept
+    jours, pendant que 670 biens servis n'avaient été reconstatés par personne
+    depuis plus de quarante-cinq jours. « Jamais vérifié » ne veut pas dire
+    « jamais vu » : un lien dont la collecte a relevé la page hier n'a rien à
+    apprendre au vérificateur. L'ordre suit la dernière RECONSTATATION, par
+    l'un ou l'autre œil — la règle même de l'audit de fraîcheur."""
+    annonces = catalogue(**{"safti.fr": 3})
+    revu_hier, verifie_jadis, jamais_rien = annonces
+    revu_hier.update(revue_le="2026-10-13")          # jamais vérifié, relevé hier
+    verifie_jadis.update(revue_le="2026-08-10")      # vérifié il y a deux mois
+    verifies = {verifie_jadis["url"]: "2026-08-20"}
+    ordre = [a["url"] for a in liens.ordre_de_verification(annonces, verifies, {})]
+    assert ordre == [jamais_rien["url"], verifie_jadis["url"], revu_hier["url"]], (
+        "personne ne l'a vu, puis vu il y a deux mois, puis vu hier par la collecte")
+    assert liens.reconstate_le(verifie_jadis, verifies, {}) == "2026-08-20", \
+        "le plus récent des deux yeux fait foi"

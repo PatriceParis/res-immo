@@ -95,6 +95,28 @@ def _domaine(url: str) -> str:
     return urlparse(url or "").netloc.lower().removeprefix("www.")
 
 
+def reconstate_le(annonce: dict, verifies: dict, journal: dict | None = None) -> str:
+    """La dernière fois qu'on a VU ce bien en ligne, par l'un ou l'autre œil.
+
+    La collecte le voit en le relevant (`revue_le`). Le vérificateur le voit
+    en ouvrant sa page et en la trouvant vivante — et c'est le SEUL œil qui
+    reste sur les gros départements, tronqués à chaque passage, où la
+    collecte n'atteint plus les mêmes annonces. Un lien au journal des morts
+    n'est pas une reconstatation : il a été regardé, et c'est précisément ce
+    qu'on y a vu qui est douteux.
+
+    Une seule définition pour les deux usages — l'audit qui juge la
+    fraîcheur (scripts/auditer.py) et la rotation qui choisit quoi regarder
+    (ci-dessous). Écrites séparément, elles divergeraient, et l'une crierait
+    à la péremption de ce que l'autre venait de regarder.
+    """
+    dates = [annonce.get("revue_le") or ""]
+    url = annonce.get("url")
+    if url and url not in (journal or {}):
+        dates.append((verifies or {}).get(url, "") or "")
+    return max(dates)
+
+
 def ordre_de_verification(annonces: list[dict], verifies: dict,
                           journal: dict) -> list[dict]:
     """Les suspects d'abord ; ensuite chaque domaine à proportion de sa taille.
@@ -129,8 +151,16 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
     mêmes proportions que le catalogue. Aucun domaine ne peut plus en
     affamer un autre, quel que soit son nom ou son poids.
 
-    À l'intérieur d'un domaine, l'ordre promis est intact : les
-    jamais-vérifiés d'abord (date vide), puis les plus anciennement vus.
+    À l'intérieur d'un domaine, les plus anciennement RECONSTATÉS d'abord —
+    par l'un ou l'autre œil (voir `reconstate_le`). L'ordre se faisait sur la
+    seule date de vérification : « jamais vérifié » passait devant tout,
+    même quand la collecte avait relevé la page la veille. Mesuré le
+    14 octobre 2026 : 45 des 150 liens du lot — un tiers du budget — étaient
+    des biens que la collecte avait revus dans les sept jours, pendant que
+    670 biens servis n'avaient été reconstatés par personne depuis plus de
+    quarante-cinq jours. Un lien dont la collecte vient de lire la page n'a
+    rien à apprendre au vérificateur ; il attend son tour derrière ceux que
+    personne n'a vus.
 
     Entre les suspects et la rotation, un palier : les biens que la COLLECTE
     a vus absents (`absences` ≥ 1) et dont le lien n'a pas été regardé
@@ -164,7 +194,7 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
 
     etale = []
     for groupe in groupes.values():
-        groupe.sort(key=lambda a: (verifies.get(a["url"], ""), a["url"]))
+        groupe.sort(key=lambda a: (reconstate_le(a, verifies, journal), a["url"]))
         taille = len(groupe)
         for rang, annonce in enumerate(groupe):
             # +0.5 : on vise le milieu de la tranche, pour qu'un domaine de

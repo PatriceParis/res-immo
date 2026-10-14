@@ -33,7 +33,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app import db, regions  # noqa: E402
+from app import db, liens, regions  # noqa: E402
 from app.chargement import (_photos_de_mobilier, biens_servis,  # noqa: E402
                             photo_retenue)
 from app.extraction import PRIX_M2_MAX, PRIX_M2_MIN  # noqa: E402
@@ -454,12 +454,12 @@ def reconstate_le(bien: dict, verifies: dict, morts: dict) -> str:
 
     Un lien au journal des morts n'est pas une reconstatation : il a été
     regardé, et c'est précisément ce qu'on y a vu qui est douteux.
+
+    La règle vit dans app/liens.py : le vérificateur ordonne son lot sur la
+    même date que l'audit juge la fraîcheur. Deux copies auraient divergé, et
+    l'une aurait crié à la péremption de ce que l'autre venait de regarder.
     """
-    dates = [bien.get("revue_le") or ""]
-    url = bien.get("url")
-    if url and url not in (morts or {}):
-        dates.append(verifies.get(url, "") if verifies else "")
-    return max(dates)
+    return liens.reconstate_le(bien, verifies, morts)
 
 
 def verifier_fraicheur(biens: list[dict], audit: Audit,

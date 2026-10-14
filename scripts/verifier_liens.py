@@ -9,7 +9,8 @@ Rotation : les suspects d'abord (un constat de mort attend sa confirmation),
 puis chaque domaine à proportion de sa taille — départager sur l'URL revenait
 à servir les réseaux dans l'ordre alphabétique, et Safti, 39 % du catalogue,
 n'a pas eu un seul lien vérifié en un mois (voir app.liens). Au sein d'un
-domaine, les plus anciennement vérifiés. Chaque URL est notée dans
+domaine, les plus anciennement reconstatés — par la collecte ou par ce
+passage, le plus récent des deux faisant foi. Chaque URL est notée dans
 data/liens_verifies.json ; les constats de mort dans data/liens_morts.json —
 au deuxième, l'export retire l'annonce.
 
@@ -84,7 +85,13 @@ def candidats_dans_l_ordre(biens: list[dict], verifies: dict, morts: dict,
 
 def main() -> None:
     parametres = argparse.ArgumentParser(description=__doc__)
-    parametres.add_argument("--max", type=int, default=150,
+    # Trois cents, et non cent cinquante : mesuré le 14 octobre 2026, un lot de
+    # 150 liens se vérifiait en quatre minutes sur un budget de quinze — c'est
+    # ce plafond qui bornait le passage, pas le temps — pendant que 670 biens
+    # servis n'avaient été reconstatés par personne depuis plus de quarante-
+    # cinq jours. Le budget de temps reste le garde-fou ; le même défaut est
+    # écrit dans .github/workflows/verifier-liens.yml.
+    parametres.add_argument("--max", type=int, default=300,
                             help="liens vérifiés par passage")
     parametres.add_argument("--delai", type=float, default=1.0,
                             help="secondes entre deux requêtes")

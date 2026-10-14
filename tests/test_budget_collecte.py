@@ -592,3 +592,47 @@ def test_le_deroule_dit_pourquoi_les_pages_sont_ecartees(collecte, monkeypatch, 
     assert agence["motifs"] == attendus, "chaque page écartée compte sous le motif que la règle lui donne"
     assert agence["motifs"]["location"] == 1
     assert sum(n for m, n in agence["motifs"].items() if m.startswith("titre_hors_cible:appartement")) == 2
+
+
+def test_le_deroule_montre_une_page_par_motif(collecte, monkeypatch, tmp_path):
+    """Le 14 octobre 2026, Agence du Terroir — Perche vendômois, en plein dans
+    la cible — : 60 pages ouvertes, 0 gardé, 20 vendues, 40 écartées
+    « page_catalogue », 124 adresses datées au sitemap, et pas un bien au
+    fichier depuis le 4 août. Le motif dit quelle règle refuse ; il ne dit pas
+    si ces quarante pages sont des listes par commune, qu'une règle d'adresse
+    écarterait avant de les ouvrir, ou de vraies annonces dont le gabarit cite
+    les références de trois biens voisins — que la règle prend pour un
+    catalogue. La première page écartée sous chaque motif, adresse et titre,
+    tranche sans rouvrir le site : le poste n'a pas le réseau."""
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles",
+                        lambda *a, **k: [{"nom": "Agence X", "site": "https://agence-x.fr"}])
+    pages = {
+        "https://agence-x.fr/bien-1": {"titre": "Appartement T2 centre-ville", "surface_m2": 45, "prix": 95000},
+        "https://agence-x.fr/bien-2": {"titre": "Appartement T3 avec balcon", "surface_m2": 65, "prix": 120000},
+        # Une vraie maison, dont la page cite trois références : un catalogue
+        # pour la règle. C'est précisément ce qu'on veut pouvoir aller vérifier.
+        "https://agence-x.fr/bien-3": {"titre": "Maison de bourg avec jardin", "surface_m2": 120,
+                                       "prix": 180000, "texte": "Réf. 101 … Réf. 102 … Réf. 103"},
+        "https://agence-x.fr/bien-4": {"titre": "Maison à louer Savonnières", "surface_m2": 120},
+    }
+    monkeypatch.setattr(
+        collecteur, "_urls_a_visiter",
+        lambda page, cible, base, maxi, fin_prevue=0.0, permission=None, diag=None: list(pages))
+    monkeypatch.setattr(collecteur, "extraire_annonce", lambda html, url, **k: dict(pages[url]))
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    collecteur.main()
+
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert agence["ecartes"] == 4 and agence["gardes"] == 0
+    assert qualite.motif_de_rejet(dict(pages["https://agence-x.fr/bien-3"])) == "page_catalogue"
+    exemples = agence["ecartes_exemples"]
+    assert exemples["page_catalogue"] == {"url": "https://agence-x.fr/bien-3",
+                                          "titre": "Maison de bourg avec jardin"}
+    assert exemples["location"] == {"url": "https://agence-x.fr/bien-4",
+                                    "titre": "Maison à louer Savonnières"}
+    assert exemples["titre_hors_cible:appartement"]["url"] == "https://agence-x.fr/bien-1", \
+        "la PREMIÈRE page écartée sous ce motif, pas la dernière"
+    assert set(exemples) == set(agence["motifs"]), "un exemple par motif compté, ni plus ni moins"

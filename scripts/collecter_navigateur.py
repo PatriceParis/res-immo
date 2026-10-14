@@ -797,6 +797,18 @@ def main() -> None:
                         # bornée : on la compte telle quelle.
                         motifs = diag.setdefault("motifs", {})
                         motifs[motif] = motifs.get(motif, 0) + 1
+                        # Et la PREMIÈRE page écartée sous chaque motif, adresse
+                        # et titre. Le 14 octobre 2026, Agence du Terroir : 60
+                        # pages, 0 gardé, 40 « page_catalogue » — le motif dit
+                        # quelle règle refuse, pas si ces pages sont des listes
+                        # par commune, qu'une règle d'adresse écarterait avant
+                        # de les ouvrir, ou de vraies annonces dont le gabarit
+                        # cite les références de trois biens voisins, que la
+                        # règle prend pour un catalogue. L'adresse tranche, et
+                        # le poste n'a pas le réseau pour la retrouver.
+                        exemples = diag.setdefault("ecartes_exemples", {})
+                        exemples.setdefault(motif, {
+                            "url": u, "titre": (brut.get("titre") or "")[:120]})
                         continue
                     brut["id"] = "%s-%s" % (_slug(cible["nom"]),
                                             hashlib.sha1(u.encode()).hexdigest()[:12])
