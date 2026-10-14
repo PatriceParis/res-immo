@@ -1,116 +1,32 @@
 {
- "minutes": 28.1,
+ "minutes": 28.0,
  "agences": [
   {
-   "agence": "Agence Joly",
-   "secondes": 11,
-   "pages": 4,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 4,
-   "sitemap": "ok 4",
-   "illisible_exemple": {
-    "url": "https://www.agence-joly.com/biens-a-vendre-epron.html",
-    "cause": "aucune annonce lue",
-    "titre": "Biens à vendre à Épron : maisons et appartements avec Agence JOLY",
-    "octets": 224994
-   },
-   "motifs": {
-    "titre_hors_cible:viager": 1
-   }
-  },
-  {
-   "agence": "Agence Mosellane Immobilière",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": "Loading https://www.mosellane-immobiliere.com/"
-  },
-  {
-   "agence": "Agence Olleon",
-   "secondes": 5,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
+   "agence": "Girault Immo",
+   "secondes": 80,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 5,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "adresses_ecartees": 11,
+   "sitemap_dates": 27,
+   "sitemap": "ok 27",
    "motifs": {
-    "titre_hors_cible:achat & vente": 1
-   }
-  },
-  {
-   "agence": "Agence Saint-Joseph",
-   "secondes": 117,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap": "ok 140"
-  },
-  {
-   "agence": "Agence de l'étoile",
-   "secondes": 135,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 49,
-   "sitemap": "ok 46"
-  },
-  {
-   "agence": "Agence de la bourse",
-   "secondes": 111,
-   "pages": 20,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 10,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 22,
-   "sitemap_dates": 64,
-   "sitemap": "ok 64",
-   "illisible_exemple": {
-    "url": "https://agencedelabourse.com/property/bar-brasserie-en-centre-commercial-a-vendre/",
-    "cause": "aucune annonce lue",
-    "titre": "BAR BRASSERIE EN CENTRE COMMERCIAL A VENDRE - Agence de la bourse | Agence immobilière Le Havre",
-    "octets": 257893
+    "titre_hors_cible:annonces": 1
    },
-   "motifs": {
-    "ni_surface_ni_prix_credible": 10
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.girault-immobilier.fr/vente/1",
+     "titre": "Annonces immobilières | GIRAULT IMMO"
+    }
    }
   },
   {
-   "agence": "Agence des Lacs",
+   "agence": "Graupera Immobilier",
    "secondes": 7,
    "pages": 0,
    "gardes": 0,
@@ -119,98 +35,45 @@
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 8,
+   "sitemap": "aucune page de bien",
    "index_statut": 200,
-   "index_titre": "Agence immobilière des Lacs à Brienne le Chateau."
+   "index_titre": "Immobilière Graupera"
   },
   {
-   "agence": "Agence du Terroir",
-   "secondes": 120,
-   "pages": 60,
-   "gardes": 0,
-   "vendus": 20,
-   "ecartes": 40,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 200,
-   "sitemap_dates": 124,
-   "sitemap": "ok 124",
-   "motifs": {
-    "page_catalogue": 40
-   }
-  },
-  {
-   "agence": "Alain Guyony Immobilier",
-   "secondes": 100,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap": "ok 109"
-  },
-  {
-   "agence": "Alexandra Cablat",
-   "secondes": 83,
-   "pages": 11,
+   "agence": "Groupe Centrum",
+   "secondes": 77,
+   "pages": 12,
    "gardes": 8,
    "vendus": 2,
-   "ecartes": 1,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 132,
-   "sitemap_dates": 250,
-   "sitemap": "ok 250",
+   "adresses_ecartees": 118,
+   "sitemap_dates": 43,
+   "sitemap": "ok 43",
    "motifs": {
-    "titre_hors_cible:biens a vendre": 1
+    "titre_hors_cible:15 annonces": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:15 annonces": {
+     "url": "https://www.centrum-immobilier.fr/biens-renoves/1",
+     "titre": "15 annonces de Biens rénovés"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
+     "titre": "Villa de luxe en vente, proche plage 7 chambres"
+    }
    },
    "vendus_dans_l_adresse": 1
   },
   {
-   "agence": "Alliance Immobilier",
-   "secondes": 104,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 7,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 158,
-   "sitemap_dates": 137,
-   "sitemap": "ok 137",
-   "motifs": {
-    "titre_indigent": 1,
-    "titre_hors_cible:72 maisons": 1,
-    "titre_hors_cible:parkings": 1
-   }
-  },
-  {
-   "agence": "Amrimmo",
-   "secondes": 245,
-   "pages": 40,
-   "gardes": 1,
-   "vendus": 39,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 41,
-   "sitemap": "ok 126"
-  },
-  {
-   "agence": "Angledroit.immo",
-   "secondes": 72,
+   "agence": "Groupe123immo",
+   "secondes": 68,
    "pages": 10,
    "gardes": 8,
    "vendus": 0,
@@ -219,99 +82,389 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap_dates": 16,
-   "sitemap": "ok 16",
+   "adresses_ecartees": 88,
+   "sitemap_dates": 220,
+   "sitemap": "ok 220",
    "motifs": {
-    "location": 2
+    "titre_hors_cible:245 annonces": 1,
+    "titre_hors_cible:170 maisons": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:245 annonces": {
+     "url": "https://www.groupe123immo.com/vente/1",
+     "titre": "245 Annonces de ventes immobilières"
+    },
+    "titre_hors_cible:170 maisons": {
+     "url": "https://www.groupe123immo.com/vente/maison/1",
+     "titre": "170 Maisons à vendre"
+    }
    }
   },
   {
-   "agence": "Foch immobilier",
-   "secondes": 150,
-   "pages": 39,
+   "agence": "Gueudry",
+   "secondes": 73,
+   "pages": 12,
    "gardes": 8,
-   "vendus": 1,
-   "ecartes": 30,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Immobilier Le Havre annonces immobilières en Normandie 76 | ",
-   "motifs": {
-    "titre_hors_cible:appartement": 24,
-    "ni_surface_ni_prix_credible": 6
-   }
-  },
-  {
-   "agence": "Fontette Immobilier",
-   "secondes": 164,
-   "pages": 15,
-   "gardes": 8,
-   "vendus": 5,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 42,
-   "sitemap": "ok 71",
-   "motifs": {
-    "prix_trop_haut": 2
-   }
-  },
-  {
-   "agence": "France4U",
-   "secondes": 54,
-   "pages": 23,
-   "gardes": 4,
    "vendus": 0,
-   "ecartes": 19,
+   "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 165,
+   "sitemap": "ok 165",
+   "motifs": {
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.gueudry.fr/maison-neuve-re2020/",
+     "titre": "Maison neuve RE2020 : ce qui change pour vous | Gueudry"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.gueudry.fr/maison-neuve-construction/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison neuve construction : les étapes clés | Gueudry",
+    "octets": 134715
+   }
+  },
+  {
+   "agence": "HF Immobilier",
+   "secondes": 52,
+   "pages": 7,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
+   "adresses_ecartees": 4,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
    "motifs": {
-    "ni_surface_ni_prix_credible": 19
+    "titre_hors_cible:annonces": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.hf-immo.fr/vente/1",
+     "titre": "Annonces immobilières | HF IMMOBILIER"
+    }
    }
   },
   {
-   "agence": "GIN Immobilier",
-   "secondes": 94,
+   "agence": "Habitat Immobilier",
+   "secondes": 96,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 62,
+   "sitemap": "ok 128"
+  },
+  {
+   "agence": "Hamaris",
+   "secondes": 77,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 13,
+   "sitemap": "ok 13"
+  },
+  {
+   "agence": "Helman Immobilier",
+   "secondes": 246,
+   "pages": 38,
+   "gardes": 1,
+   "vendus": 36,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 86,
+   "sitemap": "ok 464",
+   "illisible_exemple": {
+    "url": "https://www.helman-immobilier.com/vente/entrepot",
+    "cause": "aucune annonce lue",
+    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
+    "octets": 895858
+   }
+  },
+  {
+   "agence": "Le Mercier Immobilier",
+   "secondes": 76,
    "pages": 13,
    "gardes": 8,
-   "vendus": 1,
-   "ecartes": 4,
+   "vendus": 2,
+   "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 112,
-   "sitemap_dates": 197,
-   "sitemap": "ok 197",
+   "adresses_ecartees": 63,
+   "sitemap_dates": 112,
+   "sitemap": "ok 112",
    "motifs": {
-    "titre_hors_cible:110 annonces": 1,
-    "titre_hors_cible:terrain a batir": 3
+    "titre_hors_cible:biens a vendre": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:appartement": 1
    },
-   "vendus_dans_l_adresse": 1
+   "ecartes_exemples": {
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.lemercier-immobilier.com/vente/1",
+     "titre": "Biens à vendre | Lemercier Immobilier"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.lemercier-immobilier.com/vente/307-soissons/maison/t9/12876-proche-soissons-maison-d-architecte-220m-avec-bois-4ha-et-etang-1ha/",
+     "titre": "PROCHE SOISSONS MAISON D"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lemercier-immobilier.com/vente/91-valenciennes/duplex/t5/13391-magnifique-appartement-duplex-en-plein-coeur-de-valenciennes/",
+     "titre": "Magnifique appartement duplex en plein cœur de Valenciennes"
+    }
+   }
   },
   {
-   "agence": "GSM Immobilier",
-   "secondes": 106,
-   "pages": 15,
+   "agence": "Le Strat Caen Immo",
+   "secondes": 75,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 84,
+   "sitemap_dates": 28,
+   "sitemap": "ok 28",
+   "illisible_exemple": {
+    "url": "https://www.caen-immo.fr/biens/place-de-parking-exterieur-60290394/",
+    "cause": "aucune annonce lue",
+    "titre": "Place de parking extérieur - Le Strat Immobilier",
+    "octets": 181923
+   },
+   "motifs": {
+    "titre_hors_cible:bureaux": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:bureaux": {
+     "url": "https://www.caen-immo.fr/biens/plateau-a-usage-de-bureaux-quartier-koening-bretteville-sur-odon-90-m2-59251567/",
+     "titre": "Plateau à usage de bureaux quartier Koening - Bretteville Sur Odon 90 m2"
+    }
+   }
+  },
+  {
+   "agence": "Lecoeur Immobilier",
+   "secondes": 20,
+   "pages": 8,
    "gardes": 1,
-   "vendus": 14,
+   "vendus": 0,
    "ecartes": 0,
+   "illisibles": 7,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 8,
+   "sitemap": "ok 8",
+   "illisible_exemple": {
+    "url": "https://www.lecoeurtransactions.fr/annonces-divers",
+    "cause": "aucune annonce lue",
+    "titre": "Divers | LECOEUR IMMOBILIER",
+    "octets": 101237
+   }
+  },
+  {
+   "agence": "Leforestier Immobilier",
+   "secondes": 96,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 45,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 548,
+   "sitemap_dates": 706,
+   "sitemap": "ok 706"
+  },
+  {
+   "agence": "Lelièvre immobilier",
+   "secondes": 81,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 296,
+   "sitemap_dates": 109,
+   "sitemap": "ok 109",
+   "motifs": {
+    "prix_trop_haut": 4,
+    "titre_hors_cible:parking": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
+     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.lelievre-immobilier.com/vente/stationnement-paris-ref-62255",
+     "titre": "Vente - parking/box Paris| Lelièvre Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Lemaistre Immobilier Yvetot",
+   "secondes": 108,
+   "pages": 20,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 10,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap": "ok 424",
+   "motifs": {
+    "page_catalogue": 1,
+    "titre_hors_cible:appartement": 7,
+    "ni_surface_ni_prix_credible": 2
+   },
+   "ecartes_exemples": {
+    "page_catalogue": {
+     "url": "https://www.lemaistre-immo.fr/fr/vente-maison-villa.htm",
+     "titre": "Découvrez toutes les ventes de maisons sur Le Havre et sa périphérie"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-canteleu-76380/61622057.htm",
+     "titre": "vente achat Appartement CANTELEU 76380"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-saint-romain-de-colbosc-76430/58124213.htm",
+     "titre": "vente achat Terrain SAINT ROMAIN DE COLBOSC 76430"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
+    "cause": "aucune annonce lue",
+    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
+    "octets": 47327
+   }
+  },
+  {
+   "agence": "Les Artisans 2 l'immobilier",
+   "secondes": 71,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 3,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 34",
+   "motifs": {
+    "page_catalogue": 1
+   },
+   "ecartes_exemples": {
+    "page_catalogue": {
+     "url": "https://www.artisans-immobilier.com/maison-a-vendre-Roz%C3%A9rieulles.htm",
+     "titre": "Maison à vendre Rozérieulles - LES ARTISANS DE L'IMMOBILIER, Agence immobilière à Metz"
+    }
+   }
+  },
+  {
+   "agence": "Les Clés de la Suisse Normande",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Les Clés du Littoral",
+   "secondes": 103,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 24,
+   "sitemap": "ok 51",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
+     "titre": "Propriété de caractère à 100mètres de la mer"
+    }
+   }
+  },
+  {
+   "agence": "Les nouvelles pépites",
+   "secondes": 241,
+   "pages": 39,
+   "gardes": 0,
+   "vendus": 38,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 82,
+   "sitemap": "ok 169",
+   "illisible_exemple": {
+    "url": "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-wasquehal-59290,VM372",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison, 4 pièces située à Wasquehal (59290)",
+    "octets": 842613
+   }
+  },
+  {
+   "agence": "Loft & House",
+   "secondes": 32,
+   "pages": 14,
+   "gardes": 0,
+   "vendus": 2,
+   "ecartes": 12,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 96,
-   "sitemap": "ok 236"
+   "adresses_ecartees": 40,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "motifs": {
+    "titre_hors_cible:loft": 12
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:loft": {
+     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-168-m2-vimont-61603110/",
+     "titre": "Maison de 6 pièces de 168,21 m² à VIMONT - Loft & House"
+    }
+   }
   }
  ]
 }
