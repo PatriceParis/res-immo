@@ -636,3 +636,120 @@ def test_le_deroule_montre_une_page_par_motif(collecte, monkeypatch, tmp_path):
     assert exemples["titre_hors_cible:appartement"]["url"] == "https://agence-x.fr/bien-1", \
         "la PREMIÈRE page écartée sous ce motif, pas la dernière"
     assert set(exemples) == set(agence["motifs"]), "un exemple par motif compté, ni plus ni moins"
+
+
+# --- Les pages vendues ne se rouvrent pas ------------------------------------
+
+class _Reponse:
+    def __init__(self, status_code, text=""):
+        self.status_code, self.text = status_code, text
+
+
+def _agence_au_sitemap(monkeypatch, tmp_path, pages: dict, base="https://agence-x.fr"):
+    """Une agence dont le sitemap liste `pages` ; chaque page rend ce qu'on
+    lui a mis. Journaux et déroulé dans tmp_path, jamais dans le dépôt."""
+    journal = tmp_path / "deroule.json"
+    monkeypatch.setattr(collecteur, "JOURNAL_DEROULE", journal)
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "tronquees.json")
+    monkeypatch.setattr(collecteur, "_cibles", lambda *a, **k: [{"nom": "Agence X", "site": base}])
+    sitemap = "<urlset>" + "".join(f"<url><loc>{u}</loc></url>" for u in pages) + "</urlset>"
+
+    class FauxRequests:
+        @staticmethod
+        def get(url, headers=None, timeout=None):
+            return _Reponse(200, sitemap) if url == f"{base}/sitemap.xml" else _Reponse(404, "")
+
+    monkeypatch.setattr(collecteur, "requests", FauxRequests)
+    monkeypatch.setattr(collecteur, "extraire_annonce", lambda html, url, **k: dict(pages[url]))
+    monkeypatch.setattr(sys, "argv", ["collecter_navigateur.py"])
+    return journal
+
+
+def test_une_page_lue_vendue_n_est_pas_rouverte_au_passage_suivant(collecte, monkeypatch, tmp_path):
+    """Mesuré aux déroulés des 14 et 15 octobre 2026 : 183 pages vendues sur
+    358 ouvertes à 05 h 23, 134 sur 294 la veille au soir — la moitié du
+    budget de chaque passage, et les mêmes pages à chaque visite : Toutabitat
+    45 sur 45, Leforestier 45 sur 45, Pisani 8 sur 8. Ces agences gardent
+    leurs ventes dans le sitemap, datées du jour de la vente, donc en tête du
+    tri par fraîcheur. Trier n'y suffisait pas ; il faut se souvenir. Une page
+    lue vendue est notée ; au passage suivant, on ne l'ouvre pas, et le budget
+    va aux autres."""
+    base = "https://agence-x.fr"
+    pages = {
+        f"{base}/vente/maison-vendue-belleme-1": {"titre": "Maison de bourg à Bellême", "vendu": True,
+                                                 "surface_m2": 120, "prix": 180000},
+        f"{base}/vente/maison-sous-compromis-2": {"titre": "Longère sous compromis", "surface_m2": 100,
+                                                  "prix": 150000, "texte": "Ce bien est sous compromis."},
+        # Une adresse de maison, un contenu d'appartement : écartée APRÈS
+        # ouverture, pas d'avance par son libellé — elle doit être ouverte.
+        f"{base}/vente/maison-de-ville-centre-3": {"titre": "Appartement T2 en centre-ville",
+                                                   "surface_m2": 45, "prix": 95000},
+    }
+    journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
+
+    collecteur.main()
+    premier = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (premier["pages"], premier["vendus"], premier["ecartes"]) == (3, 2, 1)
+    assert "vendues_evitees" not in premier
+    memoire = json.loads((tmp_path / "pages_vendues.json").read_text(encoding="utf-8"))
+    assert set(memoire) == {f"{base}/vente/maison-vendue-belleme-1",
+                            f"{base}/vente/maison-sous-compromis-2"}, \
+        "les deux pages vendues sont notées, pas l'appartement"
+
+    collecteur.main()
+    second = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (second["pages"], second["vendus"]) == (1, 0), "les pages vendues ne sont pas rouvertes"
+    assert second["vendues_evitees"] == 2
+    assert second["sitemap"] == "ok 3", "le sitemap compte toujours ses trois pages de biens"
+
+
+def test_le_sursis_des_pages_vendues_expire_et_le_journal_se_taille(collecte, monkeypatch, tmp_path):
+    """Une vente ne se défait pas, mais un compromis peut tomber et la règle
+    peut se tromper : passé le sursis, la page est relue, et un nouveau
+    constat la remet au journal. Ce qui a dépassé le sursis sans être relu en
+    sort, sinon le journal grossirait à jamais."""
+    from datetime import date, timedelta
+    base = "https://agence-x.fr"
+    pages = {
+        f"{base}/vente/maison-vendue-1": {"titre": "Maison vendue à Mortagne", "vendu": True,
+                                         "surface_m2": 120, "prix": 180000},
+        f"{base}/vente/maison-vendue-2": {"titre": "Maison vendue à Bellême", "vendu": True,
+                                         "surface_m2": 110, "prix": 170000},
+    }
+    journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
+    perime = (date.today() - timedelta(days=historique.SURSIS_VENDUES + 1)).isoformat()
+    recent = (date.today() - timedelta(days=2)).isoformat()
+    (tmp_path / "pages_vendues.json").write_text(json.dumps({
+        f"{base}/vente/maison-vendue-1": perime,        # au sitemap : à relire
+        f"{base}/vente/maison-vendue-2": recent,        # au sitemap : pas rouverte
+        f"{base}/vente/maison-disparue-9": perime,      # plus au sitemap : sort du journal
+    }), encoding="utf-8")
+
+    collecteur.main()
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (agence["pages"], agence["vendus"], agence["vendues_evitees"]) == (1, 1, 1)
+    memoire = json.loads((tmp_path / "pages_vendues.json").read_text(encoding="utf-8"))
+    assert memoire == {f"{base}/vente/maison-vendue-1": date.today().isoformat(),
+                       f"{base}/vente/maison-vendue-2": recent}, \
+        "relue et renotée du jour ; l'autre attend son sursis ; la disparue est sortie"
+
+
+def test_tout_vendu_connu_ne_renvoie_pas_vers_l_index(collecte, monkeypatch, tmp_path):
+    """Pisani : huit adresses au sitemap, huit vendues. Le passage suivant ne
+    doit pas se replier sur la page d'index — elle ne listerait que les mêmes
+    adresses, pour le prix d'une navigation de plus — ni compter l'agence
+    comme privée de sitemap."""
+    from datetime import date
+    base = "https://agence-x.fr"
+    pages = {f"{base}/vente/maison-vendue-{i}": {"titre": f"Maison vendue n° {i}", "vendu": True,
+                                                 "surface_m2": 100, "prix": 150000} for i in range(3)}
+    journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
+    (tmp_path / "pages_vendues.json").write_text(
+        json.dumps({u: date.today().isoformat() for u in pages}), encoding="utf-8")
+    index_ouvert = []
+    monkeypatch.setattr(collecteur, "_liens_page", lambda page, base: index_ouvert.append(base) or [])
+
+    collecteur.main()
+    agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (agence["pages"], agence["vendues_evitees"], agence["sitemap"]) == (0, 3, "ok 3")
+    assert index_ouvert == [], "le sitemap lu fait autorité : pas de repli sur l'index"

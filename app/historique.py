@@ -24,6 +24,7 @@ tour — mais seulement si son SITE a bien été visité, sinon une collecte
 from __future__ import annotations
 
 import json
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -107,6 +108,70 @@ def visites_fermees() -> set:
     """Les cibles fermées au robot ce passage-ci. Absent ou illisible : aucune
     — on ne retire rien de plus que l'ancien comportement."""
     return _lire_journal(_journal_fermees())
+
+
+# --- Pages vendues : la mémoire qui rend son budget à la collecte ------------
+#
+# Mesuré aux déroulés des 14 et 15 octobre 2026 : 183 pages vendues sur 358
+# ouvertes à 05 h 23, 134 sur 294 la veille au soir, 93 sur 296, 140 sur 310 —
+# la moitié du budget de chaque passage, et les mêmes pages à chaque visite :
+# Toutabitat 45 sur 45, Leforestier 45 sur 45, Pisani 8 sur 8, Notarianni 36
+# sur 40. Ces agences gardent leurs ventes passées dans le sitemap, souvent
+# datées du jour de la vente, donc en tête de l'ordre « les plus récentes
+# d'abord ». Trier n'y suffisait pas ; il faut se souvenir.
+#
+# Une page lue vendue est notée avec le jour du constat, et n'est plus ouverte
+# avant SURSIS_VENDUES jours. Une vente ne se défait pas, mais un compromis
+# peut tomber et la règle peut se tromper : passé le sursis, on relit, et un
+# nouveau constat la remet au journal pour autant. Le journal se taille
+# lui-même à l'écriture.
+#
+# Ne pas rouvrir une page vendue ne change rien au catalogue : elle ne donnait
+# aucun bien, et le bien qu'elle portait, s'il est encore au fichier, reste
+# compté absent exactement comme avant — la collecte ne le revoit pas. Seules
+# les pages ouvertes diminuent.
+SURSIS_VENDUES = 30
+
+
+def _journal_vendues() -> Path:
+    """À côté des visites tronquées, et déplacé avec elles par les tests : un
+    test qui écrit dans le dépôt n'est pas un test."""
+    return JOURNAL_TRONQUEES.with_name("pages_vendues.json")
+
+
+def pages_vendues() -> dict:
+    """{adresse: jour du dernier constat « vendu »}. Absent ou illisible :
+    rien à éviter — l'ancien comportement, jamais pire."""
+    try:
+        journal = json.loads(_journal_vendues().read_text(encoding="utf-8"))
+        return {u: j for u, j in journal.items()
+                if isinstance(u, str) and isinstance(j, str)}
+    except (OSError, ValueError, AttributeError):
+        return {}
+
+
+def _encore_sous_sursis(journal: dict, aujourd_hui: str) -> dict:
+    limite = (date.fromisoformat(aujourd_hui) - timedelta(days=SURSIS_VENDUES)).isoformat()
+    return {u: j for u, j in journal.items() if j >= limite}
+
+
+def vendues_a_eviter(journal: dict, aujourd_hui: str) -> set:
+    """Les adresses lues vendues il y a moins de SURSIS_VENDUES jours."""
+    return set(_encore_sous_sursis(journal, aujourd_hui))
+
+
+def noter_pages_vendues(journal: dict, aujourd_hui: str) -> None:
+    """Écrit le journal, taillé : ce qui a dépassé le sursis en sort — la page
+    sera relue, et un nouveau constat la remettra. Un journal indisponible
+    n'arrête pas la collecte."""
+    try:
+        chemin = _journal_vendues()
+        chemin.parent.mkdir(parents=True, exist_ok=True)
+        chemin.write_text(json.dumps(_encore_sous_sursis(journal, aujourd_hui),
+                                     ensure_ascii=False, indent=1, sort_keys=True) + "\n",
+                          encoding="utf-8")
+    except OSError:
+        pass
 
 
 def cibles_qui_font_autorite(biens: list[dict]) -> set:
