@@ -320,3 +320,28 @@ def test_un_commerce_se_reconnait_a_sa_rubrique():
     assert motif_url_hors_cible(
         "https://www.agence.fr/vente/10-brienne/maison/9280-immeuble-mixte-avec-grand-appartement-et-local-commercial"
     ) == "url_type_exclu"
+
+
+def test_le_nom_de_l_agence_n_est_pas_le_type_du_bien():
+    """Mesuré le 15 octobre 2026 au déroulé de collecte : Loft & House —
+    Vimont, dans l'Orne, en plein dans la cible —, 14 pages ouvertes, 0
+    gardée, 12 refusées « loft ». Chaque titre de ce site se termine par le
+    nom de l'agence : « Maison de 6 pièces de 168,21 m² à VIMONT - Loft &
+    House ». Six autres agences portent un mot de règle dans leur nom
+    (Bon'Appart, Logimmo Conseil, Ifc Conseils…), et aucune des sept n'a
+    jamais versé une ligne au catalogue. On lit le type dans le titre
+    débarrassé du nom de l'agence ; le reste du titre garde toute sa force."""
+    maison = {"titre": "Maison de 6 pièces de 168,21 m² à VIMONT - Loft & House",
+              "agence": "Loft & House", "type_bien": "maison",
+              "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-168-m2-vimont-61603110/",
+              "surface_m2": 168.21, "prix": 262000, "pieces": 6}
+    assert motif_de_rejet(maison) is None
+    assert est_bien_valide(maison)
+    # Le mot hors du nom de l'agence condamne toujours.
+    assert motif_de_rejet({**maison, "titre": "Loft atypique à Caen - Loft & House"}) == "titre_hors_cible:loft"
+    assert motif_de_rejet({**maison, "agence": "Bon'Appart",
+                           "titre": "Appartement T2 à Lille - Bon'Appart"}) == "titre_hors_cible:appartement"
+    assert motif_de_rejet({**maison, "agence": "Logimmo Conseil",
+                           "titre": "Nos conseils pour bien vendre - Logimmo Conseil"}) == "titre_hors_cible:conseils"
+    # Sans agence connue, rien ne peut être retiré : la règle d'avant, intacte.
+    assert motif_de_rejet({k: v for k, v in maison.items() if k != "agence"}) == "titre_hors_cible:loft"

@@ -296,6 +296,16 @@ def enumere_plusieurs_biens(a: dict) -> bool:
     return bool(a.get("plusieurs_biens"))
 
 
+def _sans_le_nom_de_l_agence(titre: str, a: dict) -> str:
+    """Le titre normalisé, sans le nom de l'agence qui le signe (« … à VIMONT
+    - Loft & House »). Un nom trop court pour être sûr, ou absent du titre,
+    ne retire rien."""
+    agence = normaliser(a.get("agence") or "")
+    if len(agence) < 3 or agence not in titre:
+        return titre
+    return titre.replace(agence, " ")
+
+
 def motif_de_rejet(a: dict) -> str | None:
     """Le nom de la première règle qui refuse ce bien, ou None s'il passe.
 
@@ -325,7 +335,19 @@ def motif_de_rejet(a: dict) -> str | None:
     # Safti sur 257 tombent ici et aucune page IAD. Le fragment, lui, désigne
     # la coupable — et la liste des alternatives étant fixe, la cardinalité du
     # compteur reste bornée.
-    hors_cible = _NON_ANNONCE.search(titre) or _TYPES_EXCLUS.search(titre)
+    # Le nom de l'agence n'est pas le type du bien. Mesuré le 15 octobre 2026
+    # au déroulé : Loft & House — Vimont, dans l'Orne —, 14 pages ouvertes,
+    # 0 gardée, 12 refusées « loft » ; chaque titre du site se termine par
+    # « - Loft & House ». Six autres agences portent un mot de règle dans leur
+    # nom (Bon'Appart, Logimmo Conseil, Ifc Conseils…), et aucune des sept n'a
+    # jamais versé une ligne au catalogue. On lit donc le type dans le titre
+    # débarrassé du nom de l'agence — et seulement le type : 862 titres du
+    # fichier portent le nom de leur agence, aucun ne change de sort ; quatre
+    # ne sont faits que de ce nom et d'une référence (« F4002 - €105 000 |
+    # Perche et Demeures ») et c'est une autre décision, à prendre en les
+    # regardant, que de les tenir pour indigents.
+    sans_agence = _sans_le_nom_de_l_agence(titre, a)
+    hors_cible = _NON_ANNONCE.search(sans_agence) or _TYPES_EXCLUS.search(sans_agence)
     if hors_cible:
         return f"titre_hors_cible:{hors_cible.group(0)}"
     # Page catalogue qui a pris le titre de son premier bien : le titre ne la
