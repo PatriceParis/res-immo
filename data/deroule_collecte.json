@@ -2,406 +2,326 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "Girault Immo",
-   "secondes": 80,
-   "pages": 14,
-   "gardes": 8,
-   "vendus": 5,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 27,
-   "sitemap": "ok 27",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.girault-immobilier.fr/vente/1",
-     "titre": "Annonces immobilières | GIRAULT IMMO"
-    }
-   }
-  },
-  {
-   "agence": "Graupera Immobilier",
-   "secondes": 7,
-   "pages": 0,
+   "agence": "Logehome",
+   "secondes": 8,
+   "pages": 2,
    "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Immobilière Graupera"
-  },
-  {
-   "agence": "Groupe Centrum",
-   "secondes": 77,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 118,
-   "sitemap_dates": 43,
-   "sitemap": "ok 43",
-   "motifs": {
-    "titre_hors_cible:15 annonces": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:15 annonces": {
-     "url": "https://www.centrum-immobilier.fr/biens-renoves/1",
-     "titre": "15 annonces de Biens rénovés"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
-     "titre": "Villa de luxe en vente, proche plage 7 chambres"
-    }
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Groupe123immo",
-   "secondes": 68,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 88,
-   "sitemap_dates": 220,
-   "sitemap": "ok 220",
-   "motifs": {
-    "titre_hors_cible:245 annonces": 1,
-    "titre_hors_cible:170 maisons": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:245 annonces": {
-     "url": "https://www.groupe123immo.com/vente/1",
-     "titre": "245 Annonces de ventes immobilières"
-    },
-    "titre_hors_cible:170 maisons": {
-     "url": "https://www.groupe123immo.com/vente/maison/1",
-     "titre": "170 Maisons à vendre"
-    }
-   }
-  },
-  {
-   "agence": "Gueudry",
-   "secondes": 73,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 165,
-   "sitemap": "ok 165",
-   "motifs": {
-    "titre_hors_cible:maison neuve": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:maison neuve": {
-     "url": "https://www.gueudry.fr/maison-neuve-re2020/",
-     "titre": "Maison neuve RE2020 : ce qui change pour vous | Gueudry"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://www.gueudry.fr/maison-neuve-construction/",
-    "cause": "aucune annonce lue",
-    "titre": "Maison neuve construction : les étapes clés | Gueudry",
-    "octets": 134715
-   }
-  },
-  {
-   "agence": "HF Immobilier",
-   "secondes": 52,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
+   "vendus": 1,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 7,
-   "sitemap": "ok 7",
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "vendus_dans_l_adresse": 1,
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "ni_surface_ni_prix_credible": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.hf-immo.fr/vente/1",
-     "titre": "Annonces immobilières | HF IMMOBILIER"
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.logehome.fr/vendre-mon-bien",
+     "titre": "Vendre mon bien, le HOMEPACK de logéhome"
     }
    }
   },
   {
-   "agence": "Habitat Immobilier",
-   "secondes": 96,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 62,
-   "sitemap": "ok 128"
-  },
-  {
-   "agence": "Hamaris",
-   "secondes": 77,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 13,
-   "sitemap": "ok 13"
-  },
-  {
-   "agence": "Helman Immobilier",
-   "secondes": 246,
-   "pages": 38,
-   "gardes": 1,
+   "agence": "Pierre Notarianni Immobilier",
+   "secondes": 242,
+   "pages": 40,
+   "gardes": 2,
    "vendus": 36,
-   "ecartes": 0,
+   "ecartes": 1,
    "illisibles": 1,
    "fin": "temps de l'agence épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 86,
-   "sitemap": "ok 464",
+   "adresses_ecartees": 143,
+   "sitemap": "ok 694",
    "illisible_exemple": {
-    "url": "https://www.helman-immobilier.com/vente/entrepot",
+    "url": "https://www.notarianni-immobilier.fr/vente/chalet",
     "cause": "aucune annonce lue",
-    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
-    "octets": 895858
+    "titre": "Chalets en vente",
+    "octets": 696878
+   },
+   "motifs": {
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.notarianni-immobilier.fr/vente/etang",
+     "titre": "Etang de loisirs aux portes de la forêt de Mormal – Preux-au-Bois"
+    }
    }
   },
   {
-   "agence": "Le Mercier Immobilier",
-   "secondes": 76,
-   "pages": 13,
+   "agence": "Pierrimmo Ascq",
+   "secondes": 16,
+   "pages": 4,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 5,
+   "sitemap": "ok 4"
+  },
+  {
+   "agence": "Pisani Immobilier",
+   "secondes": 17,
+   "pages": 8,
+   "gardes": 0,
+   "vendus": 8,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 241,
+   "sitemap_dates": 8,
+   "sitemap": "ok 8",
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "Propriétés de Sologne",
+   "secondes": 89,
+   "pages": 14,
    "gardes": 8,
-   "vendus": 2,
+   "vendus": 3,
    "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 63,
-   "sitemap_dates": 112,
-   "sitemap": "ok 112",
+   "adresses_ecartees": 14,
+   "sitemap_dates": 70,
+   "sitemap": "ok 73",
    "motifs": {
-    "titre_hors_cible:biens a vendre": 1,
-    "prix_trop_haut": 1,
-    "titre_hors_cible:appartement": 1
+    "titre_hors_cible:maison neuve": 1,
+    "prix_trop_haut": 2
    },
    "ecartes_exemples": {
-    "titre_hors_cible:biens a vendre": {
-     "url": "https://www.lemercier-immobilier.com/vente/1",
-     "titre": "Biens à vendre | Lemercier Immobilier"
+    "titre_hors_cible:maison neuve": {
+     "url": "https://proprietes-sologne.com/property/maison-neuve-sur-terrain-de-1-1ha-a-millancay/",
+     "titre": "MAISON NEUVE SUR TERRAIN DE 1.1ha À MILLANÇAY"
     },
     "prix_trop_haut": {
-     "url": "https://www.lemercier-immobilier.com/vente/307-soissons/maison/t9/12876-proche-soissons-maison-d-architecte-220m-avec-bois-4ha-et-etang-1ha/",
-     "titre": "PROCHE SOISSONS MAISON D"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lemercier-immobilier.com/vente/91-valenciennes/duplex/t5/13391-magnifique-appartement-duplex-en-plein-coeur-de-valenciennes/",
-     "titre": "Magnifique appartement duplex en plein cœur de Valenciennes"
+     "url": "https://proprietes-sologne.com/property/propriete-nancay/",
+     "titre": "PROPRIÉTÉ NANÇAY"
     }
    }
   },
   {
-   "agence": "Le Strat Caen Immo",
-   "secondes": 75,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 84,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "illisible_exemple": {
-    "url": "https://www.caen-immo.fr/biens/place-de-parking-exterieur-60290394/",
-    "cause": "aucune annonce lue",
-    "titre": "Place de parking extérieur - Le Strat Immobilier",
-    "octets": 181923
-   },
-   "motifs": {
-    "titre_hors_cible:bureaux": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:bureaux": {
-     "url": "https://www.caen-immo.fr/biens/plateau-a-usage-de-bureaux-quartier-koening-bretteville-sur-odon-90-m2-59251567/",
-     "titre": "Plateau à usage de bureaux quartier Koening - Bretteville Sur Odon 90 m2"
-    }
-   }
-  },
-  {
-   "agence": "Lecoeur Immobilier",
-   "secondes": 20,
-   "pages": 8,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 8,
-   "sitemap": "ok 8",
-   "illisible_exemple": {
-    "url": "https://www.lecoeurtransactions.fr/annonces-divers",
-    "cause": "aucune annonce lue",
-    "titre": "Divers | LECOEUR IMMOBILIER",
-    "octets": 101237
-   }
-  },
-  {
-   "agence": "Leforestier Immobilier",
-   "secondes": 96,
-   "pages": 45,
+   "agence": "Radian Immobilier",
+   "secondes": 32,
+   "pages": 6,
    "gardes": 0,
-   "vendus": 45,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 548,
-   "sitemap_dates": 706,
-   "sitemap": "ok 706"
-  },
-  {
-   "agence": "Lelièvre immobilier",
-   "secondes": 81,
-   "pages": 13,
-   "gardes": 8,
    "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 0,
+   "ecartes": 0,
+   "illisibles": 6,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 296,
-   "sitemap_dates": 109,
-   "sitemap": "ok 109",
-   "motifs": {
-    "prix_trop_haut": 4,
-    "titre_hors_cible:parking": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
-     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.lelievre-immobilier.com/vente/stationnement-paris-ref-62255",
-     "titre": "Vente - parking/box Paris| Lelièvre Immobilier"
-    }
+   "adresses_ecartees": 17,
+   "sitemap": "ok 6",
+   "illisible_exemple": {
+    "url": "https://www.radian-immobilier.fr/vente/maison-mitoyenne-2-cotes-5-pieces-lille-59000,VM311",
+    "cause": "aucune annonce lue",
+    "titre": "",
+    "octets": 205
    }
   },
   {
-   "agence": "Lemaistre Immobilier Yvetot",
-   "secondes": 108,
-   "pages": 20,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 10,
+   "agence": "Saint-Christophe Immobilier",
+   "secondes": 33,
+   "pages": 11,
+   "gardes": 2,
+   "vendus": 5,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11",
+   "motifs": {
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:loft": 3
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.saint-christophe-immobilier.com/vente/maisons/1",
+     "titre": "Vente de maisons | Saint Christophe Immobilier"
+    },
+    "titre_hors_cible:loft": {
+     "url": "https://www.saint-christophe-immobilier.com/vente/59-nord/1-tourcoing/2-appartement/t4/1469-produit-rare-superbe-loft-tourcoing-de-154-m-3-ch-buanderie-dressing-grand-jardin-terrasse-parkin-prestige/",
+     "titre": "PRODUIT RARE ! Superbe Loft Tourcoing de 154 m² , 3 Ch , Buanderie, Dressing , Grand jardin, Terrasse , Parkin"
+    }
+   },
+   "vendus_dans_l_adresse": 2
+  },
+  {
+   "agence": "Saint-Roch immobilier",
+   "secondes": 217,
+   "pages": 37,
+   "gardes": 2,
+   "vendus": 32,
+   "ecartes": 2,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap": "ok 424",
+   "adresses_ecartees": 87,
+   "sitemap": "ok 37",
    "motifs": {
-    "page_catalogue": 1,
-    "titre_hors_cible:appartement": 7,
-    "ni_surface_ni_prix_credible": 2
+    "titre_hors_cible:local commercial": 2
    },
    "ecartes_exemples": {
-    "page_catalogue": {
-     "url": "https://www.lemaistre-immo.fr/fr/vente-maison-villa.htm",
-     "titre": "Découvrez toutes les ventes de maisons sur Le Havre et sa périphérie"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-canteleu-76380/61622057.htm",
-     "titre": "vente achat Appartement CANTELEU 76380"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-saint-romain-de-colbosc-76430/58124213.htm",
-     "titre": "vente achat Terrain SAINT ROMAIN DE COLBOSC 76430"
+    "titre_hors_cible:local commercial": {
+     "url": "https://www.saintrochimmo.com/vente/immobilier-pro-local-commercial-57-m2-le-havre-76600,VP063",
+     "titre": "Local Commercial Vendu Loué"
     }
    },
    "illisible_exemple": {
-    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
+    "url": "https://www.saintrochimmo.com/vendre-immobilier-havre,108",
     "cause": "aucune annonce lue",
-    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
-    "octets": 47327
+    "titre": "Vendre un bien au Havre - Saint Roch Immobilier",
+    "octets": 776727
    }
   },
   {
-   "agence": "Les Artisans 2 l'immobilier",
-   "secondes": 71,
-   "pages": 12,
+   "agence": "Sarl C2Si",
+   "secondes": 43,
+   "pages": 13,
    "gardes": 8,
-   "vendus": 3,
-   "ecartes": 1,
+   "vendus": 1,
+   "ecartes": 3,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap_dates": 14,
+   "sitemap": "ok 14",
+   "illisible_exemple": {
+    "url": "https://www.c2s-immo.com/vente-en-viager",
+    "cause": "aucune annonce lue",
+    "titre": "Vente en viager | C2SI",
+    "octets": 164373
+   },
+   "motifs": {
+    "titre_hors_cible:19 annonces": 1,
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:19 annonces": {
+     "url": "https://www.c2s-immo.com/vente/1",
+     "titre": "19 Annonces de ventes immobilières"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.c2s-immo.com/vente/8-st-cyr-sur-loire/maison/16090-maison-8-pieces-317-m-avec-piscine",
+     "titre": "Maison 8pièce(s) 5chambre(s) 317 m² Saint-Cyr-sur-Loire (37540)"
+    }
+   }
+  },
+  {
+   "agence": "Sauvage Gestion",
+   "secondes": 142,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 39,
+   "ecartes": 4,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 54,
+   "sitemap": "ok 54",
+   "motifs": {
+    "location": 4
+   },
+   "ecartes_exemples": {
+    "location": {
+     "url": "https://www.sauvage-immobilier.com/produit/maison-le-thuit-de-loison-6-pieces-147-m2/",
+     "titre": "Maison Le Thuit De L'oison 6 pièce(s) 147 m2 &#045; TRANSACTION & LOCATION"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.sauvage-immobilier.com/produit/maison-5-pieces-garage-le-grand-quevilly-2/",
+    "cause": "aucune annonce lue",
+    "titre": "Page Not Found - TRANSACTION &amp; LOCATION",
+    "octets": 98551
+   }
+  },
+  {
+   "agence": "Societe Immobiliere Grand Hainaut",
+   "secondes": 81,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 7,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "ok 24",
+   "adresses_ecartees": 1,
+   "sitemap_dates": 24,
+   "motifs": {
+    "titre_hors_cible:appart": 1,
+    "titre_hors_cible:appartement": 3,
+    "titre_hors_cible:maisons neuves": 2,
+    "titre_hors_cible:appartements": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appart": {
+     "url": "https://www.sigh-habitat.fr/annonce-immobiliere/valenciennes-appart-t2-t3/",
+     "titre": "VALENCIENNES - Appart T2/T3 - SIGH - Société Immobilière Grand Hainaut"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.sigh-habitat.fr/annonce-immobiliere/valenciennes-centre-appartement-2-3-chambres/",
+     "titre": "VALENCIENNES CENTRE - Appartement 2/3 chambres - SIGH - Société Immobilière Grand Hainaut"
+    },
+    "titre_hors_cible:maisons neuves": {
+     "url": "https://www.sigh-habitat.fr/annonce-immobiliere/rouvignies-4-maisons-neuves-psla/",
+     "titre": "ROUVIGNIES - 4 Maisons neuves PSLA - SIGH - Société Immobilière Grand Hainaut"
+    },
+    "titre_hors_cible:appartements": {
+     "url": "https://www.sigh-habitat.fr/annonce-immobiliere/valenciennes-appartements-neufs-du-t2-au-t5/",
+     "titre": "VALENCIENNES - Appartements neufs du T2 au T5 - SIGH - Société Immobilière Grand Hainaut"
+    }
+   }
+  },
+  {
+   "agence": "Sotheby's",
+   "secondes": 80,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 6,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 34",
+   "adresses_ecartees": 99,
+   "sitemap_dates": 82,
+   "sitemap": "ok 82",
    "motifs": {
-    "page_catalogue": 1
+    "prix_trop_haut": 6
    },
    "ecartes_exemples": {
-    "page_catalogue": {
-     "url": "https://www.artisans-immobilier.com/maison-a-vendre-Roz%C3%A9rieulles.htm",
-     "titre": "Maison à vendre Rozérieulles - LES ARTISANS DE L'IMMOBILIER, Agence immobilière à Metz"
+    "prix_trop_haut": {
+     "url": "https://www.valdeloire-sologne-sothebysrealty.com/fr/immobilier-val-de-loire/ref-or1-1665/vente-maison-blois-11-pieces-5-chambres-41000/",
+     "titre": "Vente Maison Blois 11 Pièces 233 m²"
     }
    }
   },
   {
-   "agence": "Les Clés de la Suisse Normande",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Les Clés du Littoral",
-   "secondes": 103,
+   "agence": "Sotheby's",
+   "secondes": 63,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -410,59 +330,260 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 24,
-   "sitemap": "ok 51",
+   "adresses_ecartees": 134,
+   "sitemap_dates": 104,
+   "sitemap": "ok 104",
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
-     "titre": "Propriété de caractère à 100mètres de la mer"
+     "url": "https://www.rouen-sothebysrealty.com/fr/nos-biens/ref-ro2-333/vente-maison-st-vigor-8-pieces-7-chambres-27930/",
+     "titre": "Vente Maison Saint-Vigor 8 Pièces 333 m²"
     }
    }
   },
   {
-   "agence": "Les nouvelles pépites",
-   "secondes": 241,
-   "pages": 39,
-   "gardes": 0,
-   "vendus": 38,
-   "ecartes": 0,
+   "agence": "Sotheby’s Bayeux",
+   "secondes": 71,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 7,
    "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 82,
-   "sitemap": "ok 169",
+   "adresses_ecartees": 146,
+   "sitemap_dates": 112,
+   "sitemap": "ok 112",
    "illisible_exemple": {
-    "url": "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-wasquehal-59290,VM372",
+    "url": "https://www.bayeux-sothebysrealty.com/fr/biens-vendus/&amp;new_research=1",
     "cause": "aucune annonce lue",
-    "titre": "À vendre - Maison, 4 pièces située à Wasquehal (59290)",
-    "octets": 842613
+    "titre": "Biens vendus",
+    "octets": 172703
+   },
+   "motifs": {
+    "prix_trop_haut": 7
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.bayeux-sothebysrealty.com/fr/nos-biens/ref-de4-302/vente-maison-ste-marie-du-mont-9-pieces-5-chambres-50480/",
+     "titre": "Vente Maison Sainte-Marie-du-Mont 9 Pièces 263 m²"
+    }
    }
   },
   {
-   "agence": "Loft & House",
-   "secondes": 32,
-   "pages": 14,
+   "agence": "Square Habitat",
+   "secondes": 48,
+   "pages": 3,
+   "gardes": 2,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "illisible_exemple": {
+    "url": "https://www.squarehabitat.fr/prix-immobilier/hauts-de-france/somme/maison-ponthieu-80150",
+    "cause": "navigation : TimeoutError",
+    "titre": "",
+    "octets": 0
+   }
+  },
+  {
+   "agence": "Stradim",
+   "secondes": 114,
+   "pages": 10,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 5,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 10,
+   "sitemap": "ok 10",
+   "motifs": {
+    "prix_trop_haut": 1,
+    "titre_hors_cible:terrain constructible": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "http://www.stradim.fr/transactions/troyes-hors-agglomeration/maison-t7-990-000eu-fai",
+     "titre": "Maison T7 - 990 000€ FAI"
+    },
+    "titre_hors_cible:terrain constructible": {
+     "url": "http://www.stradim.fr/vente-dun-terrain-constructible-quelles-taxes-sappliquent",
+     "titre": "Vente d’un terrain constructible : quelles taxes s’appliquent ?"
+    }
+   },
+   "illisible_exemple": {
+    "url": "http://www.stradim.fr/vendre-mon-terrain/estimer-son-terrain",
+    "cause": "aucune annonce lue",
+    "titre": "Estimer son terrain | Stradim",
+    "octets": 33057
+   }
+  },
+  {
+   "agence": "Thierry Langlois Immobilier",
+   "secondes": 0,
+   "pages": 0,
    "gardes": 0,
-   "vendus": 2,
-   "ecartes": 12,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Thillard & Duhamel",
+   "secondes": 45,
+   "pages": 23,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 23,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 77,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "illisible_exemple": {
+    "url": "https://www.thillard-duhamel.com/vendre-ou-louer-mon-bien-1",
+    "cause": "aucune annonce lue",
+    "titre": "Vendre ou louer mon bien",
+    "octets": 15875
+   }
+  },
+  {
+   "agence": "Timer Immobilier",
+   "secondes": 6,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 1,
+   "sitemap": "ok 1",
+   "illisible_exemple": {
+    "url": "https://www.timer-immobilier.fr/page/vendre-appartement-maison-lille-31",
+    "cause": "aucune annonce lue",
+    "titre": "Vente interactive immo interactif - Vente interactive: la meilleure méthode pour vendre",
+    "octets": 51601
+   }
+  },
+  {
+   "agence": "Toutabitat",
+   "secondes": 144,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 45,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 95"
+  },
+  {
+   "agence": "Vacherand Immobilier - Vauban / Nationale",
+   "secondes": 54,
+   "pages": 18,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 10,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 206,
+   "sitemap": "ok 204",
+   "motifs": {
+    "titre_hors_cible:appartement": 6,
+    "titre_hors_cible:entrepot": 1,
+    "titre_hors_cible:bureaux": 1,
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:parkings": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.vacherand.fr/immobilier/vente-appartement-lille/ref-VA14818-VACHERAND",
+     "titre": "Vente Appartement à vendre Lille - Annonce immobilière VA14818-VACHERAND"
+    },
+    "titre_hors_cible:entrepot": {
+     "url": "https://www.vacherand.fr/immobilier/vente-locaux-commerciaux-tourcoing/ref-VP1732-VACHERAND",
+     "titre": "Vente ENTREPOT DE 160M2 LOUE - Annonce immobilière VP1732-VACHERAND"
+    },
+    "titre_hors_cible:bureaux": {
+     "url": "https://www.vacherand.fr/immobilier/vente-bureaux-lille/ref-AB127044-VACHERAND",
+     "titre": "Vente Bureaux/appartement à vendre– 127 m² – À proximité immé - Annonce immobilière AB127044-VACHERAND"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.vacherand.fr/immobilier/vente-parking-box-la-madeleine/ref-VS446-VACHERAND",
+     "titre": "Vente PARKING dans une résidence Sécurisée - Annonce immobilière VS446-VACHERAND"
+    },
+    "titre_hors_cible:parkings": {
+     "url": "https://www.vacherand.fr/immobilier/vente-maison-tourcoing/ref-VM7116-VACHERAND",
+     "titre": "Vente Maison semi-individuelle avec jardin et parkings - Tourcoing Ma - Annonce immobilière VM7116-VACHERAND"
+    }
+   }
+  },
+  {
+   "agence": "Angélot Immo",
+   "secondes": 10,
+   "pages": 3,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 9,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "motifs": {
+    "titre_hors_cible:7 annonces": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:7 annonces": {
+     "url": "https://www.angelot-immo.fr/vente/1",
+     "titre": "7 Annonces de ventes immobilières"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
+     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
+    }
+   }
+  },
+  {
+   "agence": "Année Hoinville",
+   "secondes": 125,
+   "pages": 20,
+   "gardes": 2,
+   "vendus": 12,
+   "ecartes": 6,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
+   "adresses_ecartees": 97,
+   "sitemap": "ok 80",
    "motifs": {
-    "titre_hors_cible:loft": 12
+    "prix_trop_haut": 6
    },
    "ecartes_exemples": {
-    "titre_hors_cible:loft": {
-     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-168-m2-vimont-61603110/",
-     "titre": "Maison de 6 pièces de 168,21 m² à VIMONT - Loft & House"
+    "prix_trop_haut": {
+     "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
+     "titre": "MAISON TROUVILLE"
     }
    }
   }
