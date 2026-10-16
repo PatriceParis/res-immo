@@ -166,11 +166,16 @@ def test_le_type_en_tete_du_libelle_condamne_l_adresse():
                 "https://agence.fr/biens/vente-appartement-lille-59000-lille-647-it",
                 "https://agence.fr/annonce/terrain-a-batir-vincelles-89290/",
                 "https://agence.fr/annonce/bureau-71m%c2%b2-tours",
-                "https://agence.fr/annonce/a-vendre-locaux-commerciaux-lille/"):
+                "https://agence.fr/annonce/a-vendre-locaux-commerciaux-lille/",
+                # « annonce- » devant le type : Human Immobilier, mesuré le 16
+                # octobre 2026 — 33 pages d'appartements ouvertes sur 45.
+                "https://www.human-immobilier.fr/annonce-achat-appartement-acheres_75-5699",
+                "https://agence.fr/annonces-appartement-t2-lille-12"):
         assert qualite.motif_url_hors_cible(url) == "url_type_exclu", url
         assert not collecteur._est_page_de_bien(url), url
     # Le type ailleurs qu'en tête, ou une maison : rien à redire.
     for url in ("https://agence.fr/vente/maison-5-pieces-belleme-61130",
+                "https://www.human-immobilier.fr/annonce-achat-maison-belleme_61-1234",
                 "https://agence.fr/annonce/vente-maison-caen-14000-12",
                 "https://agence.fr/annonce/2658-ensemble-immobilier-amfreville-maison-principale",
                 "https://agence.fr/annonce/maison-avec-appartement-independant-12",

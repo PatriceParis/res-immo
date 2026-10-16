@@ -186,10 +186,13 @@ _URL_RUBRIQUE = re.compile(
 # « F3 AVEC ASCENSEUR ET TERRASSE », « PALAIS DE JUSTICE QUAI GEORGES V ».
 # Mesuré le 13 octobre 2026 : cent vingt et un biens servis dont le libellé
 # commence par un type hors cible, quatre-vingt-cinq appartements en tête.
-# Seuls un identifiant numérique ou « vente- » peuvent précéder le type :
-# « maison-avec-appartement-independant » ou « longere-avec-garage » restent.
+# Seuls un identifiant numérique, « annonce- » ou « vente- » peuvent précéder
+# le type : « maison-avec-appartement-independant » ou « longere-avec-garage »
+# restent. « annonce-achat-appartement-acheres_75-5699 » est le gabarit de
+# Human Immobilier, mesuré le 16 octobre 2026 : 33 pages d'appartements
+# ouvertes sur 45, pour un sitemap de vingt mille adresses qui le disent toutes.
 _URL_SLUG_TYPE = re.compile(
-    r"^(?:\d+-)?(?:vente-|achat-|a-vendre-|acheter-)?"
+    r"^(?:\d+-)?(?:annonces?-)?(?:vente-|achat-|a-vendre-|acheter-)?"
     r"(?:appartements?|apparts?|studios?|parkings?|garages?|terrains?|immeubles?|lofts?"
     r"|duplex|bureaux?|loca(?:l|ux)|box|caves?)(?:[-_,.]|$)", re.IGNORECASE)
 
