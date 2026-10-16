@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 24.7,
+  "seconde": 31.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 24.7,
+  "seconde": 31.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,299 +21,286 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 24.7,
+  "seconde": 31.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.5,
+  "seconde": 33.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 27.9,
+  "seconde": 35.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.9,
+  "seconde": 35.2,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.3,
+  "seconde": 35.5,
   "reseau": "capifrance",
-  "connues": 11292
+  "connues": 11391
  },
  {
   "etape": "reseau_debut",
-  "seconde": 28.3,
+  "seconde": 35.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 28.7,
+  "seconde": 36.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 42.0,
+  "seconde": 53.8,
   "reseau": "iad",
-  "n": 93903,
+  "n": 93924,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 43.8,
+  "seconde": 55.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 44.1,
+  "seconde": 56.1,
   "reseau": "iad",
-  "connues": 11292
+  "connues": 11391
  },
  {
   "etape": "departement",
-  "seconde": 158.6,
+  "seconde": 178.4,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 22,
-   "ecarte": 27,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 27
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 278.1,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 14,
-   "ecarte": 36,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 36
-  },
-  "exemples": {
-   "hors_perimetre": "Demeure 10 pièces de 320 m² à saint père en retz (44320)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 394.5,
-  "reseau": "iad",
-  "departement": "60",
+  "departement": "02",
   "visitees": 50,
   "gardes": 2,
   "tronquee": true,
   "etats": {
    "garde": 2,
    "vendu": 4,
-   "ecarte": 43,
-   "illisible": 1
+   "ecarte": 44,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 24,
-   "location": 7,
-   "prix_trop_haut": 12
+   "titre_hors_cible:appartement": 22,
+   "location": 6,
+   "hors_perimetre": 13,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
-   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
-   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+   "titre_hors_cible:appartement": "Appartement 3 pièces de 74 m² à CHÂTEAU-THIERRY (02400)",
+   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Domaine 10 pièces de 327 m² à Château-Thierry (02400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 616.7,
+  "seconde": 291.6,
   "reseau": "iad",
-  "departement": "61",
-  "visitees": 50,
-  "gardes": 22,
-  "tronquee": true,
-  "etats": {
-   "garde": 22,
-   "vendu": 14,
-   "ecarte": 14,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 13
-  },
-  "exemples": {
-   "location": "Maison de ville 6 pièces de 130 m² à Sainte-Gauburge-Sainte-Colombe (61370)",
-   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 627.3,
-  "reseau": "iad",
-  "departement": "80",
-  "visitees": 5,
-  "gardes": 0,
-  "tronquee": true,
-  "etats": {
-   "garde": 0,
-   "vendu": 2,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "location": "Maison 1 pièce de 27 m² à Poulainville (80260)",
-   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 627.3,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 628.0,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 629.6,
-  "reseau": "safti",
-  "n": 28850,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 630.3,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 630.6,
-  "reseau": "safti",
-  "connues": 11292
- },
- {
-  "etape": "departement",
-  "seconde": 780.9,
-  "reseau": "safti",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
-   "vendu": 1,
-   "ecarte": 43,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 42,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 2 pièces à Asnieres-La-Giraud 17400 : 47m², prix 136 000 €. Réf : 1592883",
-   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 970.6,
-  "reseau": "safti",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 0,
-   "ecarte": 37,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 37
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Allonnes 49650 : 115m², prix 212 500 €. Réf : 1645768"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1094.4,
-  "reseau": "safti",
-  "departement": "36",
+  "departement": "08",
   "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 1,
-   "ecarte": 47,
-   "illisible": 1
+   "vendu": 8,
+   "ecarte": 41,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 47
+   "hors_perimetre": 41
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bain-De-Bretagne 35470 : 62m², prix 136 500 €. Réf : 1620200"
+   "hors_perimetre": "Maison de village 2 pièces de 32 m² à SAINT LAURENT DE LA CABRERISSE (11220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1227.1,
-  "reseau": "safti",
-  "departement": "58",
-  "visitees": 43,
-  "gardes": 5,
+  "seconde": 444.5,
+  "reseau": "iad",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 0,
-   "ecarte": 38,
+   "garde": 8,
+   "vendu": 13,
+   "ecarte": 29,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 38
+   "titre_hors_cible:appartement": 1,
+   "location": 2,
+   "hors_perimetre": 26
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bazoches-Les-Bray 77118 : 72m², prix 165 000 €. Réf : 1690967"
+   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
+   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
+   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 556.5,
+  "reseau": "iad",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 9,
+   "ecarte": 41,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 30,
+   "prix_trop_haut": 10
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 79 m² à La Rivière-Saint-Sauveur (14600)",
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 96 m² à Angerville (91670)",
+   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 634.6,
+  "reseau": "iad",
+  "departement": "18",
+  "visitees": 32,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 4,
+   "ecarte": 26,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 25
+  },
+  "exemples": {
+   "location": "Maison 7 pièces de 154 m² à Chaumont (52000)",
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 634.6,
+  "reseau": "safti",
+  "part_secondes": 597
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 635.5,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 637.4,
+  "reseau": "safti",
+  "n": 28794,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 638.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 638.5,
+  "reseau": "safti",
+  "connues": 11391
+ },
+ {
+  "etape": "departement",
+  "seconde": 957.1,
+  "reseau": "safti",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 32,
+  "tronquee": true,
+  "etats": {
+   "garde": 32,
+   "vendu": 3,
+   "ecarte": 15,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 7,
+   "prix_trop_haut": 8
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 6 pièces à Beaufort-En-Anjou 49250 : 113m², prix 199 000 €. Réf : 1702605",
+   "prix_trop_haut": "Vente de maison 5 pièces à Bray-Dunes 59123 : 198m², prix 990 000 €. Réf : 1708575"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1115.6,
+  "reseau": "safti",
+  "departement": "60",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 0,
+   "ecarte": 46,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 46
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 9 pièces à Anglars-Saint-Felix 12390 : 204m², prix 230 000 €. Réf : 1641935"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1234.9,
+  "reseau": "safti",
+  "departement": "89",
+  "visitees": 37,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 1,
+   "ecarte": 31,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 31
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 3 pièces à Beugnon Thireuil 79130 : 70m², prix 45 333 €. Réf : 1542904"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.1,
-  "gardes": 50
+  "seconde": 1234.9,
+  "gardes": 53
  }
 ]
