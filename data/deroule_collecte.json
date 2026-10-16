@@ -2,183 +2,111 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "Delaitre immobilier",
-   "secondes": 247,
-   "pages": 22,
-   "gardes": 1,
-   "vendus": 18,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 347,
-   "sitemap": "ok 348",
-   "motifs": {
-    "titre_hors_cible:appartement": 2,
-    "titre_hors_cible:studio": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.delaitreimmobilier.fr/biens/443/votre-agence-de-proximite-locale-vous-propose-rouen-centre-square-verdrel-cet-appartement",
-     "titre": "Votre agence de proximité locale vous propose Rouen centre square VERDREL cet appartement duplex en bon état de 99 m2 lo"
-    },
-    "titre_hors_cible:studio": {
-     "url": "https://www.delaitreimmobilier.fr/biens/430/rouen-gare-special-airbnb-original-studio-avec-jardin-plein-sud-au-calme",
-     "titre": "Rouen gare spècial AIRBNB original studio avec jardin plein sud au calme"
-    }
-   },
-   "vendus_dans_l_adresse": 13
-  },
-  {
-   "agence": "Homeloop",
-   "secondes": 134,
-   "pages": 45,
-   "gardes": 6,
-   "vendus": 2,
-   "ecartes": 37,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 276,
-   "sitemap_dates": 160,
-   "sitemap": "ok 160",
-   "motifs": {
-    "titre_hors_cible:153 biens": 35,
-    "titre_hors_cible:loft": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:153 biens": {
-     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/oullins-pierre-benite/oullins-pierre-benite_georges-brassens_machaon/83567",
-     "titre": "153 biens à vendre"
-    },
-    "titre_hors_cible:loft": {
-     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/barjols/mandat-barjols_draguignan_dindon/83980",
-     "titre": "Loft d'habitation + activité professionn..."
-    },
-    "prix_trop_haut": {
-     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/la-plaine-sur-mer/vue-mer-maison-11p-de-268-m2-port-giraud-la-plaine-sur-mer/84862",
-     "titre": "Vue mer ! Maison 11p de 268 m² - Port Gi..."
-    }
-   }
-  },
-  {
-   "agence": "Hoste Immobilier",
-   "secondes": 59,
-   "pages": 9,
-   "gardes": 7,
-   "vendus": 1,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 13,
-   "sitemap_dates": 7,
-   "sitemap": "ok 9",
-   "motifs": {
-    "titre_hors_cible:appartement": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.hoste-immobilier.fr/fr/vente/1/maison/tourcoing/",
-     "titre": "Vente appartement, maison"
-    }
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Human Immobilier",
-   "secondes": 230,
-   "pages": 45,
-   "gardes": 7,
-   "vendus": 3,
-   "ecartes": 35,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 519,
-   "sitemap_dates": 20685,
-   "sitemap": "ok 20705",
-   "motifs": {
-    "titre_hors_cible:appartement": 33,
-    "titre_hors_cible:studio": 2
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.human-immobilier.fr/annonce-achat-appartement-achÃ¨res_75-5699",
-     "titre": "Appartement Ach&#xE8;res (78260) 3 pi&#xE8;ces 60 m&#xB2; - 75-5699"
-    },
-    "titre_hors_cible:studio": {
-     "url": "https://www.human-immobilier.fr/annonce-achat-appartement-achÃ¨res_75-5736",
-     "titre": "Studio Ach&#xE8;res (78260) 1 pi&#xE8;ce 20 m&#xB2; - 75-5736"
-    }
-   }
-  },
-  {
-   "agence": "ID Immobilier",
-   "secondes": 79,
-   "pages": 11,
-   "gardes": 8,
+   "agence": "Immobilière de France",
+   "secondes": 50,
+   "pages": 12,
+   "gardes": 2,
    "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 1,
+   "ecartes": 5,
+   "illisibles": 5,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 129,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Trouvez le bien de vos rêves avec",
+   "illisible_exemple": {
+    "url": "https://immobilieredefrance.com/fr/propriete/location+appartement+boulogne-sur-mer+f3-limite-outreau+85164803",
+    "cause": "aucune annonce lue",
+    "titre": "F3 limite Outreau",
+    "octets": 97097
+   },
    "motifs": {
-    "titre_indigent": 1,
-    "titre_hors_cible:15 maisons": 1
+    "titre_hors_cible:studio": 2,
+    "titre_hors_cible:terrain a batir": 1,
+    "titre_hors_cible:murs commerciaux": 1,
+    "titre_hors_cible:immeuble de rapport": 1
    },
    "ecartes_exemples": {
-    "titre_indigent": {
-     "url": "https://www.id-immobilier.com/vente/1",
-     "titre": "120"
+    "titre_hors_cible:studio": {
+     "url": "https://immobilieredefrance.com/fr/propriete/location+appartement+saint-omer+beau-studio-25-m-lumineux-en-centre-ville+83191832",
+     "titre": "Beau studio 25 m² lumineux, en centre ville"
     },
-    "titre_hors_cible:15 maisons": {
-     "url": "https://www.id-immobilier.com/vente/maison/1",
-     "titre": "15 Maisons en vente"
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+terrain+aire-sur-la-lys+terrain-a-batir-proche-centre-ville+86691962",
+     "titre": "Terrain à bâtir proche Centre ville"
+    },
+    "titre_hors_cible:murs commerciaux": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+commerce+boulogne-sur-mer+murs-commerciaux-a-vendre-boulogne-sur-mer+85301263",
+     "titre": "Murs commerciaux à vendre Boulogne-sur-Mer"
+    },
+    "titre_hors_cible:immeuble de rapport": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+immeuble-de-rapport-a-vendre-belle-opportunite+86872590",
+     "titre": "IMMEUBLE DE RAPPORT À VENDRE – BELLE OPPORTUNITÉ"
     }
-   },
-   "illisible_exemple": {
-    "url": "https://www.id-immobilier.com/biens-vendus/1",
-    "cause": "aucune annonce lue",
-    "titre": "Nos biens vendus | ID Immobilier",
-    "octets": 185064
    }
   },
   {
-   "agence": "Ideal",
-   "secondes": 11,
-   "pages": 4,
+   "agence": "Immobilière de Lille",
+   "secondes": 52,
+   "pages": 23,
    "gardes": 0,
    "vendus": 4,
-   "ecartes": 0,
+   "ecartes": 19,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 4",
-   "sitemap_dates": 4
+   "adresses_ecartees": 34,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "motifs": {
+    "titre_hors_cible:maisons a vendre": 19
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:maisons a vendre": {
+     "url": "https://www.immobiliere-de-lille.fr/vente/maison/lille",
+     "titre": "Découvrez nos 5 maisons à vendre Lille - Immobilière de Lille"
+    }
+   }
   },
   {
-   "agence": "Ifc Conseils",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Imaj Immobilier",
+   "agence": "Indicateur Vendômois",
    "secondes": 62,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 334,
+   "sitemap": "ok 334",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "ni_surface_ni_prix_credible": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.indicateurvendomois.com/vente/1",
+     "titre": "Annonces immobilières - Vente | Indicateur Vendomois Immobilier"
+    },
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.indicateurvendomois.com/vente/maisons-villas/1",
+     "titre": "Vente de maisons et villas | Indicateur Vendomois Immobilier"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/5-terrain/4193-ouest-vendome/",
+     "titre": "OUEST VENDOME"
+    }
+   }
+  },
+  {
+   "agence": "Investimmo",
+   "secondes": 61,
    "pages": 10,
    "gardes": 8,
    "vendus": 0,
@@ -187,256 +115,576 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 25,
-   "sitemap_dates": 24,
-   "sitemap": "ok 24",
+   "adresses_ecartees": 57,
+   "sitemap_dates": 22,
+   "sitemap": "ok 22",
    "motifs": {
     "titre_hors_cible:annonces": 1,
-    "prix_trop_haut": 1
+    "titre_hors_cible:recherche": 1
    },
    "ecartes_exemples": {
     "titre_hors_cible:annonces": {
-     "url": "https://www.immobi.com/vente/1",
-     "titre": "Annonces immobilières | Imaj Immobilier"
+     "url": "https://agence-investimmo.fr/vente/1",
+     "titre": "Annonces immobilières | Investimmo"
     },
-    "prix_trop_haut": {
-     "url": "https://www.immobi.com/vente/80-gerardmer/maison/3161-gerardmer",
-     "titre": "GERARDMER"
+    "titre_hors_cible:recherche": {
+     "url": "https://agence-investimmo.fr/vente/10-boulogne-sur-mer/maison/6724-maison-jardin-garage-secteur-recherche-plain-pied-boulogne-sur-mer-prestige",
+     "titre": "Maison Jardin Garage secteur recherché plain pied Boulogne Sur Mer"
     }
    }
   },
   {
-   "agence": "Immo 3D",
-   "secondes": 42,
-   "pages": 12,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 31,
-   "sitemap_dates": 12,
-   "sitemap": "ok 12",
-   "motifs": {
-    "titre_hors_cible:annonces": 9
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.immo3d-nancy.fr/annonces-vente/",
-     "titre": "Annonces Vente"
-    }
-   }
-  },
-  {
-   "agence": "Immo Centre 61",
-   "secondes": 15,
-   "pages": 5,
-   "gardes": 0,
-   "vendus": 5,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 3,
-   "sitemap_dates": 5,
-   "sitemap": "ok 5"
-  },
-  {
-   "agence": "Immo Conseil Debever",
-   "secondes": 83,
-   "pages": 16,
+   "agence": "Jacques Klein Immeubles",
+   "secondes": 98,
+   "pages": 14,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 8,
-   "illisibles": 0,
+   "vendus": 1,
+   "ecartes": 3,
+   "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 40,
-   "sitemap": "ok 40",
-   "motifs": {
-    "titre_hors_cible:biens immobiliers": 1,
-    "titre_hors_cible:vente de maisons": 1,
-    "titre_hors_cible:appartement": 5,
-    "titre_hors_cible:3 maisons": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:biens immobiliers": {
-     "url": "https://www.immoconseil-debever.com/vente/1",
-     "titre": "Biens immobiliers à vendre | Immobilier Conseil Debever"
-    },
-    "titre_hors_cible:vente de maisons": {
-     "url": "https://www.immoconseil-debever.com/vente/maisons/1",
-     "titre": "Vente de maisons | Immobilier Conseil Debever"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t3/20236-artem-opportunitee-a-saisir-un-appartement-a-renover-de-3-pieces-tres-lumineux-de-77-70-m-situe-au-1-e/",
-     "titre": "ARTEM, OPPORTUNITEE A SAISIR un appartement à rénover de 3 pièces très lumineux de 77,70 m², situé au 1-e"
-    },
-    "titre_hors_cible:3 maisons": {
-     "url": "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t1/20255-3-maisons-special-investisseur-studio-avec-cave-situe-au-4-eme-etage/",
-     "titre": "3 MAISONS SPECIAL INVESTISSEUR STUDIO avec cave situé au 4-eme étage."
-    }
-   }
-  },
-  {
-   "agence": "Immo Côte d'Opale",
-   "secondes": 60,
-   "pages": 15,
-   "gardes": 5,
-   "vendus": 8,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
+   "adresses_ecartees": 40,
    "sitemap_dates": 15,
    "sitemap": "ok 15",
    "motifs": {
-    "titre_hors_cible:8 annonces": 1,
-    "prix_trop_haut": 1
+    "prix_trop_haut": 1,
+    "titre_hors_cible:appartement": 1,
+    "location": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:8 annonces": {
-     "url": "https://www.immocotedopale.com/vente/1",
-     "titre": "8 Annonces de ventes immobilières"
-    },
     "prix_trop_haut": {
-     "url": "https://www.immocotedopale.com/vente/15-berck/propriete/935-ensemble-immobilier-de-3-maisons-et-un-hangar-dont-une-maison-de-maitre",
-     "titre": "Propriete 11pièce(s) 8chambre(s) 450 m² Berck (62600)"
+     "url": "https://jki-immo.fr/annonces/f5-metz-vallieres/",
+     "titre": "F5-METZ VALLIÈRES - Jacques Klein Immobilier"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://jki-immo.fr/annonces/metz-hyper-centre-f3-f4-en-parfait-etat/",
+     "titre": "Appartement T4 - METZ HYPER CENTRE - Jacques Klein Immobilier"
+    },
+    "location": {
+     "url": "https://jki-immo.fr/annonces/briey-bas-t3-meuble/",
+     "titre": "BRIEY-BAS - T3 meublé - Jacques Klein Immobilier"
     }
+   },
+   "illisible_exemple": {
+    "url": "https://jki-immo.fr/annonces/maison-individuelle-metz-queuleu/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison individuelle - METZ QUEULEU - Jacques Klein Immobilier",
+    "octets": 322500
    }
   },
   {
-   "agence": "Immo coup de coeur",
-   "secondes": 61,
-   "pages": 12,
+   "agence": "Jean Jaurès Immobilier",
+   "secondes": 63,
+   "pages": 13,
    "gardes": 8,
-   "vendus": 3,
+   "vendus": 4,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 55,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
+   "adresses_ecartees": 75,
+   "sitemap_dates": 125,
+   "sitemap": "ok 125",
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "titre_indigent": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.immocoupdecoeur3.fr/vente/1",
-     "titre": "Annonces immobilières | Immo Coup De Cœur"
+    "titre_indigent": {
+     "url": "https://www.jean-jaures-immobilier.com/vente/1",
+     "titre": "49"
     }
    },
    "vendus_dans_l_adresse": 1
   },
   {
-   "agence": "Immobilier Center (Fnaim)",
-   "secondes": 101,
-   "pages": 9,
+   "agence": "L'Agence",
+   "secondes": 7,
+   "pages": 2,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lagenceimmobilier.com/a-vendre/1",
+     "titre": "Vente - L'Agence"
+    }
+   }
+  },
+  {
+   "agence": "L'Agence Smith",
+   "secondes": 133,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 2,
+   "ecartes": 43,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 173,
+   "sitemap": "ok 175",
+   "motifs": {
+    "titre_indigent": 43
+   },
+   "ecartes_exemples": {
+    "titre_indigent": {
+     "url": "https://www.agence-smith.com/bien-immobilier/nouveaute-smith-appartement-4-pieces-3-chambres-2/",
+     "titre": "L"
+    }
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "L'Immobilière Conseils",
+   "secondes": 6,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "L’immobilière Conseils : agence immobilière Noyon, transacti"
+  },
+  {
+   "agence": "La Plaine Immobilier",
+   "secondes": 93,
+   "pages": 38,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 38,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "La Plaine Immobilier : agence immobilière Caen, achat immobi",
+   "illisible_exemple": {
+    "url": "https://laplaine-immobilier.com/fr/maison-carrouges-2-pieces-35-m2",
+    "cause": "aucune annonce lue",
+    "titre": "",
+    "octets": 154397
+   }
+  },
+  {
+   "agence": "OXIA Rouen",
+   "secondes": 68,
+   "pages": 14,
    "gardes": 8,
-   "vendus": 1,
+   "vendus": 0,
+   "ecartes": 6,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 101,
+   "sitemap": "ok 105",
+   "motifs": {
+    "titre_hors_cible:murs commerciaux": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:studio": 1,
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:appartement": 1,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:murs commerciaux": {
+     "url": "https://www.oxia.fr/biens/murs-commerciaux-vallauris-200-m-487",
+     "titre": "Murs commerciaux Vallauris 200 m² - oxia"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.oxia.fr/biens/espace-polyvalent-paris-10eme-canal-saint-martin-2716",
+     "titre": "Espace polyvalent Paris 10ème - Canal Saint-Martin - oxia"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.oxia.fr/biens/charonne-studio-ideal-investissement-ou-premier-achat-3096",
+     "titre": "Charonne - Studio - Idéal investissement ou premier achat - oxia"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.oxia.fr/biens/ile-saint-germain-grand-2-pieces-avec-balcon-et-parking-3344",
+     "titre": "Ile Saint Germain- Grand 2 pièces avec balcon et parking - oxia"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.oxia.fr/biens/annecy-rue-de-la-paix-appartement-4-pieces-avec-balcon-et-ascenseur-3346",
+     "titre": "ANNECY - rue de la paix, appartement 4 pièces avec balcon et ascenseur - oxia"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.oxia.fr/biens/pharmacie-en-vente-3456",
+     "titre": "Pharmacie en vente - oxia"
+    }
+   }
+  },
+  {
+   "agence": "Office B.",
+   "secondes": 44,
+   "pages": 8,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "ok 20",
+   "adresses_ecartees": 7,
+   "sitemap_dates": 20,
+   "motifs": {
+    "titre_hors_cible:appartement": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.office-b.fr/annonces/therdonne-appartement-t3-en-rez-de-chaussee-260902-2/",
+     "titre": "THERDONNE / APPARTEMENT T3 EN REZ-DE-CHAUSSÉE - 260902 - Office b"
+    }
+   }
+  },
+  {
+   "agence": "Opidom",
+   "secondes": 70,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "TimeoutError"
+  },
+  {
+   "agence": "Orpi",
+   "secondes": 57,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 20,
+   "sitemap": "ok 164"
+  },
+  {
+   "agence": "Orpi",
+   "secondes": 99,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 2,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 4,
-   "sitemap_dates": 77,
-   "sitemap": "ok 80"
+   "sitemap": "ok 11"
   },
   {
-   "agence": "Immobilier ILL",
-   "secondes": 250,
-   "pages": 37,
-   "gardes": 6,
-   "vendus": 31,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 52,
-   "sitemap": "ok 99"
-  },
-  {
-   "agence": "Immobilier Saint-Marcouf",
+   "agence": "Ozenne immobilier",
    "secondes": 67,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
+   "pages": 33,
+   "gardes": 0,
+   "vendus": 24,
+   "ecartes": 9,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 69,
-   "sitemap_dates": 153,
-   "sitemap": "ok 153",
+   "adresses_ecartees": 64,
+   "sitemap_dates": 33,
+   "sitemap": "ok 33",
    "motifs": {
-    "titre_hors_cible:biens a vendre": 1,
-    "titre_hors_cible:appartement": 1,
-    "prix_trop_haut": 1
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "prix_trop_haut": 6,
+    "ni_surface_ni_prix_credible": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:biens a vendre": {
-     "url": "https://immo-grandcamp.com/vente/1",
-     "titre": "Biens à vendre | Immobilier Saint Marcouf"
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.ozenne-immobilier.fr/vente/1",
+     "titre": "Biens immobiliers à vendre | OZENNE IMMOBILIER"
     },
-    "titre_hors_cible:appartement": {
-     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/maison/t5/859-commerce-appartement-100m-du-port/",
-     "titre": "Commerce + Appartement - 100m du port !"
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.ozenne-immobilier.fr/vente/maisons-villas/1",
+     "titre": "Vente de maisons & villas | OZENNE IMMOBILIER"
     },
     "prix_trop_haut": {
-     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/propriete/t14/887-propriete-de-390m-grandcamp-maisy-gite/",
-     "titre": "Propriété de 390m² - GRANDCAMP-MAISY - Gite"
+     "url": "https://www.ozenne-immobilier.fr/vente/14-calvados/9-st-arnoult/1-maison/t6/739-grande-maison-familiale-6-pieces-saint-arnoult/",
+     "titre": "Grande maison familiale 6 pièces | Saint-Arnoult"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.ozenne-immobilier.fr/vente/14-calvados/1-benerville-sur-mer/1-maison/t3/717-maison-proche-plage-benerville-sur-mer/",
+     "titre": "Maison proche plage | Benerville Sur Mer"
+    }
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "PBH Immo",
+   "secondes": 51,
+   "pages": 10,
+   "gardes": 4,
+   "vendus": 2,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Accueil | PBH",
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:terrain constructible": 1,
+    "titre_hors_cible:appt": 1,
+    "titre_hors_cible:immeuble de rapport": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://pbh-immo.com/fr/propriete/vente+appartement+chatenay-malabry+appartement-t5+86200622",
+     "titre": "Appartement T5"
+    },
+    "titre_hors_cible:terrain constructible": {
+     "url": "https://pbh-immo.com/fr/propriete/vente+terrain+tendon+86214307",
+     "titre": "TENDON (88)- Terrain constructible1500m2"
+    },
+    "titre_hors_cible:appt": {
+     "url": "https://pbh-immo.com/fr/propriete/viager+appartement+toulon+appt-t2-traversant-a-toulon+87255704",
+     "titre": "Appt T2 traversant à TOULON"
+    },
+    "titre_hors_cible:immeuble de rapport": {
+     "url": "https://pbh-immo.com/fr/propriete/vente+immeuble+bitche+85105266",
+     "titre": "BITCHE (57) - Immeuble de rapport de 219,40 m², 10 pièces, 3 appartements + local commercial de 52 m² et petit jardin"
     }
    }
   },
   {
-   "agence": "Immobilier du Chêne",
-   "secondes": 175,
-   "pages": 21,
+   "agence": "Paffoni Immobilier",
+   "secondes": 65,
+   "pages": 10,
    "gardes": 8,
-   "vendus": 12,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 23,
+   "sitemap_dates": 17,
+   "sitemap": "ok 17",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.paffoni-immo.com/vente/1",
+     "titre": "Biens à vendre | PAFFONI IMMOBILIER"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.paffoni-immo.com/biens-vendus/1",
+    "cause": "aucune annonce lue",
+    "titre": "Nos biens vendus | PAFFONI IMMOBILIER",
+    "octets": 138937
+   }
+  },
+  {
+   "agence": "Paillette Immobilier",
+   "secondes": 166,
+   "pages": 24,
+   "gardes": 8,
+   "vendus": 16,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 157,
+   "sitemap": "ok 287"
+  },
+  {
+   "agence": "Panther'Immo",
+   "secondes": 82,
+   "pages": 15,
+   "gardes": 8,
+   "vendus": 3,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 29,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "motifs": {
+    "titre_hors_cible:32 biens": 1,
+    "prix_trop_haut": 2,
+    "titre_hors_cible:bureaux": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:32 biens": {
+     "url": "https://www.pantherimmo.com/vente/1",
+     "titre": "32 biens immobiliers à vendre | Panther Immo"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.pantherimmo.com/vente/351-la-baule-escoublac/maison/t7/179-maison-d-architecte-207m2-calme-5-chambres-dependance-garage/",
+     "titre": "MAISON D"
+    },
+    "titre_hors_cible:bureaux": {
+     "url": "https://www.pantherimmo.com/vente/40-notre-dame-d-oe/maison/t6/211-maison-133m2-5-chambres-2-bureaux-terrasse-terrain-583m2-garage/",
+     "titre": "MAISON 133m2, 5 CHAMBRES, 2 BUREAUX,TERRASSE, TERRAIN 583m2, GARAGE"
+    }
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "Pas-de-Calais Habitat (Bailleur social)",
+   "secondes": 47,
+   "pages": 11,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 66,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11",
+   "motifs": {
+    "titre_hors_cible:nos biens": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:nos biens": {
+     "url": "https://www.pasdecalais-habitat.fr/devenir-proprietaire/annonces-vente/",
+     "titre": "Nos biens à la vente - Pas-de-Calais habitat"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.pasdecalais-habitat.fr/je-cherche-un-local-professionnel/annonces-pro/",
+    "cause": "aucune annonce lue",
+    "titre": "Nos biens pour les pros - Pas-de-Calais habitat",
+    "octets": 177384
+   }
+  },
+  {
+   "agence": "Pays d'Auge Sotheby's International Realty",
+   "secondes": 63,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 44,
-   "sitemap": "ok 116",
+   "adresses_ecartees": 134,
+   "sitemap_dates": 108,
+   "sitemap": "ok 108",
    "motifs": {
-    "titre_hors_cible:local commercial": 1
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:local commercial": {
-     "url": "https://www.immobilier-du-chene.com/vente/maison-individuelle-10-pieces-saint-germain-70200,VM286",
-     "titre": "Ensemble immobilier avec local commercial (restaurant) + logement - murs uniquement"
+    "prix_trop_haut": {
+     "url": "https://www.paysdauge-sothebysrealty.com/fr/nos-biens/ref-ro2-333/vente-maison-st-vigor-8-pieces-7-chambres-27930/",
+     "titre": "Vente Maison Saint-Vigor 8 Pièces 333 m²"
     }
    }
   },
   {
-   "agence": "Immobilière Scarponaise",
-   "secondes": 2,
+   "agence": "Perch'Immo",
+   "secondes": 53,
+   "pages": 4,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 7,
+   "sitemap": "ok 118"
+  },
+  {
+   "agence": "Perche et Demeures",
+   "secondes": 4,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "sans <loc>",
+   "index_statut": 200,
+   "index_titre": "Un instant, s'il vous plaît…"
+  },
+  {
+   "agence": "Picart Immobilier",
+   "secondes": 71,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 4,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 106,
+   "sitemap_dates": 385,
+   "sitemap": "ok 385",
+   "illisible_exemple": {
+    "url": "https://www.picartimmobilier.fr/property-status/exclusivite/",
+    "cause": "aucune annonce lue",
+    "titre": "Exclusivité Archives - Stéphane Picart Immobilier - Agence Immobilière",
+    "octets": 47632
+   }
+  },
+  {
+   "agence": ".la petite agence",
+   "secondes": 49,
+   "pages": 8,
+   "gardes": 3,
+   "vendus": 1,
+   "ecartes": 4,
+   "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 32,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15"
+   "sitemap_dates": 51,
+   "sitemap": "ok 51",
+   "motifs": {
+    "prix_trop_haut": 2,
+    "titre_hors_cible:appartement": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-bourgeoise-du-xixe/caen",
+     "titre": "Maison bourgeoise du XIXe"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/grand-appartement-vue-%C3%A9glise-saint-jean/caen",
+     "titre": "Grand appartement vue église Saint-Jean"
+    }
+   }
   }
  ]
 }
