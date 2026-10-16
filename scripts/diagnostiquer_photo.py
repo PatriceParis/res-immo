@@ -63,6 +63,38 @@ def _images_brutes(html: str, base: str) -> list[tuple[str, str]]:
     return sortie
 
 
+def _texte(fragment: str) -> str:
+    import html as entites
+    import re
+    return entites.unescape(re.sub(r"<[^>]+>|\s+", " ", fragment)).strip()[:120]
+
+
+def _lecture(html: str, annonce) -> None:
+    """Ce que l'extracteur a LU — titre, prix, surface — et les candidats de
+    titre que la page offrait. Ajouté le 16 octobre 2026 : L'Agence Smith,
+    45 pages sur 45 écartées au titre « L », La Plaine Immobilier 38 pages sur
+    38 sans annonce lue — et rien, dans le déroulé, pour dire d'où venait ce
+    titre ni ce qui manquait. La sonde photo ouvrait déjà la page ; elle dit
+    maintenant aussi ce qu'on y lit."""
+    import re
+    if annonce:
+        print(f"  lu              : titre={annonce.get('titre')!r} prix={annonce.get('prix')} "
+              f"surface={annonce.get('surface_m2')} type={annonce.get('type_bien')} "
+              f"vendu={annonce.get('vendu')}")
+    else:
+        print("  lu              : aucune annonce lue")
+    metas = _metas(html)
+    balise = re.search(r"<title[^>]*>(.*?)</title>", html or "", re.I | re.S)
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", html or "", re.I | re.S)
+    noms = re.findall(r'"name"\s*:\s*"([^"]{0,120})"', html or "")
+    types = sorted(set(re.findall(r'"@type"\s*:\s*"([A-Za-z]+)"', html or "")))
+    print(f"  og:title        : {metas.get('og:title')!r}")
+    print(f"  <title>         : {_texte(balise.group(1))!r}" if balise else "  <title>         : —")
+    print(f"  <h1>            : {_texte(h1.group(1))!r}" if h1 else "  <h1>            : —")
+    print(f"  JSON-LD name    : {[_texte(n) for n in noms[:6]]}")
+    print(f"  JSON-LD @type   : {types[:10]}")
+
+
 def sonder(page, url: str) -> None:
     print("=" * 78)
     print(url)
@@ -83,6 +115,8 @@ def sonder(page, url: str) -> None:
         print(f"  <img> retenue   : {choisie or '—'}")
         print(f"  photo finale    : "
               f"{(annonce or {}).get('photo') if annonce else 'annonce rejetée'}")
+        if attente == INSTANTS[0]:
+            _lecture(html, annonce)
         for verdict, u in images[:14]:
             print(f"     [{verdict:22}] {u[:110]}")
         if len(images) > 14:
@@ -95,6 +129,9 @@ def sonder(page, url: str) -> None:
     images = _images_brutes(html, url)
     print(f"\n--- après défilement ({len(images)} image(s)) ---")
     print(f"  <img> retenue   : {_image_de_la_page(html, url) or '—'}")
+    # C'est APRÈS le défilement que le collecteur lit la page (une molette,
+    # puis 900 ms) : la lecture qui compte est celle-ci.
+    _lecture(html, extraire_annonce(html, url, source="sonde"))
     for verdict, u in images[:14]:
         print(f"     [{verdict:22}] {u[:110]}")
 
