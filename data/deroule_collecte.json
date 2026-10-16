@@ -1,48 +1,125 @@
 {
- "minutes": 28.1,
+ "minutes": 28.0,
  "agences": [
   {
-   "agence": "Marc Foujols",
-   "secondes": 71,
-   "pages": 18,
+   "agence": "VIP Immobilier",
+   "secondes": 112,
+   "pages": 26,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 10,
+   "vendus": 18,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 45,
-   "sitemap_dates": 493,
-   "sitemap": "ok 493",
+   "adresses_ecartees": 97,
+   "sitemap_dates": 212,
+   "sitemap": "ok 212"
+  },
+  {
+   "agence": "VIP Immobilier",
+   "secondes": 171,
+   "pages": 23,
+   "gardes": 8,
+   "vendus": 14,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 69,
+   "sitemap": "ok 111",
    "motifs": {
-    "titre_hors_cible:appartement": 4,
-    "ni_surface_ni_prix_credible": 1,
-    "prix_trop_haut": 4,
-    "titre_hors_cible:programme neuf": 1
+    "titre_hors_cible:entrepot": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.marcfoujols.com/propriete/paris-viii-faubourg-saint-honore-appartement-en-dernier-etage-de-180-m%c2%b2-avec-sa-terrasse-et-son-roof-top-de-plus-de-200-m%c2%b2/",
-     "titre": "Paris VIII Faubourg Saint Honoré : appartement en dernier étage de 180 m² avec sa terrasse et son roof top de plus de 20"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.marcfoujols.com/propriete/english-bright-furnished-2-room-apartment-in-porte-dauphine/",
-     "titre": "(English) Bright Furnished 2-Room Apartment in Porte-Dauphine"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.marcfoujols.com/propriete/proche-senlis-maison-en-pierre-avec-piscine/",
-     "titre": "Proche Senlis – Maison en pierre avec piscine"
-    },
-    "titre_hors_cible:programme neuf": {
-     "url": "https://www.marcfoujols.com/propriete/valbonne-programme-neuf-3-pieces-balcon-et-parking/",
-     "titre": "Valbonne - Programme neuf 3 pièces, balcon et parking"
+    "titre_hors_cible:entrepot": {
+     "url": "https://www.vipimmobilier.fr/vente/entrepot",
+     "titre": "Linselles Entrepot de 200 m2"
     }
    }
   },
   {
-   "agence": "Martel Expertises",
-   "secondes": 9,
+   "agence": "Valoire Habîtat",
+   "secondes": 57,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 70,
+   "sitemap": "ok 70"
+  },
+  {
+   "agence": "Versus Immobilier",
+   "secondes": 112,
+   "pages": 45,
+   "gardes": 4,
+   "vendus": 36,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 37,
+   "sitemap_dates": 71,
+   "sitemap": "ok 71",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.versus-immobilier.com/vente/1",
+     "titre": "Annonces immobilières - Vente | Versus Immobilier - Odacia"
+    },
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.versus-immobilier.com/vente/maisons-villas/1",
+     "titre": "Vente de maisons et villas | Versus Immobilier - Odacia"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.versus-immobilier.com/vente/88-vosges/1620-epinal/2-appartement/t3/14051-epinal-appartement-f3-de-67-43-m-2-chambres/",
+     "titre": "ÉPINAL – APPARTEMENT F3 DE 67,43 M² – 2 CHAMBRES"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.versus-immobilier.com/vente/21-cote-d-or/2110-dijon/2-appartement/t1/13952-ideal-investisseur-studio-hypercentre-de-dijon-rue-jules-mercier/",
+     "titre": "Idéal investisseur studio hypercentre de Dijon ( Rue Jules Mercier)"
+    }
+   },
+   "vendus_dans_l_adresse": 2
+  },
+  {
+   "agence": "Villers St Paul Immobilier",
+   "secondes": 64,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "motifs": {
+    "titre_hors_cible:annonces": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://villerssaintpaulimmo.fr/vente/1",
+     "titre": "Annonces immobilières | Villers Saint Paul Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Vivest",
+   "secondes": 15,
    "pages": 1,
    "gardes": 0,
    "vendus": 0,
@@ -54,181 +131,15 @@
    "sitemap_dates": 1,
    "sitemap": "ok 1",
    "illisible_exemple": {
-    "url": "https://www.martel-expertises.fr/nos-expertises/immobilier/biens-residentiels",
+    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
     "cause": "aucune annonce lue",
-    "titre": "Expertise immobilière appartement et maison | Martel Expertises",
-    "octets": 196079
+    "titre": "Nos programmes en vente à venir - Vivest",
+    "octets": 619156
    }
   },
   {
-   "agence": "Mathis Mazon",
-   "secondes": 14,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 16,
-   "sitemap": "ok 2",
-   "illisible_exemple": {
-    "url": "https://www.mathisnazon.com/vente/immobilier-pro-local-commercial-55-m2-nancy-54000,VP077",
-    "cause": "aucune annonce lue",
-    "titre": "MATHIS NAZON Immobilier",
-    "octets": 857008
-   }
-  },
-  {
-   "agence": "Meet Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
-  },
-  {
-   "agence": "Michaël Zingraf",
-   "secondes": 88,
-   "pages": 20,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 12,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 27,
-   "sitemap_dates": 1558,
-   "sitemap": "ok 1559",
-   "motifs": {
-    "prix_trop_haut": 7,
-    "titre_hors_cible:appartement": 5
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.michaelzingraf.com/fr/vente/MZIMC1447-ile-maurice-un-penthouse-dexception-au-coeur-de-la-nature-a-anse-la-raie",
-     "titre": "Penthouse à vendre à Anse La Raie – 2 chambres, 159 m²"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.michaelzingraf.com/fr/vente/MZIMC1453-loft-dexception-a-dubai",
-     "titre": "Appartement à vendre à Dubai – 1 chambre, 167 m²"
-    }
-   }
-  },
-  {
-   "agence": "Michel et Neumayer",
-   "secondes": 25,
-   "pages": 4,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap_dates": 4,
-   "sitemap": "ok 4",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.michel-neumayer.fr/vente/1",
-     "titre": "Annonces immobilières | MICHEL ET NEUMAYER IMMOBILIER"
-    }
-   }
-  },
-  {
-   "agence": "Mon Agence Immo",
-   "secondes": 77,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 7,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 57,
-   "sitemap": "ok 57",
-   "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:local commercial": 1,
-    "prix_trop_haut": 5
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.mon-agenceimmo.fr/vente/1",
-     "titre": "Annonces immobilières | Mon Agence Immo"
-    },
-    "titre_hors_cible:local commercial": {
-     "url": "https://www.mon-agenceimmo.fr/vente/36-massay/maison/415-massay-ensemble-immobilier-avec-local-commercial-appartement-dependances-et-garages",
-     "titre": "Massay - Ensemble immobilier avec local commercial, appartement, dépendances et garages"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.mon-agenceimmo.fr/vente/17-mehun-sur-yevre/maison/446-a-mehun-sur-yevre-maison-en-pierres-4-chambre-grande-dependance-terrain-en-bordure-de-riviere",
-     "titre": "A Mehun-sur-Yèvre - Maison en pierres 4 chambre + grande dépendance - Terrain en bordure de rivière"
-    }
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Mon Saint-André",
-   "secondes": 47,
-   "pages": 17,
-   "gardes": 2,
-   "vendus": 13,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 60,
-   "sitemap_dates": 17,
-   "sitemap": "ok 17",
-   "motifs": {
-    "titre_hors_cible:11 annonces": 1,
-    "titre_hors_cible:nos biens": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:11 annonces": {
-     "url": "https://www.msa-immobilier.fr/vente/1",
-     "titre": "11 annonces de ventes immobilières"
-    },
-    "titre_hors_cible:nos biens": {
-     "url": "https://www.msa-immobilier.fr/biens-loues/1",
-     "titre": "Nos biens loués | Mon Saint André"
-    }
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Morvan Immobilier",
-   "secondes": 5,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "sans <loc>",
-   "index_statut": 200,
-   "index_titre": "Tümbet Giriş 2026 – Güvenli Giriş, Bonus ve Casino İncelemes"
-  },
-  {
-   "agence": "Morvan Patrimoine",
-   "secondes": 9,
+   "agence": "action immo",
+   "secondes": 10,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -239,102 +150,122 @@
    "sitemap_statut": 200,
    "sitemap": "aucune page de bien",
    "index_statut": 200,
-   "index_titre": "Morvan Patrimoine, agences immobilières Château Chinon et St"
+   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
   },
   {
-   "agence": "Moselis OPH Moselle",
-   "secondes": 14,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "adresses_ecartees": 66,
-   "index_statut": 200,
-   "index_titre": "Moselis | Location / Vente de Logements Sociaux & Locaux | O"
-  },
-  {
-   "agence": "NC Immo",
-   "secondes": 70,
-   "pages": 9,
-   "gardes": 5,
-   "vendus": 3,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap_dates": 9,
-   "sitemap": "ok 9",
-   "illisible_exemple": {
-    "url": "https://ncimmo71.fr/biens-vendus/",
-    "cause": "aucune annonce lue",
-    "titre": "BIENS VENDUS - NC immo - Agence immobilière à Montchanin 71",
-    "octets": 68004
-   }
-  },
-  {
-   "agence": "Nathalie Forest",
-   "secondes": 116,
+   "agence": "agence 147",
+   "secondes": 126,
    "pages": 45,
    "gardes": 6,
-   "vendus": 0,
-   "ecartes": 34,
-   "illisibles": 5,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 223,
-   "sitemap_dates": 139,
-   "sitemap": "ok 139",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 4,
-    "prix_trop_haut": 27,
-    "titre_hors_cible:maisons et villas": 3
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.nathalieforest-sothebysrealty.com/fr/propriete-exception/&amp;new_research=1",
-     "titre": "Nos propriétés d'exception"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.nathalieforest-sothebysrealty.com/fr/nos-biens/ref-nf1-5604/vente-maison-de-luxe-sainghin-en-melantois-8-pieces-5-chambres-59262/",
-     "titre": "Vente Maison de luxe Sainghin-en-Mélantois 8 Pièces 220 m²"
-    },
-    "titre_hors_cible:maisons et villas": {
-     "url": "https://www.nathalieforest-sothebysrealty.com/fr/vente-propriete-mouvaux-immobilier-lille/&amp;new_research=1",
-     "titre": "Immobilier Mouvaux : maisons et villas à vendre"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://www.nathalieforest-sothebysrealty.com/fr/vente-propriete-wazemmes-immobilier-lille/&amp;new_research=1",
-    "cause": "aucune annonce lue",
-    "titre": "Immobilier Wazemmes",
-    "octets": 261361
-   }
-  },
-  {
-   "agence": "Normandie maisons individuelles",
-   "secondes": 66,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
+   "vendus": 33,
+   "ecartes": 6,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "ok 24",
-   "sitemap_dates": 24
+   "sitemap_statut": 200,
+   "adresses_ecartees": 210,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:appartement": 1,
+    "prix_trop_haut": 3,
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.agence147.fr/vente/1",
+     "titre": "Annonces immobilières | Agence 147"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.agence147.fr/vente/29-champigneulles/maison/3155-maison-appartement-garage-jardin-4-chambres",
+     "titre": "Maison / Appartement - Garage - Jardin - 4 chambres"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.agence147.fr/vente/1-nancy/duplex/1780-t4-duplex-rue-jeanne-d-arc",
+     "titre": "T4 - Duplex rue Jeanne d"
+    },
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.agence147.fr/vente/62-remereville/maison/2895-maison-neuve-plein-pied",
+     "titre": "Maison neuve - plein pied"
+    }
+   }
   },
   {
-   "agence": "Novadimm",
-   "secondes": 99,
+   "agence": "ilm Immobilier",
+   "secondes": 41,
+   "pages": 21,
+   "gardes": 0,
+   "vendus": 19,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 5,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "illisible_exemple": {
+    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
+    "cause": "aucune annonce lue",
+    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
+    "octets": 66880
+   },
+   "vendus_dans_l_adresse": 1
+  },
+  {
+   "agence": "A Et B Conseil Immobilier",
+   "secondes": 92,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 27,
+   "ecartes": 18,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 25,
+   "sitemap_dates": 202,
+   "sitemap": "ok 202",
+   "motifs": {
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:vente de biens": 1,
+    "prix_trop_haut": 12,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.aandbimmobilier.com/vente/1",
+     "titre": "Annonces immobilières - Vente | A et B Conseil Immobilier"
+    },
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.aandbimmobilier.com/vente/maisons-villas/1",
+     "titre": "Vente de maisons et villas | A et B Conseil Immobilier"
+    },
+    "titre_hors_cible:vente de biens": {
+     "url": "https://www.aandbimmobilier.com/vente/biens-de-prestige/1",
+     "titre": "Vente de biens de prestige | A et B Conseil Immobilier"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/22-propriete/t16/643-hotel-particulier-historique-d-exception-secteur-paix/",
+     "titre": "Hôtel particulier historique d"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t4/675-troyes-appartement-t4-avec-garage/",
+     "titre": "Troyes, appartement T4 avec garage."
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/4-studio/669-troyes-studio-a-proximite-immediate-du-centre-ville/",
+     "titre": "Troyes, studio à proximité immédiate du centre-ville."
+    }
+   },
+   "vendus_dans_l_adresse": 2
+  },
+  {
+   "agence": "A Tri Home",
+   "secondes": 61,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -343,51 +274,105 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 66,
-   "sitemap": "ok 77",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 18,
+   "sitemap": "ok 18",
    "motifs": {
-    "titre_hors_cible:appartement": 1
+    "titre_hors_cible:terrain a batir": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.novadimm.com/vente/,VA2250",
-     "titre": "Appartement Rozérieulles"
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://a-tri-home.fr/bien/opportunite-terrain-a-batir-axe-caen-bayeux/",
+     "titre": "Opportunité Terrain à bâtir (Axe Caen – Bayeux) – A Tri Home"
     }
    }
   },
   {
-   "agence": "Nuances Immobilières",
-   "secondes": 174,
-   "pages": 31,
-   "gardes": 0,
-   "vendus": 31,
-   "ecartes": 0,
+   "agence": "ACBI",
+   "secondes": 60,
+   "pages": 10,
+   "gardes": 6,
+   "vendus": 3,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 283,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
+   "adresses_ecartees": 117,
+   "sitemap_dates": 694,
+   "sitemap": "ok 694",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.agencecbi.com/vente/1",
+     "titre": "Biens à vendre | ACBI"
+    }
+   },
    "vendus_dans_l_adresse": 1
   },
   {
-   "agence": "Topaze immobilier",
-   "secondes": 229,
-   "pages": 33,
-   "gardes": 8,
-   "vendus": 25,
-   "ecartes": 0,
+   "agence": "AFTim",
+   "secondes": 213,
+   "pages": 31,
+   "gardes": 4,
+   "vendus": 16,
+   "ecartes": 11,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 63,
-   "sitemap": "ok 62"
+   "adresses_ecartees": 62,
+   "sitemap": "ok 31",
+   "motifs": {
+    "titre_hors_cible:programme neuf": 1,
+    "prix_trop_haut": 10
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:programme neuf": {
+     "url": "https://www.aftim.fr/vente/,VA17086",
+     "titre": "Programme NEUF à quelques pas du Touquet. belles prestations. Large terrasse bien orientée. Excellent rapport surface/pr"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.aftim.fr/vente/maison-villa-6-pieces-le-touquet-paris-plage-62520,VM3126",
+     "titre": "TRIANGLE D'OR – Villa typique avec jardin et garage"
+    }
+   }
   },
   {
-   "agence": "Toul’immo",
-   "secondes": 62,
+   "agence": "AIC Immobilier",
+   "secondes": 112,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 43,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap_dates": 70,
+   "sitemap": "ok 73",
+   "motifs": {
+    "titre_hors_cible:bureaux": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:bureaux": {
+     "url": "https://www.aicimmobilier.fr/produit/vente-de-murs-occupes-bureaux-bihorel-2/",
+     "titre": "VENTE DE MURS OCCUPES / Bureaux / BIHOREL – AIC Immobilier"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.aicimmobilier.fr/property/luxury-family-home-4/",
+    "cause": "aucune annonce lue",
+    "titre": "Single family home – AIC Immobilier",
+    "octets": 105862
+   }
+  },
+  {
+   "agence": "AJC immobilier",
+   "secondes": 56,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -396,118 +381,195 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 33,
-   "sitemap_dates": 69,
-   "sitemap": "ok 69"
+   "adresses_ecartees": 14,
+   "sitemap_dates": 26,
+   "sitemap": "ok 26"
   },
   {
-   "agence": "Transacom",
-   "secondes": 87,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 26,
+   "agence": "Cap Immobilier",
+   "secondes": 80,
+   "pages": 8,
+   "gardes": 6,
+   "vendus": 2,
    "ecartes": 0,
-   "illisibles": 19,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 27,
-   "sitemap": "ok 78",
-   "illisible_exemple": {
-    "url": "http://www.transacom.com/biens/pdf/1045",
-    "cause": "aucune annonce lue",
-    "titre": "",
-    "octets": 1227
-   }
+   "adresses_ecartees": 22,
+   "sitemap": "ok 22"
   },
   {
-   "agence": "Triplex",
-   "secondes": 52,
-   "pages": 13,
-   "gardes": 8,
+   "agence": "Carrara Immobilier",
+   "secondes": 51,
+   "pages": 11,
+   "gardes": 6,
    "vendus": 0,
    "ecartes": 5,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 75,
-   "sitemap_dates": 182,
-   "sitemap": "ok 182",
+   "adresses_ecartees": 21,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11",
    "motifs": {
-    "location": 3,
-    "titre_hors_cible:appartement": 1,
-    "titre_hors_cible:loft": 1
+    "titre_hors_cible:annonces": 1,
+    "titre_hors_cible:parkings": 1,
+    "prix_trop_haut": 3
    },
    "ecartes_exemples": {
-    "location": {
-     "url": "https://tripleximmobilier.fr/property/colocation-nancy-fac-de-lettre-fac-de-droit/",
-     "titre": "Colocation NANCY Fac de lettre / Fac de droit"
+    "titre_hors_cible:annonces": {
+     "url": "https://www.carrara.immo/vente/1",
+     "titre": "Annonces immobilières | Carrara Immobilier"
     },
-    "titre_hors_cible:appartement": {
-     "url": "https://tripleximmobilier.fr/property/proche-artem-appartement-3-pieces-de-56-85m%c2%b2/",
-     "titre": "Proche Artem, Appartement 3 pièces de 56.85m²"
+    "titre_hors_cible:parkings": {
+     "url": "https://www.carrara.immo/vente-garage-parking/1",
+     "titre": "Vente de garages et parkings | Carrara Immobilier"
     },
-    "titre_hors_cible:loft": {
-     "url": "https://tripleximmobilier.fr/property/nancy-pepiniere-magnifique-2-pieces-tres-bon-etat-en-dernier-etage/",
-     "titre": "NANCY CENTRE, vieille ville, loft 2 pièces entièrement rénové"
+    "prix_trop_haut": {
+     "url": "https://www.carrara.immo/vente/40-vaux/propriete/10067-vaux-maison-d-exeption",
+     "titre": "Vaux - MAISON D’EXEPTION"
     }
    }
   },
   {
-   "agence": "Trybe Immobilier",
-   "secondes": 78,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 45,
-   "ecartes": 0,
+   "agence": "Casa",
+   "secondes": 56,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 726,
-   "sitemap": "ok 726"
+   "adresses_ecartees": 10,
+   "sitemap_dates": 387,
+   "sitemap": "ok 387",
+   "motifs": {
+    "prix_trop_haut": 1,
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.immo-casa.fr/acheter-un-bien/maison/",
+     "titre": "Archives des Maison"
+    },
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.immo-casa.fr/acheter-un-bien/maison-neuve-de-86m2-falaise/",
+     "titre": "Maison neuve de 86m2 - Falaise"
+    }
+   }
   },
   {
-   "agence": "Ulyssimmo",
-   "secondes": 244,
-   "pages": 41,
-   "gardes": 0,
-   "vendus": 41,
-   "ecartes": 0,
+   "agence": "Causeret Immobilier",
+   "secondes": 43,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 34,
-   "sitemap": "ok 323"
+   "adresses_ecartees": 2,
+   "sitemap_dates": 96,
+   "sitemap": "ok 96",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://causeretimmobilier.fr/maison/la-maison-iris/",
+     "titre": "La maison Iris - © CAUSERET IMMOBILIER"
+    }
+   }
   },
   {
-   "agence": "VAI LPI",
-   "secondes": 46,
-   "pages": 9,
-   "gardes": 4,
-   "vendus": 2,
-   "ecartes": 3,
+   "agence": "Century 21",
+   "secondes": 57,
+   "pages": 8,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 66,
+   "sitemap": "ok 67",
+   "motifs": {
+    "titre_hors_cible:terrain": 1,
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21-infinity-lacroix-saint-ouen.com/trouver_logement/detail/14638726032/",
+     "titre": "terrain à vendre - 752.0 m2 - ST SAUVEUR - 60 - PICARDIE - Century 21 Infinity"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-infinity-lacroix-saint-ouen.com/trouver_logement/detail/15889930271/",
+     "titre": "Appartement F3 à vendre - 3 pièces - 63.88 m2 - LACROIX ST OUEN - 60 - PICARDIE - Century 21 Infinity"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 62,
+   "pages": 18,
+   "gardes": 6,
+   "vendus": 1,
+   "ecartes": 11,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 54,
+   "sitemap": "ok 54",
+   "motifs": {
+    "titre_hors_cible:appartement": 10,
+    "titre_hors_cible:terrain": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/17029338875/",
+     "titre": "Appartement F2 à louer - 2 pièces - 37.14 m2 - CREPY EN VALOIS - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    },
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/14775268209/",
+     "titre": "terrain à vendre - 2305.0 m2 - ANTILLY - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 26,
+   "pages": 5,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 4,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 43,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
+   "adresses_ecartees": 6,
+   "sitemap_dates": 63,
+   "sitemap": "ok 63",
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "prix_trop_haut": 2
+    "titre_hors_cible:appartement": 3,
+    "location": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.lorrainepierresimmobilier.fr/vente/1",
-     "titre": "Annonces immobilières à Nancy & alentours"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/15463003935/",
+     "titre": "Appartement F5 à vendre - 5 pièces - 94.85 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
     },
-    "prix_trop_haut": {
-     "url": "https://www.lorrainepierresimmobilier.fr/vente/1-nancy/maison/t9/286-casa-felice/",
-     "titre": "// CASA FELICE //"
+    "location": {
+     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/16937841651/",
+     "titre": "maison à louer - 4 pièces - 96.87 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
     }
    }
   }
