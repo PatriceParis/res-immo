@@ -318,24 +318,26 @@ def _autorisees(urls: list[str], permission) -> list[str]:
     return [u for u in urls if permission.autorise(u)]
 
 
-# Les pages lues vendues à un passage précédent, à ne pas rouvrir avant le
-# sursis (voir historique.SURSIS_VENDUES). Rempli par main() au départ,
-# consulté là où les adresses sont retenues — AVANT la coupe au vivier, sinon
-# une agence dont les quarante-cinq premières adresses sont vendues ne
-# rendrait rien. Mesuré les 14 et 15 octobre 2026 : 183 pages vendues sur 358
-# ouvertes, 134 sur 294, 93 sur 296, 140 sur 310 — la moitié du budget, et
-# les mêmes pages à chaque visite (Toutabitat 45 sur 45, Leforestier 45 sur
-# 45, Pisani 8 sur 8). Ces agences gardent leurs ventes dans le sitemap,
-# souvent datées du jour de la vente, donc en tête du tri par fraîcheur.
-VENDUES_A_EVITER: set = set()
+# Les pages écartées à un passage précédent pour ce qu'elles SONT — vendues,
+# appartements, catalogues, locations — à ne pas rouvrir avant le sursis (voir
+# historique.SURSIS_ECARTEES). Rempli par main() au départ, consulté là où les
+# adresses sont retenues — AVANT la coupe au vivier, sinon une agence dont les
+# quarante-cinq premières adresses sont vendues ne rendrait rien. Mesuré les
+# 14 et 15 octobre 2026 : 183 pages vendues sur 358 ouvertes, 134 sur 294, 93
+# sur 296, 140 sur 310 — la moitié du budget, et les mêmes pages à chaque
+# visite (Toutabitat 45 sur 45, Leforestier 45 sur 45, Pisani 8 sur 8) ; le
+# 16, 93 pages sur 284 refusées après ouverture pour un motif tout aussi
+# stable (Human Immobilier 33 appartements sur 45, Homeloop 35 fois la même
+# page de catalogue).
+DEJA_ECARTEES: set = set()
 
 
-def _sans_les_vendues(urls: list[str], diag: dict) -> list[str]:
-    """Les adresses sans celles lues vendues depuis moins d'un sursis ; le
-    déroulé compte ce qu'on s'épargne (`vendues_evitees`)."""
-    gardees = [u for u in urls if u not in VENDUES_A_EVITER]
+def _sans_les_deja_ecartees(urls: list[str], diag: dict) -> list[str]:
+    """Les adresses sans celles écartées depuis moins d'un sursis ; le déroulé
+    compte ce qu'on s'épargne (`deja_ecartees`)."""
+    gardees = [u for u in urls if u not in DEJA_ECARTEES]
     if len(gardees) < len(urls):
-        diag["vendues_evitees"] = diag.get("vendues_evitees", 0) + len(urls) - len(gardees)
+        diag["deja_ecartees"] = diag.get("deja_ecartees", 0) + len(urls) - len(gardees)
     return gardees
 
 
@@ -414,8 +416,8 @@ def _sitemap_urls(base: str, fin_prevue: float = 0.0, permission=None,
         if biens:
             diag["sitemap"] = f"ok {len(biens)}"
             # « ok N » reste le compte des pages de biens du sitemap ; ce
-            # qu'on s'épargne de rouvrir se lit dans `vendues_evitees`.
-            return _sans_les_vendues(biens, diag)
+            # qu'on s'épargne de rouvrir se lit dans `deja_ecartees`.
+            return _sans_les_deja_ecartees(biens, diag)
         diag.setdefault("sitemap", "aucune page de bien")
     diag.setdefault("sitemap", "absent")
     return []
@@ -553,12 +555,12 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
     vivier = _vivier(maxi)
     urls = _sitemap_urls(base, fin_prevue, permission, diag)
     # Un sitemap lu (« ok N ») fait autorité même s'il ne reste rien à ouvrir
-    # une fois retirées les pages vendues connues : l'index ne listerait que
+    # une fois retirées les pages déjà écartées : l'index ne listerait que
     # les mêmes adresses, pour le prix d'une navigation de plus.
     if urls or str(diag.get("sitemap", "")).startswith("ok"):
-        evitees = diag.get("vendues_evitees", 0)
+        deja = diag.get("deja_ecartees", 0)
         print(f"  sitemap : {len(urls)} page(s) de biens"
-              + (f" ({evitees} vendue(s) connue(s), non rouverte(s))" if evitees else ""))
+              + (f" ({deja} déjà écartée(s), non rouverte(s))" if deja else ""))
         return urls[:vivier]
     print(f"  sitemap : {diag.get('sitemap', '?')}")
     # repli : on parcourt les pages « nos biens »
@@ -591,7 +593,7 @@ def _urls_a_visiter(page, cible: dict, base: str, maxi: int,
         for u in _autorisees(_liens_page(page, base), permission):
             if u not in urls:
                 urls.append(u)
-    urls = _sans_les_vendues(urls, diag)
+    urls = _sans_les_deja_ecartees(urls, diag)
     # depuis un index, on ne garde que les liens qui ressemblent à un détail
     # (un chiffre dans le chemin) pour éviter les pages de catégorie.
     details = [u for u in urls if re.search(r"\d", urlparse(u).path)]
@@ -663,12 +665,12 @@ def main() -> None:
     # pour qu'aucun journal d'un passage précédent ne survive à celui-ci.
     fermees: set = set()
     historique.noter_visites_fermees(fermees)
-    # La mémoire des pages vendues : lue au départ, complétée à chaque
+    # La mémoire des pages écartées : lue au départ, complétée à chaque
     # constat, réécrite après chaque agence, taillée au sursis.
     aujourd_hui = date.today().isoformat()
-    vendues = historique.pages_vendues()
-    VENDUES_A_EVITER.clear()
-    VENDUES_A_EVITER.update(historique.vendues_a_eviter(vendues, aujourd_hui))
+    ecartees = historique.pages_ecartees()
+    DEJA_ECARTEES.clear()
+    DEJA_ECARTEES.update(historique.ecartees_a_eviter(ecartees, aujourd_hui))
     deroule: list[dict] = []
     depart = time.monotonic()
     fin_prevue = depart + args.minutes_max * 60
@@ -816,7 +818,7 @@ def main() -> None:
                     # (écarte blog, catalogue, appartement, terrain nu, bien vendu…).
                     if est_vendu(brut):
                         vendus += 1
-                        vendues[u] = aujourd_hui       # on ne la rouvrira pas de sitôt
+                        ecartees[u] = {"jour": aujourd_hui, "motif": "vendu"}
                         if MOTIF_VENDU_DANS_L_ADRESSE.search(urlparse(u).path):
                             diag["vendus_dans_l_adresse"] = diag.get("vendus_dans_l_adresse", 0) + 1
                         continue
@@ -833,6 +835,13 @@ def main() -> None:
                         # bornée : on la compte telle quelle.
                         motifs = diag.setdefault("motifs", {})
                         motifs[motif] = motifs.get(motif, 0) + 1
+                        # Refusée pour ce qu'elle EST — appartement, catalogue,
+                        # location… —, elle le sera encore demain : on s'en
+                        # souvient comme d'une page vendue. Refusée pour une
+                        # mesure (prix, surface absente, titre indigent), on la
+                        # relira : la mesure peut changer, ou avoir manqué.
+                        if historique.motif_stable(motif):
+                            ecartees[u] = {"jour": aujourd_hui, "motif": motif}
                         # Et la PREMIÈRE page écartée sous chaque motif, adresse
                         # et titre. Le 14 octobre 2026, Agence du Terroir : 60
                         # pages, 0 gardé, 40 « page_catalogue » — le motif dit
@@ -900,7 +909,7 @@ def main() -> None:
                 tronquees.add(historique.identite(
                     {"agence": cible["nom"], "agence_url": base}))
             historique.noter_visite_tronquee(tronquees)
-            historique.noter_pages_vendues(vendues, aujourd_hui)
+            historique.noter_pages_ecartees(ecartees, aujourd_hui)
             # Et consigné dans le dépôt, pas seulement imprimé. Le journal du
             # run n'est lisible que depuis l'onglet Actions ; ce fichier-ci
             # est committé, donc lisible depuis git seul — c'est ce qui a

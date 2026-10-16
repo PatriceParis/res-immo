@@ -110,7 +110,7 @@ def visites_fermees() -> set:
     return _lire_journal(_journal_fermees())
 
 
-# --- Pages vendues : la mémoire qui rend son budget à la collecte ------------
+# --- Pages écartées : la mémoire qui rend son budget à la collecte -----------
 #
 # Mesuré aux déroulés des 14 et 15 octobre 2026 : 183 pages vendues sur 358
 # ouvertes à 05 h 23, 134 sur 294 la veille au soir, 93 sur 296, 140 sur 310 —
@@ -120,52 +120,87 @@ def visites_fermees() -> set:
 # datées du jour de la vente, donc en tête de l'ordre « les plus récentes
 # d'abord ». Trier n'y suffisait pas ; il faut se souvenir.
 #
-# Une page lue vendue est notée avec le jour du constat, et n'est plus ouverte
-# avant SURSIS_VENDUES jours. Une vente ne se défait pas, mais un compromis
-# peut tomber et la règle peut se tromper : passé le sursis, on relit, et un
-# nouveau constat la remet au journal pour autant. Le journal se taille
-# lui-même à l'écriture.
+# Et le 16 octobre, une fois les ventes mises en mémoire, le tiers restant :
+# 93 pages sur 284 refusées APRÈS ouverture pour ce qu'elles sont — Human
+# Immobilier 33 appartements sur 45, Homeloop 35 fois la même page de
+# catalogue « 153 biens à vendre ». Un appartement ne devient pas une maison,
+# un catalogue reste un catalogue : ces refus-là sont aussi stables qu'une
+# vente, et on s'en souvient de la même façon. Pas les refus de MESURE —
+# prix trop haut, surface absente, titre indigent — qui peuvent changer ou
+# avoir manqué : ceux-là se relisent à chaque visite.
 #
-# Ne pas rouvrir une page vendue ne change rien au catalogue : elle ne donnait
-# aucun bien, et le bien qu'elle portait, s'il est encore au fichier, reste
-# compté absent exactement comme avant — la collecte ne le revoit pas. Seules
-# les pages ouvertes diminuent.
-SURSIS_VENDUES = 30
+# Une page écartée est notée avec le jour et le motif, et n'est plus ouverte
+# avant SURSIS_ECARTEES jours. Une vente ne se défait pas, mais un compromis
+# peut tomber et une règle peut se tromper : passé le sursis, on relit, et un
+# nouveau constat la remet au journal pour autant. Le journal se taille
+# lui-même à l'écriture. Quand une règle de titre change — Loft & House le
+# 15 octobre —, on purge les pages écartées sous son motif (`oublier_motif`),
+# sinon le correctif attend le sursis.
+#
+# Ne pas rouvrir une page écartée ne change rien au catalogue : elle ne
+# donnait aucun bien, et le bien qu'elle portait, s'il est encore au fichier,
+# reste compté absent exactement comme avant — la collecte ne le revoit pas.
+# Seules les pages ouvertes diminuent.
+SURSIS_ECARTEES = 30
+MOTIFS_STABLES = ("vendu", "page_catalogue", "location", "langue", "rubrique", "url_type_exclu")
 
 
-def _journal_vendues() -> Path:
+def motif_stable(motif) -> bool:
+    """Un refus qui tient à la NATURE de la page — vendue, appartement,
+    catalogue, location, traduction — et non à une mesure qui peut changer ou
+    manquer (prix, surface, titre indigent)."""
+    return bool(motif) and (motif in MOTIFS_STABLES or motif.startswith("titre_hors_cible:"))
+
+
+def _journal_ecartees() -> Path:
     """À côté des visites tronquées, et déplacé avec elles par les tests : un
     test qui écrit dans le dépôt n'est pas un test."""
-    return JOURNAL_TRONQUEES.with_name("pages_vendues.json")
+    return JOURNAL_TRONQUEES.with_name("pages_ecartees.json")
 
 
-def pages_vendues() -> dict:
-    """{adresse: jour du dernier constat « vendu »}. Absent ou illisible :
-    rien à éviter — l'ancien comportement, jamais pire."""
+def pages_ecartees() -> dict:
+    """{adresse: {"jour": dernier constat, "motif": pourquoi}}. Absent ou
+    illisible : rien à éviter — l'ancien comportement, jamais pire. La forme
+    d'avant le 16 octobre 2026, la date seule, se lit comme une vente."""
     try:
-        journal = json.loads(_journal_vendues().read_text(encoding="utf-8"))
-        return {u: j for u, j in journal.items()
-                if isinstance(u, str) and isinstance(j, str)}
+        brut = json.loads(_journal_ecartees().read_text(encoding="utf-8"))
     except (OSError, ValueError, AttributeError):
         return {}
+    journal: dict = {}
+    for u, e in (brut.items() if isinstance(brut, dict) else []):
+        if isinstance(e, str):
+            e = {"jour": e, "motif": "vendu"}
+        if isinstance(u, str) and isinstance(e, dict) and isinstance(e.get("jour"), str):
+            journal[u] = {"jour": e["jour"], "motif": str(e.get("motif") or "vendu")}
+    return journal
 
 
 def _encore_sous_sursis(journal: dict, aujourd_hui: str) -> dict:
-    limite = (date.fromisoformat(aujourd_hui) - timedelta(days=SURSIS_VENDUES)).isoformat()
-    return {u: j for u, j in journal.items() if j >= limite}
+    limite = (date.fromisoformat(aujourd_hui) - timedelta(days=SURSIS_ECARTEES)).isoformat()
+    return {u: e for u, e in journal.items() if e.get("jour", "") >= limite}
 
 
-def vendues_a_eviter(journal: dict, aujourd_hui: str) -> set:
-    """Les adresses lues vendues il y a moins de SURSIS_VENDUES jours."""
+def ecartees_a_eviter(journal: dict, aujourd_hui: str) -> set:
+    """Les adresses écartées il y a moins de SURSIS_ECARTEES jours."""
     return set(_encore_sous_sursis(journal, aujourd_hui))
 
 
-def noter_pages_vendues(journal: dict, aujourd_hui: str) -> None:
+def oublier_motif(journal: dict, motif: str) -> int:
+    """Retire du journal les pages écartées sous ce motif — à faire quand la
+    règle qui le porte change, pour que le correctif n'attende pas le sursis.
+    Rend le nombre de pages rendues à la collecte."""
+    a_oublier = [u for u, e in journal.items() if e.get("motif") == motif]
+    for u in a_oublier:
+        del journal[u]
+    return len(a_oublier)
+
+
+def noter_pages_ecartees(journal: dict, aujourd_hui: str) -> None:
     """Écrit le journal, taillé : ce qui a dépassé le sursis en sort — la page
     sera relue, et un nouveau constat la remettra. Un journal indisponible
     n'arrête pas la collecte."""
     try:
-        chemin = _journal_vendues()
+        chemin = _journal_ecartees()
         chemin.parent.mkdir(parents=True, exist_ok=True)
         chemin.write_text(json.dumps(_encore_sous_sursis(journal, aujourd_hui),
                                      ensure_ascii=False, indent=1, sort_keys=True) + "\n",

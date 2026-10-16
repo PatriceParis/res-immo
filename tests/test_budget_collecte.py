@@ -638,7 +638,7 @@ def test_le_deroule_montre_une_page_par_motif(collecte, monkeypatch, tmp_path):
     assert set(exemples) == set(agence["motifs"]), "un exemple par motif compté, ni plus ni moins"
 
 
-# --- Les pages vendues ne se rouvrent pas ------------------------------------
+# --- Les pages écartées ne se rouvrent pas -----------------------------------
 
 class _Reponse:
     def __init__(self, status_code, text=""):
@@ -680,34 +680,78 @@ def test_une_page_lue_vendue_n_est_pas_rouverte_au_passage_suivant(collecte, mon
                                                  "surface_m2": 120, "prix": 180000},
         f"{base}/vente/maison-sous-compromis-2": {"titre": "Longère sous compromis", "surface_m2": 100,
                                                   "prix": 150000, "texte": "Ce bien est sous compromis."},
-        # Une adresse de maison, un contenu d'appartement : écartée APRÈS
-        # ouverture, pas d'avance par son libellé — elle doit être ouverte.
-        f"{base}/vente/maison-de-ville-centre-3": {"titre": "Appartement T2 en centre-ville",
-                                                   "surface_m2": 45, "prix": 95000},
+        # Ni prix ni surface : un refus de MESURE, qu'on relit à chaque visite.
+        f"{base}/vente/maison-de-ville-centre-3": {"titre": "Maison de ville en centre-ville",
+                                                   "type_bien": "maison"},
     }
     journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
 
     collecteur.main()
     premier = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
     assert (premier["pages"], premier["vendus"], premier["ecartes"]) == (3, 2, 1)
-    assert "vendues_evitees" not in premier
-    memoire = json.loads((tmp_path / "pages_vendues.json").read_text(encoding="utf-8"))
-    assert set(memoire) == {f"{base}/vente/maison-vendue-belleme-1",
-                            f"{base}/vente/maison-sous-compromis-2"}, \
-        "les deux pages vendues sont notées, pas l'appartement"
+    assert "deja_ecartees" not in premier
+    memoire = json.loads((tmp_path / "pages_ecartees.json").read_text(encoding="utf-8"))
+    assert memoire == {f"{base}/vente/maison-vendue-belleme-1": {"jour": collecteur.date.today().isoformat(),
+                                                                "motif": "vendu"},
+                       f"{base}/vente/maison-sous-compromis-2": {"jour": collecteur.date.today().isoformat(),
+                                                                 "motif": "vendu"}}, \
+        "les deux pages vendues sont notées avec leur motif, pas la page sans prix"
 
     collecteur.main()
     second = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
     assert (second["pages"], second["vendus"]) == (1, 0), "les pages vendues ne sont pas rouvertes"
-    assert second["vendues_evitees"] == 2
+    assert second["deja_ecartees"] == 2
     assert second["sitemap"] == "ok 3", "le sitemap compte toujours ses trois pages de biens"
 
 
-def test_le_sursis_des_pages_vendues_expire_et_le_journal_se_taille(collecte, monkeypatch, tmp_path):
+def test_une_page_ecartee_pour_ce_qu_elle_est_n_est_pas_rouverte_non_plus(collecte, monkeypatch, tmp_path):
+    """Mesuré le 16 octobre 2026, les ventes déjà en mémoire : 93 pages sur 284
+    refusées APRÈS ouverture pour ce qu'elles sont — Human Immobilier 33
+    appartements sur 45, Homeloop 35 fois la même page de catalogue « 153
+    biens à vendre ». Un appartement ne devient pas une maison : ce refus-là
+    est aussi stable qu'une vente, et se retient de la même façon. Un refus de
+    mesure (prix, surface absente) ne se retient pas. Et quand une règle
+    change, on purge son motif : le correctif n'attend pas le sursis."""
+    base = "https://agence-x.fr"
+    pages = {
+        f"{base}/vente/maison-de-ville-centre-1": {"titre": "Appartement T2 en centre-ville",
+                                                   "surface_m2": 45, "prix": 95000},
+        f"{base}/vente/maison-oullins-83567": {"titre": "153 biens à vendre", "surface_m2": 100,
+                                               "prix": 200000},
+        f"{base}/vente/maison-de-bourg-belleme-5": {"titre": "Maison de bourg à Bellême",
+                                                    "type_bien": "maison"},
+    }
+    journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
+    assert [historique.motif_stable(qualite.motif_de_rejet(dict(p))) for p in pages.values()] == \
+        [True, True, False], "appartement et catalogue sont stables, l'absence de prix ne l'est pas"
+
+    collecteur.main()
+    premier = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (premier["pages"], premier["ecartes"]) == (3, 3)
+    memoire = historique.pages_ecartees()
+    assert {u: e["motif"] for u, e in memoire.items()} == {
+        f"{base}/vente/maison-de-ville-centre-1": "titre_hors_cible:appartement",
+        f"{base}/vente/maison-oullins-83567": "titre_hors_cible:153 biens"}
+
+    collecteur.main()
+    second = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (second["pages"], second["deja_ecartees"]) == (1, 2), "seule la page sans prix est relue"
+
+    # La règle des appartements change : on purge son motif, la page se relit.
+    memoire = historique.pages_ecartees()
+    assert historique.oublier_motif(memoire, "titre_hors_cible:appartement") == 1
+    historique.noter_pages_ecartees(memoire, collecteur.date.today().isoformat())
+    collecteur.main()
+    troisieme = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
+    assert (troisieme["pages"], troisieme["deja_ecartees"]) == (2, 1)
+
+
+def test_le_sursis_des_pages_ecartees_expire_et_le_journal_se_taille(collecte, monkeypatch, tmp_path):
     """Une vente ne se défait pas, mais un compromis peut tomber et la règle
     peut se tromper : passé le sursis, la page est relue, et un nouveau
     constat la remet au journal. Ce qui a dépassé le sursis sans être relu en
-    sort, sinon le journal grossirait à jamais."""
+    sort, sinon le journal grossirait à jamais. La forme d'avant le 16 octobre
+    — la date seule — se lit encore, comme une vente."""
     from datetime import date, timedelta
     base = "https://agence-x.fr"
     pages = {
@@ -717,21 +761,21 @@ def test_le_sursis_des_pages_vendues_expire_et_le_journal_se_taille(collecte, mo
                                          "surface_m2": 110, "prix": 170000},
     }
     journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
-    perime = (date.today() - timedelta(days=historique.SURSIS_VENDUES + 1)).isoformat()
+    perime = (date.today() - timedelta(days=historique.SURSIS_ECARTEES + 1)).isoformat()
     recent = (date.today() - timedelta(days=2)).isoformat()
-    (tmp_path / "pages_vendues.json").write_text(json.dumps({
-        f"{base}/vente/maison-vendue-1": perime,        # au sitemap : à relire
-        f"{base}/vente/maison-vendue-2": recent,        # au sitemap : pas rouverte
-        f"{base}/vente/maison-disparue-9": perime,      # plus au sitemap : sort du journal
+    (tmp_path / "pages_ecartees.json").write_text(json.dumps({
+        f"{base}/vente/maison-vendue-1": {"jour": perime, "motif": "vendu"},   # au sitemap : à relire
+        f"{base}/vente/maison-vendue-2": recent,                              # forme d'avant : pas rouverte
+        f"{base}/vente/maison-disparue-9": {"jour": perime, "motif": "vendu"},  # plus au sitemap : sort
     }), encoding="utf-8")
 
     collecteur.main()
     agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
-    assert (agence["pages"], agence["vendus"], agence["vendues_evitees"]) == (1, 1, 1)
-    memoire = json.loads((tmp_path / "pages_vendues.json").read_text(encoding="utf-8"))
-    assert memoire == {f"{base}/vente/maison-vendue-1": date.today().isoformat(),
-                       f"{base}/vente/maison-vendue-2": recent}, \
-        "relue et renotée du jour ; l'autre attend son sursis ; la disparue est sortie"
+    assert (agence["pages"], agence["vendus"], agence["deja_ecartees"]) == (1, 1, 1)
+    memoire = json.loads((tmp_path / "pages_ecartees.json").read_text(encoding="utf-8"))
+    assert memoire == {f"{base}/vente/maison-vendue-1": {"jour": date.today().isoformat(), "motif": "vendu"},
+                       f"{base}/vente/maison-vendue-2": {"jour": recent, "motif": "vendu"}}, \
+        "relue et renotée du jour ; l'autre attend son sursis, récrite à la forme nouvelle ; la disparue est sortie"
 
 
 def test_tout_vendu_connu_ne_renvoie_pas_vers_l_index(collecte, monkeypatch, tmp_path):
@@ -744,12 +788,12 @@ def test_tout_vendu_connu_ne_renvoie_pas_vers_l_index(collecte, monkeypatch, tmp
     pages = {f"{base}/vente/maison-vendue-{i}": {"titre": f"Maison vendue n° {i}", "vendu": True,
                                                  "surface_m2": 100, "prix": 150000} for i in range(3)}
     journal = _agence_au_sitemap(monkeypatch, tmp_path, pages)
-    (tmp_path / "pages_vendues.json").write_text(
-        json.dumps({u: date.today().isoformat() for u in pages}), encoding="utf-8")
+    (tmp_path / "pages_ecartees.json").write_text(
+        json.dumps({u: {"jour": date.today().isoformat(), "motif": "vendu"} for u in pages}), encoding="utf-8")
     index_ouvert = []
     monkeypatch.setattr(collecteur, "_liens_page", lambda page, base: index_ouvert.append(base) or [])
 
     collecteur.main()
     agence = json.loads(journal.read_text(encoding="utf-8"))["agences"][0]
-    assert (agence["pages"], agence["vendues_evitees"], agence["sitemap"]) == (0, 3, "ok 3")
+    assert (agence["pages"], agence["deja_ecartees"], agence["sitemap"]) == (0, 3, "ok 3")
     assert index_ouvert == [], "le sitemap lu fait autorité : pas de repli sur l'index"
