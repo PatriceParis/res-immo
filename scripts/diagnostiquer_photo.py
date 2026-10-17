@@ -90,6 +90,15 @@ def _lecture(html: str, annonce) -> None:
         print(f"  verdict qualité : {motif_de_rejet(annonce) or 'gardée'} | "
               f"{len(refs)} référence(s) lue(s) {refs[:8]} | "
               f"texte : {len(annonce.get('texte') or '')} caractères")
+        # Et ce qui entoure chaque référence : la sienne, ou celle d'un voisin
+        # en marge ? Ajouté le 17 octobre 2026 pour l'Agence du Terroir, dont
+        # 40 pages par visite tombent en « catalogue » sans qu'on sache si ce
+        # sont des listes par commune ou des fiches qui citent leurs voisines.
+        texte = annonce.get("texte") or ""
+        for m in list(_REFERENCE.finditer(texte))[:6]:
+            debut = max(0, m.start() - 60)
+            print(f"     réf {m.group(1)} au caractère {m.start()} : "
+                  f"« {_texte(texte[debut:m.end() + 60])} »")
     else:
         print("  lu              : aucune annonce lue")
     metas = _metas(html)
