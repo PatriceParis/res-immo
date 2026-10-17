@@ -6,75 +6,319 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.5,
+  "seconde": 20.6,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.6,
+  "seconde": 20.6,
   "ordre": [
-   "iad"
+   "capifrance",
+   "iad",
+   "safti"
   ]
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.6,
-  "reseau": "iad",
-  "part_secondes": 1200
+  "seconde": 20.6,
+  "reseau": "capifrance",
+  "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.7,
+  "seconde": 22.4,
+  "reseau": "capifrance",
+  "n": 1
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 23.8,
+  "reseau": "capifrance",
+  "n": 0,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 23.9,
+  "reseau": "capifrance",
+  "departements": 0
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 24.1,
+  "reseau": "capifrance",
+  "connues": 11713,
+  "ecartees": 219
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 24.1,
+  "reseau": "iad",
+  "part_secondes": 598
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 24.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 39.2,
+  "seconde": 35.9,
   "reseau": "iad",
   "n": 93391,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 41.2,
+  "seconde": 37.3,
   "reseau": "iad",
-  "departements": 1
+  "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 41.5,
+  "seconde": 37.6,
   "reseau": "iad",
-  "connues": 11381,
-  "ecartees": 0
+  "connues": 11713,
+  "ecartees": 219
  },
  {
   "etape": "departement",
-  "seconde": 1224.9,
+  "seconde": 162.9,
   "reseau": "iad",
-  "departement": "21",
-  "visitees": 317,
-  "gardes": 98,
+  "departement": "28",
+  "visitees": 50,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 98,
-   "vendu": 51,
-   "ecarte": 168,
+   "garde": 4,
+   "vendu": 12,
+   "ecarte": 34,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 165,
+   "location": 1,
+   "hors_perimetre": 33
+  },
+  "exemples": {
+   "location": "Maison 5 pièces de 88 m² à Luray (28500)",
+   "hors_perimetre": "Maison 7 pièces de 150 m² à Magny-les-Hameaux (78114)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 278.0,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
+   "vendu": 13,
+   "ecarte": 33,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 33
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 90 m² à La Celle-les-Bordes (78720)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 385.7,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 17,
+   "ecarte": 33,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 30,
    "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 104 m² à Beaulieu sur Layon (49750)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
+   "hors_perimetre": "Maison 1 pièce de 20 m² à La Ferté-sous-Jouarre (77260)",
+   "prix_trop_haut": "Maison de campagne 11 pièces de 405 m² à Les Rousses (39220)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 509.8,
+  "reseau": "iad",
+  "departement": "57",
+  "visitees": 50,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 15,
+   "ecarte": 31,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "hors_perimetre": 25,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 125 m² à Marly (59770)",
+   "hors_perimetre": "Grange 1 pièce de 100 m² à Chapelle-Viviers (86300)",
+   "prix_trop_haut": "Maison 10 pièces de 286 m² à Chailly-lès-Ennery (57365)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 622.6,
+  "reseau": "iad",
+  "departement": "59",
+  "visitees": 46,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 22,
+   "ecarte": 20,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 9,
+   "prix_trop_haut": 7,
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "location": "Maison de ville 3 pièces de 109 m² à Grand-Fort-Philippe (59153)",
+   "prix_trop_haut": "Maison 10 pièces de 250 m² à Lille (59000)",
+   "hors_perimetre": "Domaine 12 pièces de 360 m² à La Vraie-Croix (56250)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 622.6,
+  "reseau": "safti",
+  "part_secondes": 598
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 623.1,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 624.6,
+  "reseau": "safti",
+  "n": 28755,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 625.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 625.4,
+  "reseau": "safti",
+  "connues": 11944,
+  "ecartees": 450
+ },
+ {
+  "etape": "departement",
+  "seconde": 930.4,
+  "reseau": "safti",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 2,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 6
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 12 pièces à Ambleteuse 62164 : 272m², prix 999 990 €. Réf : 1517091"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1090.3,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 1,
+   "ecarte": 40,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 40
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Bagneux 92220 : 118m², prix 475 000 €. Réf : 1627891"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1212.7,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 1,
+   "ecarte": 48,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 48
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 5 pièces à Antezant-La-Chapelle 17400 : 193m², prix 294 000 €. Réf : 1657051"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1222.1,
+  "reseau": "safti",
+  "departement": "10",
+  "visitees": 4,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 0,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Vente de maison 8 pièces à Aubeterre-Sur-Dronne 16390 : 160m², prix 224 000 €. Réf : 1544981"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1224.9,
-  "gardes": 98
+  "seconde": 1222.1,
+  "gardes": 66
  }
 ]
