@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 25.8,
+  "seconde": 23.2,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 25.8,
+  "seconde": 23.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,282 +21,288 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 25.8,
+  "seconde": 23.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.8,
+  "seconde": 25.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 29.3,
+  "seconde": 26.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.4,
+  "seconde": 26.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.7,
+  "seconde": 26.8,
   "reseau": "capifrance",
-  "connues": 11322
+  "connues": 11411
  },
  {
   "etape": "reseau_debut",
-  "seconde": 29.7,
+  "seconde": 26.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 30.2,
+  "seconde": 27.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 41.5,
+  "seconde": 45.1,
   "reseau": "iad",
-  "n": 93924,
+  "n": 93391,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 43.5,
+  "seconde": 47.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 43.8,
+  "seconde": 47.4,
   "reseau": "iad",
-  "connues": 11322
+  "connues": 11411
  },
  {
   "etape": "departement",
-  "seconde": 176.2,
+  "seconde": 172.1,
   "reseau": "iad",
-  "departement": "37",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 4,
-   "vendu": 18,
-   "ecarte": 28,
+   "garde": 3,
+   "vendu": 15,
+   "ecarte": 32,
    "illisible": 0
   },
   "motifs": {
-   "location": 4,
-   "hors_perimetre": 16,
-   "prix_trop_haut": 8
+   "hors_perimetre": 29,
+   "location": 1,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Longère 3 pièces de 66 m² à Tours (37100)",
-   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+   "hors_perimetre": "Appartement 3 pièces de 60 m² à Neauphle-le-Château (78640)",
+   "location": "Maison de ville 3 pièces de 76 m² à Péronne (80200)",
+   "prix_trop_haut": "Château 18 pièces de 500 m² à Laizy (71190)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 288.7,
+  "seconde": 284.0,
   "reseau": "iad",
-  "departement": "54",
+  "departement": "88",
   "visitees": 50,
   "gardes": 1,
   "tronquee": true,
   "etats": {
    "garde": 1,
-   "vendu": 8,
-   "ecarte": 41,
+   "vendu": 12,
+   "ecarte": 37,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 39,
-   "prix_trop_haut": 2
+   "hors_perimetre": 37
   },
   "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+   "hors_perimetre": "Grange 1 pièce de 110 m² à Virieu-le-Grand (01510)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 439.6,
+  "seconde": 406.8,
   "reseau": "iad",
-  "departement": "55",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 7,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 7,
-   "vendu": 17,
-   "ecarte": 26,
+   "garde": 2,
+   "vendu": 9,
+   "ecarte": 39,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 26
+   "hors_perimetre": 39
   },
   "exemples": {
-   "hors_perimetre": "Maison de village 3 pièces de 125 m² à Verdun-sur-Garonne (82600)"
+   "hors_perimetre": "Maison 5 pièces de 104 m² à Beaulieu sur Layon (49750)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 577.9,
+  "seconde": 527.2,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "25",
   "visitees": 50,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 7,
+   "ecarte": 42,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 2,
+   "hors_perimetre": 38,
+   "location": 1,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
+   "hors_perimetre": "Maison 4 pièces de 81 m² à Talmont-Saint-Hilaire (85440)",
+   "location": "Maison de ville 6 pièces de 198 m² à Blâmont (54450)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 626.1,
+  "reseau": "iad",
+  "departement": "27",
+  "visitees": 35,
   "gardes": 5,
   "tronquee": true,
   "etats": {
    "garde": 5,
-   "vendu": 23,
-   "ecarte": 22,
+   "vendu": 12,
+   "ecarte": 18,
    "illisible": 0
   },
   "motifs": {
-   "location": 5,
-   "hors_perimetre": 16,
-   "prix_trop_haut": 1
+   "hors_perimetre": 13,
+   "location": 2,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison 1 pièce de 18 m² à Heuchin (62134)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 635.6,
-  "reseau": "iad",
-  "departement": "70",
-  "visitees": 22,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 4,
-   "ecarte": 17,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 17
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
+   "hors_perimetre": "Maison 3 pièces de 67 m² à Neuilly-Plaisance (93360)",
+   "location": "Maison de ville 5 pièces de 150 m² à Cormeilles (27260)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 635.6,
+  "seconde": 626.1,
   "reseau": "safti",
-  "part_secondes": 590
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 636.3,
+  "seconde": 626.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 638.1,
+  "seconde": 628.2,
   "reseau": "safti",
-  "n": 28794,
+  "n": 28755,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 638.9,
+  "seconde": 629.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 639.2,
+  "seconde": 629.3,
   "reseau": "safti",
-  "connues": 11322
+  "connues": 11411
  },
  {
   "etape": "departement",
-  "seconde": 885.5,
+  "seconde": 801.2,
   "reseau": "safti",
-  "departement": "37",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 24,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 24,
+   "garde": 8,
    "vendu": 1,
-   "ecarte": 25,
+   "ecarte": 41,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 12,
-   "hors_perimetre": 13
+   "hors_perimetre": 36,
+   "prix_trop_haut": 5
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918",
-   "hors_perimetre": "Vente de maison 8 pièces à Castelnau-Riviere-Basse 65700 : 250m², prix 315 000 €. Réf : 1677719"
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797",
+   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1031.6,
+  "seconde": 970.2,
   "reseau": "safti",
-  "departement": "39",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 4,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 4,
+   "garde": 8,
    "vendu": 0,
-   "ecarte": 46,
+   "ecarte": 42,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 46
+   "prix_trop_haut": 1,
+   "hors_perimetre": 41
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Chatillon-En-Michaille 01200 : 75m², prix 305 000 €. Réf : 1564905"
+   "prix_trop_haut": "Vente de maison 7 pièces à Barneville-Carteret 50270 : 180m², prix 999 500 €. Réf : 1526262",
+   "hors_perimetre": "Vente de maison 3 pièces à Beauvoir-Sur-Mer 85230 : 74m², prix 230 000 €. Réf : 1560193"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1229.6,
+  "seconde": 1228.9,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 49,
-  "gardes": 14,
+  "departement": "61",
+  "visitees": 38,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 14,
-   "vendu": 0,
-   "ecarte": 35,
+   "garde": 28,
+   "vendu": 2,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 33,
-   "prix_trop_haut": 2
+   "hors_perimetre": 7,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 7 pièces à Authon-Ebeon 17770 : 155m², prix 172 000 €. Réf : 1557878",
-   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909"
+   "hors_perimetre": "Vente de maison 4 pièces à Aubusson 23200 : 95m², prix 92 000 €. Réf : 1557730",
+   "prix_trop_haut": "Vente de maison 15 pièces à Bagnoles de l'Orne Normandie 61140 : 790m², prix 4 326 000 €. Réf : 1702731"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1229.6,
-  "gardes": 60
+  "seconde": 1228.9,
+  "gardes": 56
  }
 ]
