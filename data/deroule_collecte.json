@@ -1,231 +1,48 @@
 {
- "minutes": 28.1,
+ "minutes": 28.2,
  "agences": [
   {
-   "agence": "Le Havre Normandie immobilier",
-   "secondes": 244,
-   "pages": 36,
+   "agence": "Arthurimmo.com",
+   "secondes": 41,
+   "pages": 7,
    "gardes": 6,
-   "vendus": 29,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 37,
-   "sitemap": "ok 101",
-   "illisible_exemple": {
-    "url": "https://www.lehavre-normandie-immobilier.fr/vente/maison-individuelle-1-piece-angerville-l-orcher-76280,VM780",
-    "cause": "aucune annonce lue",
-    "titre": "À vendre - Maison individuelle, 1 pièce située à Angerville-l'Orcher (76280)",
-    "octets": 866228
-   }
-  },
-  {
-   "agence": "Le Mercier Immobilier",
-   "secondes": 66,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 65,
-   "sitemap_dates": 111,
-   "sitemap": "ok 111",
-   "motifs": {
-    "titre_hors_cible:biens a vendre": 1,
-    "prix_trop_haut": 1,
-    "titre_hors_cible:appartement": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:biens a vendre": {
-     "url": "https://www.lemercier-immobilier.com/vente/1",
-     "titre": "Biens à vendre | Lemercier Immobilier"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.lemercier-immobilier.com/vente/307-soissons/maison/t9/12876-proche-soissons-maison-d-architecte-220m-avec-bois-4ha-et-etang-1ha/",
-     "titre": "PROCHE SOISSONS MAISON D"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lemercier-immobilier.com/vente/91-valenciennes/duplex/t5/13391-magnifique-appartement-duplex-en-plein-coeur-de-valenciennes/",
-     "titre": "Magnifique appartement duplex en plein cœur de Valenciennes"
-    }
-   }
-  },
-  {
-   "agence": "Le Strat Caen Immo",
-   "secondes": 80,
-   "pages": 12,
-   "gardes": 8,
    "vendus": 0,
    "ecartes": 1,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 83,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "illisible_exemple": {
-    "url": "https://www.caen-immo.fr/biens/place-de-parking-exterieur-60290394/",
-    "cause": "aucune annonce lue",
-    "titre": "Place de parking extérieur - Le Strat Immobilier",
-    "octets": 182035
-   },
-   "motifs": {
-    "titre_hors_cible:bureaux": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:bureaux": {
-     "url": "https://www.caen-immo.fr/biens/plateau-a-usage-de-bureaux-quartier-koening-bretteville-sur-odon-90-m2-59251567/",
-     "titre": "Plateau à usage de bureaux quartier Koening - Bretteville Sur Odon 90 m2"
-    }
-   }
-  },
-  {
-   "agence": "Lecoeur Immobilier",
-   "secondes": 18,
-   "pages": 8,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 8,
-   "sitemap": "ok 8",
-   "illisible_exemple": {
-    "url": "https://www.lecoeurtransactions.fr/annonces-divers",
-    "cause": "aucune annonce lue",
-    "titre": "Divers | LECOEUR IMMOBILIER",
-    "octets": 101745
-   }
-  },
-  {
-   "agence": "Leforestier Immobilier",
-   "secondes": 110,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 45,
-   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 550,
-   "sitemap_dates": 708,
-   "sitemap": "ok 708"
-  },
-  {
-   "agence": "Lelièvre immobilier",
-   "secondes": 76,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 287,
-   "sitemap_dates": 110,
-   "sitemap": "ok 110",
+   "adresses_ecartees": 12,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
    "motifs": {
-    "prix_trop_haut": 4,
-    "titre_hors_cible:parking": 1
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
-     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.lelievre-immobilier.com/vente/stationnement-paris-ref-62255",
-     "titre": "Vente - parking/box Paris| Lelièvre Immobilier"
+     "url": "https://metz.arthurimmo.com/annonces/achat/maison/lorry-les-metz-57050/33122031.htm",
+     "titre": "Acheter maison de 10 pièces 245 m² 893 000 € à Lorry-Lès-Metz (57050) : une annonce Arthurimmo.com"
     }
    }
   },
   {
-   "agence": "Lemaistre Immobilier Yvetot",
-   "secondes": 82,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 6,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap": "ok 436",
-   "motifs": {
-    "page_catalogue": 1,
-    "titre_hors_cible:appartement": 3,
-    "ni_surface_ni_prix_credible": 1,
-    "titre_hors_cible:local commercial": 1
-   },
-   "ecartes_exemples": {
-    "page_catalogue": {
-     "url": "https://www.lemaistre-immo.fr/fr/vente-maison-villa.htm",
-     "titre": "Découvrez toutes les ventes de maisons sur Le Havre et sa périphérie"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-le-havre-76600/61640956.htm",
-     "titre": "vente achat Appartement LE HAVRE 76600"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-goderville-76110/60210353.htm",
-     "titre": "vente achat Terrain GODERVILLE 76110"
-    },
-    "titre_hors_cible:local commercial": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/local-commercial-le-havre-76600/61642542.htm",
-     "titre": "vente achat Local Commercial LE HAVRE 76600"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
-    "cause": "aucune annonce lue",
-    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
-    "octets": 47327
-   }
-  },
-  {
-   "agence": "Les Artisans 2 l'immobilier",
-   "secondes": 71,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 6,
-   "ecartes": 2,
+   "agence": "Arturimmo.com",
+   "secondes": 30,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 33",
-   "motifs": {
-    "page_catalogue": 2
-   },
-   "ecartes_exemples": {
-    "page_catalogue": {
-     "url": "https://www.artisans-immobilier.com/maison-a-vendre-Roz%C3%A9rieulles.htm",
-     "titre": "Maison à vendre Rozérieulles - LES ARTISANS DE L'IMMOBILIER, Agence immobilière à Metz"
-    }
-   }
+   "adresses_ecartees": 35,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3"
   },
   {
-   "agence": "Les Clés de la Suisse Normande",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Les Clés du Littoral",
-   "secondes": 101,
+   "agence": "Aude Immo 18",
+   "secondes": 70,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -234,117 +51,22 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 24,
-   "sitemap": "ok 51",
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
-     "titre": "Propriété de caractère à 100mètres de la mer"
-    }
-   }
-  },
-  {
-   "agence": "Les nouvelles pépites",
-   "secondes": 244,
-   "pages": 40,
-   "gardes": 0,
-   "vendus": 40,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 82,
-   "sitemap": "ok 167"
-  },
-  {
-   "agence": "Loft & House",
-   "secondes": 36,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 40,
+   "adresses_ecartees": 8,
    "sitemap_dates": 47,
    "sitemap": "ok 47",
-   "illisible_exemple": {
-    "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-129-m2-bieville-beuville-61595756/",
-    "cause": "aucune annonce lue",
-    "titre": "Page non trouvée - Loft&nbsp;&amp;&nbsp;House",
-    "octets": 51544
-   },
    "motifs": {
-    "prix_trop_haut": 2
+    "titre_hors_cible:51 annonces": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-10-pieces-376-m2-bieville-beuville-61547115/",
-     "titre": "Maison de 10 pièces de 376 m² à BIEVILLE BEUVILLE - Loft & House"
+    "titre_hors_cible:51 annonces": {
+     "url": "https://www.aude-immo-18.com/vente/1",
+     "titre": "51 annonces de ventes immobilières"
     }
    }
   },
   {
-   "agence": "Angélot Immo",
-   "secondes": 11,
-   "pages": 3,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3",
-   "motifs": {
-    "titre_hors_cible:7 annonces": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:7 annonces": {
-     "url": "https://www.angelot-immo.fr/vente/1",
-     "titre": "7 Annonces de ventes immobilières"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
-     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
-    }
-   }
-  },
-  {
-   "agence": "Année Hoinville",
-   "secondes": 217,
-   "pages": 31,
-   "gardes": 8,
-   "vendus": 14,
-   "ecartes": 9,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 97,
-   "sitemap": "ok 80",
-   "motifs": {
-    "prix_trop_haut": 9
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
-     "titre": "MAISON TROUVILLE"
-    }
-   }
-  },
-  {
-   "agence": "Antony Vesque Immobilier",
-   "secondes": 67,
+   "agence": "Aurélie Bonnet Immobilier",
+   "secondes": 49,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -353,54 +75,636 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 60,
-   "sitemap": "ok 69"
+   "adresses_ecartees": 41,
+   "sitemap_dates": 261,
+   "sitemap": "ok 261"
   },
   {
-   "agence": "Arsenal Immobilier",
-   "secondes": 159,
-   "pages": 26,
-   "gardes": 4,
-   "vendus": 22,
+   "agence": "BAP Immo",
+   "secondes": 96,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 41,
+   "sitemap": "ok 49",
+   "motifs": {
+    "titre_hors_cible:entrepot": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:entrepot": {
+     "url": "https://www.bapimmo.fr/vente/entrepot",
+     "titre": "Entrepôt à vendre, 67 m² - Lisieux 14100"
+    }
+   }
+  },
+  {
+   "agence": "Bagnoles Immobilier",
+   "secondes": 87,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 92,
-   "sitemap": "ok 64",
-   "deja_ecartees": 38
+   "adresses_ecartees": 99,
+   "sitemap": "ok 177",
+   "deja_ecartees": 26
   },
   {
-   "agence": "ArthurImmo.com Agence Saint-Hubert",
-   "secondes": 47,
-   "pages": 6,
-   "gardes": 6,
+   "agence": "Baudart Immo",
+   "secondes": 5,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": "Achat / Vente - Beauvais et ses environs - Annonces immobili"
+  },
+  {
+   "agence": "Benedic Immobilier",
+   "secondes": 31,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 30,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Benedic immobilier Agence immobilière à Metz Nancy ... | Ben"
+  },
+  {
+   "agence": "Berry Immobilier",
+   "secondes": 63,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 22,
+   "sitemap_dates": 157,
+   "sitemap": "ok 157",
+   "deja_ecartees": 3
+  },
+  {
+   "agence": "Bias Immobilier",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Bien chez soi immobilier",
+   "secondes": 117,
+   "pages": 45,
+   "gardes": 7,
+   "vendus": 11,
+   "ecartes": 27,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 18,
-   "sitemap_dates": 8,
-   "sitemap": "ok 8"
+   "sitemap_dates": 102,
+   "sitemap": "ok 102",
+   "deja_ecartees": 15,
+   "motifs": {
+    "ni_surface_ni_prix_credible": 2,
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:appartement": 3,
+    "prix_trop_haut": 16,
+    "titre_hors_cible:studio": 1,
+    "titre_hors_cible:studios": 1,
+    "titre_hors_cible:box": 2,
+    "titre_hors_cible:appartements": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.bienchezsoi-immo.com/vendre-son-bien-immobilier",
+     "titre": "Vendre son bien immobilier Troyes | Bien chez soi Immobilier"
+    },
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.bienchezsoi-immo.com/vente/1",
+     "titre": "Biens immobiliers à vendre | Bien chez soi Immobilier"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/1-troyes/2-appartement/t3/344-a-vendre-troyes-appartement-de-73m-balcon-3-chambres-cave/",
+     "titre": "A VENDRE TROYES, APPARTEMENT DE 73M², BALCON, 3 CHAMBRES, CAVE"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/13-breviandes/1-maison/t6/370-a-vendre-maison-breviandes-125m2-jardin-350m2-4chambres/",
+     "titre": "A VENDRE MAISON BREVIANDES 125m2 jardin 350m2, 4chambres"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/1-troyes/2-appartement/t1/498-a-vendre-a-troyes-quartier-paix-studio-29m2-balcon-2-places-de-parking/",
+     "titre": "A vendre à Troyes Quartier Paix Studio 29m2, balcon, 2 places de parking"
+    },
+    "titre_hors_cible:studios": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/3-ste-savine/4-studio/t/667-achat-sainte-savine-deux-studios-renoves/",
+     "titre": "Achat sainte-savine deux studios rénovés"
+    },
+    "titre_hors_cible:box": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/3-ste-savine/2-appartement/t3/860-a-vendre-a-sainte-savine-type-3-de-78m-2-chambres-loggia-un-box-cave-une-place-de-stationnement-privativ/",
+     "titre": "A VENDRE A SAINTE-SAVINE Type 3 de 78m², 2 CHAMBRES, LOGGIA, UN BOX, CAVE, UNE PLACE DE STATIONNEMENT PRIVATIV"
+    },
+    "titre_hors_cible:appartements": {
+     "url": "https://www.bienchezsoi-immo.com/vente/10-aube/216-bouilly/21-immeuble/t/792-a-vendre-bouilly-maison-208-35m-composee-de-4-appartements-tous-loues-jardin-arbore-738m/",
+     "titre": "A VENDRE Bouilly MAISON 208,35m² COMPOSEE DE 4 APPARTEMENTS tous loués jardin arboré 738m²"
+    }
+   },
+   "vendus_dans_l_adresse": 1
   },
   {
-   "agence": "Arthurimmo",
-   "secondes": 52,
-   "pages": 6,
-   "gardes": 6,
+   "agence": "Bon'Appart",
+   "secondes": 59,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 33,
+   "sitemap_dates": 93,
+   "sitemap": "ok 93",
+   "deja_ecartees": 1,
+   "motifs": {
+    "titre_hors_cible:annonces": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.bon-appart.fr/vente/1",
+     "titre": "Annonces immobilières - Vente | Bon Appart"
+    }
+   }
+  },
+  {
+   "agence": "Bonnabelle",
+   "secondes": 86,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
-   "fin": "budget global épuisé",
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap_dates": 58,
+   "sitemap": "ok 58"
+  },
+  {
+   "agence": "Boost Immo",
+   "secondes": 70,
+   "pages": 31,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 29,
+   "illisibles": 1,
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47"
+   "adresses_ecartees": 9,
+   "sitemap_dates": 31,
+   "sitemap": "ok 31",
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:vente de maisons": 1,
+    "titre_hors_cible:nos biens": 1,
+    "prix_trop_haut": 11,
+    "ni_surface_ni_prix_credible": 12,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:terrain a batir": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://boost-immo.com/vente/1",
+     "titre": "Biens immobiliers à vendre | Boost Immo"
+    },
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://boost-immo.com/vente/maisons/1",
+     "titre": "Vente de maisons | Boost Immo"
+    },
+    "titre_hors_cible:nos biens": {
+     "url": "https://boost-immo.com/biens-vendus/1",
+     "titre": "Nos biens vendus | Boost Immo"
+    },
+    "prix_trop_haut": {
+     "url": "https://boost-immo.com/vente/62-pas-de-calais/1-henin-beaumont/25-villa/t8/8340-maison-semi-plain-pied-de-170m-secteur-beaumont/",
+     "titre": "Maison semi plain-pied de 170m² Secteur BEAUMONT"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://boost-immo.com/vente/62-pas-de-calais/1-henin-beaumont/1-maison/t4/8342-maison-centre-ville-henin-beaumont/",
+     "titre": "MAISON CENTRE VILLE HENIN BEAUMONT"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://boost-immo.com/vente/59-nord/158-douai/2-appartement/t2/8344-douai-centre-ville-charmant-appartement-t2/",
+     "titre": "Douai Centre­-ville : Charmant Appartement T2"
+    },
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://boost-immo.com/vente/62-pas-de-calais/484-noyelles-godault/5-terrain/8362-superbe-terrain-a-batir-a-noyelles-godault-1200m/",
+     "titre": "superbe terrain à bâtir à Noyelles Godault 1200m²"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://boost-immo.com/nos-biens-loues/1",
+    "cause": "aucune annonce lue",
+    "titre": "Nos biens loués | Boost Immo",
+    "octets": 78797
+   }
+  },
+  {
+   "agence": "Bouctot Immobilier & Commerces",
+   "secondes": 87,
+   "pages": 32,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 28,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 34,
+   "sitemap": "ok 34",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://agence-immobiliere-cherbourg.net/project/salon-de-coiffure-mixte-3/vente-salon-de-coiffure-ec2232/",
+    "cause": "aucune annonce lue",
+    "titre": "Vente salon de coiffure ec2232 - Bouctot Immobilier",
+    "octets": 167403
+   },
+   "motifs": {
+    "prix_trop_haut": 1,
+    "ni_surface_ni_prix_credible": 3
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://agence-immobiliere-cherbourg.net/project/maison-darchitecte-a-cherbourg-en-cotentin/",
+     "titre": "Maison d"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://agence-immobiliere-cherbourg.net/project/maison-recente-de-plain-pied-dans-le-cotentin/",
+     "titre": "Maison récente de plain pied dans le Cotentin - Bouctot Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Bourgogne Buxy Immobilier",
+   "secondes": 70,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 13,
+   "sitemap_dates": 13,
+   "sitemap": "ok 13"
+  },
+  {
+   "agence": "Brique rouge",
+   "secondes": 67,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 399,
+   "sitemap_dates": 6221,
+   "sitemap": "ok 6221",
+   "motifs": {
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:parkings": 1,
+    "ni_surface_ni_prix_credible": 3
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:parking": {
+     "url": "https://www.brique-rouge-immobilier.fr/vente/maison/magnifique-maison-avec-piscine-et-jacuzzi-jardin-garage_32644",
+     "titre": "Magnifique maison avec piscine - garage + parking BAUVIN 59221, prix 441 000 € (HAI) - Brique Rouge Immobilier"
+    },
+    "titre_hors_cible:parkings": {
+     "url": "https://www.brique-rouge-immobilier.fr/vente/maison/hallennes-belle-semi-individuelle-t5-cave-jardin-parkings_27553",
+     "titre": "HALLENNES BELLE SEMI INDIVIDUELLE T5 +cave+JARDIN + parkings HALLENNES LEZ HAUBOURDIN 59320, prix 225 750 € (HAI) - Briq"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.brique-rouge-immobilier.fr/acheter/maison/lambersart/tous_quartiers/toutes_chambres/2-550000",
+     "titre": "Charmante maison semi individuelle sur secteur familial LAMBERSART 59130, prix NOUS CONSULTER (HAI) - Brique Rouge Immob"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.brique-rouge-immobilier.fr/vente/logement/maison-semi-individuelle-3-chambres-jardin-garage_23449",
+    "cause": "aucune annonce lue",
+    "titre": "Vente Maison, Maison semi individuelle - 3 chambres jardin garage - Brique Rouge Immobilier",
+    "octets": 209130
+   }
+  },
+  {
+   "agence": "Brosset Immobilier",
+   "secondes": 17,
+   "pages": 7,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 6,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
+   "illisible_exemple": {
+    "url": "https://www.brosset-immobilier.fr/vendre-son-appartement-maison",
+    "cause": "aucune annonce lue",
+    "titre": "Comment bien vendre votre appartement ou maison à Tours | Brosset Immobilier",
+    "octets": 61327
+   },
+   "motifs": {
+    "titre_hors_cible:annonces": 6
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:annonces": {
+     "url": "https://www.brosset-immobilier.fr/achat/maison/tours-37261",
+     "titre": "Achat maison à Tours - Nos annonces | Brosset Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Bréville immobilier",
+   "secondes": 126,
+   "pages": 45,
+   "gardes": 7,
+   "vendus": 2,
+   "ecartes": 36,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 43,
+   "sitemap_dates": 104,
+   "sitemap": "ok 104",
+   "deja_ecartees": 6,
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "ni_surface_ni_prix_credible": 8,
+    "prix_trop_haut": 20,
+    "titre_hors_cible:parking": 4,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.breville-immobilier.com/vente/1",
+     "titre": "Biens immobiliers à vendre en Normandie | Breville Immobilier"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.breville-immobilier.com/vente/14-calvados/3-trouville-sur-mer/2-appartement/t2/11979-trouville-hyper-centre/",
+     "titre": "TROUVILLE HYPER CENTRE"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.breville-immobilier.com/vente/92-hauts-de-seine/4-meudon/1-maison/t8/11838-maison-familiale-de-215-m-avec-grand-jardin-et-dependance/",
+     "titre": "Maison familiale de 215 m²avec grand jardin et dépendance"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.breville-immobilier.com/vente/92-hauts-de-seine/4-meudon/2-appartement/t3/12027-meudon-centre-3-pieces-84-m-balcons-parking-cave/",
+     "titre": "MEUDON CENTRE – 3 PIÈCES 84 m² - BALCONS - PARKING & CAVE"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.breville-immobilier.com/vente/92-hauts-de-seine/4-meudon/2-appartement/t4/11782-meudon-bellevue-tres-bel-appartement-familial-de-91m2-avec-vue-tres-degagee-sur-paris-salon-cuisine-prestige/",
+     "titre": "MEUDON Bellevue, très bel appartement familial de 91m2 avec vue très dégagée sur Paris.~Salon, cuisine, ..."
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.breville-immobilier.com/vente/44-loire-atlantique/583-nantes/2-appartement/t1/12038-quartier-chateau-cathedrale-studio-de-charme-27-m-avec-locataire-en-place/",
+     "titre": "Quartier Château - Cathédrale | Studio de charme 27 m² avec locataire en place"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Aelion immobilier",
+   "secondes": 46,
+   "pages": 7,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.aelion-immobilier.com/vente/1",
+     "titre": "Biens à vendre | CABINET AELION IMMOBILIER"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.aelion-immobilier.com/vente/381-cresseveuille/propriete/t5/24-propriete-150-m-avec-dependances-19-ha-de-terrain/",
+     "titre": "PROPRIÉTÉ 150 M² AVEC DÉPENDANCES - 19 ha de terrain"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Choquet",
+   "secondes": 14,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Cabinet Choquet - agence immobilière à Lille"
+  },
+  {
+   "agence": "Cabinet Courel",
+   "secondes": 14,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 1,
+   "sitemap": "ok 1",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://cabinet-courel.fr/nos-biens-dinvestissement/",
+     "titre": "Immobilier d"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Dero Renard",
+   "secondes": 242,
+   "pages": 41,
+   "gardes": 1,
+   "vendus": 36,
+   "ecartes": 0,
+   "illisibles": 4,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 160,
+   "sitemap": "ok 123",
+   "deja_ecartees": 38,
+   "illisible_exemple": {
+    "url": "https://www.immorenard.com/vente/maison-6-pieces-sainte-adresse-76310,VM300",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison, 6 pièces située à Sainte-Adresse (76310)",
+    "octets": 816137
+   }
+  },
+  {
+   "agence": "Cabinet Faudais",
+   "secondes": 63,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 124,
+   "sitemap_dates": 251,
+   "sitemap": "ok 251",
+   "deja_ecartees": 3,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.cabinet-faudais.com/vente/8-montmartin-sur-mer/maison/t2/22287-charmant-appartement-t2-dans-petite-copropriete-conviviale/",
+     "titre": "Charmant appartement T2 dans petite copropriété conviviale –"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet JC Lebourg",
+   "secondes": 67,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 24,
+   "sitemap": "ok 24",
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1,
+    "titre_hors_cible:appartement": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://cabinet-lebourg.fr/vente/1",
+     "titre": "Biens immobiliers à vendre | Cabinet JC Lebourg"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://cabinet-lebourg.fr/vente/76-seine-maritime/365-forges-les-eaux/2-appartement/t2/4281-investisseur-un-appartement-t2-centre-ville-de-forges-les-eaux-54-44-m/",
+     "titre": "Investisseur : Un appartement T2 centre ville de Forges-Les-Eaux 54.44 m²"
+    },
+    "prix_trop_haut": {
+     "url": "https://cabinet-lebourg.fr/vente/76-seine-maritime/362-st-saire/1-maison/t4/4265-maison-individuelle-renovee-t4/",
+     "titre": "Maison individuelle renovée T4"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Lintot",
+   "secondes": 31,
+   "pages": 13,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 5,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 13,
+   "sitemap": "ok 13",
+   "illisible_exemple": {
+    "url": "https://www.cabinet-lintot.fr/annonces-immobilieres",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers",
+    "octets": 5019
+   },
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 8
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.cabinet-lintot.fr/annonces-immobilieres/biens-a-vendre",
+     "titre": "Biens immobiliers"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Quesnée Immobilier",
+   "secondes": 40,
+   "pages": 6,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 45,
+   "sitemap_dates": 12,
+   "sitemap": "ok 12",
+   "deja_ecartees": 6,
+   "motifs": {
+    "titre_hors_cible:52 annonces": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:52 annonces": {
+     "url": "https://www.cabinetquesnee.com/vente/1",
+     "titre": "52 annonces de ventes immobilières dans le Calvados"
+    }
+   }
   }
  ]
 }
