@@ -77,15 +77,26 @@ def _lecture(html: str, annonce) -> None:
     titre ni ce qui manquait. La sonde photo ouvrait déjà la page ; elle dit
     maintenant aussi ce qu'on y lit."""
     import re
+    from app.qualite import _REFERENCE, motif_de_rejet
     if annonce:
         print(f"  lu              : titre={annonce.get('titre')!r} prix={annonce.get('prix')} "
               f"surface={annonce.get('surface_m2')} type={annonce.get('type_bien')} "
               f"vendu={annonce.get('vendu')}")
+        # Le verdict du filtre qualité et, pour « page_catalogue », les
+        # références qu'il a comptées : Agence du Terroir et Demonchy, 17
+        # octobre 2026, 60 pages refusées comme catalogues sans qu'on sache
+        # si ce sont des listes ou des annonces qui citent leurs voisines.
+        refs = sorted(set(_REFERENCE.findall(annonce.get("texte") or "")))
+        print(f"  verdict qualité : {motif_de_rejet(annonce) or 'gardée'} | "
+              f"{len(refs)} référence(s) lue(s) {refs[:8]} | "
+              f"texte : {len(annonce.get('texte') or '')} caractères")
     else:
         print("  lu              : aucune annonce lue")
     metas = _metas(html)
     balise = re.search(r"<title[^>]*>(.*?)</title>", html or "", re.I | re.S)
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", html or "", re.I | re.S)
+    h2 = re.findall(r"<h2[^>]*>(.*?)</h2>", html or "", re.I | re.S)
+    print(f"  <h2>            : {[_texte(h) for h in h2[:5]]}")
     noms = re.findall(r'"name"\s*:\s*"([^"]{0,120})"', html or "")
     types = sorted(set(re.findall(r'"@type"\s*:\s*"([A-Za-z]+)"', html or "")))
     print(f"  og:title        : {metas.get('og:title')!r}")

@@ -178,6 +178,13 @@ _URL_RUBRIQUE = re.compile(
     # « Vente d' ». Un libellé d'annonce mêle lettres et chiffres ; un numéro
     # seul est une page.
     r"|(?:ventes?|achat|acheter|a-vendre)-(?:" + _TYPES_DE_RUBRIQUE + r")/\d+"
+    # « /immobilier/vente-maison/honfleur », « /vente-maison/bavent » : la
+    # rubrique et sa commune. E&B Immo, 17 octobre 2026 : un sitemap de 119
+    # adresses de cette forme, 45 pages ouvertes pour rien à chaque visite,
+    # titrées « Maison à vendre Honfleur — Annonces vente maisons ». Un
+    # libellé sans le moindre chiffre sous « vente-maison » n'est pas une
+    # annonce : zéro des 11 402 adresses du fichier n'a cette forme.
+    r"|(?:ventes?|achat|acheter|a-vendre)-(?:" + _TYPES_DE_RUBRIQUE + r")/[a-z-]+"
     r")/?$", re.IGNORECASE)
 # Le TYPE en tête du libellé : « appartement-t3-3-pieces-deauville-14800,VA4416 »,
 # « immeuble-de-rapport », « terrain-a-batir-vincelles », « vente-appartement-
@@ -231,6 +238,14 @@ TYPES_REFUGE = {
 
 # Un titre exploitable contient un minimum de lettres (écarte « 389 », « 9 »…).
 _LETTRES = re.compile(r"[a-z]")
+
+
+def titre_indigent(titre) -> bool:
+    """Un titre de moins de cinq lettres ne dit rien du bien : « 389 », « L ».
+    Une seule définition, pour le filtre qualité qui refuse et pour
+    l'extracteur qui, devant un tel titre, cherche encore (voir
+    app/extraction.py — L'Agence Smith, 16 octobre 2026)."""
+    return len(_LETTRES.findall(normaliser(titre or ""))) < 5
 # En-deçà, un « prix » trahit une extraction ratée (référence, n° de téléphone).
 PRIX_MINI = 15000
 
@@ -327,7 +342,7 @@ def motif_de_rejet(a: dict) -> str | None:
     """
     titre = normaliser(a.get("titre") or "")
     # Titre vide ou indigent (numéro de référence seul, « 389 ») : inexploitable.
-    if len(_LETTRES.findall(titre)) < 5:
+    if titre_indigent(titre):
         return "titre_indigent"
     # Déjà vendu : l'annonce traîne en ligne, mais on ne la propose pas.
     if est_vendu(a):

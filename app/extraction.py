@@ -813,11 +813,17 @@ def extraire_annonce(html: str, url: str, source: str,
     if annonce.get("code_postal") and not annonce.get("departement"):
         annonce["departement"] = str(annonce["code_postal"])[:2]
 
-    # Dernier recours pour le titre : la balise <title> de la page.
-    if not annonce.get("titre"):
+    # Dernier recours pour le titre : la balise <title> de la page — quand il
+    # n'y a pas de titre, ou quand ce qu'on a pris pour un titre n'en est pas
+    # un. L'Agence Smith, 16 octobre 2026 : og:title vaut « L », l'attribut
+    # étant écrit entre apostrophes et le nom de l'agence en contenant une ;
+    # 45 pages sur 45 écartées pour titre indigent, alors que <title> disait
+    # « L'agence Smith - NOUVEAUTÉ SMITH : APPARTEMENT 4 PIÈCES / 3 CHAMBRES ».
+    from .qualite import titre_indigent
+    if titre_indigent(annonce.get("titre")):
         balise = RE_TITRE.search(html)
         if balise:
-            annonce["titre"] = re.sub(r"\s+", " ", balise.group(1)).strip()
+            annonce["titre"] = re.sub(r"\s+", " ", html_.unescape(balise.group(1))).strip()
 
     # Sans titre exploitable, l'extraction a échoué de bout en bout. Inventer
     # un titre (« Agence X — bien à vendre ») masquait cet échec : les pages

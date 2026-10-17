@@ -133,6 +133,11 @@ def test_une_page_de_rubrique_n_est_pas_une_annonce():
         # La rubrique et le numéro de sa page : deux biens servis le 14 octobre.
         "https://www.agence.fr/vente-appartement/1",
         "https://www.agence.fr/a-vendre-proprietes/2",
+        # La rubrique et sa commune : E&B Immo, 17 octobre 2026, 119 adresses
+        # de cette forme au sitemap, 45 pages ouvertes pour rien à chaque
+        # visite ; zéro adresse du fichier n'a cette forme.
+        "https://www.ebimmo.com/immobilier/vente-maison/honfleur",
+        "https://www.ebimmo.com/immobilier/vente-maison/saint-pierre-azif",
     ]
     for url in rubriques:
         assert qualite.motif_url_hors_cible(url) in ("rubrique", "url_type_exclu"), url
@@ -150,6 +155,7 @@ def test_une_page_de_rubrique_n_est_pas_une_annonce():
                 "https://www.agence.fr/vente/maison-de-ville-renovee-caen",
                 "https://www.agence.fr/vente/maison/12-belle-maison-de-bourg/",
                 "https://www.agence.fr/vente-maison/maison-5-pieces-belleme-61130-12",
+                "https://www.ebimmo.com/immobilier/vente-maison/maison-5-pieces-honfleur-14600",
                 "https://www.immobiliersaintjoseph.com/vente/maison/865-tourville-sur-sienne"):
         assert qualite.motif_url_hors_cible(url) is None, url
 
