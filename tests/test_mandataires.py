@@ -167,3 +167,26 @@ def test_une_page_ouverte_et_refusee_compte_comme_vue():
                      "https://iad.fr/annonce/b": "2026-10-10",
                      "https://iad.fr/annonce/c": "2026-10-17"}
     assert mandataires.dates_de_derniere_visite(catalogue, {}) == catalogue
+
+
+def test_safti_ouvre_d_abord_ce_que_le_code_postal_de_l_adresse_place_chez_nous():
+    """Mesuré le 17 octobre 2026 au passage de 17 h 46 : 92 des 104 pages
+    Safti ouvertes dans l'Aisne, les Ardennes et l'Aube étaient des biens
+    d'ailleurs — Bagneux (92) pris pour Bagneux (02), Antezant-la-Chapelle
+    (17) pour La Chapelle (08) —, et leur adresse le disait. Elles passent
+    après les autres, sans être écartées : l'adresse peut se tromper aussi."""
+    index = mandataires.index_des_communes({"02": ["Bagneux", "Vervins"], "71": ["Givry"]})
+    urls = ["https://www.safti.fr/annonces/achat/maison/bagneux-92220/1627891",
+            "https://www.safti.fr/annonces/achat/maison/vervins-02140/1700001",
+            "https://www.safti.fr/annonces/achat/maison/bagneux-02290/1700002"]
+    retenues = mandataires.annonces_a_visiter(urls, SAFTI, index)
+    assert len(retenues) == 3, "aucune n'est écartée"
+    assert [a["hors_cible_selon_l_adresse"] for a in retenues] == [True, False, False]
+    deja = {"https://www.safti.fr/annonces/achat/maison/vervins-02140/1700001": "2026-10-01"}
+    ordre = [a["url"].rsplit("/", 1)[1] for a in mandataires.ordre_dans_le_departement(retenues, deja)]
+    assert ordre == ["1700002", "1627891", "1700001"], \
+        "jamais vue chez nous, puis jamais vue d'ailleurs, puis la déjà vue"
+    # IAD ne met pas de code dans ses adresses : rien ne change pour lui.
+    iad = mandataires.annonces_a_visiter(
+        ["https://www.iadfrance.fr/annonce/maison-vente-4-pieces-givry-90m2/r1"], IAD, index)
+    assert iad[0]["hors_cible_selon_l_adresse"] is False

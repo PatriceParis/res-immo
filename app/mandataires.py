@@ -62,6 +62,9 @@ RESEAUX = {
         # évite d'aller chercher des biens déjà vendus pour les écarter après.
         "sitemaps_voulus": re.compile(r"annonce\.(maison|propriete)\.disponible",
                                       re.IGNORECASE),
+        # L'adresse porte le code postal : « /maison/givry-71640/1480990 ». Il
+        # sert à ORDONNER, jamais à écarter — voir `ordre_dans_le_departement`.
+        "cp_dans_l_adresse": re.compile(r"-(\d{5})/\d+/?$"),
     },
 }
 
@@ -209,6 +212,8 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]
     # Construite UNE fois, pas une par adresse : c'est tout l'objet du
     # correctif du 19 août.
     table = table_des_communes(index)
+    cp_dans_l_adresse = reseau.get("cp_dans_l_adresse")
+    departements_cibles = {departement for _, _, departement in index}
     retenues, vues = [], set()
     for url in urls:
         if not reseau["motif_annonce"].search(url):
@@ -222,11 +227,20 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]
             continue
         vues.add(url)
         commune, departement = lieu
+        # Le code postal de l'adresse, quand le réseau l'y met, dit si le nom
+        # de commune a trompé le tri : « antezant-la-chapelle-17400 » n'est pas
+        # La Chapelle des Ardennes. Le bien n'est pas écarté pour autant —
+        # l'adresse peut se tromper aussi, une maison de Pacy-sur-Eure est
+        # publiée sous un code des Yvelines —, il passe seulement après les
+        # autres (voir `ordre_dans_le_departement`).
+        code = cp_dans_l_adresse.search(urlparse(url).path) if cp_dans_l_adresse else None
         retenues.append({
             "url": url,
             "commune": commune,
             "departement": departement,
             "agence": nom_d_agence(reseau, departement),
+            "hors_cible_selon_l_adresse": bool(
+                code and departement_du_code_postal(code.group(1)) not in departements_cibles),
         })
     return retenues
 
@@ -268,8 +282,18 @@ def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dic
     le plus longtemps — la même règle que la rotation des agences, appliquée
     un cran plus bas. « Vue » veut dire OUVERTE, gardée ou non : voir
     `dates_de_derniere_visite`.
+
+    Parmi les jamais vues, celles dont l'adresse dit un code postal hors de
+    nos terroirs passent en dernier. Mesuré le 17 octobre 2026 au passage de
+    17 h 46 : chez Safti, 92 des 104 pages ouvertes dans l'Aisne, les Ardennes
+    et l'Aube étaient des biens d'ailleurs — Bagneux (92), Antezant-la-
+    Chapelle (17), Aubeterre-sur-Dronne (16) —, et leur adresse le disait. On
+    ne les écarte pas : au fichier, une maison de Pacy-sur-Eure est publiée
+    sous un code des Yvelines. Elles attendent seulement leur tour.
     """
-    return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""), a["url"]))
+    return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""),
+                                           bool(a.get("hors_cible_selon_l_adresse")),
+                                           a["url"]))
 
 
 def dates_de_derniere_visite(catalogue: dict, ecartees: dict) -> dict:
