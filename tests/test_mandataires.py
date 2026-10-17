@@ -149,3 +149,21 @@ def test_on_progresse_dans_un_departement_au_lieu_de_relire_les_memes():
              for a in mandataires.ordre_dans_le_departement(annonces, deja)]
     assert ordre[:3] == ["2", "3", "4"], "les inconnues d'abord"
     assert ordre[3:] == ["1", "0"], "puis la plus anciennement revue"
+
+
+def test_une_page_ouverte_et_refusee_compte_comme_vue():
+    """Mesuré le 17 octobre 2026 en Côte-d'Or : 50 pages ouvertes, 2 gardées,
+    48 refusées — vendues, ou d'autres régions qu'un nom de commune trompait.
+    Le catalogue ne connaissant que les gardées, les 48 restaient « jamais
+    vues » et repassaient en tête à chaque passage. La plus récente des deux
+    dates — gardée au catalogue, refusée au journal — fait foi."""
+    catalogue = {"https://iad.fr/annonce/a": "2026-09-01",
+                 "https://iad.fr/annonce/b": "2026-10-10"}
+    ecartees = {"https://iad.fr/annonce/a": {"jour": "2026-10-17", "motif": "vendu"},
+                "https://iad.fr/annonce/b": {"jour": "2026-09-20", "motif": "vendu"},
+                "https://iad.fr/annonce/c": {"jour": "2026-10-17", "motif": "hors_perimetre"}}
+    dates = mandataires.dates_de_derniere_visite(catalogue, ecartees)
+    assert dates == {"https://iad.fr/annonce/a": "2026-10-17",
+                     "https://iad.fr/annonce/b": "2026-10-10",
+                     "https://iad.fr/annonce/c": "2026-10-17"}
+    assert mandataires.dates_de_derniere_visite(catalogue, {}) == catalogue

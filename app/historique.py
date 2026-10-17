@@ -158,12 +158,19 @@ def _journal_ecartees() -> Path:
     return JOURNAL_TRONQUEES.with_name("pages_ecartees.json")
 
 
-def pages_ecartees() -> dict:
+def journal_ecartees_mandataires() -> Path:
+    """La même mémoire, tenue à part pour les réseaux de mandataires : leurs
+    pages se comptent par milliers, et leur passage a son propre workflow.
+    Déplacée avec les autres journaux par les tests."""
+    return JOURNAL_TRONQUEES.with_name("pages_ecartees_mandataires.json")
+
+
+def pages_ecartees(chemin: Path | None = None) -> dict:
     """{adresse: {"jour": dernier constat, "motif": pourquoi}}. Absent ou
     illisible : rien à éviter — l'ancien comportement, jamais pire. La forme
     d'avant le 16 octobre 2026, la date seule, se lit comme une vente."""
     try:
-        brut = json.loads(_journal_ecartees().read_text(encoding="utf-8"))
+        brut = json.loads((chemin or _journal_ecartees()).read_text(encoding="utf-8"))
     except (OSError, ValueError, AttributeError):
         return {}
     journal: dict = {}
@@ -195,12 +202,12 @@ def oublier_motif(journal: dict, motif: str) -> int:
     return len(a_oublier)
 
 
-def noter_pages_ecartees(journal: dict, aujourd_hui: str) -> None:
+def noter_pages_ecartees(journal: dict, aujourd_hui: str, chemin: Path | None = None) -> None:
     """Écrit le journal, taillé : ce qui a dépassé le sursis en sort — la page
     sera relue, et un nouveau constat la remettra. Un journal indisponible
     n'arrête pas la collecte."""
     try:
-        chemin = _journal_ecartees()
+        chemin = chemin or _journal_ecartees()
         chemin.parent.mkdir(parents=True, exist_ok=True)
         chemin.write_text(json.dumps(_encore_sous_sursis(journal, aujourd_hui),
                                      ensure_ascii=False, indent=1, sort_keys=True) + "\n",

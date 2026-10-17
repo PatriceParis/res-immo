@@ -345,8 +345,14 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     etape("tentative_notee", reseau=cle, departements=len(groupes))
 
     vu = derniere_visite()
-    deja_vues = annonces_deja_connues()
-    etape("catalogue_relu", reseau=cle, connues=len(deja_vues))
+    # Les pages déjà OUVERTES, gardées ou non : sans les refusées, les mêmes
+    # pages revenaient en tête à chaque passage (voir
+    # mandataires.dates_de_derniere_visite).
+    aujourd_hui = date.today().isoformat()
+    journal_ecartees = historique.journal_ecartees_mandataires()
+    ecartees = historique.pages_ecartees(journal_ecartees)
+    deja_vues = mandataires.dates_de_derniere_visite(annonces_deja_connues(), ecartees)
+    etape("catalogue_relu", reseau=cle, connues=len(deja_vues), ecartees=len(ecartees))
     total = 0
     # `tronquees` est fourni par l'appelant et PARTAGÉ par tous les réseaux du
     # passage. Local à un réseau, il repartait vide au réseau suivant, dont la
@@ -382,6 +388,10 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             resultat, titre = enregistrer_une(conn, annonce, reseau,
                                               reaffectees)
             etat, _, motif = resultat.partition(":")
+            if etat != "garde":
+                # Ouverte et refusée : elle passe derrière celles qu'on n'a
+                # jamais ouvertes, au lieu de leur barrer la route.
+                ecartees[annonce["url"]] = {"jour": aujourd_hui, "motif": motif or etat}
             etats[etat] += 1
             if motif:
                 motifs[motif] += 1
@@ -391,6 +401,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
         gardes = etats["garde"]
         conn.commit()
         noter_visite(mandataires.cle_journal(cle, dept), date.today().isoformat())
+        historique.noter_pages_ecartees(ecartees, aujourd_hui, journal_ecartees)
         if tronquee:
             tronquees.add(historique.identite(
                 {"agence": mandataires.nom_d_agence(reseau, dept),

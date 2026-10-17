@@ -266,9 +266,34 @@ def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dic
 
     On sert donc d'abord ce qu'on ne connaît pas, puis ce qu'on a revu il y a
     le plus longtemps — la même règle que la rotation des agences, appliquée
-    un cran plus bas.
+    un cran plus bas. « Vue » veut dire OUVERTE, gardée ou non : voir
+    `dates_de_derniere_visite`.
     """
     return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""), a["url"]))
+
+
+def dates_de_derniere_visite(catalogue: dict, ecartees: dict) -> dict:
+    """{adresse: dernier jour où on l'a OUVERTE}, gardée ou refusée.
+
+    Le catalogue seul ne connaît que les pages gardées. Une page ouverte et
+    refusée — vendue, ou d'une autre région que son nom de commune trompait —
+    restait donc « jamais vue », et repassait en tête au passage suivant, par
+    ordre alphabétique d'adresse. Mesuré le 17 octobre 2026 en Côte-d'Or :
+    50 pages ouvertes, 2 gardées, 9 vendues, 39 « hors périmètre » — des
+    Beaulieu du Maine-et-Loire pris pour celui de Côte-d'Or. Les mêmes 48
+    pages revenaient à chaque passage, le département n'avançait que de deux
+    annonces, et les biens IAD du fichier s'arrêtaient partout à une
+    frontière alphabétique : « maison-vente-4-pieces-binges » en Côte-d'Or,
+    « 3-pieces-saint-maur » dans l'Indre. Une maison de campagne de cinq
+    pièces à Quemigny-sur-Seine, en ligne depuis le 13 août, n'aurait jamais
+    été atteinte. La plus récente des deux dates fait foi.
+    """
+    dates = dict(catalogue)
+    for url, constat in (ecartees or {}).items():
+        jour = (constat or {}).get("jour", "") if isinstance(constat, dict) else str(constat or "")
+        if jour > dates.get(url, ""):
+            dates[url] = jour
+    return dates
 
 
 def cle_journal(cle_reseau: str, departement: str) -> str:
