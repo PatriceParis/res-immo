@@ -2,554 +2,405 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "J.B. Immobilier",
-   "secondes": 59,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
+   "agence": "Le Havre Normandie immobilier",
+   "secondes": 244,
+   "pages": 36,
+   "gardes": 6,
+   "vendus": 29,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "temps de l'agence épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 13,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.jbimmobilier.fr/vente/1",
-     "titre": "Annonces immobilières | JB Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "JF Meyer",
-   "secondes": 61,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 32,
-   "sitemap": "ok 32",
-   "motifs": {
-    "titre_hors_cible:terrain constructible": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain constructible": {
-     "url": "https://jfmeyerimmobilier.com/vente/1-pompey/terrain-a-batir/541-exceptionnel-terrain-constructible-a-vendre-a-pompey",
-     "titre": "Exceptionnel terrain constructible à vendre à Pompey"
-    }
-   }
-  },
-  {
-   "agence": "Joubeaux Immobilier",
-   "secondes": 60,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 25,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
-   "motifs": {
-    "titre_hors_cible:49 biens": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:49 biens": {
-     "url": "https://www.joubeaux-immobilier.com/vente/1",
-     "titre": "49 biens immobiliers à vendre | Joubeaux Père et fils"
-    }
-   },
-   "vendus_dans_l_adresse": 1
-  },
-  {
-   "agence": "Jourdaine Aktion",
-   "secondes": 40,
-   "pages": 10,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 7,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap": "ok 10",
-   "motifs": {
-    "titre_hors_cible:appartement": 3,
-    "titre_hors_cible:vente d'immeubles": 2,
-    "titre_hors_cible:appartements": 2
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.jourdainneaktion.fr/nos-biens-a-la-vente-appartements-w1",
-     "titre": "Acheter un appartement à Rouen et aux alentours - Jourdainne Aktion"
-    },
-    "titre_hors_cible:vente d'immeubles": {
-     "url": "https://www.jourdainneaktion.fr/nos-biens-a-la-vente-immeubles-w1",
-     "titre": "Vente d'immeubles pour investissement Rouen - Jourdainne Aktion"
-    },
-    "titre_hors_cible:appartements": {
-     "url": "https://www.jourdainneaktion.fr/nos-biens-a-la-vente-w1",
-     "titre": "Vente biens immobiliers Rouen : Maisons, appartements, terrains... - Jourdainne Aktion"
-    }
-   }
-  },
-  {
-   "agence": "Julie Étienne Immobilier",
-   "secondes": 135,
-   "pages": 45,
-   "gardes": 2,
-   "vendus": 4,
-   "ecartes": 2,
-   "illisibles": 37,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 70",
+   "adresses_ecartees": 37,
+   "sitemap": "ok 101",
    "illisible_exemple": {
-    "url": "https://www.julieetienneimmobilier.fr/index.php/detail-annonce/?id=4",
+    "url": "https://www.lehavre-normandie-immobilier.fr/vente/maison-individuelle-1-piece-angerville-l-orcher-76280,VM780",
     "cause": "aucune annonce lue",
-    "titre": "Détails annonces - Julie Etienne Immobilier",
-    "octets": 58048
-   },
-   "motifs": {
-    "titre_hors_cible:appartement": 2
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.julieetienneimmobilier.fr/index.php/detail-annonce/?id=85",
-     "titre": "Appartement 3 pièces 70m2"
-    }
+    "titre": "À vendre - Maison individuelle, 1 pièce située à Angerville-l'Orcher (76280)",
+    "octets": 866228
    }
   },
   {
-   "agence": "L'Aribout Immobilier",
-   "secondes": 65,
-   "pages": 9,
+   "agence": "Le Mercier Immobilier",
+   "secondes": 66,
+   "pages": 13,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.laribout-immobilier.fr/vente/1",
-     "titre": "Annonces immobilières | L"
-    }
-   }
-  },
-  {
-   "agence": "L'Hôtel Immobilier",
-   "secondes": 80,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 9,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 26,
-   "sitemap": "ok 26",
-   "motifs": {
-    "titre_hors_cible:biens immobiliers": 1,
-    "titre_hors_cible:vente de maisons": 1,
-    "ni_surface_ni_prix_credible": 5,
-    "titre_hors_cible:investissement locatif": 1,
-    "titre_hors_cible:appartement": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:biens immobiliers": {
-     "url": "https://www.hotelimmobilier.fr/vente/1",
-     "titre": "Biens immobiliers à vendre en Lorraine | L"
-    },
-    "titre_hors_cible:vente de maisons": {
-     "url": "https://www.hotelimmobilier.fr/vente/maisons/1",
-     "titre": "Vente de maisons | L"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.hotelimmobilier.fr/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t1/1006-grand-f1-en-coeur-de-ville-en-second-corps/",
-     "titre": "Grand F1 en cœur de ville, en second-corps"
-    },
-    "titre_hors_cible:investissement locatif": {
-     "url": "https://www.hotelimmobilier.fr/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/973-f2-investissement-locatif-pepiniere/",
-     "titre": "F2 investissement locatif - pépinière"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.hotelimmobilier.fr/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t4/1004-bel-appartement-renove-avec-vue-residence-securisee/",
-     "titre": "Bel appartement rénové avec vue, résidence sécurisée"
-    }
-   }
-  },
-  {
-   "agence": "L'Immobilière Normande",
-   "secondes": 76,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 22,
-   "sitemap_dates": 130,
-   "sitemap": "ok 130"
-  },
-  {
-   "agence": "L'Immobilière du Loison",
-   "secondes": 14,
-   "pages": 3,
-   "gardes": 2,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3",
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.immobiliereduloison.com/vente/1",
-     "titre": "Annonces immobilières - Vente | L"
-    }
-   }
-  },
-  {
-   "agence": "L'immobilière Guignard",
-   "secondes": 93,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
+   "vendus": 2,
+   "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 65,
-   "sitemap": "ok 92"
-  },
-  {
-   "agence": "LH immo.com",
-   "secondes": 68,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 7,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 96,
-   "sitemap_dates": 69,
-   "sitemap": "ok 69",
+   "sitemap_dates": 111,
+   "sitemap": "ok 111",
    "motifs": {
-    "titre_hors_cible:appartement": 5,
-    "location": 2
+    "titre_hors_cible:biens a vendre": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:appartement": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lhimmo.com/annonce/hyper-centre-ville-appartement-t4/",
-     "titre": "HYPER CENTRE-VILLE – Appartement T4 avec parking - LH immo"
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.lemercier-immobilier.com/vente/1",
+     "titre": "Biens à vendre | Lemercier Immobilier"
     },
-    "location": {
-     "url": "https://www.lhimmo.com/annonce/rue-mazeline-t1-meuble-de-30-m2/",
-     "titre": "Rue Mazeline - T1 meublé de 30 m² - LH immo"
+    "prix_trop_haut": {
+     "url": "https://www.lemercier-immobilier.com/vente/307-soissons/maison/t9/12876-proche-soissons-maison-d-architecte-220m-avec-bois-4ha-et-etang-1ha/",
+     "titre": "PROCHE SOISSONS MAISON D"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lemercier-immobilier.com/vente/91-valenciennes/duplex/t5/13391-magnifique-appartement-duplex-en-plein-coeur-de-valenciennes/",
+     "titre": "Magnifique appartement duplex en plein cœur de Valenciennes"
     }
-   },
-   "illisible_exemple": {
-    "url": "https://www.lhimmo.com/iwp_type/maison/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison - LH immo",
-    "octets": 88607
    }
   },
   {
-   "agence": "LOR Immobilier",
-   "secondes": 102,
-   "pages": 10,
+   "agence": "Le Strat Caen Immo",
+   "secondes": 80,
+   "pages": 12,
    "gardes": 8,
    "vendus": 0,
    "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 83,
+   "sitemap_dates": 28,
+   "sitemap": "ok 28",
+   "illisible_exemple": {
+    "url": "https://www.caen-immo.fr/biens/place-de-parking-exterieur-60290394/",
+    "cause": "aucune annonce lue",
+    "titre": "Place de parking extérieur - Le Strat Immobilier",
+    "octets": 182035
+   },
+   "motifs": {
+    "titre_hors_cible:bureaux": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:bureaux": {
+     "url": "https://www.caen-immo.fr/biens/plateau-a-usage-de-bureaux-quartier-koening-bretteville-sur-odon-90-m2-59251567/",
+     "titre": "Plateau à usage de bureaux quartier Koening - Bretteville Sur Odon 90 m2"
+    }
+   }
+  },
+  {
+   "agence": "Lecoeur Immobilier",
+   "secondes": 18,
+   "pages": 8,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 7,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 8,
+   "sitemap": "ok 8",
+   "illisible_exemple": {
+    "url": "https://www.lecoeurtransactions.fr/annonces-divers",
+    "cause": "aucune annonce lue",
+    "titre": "Divers | LECOEUR IMMOBILIER",
+    "octets": 101745
+   }
+  },
+  {
+   "agence": "Leforestier Immobilier",
+   "secondes": 110,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 45,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 550,
+   "sitemap_dates": 708,
+   "sitemap": "ok 708"
+  },
+  {
+   "agence": "Lelièvre immobilier",
+   "secondes": 76,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 287,
+   "sitemap_dates": 110,
+   "sitemap": "ok 110",
+   "motifs": {
+    "prix_trop_haut": 4,
+    "titre_hors_cible:parking": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
+     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.lelievre-immobilier.com/vente/stationnement-paris-ref-62255",
+     "titre": "Vente - parking/box Paris| Lelièvre Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Lemaistre Immobilier Yvetot",
+   "secondes": 82,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 6,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 24",
+   "adresses_ecartees": 6,
+   "sitemap": "ok 436",
    "motifs": {
-    "titre_hors_cible:maison neuve": 1
+    "page_catalogue": 1,
+    "titre_hors_cible:appartement": 3,
+    "ni_surface_ni_prix_credible": 1,
+    "titre_hors_cible:local commercial": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:maison neuve": {
-     "url": "https://www.lorimmobilier.fr/vente/vente-maison-bicqueley,VM276",
-     "titre": "Maison neuve"
+    "page_catalogue": {
+     "url": "https://www.lemaistre-immo.fr/fr/vente-maison-villa.htm",
+     "titre": "Découvrez toutes les ventes de maisons sur Le Havre et sa périphérie"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-le-havre-76600/61640956.htm",
+     "titre": "vente achat Appartement LE HAVRE 76600"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-goderville-76110/60210353.htm",
+     "titre": "vente achat Terrain GODERVILLE 76110"
+    },
+    "titre_hors_cible:local commercial": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/local-commercial-le-havre-76600/61642542.htm",
+     "titre": "vente achat Local Commercial LE HAVRE 76600"
     }
    },
    "illisible_exemple": {
-    "url": "https://www.lorimmobilier.fr/vente/vente-maison-ansauville,LM288",
+    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
     "cause": "aucune annonce lue",
-    "titre": "404 - Page introuvable",
-    "octets": 47717
+    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
+    "octets": 47327
    }
   },
   {
-   "agence": "La Bonne Adresse",
-   "secondes": 58,
-   "pages": 10,
+   "agence": "Les Artisans 2 l'immobilier",
+   "secondes": 71,
+   "pages": 16,
    "gardes": 8,
+   "vendus": 6,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 33",
+   "motifs": {
+    "page_catalogue": 2
+   },
+   "ecartes_exemples": {
+    "page_catalogue": {
+     "url": "https://www.artisans-immobilier.com/maison-a-vendre-Roz%C3%A9rieulles.htm",
+     "titre": "Maison à vendre Rozérieulles - LES ARTISANS DE L'IMMOBILIER, Agence immobilière à Metz"
+    }
+   }
+  },
+  {
+   "agence": "Les Clés de la Suisse Normande",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Les Clés du Littoral",
+   "secondes": 101,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 24,
+   "sitemap": "ok 51",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
+     "titre": "Propriété de caractère à 100mètres de la mer"
+    }
+   }
+  },
+  {
+   "agence": "Les nouvelles pépites",
+   "secondes": 244,
+   "pages": 40,
+   "gardes": 0,
+   "vendus": 40,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 82,
+   "sitemap": "ok 167"
+  },
+  {
+   "agence": "Loft & House",
+   "secondes": 36,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "illisible_exemple": {
+    "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-129-m2-bieville-beuville-61595756/",
+    "cause": "aucune annonce lue",
+    "titre": "Page non trouvée - Loft&nbsp;&amp;&nbsp;House",
+    "octets": 51544
+   },
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-10-pieces-376-m2-bieville-beuville-61547115/",
+     "titre": "Maison de 10 pièces de 376 m² à BIEVILLE BEUVILLE - Loft & House"
+    }
+   }
+  },
+  {
+   "agence": "Angélot Immo",
+   "secondes": 11,
+   "pages": 3,
+   "gardes": 1,
    "vendus": 0,
    "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 33,
-   "sitemap": "ok 33",
+   "adresses_ecartees": 9,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
    "motifs": {
-    "titre_hors_cible:37 annonces": 1,
+    "titre_hors_cible:7 annonces": 1,
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:37 annonces": {
-     "url": "https://www.labonneadresseimmo.fr/vente/1",
-     "titre": "37 annonces de ventes immobilières"
+    "titre_hors_cible:7 annonces": {
+     "url": "https://www.angelot-immo.fr/vente/1",
+     "titre": "7 Annonces de ventes immobilières"
     },
     "prix_trop_haut": {
-     "url": "https://www.labonneadresseimmo.fr/vente/143-barneville-carteret/maison/t9/739-propriete-de-prestige-au-coeur-de-carteret-prestige/",
-     "titre": "PROPRIÉTÉ DE PRESTIGE AU CŒUR DE CARTERET"
+     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
+     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
     }
    }
   },
   {
-   "agence": "La Cif",
-   "secondes": 61,
-   "pages": 21,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 8,
-   "illisibles": 6,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 36,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "illisible_exemple": {
-    "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre-1/soyez-recompense-en-parrainant-vos-amis-ou-votre-famille-copie",
-    "cause": "aucune annonce lue",
-    "titre": "Parrainer avec CIF Normandie, c'est simple et rapide !",
-    "octets": 92306
-   },
-   "motifs": {
-    "titre_hors_cible:pourquoi choisir": 2,
-    "titre_hors_cible:maison neuve": 5,
-    "titre_hors_cible:appartement": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:pourquoi choisir": {
-     "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre",
-     "titre": "Pourquoi choisir CIF Normandie pour mettre en vente son logement"
-    },
-    "titre_hors_cible:maison neuve": {
-     "url": "https://www.groupecif-normandie.com/maison/vente-neuf-havre-maison-t4-cif-normandie",
-     "titre": "Vente maison neuve T4, Le Havre - Groupe PFN"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre-1",
-     "titre": "Pourquoi confier la vente de votre appartement ou maison au Havre à CIF Normandie ?"
-    }
-   }
-  },
-  {
-   "agence": "La Petite Agence.com",
-   "secondes": 75,
-   "pages": 17,
+   "agence": "Année Hoinville",
+   "secondes": 217,
+   "pages": 31,
    "gardes": 8,
-   "vendus": 4,
-   "ecartes": 5,
+   "vendus": 14,
+   "ecartes": 9,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap_dates": 96,
-   "sitemap": "ok 96",
+   "adresses_ecartees": 97,
+   "sitemap": "ok 80",
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "prix_trop_haut": 4
+    "prix_trop_haut": 9
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.lapetite-agence.com/vente/1",
-     "titre": "Annonces immobilières | LA PETITE AGENCE"
-    },
     "prix_trop_haut": {
-     "url": "https://www.lapetite-agence.com/vente/126-premilhat/maison/8159-pavillon-de-plain-pied",
-     "titre": "PAVILLON DE PLAIN-PIED"
+     "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
+     "titre": "MAISON TROUVILLE"
     }
    }
   },
   {
-   "agence": "La Vaux Immobilier",
-   "secondes": 122,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 16,
-   "sitemap_dates": 64,
-   "sitemap": "ok 66",
-   "motifs": {
-    "titre_hors_cible:terrain constructible": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain constructible": {
-     "url": "https://lavauximmobilier.com/bien/pierreville-secteur-pulligny-xeuilley-a-20-mn-de-nancy-terrain-constructible-970-m%c2%b2/",
-     "titre": "PIERREVILLE, secteur PULLIGNY-XEUILLEY, à 20 mn de NANCY : terrain constructible 970 m²"
-    }
-   }
-  },
-  {
-   "agence": "La Voile Immobilier",
-   "secondes": 150,
-   "pages": 18,
+   "agence": "Antony Vesque Immobilier",
+   "secondes": 67,
+   "pages": 8,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 10,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 33,
-   "sitemap": "ok 28",
-   "motifs": {
-    "prix_trop_haut": 8,
-    "titre_hors_cible:loft": 1,
-    "titre_hors_cible:local commercial": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lavoileimmobilier.fr/vente/maison-individuelle-10-pieces-caen-14000,VM290",
-     "titre": "QUARTIER HASTINGS"
-    },
-    "titre_hors_cible:loft": {
-     "url": "https://www.lavoileimmobilier.fr/vente/maison-plain-pied-8-pieces-caen-14000,VM585",
-     "titre": "LOFT CAEN PRAIRIE"
-    },
-    "titre_hors_cible:local commercial": {
-     "url": "https://www.lavoileimmobilier.fr/vente/immobilier-pro-local-commercial-186-m2-caen-14000,VP068",
-     "titre": "Local commercial à vendre, 186 m² - Caen 14000"
-    }
-   }
+   "adresses_ecartees": 14,
+   "sitemap_dates": 60,
+   "sitemap": "ok 69"
   },
   {
-   "agence": "Lacomblez Immobilier",
-   "secondes": 132,
-   "pages": 45,
+   "agence": "Arsenal Immobilier",
+   "secondes": 159,
+   "pages": 26,
+   "gardes": 4,
+   "vendus": 22,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 92,
+   "sitemap": "ok 64",
+   "deja_ecartees": 38
+  },
+  {
+   "agence": "ArthurImmo.com Agence Saint-Hubert",
+   "secondes": 47,
+   "pages": 6,
    "gardes": 6,
-   "vendus": 13,
-   "ecartes": 26,
+   "vendus": 0,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 108,
-   "sitemap_dates": 57,
-   "sitemap": "ok 57",
-   "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "prix_trop_haut": 20,
-    "titre_hors_cible:appartement": 2,
-    "titre_hors_cible:parking": 1,
-    "titre_hors_cible:studio": 1,
-    "titre_hors_cible:loft": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1",
-     "titre": "Annonces immobilières | Lacomblez Immobilier"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/maison/485-lille-bois-blancs-maison-coup-de-coeur",
-     "titre": "Lille Bois-Blancs – Maison Coup de cœur !"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/propriete/685-lille-montebello-incroyable-appartement-de-217-m-style-loft-a-saisir-prestige",
-     "titre": "Lille Montebello - Incroyable appartement de 217 m² style loft a saisir !"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/duplex/607-lille-wazemmes-t5-duplex-avec-terrasse-garage-parking",
-     "titre": "LILLE - WAZEMMES | T5 DUPLEX AVEC TERRASSE, GARAGE & PARKING"
-    },
-    "titre_hors_cible:studio": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/maison/603-lille-wazemmes-maison-studio",
-     "titre": "Lille Wazemmes-Maison+Studio !"
-    },
-    "titre_hors_cible:loft": {
-     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/propriete/482-lille-vauban-prox-rue-nationale-magnifique-loft-de-302-m-avec-terrasses-et-garage-prestige",
-     "titre": "LILLE Vauban/Prox Rue Nationale - Magnifique Loft de 302 m² avec Terrasses et garage !"
-    }
-   }
+   "adresses_ecartees": 18,
+   "sitemap_dates": 8,
+   "sitemap": "ok 8"
   },
   {
-   "agence": "Landimmo Normandie",
-   "secondes": 233,
-   "pages": 33,
-   "gardes": 5,
-   "vendus": 25,
-   "ecartes": 3,
+   "agence": "Arthurimmo",
+   "secondes": 52,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 10,
-   "sitemap": "ok 78",
-   "motifs": {
-    "prix_trop_haut": 2,
-    "titre_hors_cible:appartements": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.landimmonormandie.fr/vente/maison-chateau-10-pieces-vienne-en-bessin-14400,VM284",
-     "titre": "FERME MANOIR 15ème siècle et ses dépendances...."
-    },
-    "titre_hors_cible:appartements": {
-     "url": "https://www.landimmonormandie.fr/vente/maison-8-pieces-asnelles-14960,VM340",
-     "titre": "APPARTEMENTS + ENTREPOT- BAISSE DE PRIX !"
-    }
-   }
+   "adresses_ecartees": 7,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47"
   }
  ]
 }
