@@ -298,6 +298,19 @@ def est_vendu(a: dict) -> bool:
 _REFERENCE = re.compile(r"r[ée]f[ée]?r?e?n?c?e?\.?\s*:?\s*(\d{3,6})", re.IGNORECASE)
 REFERENCES_MAXI = 2
 
+# Sauf quand l'adresse désigne elle-même UN bien : sa surface ET un nombre à
+# cinq chiffres — code postal ou identifiant — dans le libellé, comme
+# « vente-maison-111m-hornoy-le-bourg-80640-2024-10-350p ». Sondé le 17 octobre
+# 2026 chez Demonchy : vingt maisons refusées comme catalogues à chaque visite,
+# alors que la page est la fiche d'un seul bien — son prix, son DPE, son bouton
+# « Partager » — qui cite en marge les références de biens voisins. Une page
+# de catalogue ne porte pas dans son adresse la surface d'une maison : ni les
+# pages de Saint-Joseph et de Lemaistre, seules listes connues, ni aucune des
+# vingt-cinq adresses de cette forme au fichier, dont aucune n'était marquée.
+_URL_D_UN_BIEN = re.compile(
+    r"(?:^|[-_])\d{2,4}m2?[-_](?:.*[-_])?\d{5}(?:[-_]|$)"
+    r"|(?:^|[-_])\d{5}[-_](?:.*[-_])?\d{2,4}m2?(?:[-_]|$)", re.IGNORECASE)
+
 
 def enumere_plusieurs_biens(a: dict) -> bool:
     """Vrai si le texte de la page cite plus de références qu'un bien n'en a.
@@ -306,8 +319,12 @@ def enumere_plusieurs_biens(a: dict) -> bool:
     Au chargement du fichier publié, qui ne porte plus le texte, on s'en remet
     au constat que l'export a fait sur cette même page (`plusieurs_biens`) —
     sans quoi une page catalogue écartée hier reviendrait demain, le filtre
-    n'ayant plus rien à lire.
+    n'ayant plus rien à lire. Une adresse qui désigne un seul bien (voir
+    `_URL_D_UN_BIEN`) n'est jamais un catalogue, quoi qu'elle cite.
     """
+    libelle = urlparse(a.get("url") or "").path.rstrip("/").rsplit("/", 1)[-1]
+    if _URL_D_UN_BIEN.search(libelle):
+        return False
     texte = a.get("texte")
     if texte:
         return len(set(_REFERENCE.findall(texte))) > REFERENCES_MAXI

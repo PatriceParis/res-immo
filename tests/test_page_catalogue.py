@@ -17,8 +17,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from app.qualite import (REFERENCES_MAXI, enumere_plusieurs_biens,  # noqa: E402
-                         est_bien_valide)
+from app.qualite import (_REFERENCE, REFERENCES_MAXI,  # noqa: E402
+                         enumere_plusieurs_biens, est_bien_valide)
 
 # Le texte réellement collecté, raccourci — c'est lui qui a produit le fantôme.
 CATALOGUE = (
@@ -94,3 +94,48 @@ def test_la_meme_reference_repetee_ne_compte_qu_une_fois():
     fiche = _fiche("Référence 7196. … Réf. 7196 … référence 7196",
                    titre="Maison ancienne à Doudeville")
     assert not enumere_plusieurs_biens(fiche)
+
+
+# Le texte d'une fiche Demonchy, raccourci : un bien, et ses voisins en marge.
+FICHE_AVEC_VOISINES = (
+    "La Solution Immo Maison à Clairy Saulchoix 415.000 € Partager sur les réseaux: "
+    "Consommation énergétiques : 260 kwh/m² an Emission de gaz à effet de serre : "
+    "53 kg C02/m² an Réf. 2026-02-258P Biens similaires Maison à Poix-de-Picardie "
+    "Réf. 974 Maison à Aumale Réf. 975 Maison à Hornoy-le-Bourg Réf. 20226"
+)
+
+
+def test_la_fiche_d_un_bien_qui_cite_ses_voisines_n_est_pas_un_catalogue():
+    """Sondé le 17 octobre 2026 chez Demonchy, à Amiens : vingt maisons par
+    visite refusées comme catalogues, chacune sous une adresse qui porte sa
+    surface, sa commune, son code postal et sa référence — « vente-maison-
+    111m-hornoy-le-bourg-80640-2024-10-350p ». La page est celle d'un seul
+    bien : son prix, son DPE, son bouton « Partager ». Elle cite en marge les
+    références de biens voisins, et la règle les comptait comme les cartes
+    d'un catalogue."""
+    assert len(set(_REFERENCE.findall(FICHE_AVEC_VOISINES))) > REFERENCES_MAXI, \
+        "le texte cite bien plus de références que le seuil"
+    fiche = _fiche(FICHE_AVEC_VOISINES, titre="Vente-Maison-Amiens-258P | DEMONCHY IMMOBILIER",
+                   prix=415000, surface_m2=207.0,
+                   url="https://www.agence-demonchy.fr/annonce-immobilier/vente-maison-207m-amiens-80000/")
+    assert not enumere_plusieurs_biens(fiche)
+    assert est_bien_valide(fiche)
+    for url in ("https://www.agence-demonchy.fr/annonce-immobilier/"
+                "vente-maison-111m-hornoy-le-bourg-80640-2024-10-350p/",
+                "https://www.agence.fr/vente/80640-hornoy/maison-111m2-jardin-80640"):
+        assert not enumere_plusieurs_biens(_fiche(FICHE_AVEC_VOISINES, url=url)), url
+
+
+def test_sans_surface_ni_code_dans_l_adresse_la_regle_d_avant_tient():
+    """L'exception ne vaut que pour une adresse qui désigne un bien. Le même
+    texte sous une adresse de liste, ou le catalogue de Saint-Joseph sous une
+    adresse de fiche sans surface, restent des catalogues : une annonce
+    fantôme coûte plus cher qu'une maison manquée."""
+    for url in ("https://www.agence-demonchy.fr/nos-biens/",
+                "https://www.agence-demonchy.fr/annonce-immobilier/vente-maison-amiens-80000/",
+                "https://lemaistre-immo.fr/fr/vente-maison-villa.htm"):
+        assert enumere_plusieurs_biens(_fiche(FICHE_AVEC_VOISINES, url=url)), url
+    assert enumere_plusieurs_biens(_fiche(CATALOGUE))
+    # Le constat de l'export, sans texte, tient aussi hors de l'exception.
+    assert enumere_plusieurs_biens({"plusieurs_biens": True,
+                                    "url": "https://lemaistre-immo.fr/fr/vente-maison-villa.htm"})
