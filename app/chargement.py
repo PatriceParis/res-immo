@@ -8,6 +8,7 @@ plus proche, puis calcul du score de résilience.
 
 from __future__ import annotations
 
+import html
 import json
 import re
 from pathlib import Path
@@ -27,6 +28,13 @@ def preparer_annonce(brut: dict) -> dict:
     # captée dans le texte d'une page n'a rien à faire dans notre base, et
     # encore moins dans un dépôt public (voir app/caviardage.py).
     annonce = caviardage.caviarder_annonce(brut)
+    # Des gabarits laissent leurs entités HTML dans le texte : « dépendances
+    # &#8211; Portes de Bayeux ». Le site échappe tout ce qu'il affiche, et
+    # « &#8211; » s'y lisait en toutes lettres — trente-quatre titres servis
+    # le 18 octobre 2026, chez ACI et Angledroit.immo surtout.
+    for champ in ("titre", "description"):
+        if "&" in (annonce.get(champ) or ""):
+            annonce[champ] = html.unescape(annonce[champ])
     titre = annonce.get("titre", "")
     description = annonce.get("description", "")
 
