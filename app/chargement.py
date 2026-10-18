@@ -9,6 +9,7 @@ plus proche, puis calcul du score de résilience.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -213,6 +214,91 @@ def _signatures_suspectes(annonces: list[dict], seuil: int = 3) -> set:
 # c'est une galerie, et un réseau qui numérote ses fichiers.
 PHOTOS_POUR_UNE_GALERIE = 4
 
+# Deux annonces d'une même agence qui se partagent l'essentiel de leurs photos,
+# et ne les partagent avec personne d'autre, ne se prêtent pas du mobilier :
+# c'est le même bien, publié deux fois. Mesuré le 18 octobre 2026 : 86 paires
+# de ce genre au fichier, et 37 biens servis deux fois — ancien et nouveau
+# format d'adresse, avec ou sans « www », version française et anglaise, titre
+# retouché (« 4 chambres » devenu « 5 chambres »). En dessous de ces seuils
+# apparaissent des biens distincts qu'une rangée de vignettes rapproche.
+GALERIE_PARTAGEE_MIN = 5
+GALERIE_PARTAGEE_PART = 0.8
+
+
+def _galeries_partagees(annonces: list[dict]) -> list[tuple[dict, dict]]:
+    """Les paires d'annonces d'une même agence qui se partagent leur galerie.
+
+    Seules comptent les images qu'aucune troisième annonce ne porte : le logo
+    que tout le site affiche ne rapproche personne. Une paire se partage sa
+    galerie quand ces images communes sont au moins cinq et forment au moins
+    les quatre cinquièmes de la plus petite des deux galeries.
+    """
+    porteurs: dict = {}
+    for a in annonces:
+        agence = a.get("agence")
+        if agence:
+            for photo in dict.fromkeys(_candidates(a)):
+                porteurs.setdefault((agence, photo), []).append(a)
+    propres: dict = {}
+    communes: dict = {}
+    for qui in porteurs.values():
+        if len(qui) > 2:
+            continue
+        for a in qui:
+            propres[id(a)] = propres.get(id(a), 0) + 1
+        if len(qui) == 2:
+            x, y = sorted(qui, key=id)
+            n, _ = communes.get((id(x), id(y)), (0, None))
+            communes[(id(x), id(y))] = (n + 1, (x, y))
+    return [paire for (ix, iy), (n, paire) in communes.items()
+            if n >= GALERIE_PARTAGEE_MIN
+            and n >= GALERIE_PARTAGEE_PART * min(propres[ix], propres[iy])]
+
+
+def _groupes(paires: list[tuple[dict, dict]]) -> dict:
+    """id(annonce) → une clé commune à toutes les annonces que des paires relient."""
+    parent: dict = {}
+
+    def racine(i: int) -> int:
+        while parent.get(i, i) != i:
+            i = parent[i]
+        return i
+
+    for x, y in paires:
+        rx, ry = racine(id(x)), racine(id(y))
+        if rx != ry:
+            parent[max(rx, ry)] = min(rx, ry)
+    return {id(a): racine(id(a)) for paire in paires for a in paire}
+
+
+# Les références d'un bien dans son adresse : trois ou quatre chiffres, ou six
+# et plus. Cinq chiffres, c'est d'abord un code postal — que deux maisons du
+# même village ont en commun.
+_REFERENCE = re.compile(r"(?<!\d)(?:[1-9]\d{2,3}|[1-9]\d{5,})(?!\d)")
+
+
+def _references(url: str) -> set:
+    morceaux = urlparse(url or "")
+    return set(_REFERENCE.findall(f"{morceaux.path} {morceaux.query}"))
+
+
+def _chemin(url: str) -> str:
+    morceaux = urlparse(url or "")
+    return f"{morceaux.path.rstrip('/')}?{morceaux.query}".lower()
+
+
+def _meme_bien(x: dict, y: dict) -> bool:
+    """Une galerie partagée ne suffit pas à fondre deux annonces en une.
+
+    Hamaris vend deux maisons du même programme, un type 3 et un type 4, sous
+    les mêmes cinq photos : deux biens, que rien ne doit fondre. Il faut en plus
+    que les deux adresses portent la même référence — « 752 » à l'ancien et au
+    nouveau format de Maison Ancienne du Bessin, « r2102420 » chez IAD — ou
+    soient la même page, avec et sans « www » (Aude Immo 18).
+    """
+    return (_chemin(x.get("url")) == _chemin(y.get("url"))
+            or bool(_references(x.get("url")) & _references(y.get("url"))))
+
 
 def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
     """Repère les images qui reviennent d'une annonce à l'autre chez une agence.
@@ -238,21 +324,31 @@ def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
       servent le mobilier relativement à chaque annonce (`…/1942/img/bell.png`,
       `…/1988/img/bell.png`). Trois, et non deux, parce que deux photos
       réelles peuvent honnêtement s'appeler chacune `FACADE-PRINCIPALE.jpg`.
+
+    Deux annonces qui se partagent leur galerie comptent pour UNE : c'est le
+    même bien sous deux adresses (voir `_galeries_partagees`). Les compter
+    pour deux faisait de chaque photo du bien un « mobilier », et les deux
+    exemplaires perdaient leur galerie — chez Maison Ancienne du Bessin, le
+    18 octobre 2026, cinq maisons servies deux fois : sans photo sous leur
+    nouvelle adresse, avec celle d'une voisine sous l'ancienne — la vignette
+    du bandeau « bien suivant », seule image qui ne fût pas en double.
     """
+    groupe = _groupes(_galeries_partagees(annonces))
     par_url: dict = {}
     par_nom: dict = {}
     for a in annonces:
         agence = a.get("agence")
         if not agence:
             continue
+        cle = groupe.get(id(a), id(a))
         # On compte les ANNONCES où l'image apparaît, pas ses occurrences :
         # une galerie propose la même photo en plusieurs tailles, ce qui ne
         # dit rien sur son caractère décoratif.
         for photo in dict.fromkeys(_candidates(a)):
-            par_url.setdefault((agence, photo), set()).add(id(a))
+            par_url.setdefault((agence, photo), set()).add(cle)
             nom = _nom_de_fichier(photo)
             if nom:
-                par_nom.setdefault((agence, nom), set()).add(id(a))
+                par_nom.setdefault((agence, nom), set()).add(cle)
 
     mobilier = set()
     for (_, photo), annonces_vues in par_url.items():
@@ -343,6 +439,7 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     """Applique tous les filtres de qualité et de périmètre, sans écrire."""
     suspectes = _signatures_suspectes(annonces)
     mobilier = _photos_de_mobilier(annonces)
+    meme_bien = _groupes([p for p in _galeries_partagees(annonces) if _meme_bien(*p)])
     # Les agences qui ont demandé leur retrait (data/agences_exclues.json) ne
     # sont plus servies — même si leurs biens figurent encore dans un fichier
     # exporté avant la demande. L'export les retirera ; le site, lui, n'attend
@@ -350,6 +447,7 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     exclus = exclusions.domaines_exclus()
     retenues = []
     for brut in annonces:
+        bien = meme_bien.get(id(brut), id(brut))
         if exclus and exclusions.est_exclu(exclusions.site_du_bien(brut), exclus):
             continue  # retrait demandé par l'agence
         retenue = photo_retenue(brut, mobilier)
@@ -376,8 +474,30 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
             continue
         if str(dept) not in DEPARTEMENTS_CIBLES:
             continue  # hors des terroirs ciblés (souvent une réf. lue comme un CP)
-        retenues.append(annonce)
-    return retenues
+        retenues.append((bien, annonce))
+    return _un_exemplaire_par_bien(retenues)
+
+
+def _un_exemplaire_par_bien(retenues: list[tuple[int, dict]]) -> list[dict]:
+    """Un bien publié sous deux adresses n'est servi qu'une fois.
+
+    On garde l'exemplaire revu le plus récemment : l'autre est l'ancienne
+    adresse, celle que l'agence ne publie plus. Le tri se fait APRÈS les
+    filtres, pour qu'un exemplaire écarté — la version anglaise d'une page —
+    ne fasse pas disparaître celui qui aurait été servi.
+    """
+    meilleur: dict = {}
+    for bien, annonce in retenues:
+        actuel = meilleur.get(bien)
+        if actuel is None or _fraicheur(annonce) > _fraicheur(actuel):
+            meilleur[bien] = annonce
+    gardes = {id(a) for a in meilleur.values()}
+    return [annonce for _, annonce in retenues if id(annonce) in gardes]
+
+
+def _fraicheur(annonce: dict) -> tuple:
+    return (annonce.get("revue_le") or "", annonce.get("vue_le") or "",
+            annonce.get("url") or "")
 
 
 def biens_servis(annonces: list[dict]) -> list[dict]:
@@ -385,8 +505,9 @@ def biens_servis(annonces: list[dict]) -> list[dict]:
 
     Le fichier d'export n'est pas le catalogue : il compte trois cents entrées
     de plus que le site n'en sert — pages de catalogue, départements hors
-    terroir, doublons de bandeau. Tout contrôle qui les confond surestime le
-    catalogue ou signale des défauts que personne ne voit.
+    terroir, doublons de bandeau, biens publiés sous deux adresses. Tout
+    contrôle qui les confond surestime le catalogue ou signale des défauts que
+    personne ne voit.
 
     On rejoue donc les vrais filtres, plutôt que d'en réécrire une copie
     ailleurs : une copie finirait par diverger, et c'est précisément une
