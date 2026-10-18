@@ -1,117 +1,33 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "Agence Albert 1er",
-   "secondes": 99,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 3,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 148,
-   "sitemap": "ok 108",
-   "deja_ecartees": 38
-  },
-  {
-   "agence": "Agence Armance Immobilier",
-   "secondes": 61,
-   "pages": 7,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Armance immobilier",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Agence Blancoise",
-   "secondes": 69,
-   "pages": 9,
+   "agence": "Century 21",
+   "secondes": 112,
+   "pages": 34,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.agenceblancoise.com/biens-vendus/1",
-    "cause": "aucune annonce lue",
-    "titre": "Biens vendus | Agence Blancoise",
-    "octets": 169007
-   }
-  },
-  {
-   "agence": "Agence Boilot",
-   "secondes": 26,
-   "pages": 11,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 11,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Agence immobilière à Château-Thierry 02 : vente et location ",
-   "illisible_exemple": {
-    "url": "https://www.agence-boilot.net/vente-maison-viffort.php",
-    "cause": "aucune annonce lue",
-    "titre": "Vente de maison à Viffort, dans l’Aisne (02)&nbsp;: AGENCE BOILOT",
-    "octets": 33293
-   }
-  },
-  {
-   "agence": "Agence Creil Immo",
-   "secondes": 34,
-   "pages": 14,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 14,
+   "ecartes": 26,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 6,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 72,
+   "sitemap": "ok 73",
    "motifs": {
-    "titre_hors_cible:biens immobiliers": 1,
-    "prix_trop_haut": 8,
-    "ni_surface_ni_prix_credible": 5
+    "titre_hors_cible:appartement": 26
    },
    "ecartes_exemples": {
-    "titre_hors_cible:biens immobiliers": {
-     "url": "https://www.creilimmo.fr/vente/1",
-     "titre": "Biens immobiliers à vendre | Creil IMMO"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.creilimmo.fr/vente/60-oise/11-nogent-sur-oise/1-maison/t6/558-pavillon-independant-f6/",
-     "titre": "PAVILLON INDEPENDANT F6"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.creilimmo.fr/vente/60-oise/209-cramoisy/2-appartement/t5/555-exclusif-apt-f5-duplex-dans-corps-de-ferme-renove/",
-     "titre": "EXCLUSIF APT F5 DUPLEX DANS CORPS DE FERME RENOVE"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-po-st-max.com/trouver_logement/detail/15630057783/",
+     "titre": "Appartement à vendre - 3 pièces - 68.03 m2 - NANCY - 54 - LORRAINE - Century 21 Les Portes D"
     }
    }
   },
   {
-   "agence": "Agence Du Centre",
-   "secondes": 72,
+   "agence": "Century 21",
+   "secondes": 71,
    "pages": 10,
    "gardes": 8,
    "vendus": 0,
@@ -120,42 +36,60 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 53,
-   "sitemap_dates": 50,
-   "sitemap": "ok 50",
-   "deja_ecartees": 3,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 30,
+   "sitemap": "ok 30",
    "motifs": {
-    "titre_hors_cible:47 biens": 1,
-    "prix_trop_haut": 1
+    "titre_hors_cible:terrain": 1,
+    "titre_hors_cible:appartement": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:47 biens": {
-     "url": "https://www.agenceducentre.net/vente/1",
-     "titre": "47 biens immobiliers à vendre | Agence du Centre"
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21-agence-albert.com/trouver_logement/detail/10891686974/",
+     "titre": "terrain à vendre - 548.0 m2 - ALBERT - 80 - PICARDIE - Century 21 Agence Albert"
     },
-    "prix_trop_haut": {
-     "url": "https://www.agenceducentre.net/vente/1-fecamp/maison/5929-villa-avec-terrasse-jardin-dependance-et-garage-en-vente-a-fecamp-prestige",
-     "titre": "Maison 11pièce(s) 4chambre(s) 370 m² Fécamp (76400)"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-agence-albert.com/trouver_logement/detail/16935332606/",
+     "titre": "Appartement F2 à vendre - 2 pièces - 43.47 m2 - ALBERT - 80 - PICARDIE - Century 21 Agence Albert"
     }
    }
   },
   {
-   "agence": "Agence Greub",
-   "secondes": 94,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap": "ok 10"
-  },
-  {
-   "agence": "Agence Immobilière Océane Cric",
+   "agence": "Century 21",
    "secondes": 95,
+   "pages": 20,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 12,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 20,
+   "sitemap": "ok 20",
+   "motifs": {
+    "titre_hors_cible:appartement": 9,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:terrain": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/17042239890/",
+     "titre": "Appartement F3 à vendre - 3 pièces - 52.27 m2 - HONFLEUR - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/13080497186/",
+     "titre": "maison à vendre - 5 pièces - 133.0 m2 - DEAUVILLE - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
+    },
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/15445583637/",
+     "titre": "terrain à vendre - 2655.0 m2 - HONFLEUR - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 62,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -164,419 +98,441 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 64,
-   "sitemap": "ok 27"
+   "adresses_ecartees": 9,
+   "sitemap_dates": 42,
+   "sitemap": "ok 43"
   },
   {
-   "agence": "Agence Joly",
-   "secondes": 9,
-   "pages": 3,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 4,
-   "sitemap": "ok 4",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.agence-joly.com/biens-a-vendre-epron.html",
-    "cause": "aucune annonce lue",
-    "titre": "Biens à vendre à Épron : maisons et appartements avec Agence JOLY",
-    "octets": 224994
-   }
-  },
-  {
-   "agence": "Agence Mosellane Immobilière",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": ""
-  },
-  {
-   "agence": "Agence Olleon",
-   "secondes": 2,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Agence Saint-Joseph",
-   "secondes": 102,
-   "pages": 9,
+   "agence": "Century 21",
+   "secondes": 64,
+   "pages": 10,
    "gardes": 8,
-   "vendus": 1,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap": "ok 136"
-  },
-  {
-   "agence": "Cap Immobilier",
-   "secondes": 72,
-   "pages": 6,
-   "gardes": 6,
    "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap": "ok 22",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Carrara Immobilier",
-   "secondes": 62,
-   "pages": 11,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 21,
-   "sitemap_dates": 11,
-   "sitemap": "ok 11",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 37,
+   "sitemap": "ok 37",
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "titre_hors_cible:parkings": 1,
-    "prix_trop_haut": 3
+    "titre_hors_cible:appartement": 2
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.carrara.immo/vente/1",
-     "titre": "Annonces immobilières | Carrara Immobilier"
-    },
-    "titre_hors_cible:parkings": {
-     "url": "https://www.carrara.immo/vente-garage-parking/1",
-     "titre": "Vente de garages et parkings | Carrara Immobilier"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.carrara.immo/vente/40-vaux/propriete/10067-vaux-maison-d-exeption",
-     "titre": "Vaux - MAISON D’EXEPTION"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-guyon-epinal.com/trouver_logement/detail/16965272178/",
+     "titre": "Appartement F3 à vendre - 3 pièces - 57.34 m2 - EPINAL - 88 - LORRAINE - Century 21 Guyon Immobilier"
     }
    }
   },
   {
-   "agence": "Casa",
-   "secondes": 87,
-   "pages": 9,
+   "agence": "Champanelle Immobilier",
+   "secondes": 75,
+   "pages": 10,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 1,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 10,
-   "sitemap_dates": 391,
-   "sitemap": "ok 391",
+   "sitemap_dates": 19,
+   "sitemap": "ok 19",
    "motifs": {
-    "prix_trop_haut": 1
+    "titre_hors_cible:16 annonces": 1,
+    "titre_hors_cible:terrain a batir": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.immo-casa.fr/acheter-un-bien/maison/",
-     "titre": "Archives des Maison"
-    }
-   }
-  },
-  {
-   "agence": "Causeret Immobilier",
-   "secondes": 48,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 96,
-   "sitemap": "ok 96",
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://causeretimmobilier.fr/maison/la-maison-iris/",
-     "titre": "La maison Iris - © CAUSERET IMMOBILIER"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 51,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 64,
-   "sitemap": "ok 65",
-   "motifs": {
-    "titre_hors_cible:terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain": {
-     "url": "https://www.century21-infinity-lacroix-saint-ouen.com/trouver_logement/detail/14638726032/",
-     "titre": "terrain à vendre - 752.0 m2 - ST SAUVEUR - 60 - PICARDIE - Century 21 Infinity"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 91,
-   "pages": 22,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 16,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 59,
-   "sitemap": "ok 59",
-   "deja_ecartees": 1,
-   "motifs": {
-    "titre_hors_cible:appartement": 14,
-    "location": 1,
-    "titre_hors_cible:terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/15645199503/",
-     "titre": "Appartement Studio à vendre - 1 pièce - 24.0 m2 - CREPY EN VALOIS - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    "titre_hors_cible:16 annonces": {
+     "url": "https://champanelleimmo.com/vente/1",
+     "titre": "16 Annonces de ventes immobilières"
     },
-    "location": {
-     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/17052051305/",
-     "titre": "maison à louer - 5 pièces - 122.0 m2 - BOISSY FRESNOY - 60 - PICARDIE - Century 21 Vandôme Immobilier"
-    },
-    "titre_hors_cible:terrain": {
-     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/14775268209/",
-     "titre": "terrain à vendre - 2305.0 m2 - ANTILLY - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://champanelleimmo.com/vente/58-feillens/terrain-a-batir/719-feillens-terrain-constructible-de-600m-56-000",
+     "titre": "Terrain à batir 600 m² Feillens (01570)"
     }
    }
   },
   {
-   "agence": "Century 21",
-   "secondes": 133,
-   "pages": 38,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 30,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 63,
-   "sitemap": "ok 63",
-   "motifs": {
-    "titre_hors_cible:appartement": 26,
-    "location": 2,
-    "titre_hors_cible:parking": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/15463003935/",
-     "titre": "Appartement F5 à vendre - 5 pièces - 94.85 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
-    },
-    "location": {
-     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/16937841651/",
-     "titre": "maison à louer - 4 pièces - 96.87 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/16951725612/",
-     "titre": "parking à vendre - 12.0 m2 - JOUE LES TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/14693817045/",
-     "titre": "immeuble à vendre - 494.83 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 123,
-   "pages": 35,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 28,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 35,
-   "sitemap": "ok 36",
-   "deja_ecartees": 1,
-   "motifs": {
-    "titre_hors_cible:appartement": 27,
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-centre-habitat-tours.com/trouver_logement/detail/16030752674/",
-     "titre": "Appartement F6 à vendre - 6 pièces - 98.4 m2 - TOURS - 37 - CENTRE - Century 21 Centre Habitat"
-    },
-    "titre_hors_cible:annonces": {
-     "url": "https://www.century21-centre-habitat-tours.com/annonces/achat/",
-     "titre": "Achat de maison ou d’appartement en Indre-et-Loire – C21 – Annonces immobilières de ventes pour bien acheter en Indre-et"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 80,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 65,
-   "sitemap": "ok 65",
-   "motifs": {
-    "titre_hors_cible:appartement": 4
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/14888846400/",
-     "titre": "Appartement F4 à vendre - 4 pièces - 72.25 m2 - BEAUNE - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 94,
-   "pages": 24,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 16,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 336,
-   "sitemap": "ok 337",
-   "deja_ecartees": 1,
-   "motifs": {
-    "titre_hors_cible:appartement": 16
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/14156173065/",
-     "titre": "Appartement à vendre - 4 pièces - 73.6 m2 - TROYES - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 92,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 8,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 69,
-   "sitemap": "ok 69",
-   "motifs": {
-    "titre_hors_cible:appartement": 8
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-bertin-caen.com/trouver_logement/detail/15673342175/",
-     "titre": "Appartement F2 à vendre - 2 pièces - 52.32 m2 - HEROUVILLE ST CLAIR - 14 - BASSE-NORMANDIE - Century 21 Bertin Immobilie"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 72,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "motifs": {
-    "titre_hors_cible:terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain": {
-     "url": "https://www.century21agencedeleurope.com/trouver_logement/detail/17013580151/",
-     "titre": "terrain à vendre - 3162.0 m2 - MONTGIVRAY - 36 - CENTRE - Century 21 Agence De L"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 9,
-   "pages": 1,
+   "agence": "Château-Thierry Immobilier",
+   "secondes": 0,
+   "pages": 0,
    "gardes": 0,
    "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Clic house",
+   "secondes": 72,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 1,
    "ecartes": 1,
    "illisibles": 0,
-   "fin": "budget global épuisé",
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 211,
-   "sitemap": "ok 212",
+   "adresses_ecartees": 31,
+   "sitemap_dates": 59,
+   "sitemap": "ok 59",
+   "deja_ecartees": 4,
    "motifs": {
     "titre_hors_cible:appartement": 1
    },
    "ecartes_exemples": {
     "titre_hors_cible:appartement": {
-     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/6648614767/",
-     "titre": "Appartement F5 à vendre - 5 pièces - 135.08 m2 - LAXOU - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
+     "url": "https://www.clichouse.fr/vente/14-calvados/141-herouvillette/a-vendre-exclusivite-maison-de-2009-avec-appartement-t2/6811-maison",
+     "titre": "- A VENDRE EXCLUSIVITE MAISON DE 2009 AVEC APPARTEMENT T2 -"
     }
    }
+  },
+  {
+   "agence": "Concept Immo 54",
+   "secondes": 77,
+   "pages": 10,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 500,
+   "sitemap": "HTTP 500",
+   "index_statut": 200,
+   "index_titre": "Agence immobilière à Toul et Saizerais | Concept Immo 54",
+   "deja_ecartees": 1,
+   "motifs": {
+    "titre_hors_cible:24 maisons": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:24 maisons": {
+     "url": "https://concept-immo54.fr/vente/maison-villa/1",
+     "titre": "24 Maisons en vente"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://concept-immo54.fr/biens-loues/1",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers déjà loués | Concept Immo 54",
+    "octets": 596379
+   }
+  },
+  {
+   "agence": "Concordis",
+   "secondes": 99,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 104,
+   "sitemap": "ok 100",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Coup de Coeur Immo",
+   "secondes": 66,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 17,
+   "sitemap_dates": 22,
+   "sitemap": "ok 22",
+   "motifs": {
+    "titre_hors_cible:maison avec fort potentiel + terrain": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:maison avec fort potentiel + terrain": {
+     "url": "https://www.coup2coeurimmobilier.fr/vente/46-fillieres/maison/1080-maison-avec-fort-potentiel-terrains-constructibles-2800-m-fillieres",
+     "titre": "Maison avec fort potentiel + terrains constructibles – 2800 m² – Fillières"
+    }
+   }
+  },
+  {
+   "agence": "Cv Immobilier",
+   "secondes": 68,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 46,
+   "sitemap": "ok 46",
+   "motifs": {
+    "titre_hors_cible:54 biens": 1,
+    "titre_hors_cible:vendre sa ": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:54 biens": {
+     "url": "https://www.cvimmobilier.fr/vente/1",
+     "titre": "54 biens immobiliers à vendre | CV Immobilier"
+    },
+    "titre_hors_cible:vendre sa ": {
+     "url": "https://www.cvimmobilier.fr/nos-actualites/vendre-sa-maison-a-louviers-les-7-erreurs-de-renovation-qui-peuvent-vous-couter-cher.html",
+     "titre": "Vendre sa maison à Louviers : les 7 erreurs de rénovation qui peuvent vous coûter cher"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.cvimmobilier.fr/biens-vendus/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 biens vendus | CV Immobilier",
+    "octets": 186668
+   }
+  },
+  {
+   "agence": "Cyril Thienpont Immobilier",
+   "secondes": 101,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 33,
+   "sitemap": "ok 115",
+   "deja_ecartees": 12,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.ctimmo.fr/vente/maison-mitoyenne-2-cotes-13-pieces-abbeville-80100,VM1952",
+     "titre": "ABBEVILLE - COEUR DE VILLE - 300M² - CABINET / BUREAU / APPAERTEMENT + APPARTEMENT 6 CHAMBRES- JARDIN"
+    }
+   }
+  },
+  {
+   "agence": "Côté Ouest Immobilier",
+   "secondes": 102,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 76,
+   "sitemap": "ok 80",
+   "deja_ecartees": 4,
+   "motifs": {
+    "prix_trop_haut": 1,
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.cote-ouest-immo.fr/vente/maison-7-pieces-saint-martin-du-manoir-76290,VM4952",
+     "titre": "SAINT MARTIN DU MANOIR"
+    },
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.cote-ouest-immo.fr/vente/maison-4-pieces-le-havre-76620,VM5373",
+     "titre": "Maison neuve (76620/76600)"
+    }
+   }
+  },
+  {
+   "agence": "Damonte Immobilier",
+   "secondes": 19,
+   "pages": 9,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 9,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "illisible_exemple": {
+    "url": "https://www.yves-damonte.fr/bien-professionnel",
+    "cause": "aucune annonce lue",
+    "titre": "Groupe Damonte",
+    "octets": 1474
+   }
+  },
+  {
+   "agence": "De Noray Immobilier",
+   "secondes": 78,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 37,
+   "sitemap_dates": 92,
+   "sitemap": "ok 92",
+   "motifs": {
+    "titre_hors_cible:biens a vendre": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens a vendre": {
+     "url": "https://www.denoray-immobilier.com/vente/1",
+     "titre": "Biens à vendre | De Noray Immobilier"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.denoray-immobilier.com/vente/2316-chemille-sur-deme/maison/t12/14818-propriete-de-3-maisons-espace-equestre-sur-3-5-hectares-gite/",
+     "titre": "Propriété de 3 maisons + espace équestre sur 3,5 hectares - Gîte"
+    },
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.denoray-immobilier.com/vente/1-amboise/maison/t4/14926-maison-neuve-2-chambres-et-bureau-de-90-m-et-terrain-de-260m-amboise/",
+     "titre": "Maison neuve 2 chambres et bureau de 90 m² et terrain de 260m² AMBOISE"
+    }
+   }
+  },
+  {
+   "agence": "Delafosse & Associée",
+   "secondes": 87,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 168,
+   "sitemap_dates": 429,
+   "sitemap": "ok 429",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 5
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://delafosse.immo/annonces/maison-de-charme-7/",
+     "titre": "DEMEURE DE CHARME - Delafosse & Associée"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://delafosse.immo/maison-de-caractere-a-rouen-la-reconnaitre-la-choisir/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison de caractère à Rouen - la reconnaître, la choisir - Delafosse &amp; Associée",
+    "octets": 102899
+   }
+  },
+  {
+   "agence": "Delaitre immobilier",
+   "secondes": 251,
+   "pages": 21,
+   "gardes": 5,
+   "vendus": 6,
+   "ecartes": 10,
+   "illisibles": 0,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap_dates": 347,
+   "sitemap": "ok 348",
+   "deja_ecartees": 18,
+   "motifs": {
+    "titre_hors_cible:appartement": 6,
+    "titre_hors_cible:studio": 1,
+    "prix_trop_haut": 1,
+    "titre_hors_cible:parking": 1,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.delaitreimmobilier.fr/biens/443/votre-agence-de-proximite-locale-vous-propose-rouen-centre-square-verdrel-cet-appartement",
+     "titre": "Votre agence de proximité locale vous propose Rouen centre square VERDREL cet appartement duplex en bon état de 99 m2 lo"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.delaitreimmobilier.fr/biens/430/rouen-gare-special-airbnb-original-studio-avec-jardin-plein-sud-au-calme",
+     "titre": "Rouen gare spècial AIRBNB original studio avec jardin plein sud au calme"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.delaitreimmobilier.fr/biens/402/bien-exceptionnel-sur-site-exceptionnel-maison-ancienne-renovee-avec-vue-incroyable",
+     "titre": "Bien exceptionnel sur site exceptionnel, maison ancienne rénovée avec vue incroyable , stationnements, jardin"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.delaitreimmobilier.fr/biens/433/au-coeur-de-rouen-av-ascenseur-terrasse-cave-parking-protege",
+     "titre": "Au coeur de Rouen av ascenseur-terrasse-cave-parking protégé"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.delaitreimmobilier.fr/biens/427/mont-saint-aignan-maison-de-qualite-calme-lumineuse-de-170-m2",
+     "titre": "mont Saint Aignan Maison de qualité calme, lumineuse de 170 m2"
+    }
+   },
+   "vendus_dans_l_adresse": 4
+  },
+  {
+   "agence": "Homeloop",
+   "secondes": 154,
+   "pages": 45,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 38,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 277,
+   "sitemap_dates": 160,
+   "sitemap": "ok 160",
+   "deja_ecartees": 2,
+   "motifs": {
+    "titre_hors_cible:151 biens": 36,
+    "titre_hors_cible:loft": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:151 biens": {
+     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/oullins-pierre-benite/oullins-pierre-benite_georges-brassens_machaon/83567",
+     "titre": "151 biens à vendre"
+    },
+    "titre_hors_cible:loft": {
+     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/barjols/mandat-barjols_draguignan_dindon/83980",
+     "titre": "Loft d'habitation + activité professionn..."
+    },
+    "prix_trop_haut": {
+     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/la-plaine-sur-mer/vue-mer-maison-11p-de-268-m2-port-giraud-la-plaine-sur-mer/84862",
+     "titre": "Vue mer ! Maison 11p de 268 m² - Port Gi..."
+    }
+   }
+  },
+  {
+   "agence": "Hoste Immobilier",
+   "secondes": 27,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "budget global épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 13,
+   "sitemap_dates": 7,
+   "sitemap": "ok 9",
+   "deja_ecartees": 1
   }
  ]
 }
