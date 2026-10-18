@@ -143,6 +143,57 @@ def test_meme_bien_demande_la_meme_reference_ou_la_meme_page(une, autre, meme):
     assert chargement._meme_bien({"url": une}, {"url": autre}) is meme
 
 
+def _safti(ident: str, url: str, photos: list, revue_le: str, **autres) -> dict:
+    lieu = {"agence": "Safti (70)", "agence_url": "https://www.safti.fr",
+            "titre": "Vente de maison 5 pièces à Bougnon 70170 : 100m², prix 175 000 €",
+            "prix": 175000, "surface_m2": 100, "terrain_m2": 800, "pieces": 5,
+            "commune": "Vesoul", "code_postal": "70000", "departement": "70",
+            "lat": 47.629, "lon": 6.158}
+    lieu.update(autres)
+    return annonce(ident, url, photos, revue_le, **lieu)
+
+
+def test_un_numero_d_annonce_de_reseau_designe_un_seul_bien():
+    """Safti a publié la même maison sous « bougnon-70170/1705631 », puis sous
+    « vesoul-70000/1705631 ». Trois photos seulement leur sont propres — les
+    autres reviennent dans le bandeau « biens similaires » des voisines —, trop
+    peu pour une galerie partagée. Le numéro d'annonce, lui, ne trompe pas."""
+    cdn = "https://cdn.safti.fr/bien-photo/71/05/1705631"
+    galerie = [f"{cdn}/{i}/rg_nobn.jpg" for i in range(3)]
+    ancien = _safti("s-ancien", "https://www.safti.fr/annonces/achat/maison/bougnon-70170/1705631",
+                    galerie, "2026-09-04", commune="Bougnon", code_postal="70170")
+    nouveau = _safti("s-nouveau", "https://www.safti.fr/annonces/achat/maison/vesoul-70000/1705631",
+                     galerie, "2026-10-18")
+    voisine = _safti("s-voisine", "https://www.safti.fr/annonces/achat/maison/vesoul-70000/1699999",
+                     [f"https://cdn.safti.fr/bien-photo/69/99/1699999/{i}/rg_nobn.jpg" for i in range(3)],
+                     "2026-10-18", prix=210000)
+    corpus = [ancien, nouveau, voisine]
+    assert chargement._galeries_partagees(corpus) == [], "pas assez de photos pour l'autre règle"
+    servis = chargement.biens_servis(corpus)
+    assert sorted(b["id"] for b in servis) == ["s-nouveau", "s-voisine"]
+    assert photo_retenue(nouveau, _photos_de_mobilier(corpus)) == galerie[0], \
+        "et l'exemplaire servi garde ses photos"
+
+
+def test_le_meme_numero_iad_sous_deux_departements_n_est_servi_qu_une_fois():
+    """Notre découpage fait d'IAD une « agence » par département : la même
+    annonce, rangée une fois dans l'Aisne et une fois dans la Marne, n'avait
+    aucune chance de se voir partager quoi que ce soit."""
+    commun = {"commune": "Condé-en-Brie", "code_postal": "02330", "lat": 48.986, "lon": 3.553,
+              "prix": 298000, "surface_m2": 291, "terrain_m2": 3000, "pieces": 12,
+              "titre": "Maison 12 pièces de 291 m² à Condé-en-Brie", "agence_url": "https://www.iadfrance.fr"}
+    aisne = annonce("iad-02", "https://www.iadfrance.fr/annonce/maison-vente-12-pieces-conde-en-brie-291m2/r2104708",
+                    ["https://img.iadfrance.fr/a.jpg"], "2026-10-16", agence="IAD France (02)",
+                    departement="02", **commun)
+    marne = annonce("iad-51", "https://www.iadfrance.fr/annonce/maison-vente-12-pieces-dormans-291m2/r2104708",
+                    ["https://img.iadfrance.fr/b.jpg"], "2026-09-30", agence="IAD France (51)",
+                    departement="51", **commun)
+    autre = annonce("iad-autre", "https://www.iadfrance.fr/annonce/maison-vente-12-pieces-dormans-291m2/r2104709",
+                    ["https://img.iadfrance.fr/c.jpg"], "2026-09-30", agence="IAD France (51)",
+                    departement="51", **dict(commun, prix=310000))
+    assert sorted(b["id"] for b in chargement.biens_servis([aisne, marne, autre])) == ["iad-02", "iad-autre"]
+
+
 def test_le_fichier_annonce_la_photo_que_le_site_montre():
     """L'export et le chargement doivent trancher pareil, sinon l'audit crie
     « photo annoncée mais jamais affichée » — c'est ainsi que le cas est sorti."""

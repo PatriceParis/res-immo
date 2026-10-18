@@ -308,6 +308,41 @@ def _meme_bien(x: dict, y: dict) -> bool:
             or bool(_references(x.get("url")) & _references(y.get("url"))))
 
 
+# Chez les réseaux de mandataires, le numéro qui termine l'adresse est celui de
+# l'annonce, unique dans tout le réseau ; le reste, le réseau le retouche.
+# Safti a publié la même maison sous « bougnon-70170/1705631 », puis sous
+# « vesoul-70000/1705631 ». Mesuré le 18 octobre 2026 : 45 biens Safti et 28
+# biens IAD servis deux fois, parfois sous deux départements — donc sous deux
+# « agences » de notre découpage, où aucune galerie partagée ne se voit.
+_NUMERO_D_ANNONCE = (
+    re.compile(r"^https?://(?:www\.)?(safti)\.fr/annonces/[^?#]*/(\d{5,})/?$"),
+    re.compile(r"^https?://(?:www\.)?(iadfrance)\.fr/annonce/[^?#]*/r(\d{5,})/?$"),
+)
+
+
+def _numero_d_annonce(url: str) -> tuple | None:
+    for motif in _NUMERO_D_ANNONCE:
+        trouve = motif.match(url or "")
+        if trouve:
+            return trouve.groups()
+    return None
+
+
+def _meme_numero_d_annonce(annonces: list[dict]) -> list[tuple[dict, dict]]:
+    """Les paires d'annonces d'un réseau qui portent le même numéro d'annonce."""
+    premieres: dict = {}
+    paires = []
+    for a in annonces:
+        numero = _numero_d_annonce(a.get("url"))
+        if numero is None:
+            continue
+        if numero in premieres:
+            paires.append((premieres[numero], a))
+        else:
+            premieres[numero] = a
+    return paires
+
+
 def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
     """Repère les images qui reviennent d'une annonce à l'autre chez une agence.
 
@@ -333,15 +368,16 @@ def _photos_de_mobilier(annonces: list[dict], seuil_nom: int = 3) -> set:
       `…/1988/img/bell.png`). Trois, et non deux, parce que deux photos
       réelles peuvent honnêtement s'appeler chacune `FACADE-PRINCIPALE.jpg`.
 
-    Deux annonces qui se partagent leur galerie comptent pour UNE : c'est le
-    même bien sous deux adresses (voir `_galeries_partagees`). Les compter
-    pour deux faisait de chaque photo du bien un « mobilier », et les deux
-    exemplaires perdaient leur galerie — chez Maison Ancienne du Bessin, le
+    Deux annonces qui se partagent leur galerie, ou qui portent le même numéro
+    d'annonce chez un réseau, comptent pour UNE : c'est le même bien sous deux
+    adresses (voir `_galeries_partagees` et `_meme_numero_d_annonce`). Les
+    compter pour deux faisait de chaque photo du bien un « mobilier », et les
+    deux exemplaires perdaient leur galerie — chez Maison Ancienne du Bessin, le
     18 octobre 2026, cinq maisons servies deux fois : sans photo sous leur
     nouvelle adresse, avec celle d'une voisine sous l'ancienne — la vignette
     du bandeau « bien suivant », seule image qui ne fût pas en double.
     """
-    groupe = _groupes(_galeries_partagees(annonces))
+    groupe = _groupes(_galeries_partagees(annonces) + _meme_numero_d_annonce(annonces))
     par_url: dict = {}
     par_nom: dict = {}
     for a in annonces:
@@ -447,7 +483,8 @@ def _preparer_toutes(conn, annonces: list[dict]) -> list[dict]:
     """Applique tous les filtres de qualité et de périmètre, sans écrire."""
     suspectes = _signatures_suspectes(annonces)
     mobilier = _photos_de_mobilier(annonces)
-    meme_bien = _groupes([p for p in _galeries_partagees(annonces) if _meme_bien(*p)])
+    meme_bien = _groupes([p for p in _galeries_partagees(annonces) if _meme_bien(*p)]
+                         + _meme_numero_d_annonce(annonces))
     # Les agences qui ont demandé leur retrait (data/agences_exclues.json) ne
     # sont plus servies — même si leurs biens figurent encore dans un fichier
     # exporté avant la demande. L'export les retirera ; le site, lui, n'attend
