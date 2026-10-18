@@ -289,11 +289,47 @@ def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dic
     et l'Aube étaient des biens d'ailleurs — Bagneux (92), Antezant-la-
     Chapelle (17), Aubeterre-sur-Dronne (16) —, et leur adresse le disait. On
     ne les écarte pas : au fichier, une maison de Pacy-sur-Eure est publiée
-    sous un code des Yvelines. Elles attendent seulement leur tour.
+    sous un code des Yvelines. Elles attendent seulement leur tour — et
+    `lot_du_passage` n'en prend que quelques-unes à chaque passage.
     """
     return sorted(annonces, key=lambda a: (deja_vues.get(a["url"], ""),
                                            bool(a.get("hors_cible_selon_l_adresse")),
                                            a["url"]))
+
+
+# Pages qu'un passage ouvre, par département, alors que leur adresse les place
+# hors de nos terroirs.
+HORS_CIBLE_PAR_PASSAGE = 5
+
+
+def lot_du_passage(candidats: list[dict], maximum: int) -> list[dict]:
+    """Les pages qu'un passage ouvre dans un département, dans l'ordre donné.
+
+    Passer en dernier ne suffisait pas : quand un département compte moins de
+    pages chez nous que de pages par passage, le reste du lot allait aux
+    homonymes. Mesuré le 18 octobre 2026 au passage de 7 h 50 : chez Safti en
+    Haute-Marne, 42 des 50 pages ouvertes étaient « hors périmètre » —
+    Aigremont (30) pour celui de la Haute-Marne. Leur adresse le disait, comme
+    pour les 134 pages Safti refusées pour ce motif depuis la veille, sans une
+    exception. Une seule fois sur les 4 890 biens Safti du fichier, l'adresse
+    a menti : la maison de Pacy-sur-Eure.
+
+    On en ouvre donc quelques-unes par passage, assez pour que la menteuse
+    finisse par être lue, et le reste du lot revient aux pages de chez nous.
+    Une page sautée laisse le département « tronqué » : la règle de sortie ne
+    retire rien de ce qu'on n'a pas relu.
+    """
+    lot: list[dict] = []
+    hors_cible = 0
+    for annonce in candidats:
+        if len(lot) >= maximum:
+            break
+        if annonce.get("hors_cible_selon_l_adresse"):
+            if hors_cible >= HORS_CIBLE_PAR_PASSAGE:
+                continue
+            hors_cible += 1
+        lot.append(annonce)
+    return lot
 
 
 def dates_de_derniere_visite(catalogue: dict, ecartees: dict) -> dict:

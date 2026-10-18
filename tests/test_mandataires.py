@@ -190,3 +190,26 @@ def test_safti_ouvre_d_abord_ce_que_le_code_postal_de_l_adresse_place_chez_nous(
     iad = mandataires.annonces_a_visiter(
         ["https://www.iadfrance.fr/annonce/maison-vente-4-pieces-givry-90m2/r1"], IAD, index)
     assert iad[0]["hors_cible_selon_l_adresse"] is False
+
+
+def test_un_passage_n_ouvre_que_quelques_pages_que_l_adresse_place_ailleurs():
+    """Mesuré le 18 octobre 2026 : chez Safti en Haute-Marne, 42 des 50 pages
+    ouvertes étaient des Aigremont du Gard, et leur adresse le disait. Passer
+    en dernier ne suffisait pas : le département comptait moins de pages chez
+    nous que le lot n'en prend, et le reste allait aux homonymes."""
+    index = mandataires.index_des_communes({"52": ["Aigremont", "Langres"]})
+    chez_nous = [f"https://www.safti.fr/annonces/achat/maison/langres-52200/17000{n:02d}"
+                 for n in range(3)]
+    ailleurs = [f"https://www.safti.fr/annonces/achat/maison/aigremont-30350/16000{n:02d}"
+                for n in range(20)]
+    retenues = mandataires.annonces_a_visiter(chez_nous + ailleurs, SAFTI, index)
+    deja = {u: "2026-10-01" for u in chez_nous[1:]}       # deux déjà vues, à revoir
+    candidats = mandataires.ordre_dans_le_departement(retenues, deja)
+    lot = mandataires.lot_du_passage(candidats, 50)
+    assert sum(a["hors_cible_selon_l_adresse"] for a in lot) == mandataires.HORS_CIBLE_PAR_PASSAGE
+    assert {a["url"] for a in lot} >= set(chez_nous), "toutes celles de chez nous, même déjà vues"
+    assert len(lot) < len(candidats), "des pages restent : le département n'est pas vu en entier"
+    # Sans homonyme, rien ne change : le lot est le début de la liste.
+    sans = mandataires.ordre_dans_le_departement(
+        mandataires.annonces_a_visiter(chez_nous, SAFTI, index), deja)
+    assert mandataires.lot_du_passage(sans, 2) == sans[:2]

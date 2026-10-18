@@ -102,6 +102,45 @@ def test_le_departement_avance_au_lieu_de_rouvrir_les_memes_pages_refusees(passa
         ADRESSES[2]: "vendu", ADRESSES[3]: "vendu"}
 
 
+SAFTI_INDEX = mandataires.index_des_communes({"52": ["Aigremont", "Langres"]})
+SAFTI_CHEZ_NOUS = [f"https://www.safti.fr/annonces/achat/maison/langres-52200/17000{n:02d}"
+                   for n in range(3)]
+SAFTI_AILLEURS = [f"https://www.safti.fr/annonces/achat/maison/aigremont-30350/16000{n:02d}"
+                  for n in range(20)]
+
+
+def test_safti_ne_consacre_plus_son_lot_aux_homonymes(tmp_path, monkeypatch):
+    """Mesuré le 18 octobre 2026 au passage de 7 h 50 : 42 des 50 pages Safti
+    ouvertes en Haute-Marne étaient des Aigremont du Gard. La vraie boucle,
+    sans réseau : elle doit ouvrir les pages de chez nous, quelques homonymes
+    seulement, et tenir le département pour non vu en entier."""
+    monkeypatch.setattr(COLLECTEUR, "DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(COLLECTEUR, "_deroule", [])
+    monkeypatch.setattr(COLLECTEUR, "_depart", None)
+    monkeypatch.setattr(COLLECTEUR, "JOURNAL", tmp_path / "mandataires_visites.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "visites_tronquees.json")
+    monkeypatch.setattr(COLLECTEUR, "sitemaps_declares", lambda site: [f"{site}/sitemap.xml"])
+    monkeypatch.setattr(COLLECTEUR, "adresses_du_sitemap",
+                        lambda *a, **k: (SAFTI_CHEZ_NOUS + SAFTI_AILLEURS, True))
+    monkeypatch.setattr(COLLECTEUR, "annonces_deja_connues", lambda: {})
+    monkeypatch.setattr(COLLECTEUR.time, "sleep", lambda *_: None)
+    ouvertes: list = []
+
+    def enregistrer(conn, annonce, reseau, reaffectees):
+        ouvertes.append(annonce["url"])
+        return ("ecarte:hors_perimetre" if "-30350/" in annonce["url"] else "garde"), "titre"
+
+    monkeypatch.setattr(COLLECTEUR, "enregistrer_une", enregistrer)
+    args = SimpleNamespace(max_par_departement=50, delai=0, departements=None)
+    safti = mandataires.RESEAUX["safti"]
+    COLLECTEUR.collecter_un_reseau(_Base(), "safti", safti, SAFTI_INDEX,
+                                   COLLECTEUR.time.monotonic() + 600, args, set())
+    assert set(SAFTI_CHEZ_NOUS) <= set(ouvertes)
+    assert sum("-30350/" in u for u in ouvertes) == mandataires.HORS_CIBLE_PAR_PASSAGE
+    assert historique.identite({"agence": "Safti (52)", "agence_url": safti["site"]}) \
+        in historique.visites_tronquees(), "les homonymes sautés laissent le département tronqué"
+
+
 def test_la_memoire_des_mandataires_ne_touche_pas_celle_des_agences(passage, tmp_path):
     """Deux journaux : celui des agences est committé par la collecte, celui
     des réseaux par le passage des mandataires. Un passage n'écrit que le sien."""

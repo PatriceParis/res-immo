@@ -372,7 +372,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             print("  budget de temps atteint — la suite au prochain passage.")
             break
         candidats = mandataires.ordre_dans_le_departement(groupes[dept], deja_vues)
-        lot = candidats[:args.max_par_departement]
+        lot = mandataires.lot_du_passage(candidats, args.max_par_departement)
         # Un sitemap écourté rend une liste écourtée pour CHAQUE département
         # du réseau : aucun n'a été vu en entier, quand bien même son lot
         # tiendrait sous le plafond.
