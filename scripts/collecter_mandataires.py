@@ -186,6 +186,30 @@ def communes_des_terroirs() -> dict:
     return par_dept
 
 
+def communes_de_france() -> dict:
+    """Toutes les communes du pays, par département, en un seul appel.
+
+    Nos seules communes ne suffisent pas à lire une adresse : sans savoir que
+    Saint-Laurent-le-Minier existe dans le Gard, « saint-laurent-le-minier » se
+    lisait « Saint-Laurent », commune de nos terroirs, et la page était ouverte
+    pour rien (voir mandataires.annonces_a_visiter). Vide si l'API ne répond
+    pas : on revient alors à nos seules communes, comme avant.
+    """
+    for _ in range(2):
+        donnees = lire("https://geo.api.gouv.fr/communes?fields=nom,codeDepartement")
+        if donnees:
+            break
+    try:
+        communes = json.loads(donnees) if donnees else []
+    except ValueError:
+        return {}
+    par_dept: dict = {}
+    for c in communes:
+        if isinstance(c, dict) and c.get("nom") and c.get("codeDepartement"):
+            par_dept.setdefault(c["codeDepartement"], []).append(c["nom"])
+    return par_dept
+
+
 def annonces_deja_connues() -> dict:
     """URL → date de dernière constatation, d'après le catalogue publié.
 
@@ -328,7 +352,7 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
           complet=sitemap_complet)
     print(f"  {len(adresses)} annonce(s) au sitemap"
           f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
-    a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index)
+    a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index, DEPARTEMENTS_CIBLES)
     groupes = mandataires.par_departement(a_visiter)
     if args.departements:
         voulus = {d.strip() for d in args.departements.split(",") if d.strip()}
@@ -457,17 +481,21 @@ def main() -> None:
     _depart = time.monotonic()
     etape("demarrage", minutes=args.minutes)
 
-    print("Communes des terroirs ciblés…")
-    # Trente-trois appels à l'API officielle, en file, avant quoi que ce soit
-    # d'autre : c'est le premier endroit où un passage peut mourir sans laisser
-    # de trace, et l'abstention ci-dessous est silencieuse dans le journal git.
-    communes = communes_des_terroirs()
+    print("Communes de France…")
+    # Les appels à l'API officielle passent avant quoi que ce soit d'autre :
+    # c'est le premier endroit où un passage peut mourir sans laisser de trace,
+    # et l'abstention ci-dessous est silencieuse dans le journal git. La liste
+    # nationale manque-t-elle, ou l'un de nos départements ? On revient aux
+    # trente-trois appels d'avant, département par département.
+    communes = communes_de_france()
+    if not set(DEPARTEMENTS_CIBLES) <= set(communes):
+        communes = communes_des_terroirs()
     if not communes:
         etape("communes_indisponibles")
         print("Liste des communes indisponible : sans elle on ne sait pas ce qui")
         print("relève de nos terroirs. On s'arrête plutôt que de tout collecter.")
         raise SystemExit(1)
-    index = mandataires.index_des_communes(communes)
+    index = mandataires.index_des_communes(communes, DEPARTEMENTS_CIBLES)
     etape("communes", departements=len(communes), communes=len(index))
     print(f"  {len(index)} communes sur {len(communes)} département(s)")
 

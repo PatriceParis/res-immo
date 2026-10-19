@@ -141,6 +141,55 @@ def test_safti_ne_consacre_plus_son_lot_aux_homonymes(tmp_path, monkeypatch):
         in historique.visites_tronquees(), "les homonymes sautés laissent le département tronqué"
 
 
+def test_un_nom_plus_long_ailleurs_en_france_n_est_plus_ouvert(tmp_path, monkeypatch):
+    """Mesuré le 19 octobre 2026 au passage de 20 h 24 : 151 des 262 pages IAD
+    ouvertes étaient « hors périmètre », d'abord par des noms tronqués. La
+    vraie boucle, avec un index de toute la France : la page de
+    Saint-Laurent-le-Minier, dans le Gard, n'est plus ouverte pour
+    Saint-Laurent."""
+    monkeypatch.setattr(COLLECTEUR, "DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(COLLECTEUR, "_deroule", [])
+    monkeypatch.setattr(COLLECTEUR, "_depart", None)
+    monkeypatch.setattr(COLLECTEUR, "JOURNAL", tmp_path / "mandataires_visites.json")
+    monkeypatch.setattr(historique, "JOURNAL_TRONQUEES", tmp_path / "visites_tronquees.json")
+    chez_nous = "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-laurent-90m2/r1"
+    ailleurs = "https://www.iadfrance.fr/annonce/maison-vente-10-pieces-saint-laurent-le-minier-82m2/r2"
+    monkeypatch.setattr(COLLECTEUR, "sitemaps_declares", lambda site: [f"{site}/sitemap.xml"])
+    monkeypatch.setattr(COLLECTEUR, "adresses_du_sitemap", lambda *a, **k: ([chez_nous, ailleurs], True))
+    monkeypatch.setattr(COLLECTEUR, "annonces_deja_connues", lambda: {})
+    monkeypatch.setattr(COLLECTEUR.time, "sleep", lambda *_: None)
+    ouvertes: list = []
+
+    def enregistrer(conn, annonce, reseau, reaffectees):
+        ouvertes.append(annonce["url"])
+        return "garde", "titre"
+
+    monkeypatch.setattr(COLLECTEUR, "enregistrer_une", enregistrer)
+    france = {"21": ["Saint-Laurent"], "30": ["Saint-Laurent-le-Minier"]}
+    index = mandataires.index_des_communes(france, COLLECTEUR.DEPARTEMENTS_CIBLES)
+    args = SimpleNamespace(max_par_departement=50, delai=0, departements=None)
+    COLLECTEUR.collecter_un_reseau(_Base(), "iad", mandataires.RESEAUX["iad"], index,
+                                   COLLECTEUR.time.monotonic() + 600, args, set())
+    assert ouvertes == [chez_nous]
+
+
+def test_la_liste_des_communes_de_france_se_lit_par_departement(monkeypatch):
+    """Un seul appel à l'API officielle ; rien du tout si elle ne répond pas,
+    pour que le passage revienne à nos seules communes."""
+    reponse = json.dumps([{"nom": "Beaulieu", "codeDepartement": "21"},
+                          {"nom": "Saint-Laurent-le-Minier", "codeDepartement": "30"},
+                          {"nom": "Beaulieu", "codeDepartement": "49"},
+                          {"nom": "Quemigny-sur-Seine", "codeDepartement": "21"}]).encode()
+    monkeypatch.setattr(COLLECTEUR, "lire", lambda url: reponse)
+    assert COLLECTEUR.communes_de_france() == {
+        "21": ["Beaulieu", "Quemigny-sur-Seine"], "30": ["Saint-Laurent-le-Minier"],
+        "49": ["Beaulieu"]}
+    monkeypatch.setattr(COLLECTEUR, "lire", lambda url: b"")
+    assert COLLECTEUR.communes_de_france() == {}
+    monkeypatch.setattr(COLLECTEUR, "lire", lambda url: b"<html>panne</html>")
+    assert COLLECTEUR.communes_de_france() == {}
+
+
 def test_la_memoire_des_mandataires_ne_touche_pas_celle_des_agences(passage, tmp_path):
     """Deux journaux : celui des agences est committé par la collecte, celui
     des réseaux par le passage des mandataires. Un passage n'écrit que le sien."""

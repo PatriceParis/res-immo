@@ -97,11 +97,17 @@ def reseaux_autorises(reseaux: dict, exclus: set) -> dict:
             if not est_exclu(reseau.get("site", ""), exclus)}
 
 
-def index_des_communes(communes_par_departement: dict) -> list[tuple[str, str, str]]:
+def index_des_communes(communes_par_departement: dict,
+                       cibles: set | None = None) -> list[tuple[str, str, str]]:
     """(nom normalisé, nom d'origine, département), les plus longs d'abord.
 
     L'ordre compte : sans lui, « Bérain » l'emporterait sur « Saint-Bérain-sur-
     Dheune » et l'annonce partirait dans le mauvais département.
+
+    L'index peut porter les communes de toute la France : `cibles` dit alors
+    lesquelles sont chez nous. À nom égal, les nôtres passent devant — un
+    Beaulieu reste celui de Côte-d'Or, comme lorsque l'index ne connaissait
+    que nos terroirs.
     """
     index = []
     for departement, communes in communes_par_departement.items():
@@ -109,7 +115,7 @@ def index_des_communes(communes_par_departement: dict) -> list[tuple[str, str, s
             slug = normaliser(commune)
             if len(slug) >= LONGUEUR_MINIMALE_COMMUNE:
                 index.append((slug, commune, departement))
-    index.sort(key=lambda t: -len(t[0]))
+    index.sort(key=lambda t: (-len(t[0]), bool(cibles) and t[2] not in cibles))
     return index
 
 
@@ -203,17 +209,29 @@ def commune_de_l_adresse(url: str, index: list,
     return lieu
 
 
-def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]:
+def annonces_a_visiter(urls: list[str], reseau: dict, index: list,
+                       cibles: set | None = None) -> list[dict]:
     """Trie les adresses du sitemap : ce qu'on garde, et pourquoi.
 
     Renvoie un dict par annonce retenue, avec la commune et le département
     déduits — ce que la page elle-même ne donne pas toujours.
+
+    Avec un index de toute la France, `cibles` dit quels départements sont les
+    nôtres : le nom le plus long lu dans l'adresse peut désigner une commune
+    d'ailleurs, et l'annonce n'est alors pas ouverte. Mesuré le 19 octobre
+    2026 au passage de 20 h 24 : 151 des 262 pages IAD ouvertes étaient « hors
+    périmètre ». Au fichier, parmi les annonces IAD d'ailleurs que la lecture
+    actuelle a fait ouvrir, 186 le devaient à un nom tronqué — Saint-Laurent-
+    le-Minier (30) lu « Saint-Laurent », Oloron-Sainte-Marie (64) lu « Sainte-
+    Marie » —, contre 65 à un vrai homonyme : l'index ne connaissait que nos
+    communes, et ne pouvait savoir qu'un nom plus long existait ailleurs.
     """
     # Construite UNE fois, pas une par adresse : c'est tout l'objet du
     # correctif du 19 août.
     table = table_des_communes(index)
     cp_dans_l_adresse = reseau.get("cp_dans_l_adresse")
-    departements_cibles = {departement for _, _, departement in index}
+    departements_cibles = (set(cibles) if cibles
+                           else {departement for _, _, departement in index})
     retenues, vues = [], set()
     for url in urls:
         if not reseau["motif_annonce"].search(url):
@@ -221,7 +239,7 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list) -> list[dict]
         if not TYPES_VOULUS.search(normaliser(urlparse(url).path)):
             continue
         lieu = commune_de_l_adresse(url, index, table)
-        if not lieu:
+        if not lieu or lieu[1] not in departements_cibles:
             continue                      # hors des terroirs ciblés
         if url in vues:
             continue

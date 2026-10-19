@@ -105,6 +105,60 @@ def test_une_commune_trop_courte_ne_cree_pas_de_faux_rapprochement():
     assert index == []
 
 
+# Un extrait de la France : nos départements, et quelques communes d'ailleurs
+# dont le nom prolonge ou contient celui d'une des nôtres.
+FRANCE = {
+    "72": ["Champagné"], "21": ["Saint-Laurent", "Beaulieu", "Sainte-Marie"],
+    "89": ["Valravillon"],
+    "77": ["Champagne-sur-Seine"], "30": ["Saint-Laurent-le-Minier"],
+    "64": ["Oloron-Sainte-Marie"], "49": ["Beaulieu"],
+}
+CIBLES = {"72", "21", "89"}
+
+
+def test_un_nom_plus_long_ailleurs_en_france_n_est_pas_ouvert():
+    """Mesuré le 19 octobre 2026 : 151 des 262 pages IAD ouvertes au passage
+    de 20 h 24 étaient « hors périmètre ». Les noms tronqués en étaient la
+    première cause : sans connaître les communes d'ailleurs, on ne pouvait pas
+    savoir que « saint-laurent-le-minier » n'est pas Saint-Laurent."""
+    index = mandataires.index_des_communes(FRANCE, CIBLES)
+    ailleurs = [
+        "https://www.iadfrance.fr/annonce/maison-vente-10-pieces-champagne-sur-seine-208m2/r1",
+        "https://www.iadfrance.fr/annonce/maison-vente-10-pieces-saint-laurent-le-minier-82m2/r2",
+        "https://www.iadfrance.fr/annonce/maison-vente-10-pieces-oloron-sainte-marie-260m2/r3",
+    ]
+    assert mandataires.annonces_a_visiter(ailleurs, IAD, index, CIBLES) == []
+    chez_nous = [
+        "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-champagne-90m2/r4",
+        "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-laurent-90m2/r5",
+        "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-sainte-marie-90m2/r6",
+    ]
+    retenues = mandataires.annonces_a_visiter(chez_nous, IAD, index, CIBLES)
+    assert [(a["commune"], a["departement"]) for a in retenues] == [
+        ("Champagné", "72"), ("Saint-Laurent", "21"), ("Sainte-Marie", "21")]
+
+
+def test_a_nom_egal_nos_terroirs_passent_devant():
+    """Un vrai homonyme reste chez nous, comme quand l'index ne connaissait
+    que nos communes : le Beaulieu du Maine-et-Loire ne doit pas faire perdre
+    celui de Côte-d'Or — quel que soit l'ordre où l'API rend les départements."""
+    for france in (FRANCE, dict(reversed(list(FRANCE.items())))):
+        index = mandataires.index_des_communes(france, CIBLES)
+        url = "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-beaulieu-90m2/r7"
+        retenues = mandataires.annonces_a_visiter([url], IAD, index, CIBLES)
+        assert [(a["commune"], a["departement"]) for a in retenues] == [("Beaulieu", "21")]
+
+
+def test_une_commune_nouvelle_ecrite_avec_l_ancienne_reste_chez_nous():
+    """IAD écrit « laduz-valravillon » : Laduz n'existe plus, fondue dans
+    Valravillon. Exiger que la commune couvre tout le nom de l'adresse aurait
+    perdu ce bien ; le nom le plus long connu, lui, est bien chez nous."""
+    index = mandataires.index_des_communes(FRANCE, CIBLES)
+    url = "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-laduz-valravillon-75m2/r8"
+    retenues = mandataires.annonces_a_visiter([url], IAD, index, CIBLES)
+    assert [(a["commune"], a["departement"]) for a in retenues] == [("Valravillon", "89")]
+
+
 SAFTI = mandataires.RESEAUX["safti"]
 
 
