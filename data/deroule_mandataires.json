@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 23.2,
+  "seconde": 24.9,
   "departements": 33,
   "communes": 16182
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 23.2,
+  "seconde": 25.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,260 +21,285 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.2,
+  "seconde": 25.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 25.1,
+  "seconde": 26.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.6,
+  "seconde": 28.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 26.6,
+  "seconde": 28.2,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.9,
+  "seconde": 28.5,
   "reseau": "capifrance",
-  "connues": 12435,
-  "ecartees": 783
+  "connues": 12781,
+  "ecartees": 1010
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.9,
+  "seconde": 28.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 27.4,
+  "seconde": 29.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 55.0,
+  "seconde": 42.4,
   "reseau": "iad",
-  "n": 93397,
+  "n": 93415,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 57.0,
+  "seconde": 44.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 57.3,
+  "seconde": 44.4,
   "reseau": "iad",
-  "connues": 12435,
-  "ecartees": 783
+  "connues": 12781,
+  "ecartees": 1010
  },
  {
   "etape": "departement",
-  "seconde": 172.5,
+  "seconde": 143.8,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 1,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 1,
-   "vendu": 25,
-   "ecarte": 24,
+   "garde": 0,
+   "vendu": 7,
+   "ecarte": 43,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 20,
+   "hors_perimetre": 25,
+   "location": 7,
+   "prix_trop_haut": 11
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de ville 1 pièce de 99 m² à Mantes-la-Ville (78711)",
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 337.7,
+  "reseau": "iad",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 23,
+  "tronquee": true,
+  "etats": {
+   "garde": 23,
+   "vendu": 14,
+   "ecarte": 13,
+   "illisible": 0
+  },
+  "motifs": {
    "location": 1,
+   "hors_perimetre": 12
+  },
+  "exemples": {
+   "location": "Maison de ville 6 pièces de 130 m² à Sainte-Gauburge-Sainte-Colombe (61370)",
+   "hors_perimetre": "Maison 3 pièces de 85 m² à Hauterive (03270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 469.9,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 30,
+   "ecarte": 12,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 11
+  },
+  "exemples": {
+   "location": "Maison 1 pièce de 27 m² à Poulainville (80260)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 571.3,
+  "reseau": "iad",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 0,
+  "tronquee": true,
+  "etats": {
+   "garde": 0,
+   "vendu": 5,
+   "ecarte": 45,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 22,
+   "location": 6,
+   "hors_perimetre": 14,
    "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 67 m² à Savigny-sur-Orge (91600)",
-   "location": "Maison 4 pièces de 61 m² à Saint-Joseph (97480)",
-   "prix_trop_haut": "Demeure 12 pièces de 253 m² à Pontorson (50170)"
+   "titre_hors_cible:appartement": "Appartement 1 pièce de 26 m² à Château-Thierry (02400)",
+   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)",
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 180 m² à Saint-Michel-l",
+   "prix_trop_haut": "Domaine 10 pièces de 327 m² à Château-Thierry (02400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 299.7,
+  "seconde": 628.4,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 3,
+  "departement": "08",
+  "visitees": 29,
+  "gardes": 0,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 12,
-   "ecarte": 35,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 29,
-   "location": 1,
-   "prix_trop_haut": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 2 pièces de 41 m² à VINON-SUR-VERDON (83560)",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 429.1,
-  "reseau": "iad",
-  "departement": "52",
-  "visitees": 50,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 16,
-   "ecarte": 30,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 29
-  },
-  "exemples": {
-   "location": "Maison 10 pièces de 298 m² à Jonchery (52000)",
-   "hors_perimetre": "Domaine 10 pièces de 407 m² à Saint-Dizier-les-Domaines (23270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 548.0,
-  "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 26,
-   "ecarte": 23,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 23
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 51 m² à Boissy-Saint-Léger (94470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 625.4,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 30,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
+   "garde": 0,
    "vendu": 8,
-   "ecarte": 20,
+   "ecarte": 21,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 20
+   "hors_perimetre": 21
   },
   "exemples": {
-   "hors_perimetre": "Maison d"
+   "hors_perimetre": "Maison de village 2 pièces de 32 m² à SAINT LAURENT DE LA CABRERISSE (11220)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 625.4,
+  "seconde": 628.5,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 626.2,
+  "seconde": 629.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 628.0,
+  "seconde": 630.2,
   "reseau": "safti",
-  "n": 28740,
+  "n": 28749,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 628.8,
+  "seconde": 630.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 629.1,
+  "seconde": 631.2,
   "reseau": "safti",
-  "connues": 12654,
-  "ecartees": 1002
+  "connues": 12978,
+  "ecartees": 1208
  },
  {
   "etape": "departement",
-  "seconde": 959.3,
+  "seconde": 907.5,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 44,
-  "tronquee": true,
-  "etats": {
-   "garde": 44,
-   "vendu": 2,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 14 pièces à Buthiers 77760 : 236m², prix 375 000 €. Réf : 1672955"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1227.4,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 40,
   "gardes": 38,
   "tronquee": true,
   "etats": {
    "garde": 38,
-   "vendu": 0,
-   "ecarte": 2,
+   "vendu": 8,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 12 pièces à Dracy-Les-Couches 71490 : 350m², prix 720 000 €. Réf : 1727206"
+   "prix_trop_haut": "Vente de maison 8 pièces à Coulans-Sur-Gee 72550 : 279m², prix 749 000 €. Réf : 1696283"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1153.8,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 38,
+  "tronquee": true,
+  "etats": {
+   "garde": 38,
+   "vendu": 3,
+   "ecarte": 9,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 9
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Arromanches-Les-Bains 14117 : 260m², prix 718 000 €. Réf : 1716723"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1228.3,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 12,
+  "gardes": 11,
+  "tronquee": true,
+  "etats": {
+   "garde": 11,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 7 pièces à Chateaumeillant 18370 : 357m², prix 714 000 €. Réf : 1607960"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1227.4,
-  "gardes": 93
+  "seconde": 1228.3,
+  "gardes": 118
  }
 ]
