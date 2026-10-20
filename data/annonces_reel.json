@@ -74054,7 +74054,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5375/maison-mitoyenne-1-cote-5-pieces-le-havre-76620-1772464019-VM5375_24_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74121,7 +74121,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5384/maison-individuelle-3-pieces-le-havre-76600-1772703749-VM5384_2_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74261,7 +74261,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5378/maison-individuelle-4-pieces-le-havre-76600-1772703654-VM5378_2_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74313,7 +74313,7 @@
   "plusieurs_biens": false,
   "lat": 49.558463,
   "lon": 0.121508,
-  "altitude": 87.0,
+  "altitude": 84.0,
   "densite_hab_km2": 294.5,
   "dpe": "D",
   "risques": {
@@ -74333,7 +74333,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5349/maison-7-pieces-cauville-sur-mer-76930-1784729540-VM5349_7_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74451,7 +74451,7 @@
   "plusieurs_biens": false,
   "lat": 49.542715,
   "lon": 0.18932,
-  "altitude": 13.0,
+  "altitude": 8.0,
   "densite_hab_km2": 813.8,
   "dpe": "C",
   "risques": {
@@ -74473,7 +74473,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5359/maison-plain-pied-5-pieces-fontaine-la-mallet-76290-1780589929-VM5359_5_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74525,7 +74525,7 @@
   "plusieurs_biens": false,
   "lat": 49.542715,
   "lon": 0.18932,
-  "altitude": 13.0,
+  "altitude": 8.0,
   "densite_hab_km2": 813.8,
   "dpe": "C",
   "risques": {
@@ -74544,7 +74544,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM4974/maison-6-pieces-montivilliers-76290-1769099997-VM4974_11_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -74623,7 +74623,7 @@
   "titre": "Maison à vendre, 8 pièces - Honfleur 14600",
   "description": null,
   "type_bien": "maison",
-  "prix": 599000,
+  "prix": 574000,
   "surface_m2": 300.0,
   "terrain_m2": null,
   "pieces": 8,
@@ -74684,10 +74684,10 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5361/maison-8-pieces-honfleur-14600-1769441895-VM5361_6_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
+  "prix_precedent": 599000,
+  "prix_baisse_le": "2026-10-20"
  },
  {
   "id": "c-t-ouest-immobilier-b736fe4d95f0",
@@ -74748,7 +74748,7 @@
    "https://img.netty.immo/productcw/company52926yau/2/VM5352/maison-traditionnelle-4-pieces-le-havre-76620-1765816178-VM5352_2_original.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -85417,6 +85417,104 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "casa-5faec47a80a3",
+  "source": "casa",
+  "url": "https://www.immo-casa.fr/acheter-un-bien/maison-familiale-renovee-avec-piscine-cairon-triangle-dor-2/",
+  "titre": "Maison familiale rénovée avec piscine - Cairon, triangle d’or",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 365000,
+  "surface_m2": 126.0,
+  "terrain_m2": 684.0,
+  "pieces": 6,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Casa",
+  "agence_url": "https://immo-casa.fr",
+  "photo": "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792407318_VM1876_22_original.webp",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": "D",
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792407375_VM1876_31_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792407372_VM1876_27_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1772449110_VM1383_25_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792407318_VM1876_22_original.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407318_VM1876_22_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407375_VM1876_31_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407372_VM1876_27_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407378_VM1876_34_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407370_VM1876_26_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407380_VM1876_37_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407367_VM1876_24_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407377_VM1876_33_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407374_VM1876_30_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792406889_VM1876_19_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792406890_VM1876_20_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407365_VM1876_23_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407369_VM1876_25_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407372_VM1876_28_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407376_VM1876_32_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407379_VM1876_35_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407380_VM1876_36_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792407373_VM1876_29_original.jpg"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "casa-6c9c57b315ff",
   "source": "casa",
   "url": "https://www.immo-casa.fr/acheter-un-bien/maison-verson-3-4-chambres-jardin/",
@@ -85566,6 +85664,8 @@
   "densite_hab_km2": 4257.3,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -85575,22 +85675,19 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 104.4,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
    "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791909080_LM1856_8_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790256633_LM1807_23_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1761210024_LM1261_1_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1788450489_LM1765_13_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
    "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -85602,7 +85699,7 @@
   "titre": "Maison Falaise - 113 m2 - 3 chambres et bureau- Quartier calme",
   "description": null,
   "type_bien": "maison",
-  "prix": 399000,
+  "prix": 274000,
   "surface_m2": 113.0,
   "terrain_m2": null,
   "pieces": 5,
@@ -85646,6 +85743,8 @@
   "densite_hab_km2": 4257.3,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -85655,23 +85754,20 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 104.4,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
    "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1757488683_VM1186_4_original-450x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1757488747_VM1186_8_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1773827931_VM1433_9_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792233406_VM1849_36_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790584468_VM1817_9_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1789135647_VM1601_27_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1786456437_VM1728_14_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790085324_VM1802_23_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1780427851_VM1489_11_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
    "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1757488666_VM1186_3_original.webp",
-   "https://www.immo-casa.fr/wp-content/themes/immo-casa-h5/dist/images/stems/smartphone.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1757488666_VM1186_3_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1757488683_VM1186_4_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1757488747_VM1186_8_original.jpg",
@@ -85684,10 +85780,10 @@
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1757488826_VM1186_12_original.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
+  "prix_precedent": 399000,
+  "prix_baisse_le": "2026-10-20"
  },
  {
   "id": "casa-87459dd82561",
@@ -85856,12 +85952,11 @@
    "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1788450481_LM1765_5_original-450x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1788450485_LM1765_8_original-450x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790754155_LA3692_5_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790172020_LA3711_6_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790754155_LA3692_5_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
    "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1788450489_LM1765_13_original.webp",
-   "https://www.immo-casa.fr/wp-content/themes/immo-casa-h5/dist/images/stems/smartphone.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1788450489_LM1765_13_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1788450481_LM1765_5_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1788450485_LM1765_8_original.jpg",
@@ -85874,7 +85969,7 @@
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1788450484_LM1765_7_original.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -85963,7 +86058,7 @@
   "titre": "MAISON LEBISEY - 5 CHAMBRES - GARAGE DOUBLE",
   "description": null,
   "type_bien": "maison",
-  "prix": 193000,
+  "prix": 399000,
   "surface_m2": 180.0,
   "terrain_m2": 1100.0,
   "pieces": 7,
@@ -86007,6 +86102,8 @@
   "densite_hab_km2": 4257.3,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -86016,23 +86113,20 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 104.4,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
    "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1767946973_VM1336_6_original-450x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1767946981_VM1336_9_original-450x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1784714664_VM1640_35_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1789981443_VM1747_19_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791186646_VM1781_52_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791983596_VM1871_14_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1782460286_VM1629_1_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1784714664_VM1640_35_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
    "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1773762017_VM1336_27_original.webp",
-   "https://www.immo-casa.fr/wp-content/themes/immo-casa-h5/dist/images/stems/smartphone.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1773762017_VM1336_27_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1767946973_VM1336_6_original.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1767946981_VM1336_9_original.jpg",
@@ -86047,7 +86141,7 @@
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1767946905_VM1336_2_original.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86121,10 +86215,10 @@
    "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791909079_LM1856_5_original-450x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791909078_LM1856_4_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1770912849_LA3248_8_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791555478_LA3723_23_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1790777886_LA3721_5_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791455234_LA3715_8_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1779186976_LA2958_16_original-400x270.webp",
-   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1770912849_LA3248_8_original-400x270.webp",
    "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
    "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791909080_LM1856_8_original.webp",
@@ -86136,7 +86230,7 @@
    "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791909083_LM1856_11_original.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86240,6 +86334,87 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "casa-b1e7567af5df",
+  "source": "casa",
+  "url": "https://www.immo-casa.fr/acheter-un-bien/maison-en-pierre-avec-jardin-avenue-henry-cheron-3/",
+  "titre": "Maison en pierre avec jardin avenue Henry Chéron",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 249000,
+  "surface_m2": 74.0,
+  "terrain_m2": 210.0,
+  "pieces": 3,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Casa",
+  "agence_url": "https://immo-casa.fr",
+  "photo": "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791806102_VM1859_22_original.webp",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": true,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": "D",
+  "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792430119_VM1859_39_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1792430125_VM1859_40_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791806102_VM1859_22_original.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_22_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792430119_VM1859_39_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792430125_VM1859_40_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1792430129_VM1859_41_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_14_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_19_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_21_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_25_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_38_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_34_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_35_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791806102_VM1859_36_original.jpg"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "casa-b3e8c79f187e",
   "source": "casa",
   "url": "https://www.immo-casa.fr/acheter-un-bien/maison-recente-de-2022-quartier-saint-paul-98m2-3-chambres-2/",
@@ -86324,6 +86499,109 @@
   ],
   "vue_le": "2026-10-09",
   "revue_le": "2026-10-16",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "casa-c4e77fa284b4",
+  "source": "casa",
+  "url": "https://www.immo-casa.fr/acheter-un-bien/maison-en-pierre-de-5-pieces-avec-dependance-a-boulon/",
+  "titre": "Maison en pierre de 5 pièces avec dépendance à Boulon",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 328000,
+  "surface_m2": 150.0,
+  "terrain_m2": 1100.0,
+  "pieces": 5,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Casa",
+  "agence_url": "https://immo-casa.fr",
+  "photo": "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791972037_VM1851_36_original.webp",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": true,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": true,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": "C",
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.immo-casa.fr/wp-content/uploads/2023/07/cropped-android-chrome-512x512-1-1.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2026/06/Photo-dequipe_06-2026-770x515.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791972036_VM1851_35_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791972026_VM1851_24_original-450x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1781531902_VM1539_10_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1780427851_VM1489_11_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1786456437_VM1728_14_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791979391_VM1865_48_original-400x270.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/2023/08/app-casa-300x249.png",
+   "https://www.immo-casa.fr/wp-content/uploads/2024/08/bloc-elite.png",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images-webp/1791972037_VM1851_36_original.webp",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972037_VM1851_36_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972036_VM1851_35_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972026_VM1851_24_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972030_VM1851_29_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972027_VM1851_25_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972029_VM1851_28_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972034_VM1851_33_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972023_VM1851_21_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972023_VM1851_22_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972018_VM1851_16_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972017_VM1851_15_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972019_VM1851_17_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972021_VM1851_19_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972013_VM1851_12_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972033_VM1851_32_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972032_VM1851_31_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972042_VM1851_40_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791972039_VM1851_38_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791980821_VM1851_42_original.jpg",
+   "https://www.immo-casa.fr/wp-content/uploads/feed/septeo/images/1791980824_VM1851_43_original.jpg"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86708,7 +86986,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/1/5/6/9/8/1/5/61569815r.jpg?DATEMAJ=30/09/2026-11:37:17"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86854,7 +87132,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/0/2/1/3/1/0/6/60213106q.jpg?DATEMAJ=16/03/2026-12:09:00"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86919,7 +87197,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/5/9/1/9/9/7/9/0/59199790e.jpg?DATEMAJ=16/09/2026-21:05:59"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -86996,7 +87274,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/1/3/3/3/8/4/7/61333847q.jpg?DATEMAJ=15/09/2026-21:55:22"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -87074,7 +87352,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/0/6/6/9/7/1/3/60669713r.jpg?DATEMAJ=15/09/2026-18:33:31"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -87376,7 +87654,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/1/4/3/2/1/8/8/61432188r.jpg?DATEMAJ=15/09/2026-23:15:08"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -87448,7 +87726,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/0/0/9/8/5/0/2/60098502l.jpg?DATEMAJ=16/09/2026-21:07:58"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -87678,7 +87956,7 @@
    "https://media.immo-facile.com/office2/53567/catalog/images/pr_p/6/0/9/0/3/9/8/4/60903984r.jpg?DATEMAJ=10/07/2026-09:42:44"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -88129,6 +88407,8 @@
   "densite_hab_km2": 652.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 140.4,
+   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -88138,9 +88418,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 140.4,
-   "nucleaire_nom": "Bugey"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencemassot-nouveau.com/imagesBien/s3/202/3066/c21_202_3066_7873_8_B1A53B03-B064-40DA-9A34-8C64EFCE9C38.jpg",
@@ -88166,7 +88444,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-08-14",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -88323,6 +88601,8 @@
   "densite_hab_km2": 2219.6,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 47.4,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -88332,9 +88612,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 47.4,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72465_8_363465D0-341F-41D8-917E-8501C15A7BDB.jpg",
@@ -88373,7 +88651,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 252000,
   "prix_baisse_le": "2026-10-18"
@@ -89040,7 +89318,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -89494,6 +89772,8 @@
   "densite_hab_km2": 42.6,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 140.2,
+   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -89503,9 +89783,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 140.2,
-   "nucleaire_nom": "Bugey"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencemassot-nouveau.com/imagesBien/s3/202/3066/c21_202_3066_7553_8_594BCF88-780A-456D-89E9-78850CF70A34.jpg",
@@ -89530,7 +89808,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 650000,
   "prix_baisse_le": "2026-09-18"
@@ -89819,7 +90097,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-08-23",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -90133,7 +90411,7 @@
   "region": "Bourgogne-Franche-Comté",
   "agence": "Century 21",
   "agence_url": "https://century21estagence.com",
-  "photo": "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_CB71C697-7BEA-4841-9EA3-12B3CD601CB5.jpg",
+  "photo": "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_32A593AE-FBC7-4C5C-BEF0-58185A989543.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -90163,7 +90441,7 @@
   "plusieurs_biens": false,
   "lat": 47.628692,
   "lon": 6.157979,
-  "altitude": 275.0,
+  "altitude": 288.0,
   "densite_hab_km2": 1647.1,
   "dpe": null,
   "risques": {
@@ -90171,10 +90449,10 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_CB71C697-7BEA-4841-9EA3-12B3CD601CB5.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_32A593AE-FBC7-4C5C-BEF0-58185A989543.jpg",
-   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_97B00B14-E7A6-448A-97F1-2989707AC6E7.jpg",
+   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_6F95514A-516E-42CD-BCDA-0533D049C7B5.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_16418702-7585-4673-AA57-BB7B894BAF0A.jpg",
+   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_97B00B14-E7A6-448A-97F1-2989707AC6E7.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_AC75DC88-5D3E-4B7E-9667-DE400B9832C9.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_F1940E2A-1736-4E4C-996A-D3AB6A6189C4.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_EF23043E-95A1-4E81-8E9D-8B8201224BB4.jpg",
@@ -90188,9 +90466,9 @@
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_6D8959C3-A19A-4F8A-AC3E-3F01DD7D01FB.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_6B4EFC31-F34E-487A-8E91-DFC2721FCFB3.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_3C094F95-3C84-4E9C-B48D-CB4285924978.jpg",
-   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_6F95514A-516E-42CD-BCDA-0533D049C7B5.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_D0F1229C-54C1-4572-AC6B-99FABAFA2CF3.jpg",
-   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_1_CB71C697-7BEA-4841-9EA3-12B3CD601CB5.jpg",
+   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_8_CB71C697-7BEA-4841-9EA3-12B3CD601CB5.jpg",
+   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11640_1_32A593AE-FBC7-4C5C-BEF0-58185A989543.jpg",
    "https://www.century21estagence.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
    "https://www.century21estagence.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
    "https://www.century21estagence.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
@@ -90215,7 +90493,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-10-05",
-  "revue_le": "2026-10-05",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -90368,6 +90646,8 @@
   "densite_hab_km2": 1182.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 38.6,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -90377,9 +90657,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 38.6,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19694_8_08535619-FA44-4D4B-B2CB-4E0E20814342.jpg",
@@ -90408,7 +90686,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-10-04",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -90920,7 +91198,7 @@
   "plusieurs_biens": false,
   "lat": 47.628692,
   "lon": 6.157979,
-  "altitude": 275.0,
+  "altitude": 288.0,
   "densite_hab_km2": 1647.1,
   "dpe": null,
   "risques": {
@@ -90929,10 +91207,10 @@
   },
   "photos": [
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_5A322AFA-E7D0-4A70-97B5-5F74F6AE156D.jpg",
+   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_71BB6CFC-9360-4979-9BA1-320567341DEF.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_2A2D9542-9ABE-4E17-AFBC-139F41019E8F.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_098E1E49-E512-46EF-87B0-B42B71655612.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_87DF8576-38D3-40C2-A98F-AD3F2F7EDE23.jpg",
-   "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_71BB6CFC-9360-4979-9BA1-320567341DEF.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_BEF5C9B5-4F98-4771-9E45-13633E850F99.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_AC97043A-5D36-4DD6-B12A-867932D43B0E.jpg",
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11492_8_4614F49D-365D-447D-BF5F-1D431B5FEF7C.jpg",
@@ -90969,7 +91247,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-01",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91021,7 +91299,7 @@
   "plusieurs_biens": false,
   "lat": 48.292817,
   "lon": 4.075149,
-  "altitude": 114.0,
+  "altitude": 106.0,
   "densite_hab_km2": 4670.4,
   "dpe": null,
   "risques": {
@@ -91065,7 +91343,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91121,6 +91399,8 @@
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 103.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -91130,9 +91410,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 103.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencedeleurope.com/imagesBien/s3/202/109/c21_202_109_6924_8_9F55A803-DD7B-4110-BC19-307A1EA15B58.jpg",
@@ -91167,7 +91445,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91403,10 +91681,12 @@
   "plusieurs_biens": false,
   "lat": 47.395476,
   "lon": 0.695848,
-  "altitude": 59.0,
+  "altitude": 57.0,
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -91416,9 +91696,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_12199_8_A290AD04-A4F3-4B46-9CFA-4CEF94C24F42.jpg",
@@ -91457,7 +91735,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-08-12",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 307000,
   "prix_baisse_le": "2026-09-05"
@@ -92889,6 +93167,8 @@
   "densite_hab_km2": 321.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 35.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -92898,9 +93178,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 35.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19441_8_5F9C78F7-9D14-48E2-861B-D39051FE66DC.jpg",
@@ -92930,7 +93208,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -92986,6 +93264,8 @@
   "densite_hab_km2": 1182.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 38.6,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -92995,9 +93275,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 38.6,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19223_8_58E2C028-A509-41B5-92CB-DAFF78C47940.jpg",
@@ -93027,7 +93305,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -94142,7 +94420,7 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 33.0,
+  "altitude": 24.0,
   "densite_hab_km2": 482.7,
   "dpe": null,
   "risques": {
@@ -94179,7 +94457,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -96614,7 +96892,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-09-02",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -96944,7 +97222,7 @@
   "plusieurs_biens": false,
   "lat": 47.628692,
   "lon": 6.157979,
-  "altitude": 275.0,
+  "altitude": 288.0,
   "densite_hab_km2": 1647.1,
   "dpe": null,
   "risques": {
@@ -96994,7 +97272,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -98648,7 +98926,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -99576,7 +99854,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 73.0,
+  "altitude": 74.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -99620,7 +99898,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 139000,
   "prix_baisse_le": "2026-09-08"
@@ -99792,7 +100070,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -99844,10 +100122,12 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 24.0,
+  "altitude": 33.0,
   "densite_hab_km2": 482.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 57.9,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -99857,9 +100137,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 57.9,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-arconance-honfleur.com/imagesBien/s3/202/3802/c21_202_3802_176_8_242F686C-36A6-4B91-9298-068C03962084.jpg",
@@ -99892,7 +100170,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-10-01",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -100648,7 +100926,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101049,7 +101327,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101878,7 +102156,7 @@
   "plusieurs_biens": false,
   "lat": 47.76545,
   "lon": 6.087293,
-  "altitude": 220.0,
+  "altitude": 223.0,
   "densite_hab_km2": 53.2,
   "dpe": null,
   "risques": {
@@ -101925,7 +102203,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102607,6 +102885,8 @@
   "densite_hab_km2": 872.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 92.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -102616,9 +102896,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 92.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_13952_8_EF6E29D7-AF2F-43BE-B33B-21C6363D9DEC.jpg",
@@ -102657,7 +102935,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102831,7 +103109,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102976,7 +103254,7 @@
   "plusieurs_biens": false,
   "lat": 48.618012,
   "lon": 6.177712,
-  "altitude": 261.0,
+  "altitude": 257.0,
   "densite_hab_km2": 710.3,
   "dpe": null,
   "risques": {
@@ -103012,7 +103290,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -103538,6 +103816,8 @@
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 103.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -103547,9 +103827,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 103.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencedeleurope.com/imagesBien/s3/202/109/c21_202_109_6725_8_9BF2314A-A7E5-4AB7-9E2F-4DBB1A42C546.jpg",
@@ -103578,7 +103856,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -104282,7 +104560,7 @@
   "titre": "maison à vendre - 6 pièces - 124.0 m2 - LE FRESNE CAMILLY - 14 - BASSE-NORMANDIE - Century 21 Bertin Immobilier",
   "description": null,
   "type_bien": "maison",
-  "prix": 307000,
+  "prix": 302000,
   "surface_m2": 124.0,
   "terrain_m2": 398.0,
   "pieces": 6,
@@ -104292,7 +104570,7 @@
   "region": "Normandie",
   "agence": "Century 21",
   "agence_url": "https://century21-bertin-caen.com",
-  "photo": "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_B0B1EE1A-D4D2-40F5-9974-38E036236B8E.jpg",
+  "photo": "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_A5507AB0-397C-4EAF-8C94-A52B093D2EF5.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -104322,7 +104600,7 @@
   "plusieurs_biens": false,
   "lat": 49.277464,
   "lon": -0.559365,
-  "altitude": 21.0,
+  "altitude": 23.0,
   "densite_hab_km2": 121.7,
   "dpe": null,
   "risques": {
@@ -104330,11 +104608,11 @@
    "nucleaire_nom": "Flamanville"
   },
   "photos": [
-   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_B0B1EE1A-D4D2-40F5-9974-38E036236B8E.jpg",
-   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_DABF1FD7-1C25-4876-8D39-0A376E4981E5.jpg",
-   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_1BBC5878-C130-4309-AAB5-1003DF65C62D.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_A5507AB0-397C-4EAF-8C94-A52B093D2EF5.jpg",
+   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_DABF1FD7-1C25-4876-8D39-0A376E4981E5.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_131D3E31-6712-4136-8E6E-0CF97ACD98B3.jpg",
+   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_1BBC5878-C130-4309-AAB5-1003DF65C62D.jpg",
+   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_B0B1EE1A-D4D2-40F5-9974-38E036236B8E.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_BF3D8325-4B2A-46FA-BA65-D59E891AAA52.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_EA8F6C5A-3AF9-4996-B06A-2C437999C3E0.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_BFAA5959-BA83-4809-8824-2897BD16223E.jpg",
@@ -104352,7 +104630,7 @@
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_98FACF6A-81BA-48E9-80CA-2D0E68C7ED6B.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_9A2932AF-F40E-4528-A5D6-405A61B4AD15.jpg",
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_8_479AEE10-442F-4E28-8394-26B29880415B.jpg",
-   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_1_B0B1EE1A-D4D2-40F5-9974-38E036236B8E.jpg",
+   "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3466_1_A5507AB0-397C-4EAF-8C94-A52B093D2EF5.jpg",
    "https://www.century21-bertin-caen.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
    "https://www.century21-bertin-caen.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
    "https://www.century21-bertin-caen.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
@@ -104369,10 +104647,10 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
+  "prix_precedent": 307000,
+  "prix_baisse_le": "2026-10-20"
  },
  {
   "id": "century-21-5f6a9193267e",
@@ -104586,10 +104864,12 @@
   "plusieurs_biens": false,
   "lat": 47.336276,
   "lon": 0.657551,
-  "altitude": 96.0,
+  "altitude": 97.0,
   "densite_hab_km2": 1182.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 38.6,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -104599,9 +104879,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 38.6,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19456_8_190D9EB5-B7EB-46C1-91E0-50B510762513.jpg",
@@ -104636,7 +104914,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -104688,7 +104966,7 @@
   "plusieurs_biens": false,
   "lat": 48.705083,
   "lon": 6.203966,
-  "altitude": 229.0,
+  "altitude": 231.0,
   "densite_hab_km2": 5406.9,
   "dpe": null,
   "risques": {
@@ -104735,7 +105013,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-09-14",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -105107,6 +105385,105 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "century-21-62fa5ca5bf61",
+  "source": "century-21",
+  "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/15931117992/",
+  "titre": "immeuble à vendre - 176.0 m2 - TROYES - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immobilier",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 320000,
+  "surface_m2": 176.0,
+  "terrain_m2": null,
+  "pieces": null,
+  "commune": "Troyes",
+  "code_postal": "10000",
+  "departement": "10",
+  "region": "Grand Est",
+  "agence": "Century 21",
+  "agence_url": "https://century21-martinot-immobilier-troyes.com",
+  "photo": "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_D3EF6674-4692-48B4-B10F-C5F4400D926B.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 48.292817,
+  "lon": 4.075149,
+  "altitude": 114.0,
+  "densite_hab_km2": 4670.4,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 48.0,
+   "nucleaire_nom": "Nogent-sur-Seine"
+  },
+  "photos": [
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_D3EF6674-4692-48B4-B10F-C5F4400D926B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_05BCFA2C-10E6-48A6-91FB-F50596364346.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_36F4DDEC-F9D1-4917-BE7E-A157340F2903.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_7F41BC71-7BEA-4DEE-AB84-10A1104F74BB.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_C6892002-A759-4AD0-8D1C-1F2BE809A73F.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_CB22EC6C-1D84-4DB0-A9DC-850A4715966C.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_FBED3F09-AE3F-44C7-B72C-0CDDDD9C4243.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_4D2B5A43-F175-4FF0-81DC-31D6A928A132.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_B9935859-5BFC-4809-BCE5-B6DEF0701D0A.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_4D48B107-73B9-47D5-BFD8-6E83FA223953.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_9CD1366F-F61B-4998-B428-B57CD7A31DFC.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_E619ECB4-3A01-4E90-B1E9-750C4ECA0788.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_74C2146E-770C-4CBA-82D3-3C29BC75D155.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_C96A2E5B-9075-4956-B80F-B30A087FC21B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_BED8A4AD-5655-4DBF-8812-D2321572D29B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_AF1688DC-84F6-4B2C-891C-69D22BF6CD47.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_8_21C70F37-046F-4ED7-9A2E-DA9BCF674759.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72123_1_D3EF6674-4692-48B4-B10F-C5F4400D926B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8377/5675",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8377/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8376/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8378/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8377/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8376/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8378/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8376/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8378/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8375/5675",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8379/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8375/5674",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8379/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8375/5676",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "century-21-6317a7f24a52",
   "source": "century-21",
   "url": "https://www.century21-infinity-lacroix-saint-ouen.com/trouver_logement/detail/15687793381/",
@@ -105157,6 +105534,8 @@
   "densite_hab_km2": 477.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 102.3,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -105166,9 +105545,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 102.3,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12550_8_F5F29198-A3B2-4077-8A28-F3738590CD6C.jpg",
@@ -105206,7 +105583,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
   ],
   "vue_le": "2026-09-27",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -105456,6 +105833,8 @@
   "densite_hab_km2": 1647.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 198.8,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -105465,9 +105844,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 198.8,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21estagence.com/imagesBien/s3/202/147/c21_202_147_11134_8_BAE652B3-9E44-41C1-B20A-C62FAC94BB67.jpg",
@@ -105512,7 +105889,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-10-05",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -105564,7 +105941,7 @@
   "plusieurs_biens": false,
   "lat": 48.758748,
   "lon": 6.125786,
-  "altitude": 234.0,
+  "altitude": 242.0,
   "densite_hab_km2": 492.9,
   "dpe": null,
   "risques": {
@@ -105607,7 +105984,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-10-04",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -106261,7 +106638,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 234000,
   "prix_baisse_le": "2026-10-13"
@@ -106727,7 +107104,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -106887,7 +107264,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 73.0,
+  "altitude": 74.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -106929,7 +107306,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-08-29",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 104000,
   "prix_baisse_le": "2026-10-16"
@@ -107261,7 +107638,7 @@
    "verger_potager": false,
    "serre": false,
    "grange_dependance": false,
-   "atelier": false,
+   "atelier": true,
    "troglodyte": false,
    "source": false,
    "prairie": false,
@@ -107323,7 +107700,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-10-05",
-  "revue_le": "2026-10-05",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -107379,6 +107756,8 @@
   "densite_hab_km2": 872.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 92.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -107388,9 +107767,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 92.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_15014_8_46A969B8-8120-4F21-88FD-D618FF3FDACF.jpg",
@@ -107423,7 +107800,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -107531,7 +107908,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-09-08",
-  "revue_le": "2026-09-27",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -108178,6 +108555,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -108187,9 +108566,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_12287_8_10F419B7-804B-41CF-9323-70032B8A5631.jpg",
@@ -108234,7 +108611,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-10-04",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -109698,7 +110075,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -109750,10 +110127,12 @@
   "plusieurs_biens": false,
   "lat": 50.077248,
   "lon": 2.599516,
-  "altitude": 137.0,
+  "altitude": 140.0,
   "densite_hab_km2": 55.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 99.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -109763,9 +110142,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 99.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-agence-albert.com/imagesBien/s3/202/3211/c21_202_3211_9657_8_261FEFF0-3961-4AF2-9E18-7131A265705F.jpg",
@@ -109809,7 +110186,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-08-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -109861,10 +110238,12 @@
   "plusieurs_biens": false,
   "lat": 46.84863,
   "lon": 4.637747,
-  "altitude": 236.0,
+  "altitude": 237.0,
   "densite_hab_km2": 125.2,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 126.5,
+   "nucleaire_nom": "Bugey",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -109874,9 +110253,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 126.5,
-   "nucleaire_nom": "Bugey"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencemassot-nouveau.com/imagesBien/s3/202/3066/c21_202_3066_8364_8_4EB956A8-1645-4E9E-BECF-C70061C6649A.jpg",
@@ -109914,7 +110291,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -110252,7 +110629,7 @@
   "plusieurs_biens": false,
   "lat": 48.718616,
   "lon": 6.190008,
-  "altitude": 258.0,
+  "altitude": 262.0,
   "densite_hab_km2": 1026.0,
   "dpe": null,
   "risques": {
@@ -110304,7 +110681,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-08-29",
-  "revue_le": "2026-09-11",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 490000,
   "prix_baisse_le": "2026-09-11"
@@ -110356,7 +110733,7 @@
   "plusieurs_biens": false,
   "lat": 47.057991,
   "lon": 4.827093,
-  "altitude": 267.0,
+  "altitude": 269.0,
   "densite_hab_km2": 35.0,
   "dpe": null,
   "risques": {
@@ -110396,7 +110773,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-09-05",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -110964,6 +111341,8 @@
   "densite_hab_km2": 1135.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 44.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -110973,9 +111352,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 44.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19439_8_727E3602-7223-46C0-A2E1-57D4671CC2F4.jpg",
@@ -111011,7 +111388,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -111306,7 +111683,7 @@
   ],
   "vue_le": "2026-08-10",
   "revue_le": "2026-10-18",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -112057,6 +112434,8 @@
   "densite_hab_km2": 1298.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 113.7,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -112066,9 +112445,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 113.7,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12581_8_DC99ECFF-7C0B-43FA-83BB-F7FB700248E0.jpg",
@@ -112101,7 +112478,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
   ],
   "vue_le": "2026-08-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -112361,10 +112738,12 @@
   "plusieurs_biens": false,
   "lat": 49.234294,
   "lon": 2.893527,
-  "altitude": 100.0,
+  "altitude": 102.0,
   "densite_hab_km2": 872.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 92.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -112374,9 +112753,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 92.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_14600_8_2765809C-CC1D-4ECB-86C4-7D2736304507.jpg",
@@ -112413,7 +112790,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -112504,7 +112881,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-10-01",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -112930,10 +113307,12 @@
   "plusieurs_biens": false,
   "lat": 47.332303,
   "lon": 0.717976,
-  "altitude": 93.0,
+  "altitude": 96.0,
   "densite_hab_km2": 653.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 42.8,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -112943,9 +113322,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 42.8,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19550_8_CE7B93ED-BC93-4E6A-9934-0752095919CF.jpg",
@@ -112978,7 +113355,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 349800,
   "prix_baisse_le": "2026-09-08"
@@ -113357,7 +113734,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-23",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -113546,7 +113923,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -113888,7 +114265,7 @@
   "plusieurs_biens": false,
   "lat": 46.573543,
   "lon": 1.991945,
-  "altitude": 225.0,
+  "altitude": 215.0,
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
@@ -113925,7 +114302,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -113981,6 +114358,8 @@
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 103.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -113990,9 +114369,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 103.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencedeleurope.com/imagesBien/s3/202/109/c21_202_109_6560_8_EFF5DE6A-CDF7-43EB-B772-2FBF35199C83.jpg",
@@ -114026,7 +114403,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -114180,6 +114557,8 @@
   "densite_hab_km2": 1298.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 113.7,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -114189,9 +114568,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 113.7,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12632_8_0C1F19B2-719A-400C-A25A-C6465B627DD5.jpg",
@@ -114231,7 +114608,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
   ],
   "vue_le": "2026-08-23",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 265000,
   "prix_baisse_le": "2026-10-18"
@@ -114677,7 +115054,7 @@
   "plusieurs_biens": false,
   "lat": 48.665254,
   "lon": 6.134211,
-  "altitude": 335.0,
+  "altitude": 339.0,
   "densite_hab_km2": 1481.0,
   "dpe": "A",
   "risques": {
@@ -114725,7 +115102,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -115066,6 +115443,8 @@
   "densite_hab_km2": 125.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 22.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -115075,9 +115454,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 22.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19549_8_C249C19C-68A3-423D-AF9B-EA53098CD61C.jpg",
@@ -115105,7 +115482,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-09-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -115255,10 +115632,12 @@
   "plusieurs_biens": false,
   "lat": 46.573543,
   "lon": 1.991945,
-  "altitude": 225.0,
+  "altitude": 215.0,
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 103.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -115268,9 +115647,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 103.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencedeleurope.com/imagesBien/s3/202/109/c21_202_109_6767_8_DBA1FD7C-F0C9-4B94-A208-D6DFAEAAB7AE.jpg",
@@ -115305,7 +115682,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -115791,6 +116168,105 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "century-21-95509b00aaaf",
+  "source": "century-21",
+  "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/16986747480/",
+  "titre": "maison à vendre - 7 pièces - 125.0 m2 - ST LYE - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immobilier",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 310000,
+  "surface_m2": 125.0,
+  "terrain_m2": null,
+  "pieces": 7,
+  "commune": "Saint-Lyé",
+  "code_postal": "10180",
+  "departement": "10",
+  "region": "Grand Est",
+  "agence": "Century 21",
+  "agence_url": "https://century21-martinot-immobilier-troyes.com",
+  "photo": "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_D8F32F79-F843-4DF9-B1C8-E6FEC87B20C7.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": true,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 48.350564,
+  "lon": 3.989855,
+  "altitude": 100.0,
+  "densite_hab_km2": 89.9,
+  "dpe": "B",
+  "risques": {
+   "nucleaire_km": 39.3,
+   "nucleaire_nom": "Nogent-sur-Seine"
+  },
+  "photos": [
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_D8F32F79-F843-4DF9-B1C8-E6FEC87B20C7.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_C5769127-D537-41CE-B298-8EB8E750A056.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_9916BABC-D1B2-42A2-87AC-DF9D2DB26BDD.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_A51EBCA8-18EB-4AD9-A38E-65DA945C979F.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_E2C52AF4-555C-4BCE-B3C8-527588CFCE0B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_8309DCBE-BFBA-462A-98F3-C5990AEC81D9.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_1D6E18A5-7194-48D4-B071-A31EE504A4BD.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_8441195E-9DCA-4295-A5F7-E319BBB600B6.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_B4966BFC-F4B5-4DBD-A32C-E41079DED3D7.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_D6A4BFD4-ED8C-4EC2-A448-6DD20B7D1BD8.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_2A1F1143-4683-42BD-AF6D-69DA880EE550.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_CF39935F-9D81-4D7B-83D2-D9D4887C706E.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_2D103BD4-0CA5-44F4-B572-F3A05FE91EB8.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_657E42F5-BE77-47AD-B286-3BB767B8181B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_1419D2FA-2061-468C-AE2B-95D833501909.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_11DAA071-1019-470C-A850-643DE90F315B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_8_3D637584-39C0-4CC0-997D-977CE3E827BF.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_72495_1_D8F32F79-F843-4DF9-B1C8-E6FEC87B20C7.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8377/5675",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8377/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8376/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8378/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8377/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8376/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8378/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8376/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8378/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8375/5675",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8379/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8375/5674",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8379/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8375/5676",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "century-21-957ca973acfd",
   "source": "century-21",
   "url": "https://www.century21-bertin-caen.com/trouver_logement/detail/13980403744/",
@@ -115931,6 +116407,8 @@
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 103.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -115940,9 +116418,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 103.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencedeleurope.com/imagesBien/s3/202/109/c21_202_109_6519_8_47156C16-7E8D-484E-BBBB-07631F5B44E9.jpg",
@@ -115972,7 +116448,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 144500,
   "prix_baisse_le": "2026-10-18"
@@ -116514,10 +116990,12 @@
   "plusieurs_biens": false,
   "lat": 47.395476,
   "lon": 0.695848,
-  "altitude": 57.0,
+  "altitude": 59.0,
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -116527,9 +117005,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_12284_8_BAD32CB0-1765-467A-8C25-013EFA7E0579.jpg",
@@ -116560,7 +117036,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -116789,10 +117265,12 @@
   "plusieurs_biens": false,
   "lat": 49.203411,
   "lon": -0.332375,
-  "altitude": 47.0,
+  "altitude": 49.0,
   "densite_hab_km2": 2204.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 100.9,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -116802,9 +117280,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 100.9,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3216_8_E8674D54-07CA-45B1-875A-3D253BE8FF69.jpg",
@@ -116850,7 +117326,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -117291,7 +117767,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-04",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -117399,7 +117875,7 @@
   "titre": "maison à vendre - 6 pièces - 128.8 m2 - ST CYR SUR LOIRE - 37 - CENTRE - Century 21 Centre Habitat",
   "description": null,
   "type_bien": "maison",
-  "prix": 547000,
+  "prix": 526000,
   "surface_m2": 128.8,
   "terrain_m2": null,
   "pieces": 6,
@@ -117443,6 +117919,8 @@
   "densite_hab_km2": 1263.4,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 42.2,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -117452,9 +117930,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 42.2,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_12301_8_A97D9633-5383-4E2F-AE34-5E8EFD05A2C4.jpg",
@@ -117513,10 +117989,10 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
+  "prix_precedent": 547000,
+  "prix_baisse_le": "2026-10-20"
  },
  {
   "id": "century-21-9f44a854679c",
@@ -117569,6 +118045,8 @@
   "densite_hab_km2": 4257.3,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -117578,9 +118056,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 104.4,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3479_8_238EA387-9D97-41DD-9592-7AA4C72D76DC.jpg",
@@ -117620,7 +118096,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-09-27",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -118061,10 +118537,12 @@
   "plusieurs_biens": false,
   "lat": 49.234294,
   "lon": 2.893527,
-  "altitude": 102.0,
+  "altitude": 100.0,
   "densite_hab_km2": 872.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 92.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -118074,9 +118552,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 92.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_13973_8_6AFBEAB0-53B4-417E-A52A-6E6146CC7EED.jpg",
@@ -118107,7 +118583,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -118841,10 +119317,12 @@
   "plusieurs_biens": false,
   "lat": 47.025352,
   "lon": 4.840893,
-  "altitude": 221.0,
+  "altitude": 222.0,
   "densite_hab_km2": 652.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 140.4,
+   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -118854,9 +119332,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 140.4,
-   "nucleaire_nom": "Bugey"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencemassot-nouveau.com/imagesBien/s3/202/3066/c21_202_3066_8365_8_A8D9463E-79E2-4D89-AF59-11F130C2A980.jpg",
@@ -118884,7 +119360,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -118940,6 +119416,8 @@
   "densite_hab_km2": 103.6,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 77.6,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -118949,9 +119427,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 77.6,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70428_8_6F746B76-EA2A-4235-9073-56FDE37FE418.jpg",
@@ -118994,7 +119470,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-08-23",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -119223,7 +119699,7 @@
   "plusieurs_biens": false,
   "lat": 48.253748,
   "lon": 6.410309,
-  "altitude": 302.0,
+  "altitude": 308.0,
   "densite_hab_km2": 306.6,
   "dpe": null,
   "risques": {
@@ -119281,7 +119757,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -119333,7 +119809,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 74.0,
+  "altitude": 73.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -119375,7 +119851,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 139000,
   "prix_baisse_le": "2026-09-27"
@@ -119572,7 +120048,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-09-08",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -119847,6 +120323,8 @@
   "densite_hab_km2": 108.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 106.5,
+   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -119856,9 +120334,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 106.5,
-   "nucleaire_nom": "Flamanville"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3290_8_6C8ADF87-7432-4045-B3B7-5DA1C00EDBC6.jpg",
@@ -119896,7 +120372,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -120049,6 +120525,8 @@
   "densite_hab_km2": 396.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 94.4,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -120058,9 +120536,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 94.4,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_2938_8_6E26F9BF-C64E-49CC-A8EE-AD09BB52511D.jpg",
@@ -120099,7 +120575,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-08-23",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -120303,7 +120779,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -121021,7 +121497,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 73.0,
+  "altitude": 74.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -121068,7 +121544,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -121704,6 +122180,8 @@
   "densite_hab_km2": 477.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 102.3,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -121713,9 +122191,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 102.3,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_11852_8_1A07C72A-6BE8-4190-B845-D8FA5207A7E3.jpg",
@@ -121756,7 +122232,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -121907,7 +122383,7 @@
   "plusieurs_biens": false,
   "lat": 48.170226,
   "lon": 6.484892,
-  "altitude": 443.0,
+  "altitude": 460.0,
   "densite_hab_km2": 543.5,
   "dpe": null,
   "risques": {
@@ -121947,7 +122423,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -122528,7 +123004,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -122864,6 +123340,8 @@
   "densite_hab_km2": 477.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 102.3,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -122873,9 +123351,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 102.3,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_15039_8_A82F8815-AD87-4033-8796-B5D3E981EB98.jpg",
@@ -122910,7 +123386,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -123168,10 +123644,12 @@
   "plusieurs_biens": false,
   "lat": 47.332303,
   "lon": 0.717976,
-  "altitude": 93.0,
+  "altitude": 96.0,
   "densite_hab_km2": 653.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 42.8,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -123181,9 +123659,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 42.8,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencegrandsud.com/imagesBien/s3/202/3116/c21_202_3116_19568_8_A53FB114-10CD-4A8D-A36E-1AD1A2A7C052.jpg",
@@ -123215,7 +123691,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8225/5739"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 349500,
   "prix_baisse_le": "2026-09-11"
@@ -124781,10 +125257,12 @@
   "plusieurs_biens": false,
   "lat": 49.288161,
   "lon": -0.309972,
-  "altitude": 7.0,
+  "altitude": 6.0,
   "densite_hab_km2": 405.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 93.0,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -124794,9 +125272,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 93.0,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-bertin-caen.com/imagesBien/s3/202/3450/c21_202_3450_3151_8_F5CC086D-03D7-46D0-B743-071E10A45568.jpg",
@@ -124841,7 +125317,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 599900,
   "prix_baisse_le": "2026-10-09"
@@ -125025,7 +125501,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-09-05",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 450000,
   "prix_baisse_le": "2026-10-09"
@@ -125081,6 +125557,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -125090,9 +125568,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_12040_8_AFDB469A-0D21-4EFF-97EA-4C55C91BD6FB.jpg",
@@ -125146,7 +125622,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -125298,7 +125774,7 @@
   "plusieurs_biens": false,
   "lat": 49.427428,
   "lon": 2.815584,
-  "altitude": 39.0,
+  "altitude": 42.0,
   "densite_hab_km2": 1298.7,
   "dpe": null,
   "risques": {
@@ -125352,7 +125828,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -125457,7 +125933,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-09-15",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -125611,10 +126087,12 @@
   "plusieurs_biens": false,
   "lat": 48.619336,
   "lon": 6.106616,
-  "altitude": 241.0,
+  "altitude": 232.0,
   "densite_hab_km2": 1468.4,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 89.0,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -125624,9 +126102,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 89.0,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-po-st-max.com/imagesBien/s3/202/2389/c21_202_2389_40762_8_417A53D5-2DAC-43B5-94B9-CC1A3EB2792A.jpg",
@@ -125662,10 +126138,103 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 234000,
   "prix_baisse_le": "2026-10-09"
+ },
+ {
+  "id": "century-21-c324ff0ebf79",
+  "source": "century-21",
+  "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/15330063517/",
+  "titre": "immeuble à vendre - 170.0 m2 - STE SAVINE - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immobilier",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 258000,
+  "surface_m2": 170.0,
+  "terrain_m2": null,
+  "pieces": null,
+  "commune": "Sainte-Savine",
+  "code_postal": "10300",
+  "departement": "10",
+  "region": "Grand Est",
+  "agence": "Century 21",
+  "agence_url": "https://century21-martinot-immobilier-troyes.com",
+  "photo": "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_7F01B54F-D170-4737-8967-ABC7A3C625EA.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 48.295636,
+  "lon": 4.035083,
+  "altitude": 114.0,
+  "densite_hab_km2": 1354.7,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 45.3,
+   "nucleaire_nom": "Nogent-sur-Seine"
+  },
+  "photos": [
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_7F01B54F-D170-4737-8967-ABC7A3C625EA.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_6D353C3E-1A23-4999-9A28-A821530F5704.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_167C0799-78E1-4FE4-9E80-7B6A6D751425.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_AED32C84-B2B7-42B5-9D06-C738C849D9FB.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_C9EEA5BA-89F1-4C3B-98E0-D6AF78E3749C.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_73138A96-20DA-4328-A807-C633A92C06EC.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_049FAAE5-3CEE-4450-99B6-4D338A179AE6.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_909E03DA-3CD6-4FA7-9C71-BB1533B462AF.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_B0858DDA-FD0C-4A0C-8936-9285237E3C5A.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_709CECEE-4F57-4168-A494-08316B055887.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_8_07472367-5957-46A9-95CA-49AB29C2926B.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_70828_1_7F01B54F-D170-4737-8967-ABC7A3C625EA.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-martinot-immobilier-troyes.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8377/5675",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8377/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8376/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8378/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8377/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8376/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8378/5674",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8376/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8378/5676",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8375/5675",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8379/5675",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8375/5674",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8379/5674",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8375/5676",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
  },
  {
   "id": "century-21-c44fb93d0d82",
@@ -126062,7 +126631,7 @@
   "plusieurs_biens": false,
   "lat": 46.573543,
   "lon": 1.991945,
-  "altitude": 225.0,
+  "altitude": 215.0,
   "densite_hab_km2": 664.1,
   "dpe": null,
   "risques": {
@@ -126104,7 +126673,110 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8284/5791"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-09",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "century-21-c67286b0ee83",
+  "source": "century-21",
+  "url": "https://www.century21-guyon-epinal.com/trouver_logement/detail/13792534341/",
+  "titre": "maison à vendre - 8 pièces - 167.0 m2 - EPINAL - 88 - LORRAINE - Century 21 Guyon Immobilier",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 349900,
+  "surface_m2": 167.0,
+  "terrain_m2": null,
+  "pieces": 8,
+  "commune": "Épinal",
+  "code_postal": "88000",
+  "departement": "88",
+  "region": "Grand Est",
+  "agence": "Century 21",
+  "agence_url": "https://century21-guyon-epinal.com",
+  "photo": "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_40FB5F5F-81A8-4209-9A0E-2C0760815B43.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 48.170226,
+  "lon": 6.484892,
+  "altitude": 460.0,
+  "densite_hab_km2": 543.5,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 139.9,
+   "nucleaire_nom": "Cattenom"
+  },
+  "photos": [
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_40FB5F5F-81A8-4209-9A0E-2C0760815B43.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_1C2C5555-CF33-4953-94D9-058DD3FA186C.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_F1B5D02A-E5C6-4EBB-828B-33D12FCA4B63.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_540869AA-5AB5-45BC-82B5-BCBEEABCE3CB.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_C13D866D-D7BF-47CF-8A25-696F7087C0C4.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_75F971E0-CC99-4ED4-AF71-A72347AA4C03.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_3F9FC12E-58E8-41DB-9958-D87160DFA373.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_7A254904-7220-4E23-96DC-4444BBEAEF82.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_9EC231C0-E75A-45BC-BDF4-6AF1BD724AA4.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_B08B46F9-F114-4AFB-8CBA-5C69793DB534.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_31569BEC-65A5-4D93-802A-D864558399DD.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_022AC4EF-0A89-4D34-85F2-9AF4B21947F6.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_9B427EA1-D415-4B71-9BC5-8093151B4C33.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_F7899043-3133-469A-AB9B-D8240A62B7B3.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_529134CD-D099-4635-A6FE-3B4D9499492D.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_1D92A603-09D5-44D7-9571-F20ED5E2F51E.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_709D7D71-A507-4E1B-BC4B-09C6C07D0741.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_048154AB-E0A8-4EDC-9BDF-0ABEC985A9F9.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_105F2CFA-DD6D-4132-A234-012D29D14452.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_61612CC5-8146-46B7-A2F5-22217CD95F7D.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_8_72C65A23-A371-4105-8922-A85BB93C49CB.jpg",
+   "https://www.century21-guyon-epinal.com/imagesBien/s3/202/3827/c21_202_3827_5050_1_40FB5F5F-81A8-4209-9A0E-2C0760815B43.jpg",
+   "https://www.century21-guyon-epinal.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-guyon-epinal.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-guyon-epinal.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-guyon-epinal.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8485/5683",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8485/5682",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8484/5683",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8486/5683",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8485/5684",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8484/5682",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8486/5682",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8484/5684",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8486/5684",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8483/5683",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8487/5683",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8483/5682",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8487/5682",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8483/5684",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8487/5684"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -126198,7 +126870,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-08-21",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -126463,10 +127135,12 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 33.0,
+  "altitude": 24.0,
   "densite_hab_km2": 482.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 57.9,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -126476,9 +127150,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 57.9,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-arconance-honfleur.com/imagesBien/s3/202/3802/c21_202_3802_166_8_873A5F05-F8BE-46B2-BE26-5A8AE45C2540.jpg",
@@ -126510,7 +127182,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -127227,7 +127899,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 74.0,
+  "altitude": 73.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -127267,7 +127939,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -127508,6 +128180,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -127517,9 +128191,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-centre-habitat-tours.com/imagesBien/s3/202/3194/c21_202_3194_11738_8_378905BB-7C60-41BB-9F8C-3F23058A15BB.jpg",
@@ -127563,7 +128235,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8225/5737"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 498000,
   "prix_baisse_le": "2026-09-05"
@@ -129182,7 +129854,7 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 24.0,
+  "altitude": 33.0,
   "densite_hab_km2": 482.7,
   "dpe": null,
   "risques": {
@@ -129213,7 +129885,7 @@
    "https://map3.mappy.net/map/1.0/slab/standard/256/14/8204/5598"
   ],
   "vue_le": "2026-09-02",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -129353,6 +130025,8 @@
   "densite_hab_km2": 776.2,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 49.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -129362,9 +130036,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 49.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-martinot-immobilier-troyes.com/imagesBien/s3/202/607/c21_202_607_71869_8_55E2ADBF-ACF0-46DF-ACDC-7EEBE1838F32.jpg",
@@ -129410,7 +130082,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8379/5676"
   ],
   "vue_le": "2026-09-14",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -130353,6 +131025,8 @@
   "densite_hab_km2": 872.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 92.1,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -130362,9 +131036,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 92.1,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21-vandome-crepy.com/imagesBien/s3/202/98/c21_202_98_14946_8_570437CD-45C5-4CAF-89D2-86A0E012F49A.jpg",
@@ -130396,7 +131068,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8325/5611"
   ],
   "vue_le": "2026-09-02",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 231000,
   "prix_baisse_le": "2026-10-16"
@@ -130674,6 +131346,93 @@
   "absences": 0,
   "prix_precedent": 345000,
   "prix_baisse_le": "2026-09-05"
+ },
+ {
+  "id": "century-21-dfbdbec07f5d",
+  "source": "century-21",
+  "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/17053966186/",
+  "titre": "commerce à vendre - 25.0 m2 - ESSEY LES NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 45000,
+  "surface_m2": 25.0,
+  "terrain_m2": null,
+  "pieces": null,
+  "commune": "Mont-de-Marsan",
+  "code_postal": "40000",
+  "departement": "40",
+  "region": null,
+  "agence": "Century 21",
+  "agence_url": "https://century21-joelpierre-nancy.com",
+  "photo": "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_D97ED072-CAED-4482-B821-83673EFB0AE1.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": true,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 43.891359,
+  "lon": -0.500182,
+  "altitude": 45.0,
+  "densite_hab_km2": 863.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 110.2,
+   "nucleaire_nom": "Golfech"
+  },
+  "photos": [
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_D97ED072-CAED-4482-B821-83673EFB0AE1.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_CA3B16E6-E14E-4CEC-9DA9-366B744DC56D.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_1BA0813E-5EE4-4AC8-9833-41652DA9BEFC.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_8ED0821A-3A13-4F35-95E7-35ED38C283FD.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_F57502B7-5F41-4D79-8DCD-01CFAA6F1C31.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_F944015F-ECA2-43DB-B317-074DBAF5884F.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_329DC2EA-2F43-4F53-813E-3CBAB57C2B2E.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_38BCF2A5-4D2B-48D7-9F9D-F68BD8C22067.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_FE4444C5-8D22-4FD7-A6D7-5FC6A37CAEDD.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_8_CDB51ED5-F821-4426-8A63-B313847CEDCA.jpg",
+   "https://www.century21-joelpierre-nancy.com/imagesBien/s3/202/48/c21_202_48_122214_1_D97ED072-CAED-4482-B821-83673EFB0AE1.jpg",
+   "https://www.century21-joelpierre-nancy.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-joelpierre-nancy.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-joelpierre-nancy.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-joelpierre-nancy.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8473/5647",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8473/5648",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8472/5647",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8474/5647",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8472/5648",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8474/5648",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8471/5647",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8475/5647",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8471/5648",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
  },
  {
   "id": "century-21-e001374fbf64",
@@ -130980,7 +131739,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8474/5722"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 219000,
   "prix_baisse_le": "2026-09-21"
@@ -131172,7 +131931,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-09-27",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -131677,6 +132436,113 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "century-21-e51ffe7dde68",
+  "source": "century-21",
+  "url": "https://www.century21-infinity-lacroix-saint-ouen.com/trouver_logement/detail/17021370673/",
+  "titre": "maison à vendre - 7 pièces - 162.9 m2 - LE MEUX - 60 - PICARDIE - Century 21 Infinity",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 399000,
+  "surface_m2": 162.9,
+  "terrain_m2": 729.0,
+  "pieces": 7,
+  "commune": "Le Meux",
+  "code_postal": "60880",
+  "departement": "60",
+  "region": "Hauts-de-France",
+  "agence": "Century 21",
+  "agence_url": "https://century21-infinity-lacroix-saint-ouen.com",
+  "photo": "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_F2FE51B0-A633-4DC5-97F5-90416FC5E3D7.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": true,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": true,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.367892,
+  "lon": 2.745127,
+  "altitude": 52.0,
+  "densite_hab_km2": 301.6,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 110.4,
+   "nucleaire_nom": "Nogent-sur-Seine"
+  },
+  "photos": [
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_F2FE51B0-A633-4DC5-97F5-90416FC5E3D7.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_C12E1CF9-C109-4884-9BDF-3CF72E829B71.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_C46B8D10-E705-49FC-A3B8-ED2A64F3BFE2.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_CDBCBF19-48CC-4CB7-936D-4D58CA8638C3.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_A9105075-29E6-4229-9127-BB1E41592EAB.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_C638D972-07E8-4E06-B941-A1094FCDBDAC.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_FA860ED0-ED6B-4D9D-90DC-18005ED7DA6C.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_6D2725EB-B7B2-486E-9258-1DDF0CFCD6B6.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_830BC2F8-847C-4C89-8498-DA9B3C5A5675.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_FB58AF8B-E5A2-46BD-AF0B-543CFCA9714D.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_37FB1B72-1C7C-4CB7-AAC9-BCD4D4406970.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_2BF8CF3B-1A2F-45F4-BE6D-0B12069C05B8.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_E42209CE-8EC4-4037-831C-39C00C454833.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_3C96804A-8A5A-479A-AC75-A269D608606D.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_34047D5B-1A24-486E-9CF8-D13B650B79BF.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_11383604-D111-49AA-B8B1-18F55B7A89BD.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_520BC2A8-9ED5-44F3-9D3A-E00BFF174A13.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_CECCA997-AA09-44FE-830B-A5EFB8EAA48E.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_30629702-91E5-4FBB-94C5-06A61DD14430.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_FE241559-5E9A-48CC-837E-BE9AF44BE5FA.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_8269064C-F12E-49C0-BDAD-5778C51C0194.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_8_A9C008B3-771E-4BEB-9087-3DBC3BF78907.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/imagesBien/s3/202/2237/c21_202_2237_12688_1_F2FE51B0-A633-4DC5-97F5-90416FC5E3D7.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.webp",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square@3x.webp",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/theme/v6/images/the-ad/mobile-century21_the_ad-estimation-2024@3x.jpg",
+   "https://www.century21-infinity-lacroix-saint-ouen.com/theme/v6/images/the-ad/century21_the_ad-estimation-2024-square.jpg",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8318/5601",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8319/5601",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8318/5600",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8319/5600",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8318/5602",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8319/5602",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8317/5601",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8320/5601",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8317/5600",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8320/5600",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8317/5602",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8320/5602",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8316/5601",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8321/5601",
+   "https://map1.mappy.net/map/1.0/slab/standard/256/14/8316/5600",
+   "https://map2.mappy.net/map/1.0/slab/standard/256/14/8321/5600",
+   "https://map3.mappy.net/map/1.0/slab/standard/256/14/8316/5602",
+   "https://map4.mappy.net/map/1.0/slab/standard/256/14/8321/5602"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "century-21-e5418d87e8f4",
   "source": "century-21",
   "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/15605753439/",
@@ -132020,7 +132886,7 @@
   "plusieurs_biens": false,
   "lat": 48.758748,
   "lon": 6.125786,
-  "altitude": 234.0,
+  "altitude": 242.0,
   "densite_hab_km2": 492.9,
   "dpe": null,
   "risques": {
@@ -132061,7 +132927,7 @@
    "https://map1.mappy.net/map/1.0/slab/standard/256/14/8476/5648"
   ],
   "vue_le": "2026-08-29",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 420000,
   "prix_baisse_le": "2026-09-11"
@@ -134275,10 +135141,12 @@
   "plusieurs_biens": false,
   "lat": 46.998451,
   "lon": 5.151324,
-  "altitude": 182.0,
+  "altitude": 181.0,
   "densite_hab_km2": 262.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 133.8,
+   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -134288,9 +135156,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 133.8,
-   "nucleaire_nom": "Bugey"
+   "source": "georisques"
   },
   "photos": [
    "https://www.century21agencemassot-nouveau.com/imagesBien/s3/202/3066/c21_202_3066_8341_8_5FF33DC6-3B8C-4EE3-9557-5D1C805ECE2E.jpg",
@@ -134319,7 +135185,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8414/5761"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -134371,7 +135237,7 @@
   "plusieurs_biens": false,
   "lat": 48.707292,
   "lon": 6.232347,
-  "altitude": 210.0,
+  "altitude": 217.0,
   "densite_hab_km2": 1505.4,
   "dpe": null,
   "risques": {
@@ -134406,7 +135272,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8475/5648"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -135353,7 +136219,7 @@
   "plusieurs_biens": false,
   "lat": 50.002051,
   "lon": 2.653772,
-  "altitude": 74.0,
+  "altitude": 73.0,
   "densite_hab_km2": 687.5,
   "dpe": null,
   "risques": {
@@ -135404,7 +136270,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8314/5557"
   ],
   "vue_le": "2026-09-08",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -135554,7 +136420,7 @@
   "plusieurs_biens": false,
   "lat": 49.203411,
   "lon": -0.332375,
-  "altitude": 47.0,
+  "altitude": 49.0,
   "densite_hab_km2": 2204.1,
   "dpe": null,
   "risques": {
@@ -135610,7 +136476,7 @@
    "https://map4.mappy.net/map/1.0/slab/standard/256/14/8177/5614"
   ],
   "vue_le": "2026-08-10",
-  "revue_le": "2026-10-09",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 495000,
   "prix_baisse_le": "2026-09-11"
@@ -135792,7 +136658,7 @@
    "https://champanelleimmo.com/vente/6-replonges/villa/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -135894,7 +136760,7 @@
    "https://champanelleimmo.com/vente/14-grieges/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-09-12",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -136080,7 +136946,7 @@
    "https://champanelleimmo.com/vente/90-pont-de-vaux/maison-de-village/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -136180,7 +137046,7 @@
    "https://champanelleimmo.com/vente/7-st-jean-sur-veyle/villa/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": 330000,
   "prix_baisse_le": "2026-09-24"
@@ -136232,7 +137098,7 @@
   "plusieurs_biens": false,
   "lat": 46.325582,
   "lon": 4.974932,
-  "altitude": 207.0,
+  "altitude": 208.0,
   "densite_hab_km2": 71.0,
   "dpe": "A",
   "risques": {
@@ -136276,7 +137142,7 @@
    "https://champanelleimmo.com/vente/24-st-cyr-sur-menthon/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -136482,7 +137348,7 @@
    "https://champanelleimmo.com/vente/4-bage-le-chatel/villa/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -136572,7 +137438,7 @@
    "https://champanelleimmo.com/vente/11-bage-la-ville/villa/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -136816,7 +137682,7 @@
   "plusieurs_biens": false,
   "lat": 46.325582,
   "lon": 4.974932,
-  "altitude": 207.0,
+  "altitude": 208.0,
   "densite_hab_km2": 71.0,
   "dpe": "A",
   "risques": {
@@ -136858,7 +137724,7 @@
    "https://champanelleimmo.com/vente/25-dommartin/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -137270,7 +138136,7 @@
   "plusieurs_biens": false,
   "lat": 49.120954,
   "lon": -0.291493,
-  "altitude": 47.0,
+  "altitude": 46.0,
   "densite_hab_km2": 469.4,
   "dpe": null,
   "risques": {
@@ -137338,7 +138204,7 @@
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/897e3eef7eb47809613ed9c9b998ce28/photo_27ad6104f6abcd115a92fa8ab121ce12.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -138169,6 +139035,120 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "clic-house-842ab076da55",
+  "source": "clic-house",
+  "url": "https://www.clichouse.fr/vente/14-calvados/218-dozule/a-vendre-dozule-plein-centre/6777-maison",
+  "titre": "- A VENDRE DOZULE PLEIN CENTRE -",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 149000,
+  "surface_m2": 106.0,
+  "terrain_m2": 20.0,
+  "pieces": null,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Clic house",
+  "agence_url": "https://clichouse.fr",
+  "photo": "https://clichousezenith.staticlbi.com/original/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1f16ad3724abcbc2b6cdc6e86ad4f253.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://clichousezenith.staticlbi.com/original/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1f16ad3724abcbc2b6cdc6e86ad4f253.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1f16ad3724abcbc2b6cdc6e86ad4f253.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_645eef5f4aafae25455efac86e32f2d5.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_04ac868ce6d3079cbc6b5a145014af8a.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_6dce77fbe783f62211c8877ff0f7047c.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_8dce49e0dd8f79f167ece19736ea9155.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f4b71bb8532b441eb0be313d35632779.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_756438b18de2ef7de0e25e0b88dc81b6.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_ccd540186fcf7c38517eadb1c2aed8cb.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1eccbaf5fcb506b9143fa4000e20df12.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_d64852d4d492b9cacf35974d8a6c7676.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_3930726923f745a371c5e654b077bfa6.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f33e0adb0ca39020307e616d2af23304.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_83f56f5863e88e808b4201b956fcd666.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1f16ad3724abcbc2b6cdc6e86ad4f253.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_645eef5f4aafae25455efac86e32f2d5.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_04ac868ce6d3079cbc6b5a145014af8a.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_6dce77fbe783f62211c8877ff0f7047c.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_8dce49e0dd8f79f167ece19736ea9155.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f4b71bb8532b441eb0be313d35632779.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_756438b18de2ef7de0e25e0b88dc81b6.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_ccd540186fcf7c38517eadb1c2aed8cb.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1eccbaf5fcb506b9143fa4000e20df12.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_d64852d4d492b9cacf35974d8a6c7676.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_3930726923f745a371c5e654b077bfa6.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f33e0adb0ca39020307e616d2af23304.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_83f56f5863e88e808b4201b956fcd666.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1f16ad3724abcbc2b6cdc6e86ad4f253.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_645eef5f4aafae25455efac86e32f2d5.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_04ac868ce6d3079cbc6b5a145014af8a.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_6dce77fbe783f62211c8877ff0f7047c.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_8dce49e0dd8f79f167ece19736ea9155.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f4b71bb8532b441eb0be313d35632779.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_756438b18de2ef7de0e25e0b88dc81b6.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_ccd540186fcf7c38517eadb1c2aed8cb.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_1eccbaf5fcb506b9143fa4000e20df12.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_d64852d4d492b9cacf35974d8a6c7676.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_3930726923f745a371c5e654b077bfa6.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_f33e0adb0ca39020307e616d2af23304.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/add883b238eb119109d20dbd613aab66/photo_83f56f5863e88e808b4201b956fcd666.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/08b4f5a6dadd23c24792c6a7cac68942/photo_145616b34d5b2fd97d6d8f7f50fe090f_Inc_0.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/9b81755ce8ef866d6b5c83978d426659/photo_a91643df366e10ca35366d0b69c81e40.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/a7223df2b01e2be495e100563485b6c2/photo_ccafdd6429d76bc3c6ef4e74ecc9efc5.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/d9978684ea58a2706029631478ec9db6/photo_3cbf5d9d7c20455d286a0ad15e32c4b8.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/08b4f5a6dadd23c24792c6a7cac68942/photo_145616b34d5b2fd97d6d8f7f50fe090f_Inc_0.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/9b81755ce8ef866d6b5c83978d426659/photo_a91643df366e10ca35366d0b69c81e40.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/a7223df2b01e2be495e100563485b6c2/photo_ccafdd6429d76bc3c6ef4e74ecc9efc5.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/d9978684ea58a2706029631478ec9db6/photo_3cbf5d9d7c20455d286a0ad15e32c4b8.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/08b4f5a6dadd23c24792c6a7cac68942/photo_145616b34d5b2fd97d6d8f7f50fe090f_Inc_0.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/9b81755ce8ef866d6b5c83978d426659/photo_a91643df366e10ca35366d0b69c81e40.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/a7223df2b01e2be495e100563485b6c2/photo_ccafdd6429d76bc3c6ef4e74ecc9efc5.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/d9978684ea58a2706029631478ec9db6/photo_3cbf5d9d7c20455d286a0ad15e32c4b8.jpg"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "clic-house-86b0b2bd1c34",
   "source": "clic-house",
   "url": "https://www.clichouse.fr/vente/14-calvados/75-bernieres-sur-mer/maison-t3-82-m2-bernieres-sur-mer-deux-minutes-de-la-mer-a-pied/6676-maison",
@@ -138274,7 +139254,7 @@
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/9b81755ce8ef866d6b5c83978d426659/photo_a91643df366e10ca35366d0b69c81e40.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139039,6 +140019,102 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "clic-house-d717ea8a1e4b",
+  "source": "clic-house",
+  "url": "https://www.clichouse.fr/vente/14-calvados/183-noyers-bocage/noyers-bocage-maison-f4-84-m2/6499-maison",
+  "titre": "NOYERS BOCAGE - Maison F4 84 m2",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 84.0,
+  "terrain_m2": null,
+  "pieces": null,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Clic house",
+  "agence_url": "https://clichouse.fr",
+  "photo": "https://clichousezenith.staticlbi.com/original/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_39b11522cefab3358f2f07a991666384.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": true,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://clichousezenith.staticlbi.com/original/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_39b11522cefab3358f2f07a991666384.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_39b11522cefab3358f2f07a991666384.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_2c3a17240fd54cb54d0e875cf54105fc.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_89aaa2233429f0bfb158e31a83c06c81.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_ee77c09639b50300c4af93ba5dd5b31b.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_446a25dfb3964f4ef9909388a2a1f290.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_c368095d5f8bc286340b4c87c33c433f.jpg",
+   "https://clichousezenith.staticlbi.com/1600xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_35ec0f9af1d640a7e85fb332dff9f4f7.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_39b11522cefab3358f2f07a991666384.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_2c3a17240fd54cb54d0e875cf54105fc.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_89aaa2233429f0bfb158e31a83c06c81.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_ee77c09639b50300c4af93ba5dd5b31b.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_446a25dfb3964f4ef9909388a2a1f290.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_c368095d5f8bc286340b4c87c33c433f.jpg",
+   "https://clichousezenith.staticlbi.com/980xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_35ec0f9af1d640a7e85fb332dff9f4f7.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_39b11522cefab3358f2f07a991666384.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_2c3a17240fd54cb54d0e875cf54105fc.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_89aaa2233429f0bfb158e31a83c06c81.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_ee77c09639b50300c4af93ba5dd5b31b.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_446a25dfb3964f4ef9909388a2a1f290.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_c368095d5f8bc286340b4c87c33c433f.jpg",
+   "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/0cdc184e2900bc7ea6d3700961a73452/photo_35ec0f9af1d640a7e85fb332dff9f4f7.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/6c532362d2d9986b849c0e26be96ac8a/photo_ebbff3edb3ef2ffba2becf041fb88527.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/0265adce4d20358e6e320210affeb926/photo_bbfb2e40ec57c5fefebaae22f3777f27.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/5436889ecd71e9c8e582d241a1343d22/photo_c8807944474195333a518dc12f466c73.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/6c532362d2d9986b849c0e26be96ac8a/photo_ebbff3edb3ef2ffba2becf041fb88527.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/0265adce4d20358e6e320210affeb926/photo_bbfb2e40ec57c5fefebaae22f3777f27.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/5436889ecd71e9c8e582d241a1343d22/photo_c8807944474195333a518dc12f466c73.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/6c532362d2d9986b849c0e26be96ac8a/photo_ebbff3edb3ef2ffba2becf041fb88527.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/0265adce4d20358e6e320210affeb926/photo_bbfb2e40ec57c5fefebaae22f3777f27.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/5436889ecd71e9c8e582d241a1343d22/photo_c8807944474195333a518dc12f466c73.jpg",
+   "https://www.clichouse.fr/i/poi/getIconBar?type=École primaire",
+   "https://www.clichouse.fr/i/poi/getIconBar?type=Bureau de poste",
+   "https://www.clichouse.fr/i/poi/getIconBar?type=Mairie"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "clic-house-de69b493b474",
   "source": "clic-house",
   "url": "https://www.clichouse.fr/vente/14-calvados/71-troarn/a-vendre-secteur-troarn/6640-maison",
@@ -139148,7 +140224,7 @@
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/f3bbe2eed7dea8de1c000fb085f7e48e/photo_09f37e2cbc7b058875aed7730b063ca9.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139598,7 +140674,7 @@
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/897e3eef7eb47809613ed9c9b998ce28/photo_27ad6104f6abcd115a92fa8ab121ce12.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139697,7 +140773,7 @@
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/897e3eef7eb47809613ed9c9b998ce28/photo_27ad6104f6abcd115a92fa8ab121ce12.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139721,7 +140797,7 @@
   "agence_url": "https://clichouse.fr",
   "photo": "https://clichousezenith.staticlbi.com/original/images/biens/1/1b5418fd31c9b7474a170bbd00ecf0ac/photo_affd0ea86ba885b80ae9850c4df43d61.jpg",
   "features": {
-   "cave": false,
+   "cave": true,
    "puits": false,
    "eau_proximite": false,
    "recuperation_pluie": false,
@@ -139731,7 +140807,7 @@
    "verger_potager": false,
    "serre": false,
    "grange_dependance": false,
-   "atelier": false,
+   "atelier": true,
    "troglodyte": false,
    "source": false,
    "prairie": false,
@@ -139808,19 +140884,19 @@
    "https://clichousezenith.staticlbi.com/580xauto/images/biens/1/1b5418fd31c9b7474a170bbd00ecf0ac/photo_fd5d5f5dd5821c9a902d38e7e71f8bce.jpg",
    "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/bd07a9520381abca8357616b703cf869/photo_41a1b4533af6bbc7c8925b13f012e41c.jpg",
    "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/06a9e1b1a73347ea4f69361902051680/photo_cd9ebb5ac78ff39b2e395d754c74f866.jpg",
-   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/240c0570fa04f3d524da8b562a04910a/photo_538e54fc1d7a5716c71a5445a8ed1e39.jpg",
    "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/32d9b8f0fbf379971d0de82cc084c388/photo_22fb9115e4482ff3a56adf4195dc9eb4.jpg",
+   "https://clichousezenith.staticlbi.com/500xauto/images/biens/1/3aaf394a55485b6a9c8ced5002eab363/photo_48b664c2c326b9faf40899c1af39321e.jpg",
    "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/bd07a9520381abca8357616b703cf869/photo_41a1b4533af6bbc7c8925b13f012e41c.jpg",
    "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/06a9e1b1a73347ea4f69361902051680/photo_cd9ebb5ac78ff39b2e395d754c74f866.jpg",
-   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/240c0570fa04f3d524da8b562a04910a/photo_538e54fc1d7a5716c71a5445a8ed1e39.jpg",
    "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/32d9b8f0fbf379971d0de82cc084c388/photo_22fb9115e4482ff3a56adf4195dc9eb4.jpg",
+   "https://clichousezenith.staticlbi.com/450xauto/images/biens/1/3aaf394a55485b6a9c8ced5002eab363/photo_48b664c2c326b9faf40899c1af39321e.jpg",
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/bd07a9520381abca8357616b703cf869/photo_41a1b4533af6bbc7c8925b13f012e41c.jpg",
    "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/06a9e1b1a73347ea4f69361902051680/photo_cd9ebb5ac78ff39b2e395d754c74f866.jpg",
-   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/240c0570fa04f3d524da8b562a04910a/photo_538e54fc1d7a5716c71a5445a8ed1e39.jpg",
-   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/32d9b8f0fbf379971d0de82cc084c388/photo_22fb9115e4482ff3a56adf4195dc9eb4.jpg"
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/32d9b8f0fbf379971d0de82cc084c388/photo_22fb9115e4482ff3a56adf4195dc9eb4.jpg",
+   "https://clichousezenith.staticlbi.com/350xauto/images/biens/1/3aaf394a55485b6a9c8ced5002eab363/photo_48b664c2c326b9faf40899c1af39321e.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-13",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139930,7 +141006,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/2f6ce2af2d8b186e2a9ae3aa7c78f393/photo_41c4a2e5ce4f35af29477ef6494ed6b2.jpg"
   ],
   "vue_le": "2026-10-01",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -139982,7 +141058,7 @@
   "plusieurs_biens": false,
   "lat": 48.798677,
   "lon": 6.104896,
-  "altitude": 200.0,
+  "altitude": 193.0,
   "densite_hab_km2": 154.2,
   "dpe": null,
   "risques": {
@@ -140038,7 +141114,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/26ffd16ba158085b4584d9161f9f3675/photo_d243cd54664890d5c33304b4fe6b1dac.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140138,7 +141214,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/3bbe7defccc3620de01fa990295f287e/photo_ff7d4a90bff7cdf9e8f62516716b70a6.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140190,7 +141266,7 @@
   "plusieurs_biens": false,
   "lat": 48.678031,
   "lon": 5.900596,
-  "altitude": 202.0,
+  "altitude": 206.0,
   "densite_hab_km2": 510.7,
   "dpe": null,
   "risques": {
@@ -140240,8 +141316,8 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/05b308743a316a94b01a2c55bdf14c8e/photo_30143048b31239fd7edc0a156f417fbc.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-16",
-  "absences": 1,
+  "revue_le": "2026-10-20",
+  "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -140292,7 +141368,7 @@
   "plusieurs_biens": false,
   "lat": 48.648269,
   "lon": 6.241429,
-  "altitude": 210.0,
+  "altitude": 216.0,
   "densite_hab_km2": 532.1,
   "dpe": null,
   "risques": {
@@ -140362,7 +141438,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/2f6ce2af2d8b186e2a9ae3aa7c78f393/photo_41c4a2e5ce4f35af29477ef6494ed6b2.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140458,7 +141534,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/3dd17195aad708ef21b4f9eb4350875a/photo_7d09348594e5d81bb7ec84df56901535.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140510,7 +141586,7 @@
   "plusieurs_biens": false,
   "lat": 48.678031,
   "lon": 5.900596,
-  "altitude": 202.0,
+  "altitude": 206.0,
   "densite_hab_km2": 510.7,
   "dpe": null,
   "risques": {
@@ -140542,7 +141618,7 @@
    "https://concept-immo54.fr/vente/3-toul/maison/images/google.png"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140594,7 +141670,7 @@
   "plusieurs_biens": false,
   "lat": 48.757942,
   "lon": 6.083109,
-  "altitude": 226.0,
+  "altitude": 245.0,
   "densite_hab_km2": 221.1,
   "dpe": null,
   "risques": {
@@ -140662,7 +141738,7 @@
    "https://ci-sainzerais.staticlbi.com/original/images/biens/1/2f6ce2af2d8b186e2a9ae3aa7c78f393/photo_41c4a2e5ce4f35af29477ef6494ed6b2.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140714,7 +141790,7 @@
   "plusieurs_biens": false,
   "lat": 48.619336,
   "lon": 6.106616,
-  "altitude": 241.0,
+  "altitude": 232.0,
   "densite_hab_km2": 1468.4,
   "dpe": "D",
   "risques": {
@@ -140744,7 +141820,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -140796,7 +141872,7 @@
   "plusieurs_biens": false,
   "lat": 49.117503,
   "lon": 5.09999,
-  "altitude": 206.0,
+  "altitude": 213.0,
   "densite_hab_km2": 21.0,
   "dpe": "E",
   "risques": {
@@ -140827,7 +141903,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -141174,7 +142250,7 @@
   "plusieurs_biens": false,
   "lat": 48.678031,
   "lon": 5.900596,
-  "altitude": 202.0,
+  "altitude": 206.0,
   "densite_hab_km2": 510.7,
   "dpe": "C",
   "risques": {
@@ -141195,7 +142271,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -141427,7 +142503,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -141500,7 +142576,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -141697,7 +142773,7 @@
   "plusieurs_biens": false,
   "lat": 48.679622,
   "lon": 5.790418,
-  "altitude": 243.0,
+  "altitude": 239.0,
   "densite_hab_km2": 102.2,
   "dpe": null,
   "risques": {
@@ -141727,7 +142803,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -141800,7 +142876,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142017,7 +143093,7 @@
   "plusieurs_biens": false,
   "lat": 48.678031,
   "lon": 5.900596,
-  "altitude": 202.0,
+  "altitude": 206.0,
   "densite_hab_km2": 510.7,
   "dpe": "E",
   "risques": {
@@ -142048,7 +143124,7 @@
    "https://img.netty.immo/company55084bsd/assets/60075b3e1753179575@2560x1200.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142294,7 +143370,7 @@
   "plusieurs_biens": false,
   "lat": 49.521585,
   "lon": 5.768938,
-  "altitude": 319.0,
+  "altitude": 300.0,
   "densite_hab_km2": 2877.3,
   "dpe": "A",
   "risques": {
@@ -142324,7 +143400,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/1-longwy/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142376,7 +143452,7 @@
   "plusieurs_biens": false,
   "lat": 49.521585,
   "lon": 5.768938,
-  "altitude": 300.0,
+  "altitude": 319.0,
   "densite_hab_km2": 2877.3,
   "dpe": "A",
   "risques": {
@@ -142423,7 +143499,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/34-villers-la-chevre/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142475,7 +143551,7 @@
   "plusieurs_biens": false,
   "lat": 49.521585,
   "lon": 5.768938,
-  "altitude": 300.0,
+  "altitude": 319.0,
   "densite_hab_km2": 2877.3,
   "dpe": "A",
   "risques": {
@@ -142498,7 +143574,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/1-longwy/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142550,7 +143626,7 @@
   "plusieurs_biens": false,
   "lat": 49.521585,
   "lon": 5.768938,
-  "altitude": 300.0,
+  "altitude": 319.0,
   "densite_hab_km2": 2877.3,
   "dpe": "A",
   "risques": {
@@ -142593,7 +143669,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/17-rehon/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142645,7 +143721,7 @@
   "plusieurs_biens": false,
   "lat": 49.521585,
   "lon": 5.768938,
-  "altitude": 319.0,
+  "altitude": 300.0,
   "densite_hab_km2": 2877.3,
   "dpe": "A",
   "risques": {
@@ -142682,7 +143758,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/11-herserange/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142846,7 +143922,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/18-saulnes/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -142898,7 +143974,7 @@
   "plusieurs_biens": false,
   "lat": 49.530732,
   "lon": 5.819212,
-  "altitude": 290.0,
+  "altitude": 296.0,
   "densite_hab_km2": 561.4,
   "dpe": "A",
   "risques": {
@@ -142937,7 +144013,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/13-lexy/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143036,7 +144112,7 @@
    "https://www.coup2coeurimmobilier.fr/vente/9-gorcy/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143512,7 +144588,7 @@
    "https://www.cvimmobilier.fr/vente/21-la-haye-malherbe/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143564,7 +144640,7 @@
   "plusieurs_biens": false,
   "lat": 49.216109,
   "lon": 1.158099,
-  "altitude": 35.0,
+  "altitude": 38.0,
   "densite_hab_km2": 691.5,
   "dpe": "A",
   "risques": {
@@ -143586,8 +144662,8 @@
    "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_06a4e34a51c469dff67f75cf2c23b058.png",
    "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_32b2d2f1452b24d010e2664542dbc03b.png",
    "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_9711c50e4bdac7aa6c483f32b4aee6b6.png",
-   "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/4cf421e59303cea1614a39be68a209f9/photo_0d28cfdfaa862897cf26a5687a44555c.png",
    "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/33183b8886ddd9a0f4c4ae332c97b299/photo_fcb89329c810ad5bf990cb5046225856.jpg",
+   "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/59f5beb13eedefc1169f646fb157b22a/photo_a5c548dfa5b50e876586d502d1e63b1a.jpg",
    "https://cvimmobilier.staticlbi.com/768xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_e4765432073d49eba4ac69d6d9d7d7a5.png",
    "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_e4765432073d49eba4ac69d6d9d7d7a5.png",
    "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/405f8a8b3daa6b71f81ba3390fc4929a/photo_3c0a459c1bb5b944e330f5b2f6f34282.png",
@@ -143608,7 +144684,7 @@
    "https://www.cvimmobilier.fr/vente/23-quatremare/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143806,7 +144882,7 @@
    "https://www.cvimmobilier.fr/vente/13-st-pierre-du-vauvray/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143913,7 +144989,7 @@
    "https://www.cvimmobilier.fr/vente/1-louviers/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -143965,7 +145041,7 @@
   "plusieurs_biens": false,
   "lat": 49.216109,
   "lon": 1.158099,
-  "altitude": 38.0,
+  "altitude": 35.0,
   "densite_hab_km2": 691.5,
   "dpe": "A",
   "risques": {
@@ -144022,7 +145098,121 @@
    "https://www.cvimmobilier.fr/vente/36-hondouville/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-21",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "cv-immobilier-93996a20b61f",
+  "source": "cv-immobilier",
+  "url": "https://www.cvimmobilier.fr/vente/392-st-pierre-les-elbeuf/maison/2788-maison-d-architecte-familiale-saint-pierre-les-elbeuf",
+  "titre": "Maison 7pièce(s) 5chambre(s) 185 m² Saint-Pierre-lès-Elbeuf (76320)",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 340000,
+  "surface_m2": 185.0,
+  "terrain_m2": 2600.0,
+  "pieces": 7,
+  "commune": "Caudebec-lès-Elbeuf",
+  "code_postal": "76320",
+  "departement": "76",
+  "region": "Normandie",
+  "agence": "Cv Immobilier",
+  "agence_url": "https://cvimmobilier.fr",
+  "photo": "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": true,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": true,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.282493,
+  "lon": 1.022736,
+  "altitude": 14.0,
+  "densite_hab_km2": 2865.6,
+  "dpe": "A",
+  "risques": {
+   "nucleaire_km": 69.8,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://cvimmobilier.staticlbi.com/600xauto/images/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+   "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_5b258b422983cac7830b1ba94ee019be.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_aced46d15b093e4ec48df150d9caae89.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_24ba27de4f6a919e8cd70aae5e58890e.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_9b361cb5473b1b26e7199d330489f9ee.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_544063fc66c0a69c44dbf45b1bd1aa71.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_d6b625735e0e3aff68b59196770ed79c.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_79e7797fcf9be32165e926667ddb3818.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_3631fa300be718779e685a7f00a62e2f.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_6ac12070eb3ca6819565792ca3aeaf78.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_65303c73cc85b3ec6eec63d4bf7dafaf.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_a62b0093a7a8eea0f42ecb1709a4620a.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_2bc15276d0f55a403f6ebbb88b832ae4.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_fd928baf0978cf075dcffe66b5cbee5e.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_48759ce8a00a910a2f893a44e2a80294.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_87ac8a47de18fe33287a2869a653491d.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_50cefce835dc540a551282cb39732092.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_87d2aad9d87436e0cda2f6bce814be4a.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_0d5bb3e05380da6787431c04b5c0b82b.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_3f98a4fb387fecf92322e78297665a70.png",
+   "https://cvimmobilier.staticlbi.com/1600xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_c6dab576e45d1af4c32e64cb2c7b316a.png",
+   "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/3c2e26169be9e171b725e28bd42969ec/photo_54bffcb526e6ebfed0ff9a192084ee42.png",
+   "https://cvimmobilier.staticlbi.com/1200xauto/images/biens/1/7f29748f2d4d0eafd48c893a4f8f216b/photo_d1ef1fbc62396cbef2d1b4aa91856d6c.png",
+   "https://cvimmobilier.staticlbi.com/768xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_ecef67936b3955e7b0a90d9e45565632.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_5b258b422983cac7830b1ba94ee019be.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_aced46d15b093e4ec48df150d9caae89.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_24ba27de4f6a919e8cd70aae5e58890e.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_9b361cb5473b1b26e7199d330489f9ee.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_544063fc66c0a69c44dbf45b1bd1aa71.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_d6b625735e0e3aff68b59196770ed79c.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_79e7797fcf9be32165e926667ddb3818.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_3631fa300be718779e685a7f00a62e2f.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_6ac12070eb3ca6819565792ca3aeaf78.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_65303c73cc85b3ec6eec63d4bf7dafaf.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_a62b0093a7a8eea0f42ecb1709a4620a.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_2bc15276d0f55a403f6ebbb88b832ae4.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_fd928baf0978cf075dcffe66b5cbee5e.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_48759ce8a00a910a2f893a44e2a80294.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_87ac8a47de18fe33287a2869a653491d.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_50cefce835dc540a551282cb39732092.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_87d2aad9d87436e0cda2f6bce814be4a.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_0d5bb3e05380da6787431c04b5c0b82b.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_3f98a4fb387fecf92322e78297665a70.png",
+   "https://cvimmobilier.staticlbi.com/160xauto/images/biens/1/b3384dba859a6f737ca388697a65349e/photo_c6dab576e45d1af4c32e64cb2c7b316a.png",
+   "https://cvimmobilier.staticlbi.com/original/images/agences/1_913672966bace7ba89155f3be925a2b0.jpg",
+   "https://www.cvimmobilier.fr/vente/392-st-pierre-les-elbeuf/maison/images/modules/home/1.jpg",
+   "https://www.cvimmobilier.fr/vente/392-st-pierre-les-elbeuf/maison/images/modules/home/2.jpg",
+   "https://www.cvimmobilier.fr/vente/392-st-pierre-les-elbeuf/maison/images/modules/partners/interkab_white.png",
+   "https://www.cvimmobilier.fr/vente/392-st-pierre-les-elbeuf/maison/images/modules/partners/fnaim.png"
+  ],
+  "vue_le": "2026-10-20",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144129,7 +145319,7 @@
    "https://www.cvimmobilier.fr/vente/17-amfreville-sur-iton/propriete/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144226,7 +145416,7 @@
    "https://www.cvimmobilier.fr/vente/732-terres-de-bord/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144374,7 +145564,7 @@
   "plusieurs_biens": false,
   "lat": 50.209724,
   "lon": 1.773387,
-  "altitude": 25.0,
+  "altitude": 21.0,
   "densite_hab_km2": 75.7,
   "dpe": "C",
   "risques": {
@@ -144395,7 +145585,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144467,7 +145657,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144665,7 +145855,7 @@
   "plusieurs_biens": false,
   "lat": 49.985918,
   "lon": 1.556299,
-  "altitude": 36.0,
+  "altitude": 35.0,
   "densite_hab_km2": 242.7,
   "dpe": "D",
   "risques": {
@@ -144686,7 +145876,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144738,7 +145928,7 @@
   "plusieurs_biens": false,
   "lat": 50.105799,
   "lon": 1.828902,
-  "altitude": 7.0,
+  "altitude": 8.0,
   "densite_hab_km2": 853.4,
   "dpe": "G",
   "risques": {
@@ -144758,7 +145948,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144810,7 +146000,7 @@
   "plusieurs_biens": false,
   "lat": 50.105799,
   "lon": 1.828902,
-  "altitude": 8.0,
+  "altitude": 7.0,
   "densite_hab_km2": 853.4,
   "dpe": "D",
   "risques": {
@@ -144831,7 +146021,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144883,7 +146073,7 @@
   "plusieurs_biens": false,
   "lat": 50.105799,
   "lon": 1.828902,
-  "altitude": 7.0,
+  "altitude": 8.0,
   "densite_hab_km2": 853.4,
   "dpe": "E",
   "risques": {
@@ -144903,7 +146093,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -144955,7 +146145,7 @@
   "plusieurs_biens": false,
   "lat": 50.086363,
   "lon": 1.542594,
-  "altitude": 86.0,
+  "altitude": 84.0,
   "densite_hab_km2": 487.9,
   "dpe": "E",
   "risques": {
@@ -144975,7 +146165,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -145095,7 +146285,7 @@
   "plusieurs_biens": false,
   "lat": 49.968574,
   "lon": 1.936719,
-  "altitude": 22.0,
+  "altitude": 24.0,
   "densite_hab_km2": 88.8,
   "dpe": "G",
   "risques": {
@@ -145116,7 +146306,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-05",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -145212,7 +146402,7 @@
   "id": "damonte-immobilier-1a42be7ed8cf",
   "source": "damonte-immobilier",
   "url": "https://www.yves-damonte.fr/vente-immobiliere/biens-de-prestige",
-  "titre": "Biens de Prestige à Vendre Troyes &amp;&nbsp;Aube&nbsp;|&nbsp;Damonte Immobilier",
+  "titre": "Biens de Prestige à Vendre Troyes & Aube | Damonte Immobilier",
   "description": null,
   "type_bien": "maison",
   "prix": null,
@@ -145295,7 +146485,7 @@
    "https://c.tile.openstreetmap.org/12/2096/1419.png"
   ],
   "vue_le": "2026-10-01",
-  "revue_le": "2026-10-16",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -145388,7 +146578,7 @@
   ],
   "vue_le": "2026-08-12",
   "revue_le": "2026-10-16",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -145701,7 +146891,7 @@
   "plusieurs_biens": false,
   "lat": 47.430616,
   "lon": 0.952149,
-  "altitude": 56.0,
+  "altitude": 54.0,
   "densite_hab_km2": 170.7,
   "dpe": null,
   "risques": {
@@ -145786,7 +146976,7 @@
    "https://denorayimmobilier.staticlbi.com/580x580/images/biens/1/9f4949759d396e2b7e9439257cfe83eb/photo_06d7f5fe936ad94e98d2d112c78fc405.jpg"
   ],
   "vue_le": "2026-10-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -145951,7 +147141,7 @@
   "plusieurs_biens": false,
   "lat": 47.430616,
   "lon": 0.952149,
-  "altitude": 54.0,
+  "altitude": 56.0,
   "densite_hab_km2": 170.7,
   "dpe": null,
   "risques": {
@@ -146030,7 +147220,7 @@
    "https://denorayimmobilier.staticlbi.com/580x580/images/biens/1/897929817ca59d48145bc887e15d7000/photo_c4ac71f7fa7a1e771b962ecdcfe1d02a.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -146082,7 +147272,7 @@
   "plusieurs_biens": false,
   "lat": 47.430616,
   "lon": 0.952149,
-  "altitude": 54.0,
+  "altitude": 56.0,
   "densite_hab_km2": 170.7,
   "dpe": null,
   "risques": {
@@ -146161,7 +147351,7 @@
    "https://denorayimmobilier.staticlbi.com/580x580/images/biens/1/4a48f58afb1e67e2bb9a8b60be8da867/photo_46eeafe0291e032e4fdc8a4537c9948a.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -148094,7 +149284,7 @@
    "https://denorayimmobilier.staticlbi.com/580x580/images/biens/1/9b0bcf8e89fb68a92dca40d07d8a1113/photo_9e0b8319fa21918a41ae76241331da76.jpg"
   ],
   "vue_le": "2026-10-10",
-  "revue_le": "2026-10-18",
+  "revue_le": "2026-10-20",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
