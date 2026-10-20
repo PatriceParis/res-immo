@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 20.0,
-  "departements": 33,
-  "communes": 16182
+  "seconde": 2.3,
+  "departements": 109,
+  "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 20.0,
+  "seconde": 2.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,251 +21,205 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 20.0,
+  "seconde": 2.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 21.7,
+  "seconde": 4.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.3,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 23.3,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.6,
+  "seconde": 5.9,
   "reseau": "capifrance",
-  "connues": 13026,
-  "ecartees": 1233
+  "connues": 13401,
+  "ecartees": 1489
  },
  {
   "etape": "reseau_debut",
-  "seconde": 23.6,
+  "seconde": 5.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 23.8,
+  "seconde": 6.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.5,
+  "seconde": 17.5,
   "reseau": "iad",
-  "n": 93415,
+  "n": 94150,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.4,
+  "seconde": 19.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.7,
+  "seconde": 19.9,
   "reseau": "iad",
-  "connues": 13026,
-  "ecartees": 1233
+  "connues": 13401,
+  "ecartees": 1489
  },
  {
   "etape": "departement",
-  "seconde": 156.1,
+  "seconde": 162.9,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 7,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 7,
-   "vendu": 14,
-   "ecarte": 29,
-   "illisible": 0
-  },
-  "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 2,
-   "hors_perimetre": 26
-  },
-  "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison 1 pièce de 20 m² à Charmoy (89400)",
-   "hors_perimetre": "Maison de ville 4 pièces de 85 m² à Saint-Germain-lès-Arpajon (91180)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 262.8,
-  "reseau": "iad",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 8,
-   "ecarte": 40,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 30,
-   "prix_trop_haut": 10
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 2 pièces de 64 m² à Saint-Pierre-du-Mont (40280)",
-   "prix_trop_haut": "Maison de ville 1 pièce de 246 m² à Honfleur (14600)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 369.8,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 13,
-   "ecarte": 35,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 34
-  },
-  "exemples": {
-   "location": "Maison 7 pièces de 154 m² à Chaumont (52000)",
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 498.8,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 50,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 19,
-   "ecarte": 26,
+   "garde": 10,
+   "vendu": 27,
+   "ecarte": 13,
    "illisible": 0
   },
   "motifs": {
    "location": 3,
-   "hors_perimetre": 15,
-   "prix_trop_haut": 8
+   "hors_perimetre": 9,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 4 pièces de 85 m² à Betz-le-Château (37600)",
-   "hors_perimetre": "Maison 4 pièces de 67 m² à La Ferrière (85280)",
-   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+   "location": "Maison 3 pièces de 52 m² à Boulogne-sur-Mer (62200)",
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
+   "prix_trop_haut": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 598.8,
+  "seconde": 320.6,
   "reseau": "iad",
-  "departement": "54",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 0,
+  "gardes": 10,
   "tronquee": true,
   "etats": {
-   "garde": 0,
-   "vendu": 9,
-   "ecarte": 41,
+   "garde": 10,
+   "vendu": 10,
+   "ecarte": 30,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 39,
-   "prix_trop_haut": 2
+   "hors_perimetre": 30
   },
   "exemples": {
-   "hors_perimetre": "Appartement 1 pièce de 100 m² à Montreux-Château (90130)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
+   "hors_perimetre": "Maison 1 pièce de 18 m² à La Rochelle (17000)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 623.0,
+  "seconde": 564.5,
   "reseau": "iad",
-  "departement": "55",
-  "visitees": 12,
-  "gardes": 0,
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 31,
   "tronquee": true,
   "etats": {
-   "garde": 0,
+   "garde": 31,
    "vendu": 5,
-   "ecarte": 7,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 7
+   "hors_perimetre": 14
   },
   "exemples": {
-   "hors_perimetre": "Maison de village 3 pièces de 125 m² à Verdun-sur-Garonne (82600)"
+   "hors_perimetre": "Maison 3 pièces de 114 m² à Étaules (17750)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 604.5,
+  "reseau": "iad",
+  "departement": "25",
+  "visitees": 15,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 4,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "titre_hors_cible:appartement": 2,
+   "location": 1,
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
+   "location": "Maison de ville 6 pièces de 198 m² à Blâmont (54450)",
+   "hors_perimetre": "Maison de campagne 10 pièces de 235 m² à Saint-Hippolyte (12140)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 623.0,
+  "seconde": 604.5,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.5,
+  "seconde": 604.8,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 624.7,
+  "seconde": 605.8,
   "reseau": "safti",
-  "n": 28749,
+  "n": 28795,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 625.4,
+  "seconde": 606.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 625.8,
+  "seconde": 606.9,
   "reseau": "safti",
-  "connues": 13272,
-  "ecartees": 1479
+  "connues": 13512,
+  "ecartees": 1602
  },
  {
   "etape": "departement",
-  "seconde": 939.5,
+  "seconde": 933.1,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 3,
+   "garde": 45,
+   "vendu": 4,
    "ecarte": 1,
    "illisible": 0
   },
@@ -273,35 +227,35 @@
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Eulmont 54690 : 240m², prix 895 000 €. Réf : 1694158"
+   "prix_trop_haut": "Vente de maison 6 pièces à Crehange 57690 : 1 635m², prix 1 445 000 €. Réf : 1628311"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1226.1,
+  "seconde": 1211.4,
   "reseau": "safti",
-  "departement": "55",
-  "visitees": 48,
-  "gardes": 42,
+  "departement": "76",
+  "visitees": 47,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 42,
-   "vendu": 0,
-   "ecarte": 5,
-   "illisible": 1
+   "garde": 35,
+   "vendu": 3,
+   "ecarte": 9,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
+   "prix_trop_haut": 5,
    "hors_perimetre": 4
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Bar-Le-Duc 55000 : 631m², prix 890 000 €. Réf : 1542291",
-   "hors_perimetre": "Vente de maison 6 pièces à Claye-Souilly 77410 : 150m², prix 473 000 €. Réf : 1556864"
+   "prix_trop_haut": "Vente de maison 4 pièces à Bonsecours 76240 : 150m², prix 725 000 €. Réf : 1695464",
+   "hors_perimetre": "Vente de maison 6 pièces à Freneuse 78840 : 120m², prix 159 900 €. Réf : 1561477"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1226.1,
-  "gardes": 104
+  "seconde": 1211.4,
+  "gardes": 132
  }
 ]
