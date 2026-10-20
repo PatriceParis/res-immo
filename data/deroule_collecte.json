@@ -1,116 +1,33 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "Fontette Immobilier",
-   "secondes": 99,
-   "pages": 10,
+   "agence": "L'Hôtel Immobilier",
+   "secondes": 72,
+   "pages": 13,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
+   "ecartes": 5,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 42,
-   "sitemap": "ok 69",
+   "adresses_ecartees": 14,
+   "sitemap_dates": 27,
+   "sitemap": "ok 27",
    "deja_ecartees": 5,
    "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.fontette-immobilier.fr/vente/maison-individuelle-8-pieces-caen-14000,VM296",
-     "titre": "Maison individuelle à vendre, 8 pièces - Caen 14000"
-    }
-   }
-  },
-  {
-   "agence": "France Pro Immobilier",
-   "secondes": 2,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "France4U",
-   "secondes": 55,
-   "pages": 23,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 19,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 19
+    "ni_surface_ni_prix_credible": 5
    },
    "ecartes_exemples": {
     "ni_surface_ni_prix_credible": {
-     "url": "https://www.france4u.eu/property-and-houses-for-sale-in-auvergne.html",
-     "titre": "property and houses for sale in Auvergne"
+     "url": "https://www.hotelimmobilier.fr/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t1/1006-grand-f1-en-coeur-de-ville-en-second-corps/",
+     "titre": "Grand F1 en cœur de ville, en second-corps"
     }
    }
   },
   {
-   "agence": "Frère Immobilier",
-   "secondes": 72,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 45,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 37,
-   "sitemap": "ok 51"
-  },
-  {
-   "agence": "GIN Immobilier",
-   "secondes": 68,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 113,
-   "sitemap_dates": 197,
-   "sitemap": "ok 197",
-   "deja_ecartees": 5
-  },
-  {
-   "agence": "GSM Immobilier",
-   "secondes": 222,
-   "pages": 29,
-   "gardes": 8,
-   "vendus": 21,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 96,
-   "sitemap": "ok 237",
-   "deja_ecartees": 34
-  },
-  {
-   "agence": "Girault Immo",
+   "agence": "L'Immobilière Normande",
    "secondes": 65,
    "pages": 8,
    "gardes": 8,
@@ -120,30 +37,295 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "deja_ecartees": 6
+   "adresses_ecartees": 22,
+   "sitemap_dates": 130,
+   "sitemap": "ok 130"
   },
   {
-   "agence": "Graupera Immobilier",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
+   "agence": "L'Immobilière du Loison",
+   "secondes": 17,
+   "pages": 2,
+   "gardes": 2,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Immobilière Graupera"
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "deja_ecartees": 1
   },
   {
-   "agence": "Groupe Centrum",
-   "secondes": 76,
+   "agence": "L'immobilière Guignard",
+   "secondes": 80,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 65,
+   "sitemap": "ok 91"
+  },
+  {
+   "agence": "LH immo.com",
+   "secondes": 56,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 96,
+   "sitemap_dates": 69,
+   "sitemap": "ok 69",
+   "deja_ecartees": 8,
+   "illisible_exemple": {
+    "url": "https://www.lhimmo.com/iwp_type/maison/",
+    "cause": "aucune annonce lue",
+    "titre": "Archives des Maison - LH immo",
+    "octets": 88790
+   }
+  },
+  {
+   "agence": "LOR Immobilier",
+   "secondes": 96,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 20,
+   "sitemap": "ok 24",
+   "deja_ecartees": 1,
+   "illisible_exemple": {
+    "url": "https://www.lorimmobilier.fr/vente/vente-maison-ansauville,LM288",
+    "cause": "aucune annonce lue",
+    "titre": "404 - Page introuvable",
+    "octets": 47717
+   }
+  },
+  {
+   "agence": "La Bonne Adresse",
+   "secondes": 62,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 7,
+   "sitemap_dates": 32,
+   "sitemap": "ok 32",
+   "deja_ecartees": 1,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.labonneadresseimmo.fr/vente/12-ste-mere-eglise/propriete/t6/664-superbe-propriete-du-18eme-avec-deux-gites-dependances-et-terrain/",
+     "titre": "SUPERBE PROPRIETE DU 18EME AVEC DEUX GITES, DEPENDANCES ET TERRAIN"
+    }
+   }
+  },
+  {
+   "agence": "La Cif",
+   "secondes": 44,
+   "pages": 13,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 6,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 36,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "deja_ecartees": 8,
+   "illisible_exemple": {
+    "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre-1/soyez-recompense-en-parrainant-vos-amis-ou-votre-famille-copie",
+    "cause": "aucune annonce lue",
+    "titre": "Parrainer avec CIF Normandie, c'est simple et rapide !",
+    "octets": 92306
+   }
+  },
+  {
+   "agence": "La Petite Agence.com",
+   "secondes": 73,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 96,
+   "sitemap": "ok 96",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 4
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lapetite-agence.com/vente/126-premilhat/maison/8159-pavillon-de-plain-pied",
+     "titre": "PAVILLON DE PLAIN-PIED"
+    }
+   }
+  },
+  {
+   "agence": "La Vaux Immobilier",
+   "secondes": 110,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 3,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 65,
+   "sitemap": "ok 67",
+   "deja_ecartees": 2,
+   "motifs": {
+    "titre_hors_cible:loft": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:loft": {
+     "url": "https://lavauximmobilier.com/bien/nancy-place-des-vosges-loft-duplex-138-m2-terrasse/",
+     "titre": "NANCY centre, Loft Duplex, 136 m2 au sol, Terrasse."
+    }
+   }
+  },
+  {
+   "agence": "La Voile Immobilier",
+   "secondes": 123,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
+   "sitemap": "ok 28",
+   "deja_ecartees": 2,
+   "motifs": {
+    "prix_trop_haut": 8
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lavoileimmobilier.fr/vente/maison-individuelle-10-pieces-caen-14000,VM290",
+     "titre": "QUARTIER HASTINGS"
+    }
+   }
+  },
+  {
+   "agence": "Lacomblez Immobilier",
+   "secondes": 117,
+   "pages": 38,
+   "gardes": 7,
+   "vendus": 7,
+   "ecartes": 24,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 108,
+   "sitemap_dates": 57,
+   "sitemap": "ok 57",
+   "deja_ecartees": 19,
+   "motifs": {
+    "prix_trop_haut": 22,
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:loft": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/maison/658-lille-esquermes-maison-2-chambres-ideal-colocation",
+     "titre": "Lille Esquermes - Maison 2 Chambres/Idéal colocation"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.lacomblezimmobilier.com/vente/1-lille/maison/157-lille-chu-maison-recente-baignee-de-soleil-avec-jardin-balcon-et-parking",
+     "titre": "Lille CHU-Maison récente baignée de soleil avec jardin, balcon et parking !"
+    },
+    "titre_hors_cible:loft": {
+     "url": "https://www.lacomblezimmobilier.com/vente/300-hellemmes-lille/loft/64-superbe-loft-atypique-centre-d-hellemmes",
+     "titre": "SUPERBE LOFT ATYPIQUE CENTRE D"
+    }
+   }
+  },
+  {
+   "agence": "Landimmo Normandie",
+   "secondes": 112,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 3,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap": "ok 78",
+   "deja_ecartees": 26,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.landimmonormandie.fr/vente/maison-chateau-10-pieces-vienne-en-bessin-14400,VM284",
+     "titre": "FERME MANOIR 15ème siècle et ses dépendances...."
+    }
+   }
+  },
+  {
+   "agence": "Le Havre Normandie immobilier",
+   "secondes": 105,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 37,
+   "sitemap": "ok 101",
+   "deja_ecartees": 29,
+   "illisible_exemple": {
+    "url": "https://www.lehavre-normandie-immobilier.fr/vente/maison-individuelle-1-piece-angerville-l-orcher-76280,VM780",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison individuelle, 1 pièce située à Angerville-l'Orcher (76280)",
+    "octets": 866655
+   },
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lehavre-normandie-immobilier.fr/vente/maison-maison-de-campagne-8-pieces-criquetot-l-esneval-76280,VM3277",
+     "titre": "Propriété équestre avec possibilité de Gîtes équestre"
+    }
+   }
+  },
+  {
+   "agence": "Le Mercier Immobilier",
+   "secondes": 52,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -152,39 +334,23 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 117,
-   "sitemap_dates": 44,
-   "sitemap": "ok 44",
-   "deja_ecartees": 3,
+   "adresses_ecartees": 64,
+   "sitemap_dates": 110,
+   "sitemap": "ok 110",
+   "deja_ecartees": 4,
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
-     "titre": "Villa de luxe en vente, proche plage 7 chambres"
+     "url": "https://www.lemercier-immobilier.com/vente/307-soissons/maison/t9/12876-proche-soissons-maison-d-architecte-220m-avec-bois-4ha-et-etang-1ha/",
+     "titre": "PROCHE SOISSONS MAISON D"
     }
    }
   },
   {
-   "agence": "Groupe123immo",
-   "secondes": 63,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 89,
-   "sitemap_dates": 221,
-   "sitemap": "ok 221",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Gueudry",
-   "secondes": 73,
+   "agence": "Le Strat Caen Immo",
+   "secondes": 75,
    "pages": 11,
    "gardes": 8,
    "vendus": 0,
@@ -193,180 +359,172 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 165,
-   "sitemap": "ok 165",
+   "adresses_ecartees": 84,
+   "sitemap_dates": 28,
+   "sitemap": "ok 28",
    "deja_ecartees": 1,
    "illisible_exemple": {
-    "url": "https://www.gueudry.fr/maison-neuve-construction/",
+    "url": "https://www.caen-immo.fr/biens/place-de-parking-exterieur-60290394/",
     "cause": "aucune annonce lue",
-    "titre": "Maison neuve construction : les étapes clés | Gueudry",
-    "octets": 133503
+    "titre": "Place de parking extérieur - Le Strat Immobilier",
+    "octets": 182040
    }
   },
   {
-   "agence": "HF Immobilier",
-   "secondes": 60,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 7,
-   "sitemap": "ok 7",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Habitat Immobilier",
-   "secondes": 92,
+   "agence": "Lecoeur Immobilier",
+   "secondes": 18,
    "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 62,
-   "sitemap": "ok 130"
-  },
-  {
-   "agence": "Hamaris",
-   "secondes": 76,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 13,
-   "sitemap": "ok 13"
-  },
-  {
-   "agence": "Helman Immobilier",
-   "secondes": 246,
-   "pages": 37,
    "gardes": 1,
-   "vendus": 35,
+   "vendus": 0,
    "ecartes": 0,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
+   "illisibles": 7,
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 83,
-   "sitemap": "ok 461",
-   "deja_ecartees": 9,
+   "sitemap_dates": 8,
+   "sitemap": "ok 8",
    "illisible_exemple": {
-    "url": "https://www.helman-immobilier.com/vente/entrepot",
+    "url": "https://www.lecoeurtransactions.fr/annonces-divers",
     "cause": "aucune annonce lue",
-    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
-    "octets": 901582
+    "titre": "Divers | LECOEUR IMMOBILIER",
+    "octets": 101745
    }
   },
   {
-   "agence": "J.B. Immobilier",
-   "secondes": 63,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "JF Meyer",
-   "secondes": 66,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 32,
-   "sitemap": "ok 32",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Joubeaux Immobilier",
-   "secondes": 67,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 25,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Jourdaine Aktion",
-   "secondes": 24,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap": "ok 10",
-   "deja_ecartees": 7
-  },
-  {
-   "agence": "Julie Étienne Immobilier",
-   "secondes": 138,
+   "agence": "Leforestier Immobilier",
+   "secondes": 94,
    "pages": 45,
-   "gardes": 2,
-   "vendus": 3,
+   "gardes": 0,
+   "vendus": 45,
    "ecartes": 0,
-   "illisibles": 40,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "ok 70",
+   "adresses_ecartees": 550,
+   "sitemap_dates": 708,
+   "sitemap": "ok 708",
+   "deja_ecartees": 45
+  },
+  {
+   "agence": "Lelièvre immobilier",
+   "secondes": 67,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 291,
+   "sitemap_dates": 109,
+   "sitemap": "ok 109",
+   "deja_ecartees": 1,
+   "motifs": {
+    "prix_trop_haut": 4
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
+     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Lemaistre Immobilier Yvetot",
+   "secondes": 66,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap": "ok 434",
    "deja_ecartees": 6,
    "illisible_exemple": {
-    "url": "https://www.julieetienneimmobilier.fr/index.php/detail-annonce/?id=4",
+    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
     "cause": "aucune annonce lue",
-    "titre": "Détails annonces - Julie Etienne Immobilier",
-    "octets": 58048
+    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
+    "octets": 48411
+   },
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-rouen-76100/61635709.htm",
+     "titre": "vente achat Appartement ROUEN 76100"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-goderville-76110/60210353.htm",
+     "titre": "vente achat Terrain GODERVILLE 76110"
+    }
    }
   },
   {
-   "agence": "L'Aribout Immobilier",
-   "secondes": 47,
-   "pages": 6,
-   "gardes": 6,
+   "agence": "Les Artisans 2 l'immobilier",
+   "secondes": 69,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 33",
+   "deja_ecartees": 8
+  },
+  {
+   "agence": "Les Clés de la Suisse Normande",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Les Clés du Littoral",
+   "secondes": 102,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 24,
+   "sitemap": "ok 51",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
+     "titre": "Propriété de caractère à 100mètres de la mer"
+    }
+   }
+  },
+  {
+   "agence": "Les nouvelles pépites",
+   "secondes": 9,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 1,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "deja_ecartees": 1
+   "adresses_ecartees": 84,
+   "sitemap": "ok 169",
+   "deja_ecartees": 40
   }
  ]
 }
