@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.0,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.3,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,212 +21,204 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.3,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.4,
+  "seconde": 3.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.2,
+  "seconde": 4.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.2,
+  "seconde": 4.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.5,
+  "seconde": 5.2,
   "reseau": "capifrance",
-  "connues": 13635,
-  "ecartees": 1619
+  "connues": 13875,
+  "ecartees": 1683
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.5,
+  "seconde": 5.2,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.8,
+  "seconde": 5.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.8,
+  "seconde": 16.0,
   "reseau": "iad",
-  "n": 94150,
+  "n": 94145,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.9,
+  "seconde": 18.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.2,
+  "seconde": 18.4,
   "reseau": "iad",
-  "connues": 13635,
-  "ecartees": 1619
+  "connues": 13875,
+  "ecartees": 1683
  },
  {
   "etape": "departement",
-  "seconde": 191.2,
+  "seconde": 254.7,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 17,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 17,
-   "vendu": 21,
-   "ecarte": 12,
+   "garde": 28,
+   "vendu": 15,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "location": 3,
-   "prix_trop_haut": 3,
-   "hors_perimetre": 6
+   "hors_perimetre": 7
   },
   "exemples": {
-   "location": "Maison 4 pièces de 85 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)",
-   "hors_perimetre": "Maison 2 pièces de 38 m² à La Chapelle-Gauthier (77720)"
+   "hors_perimetre": "Maison 3 pièces de 87 m² à Saint-Pierre-de-Bœuf (42520)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 441.5,
+  "seconde": 510.2,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 33,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 33,
-   "vendu": 11,
-   "ecarte": 5,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 104 m² à Goussainville (95190)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 605.1,
-  "reseau": "iad",
-  "departement": "36",
-  "visitees": 32,
-  "gardes": 24,
-  "tronquee": true,
-  "etats": {
-   "garde": 24,
-   "vendu": 6,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 78 m² à Saint-Gilles (30800)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 605.1,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 605.8,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 607.1,
-  "reseau": "safti",
-  "n": 28795,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 607.5,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 607.7,
-  "reseau": "safti",
-  "connues": 13693,
-  "ecartees": 1677
- },
- {
-  "etape": "departement",
-  "seconde": 918.5,
-  "reseau": "safti",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 47,
-  "tronquee": true,
-  "etats": {
-   "garde": 47,
-   "vendu": 1,
+   "garde": 36,
+   "vendu": 13,
    "ecarte": 1,
-   "illisible": 1
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "111 359 biens immobiliers à vendre"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 607.1,
+  "reseau": "iad",
+  "departement": "59",
+  "visitees": 21,
+  "gardes": 12,
+  "tronquee": true,
+  "etats": {
+   "garde": 12,
+   "vendu": 8,
+   "ecarte": 1,
+   "illisible": 0
   },
   "motifs": {
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Dijon 21000 : 233m², prix 1 290 000 €. Réf : 1706250"
+   "prix_trop_haut": "Demeure 10 pièces de 321 m² à Lille (59800)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 607.1,
+  "reseau": "safti",
+  "part_secondes": 595
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 607.6,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 608.4,
+  "reseau": "safti",
+  "n": 28853,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 609.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 609.5,
+  "reseau": "safti",
+  "connues": 13920,
+  "ecartees": 1728
+ },
+ {
+  "etape": "departement",
+  "seconde": 1022.2,
+  "reseau": "safti",
+  "departement": "27",
+  "visitees": 50,
+  "gardes": 48,
+  "tronquee": true,
+  "etats": {
+   "garde": 48,
+   "vendu": 1,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
   }
  },
  {
   "etape": "departement",
   "seconde": 1203.4,
   "reseau": "safti",
-  "departement": "25",
-  "visitees": 45,
-  "gardes": 42,
+  "departement": "28",
+  "visitees": 27,
+  "gardes": 27,
   "tronquee": true,
   "etats": {
-   "garde": 42,
-   "vendu": 1,
-   "ecarte": 2,
+   "garde": 27,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 34 pièces à Le Russey 25210 : 805m², prix 1 359 000 €. Réf : 1696141"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
   "seconde": 1203.4,
-  "gardes": 163
+  "gardes": 151
  }
 ]
