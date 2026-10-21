@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 13.6,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.7,
+  "seconde": 13.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,100 +21,127 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.7,
+  "seconde": 13.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.3,
+  "seconde": 15.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.8,
+  "seconde": 16.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.8,
+  "seconde": 16.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.2,
+  "seconde": 17.2,
   "reseau": "capifrance",
-  "connues": 13875,
-  "ecartees": 1683
+  "connues": 14024,
+  "ecartees": 1730
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.2,
+  "seconde": 17.2,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.3,
+  "seconde": 17.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.0,
+  "seconde": 31.1,
   "reseau": "iad",
   "n": 94145,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.0,
+  "seconde": 33.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.4,
+  "seconde": 33.3,
   "reseau": "iad",
-  "connues": 13875,
-  "ecartees": 1683
+  "connues": 14024,
+  "ecartees": 1730
  },
  {
   "etape": "departement",
-  "seconde": 254.7,
+  "seconde": 221.2,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 24,
+  "tronquee": true,
+  "etats": {
+   "garde": 24,
+   "vendu": 16,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 7,
+   "location": 1,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D",
+   "location": "Maison de ville 3 pièces de 76 m² à Péronne (80200)",
+   "prix_trop_haut": "Château 18 pièces de 500 m² à Laizy (71190)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 438.0,
+  "reseau": "iad",
+  "departement": "88",
   "visitees": 50,
   "gardes": 28,
   "tronquee": true,
   "etats": {
    "garde": 28,
-   "vendu": 15,
-   "ecarte": 7,
+   "vendu": 13,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 7
+   "prix_trop_haut": 1,
+   "hors_perimetre": 8
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 87 m² à Saint-Pierre-de-Bœuf (42520)"
+   "prix_trop_haut": "Demeure 11 pièces de 352 m² à Gérardmer (88400)",
+   "hors_perimetre": "Pavillon 4 pièces de 97 m² à Les Forges (79340)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 510.2,
+  "seconde": 616.2,
   "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 36,
+  "departement": "41",
+  "visitees": 34,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 36,
-   "vendu": 13,
+   "garde": 24,
+   "vendu": 9,
    "ecarte": 1,
    "illisible": 0
   },
@@ -122,93 +149,51 @@
    "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "111 359 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 607.1,
-  "reseau": "iad",
-  "departement": "59",
-  "visitees": 21,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
-   "vendu": 8,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Demeure 10 pièces de 321 m² à Lille (59800)"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 135 m² à Pouillé (86800)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 607.1,
+  "seconde": 616.2,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.6,
+  "seconde": 617.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 608.4,
+  "seconde": 618.5,
   "reseau": "safti",
   "n": 28853,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 609.2,
+  "seconde": 619.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 609.5,
+  "seconde": 619.5,
   "reseau": "safti",
-  "connues": 13920,
-  "ecartees": 1728
+  "connues": 14082,
+  "ecartees": 1788
  },
  {
   "etape": "departement",
-  "seconde": 1022.2,
+  "seconde": 955.3,
   "reseau": "safti",
-  "departement": "27",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 50,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 1,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 17 pièces à Bézu-Saint-Éloi 27660 : 365m², prix 785 000 €. Réf : 1685530"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1203.4,
-  "reseau": "safti",
-  "departement": "28",
-  "visitees": 27,
-  "gardes": 27,
-  "tronquee": true,
-  "etats": {
-   "garde": 27,
+   "garde": 50,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -217,8 +202,31 @@
   "exemples": {}
  },
  {
+  "etape": "departement",
+  "seconde": 1215.4,
+  "reseau": "safti",
+  "departement": "58",
+  "visitees": 40,
+  "gardes": 36,
+  "tronquee": true,
+  "etats": {
+   "garde": 36,
+   "vendu": 0,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 22 pièces à Varennes-Vauzelles 58640 : 640m², prix 990 000 €. Réf : 1591419",
+   "hors_perimetre": "Vente de maison 5 pièces à Saint-Martin-Du-Puy 33540 : 168m², prix 270 000 €. Réf : 1684058"
+  }
+ },
+ {
   "etape": "fin",
-  "seconde": 1203.4,
-  "gardes": 151
+  "seconde": 1215.4,
+  "gardes": 162
  }
 ]
