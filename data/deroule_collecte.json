@@ -2,661 +2,367 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "Echinard",
-   "secondes": 8,
+   "agence": "AFTim",
+   "secondes": 223,
+   "pages": 14,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 10,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 62,
+   "sitemap": "ok 31",
+   "deja_ecartees": 17,
+   "motifs": {
+    "prix_trop_haut": 10
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.aftim.fr/vente/maison-villa-6-pieces-le-touquet-paris-plage-62520,VM3126",
+     "titre": "TRIANGLE D'OR – Villa typique avec jardin et garage"
+    }
+   }
+  },
+  {
+   "agence": "AIC Immobilier",
+   "secondes": 161,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 44,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap_dates": 70,
+   "sitemap": "ok 73",
+   "deja_ecartees": 1,
+   "illisible_exemple": {
+    "url": "https://www.aicimmobilier.fr/property/luxury-family-home-4/",
+    "cause": "aucune annonce lue",
+    "titre": "Single family home – AIC Immobilier",
+    "octets": 105841
+   }
+  },
+  {
+   "agence": "AJC immobilier",
+   "secondes": 141,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap_dates": 26,
+   "sitemap": "ok 26"
+  },
+  {
+   "agence": "AS Immobilier",
+   "secondes": 150,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 45,
+   "sitemap_dates": 28,
+   "sitemap": "ok 28",
+   "deja_ecartees": 7
+  },
+  {
+   "agence": "Abbesses Immobilier",
+   "secondes": 70,
+   "pages": 9,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 89,
+   "sitemap_dates": 99,
+   "sitemap": "ok 99",
+   "deja_ecartees": 90,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t12/1614-extra-centre-magnifique-demeure-de-1904-avec-jardin-paysage-et-piscine/",
+     "titre": "Extra Centre : Magnifique demeure de 1904 avec jardin paysagé et piscine"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/terrain-a-batir/1539-saint-etienne-les-remiremont-terrain-d-environ-2-248-m",
+    "cause": "aucune annonce lue",
+    "titre": "SAINT ETIENNE LES REMIREMONT : Terrain d'environ 2 248 m² | ABBESSES IMMOBILIER",
+    "octets": 235427
+   }
+  },
+  {
+   "agence": "Abithéa",
+   "secondes": 94,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 174,
+   "sitemap_dates": 571,
+   "sitemap": "ok 571",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Abrinor Immobilier",
+   "secondes": 67,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 429,
-   "index_titre": ""
-  },
-  {
-   "agence": "Eco Immo 60",
-   "secondes": 44,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
+   "robots": "illisible",
    "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 25,
-   "sitemap": "ok 25",
-   "deja_ecartees": 2
+   "sitemap": "sans <loc>",
+   "index_statut": 200,
+   "index_titre": "ABRINOR Immobilier | Transaction, Gestion Locative & Syndic "
   },
   {
-   "agence": "Ernoult Immobilier",
-   "secondes": 114,
-   "pages": 14,
-   "gardes": 6,
-   "vendus": 7,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 61",
-   "deja_ecartees": 47,
-   "illisible_exemple": {
-    "url": "https://www.ernoult-immobilier.fr/vente/,VM382",
-    "cause": "aucune annonce lue",
-    "titre": "FREDERIQUE ERNOULT IMMOBILIER",
-    "octets": 805849
-   }
-  },
-  {
-   "agence": "Espace Pro",
-   "secondes": 67,
-   "pages": 9,
+   "agence": "Accord Immobilier",
+   "secondes": 53,
+   "pages": 10,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 1,
+   "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 100,
-   "sitemap_dates": 199,
-   "sitemap": "ok 199",
-   "deja_ecartees": 1,
+   "sitemap_dates": 88,
+   "sitemap": "ok 88",
+   "deja_ecartees": 13,
    "motifs": {
-    "prix_trop_haut": 1
+    "titre_hors_cible:terrain constructible": 1,
+    "titre_hors_cible:murs commerciaux": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.espacepro-immobilier.fr/propriete/maison-a-vendre-beaumont-en-auge/",
-     "titre": "Maison à vendre Beaumont-en-Auge"
+    "titre_hors_cible:terrain constructible": {
+     "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/ville/bien/24405/sanchey-au-pied-du-lac-de-bouzey-terrain-constructible-de-625-m-sup2-avec-possibilt-eacute-d-039acqu-eacuterir-du-terrain-suppl-eacutementaire-.html",
+     "titre": "SANCHEY- Au pied du lac de Bouzey Terrain constructible de 625 m² avec possibilté d"
+    },
+    "titre_hors_cible:murs commerciaux": {
+     "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/dommartin-les-remiremont/bien/24217/exclu-dommartin-les-rt-murs-commerciaux-lou-eacute-30154-d-039une-surface-de-2633-m-sup2-carrez.html",
+     "titre": "Exclu Dommartin les Rt Murs commerciaux loué 301,54 d"
     }
    }
   },
   {
-   "agence": "Espaces Atypiques",
-   "secondes": 79,
-   "pages": 11,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 12,
-   "sitemap": "ok 11",
-   "illisible_exemple": {
-    "url": "https://www.espaces-atypiques.com/architecture-et-inspiration/maison-atypique-cap-ferret-renovation/",
-    "cause": "aucune annonce lue",
-    "titre": "Visite d'une maison atypique rénovée au Cap Ferret par un architecte",
-    "octets": 171774
-   }
-  },
-  {
-   "agence": "Estime",
-   "secondes": 44,
-   "pages": 5,
-   "gardes": 5,
+   "agence": "Action Vente 37",
+   "secondes": 32,
+   "pages": 3,
+   "gardes": 3,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 128,
-   "sitemap_dates": 56,
-   "sitemap": "ok 56",
-   "deja_ecartees": 51
+   "adresses_ecartees": 20,
+   "sitemap": "ok 28",
+   "deja_ecartees": 25
   },
   {
-   "agence": "Flix'immo",
-   "secondes": 6,
-   "pages": 1,
+   "agence": "AdressImmo",
+   "secondes": 4,
+   "pages": 0,
    "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "sans <loc>",
+   "index_statut": 200,
+   "index_titre": "Accès interdit"
+  },
+  {
+   "agence": "Agence Afico",
+   "secondes": 81,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 98,
+   "sitemap_dates": 71,
+   "sitemap": "ok 71",
+   "deja_ecartees": 36,
+   "illisible_exemple": {
+    "url": "https://www.afico.fr/iwp_type/maison-villa/",
+    "cause": "aucune annonce lue",
+    "titre": "Archives des Maison/Villa - Afico",
+    "octets": 61296
+   }
+  },
+  {
+   "agence": "Agence Albert 1er",
+   "secondes": 85,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 148,
+   "sitemap": "ok 108",
+   "deja_ecartees": 42
+  },
+  {
+   "agence": "Agence Armance Immobilier",
+   "secondes": 52,
+   "pages": 7,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "index_statut": 200,
+   "index_titre": "Armance immobilier",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Agence Blancoise",
+   "secondes": 100,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "adresses_ecartees": 9,
+   "sitemap_dates": 46,
+   "sitemap": "ok 46",
+   "deja_ecartees": 1,
    "illisible_exemple": {
-    "url": "https://www.flix-immo.fr/fr/annonces-immobilieres",
+    "url": "https://www.agenceblancoise.com/biens-vendus/1",
     "cause": "aucune annonce lue",
-    "titre": "Annonces immobilières Flixecourt – Flix’Immo",
-    "octets": 60975
+    "titre": "Biens vendus | Agence Blancoise",
+    "octets": 169005
    }
   },
   {
-   "agence": "Flo Immobilier",
-   "secondes": 67,
+   "agence": "Agence Boilot",
+   "secondes": 25,
    "pages": 11,
-   "gardes": 8,
+   "gardes": 0,
    "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
+   "ecartes": 0,
+   "illisibles": 11,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 113,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
-   "deja_ecartees": 17,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://flo-immobilier.fr/vente/14-calvados/13-bieville-beuville/maison-a-vendre-bieville-beuville/623-maison",
-     "titre": "Maison à vendre Biéville-Beuville"
-    }
-   }
-  },
-  {
-   "agence": "Foch immobilier",
-   "secondes": 85,
-   "pages": 14,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 6,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "absent",
    "sitemap_statut": 404,
    "sitemap": "HTTP 404",
    "index_statut": 200,
-   "index_titre": "Immobilier Le Havre annonces immobilières en Normandie 76 | ",
-   "deja_ecartees": 25,
-   "motifs": {
-    "ni_surface_ni_prix_credible": 6
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://fochimmobilier.com/annonce/5079",
-     "titre": "IMMEUBLE | NOUVEAUTE QUARTIER DANTON | Le Havre"
-    }
-   }
-  },
-  {
-   "agence": "France Pro Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Frère Immobilier",
-   "secondes": 12,
-   "pages": 6,
-   "gardes": 0,
-   "vendus": 6,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 37,
-   "sitemap": "ok 51",
-   "deja_ecartees": 45
-  },
-  {
-   "agence": "Graupera Immobilier",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Immobilière Graupera"
-  },
-  {
-   "agence": "Paillette Immobilier",
-   "secondes": 79,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 159,
-   "sitemap": "ok 289",
-   "deja_ecartees": 16
-  },
-  {
-   "agence": "Panther'Immo",
-   "secondes": 65,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 29,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "deja_ecartees": 5,
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.pantherimmo.com/vente/351-la-baule-escoublac/maison/t7/179-maison-d-architecte-207m2-calme-5-chambres-dependance-garage/",
-     "titre": "MAISON D"
-    }
-   }
-  },
-  {
-   "agence": "Pas-de-Calais Habitat (Bailleur social)",
-   "secondes": 55,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 66,
-   "sitemap_dates": 13,
-   "sitemap": "ok 13",
-   "deja_ecartees": 1,
+   "index_titre": "Agence immobilière à Château-Thierry 02 : vente et location ",
    "illisible_exemple": {
-    "url": "https://www.pasdecalais-habitat.fr/je-cherche-un-local-professionnel/annonces-pro/",
+    "url": "https://www.agence-boilot.net/vente-maison-viffort.php",
     "cause": "aucune annonce lue",
-    "titre": "Nos biens pour les pros - Pas-de-Calais habitat",
-    "octets": 177384
+    "titre": "Vente de maison à Viffort, dans l’Aisne (02)&nbsp;: AGENCE BOILOT",
+    "octets": 33293
    }
   },
   {
-   "agence": "Pays d'Auge Sotheby's International Realty",
-   "secondes": 59,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 133,
-   "sitemap_dates": 107,
-   "sitemap": "ok 107",
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.paysdauge-sothebysrealty.com/fr/nos-biens/ref-ro2-336/vente-maison-bourgeoise-mont-st-aignan-9-pieces-6-chambres-76130/",
-     "titre": "Vente Maison bourgeoise Mont-Saint-Aignan 9 Pièces 242 m²"
-    }
-   }
-  },
-  {
-   "agence": "Perch'Immo",
-   "secondes": 53,
-   "pages": 4,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap": "ok 120"
-  },
-  {
-   "agence": "Perche et Demeures",
-   "secondes": 35,
-   "pages": 7,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 171,
-   "sitemap": "ok 172",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 2,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.percheetdemeures.com/maison-contemporaire/",
-     "titre": "maison contemporaire - Perche et Demeures"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.percheetdemeures.com/property/f5154-belle-demeure/",
-     "titre": "logis XVII - belle demeure- 2 receptions- 5 CH6 2 SDB- 2 H"
-    }
-   }
-  },
-  {
-   "agence": "Picart Immobilier",
-   "secondes": 59,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 4,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 106,
-   "sitemap_dates": 385,
-   "sitemap": "ok 385",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.picartimmobilier.fr/property-status/exclusivite/",
-    "cause": "aucune annonce lue",
-    "titre": "Exclusivité Archives - Stéphane Picart Immobilier - Agence Immobilière",
-    "octets": 47649
-   }
-  },
-  {
-   "agence": "VIP Immobilier",
-   "secondes": 70,
+   "agence": "Agence Creil Immo",
+   "secondes": 28,
    "pages": 13,
-   "gardes": 8,
-   "vendus": 5,
-   "ecartes": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 13,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 96,
-   "sitemap_dates": 212,
-   "sitemap": "ok 212",
-   "deja_ecartees": 57
+   "sitemap_dates": 20,
+   "sitemap": "ok 20",
+   "deja_ecartees": 7,
+   "motifs": {
+    "prix_trop_haut": 8,
+    "ni_surface_ni_prix_credible": 5
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.creilimmo.fr/vente/60-oise/11-nogent-sur-oise/1-maison/t6/558-pavillon-independant-f6/",
+     "titre": "PAVILLON INDEPENDANT F6"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.creilimmo.fr/vente/60-oise/209-cramoisy/2-appartement/t5/555-exclusif-apt-f5-duplex-dans-corps-de-ferme-renove/",
+     "titre": "EXCLUSIF APT F5 DUPLEX DANS CORPS DE FERME RENOVE"
+    }
+   }
   },
   {
-   "agence": "VIP Immobilier",
-   "secondes": 96,
-   "pages": 8,
+   "agence": "Agence Du Centre",
+   "secondes": 70,
+   "pages": 11,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 69,
-   "sitemap": "ok 111",
-   "deja_ecartees": 15
-  },
-  {
-   "agence": "Valoire Habîtat",
-   "secondes": 67,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 62,
-   "sitemap": "ok 62",
-   "deja_ecartees": 3
-  },
-  {
-   "agence": "Versus Immobilier",
-   "secondes": 35,
-   "pages": 5,
-   "gardes": 4,
-   "vendus": 0,
+   "vendus": 2,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 35,
-   "sitemap_dates": 71,
-   "sitemap": "ok 71",
-   "deja_ecartees": 66,
+   "adresses_ecartees": 52,
+   "sitemap_dates": 51,
+   "sitemap": "ok 51",
+   "deja_ecartees": 6,
    "motifs": {
-    "titre_hors_cible:appartements": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartements": {
-     "url": "https://www.versus-immobilier.com/vente/54-meurthe-et-moselle/1-neuves-maisons/2-appartement/t4/14042-special-investisseur-lot-de-2-appartements-loues-neuves-maisons/",
-     "titre": "Spécial investisseur - Lot de 2 appartements loués – Neuves-Maisons"
-    }
-   }
-  },
-  {
-   "agence": "Villers St Paul Immobilier",
-   "secondes": 55,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Vivest",
-   "secondes": 14,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "illisible_exemple": {
-    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
-    "cause": "aucune annonce lue",
-    "titre": "Nos programmes en vente à venir - Vivest",
-    "octets": 638983
-   }
-  },
-  {
-   "agence": "action immo",
-   "secondes": 10,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
-  },
-  {
-   "agence": "agence 147",
-   "secondes": 54,
-   "pages": 9,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 209,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 38,
-   "motifs": {
-    "prix_trop_haut": 3
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.agence147.fr/vente/1-nancy/duplex/1780-t4-duplex-rue-jeanne-d-arc",
-     "titre": "T4 - Duplex rue Jeanne d"
+     "url": "https://www.agenceducentre.net/vente/1-fecamp/maison/5929-villa-avec-terrasse-jardin-dependance-et-garage-en-vente-a-fecamp-prestige",
+     "titre": "Maison 11pièce(s) 4chambre(s) 370 m² Fécamp (76400)"
     }
    }
   },
   {
-   "agence": "ilm Immobilier",
-   "secondes": 13,
-   "pages": 5,
-   "gardes": 0,
-   "vendus": 3,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 24,
-   "sitemap": "ok 24",
-   "deja_ecartees": 19,
-   "illisible_exemple": {
-    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
-    "octets": 66880
-   }
-  },
-  {
-   "agence": ".la petite agence",
-   "secondes": 62,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 54,
-   "sitemap": "ok 54",
-   "deja_ecartees": 10,
-   "motifs": {
-    "titre_hors_cible:appartement": 2,
-    "prix_trop_haut": 2,
-    "titre_hors_cible:loft": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/appartement-hypercentre-avec-balcon/caen",
-     "titre": "Appartement hypercentre avec balcon"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-bourgeoise-du-xixe/caen",
-     "titre": "Maison bourgeoise du XIXe"
-    },
-    "titre_hors_cible:loft": {
-     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/grand-loft/caen",
-     "titre": "Grand loft"
-    }
-   }
-  },
-  {
-   "agence": "A Et B Conseil Immobilier",
-   "secondes": 92,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 27,
-   "ecartes": 18,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 25,
-   "sitemap_dates": 202,
-   "sitemap": "ok 202",
-   "deja_ecartees": 84,
-   "motifs": {
-    "prix_trop_haut": 18
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t9/646-troyes-centre-ville-maison-avec-jardin/",
-     "titre": "TROYES -Centre ville - Maison avec jardin."
-    }
-   }
-  },
-  {
-   "agence": "A Tri Home",
-   "secondes": 62,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "ACBI",
-   "secondes": 50,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 117,
-   "sitemap_dates": 695,
-   "sitemap": "ok 695",
-   "deja_ecartees": 5
-  },
-  {
-   "agence": "ACI Agence Capital Immobilier",
-   "secondes": 68,
-   "pages": 3,
-   "gardes": 3,
+   "agence": "Agence Greub",
+   "secondes": 249,
+   "pages": 7,
+   "gardes": 7,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 66,
-   "sitemap": "ok 66",
-   "deja_ecartees": 15
+   "adresses_ecartees": 7,
+   "sitemap": "ok 10"
   }
  ]
 }
