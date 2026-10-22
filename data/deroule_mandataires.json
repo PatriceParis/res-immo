@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.5,
+  "seconde": 2.0,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.5,
+  "seconde": 2.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,218 +21,208 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.5,
+  "seconde": 2.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.5,
+  "seconde": 3.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.0,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.0,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.5,
+  "seconde": 5.7,
   "reseau": "capifrance",
-  "connues": 14257,
-  "ecartees": 1792
+  "connues": 14407,
+  "ecartees": 1866
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.5,
+  "seconde": 5.7,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.9,
+  "seconde": 6.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.1,
+  "seconde": 24.2,
   "reseau": "iad",
   "n": 94153,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.2,
+  "seconde": 25.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 27.7,
+  "seconde": 25.5,
   "reseau": "iad",
-  "connues": 14257,
-  "ecartees": 1792
+  "connues": 14407,
+  "ecartees": 1866
  },
  {
   "etape": "departement",
-  "seconde": 249.9,
+  "seconde": 298.4,
   "reseau": "iad",
-  "departement": "45",
+  "departement": "52",
   "visitees": 50,
-  "gardes": 21,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 21,
-   "vendu": 16,
-   "ecarte": 13,
+   "garde": 38,
+   "vendu": 11,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 12,
-   "prix_trop_haut": 1
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Domaine 11 pièces de 250 m² à Bellegarde (30127)",
-   "prix_trop_haut": "Domaine 26 pièces de 1 500 m² à Gy-les-Nonains (45220)"
+   "hors_perimetre": "Maison 5 pièces de 137 m² à Richebourg (78550)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 505.0,
+  "seconde": 557.2,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "53",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 13,
-   "ecarte": 7,
+   "garde": 35,
+   "vendu": 9,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6,
-   "prix_trop_haut": 1
+   "hors_perimetre": 6
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 4 pièces de 85 m² à Savigny (74520)",
-   "prix_trop_haut": "Maison 5 pièces de 178 m² à Agon-Coutainville (50230)"
+   "hors_perimetre": "Maison 5 pièces de 102 m² à Saint-Mars-du-Désert (44850)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 608.7,
+  "seconde": 612.5,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 16,
-  "gardes": 12,
+  "departement": "58",
+  "visitees": 12,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 2,
+   "garde": 6,
+   "vendu": 4,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 2
   },
   "exemples": {
-   "location": "Maison 6 pièces de 104 m² à Sarry (51520)",
-   "hors_perimetre": "Maison 4 pièces de 99 m² à Chenay (79120)"
+   "hors_perimetre": "Maison traditionnelle 4 pièces de 101 m² à SAINT SULPICE EN PAREDS (85410)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 608.7,
+  "seconde": 612.5,
   "reseau": "safti",
-  "part_secondes": 594
+  "part_secondes": 590
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 609.7,
+  "seconde": 613.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 612.3,
+  "seconde": 615.0,
   "reseau": "safti",
   "n": 28807,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 613.2,
+  "seconde": 615.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 613.6,
+  "seconde": 615.6,
   "reseau": "safti",
-  "connues": 14310,
-  "ecartees": 1845
+  "connues": 14440,
+  "ecartees": 1899
  },
  {
   "etape": "departement",
-  "seconde": 942.2,
+  "seconde": 928.7,
   "reseau": "safti",
-  "departement": "80",
+  "departement": "37",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 38,
+   "garde": 36,
    "vendu": 2,
-   "ecarte": 10,
+   "ecarte": 12,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 5
+   "prix_trop_haut": 12
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
-   "hors_perimetre": "Vente de maison 4 pièces à Berneuil 17460 : 102m², prix 127 000 €. Réf : 1726944"
+   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1206.7,
+  "seconde": 1209.8,
   "reseau": "safti",
-  "departement": "88",
-  "visitees": 40,
-  "gardes": 31,
+  "departement": "39",
+  "visitees": 41,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 3,
-   "ecarte": 6,
+   "garde": 39,
+   "vendu": 0,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5,
-   "ni_surface_ni_prix_credible": 1
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
-   "ni_surface_ni_prix_credible": "Vente de maison 1 pièce à Morizecourt 88320 : 56m², prix 14 000 €. Réf : 1618260"
+   "prix_trop_haut": "Vente de maison 9 pièces à Lajoux 39310 : 215m², prix 780 000 €. Réf : 1640665"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1206.7,
-  "gardes": 132
+  "seconde": 1209.8,
+  "gardes": 154
  }
 ]
