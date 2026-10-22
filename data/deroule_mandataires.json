@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 13.6,
+  "seconde": 2.5,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 13.6,
+  "seconde": 2.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,212 +21,218 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 13.6,
+  "seconde": 2.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 15.4,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.9,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.9,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.2,
+  "seconde": 6.5,
   "reseau": "capifrance",
-  "connues": 14024,
-  "ecartees": 1730
+  "connues": 14257,
+  "ecartees": 1792
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.2,
+  "seconde": 6.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.5,
+  "seconde": 6.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 31.1,
+  "seconde": 25.1,
   "reseau": "iad",
-  "n": 94145,
+  "n": 94153,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 33.0,
+  "seconde": 27.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.3,
+  "seconde": 27.7,
   "reseau": "iad",
-  "connues": 14024,
-  "ecartees": 1730
+  "connues": 14257,
+  "ecartees": 1792
  },
  {
   "etape": "departement",
-  "seconde": 221.2,
+  "seconde": 249.9,
   "reseau": "iad",
-  "departement": "71",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 24,
+  "gardes": 21,
   "tronquee": true,
   "etats": {
-   "garde": 24,
+   "garde": 21,
    "vendu": 16,
-   "ecarte": 10,
+   "ecarte": 13,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 7,
-   "location": 1,
-   "prix_trop_haut": 2
+   "hors_perimetre": 12,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Appartement 2 pièces de 48 m² à CHÂTEAU-D",
-   "location": "Maison de ville 3 pièces de 76 m² à Péronne (80200)",
-   "prix_trop_haut": "Château 18 pièces de 500 m² à Laizy (71190)"
+   "hors_perimetre": "Domaine 11 pièces de 250 m² à Bellegarde (30127)",
+   "prix_trop_haut": "Domaine 26 pièces de 1 500 m² à Gy-les-Nonains (45220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 438.0,
+  "seconde": 505.0,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 28,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 28,
+   "garde": 30,
    "vendu": 13,
-   "ecarte": 9,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 8
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Demeure 11 pièces de 352 m² à Gérardmer (88400)",
-   "hors_perimetre": "Pavillon 4 pièces de 97 m² à Les Forges (79340)"
+   "hors_perimetre": "Maison traditionnelle 4 pièces de 85 m² à Savigny (74520)",
+   "prix_trop_haut": "Maison 5 pièces de 178 m² à Agon-Coutainville (50230)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 616.2,
+  "seconde": 608.7,
   "reseau": "iad",
-  "departement": "41",
-  "visitees": 34,
-  "gardes": 24,
+  "departement": "51",
+  "visitees": 16,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 24,
-   "vendu": 9,
-   "ecarte": 1,
+   "garde": 12,
+   "vendu": 2,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
+   "location": 1,
    "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 135 m² à Pouillé (86800)"
+   "location": "Maison 6 pièces de 104 m² à Sarry (51520)",
+   "hors_perimetre": "Maison 4 pièces de 99 m² à Chenay (79120)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 616.2,
+  "seconde": 608.7,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 617.0,
+  "seconde": 609.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 618.5,
+  "seconde": 612.3,
   "reseau": "safti",
-  "n": 28853,
+  "n": 28807,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 619.2,
+  "seconde": 613.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.5,
+  "seconde": 613.6,
   "reseau": "safti",
-  "connues": 14082,
-  "ecartees": 1788
+  "connues": 14310,
+  "ecartees": 1845
  },
  {
   "etape": "departement",
-  "seconde": 955.3,
+  "seconde": 942.2,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 50,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1215.4,
-  "reseau": "safti",
-  "departement": "58",
-  "visitees": 40,
-  "gardes": 36,
-  "tronquee": true,
-  "etats": {
-   "garde": 36,
-   "vendu": 0,
-   "ecarte": 4,
+   "garde": 38,
+   "vendu": 2,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 3
+   "prix_trop_haut": 5,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 22 pièces à Varennes-Vauzelles 58640 : 640m², prix 990 000 €. Réf : 1591419",
-   "hors_perimetre": "Vente de maison 5 pièces à Saint-Martin-Du-Puy 33540 : 168m², prix 270 000 €. Réf : 1684058"
+   "prix_trop_haut": "Vente de maison 16 pièces à Abbeville 80100 : 303m², prix 881 000 €. Réf : 1579754",
+   "hors_perimetre": "Vente de maison 4 pièces à Berneuil 17460 : 102m², prix 127 000 €. Réf : 1726944"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1206.7,
+  "reseau": "safti",
+  "departement": "88",
+  "visitees": 40,
+  "gardes": 31,
+  "tronquee": true,
+  "etats": {
+   "garde": 31,
+   "vendu": 3,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 5,
+   "ni_surface_ni_prix_credible": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 8 pièces à Ban-Sur-Meurthe-Clefcy 88230 : 280m², prix 790 000 €. Réf : 1599468",
+   "ni_surface_ni_prix_credible": "Vente de maison 1 pièce à Morizecourt 88320 : 56m², prix 14 000 €. Réf : 1618260"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1215.4,
-  "gardes": 162
+  "seconde": 1206.7,
+  "gardes": 132
  }
 ]
