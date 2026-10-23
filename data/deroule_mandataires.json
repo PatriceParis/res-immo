@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.0,
+  "seconde": 1.8,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.0,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,195 +21,216 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.0,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.9,
+  "seconde": 3.6,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.7,
+  "seconde": 5.3,
   "reseau": "capifrance",
-  "connues": 14407,
-  "ecartees": 1866
+  "connues": 14644,
+  "ecartees": 1915
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.7,
+  "seconde": 5.3,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.0,
+  "seconde": 5.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.2,
+  "seconde": 18.7,
   "reseau": "iad",
-  "n": 94153,
+  "n": 94020,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.2,
+  "seconde": 19.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.5,
+  "seconde": 20.1,
   "reseau": "iad",
-  "connues": 14407,
-  "ecartees": 1866
+  "connues": 14644,
+  "ecartees": 1915
  },
  {
   "etape": "departement",
-  "seconde": 298.4,
+  "seconde": 289.7,
   "reseau": "iad",
-  "departement": "52",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 11,
-   "ecarte": 1,
+   "garde": 40,
+   "vendu": 7,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 137 m² à Richebourg (78550)"
+   "hors_perimetre": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 557.2,
+  "seconde": 520.2,
   "reseau": "iad",
-  "departement": "53",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 35,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 35,
+   "garde": 34,
    "vendu": 9,
-   "ecarte": 6,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6
+   "hors_perimetre": 6,
+   "titre_hors_cible:biens immobiliers a vendre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Saint-Mars-du-Désert (44850)"
+   "hors_perimetre": "Maison 12 pièces de 291 m² à Massy (91300)",
+   "titre_hors_cible:biens immobiliers a vendre": "111 067 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 612.5,
+  "seconde": 606.2,
   "reseau": "iad",
-  "departement": "58",
-  "visitees": 12,
-  "gardes": 6,
+  "departement": "89",
+  "visitees": 18,
+  "gardes": 14,
   "tronquee": true,
   "etats": {
-   "garde": 6,
+   "garde": 14,
    "vendu": 4,
-   "ecarte": 2,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 4 pièces de 101 m² à SAINT SULPICE EN PAREDS (85410)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 612.5,
+  "seconde": 606.2,
   "reseau": "safti",
-  "part_secondes": 590
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 613.3,
+  "seconde": 606.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 615.0,
+  "seconde": 608.1,
   "reseau": "safti",
-  "n": 28807,
+  "n": 28867,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 615.4,
+  "seconde": 608.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 615.6,
+  "seconde": 608.8,
   "reseau": "safti",
-  "connues": 14440,
-  "ecartees": 1899
+  "connues": 14674,
+  "ecartees": 1945
  },
  {
   "etape": "departement",
-  "seconde": 928.7,
+  "seconde": 888.0,
   "reseau": "safti",
-  "departement": "37",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 0,
+   "ecarte": 7,
+   "illisible": 1
+  },
+  "motifs": {
+   "prix_trop_haut": 2,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Blois 41000 : 304m², prix 749 000 €. Réf : 1607909",
+   "hors_perimetre": "Vente de maison 8 pièces à Lisle 24350 : 137m², prix 181 000 €. Réf : 1568469"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1142.8,
+  "reseau": "safti",
+  "departement": "59",
   "visitees": 50,
   "gardes": 36,
   "tronquee": true,
   "etats": {
    "garde": 36,
-   "vendu": 2,
-   "ecarte": 12,
+   "vendu": 3,
+   "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 12
+   "prix_trop_haut": 11
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Amboise 37400 : 350m², prix 740 000 €. Réf : 1570918"
+   "prix_trop_haut": "Vente de maison 5 pièces à Bray-Dunes 59123 : 198m², prix 990 000 €. Réf : 1708575"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1209.8,
+  "seconde": 1202.6,
   "reseau": "safti",
-  "departement": "39",
-  "visitees": 41,
-  "gardes": 39,
+  "departement": "60",
+  "visitees": 11,
+  "gardes": 8,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 0,
+   "garde": 8,
+   "vendu": 1,
    "ecarte": 2,
    "illisible": 0
   },
@@ -217,12 +238,12 @@
    "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 9 pièces à Lajoux 39310 : 215m², prix 780 000 €. Réf : 1640665"
+   "prix_trop_haut": "Vente de maison 8 pièces à Compiegne 60200 : 225m², prix 1 100 000 €. Réf : 1674986"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1209.8,
-  "gardes": 154
+  "seconde": 1202.6,
+  "gardes": 174
  }
 ]
