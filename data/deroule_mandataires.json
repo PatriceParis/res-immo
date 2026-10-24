@@ -33,189 +33,90 @@
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.6,
+  "seconde": 4.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.6,
+  "seconde": 4.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.0,
+  "seconde": 5.1,
   "reseau": "capifrance",
-  "connues": 15042,
-  "ecartees": 2016
+  "connues": 15229,
+  "ecartees": 2060
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.0,
+  "seconde": 5.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.4,
+  "seconde": 5.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.2,
+  "seconde": 18.5,
   "reseau": "iad",
   "n": 94012,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.3,
+  "seconde": 20.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.7,
+  "seconde": 20.8,
   "reseau": "iad",
-  "connues": 15042,
-  "ecartees": 2016
+  "connues": 15229,
+  "ecartees": 2060
  },
  {
   "etape": "departement",
-  "seconde": 241.3,
+  "seconde": 214.9,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 25,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 11,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 8
-  },
-  "exemples": {
-   "prix_trop_haut": "Manoir 14 pièces de 640 m² à Bayeux (14400)",
-   "hors_perimetre": "Pavillon 4 pièces de 88 m² à Angerville (91670)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 475.5,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 33,
-  "tronquee": true,
-  "etats": {
-   "garde": 33,
-   "vendu": 8,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 4 pièces de 115 m² à Saint-Ambroix (30500)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 605.1,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 26,
-  "gardes": 20,
-  "tronquee": true,
-  "etats": {
-   "garde": 20,
-   "vendu": 3,
-   "ecarte": 3,
+   "garde": 25,
+   "vendu": 14,
+   "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "prix_trop_haut": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 10
   },
   "exemples": {
-   "location": "Maison 4 pièces de 100 m² à Saint-Pierre-des-Corps (37700)",
-   "prix_trop_haut": "Demeure 10 pièces de 470 m² à Azay-sur-Indre (37310)",
-   "hors_perimetre": "Maison 4 pièces de 87 m² à La Ferrière (85280)"
+   "location": "Maison 3 pièces de 82 m² à LONGWY (54400)",
+   "hors_perimetre": "Maison de ville 4 pièces de 126 m² à Andilly (17230)"
   }
  },
  {
-  "etape": "reseau_debut",
-  "seconde": 605.1,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 605.6,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 606.4,
-  "reseau": "safti",
-  "n": 28931,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 607.2,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 607.6,
-  "reseau": "safti",
-  "connues": 15085,
-  "ecartees": 2059
- },
- {
   "etape": "departement",
-  "seconde": 942.9,
-  "reseau": "safti",
-  "departement": "08",
+  "seconde": 475.2,
+  "reseau": "iad",
+  "departement": "55",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 10 pièces à Saint-Jean-Aux-Bois 60350 : 300m², prix 1 100 000 €. Réf : 1681622"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1204.8,
-  "reseau": "safti",
-  "departement": "10",
-  "visitees": 41,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 0,
+   "garde": 39,
+   "vendu": 11,
    "ecarte": 0,
    "illisible": 0
   },
@@ -223,8 +124,130 @@
   "exemples": {}
  },
  {
+  "etape": "departement",
+  "seconde": 612.1,
+  "reseau": "iad",
+  "departement": "60",
+  "visitees": 30,
+  "gardes": 16,
+  "tronquee": true,
+  "etats": {
+   "garde": 16,
+   "vendu": 9,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "prix_trop_haut": 2,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 53 m² à Saint-Paul (97411)",
+   "prix_trop_haut": "Manoir 23 pièces de 632 m² à Noyon (60400)",
+   "hors_perimetre": "Maison 3 pièces de 68 m² à Baron (33750)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 612.1,
+  "reseau": "safti",
+  "part_secondes": 590
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 612.7,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 614.0,
+  "reseau": "safti",
+  "n": 28931,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 614.8,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 615.1,
+  "reseau": "safti",
+  "connues": 15276,
+  "ecartees": 2110
+ },
+ {
+  "etape": "departement",
+  "seconde": 876.7,
+  "reseau": "safti",
+  "departement": "45",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 0,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 5,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023",
+   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1173.2,
+  "reseau": "safti",
+  "departement": "50",
+  "visitees": 50,
+  "gardes": 48,
+  "tronquee": true,
+  "etats": {
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 25 pièces à Picauville 50360 : 1 560m², prix 2 920 000 €. Réf : 1656050"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1208.8,
+  "reseau": "safti",
+  "departement": "61",
+  "visitees": 8,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 2,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 15 pièces à Bagnoles de l'Orne Normandie 61140 : 790m², prix 4 326 000 €. Réf : 1702731"
+  }
+ },
+ {
   "etape": "fin",
-  "seconde": 1204.8,
+  "seconde": 1208.8,
   "gardes": 173
  }
 ]
