@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 3.4,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 3.4,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,206 +21,210 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 3.4,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.3,
+  "seconde": 3.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.9,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.9,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 7.3,
+  "seconde": 5.0,
   "reseau": "capifrance",
-  "connues": 14799,
-  "ecartees": 1970
+  "connues": 15042,
+  "ecartees": 2016
  },
  {
   "etape": "reseau_debut",
-  "seconde": 7.3,
+  "seconde": 5.0,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.5,
+  "seconde": 5.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.4,
+  "seconde": 16.2,
   "reseau": "iad",
-  "n": 94020,
+  "n": 94012,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.4,
+  "seconde": 18.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 27.7,
+  "seconde": 18.7,
   "reseau": "iad",
-  "connues": 14799,
-  "ecartees": 1970
+  "connues": 15042,
+  "ecartees": 2016
  },
  {
   "etape": "departement",
-  "seconde": 277.4,
+  "seconde": 241.3,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 31,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 8,
-   "ecarte": 11,
+   "garde": 30,
+   "vendu": 11,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "url_type_exclu": 2,
-   "location": 1,
+   "prix_trop_haut": 1,
    "hors_perimetre": 8
   },
   "exemples": {
-   "url_type_exclu": "Immeuble de 124 m² à Château-Thierry (02400)",
-   "location": "Maison 4 pièces de 121 m² à CHARLY-SUR-MARNE (02310)",
-   "hors_perimetre": "Maison d"
+   "prix_trop_haut": "Manoir 14 pièces de 640 m² à Bayeux (14400)",
+   "hors_perimetre": "Pavillon 4 pièces de 88 m² à Angerville (91670)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 525.6,
+  "seconde": 475.5,
   "reseau": "iad",
-  "departement": "08",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 29,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 29,
-   "vendu": 15,
-   "ecarte": 6,
+   "garde": 33,
+   "vendu": 8,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6
+   "hors_perimetre": 9
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 103 m² à Machault (77133)"
+   "hors_perimetre": "Maison de village 4 pièces de 115 m² à Saint-Ambroix (30500)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 606.3,
+  "seconde": 605.1,
   "reseau": "iad",
-  "departement": "10",
-  "visitees": 14,
-  "gardes": 11,
+  "departement": "37",
+  "visitees": 26,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 0,
+   "garde": 20,
+   "vendu": 3,
    "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2,
-   "prix_trop_haut": 1
+   "location": 1,
+   "prix_trop_haut": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Château 21 pièces de 826 m² à Aulnay (17470)",
-   "prix_trop_haut": "Domaine 38 pièces de 1 540 m² à Vanlay (10210)"
+   "location": "Maison 4 pièces de 100 m² à Saint-Pierre-des-Corps (37700)",
+   "prix_trop_haut": "Demeure 10 pièces de 470 m² à Azay-sur-Indre (37310)",
+   "hors_perimetre": "Maison 4 pièces de 87 m² à La Ferrière (85280)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 606.3,
+  "seconde": 605.1,
   "reseau": "safti",
   "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.0,
+  "seconde": 605.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 609.3,
+  "seconde": 606.4,
   "reseau": "safti",
-  "n": 28867,
+  "n": 28931,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 610.1,
+  "seconde": 607.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 610.4,
+  "seconde": 607.6,
   "reseau": "safti",
-  "connues": 14842,
-  "ecartees": 2013
+  "connues": 15085,
+  "ecartees": 2059
  },
  {
   "etape": "departement",
-  "seconde": 956.5,
+  "seconde": 942.9,
   "reseau": "safti",
-  "departement": "89",
+  "departement": "08",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 2,
-   "ecarte": 0,
+   "garde": 49,
+   "vendu": 0,
+   "ecarte": 1,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 10 pièces à Saint-Jean-Aux-Bois 60350 : 300m², prix 1 100 000 €. Réf : 1681622"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 1206.5,
+  "seconde": 1204.8,
   "reseau": "safti",
-  "departement": "02",
-  "visitees": 38,
-  "gardes": 37,
+  "departement": "10",
+  "visitees": 41,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 37,
+   "garde": 41,
    "vendu": 0,
    "ecarte": 0,
-   "illisible": 1
+   "illisible": 0
   },
   "motifs": {},
   "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1206.5,
-  "gardes": 156
+  "seconde": 1204.8,
+  "gardes": 173
  }
 ]
