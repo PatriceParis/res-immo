@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 2.6,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.7,
+  "seconde": 2.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,220 +21,176 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.7,
+  "seconde": 2.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.3,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.7,
+  "seconde": 8.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.7,
+  "seconde": 8.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.1,
+  "seconde": 8.5,
   "reseau": "capifrance",
-  "connues": 15229,
-  "ecartees": 2060
+  "connues": 15444,
+  "ecartees": 2125
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.1,
+  "seconde": 8.5,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.5,
+  "seconde": 9.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 18.5,
+  "seconde": 27.8,
   "reseau": "iad",
-  "n": 94012,
+  "n": 94033,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.5,
+  "seconde": 29.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.8,
+  "seconde": 30.1,
   "reseau": "iad",
-  "connues": 15229,
-  "ecartees": 2060
+  "connues": 15444,
+  "ecartees": 2125
  },
  {
   "etape": "departement",
-  "seconde": 214.9,
+  "seconde": 339.2,
   "reseau": "iad",
-  "departement": "54",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 25,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 14,
-   "ecarte": 11,
+   "garde": 45,
+   "vendu": 2,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 10
+   "hors_perimetre": 2,
+   "location": 1
   },
   "exemples": {
-   "location": "Maison 3 pièces de 82 m² à LONGWY (54400)",
-   "hors_perimetre": "Maison de ville 4 pièces de 126 m² à Andilly (17230)"
+   "hors_perimetre": "Maison 6 pièces de 140 m² à Courtomer (77390)",
+   "location": "Maison de ville 6 pièces de 130 m² à Sainte-Gauburge-Sainte-Colombe (61370)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 475.2,
+  "seconde": 583.1,
   "reseau": "iad",
-  "departement": "55",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 39,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 11,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 612.1,
-  "reseau": "iad",
-  "departement": "60",
-  "visitees": 30,
-  "gardes": 16,
-  "tronquee": true,
-  "etats": {
-   "garde": 16,
-   "vendu": 9,
-   "ecarte": 5,
+   "garde": 34,
+   "vendu": 15,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "prix_trop_haut": 2,
-   "hors_perimetre": 1
+   "location": 1
   },
   "exemples": {
-   "location": "Maison 3 pièces de 53 m² à Saint-Paul (97411)",
-   "prix_trop_haut": "Manoir 23 pièces de 632 m² à Noyon (60400)",
-   "hors_perimetre": "Maison 3 pièces de 68 m² à Baron (33750)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 612.1,
-  "reseau": "safti",
-  "part_secondes": 590
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 612.7,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 614.0,
-  "reseau": "safti",
-  "n": 28931,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 614.8,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 615.1,
-  "reseau": "safti",
-  "connues": 15276,
-  "ecartees": 2110
- },
- {
-  "etape": "departement",
-  "seconde": 876.7,
-  "reseau": "safti",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 40,
-  "tronquee": true,
-  "etats": {
-   "garde": 40,
-   "vendu": 0,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 5,
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "prix_trop_haut": "Vente de maison 7 pièces à Lorcy 45490 : 371m², prix 720 000 €. Réf : 1576023",
-   "hors_perimetre": "Vente de maison 5 pièces à Bellegarde 30127 : 155m², prix 627 000 €. Réf : 1557797"
+   "location": "Maison 4 pièces de 100 m² à Jumel (80250)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1173.2,
-  "reseau": "safti",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 48,
+  "seconde": 614.9,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 6,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 48,
+   "garde": 4,
    "vendu": 0,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2
+   "hors_perimetre": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 25 pièces à Picauville 50360 : 1 560m², prix 2 920 000 €. Réf : 1656050"
+   "hors_perimetre": "Maison de village 13 pièces de 320 m² à Saint-Martin-du-Mont (01160)"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 1208.8,
+  "etape": "reseau_debut",
+  "seconde": 614.9,
   "reseau": "safti",
-  "departement": "61",
-  "visitees": 8,
-  "gardes": 5,
+  "part_secondes": 588
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 616.1,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 617.9,
+  "reseau": "safti",
+  "n": 28831,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 618.7,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 619.1,
+  "reseau": "safti",
+  "connues": 15463,
+  "ecartees": 2145
+ },
+ {
+  "etape": "departement",
+  "seconde": 982.8,
+  "reseau": "safti",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 2,
+   "garde": 49,
+   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
@@ -242,12 +198,33 @@
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 15 pièces à Bagnoles de l'Orne Normandie 61140 : 790m², prix 4 326 000 €. Réf : 1702731"
+   "prix_trop_haut": "Vente de maison 12 pièces à Ecurie 62223 : 212m², prix 850 000 €. Réf : 1565251"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1217.2,
+  "reseau": "safti",
+  "departement": "51",
+  "visitees": 35,
+  "gardes": 34,
+  "tronquee": true,
+  "etats": {
+   "garde": 34,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Vente de maison 8 pièces à Taissy 51500 : 380m², prix 1 250 000 €. Réf : 1524878"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1208.8,
-  "gardes": 173
+  "seconde": 1217.2,
+  "gardes": 166
  }
 ]
