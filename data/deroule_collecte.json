@@ -1,77 +1,194 @@
 {
- "minutes": 28.0,
+ "minutes": 28.2,
  "agences": [
   {
-   "agence": "Deletan Immobilier",
-   "secondes": 76,
-   "pages": 18,
+   "agence": "Immobilière Scarponaise",
+   "secondes": 61,
+   "pages": 8,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 34",
-   "adresses_ecartees": 2,
-   "sitemap_dates": 34,
-   "deja_ecartees": 1,
-   "motifs": {
-    "prix_trop_haut": 9
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://deletang-immobilier.com/nos-biens/contemporaine-de-plain-pied-d-rsquo-architecte-parc-1-hectare-7-120",
-     "titre": "Deletang Immobilier : des demeures d"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://deletang-immobilier.com/nos-biens/hyper-centre-tours-appartement-t2-de-charme-129",
-    "cause": "aucune annonce lue",
-    "titre": "Deletang Immobilier : des demeures d'exception",
-    "octets": 72414
-   }
-  },
-  {
-   "agence": "Demeures du Perche et de Normandie",
-   "secondes": 20,
-   "pages": 3,
-   "gardes": 3,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 30,
-   "sitemap": "ok 30",
-   "deja_ecartees": 20
+   "adresses_ecartees": 32,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 8
   },
   {
-   "agence": "Demonchy",
-   "secondes": 75,
+   "agence": "Immobilière de France",
+   "secondes": 38,
    "pages": 9,
-   "gardes": 8,
+   "gardes": 2,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
+   "ecartes": 4,
+   "illisibles": 3,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 26,
-   "sitemap": "ok 72",
-   "deja_ecartees": 24,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Trouvez le bien de vos rêves avec",
+   "deja_ecartees": 2,
    "illisible_exemple": {
-    "url": "https://www.agence-demonchy.fr/nos-biens-vendus/",
+    "url": "https://immobilieredefrance.com/fr/propriete/location+commerce+boulogne-sur-mer+local-commercial-proche-theatre+86080965",
     "cause": "aucune annonce lue",
-    "titre": "appartements, maisons, terrains vendu à Aumale,Poix de Picardie | %site_title%",
-    "octets": 151204
+    "titre": "Local commercial - Proche Théâtre",
+    "octets": 75484
+   },
+   "motifs": {
+    "titre_hors_cible:local commercial": 1,
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:local commercial": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+commerce+boulogne-sur-mer+local-commercial-avec-bonne-visibilite+83194140",
+     "titre": "Local commercial avec bonne visibilité"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-t3+86135930",
+     "titre": "Appartement T3"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+studio+87250918",
+     "titre": "STUDIO"
+    }
    }
   },
   {
-   "agence": "Dorimmo",
-   "secondes": 63,
+   "agence": "Immobilière de Lille",
+   "secondes": 3,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "deja_ecartees": 23
+  },
+  {
+   "agence": "Indicateur Vendômois",
+   "secondes": 69,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 327,
+   "sitemap": "ok 327",
+   "deja_ecartees": 3,
+   "motifs": {
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/43-terrain-a-batir/6358-nord-vendome/",
+     "titre": "NORD VENDÔME"
+    }
+   }
+  },
+  {
+   "agence": "Investimmo",
+   "secondes": 61,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 53,
+   "sitemap_dates": 22,
+   "sitemap": "ok 22",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Jacques Klein Immeubles",
+   "secondes": 87,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 3,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://jki-immo.fr/annonces/f5-metz-vallieres/",
+     "titre": "F5-METZ VALLIÈRES - Jacques Klein Immobilier"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://jki-immo.fr/annonces/maison-individuelle-metz-queuleu/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison individuelle - METZ QUEULEU - Jacques Klein Immobilier",
+    "octets": 322016
+   }
+  },
+  {
+   "agence": "Jean Jaurès Immobilier",
+   "secondes": 59,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 74,
+   "sitemap_dates": 126,
+   "sitemap": "ok 126",
+   "deja_ecartees": 6
+  },
+  {
+   "agence": "L'Agence",
+   "secondes": 7,
+   "pages": 2,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lagenceimmobilier.com/a-vendre/1",
+     "titre": "Vente - L'Agence"
+    }
+   }
+  },
+  {
+   "agence": "L'Agence Smith",
+   "secondes": 69,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -81,57 +198,12 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 11,
-   "sitemap_dates": 209,
-   "sitemap": "ok 209",
-   "deja_ecartees": 2
+   "sitemap_dates": 170,
+   "sitemap": "ok 172",
+   "deja_ecartees": 24
   },
   {
-   "agence": "Du Côté de Chez Vous",
-   "secondes": 104,
-   "pages": 40,
-   "gardes": 2,
-   "vendus": 1,
-   "ecartes": 37,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 98,
-   "sitemap_dates": 403,
-   "sitemap": "ok 403",
-   "deja_ecartees": 17,
-   "motifs": {
-    "prix_trop_haut": 27,
-    "ni_surface_ni_prix_credible": 10
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.ducotedechezvous-immo.com/vente/10-aube/384-lantages/1-maison/t5/2228-a-vendre-maison-de-plain-pied-de-123-36-m-avec-sous-sol-total/",
-     "titre": "À vendre – Maison de plain-pied de 123,36 m² avec sous-sol total"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.ducotedechezvous-immo.com/vente/10-aube/44-st-germain/1-maison/t5/2219-maison-t5-avec-3-chambres-sous-sol-total/",
-     "titre": "MAISON T5 AVEC 3 chambres sous-sol total"
-    }
-   }
-  },
-  {
-   "agence": "E&B Immo",
-   "secondes": 54,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 107,
-   "sitemap_dates": 60,
-   "sitemap": "ok 60"
-  },
-  {
-   "agence": "Echinard",
+   "agence": "L'Immobilière Conseils",
    "secondes": 7,
    "pages": 0,
    "gardes": 0,
@@ -140,271 +212,128 @@
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 429,
-   "index_titre": ""
-  },
-  {
-   "agence": "Eco Immo 60",
-   "secondes": 47,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 17,
-   "sitemap_dates": 25,
-   "sitemap": "ok 25",
-   "deja_ecartees": 2
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "L’immobilière Conseils : agence immobilière Noyon, transacti"
   },
   {
-   "agence": "Ernoult Immobilier",
-   "secondes": 66,
-   "pages": 6,
-   "gardes": 5,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 60",
-   "deja_ecartees": 54,
-   "illisible_exemple": {
-    "url": "https://www.ernoult-immobilier.fr/vente/,VM382",
-    "cause": "aucune annonce lue",
-    "titre": "FREDERIQUE ERNOULT IMMOBILIER",
-    "octets": 795440
-   }
-  },
-  {
-   "agence": "Espace Pro",
-   "secondes": 61,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 100,
-   "sitemap_dates": 198,
-   "sitemap": "ok 198",
-   "deja_ecartees": 1,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.espacepro-immobilier.fr/propriete/maison-a-vendre-beaumont-en-auge/",
-     "titre": "Maison à vendre Beaumont-en-Auge"
-    }
-   }
-  },
-  {
-   "agence": "Espaces Atypiques",
-   "secondes": 83,
-   "pages": 11,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 12,
-   "sitemap": "ok 11",
-   "illisible_exemple": {
-    "url": "https://www.espaces-atypiques.com/architecture-et-inspiration/maison-atypique-cap-ferret-renovation/",
-    "cause": "aucune annonce lue",
-    "titre": "Visite d'une maison atypique rénovée au Cap Ferret par un architecte",
-    "octets": 171793
-   }
-  },
-  {
-   "agence": "Estime",
-   "secondes": 47,
-   "pages": 5,
-   "gardes": 5,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 126,
-   "sitemap_dates": 56,
-   "sitemap": "ok 56",
-   "deja_ecartees": 51
-  },
-  {
-   "agence": "Flix'immo",
-   "secondes": 5,
-   "pages": 1,
+   "agence": "La Plaine Immobilier",
+   "secondes": 89,
+   "pages": 35,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 1,
+   "illisibles": 35,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "La Plaine Immobilier : agence immobilière Caen, achat immobi",
    "illisible_exemple": {
-    "url": "https://www.flix-immo.fr/fr/annonces-immobilieres",
+    "url": "https://laplaine-immobilier.com/fr/maison-carrouges-2-pieces-35-m2",
     "cause": "aucune annonce lue",
-    "titre": "Annonces immobilières Flixecourt – Flix’Immo",
-    "octets": 60967
+    "titre": "",
+    "octets": 154406
    }
   },
   {
-   "agence": "Flo Immobilier",
-   "secondes": 65,
-   "pages": 11,
+   "agence": "Les nouvelles pépites",
+   "secondes": 237,
+   "pages": 33,
    "gardes": 8,
-   "vendus": 0,
+   "vendus": 22,
    "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 113,
-   "sitemap_dates": 32,
-   "sitemap": "ok 32",
-   "deja_ecartees": 17,
+   "adresses_ecartees": 83,
+   "sitemap": "ok 172",
+   "deja_ecartees": 78,
    "motifs": {
     "prix_trop_haut": 3
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://flo-immobilier.fr/vente/14-calvados/13-bieville-beuville/maison-a-vendre-bieville-beuville/623-maison",
-     "titre": "Maison à vendre Biéville-Beuville"
+     "url": "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-5-pieces-wasquehal-59290,VM1043",
+     "titre": "Maison individuelle 177 m² – 5 pièces – Jardin 1800 m² – Garages & stationnements privatifs – Wasquehal Boers"
     }
    }
   },
   {
-   "agence": "Foch immobilier",
-   "secondes": 67,
-   "pages": 14,
+   "agence": "Loft & House",
+   "secondes": 40,
+   "pages": 11,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 6,
-   "illisibles": 0,
+   "ecartes": 2,
+   "illisibles": 1,
    "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Immobilier Le Havre annonces immobilières en Normandie 76 | ",
-   "deja_ecartees": 25,
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "illisible_exemple": {
+    "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-129-m2-bieville-beuville-61595756/",
+    "cause": "aucune annonce lue",
+    "titre": "Page non trouvée - Loft&nbsp;&amp;&nbsp;House",
+    "octets": 51544
+   },
    "motifs": {
-    "ni_surface_ni_prix_credible": 6
+    "prix_trop_haut": 2
    },
    "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://fochimmobilier.com/annonce/5079",
-     "titre": "IMMEUBLE | NOUVEAUTE QUARTIER DANTON | Le Havre"
+    "prix_trop_haut": {
+     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-10-pieces-376-m2-bieville-beuville-61547115/",
+     "titre": "Maison de 10 pièces de 376 m² à BIEVILLE BEUVILLE - Loft & House"
     }
    }
   },
   {
-   "agence": "France Pro Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Frère Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 37,
-   "sitemap": "ok 51",
-   "deja_ecartees": 51
-  },
-  {
-   "agence": "Graupera Immobilier",
+   "agence": "Logehome",
    "secondes": 5,
-   "pages": 0,
+   "pages": 1,
    "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Immobilière Graupera"
-  },
-  {
-   "agence": "Homeloop",
-   "secondes": 77,
-   "pages": 9,
-   "gardes": 8,
    "vendus": 0,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 282,
-   "sitemap_dates": 162,
-   "sitemap": "ok 162",
-   "deja_ecartees": 50,
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "deja_ecartees": 1,
    "motifs": {
-    "prix_trop_haut": 1
+    "ni_surface_ni_prix_credible": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/la-plaine-sur-mer/vue-mer-maison-11p-de-268-m2-port-giraud-la-plaine-sur-mer/84862",
-     "titre": "Vue mer ! Maison 11p de 268 m² - Port Gi..."
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.logehome.fr/vendre-mon-bien",
+     "titre": "Vendre mon bien, le HOMEPACK de logéhome"
     }
    }
   },
   {
-   "agence": "Hoste Immobilier",
-   "secondes": 51,
-   "pages": 7,
-   "gardes": 7,
+   "agence": "Logia",
+   "secondes": 78,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 13,
-   "sitemap_dates": 7,
-   "sitemap": "ok 9",
-   "deja_ecartees": 2
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": "Loading https://www.les-agents.com/"
   },
   {
-   "agence": "Human Immobilier",
-   "secondes": 72,
+   "agence": "Logimmo Conseil",
+   "secondes": 62,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -413,83 +342,294 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 6347,
-   "sitemap_dates": 14833,
-   "sitemap": "ok 14853"
+   "adresses_ecartees": 92,
+   "sitemap_dates": 68,
+   "sitemap": "ok 68",
+   "deja_ecartees": 9
   },
   {
-   "agence": "ID Immobilier",
-   "secondes": 82,
-   "pages": 9,
+   "agence": "Logéal Immobilière",
+   "secondes": 47,
+   "pages": 6,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 5,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "deja_ecartees": 3,
+   "illisible_exemple": {
+    "url": "https://www.logeal-immobiliere.fr/qui-nous-sommes/nos-engagements/bien-vieillir-a-domicile/",
+    "cause": "aucune annonce lue",
+    "titre": "Bien vieillir à domicile - Logéal Immobilière",
+    "octets": 144126
+   }
+  },
+  {
+   "agence": "Lorn Habitat",
+   "secondes": 21,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 355,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Accueil - Lor'n Habitat Agence immobilière Custines"
+  },
+  {
+   "agence": "Lotz",
+   "secondes": 57,
+   "pages": 8,
    "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 37,
+   "sitemap_dates": 27,
+   "sitemap": "ok 27",
+   "deja_ecartees": 7
+  },
+  {
+   "agence": "Maison Ancienne du Bessin",
+   "secondes": 64,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 29,
+   "sitemap": "ok 29",
+   "deja_ecartees": 5
+  },
+  {
+   "agence": "Maison du Perche",
+   "secondes": 47,
+   "pages": 6,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 130,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
+   "adresses_ecartees": 23,
+   "sitemap_dates": 92,
+   "sitemap": "ok 92",
    "deja_ecartees": 2,
    "illisible_exemple": {
-    "url": "https://www.id-immobilier.com/biens-vendus/1",
+    "url": "https://www.maisonduperche.fr/iwp_type/maison/",
     "cause": "aucune annonce lue",
-    "titre": "Nos biens vendus | ID Immobilier",
-    "octets": 185061
-   }
-  },
-  {
-   "agence": "Ideal",
-   "secondes": 2,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 4",
-   "sitemap_dates": 4,
-   "deja_ecartees": 4
-  },
-  {
-   "agence": "Ifc Conseils",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Imaj Immobilier",
-   "secondes": 49,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 27,
-   "sitemap_dates": 27,
-   "sitemap": "ok 27",
-   "deja_ecartees": 1,
+    "titre": "Archives des Maison ⋆ Maison du Perche",
+    "octets": 107292
+   },
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.immobi.com/vente/80-gerardmer/maison/3161-gerardmer",
-     "titre": "GERARDMER"
+     "url": "https://www.maisonduperche.fr/propriete/maison-de-campagne-a-vendre-foret-de-belleme/",
+     "titre": "MAISON DE CAMPAGNE A VENDRE FORET DE BELLEME ⋆ Maison du Perche"
     }
    }
   },
   {
-   "agence": "Immo 3D",
-   "secondes": 26,
+   "agence": "Maisons Nobless",
+   "secondes": 38,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 173,
+   "sitemap": "ok 173",
+   "deja_ecartees": 3
+  },
+  {
+   "agence": "Manson",
+   "secondes": 97,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 48,
+   "sitemap": "ok 71",
+   "deja_ecartees": 20
+  },
+  {
+   "agence": "Marc Foujols",
+   "secondes": 52,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 47,
+   "sitemap_dates": 489,
+   "sitemap": "ok 489",
+   "deja_ecartees": 13,
+   "motifs": {
+    "ni_surface_ni_prix_credible": 1,
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.marcfoujols.com/propriete/champ-de-mars-dernier-etage-balcon-vue-tour-eiffel/",
+     "titre": "Champ de Mars – dernier étage balcon vue Tour Eiffel"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.marcfoujols.com/propriete/senlis-maison-familiale-avec-piscine/",
+     "titre": "Senlis – Maison familiale avec piscine"
+    }
+   }
+  },
+  {
+   "agence": "Martel Expertises",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Mathis Mazon",
+   "secondes": 7,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "MATHIS NAZON Immobilier"
+  },
+  {
+   "agence": "Meet Immobilier",
+   "secondes": 1,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Michaël Zingraf",
+   "secondes": 76,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 27,
+   "sitemap_dates": 1565,
+   "sitemap": "ok 1566",
+   "deja_ecartees": 13,
+   "motifs": {
+    "prix_trop_haut": 4,
+    "titre_hors_cible:appartement": 3,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.michaelzingraf.com/fr/vente/MZIMC1473-villa-elegante-de-4-chambres-avec-vue-mer-vieux-grand-port",
+     "titre": "Villa à vendre à Vieux Grand Port – 4 chambres, 232 m²"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.michaelzingraf.com/fr/vente/MZIPB441-cannes-croisette-elegant-3-pieces-renove-avec-terrasses-et-vue-mer",
+     "titre": "Appartement à vendre à Cannes – 2 chambres, 93 m²"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://www.michaelzingraf.com/fr/vente/MZIMC1417-loft-contemporain-au-coeur-de-cap-tamarin",
+     "titre": "Studio à vendre à Tamarin – 1 chambre, 104 m²"
+    }
+   }
+  },
+  {
+   "agence": "Michel et Neumayer",
+   "secondes": 12,
+   "pages": 2,
+   "gardes": 2,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 19,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Mon Agence Immo",
+   "secondes": 79,
+   "pages": 15,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 7,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 55,
+   "sitemap": "ok 55",
+   "deja_ecartees": 3,
+   "motifs": {
+    "prix_trop_haut": 7
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.mon-agenceimmo.fr/vente/17-mehun-sur-yevre/maison/522-mehun-sur-yevre-pavillon-sur-sous-sol-4-chambres-garage-et-jardin",
+     "titre": "Mehun-Sur-Yèvre - Pavillon sur sous-sol 4 chambres, garage et jardin"
+    }
+   }
+  },
+  {
+   "agence": "Mon Saint-André",
+   "secondes": 23,
    "pages": 3,
    "gardes": 3,
    "vendus": 0,
@@ -498,14 +638,14 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 28,
-   "sitemap_dates": 12,
-   "sitemap": "ok 12",
-   "deja_ecartees": 9
+   "adresses_ecartees": 61,
+   "sitemap_dates": 18,
+   "sitemap": "ok 18",
+   "deja_ecartees": 15
   },
   {
-   "agence": "Immo Centre 61",
-   "secondes": 2,
+   "agence": "Morvan Immobilier",
+   "secondes": 6,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -514,138 +654,62 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 3,
-   "sitemap_dates": 5,
-   "sitemap": "ok 5",
-   "deja_ecartees": 5
+   "sitemap": "sans <loc>",
+   "index_statut": 200,
+   "index_titre": "Tümbet Giriş 2026 – Güvenli Giriş, Bonus ve Casino İncelemes"
   },
   {
-   "agence": "Immo Conseil Debever",
-   "secondes": 54,
-   "pages": 8,
-   "gardes": 8,
+   "agence": "Morvan Patrimoine",
+   "secondes": 9,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 41,
-   "sitemap": "ok 41",
-   "deja_ecartees": 6
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Morvan Patrimoine, agences immobilières Château Chinon et St"
   },
   {
-   "agence": "Immo Côte d'Opale",
-   "secondes": 43,
+   "agence": "Moselis OPH Moselle",
+   "secondes": 16,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "adresses_ecartees": 64,
+   "index_statut": 200,
+   "index_titre": "Moselis | Location / Vente de Logements Sociaux & Locaux | O"
+  },
+  {
+   "agence": "NC Immo",
+   "secondes": 60,
    "pages": 6,
    "gardes": 5,
    "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
+   "ecartes": 0,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
-   "deja_ecartees": 9,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.immocotedopale.com/vente/15-berck/propriete/935-ensemble-immobilier-de-3-maisons-et-un-hangar-dont-une-maison-de-maitre",
-     "titre": "Propriete 11pièce(s) 8chambre(s) 450 m² Berck (62600)"
-    }
+   "adresses_ecartees": 8,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "deja_ecartees": 3,
+   "illisible_exemple": {
+    "url": "https://ncimmo71.fr/biens-vendus/",
+    "cause": "aucune annonce lue",
+    "titre": "BIENS VENDUS - NC immo - Agence immobilière à Montchanin 71",
+    "octets": 68004
    }
-  },
-  {
-   "agence": "Immo coup de coeur",
-   "secondes": 53,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 55,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 4
-  },
-  {
-   "agence": "Immobilier Center (Fnaim)",
-   "secondes": 93,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 79,
-   "sitemap": "ok 82",
-   "deja_ecartees": 7
-  },
-  {
-   "agence": "Immobilier ILL",
-   "secondes": 84,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 50,
-   "sitemap": "ok 98",
-   "deja_ecartees": 31
-  },
-  {
-   "agence": "Immobilier Saint-Marcouf",
-   "secondes": 63,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 70,
-   "sitemap_dates": 154,
-   "sitemap": "ok 154",
-   "deja_ecartees": 2,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/propriete/t14/887-propriete-de-390m-grandcamp-maisy-gite/",
-     "titre": "Propriété de 390m² - GRANDCAMP-MAISY - Gite"
-    }
-   }
-  },
-  {
-   "agence": "Immobilier du Chêne",
-   "secondes": 82,
-   "pages": 7,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "budget global épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 45,
-   "sitemap": "ok 117",
-   "deja_ecartees": 13
   }
  ]
 }
