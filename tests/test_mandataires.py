@@ -159,6 +159,32 @@ def test_une_commune_nouvelle_ecrite_avec_l_ancienne_reste_chez_nous():
     assert [(a["commune"], a["departement"]) for a in retenues] == [("Valravillon", "89")]
 
 
+def test_un_homonyme_bien_plus_peuple_ailleurs_fait_passer_la_page_apres():
+    """Mesuré le 26 octobre 2026 : 16 des 44 pages IAD ouvertes pour la
+    Haute-Saône étaient des maisons de La Rochelle — la ville de
+    Charente-Maritime, pas le hameau d'une quarantaine d'habitants. Ces pages
+    passent après les autres et quelques-unes seulement sont ouvertes par
+    passage ; deux Beaulieu de taille voisine, eux, ne changent rien."""
+    france = {"70": ["La Rochelle", "Vesoul"], "17": ["La Rochelle"],
+              "21": ["Beaulieu"], "49": ["Beaulieu"]}
+    cibles = {"70", "21"}
+    populations = {("70", "La Rochelle"): 41, ("17", "La Rochelle"): 77205,
+                   ("70", "Vesoul"): 14678,
+                   ("21", "Beaulieu"): 312, ("49", "Beaulieu"): 640}
+    ecrases = mandataires.homonymes_ecrases(populations, cibles)
+    assert ecrases == {"la-rochelle"}
+    index = mandataires.index_des_communes(france, cibles)
+    urls = ["https://www.iadfrance.fr/annonce/maison-vente-4-pieces-la-rochelle-90m2/r1",
+            "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-beaulieu-90m2/r2",
+            "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-vesoul-90m2/r3"]
+    retenues = mandataires.annonces_a_visiter(urls, IAD, index, cibles, ecrases)
+    assert [(a["commune"], a["hors_cible_selon_l_adresse"]) for a in retenues] == [
+        ("La Rochelle", True), ("Beaulieu", False), ("Vesoul", False)], \
+        "retenue, jamais écartée : la maison du hameau finit par être lue"
+    # Sans populations — la liste nationale n'a pas répondu —, rien ne change.
+    assert mandataires.homonymes_ecrases({}, cibles) == set()
+
+
 SAFTI = mandataires.RESEAUX["safti"]
 
 

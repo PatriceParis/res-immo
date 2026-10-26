@@ -174,20 +174,25 @@ def test_un_nom_plus_long_ailleurs_en_france_n_est_plus_ouvert(tmp_path, monkeyp
 
 
 def test_la_liste_des_communes_de_france_se_lit_par_departement(monkeypatch):
-    """Un seul appel à l'API officielle ; rien du tout si elle ne répond pas,
-    pour que le passage revienne à nos seules communes."""
-    reponse = json.dumps([{"nom": "Beaulieu", "codeDepartement": "21"},
-                          {"nom": "Saint-Laurent-le-Minier", "codeDepartement": "30"},
+    """Un seul appel à l'API officielle, population comprise ; rien du tout si
+    elle ne répond pas, pour que le passage revienne à nos seules communes."""
+    reponse = json.dumps([{"nom": "Beaulieu", "codeDepartement": "21", "population": 312},
+                          {"nom": "Saint-Laurent-le-Minier", "codeDepartement": "30",
+                           "population": 380},
                           {"nom": "Beaulieu", "codeDepartement": "49"},
-                          {"nom": "Quemigny-sur-Seine", "codeDepartement": "21"}]).encode()
+                          {"nom": "Quemigny-sur-Seine", "codeDepartement": "21",
+                           "population": 118}]).encode()
     monkeypatch.setattr(COLLECTEUR, "lire", lambda url: reponse)
-    assert COLLECTEUR.communes_de_france() == {
+    par_dept, populations = COLLECTEUR.communes_de_france()
+    assert par_dept == {
         "21": ["Beaulieu", "Quemigny-sur-Seine"], "30": ["Saint-Laurent-le-Minier"],
         "49": ["Beaulieu"]}
+    assert populations[("21", "Beaulieu")] == 312
+    assert populations[("49", "Beaulieu")] == 0, "population absente : zéro, pas d'erreur"
     monkeypatch.setattr(COLLECTEUR, "lire", lambda url: b"")
-    assert COLLECTEUR.communes_de_france() == {}
+    assert COLLECTEUR.communes_de_france() == ({}, {})
     monkeypatch.setattr(COLLECTEUR, "lire", lambda url: b"<html>panne</html>")
-    assert COLLECTEUR.communes_de_france() == {}
+    assert COLLECTEUR.communes_de_france() == ({}, {})
 
 
 def test_la_memoire_des_mandataires_ne_touche_pas_celle_des_agences(passage, tmp_path):

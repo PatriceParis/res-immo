@@ -119,6 +119,35 @@ def index_des_communes(communes_par_departement: dict,
     return index
 
 
+# Combien de fois plus peuplé doit être un homonyme d'ailleurs pour qu'une
+# adresse à ce nom soit plus probablement la sienne que la nôtre.
+HOMONYME_ECRASANT = 10
+
+
+def homonymes_ecrases(populations: dict, cibles: set,
+                      rapport: int = HOMONYME_ECRASANT) -> set:
+    """Les noms de nos communes que porte aussi une commune bien plus peuplée.
+
+    `populations` : {(département, nom): habitants}, pour toute la France. À
+    nom égal, nos communes passent devant (voir `index_des_communes`), et
+    c'est juste quand les homonymes se valent. Mais la Haute-Saône a sa
+    Rochelle, d'une quarantaine d'habitants : mesuré le 26 octobre 2026 au
+    passage de 8 h 36, 16 des 44 pages IAD ouvertes pour ce département étaient
+    des maisons de La Rochelle en Charente-Maritime, et des Saint-Gilles
+    d'ailleurs en faisaient autant dans l'Indre. Ces adresses sont traitées
+    comme celles que Safti place ailleurs : en dernier, et quelques-unes par
+    passage — la maison du hameau finit par être lue.
+    """
+    chez_nous: dict = {}
+    ailleurs: dict = {}
+    for (departement, nom), habitants in (populations or {}).items():
+        slug = normaliser(nom)
+        groupe = chez_nous if departement in cibles else ailleurs
+        groupe[slug] = max(groupe.get(slug, 0), habitants or 0)
+    return {slug for slug, habitants in chez_nous.items()
+            if ailleurs.get(slug, 0) >= rapport * max(habitants, 1)}
+
+
 def table_des_communes(index: list) -> dict:
     """slug → (commune, département), construite une fois par passage.
 
@@ -210,7 +239,7 @@ def commune_de_l_adresse(url: str, index: list,
 
 
 def annonces_a_visiter(urls: list[str], reseau: dict, index: list,
-                       cibles: set | None = None) -> list[dict]:
+                       cibles: set | None = None, ecrases: set | None = None) -> list[dict]:
     """Trie les adresses du sitemap : ce qu'on garde, et pourquoi.
 
     Renvoie un dict par annonce retenue, avec la commune et le département
@@ -225,6 +254,9 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list,
     le-Minier (30) lu « Saint-Laurent », Oloron-Sainte-Marie (64) lu « Sainte-
     Marie » —, contre 65 à un vrai homonyme : l'index ne connaissait que nos
     communes, et ne pouvait savoir qu'un nom plus long existait ailleurs.
+
+    `ecrases` : les noms de nos communes qu'une commune d'ailleurs, bien plus
+    peuplée, porte aussi (voir `homonymes_ecrases`).
     """
     # Construite UNE fois, pas une par adresse : c'est tout l'objet du
     # correctif du 19 août.
@@ -258,7 +290,8 @@ def annonces_a_visiter(urls: list[str], reseau: dict, index: list,
             "departement": departement,
             "agence": nom_d_agence(reseau, departement),
             "hors_cible_selon_l_adresse": bool(
-                code and departement_du_code_postal(code.group(1)) not in departements_cibles),
+                code and departement_du_code_postal(code.group(1)) not in departements_cibles)
+                or normaliser(commune) in (ecrases or ()),
         })
     return retenues
 

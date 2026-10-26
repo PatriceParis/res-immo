@@ -186,28 +186,31 @@ def communes_des_terroirs() -> dict:
     return par_dept
 
 
-def communes_de_france() -> dict:
-    """Toutes les communes du pays, par département, en un seul appel.
+def communes_de_france() -> tuple[dict, dict]:
+    """Toutes les communes du pays, par département, et leur population.
 
     Nos seules communes ne suffisent pas à lire une adresse : sans savoir que
     Saint-Laurent-le-Minier existe dans le Gard, « saint-laurent-le-minier » se
     lisait « Saint-Laurent », commune de nos terroirs, et la page était ouverte
-    pour rien (voir mandataires.annonces_a_visiter). Vide si l'API ne répond
-    pas : on revient alors à nos seules communes, comme avant.
+    pour rien (voir mandataires.annonces_a_visiter). La population départage
+    les vrais homonymes (voir mandataires.homonymes_ecrases). Un seul appel ;
+    vide si l'API ne répond pas : on revient alors à nos seules communes.
     """
     for _ in range(2):
-        donnees = lire("https://geo.api.gouv.fr/communes?fields=nom,codeDepartement")
+        donnees = lire("https://geo.api.gouv.fr/communes?fields=nom,codeDepartement,population")
         if donnees:
             break
     try:
         communes = json.loads(donnees) if donnees else []
     except ValueError:
-        return {}
+        return {}, {}
     par_dept: dict = {}
+    populations: dict = {}
     for c in communes:
         if isinstance(c, dict) and c.get("nom") and c.get("codeDepartement"):
             par_dept.setdefault(c["codeDepartement"], []).append(c["nom"])
-    return par_dept
+            populations[(c["codeDepartement"], c["nom"])] = c.get("population") or 0
+    return par_dept, populations
 
 
 def annonces_deja_connues() -> dict:
@@ -317,7 +320,8 @@ def enregistrer_une(conn, annonce: dict, reseau: dict,
 
 
 def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
-                        fin_prevue: float, args, tronquees: set) -> int:
+                        fin_prevue: float, args, tronquees: set,
+                        ecrases: frozenset = frozenset()) -> int:
     print(f"\n=== {reseau['nom']}")
     # Céder son tour AVANT de dépenser. Lire les sitemaps d'un réseau coûte
     # plusieurs minutes — vingt mille adresses chez IAD — et ce coût était payé
@@ -352,7 +356,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
           complet=sitemap_complet)
     print(f"  {len(adresses)} annonce(s) au sitemap"
           f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
-    a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index, DEPARTEMENTS_CIBLES)
+    a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index, DEPARTEMENTS_CIBLES,
+                                               ecrases)
     groupes = mandataires.par_departement(a_visiter)
     if args.departements:
         voulus = {d.strip() for d in args.departements.split(",") if d.strip()}
@@ -487,16 +492,18 @@ def main() -> None:
     # et l'abstention ci-dessous est silencieuse dans le journal git. La liste
     # nationale manque-t-elle, ou l'un de nos départements ? On revient aux
     # trente-trois appels d'avant, département par département.
-    communes = communes_de_france()
+    communes, populations = communes_de_france()
     if not set(DEPARTEMENTS_CIBLES) <= set(communes):
-        communes = communes_des_terroirs()
+        communes, populations = communes_des_terroirs(), {}
     if not communes:
         etape("communes_indisponibles")
         print("Liste des communes indisponible : sans elle on ne sait pas ce qui")
         print("relève de nos terroirs. On s'arrête plutôt que de tout collecter.")
         raise SystemExit(1)
     index = mandataires.index_des_communes(communes, DEPARTEMENTS_CIBLES)
-    etape("communes", departements=len(communes), communes=len(index))
+    ecrases = mandataires.homonymes_ecrases(populations, DEPARTEMENTS_CIBLES)
+    etape("communes", departements=len(communes), communes=len(index),
+          homonymes_ecrases=len(ecrases))
     print(f"  {len(index)} communes sur {len(communes)} département(s)")
 
     fin_globale = time.monotonic() + args.minutes * 60
@@ -527,7 +534,7 @@ def main() -> None:
         fin_reseau = min(time.monotonic() + part, fin_globale)
         etape("reseau_debut", reseau=cle, part_secondes=round(part))
         total += collecter_un_reseau(conn, cle, mandataires.RESEAUX[cle], index,
-                                     fin_reseau, args, tronquees)
+                                     fin_reseau, args, tronquees, ecrases)
     conn.close()
     etape("fin", gardes=total)
     print(f"\nTerminé : {total} bien(s) ajouté(s) depuis les réseaux de mandataires.")
