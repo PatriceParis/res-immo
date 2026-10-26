@@ -6,13 +6,13 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.6,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 34079
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.6,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,125 +21,100 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.6,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.2,
+  "seconde": 3.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.6,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 4.9,
+  "seconde": 5.4,
   "reseau": "capifrance",
-  "connues": 15525,
-  "ecartees": 2147
+  "connues": 15735,
+  "ecartees": 2195
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.9,
+  "seconde": 5.4,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.3,
+  "seconde": 5.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.6,
+  "seconde": 17.2,
   "reseau": "iad",
   "n": 94033,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.7,
+  "seconde": 19.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.0,
+  "seconde": 19.5,
   "reseau": "iad",
-  "connues": 15525,
-  "ecartees": 2147
+  "connues": 15735,
+  "ecartees": 2195
  },
  {
   "etape": "departement",
-  "seconde": 241.8,
+  "seconde": 205.1,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 31,
+  "gardes": 27,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 8,
-   "ecarte": 11,
+   "garde": 27,
+   "vendu": 6,
+   "ecarte": 17,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "url_type_exclu": 1,
-   "hors_perimetre": 9
+   "hors_perimetre": 17
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 79 m² à Montferrand-le-Château (25320)",
-   "url_type_exclu": "Duplex 4 pièces de 102 m² à Montferrand-le-Château (25320)",
-   "hors_perimetre": "Maison d"
+   "hors_perimetre": "Maison 7 pièces de 169 m² à Saint-Gilles (35590)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 482.8,
+  "seconde": 462.0,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 11,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1
-  },
-  "exemples": {
-   "location": "Maison de ville 5 pièces de 125 m² à Cormeilles (27260)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 603.4,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 21,
-  "gardes": 18,
-  "tronquee": true,
-  "etats": {
-   "garde": 18,
-   "vendu": 1,
+   "garde": 36,
+   "vendu": 12,
    "ecarte": 2,
    "illisible": 0
   },
@@ -147,107 +122,103 @@
    "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 70 m² à Goussainville (95190)"
+   "hors_perimetre": "Maison de ville 4 pièces de 89 m² à Grigny (91350)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 605.2,
+  "reseau": "iad",
+  "departement": "70",
+  "visitees": 44,
+  "gardes": 15,
+  "tronquee": true,
+  "etats": {
+   "garde": 15,
+   "vendu": 7,
+   "ecarte": 22,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 22
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de ville 5 pièces de 140 m² à Buthiers (77760)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 603.4,
+  "seconde": 605.2,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 603.8,
+  "seconde": 605.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 604.6,
+  "seconde": 606.5,
   "reseau": "safti",
-  "n": 28831,
+  "n": 28836,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 605.4,
+  "seconde": 607.3,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 605.7,
+  "seconde": 607.6,
   "reseau": "safti",
-  "connues": 15559,
-  "ecartees": 2181
+  "connues": 15801,
+  "ecartees": 2261
  },
  {
   "etape": "departement",
-  "seconde": 756.1,
+  "seconde": 927.9,
   "reseau": "safti",
-  "departement": "52",
-  "visitees": 29,
-  "gardes": 23,
-  "tronquee": true,
-  "etats": {
-   "garde": 23,
-   "vendu": 1,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 4 pièces à Bourg 33710 : 78m², prix 167 000 €. Réf : 1727491"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1057.9,
-  "reseau": "safti",
-  "departement": "53",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 50,
   "tronquee": true,
   "etats": {
-   "garde": 44,
-   "vendu": 1,
-   "ecarte": 5,
+   "garde": 50,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Vente de maison 6 pièces à Brece 35530 : 96m², prix 224 000 €. Réf : 1713547"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 1206.5,
+  "seconde": 1205.9,
   "reseau": "safti",
-  "departement": "70",
-  "visitees": 28,
-  "gardes": 23,
+  "departement": "14",
+  "visitees": 45,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 23,
-   "vendu": 0,
-   "ecarte": 5,
+   "garde": 43,
+   "vendu": 1,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Vente de maison 5 pièces à La Rochelle 17000 : 120m², prix 749 000 €. Réf : 1517651"
+   "prix_trop_haut": "Vente de maison 8 pièces à Houlgate 14510 : 158m², prix 749 000 €. Réf : 1540715"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1206.5,
-  "gardes": 177
+  "seconde": 1205.9,
+  "gardes": 171
  }
 ]
