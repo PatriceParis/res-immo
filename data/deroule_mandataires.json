@@ -6,13 +6,14 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 2.7,
   "departements": 109,
-  "communes": 34079
+  "communes": 34079,
+  "homonymes_ecrases": 109
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.8,
+  "seconde": 2.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -21,130 +22,122 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.8,
+  "seconde": 2.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.3,
+  "seconde": 4.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.0,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.0,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.4,
+  "seconde": 6.4,
   "reseau": "capifrance",
-  "connues": 15735,
-  "ecartees": 2195
+  "connues": 15918,
+  "ecartees": 2263
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.4,
+  "seconde": 6.4,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.8,
+  "seconde": 6.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.2,
+  "seconde": 25.7,
   "reseau": "iad",
   "n": 94033,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.2,
+  "seconde": 27.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.5,
+  "seconde": 28.0,
   "reseau": "iad",
-  "connues": 15735,
-  "ecartees": 2195
+  "connues": 15918,
+  "ecartees": 2263
  },
  {
   "etape": "departement",
-  "seconde": 205.1,
+  "seconde": 311.5,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 27,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 27,
-   "vendu": 6,
-   "ecarte": 17,
+   "garde": 40,
+   "vendu": 9,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 17
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 7 pièces de 169 m² à Saint-Gilles (35590)"
+   "hors_perimetre": "Maison 6 pièces de 108 m² à Bellefontaine (95270)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 462.0,
+  "seconde": 585.8,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 36,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 36,
-   "vendu": 12,
-   "ecarte": 2,
+   "garde": 41,
+   "vendu": 9,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 4 pièces de 89 m² à Grigny (91350)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
   "seconde": 605.2,
   "reseau": "iad",
-  "departement": "70",
-  "visitees": 44,
-  "gardes": 15,
+  "departement": "57",
+  "visitees": 2,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 15,
-   "vendu": 7,
-   "ecarte": 22,
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 22
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 5 pièces de 140 m² à Buthiers (77760)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
@@ -154,35 +147,35 @@
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.6,
+  "seconde": 606.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.5,
+  "seconde": 607.8,
   "reseau": "safti",
   "n": 28836,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.3,
+  "seconde": 608.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.6,
+  "seconde": 608.9,
   "reseau": "safti",
-  "connues": 15801,
-  "ecartees": 2261
+  "connues": 15937,
+  "ecartees": 2282
  },
  {
   "etape": "departement",
-  "seconde": 927.9,
+  "seconde": 934.5,
   "reseau": "safti",
-  "departement": "71",
+  "departement": "18",
   "visitees": 50,
   "gardes": 50,
   "tronquee": true,
@@ -197,28 +190,28 @@
  },
  {
   "etape": "departement",
-  "seconde": 1205.9,
+  "seconde": 1203.3,
   "reseau": "safti",
-  "departement": "14",
-  "visitees": 45,
-  "gardes": 43,
+  "departement": "54",
+  "visitees": 43,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 1,
-   "ecarte": 1,
+   "garde": 41,
+   "vendu": 0,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Vente de maison 8 pièces à Houlgate 14510 : 158m², prix 749 000 €. Réf : 1540715"
+   "prix_trop_haut": "Maison à vendre à LANEUVEVILLE-DEVANT-NANCY de 265m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1205.9,
-  "gardes": 171
+  "seconde": 1203.3,
+  "gardes": 174
  }
 ]
