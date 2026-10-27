@@ -195,6 +195,22 @@ def test_la_liste_des_communes_de_france_se_lit_par_departement(monkeypatch):
     assert COLLECTEUR.communes_de_france() == ({}, {})
 
 
+def test_les_anciennes_communes_se_lisent_dans_leur_fichier(monkeypatch, tmp_path):
+    """Le fichier livré porte les cas mesurés, et pas les communes
+    d'aujourd'hui. Absent ou abîmé, il ne rend rien : les adresses se lisent
+    alors comme avant lui."""
+    anciennes = COLLECTEUR.communes_anciennes()
+    assert "Pierrefitte-sur-Seine" in anciennes["93"]
+    assert "Saint-Denis-sur-Ouanne" in anciennes["89"]
+    assert "Laduz" in anciennes["89"] and "Valravillon" not in anciennes["89"]
+    fichier = tmp_path / "communes_anciennes.json"
+    monkeypatch.setattr(COLLECTEUR, "ANCIENNES", fichier)
+    assert COLLECTEUR.communes_anciennes() == {}
+    for contenu in ("<html>panne</html>", '{"communes": ["Laduz"]}', '["Laduz"]'):
+        fichier.write_text(contenu, encoding="utf-8")
+        assert COLLECTEUR.communes_anciennes() == {}
+
+
 def test_la_memoire_des_mandataires_ne_touche_pas_celle_des_agences(passage, tmp_path):
     """Deux journaux : celui des agences est committé par la collecte, celui
     des réseaux par le passage des mandataires. Un passage n'écrit que le sien."""

@@ -98,7 +98,8 @@ def reseaux_autorises(reseaux: dict, exclus: set) -> dict:
 
 
 def index_des_communes(communes_par_departement: dict,
-                       cibles: set | None = None) -> list[tuple[str, str, str]]:
+                       cibles: set | None = None,
+                       anciennes: dict | None = None) -> list[tuple[str, str, str]]:
     """(nom normalisé, nom d'origine, département), les plus longs d'abord.
 
     L'ordre compte : sans lui, « Bérain » l'emporterait sur « Saint-Bérain-sur-
@@ -108,15 +109,25 @@ def index_des_communes(communes_par_departement: dict,
     lesquelles sont chez nous. À nom égal, les nôtres passent devant — un
     Beaulieu reste celui de Côte-d'Or, comme lorsque l'index ne connaissait
     que nos terroirs.
+
+    `anciennes` : les communes déléguées et associées, par département. Fondues
+    dans une commune nouvelle, elles ont quitté la liste des communes, mais les
+    annonces les nomment toujours : Pierrefitte-sur-Seine appartient à
+    Saint-Denis depuis le 1er janvier 2025, et « pierrefitte-sur-seine » se
+    lisait « Pierrefitte », commune des Vosges. Une ancienne commune ne
+    l'emporte que par la longueur : à longueur égale, celle d'aujourd'hui passe
+    devant, d'où qu'elle soit — La Colombe de la Manche reste devant celle,
+    fondue, du Loir-et-Cher.
     """
     index = []
-    for departement, communes in communes_par_departement.items():
-        for commune in communes:
-            slug = normaliser(commune)
-            if len(slug) >= LONGUEUR_MINIMALE_COMMUNE:
-                index.append((slug, commune, departement))
-    index.sort(key=lambda t: (-len(t[0]), bool(cibles) and t[2] not in cibles))
-    return index
+    for ancienne, source in enumerate((communes_par_departement, anciennes or {})):
+        for departement, communes in source.items():
+            for commune in communes:
+                slug = normaliser(commune)
+                if len(slug) >= LONGUEUR_MINIMALE_COMMUNE:
+                    index.append((slug, commune, departement, ancienne))
+    index.sort(key=lambda t: (-len(t[0]), t[3], bool(cibles) and t[2] not in cibles))
+    return [t[:3] for t in index]
 
 
 # Combien de fois plus peuplé doit être un homonyme d'ailleurs pour qu'une

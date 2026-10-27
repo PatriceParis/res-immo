@@ -213,6 +213,27 @@ def communes_de_france() -> tuple[dict, dict]:
     return par_dept, populations
 
 
+ANCIENNES = RACINE / "data" / "communes_anciennes.json"
+
+
+def communes_anciennes() -> dict:
+    """Les communes déléguées et associées, par département, ou {}.
+
+    L'API ne les rend pas avec les communes ; un fichier les fige, tiré de la
+    base même de l'API (voir son en-tête). Sans elles, une maison de
+    Pierrefitte-sur-Seine, fondue dans Saint-Denis, était ouverte pour les
+    Vosges (voir mandataires.index_des_communes). Les fusions se font au
+    1er janvier : celles de l'an prochain manqueront jusqu'à ce qu'on refasse
+    le fichier, et l'on retombe alors, pour elles seules, sur la lecture
+    d'avant.
+    """
+    try:
+        anciennes = json.loads(ANCIENNES.read_text(encoding="utf-8"))["communes"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return {}
+    return anciennes if isinstance(anciennes, dict) else {}
+
+
 def annonces_deja_connues() -> dict:
     """URL → date de dernière constatation, d'après le catalogue publié.
 
@@ -500,9 +521,11 @@ def main() -> None:
         print("Liste des communes indisponible : sans elle on ne sait pas ce qui")
         print("relève de nos terroirs. On s'arrête plutôt que de tout collecter.")
         raise SystemExit(1)
-    index = mandataires.index_des_communes(communes, DEPARTEMENTS_CIBLES)
+    anciennes = communes_anciennes()
+    index = mandataires.index_des_communes(communes, DEPARTEMENTS_CIBLES, anciennes)
     ecrases = mandataires.homonymes_ecrases(populations, DEPARTEMENTS_CIBLES)
     etape("communes", departements=len(communes), communes=len(index),
+          anciennes=sum(len(noms) for noms in anciennes.values()),
           homonymes_ecrases=len(ecrases))
     print(f"  {len(index)} communes sur {len(communes)} département(s)")
 

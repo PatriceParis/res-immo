@@ -185,6 +185,54 @@ def test_un_homonyme_bien_plus_peuple_ailleurs_fait_passer_la_page_apres():
     assert mandataires.homonymes_ecrases({}, cibles) == set()
 
 
+def test_une_ancienne_commune_d_ailleurs_n_est_plus_lue_comme_une_des_notres():
+    """Pierrefitte-sur-Seine est fondue dans Saint-Denis depuis le 1er janvier
+    2025 : elle a quitté la liste des communes, pas les annonces. Mesuré le
+    27 octobre 2026 : sur les 282 pages refusées « hors périmètre » depuis le
+    20, 15 l'avaient été à cause d'une ancienne commune — dont six maisons de
+    Pierrefitte-sur-Seine, ouvertes pour les Vosges qui ont leur Pierrefitte."""
+    france = {"88": ["Pierrefitte"], "93": ["Saint-Denis"]}
+    index = mandataires.index_des_communes(france, {"88"}, {"93": ["Pierrefitte-sur-Seine"]})
+    urls = ["https://www.iadfrance.fr/annonce/"
+            "maison-vente-7-pieces-pierrefitte-sur-seine-118m2/r2052828",
+            "https://www.iadfrance.fr/annonce/maison-vente-6-pieces-pierrefitte-142m2/r2135191"]
+    retenues = mandataires.annonces_a_visiter(urls, IAD, index, {"88"})
+    assert [(a["commune"], a["departement"]) for a in retenues] == [("Pierrefitte", "88")]
+
+
+def test_une_ancienne_commune_de_chez_nous_est_lue_chez_nous():
+    """Saint-Denis-sur-Ouanne est fondue dans Charny Orée de Puisaye, dans
+    l'Yonne. Sans elle, l'adresse se lisait « Saint-Denis », hors de nos
+    terroirs : la maison, au catalogue, n'avait plus été revue depuis le
+    11 octobre 2026."""
+    france = {"89": ["Charny Orée de Puisaye"], "11": ["Saint-Denis"], "93": ["Saint-Denis"]}
+    index = mandataires.index_des_communes(france, {"89"}, {"89": ["Saint-Denis-sur-Ouanne"]})
+    url = "https://www.safti.fr/annonces/achat/maison/saint-denis-sur-ouanne-89120/1589546"
+    retenues = mandataires.annonces_a_visiter([url], mandataires.RESEAUX["safti"], index, {"89"})
+    assert [(a["commune"], a["departement"], a["hors_cible_selon_l_adresse"])
+            for a in retenues] == [("Saint-Denis-sur-Ouanne", "89", False)]
+
+
+def test_a_nom_egal_une_commune_d_aujourd_hui_passe_devant_une_ancienne():
+    """Une ancienne commune ne l'emporte que par la longueur du nom. La Colombe
+    de la Manche existe toujours, celle du Loir-et-Cher est fondue dans Beauce
+    la Romaine : toutes deux chez nous, la maison de la Manche serait partie
+    dans le budget du Loir-et-Cher. Presles du Calvados est fondue dans
+    Valdallière, celle du Val-d'Oise est bien vivante : une adresse « presles »
+    reste hors de nos terroirs, comme avant. Quel que soit l'ordre des
+    départements."""
+    cibles = {"50", "41", "14"}
+    france = {"50": ["La Colombe"], "41": ["Beauce la Romaine"],
+              "14": ["Valdallière"], "95": ["Presles"]}
+    anciennes = {"41": ["La Colombe"], "14": ["Presles"]}
+    urls = ["https://www.iadfrance.fr/annonce/maison-vente-4-pieces-la-colombe-88m2/r1",
+            "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-presles-90m2/r2"]
+    for ordre in (lambda d: d, lambda d: dict(reversed(list(d.items())))):
+        index = mandataires.index_des_communes(ordre(france), cibles, ordre(anciennes))
+        retenues = mandataires.annonces_a_visiter(urls, IAD, index, cibles)
+        assert [(a["commune"], a["departement"]) for a in retenues] == [("La Colombe", "50")]
+
+
 SAFTI = mandataires.RESEAUX["safti"]
 
 
