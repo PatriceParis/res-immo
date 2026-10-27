@@ -6,14 +6,14 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.7,
+  "seconde": 3.1,
   "departements": 109,
   "communes": 34079,
   "homonymes_ecrases": 109
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.7,
+  "seconde": 3.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -22,79 +22,100 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.7,
+  "seconde": 3.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.1,
+  "seconde": 4.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.0,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.0,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.4,
+  "seconde": 6.8,
   "reseau": "capifrance",
-  "connues": 15918,
-  "ecartees": 2263
+  "connues": 16126,
+  "ecartees": 2284
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.4,
+  "seconde": 6.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.6,
+  "seconde": 7.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.7,
+  "seconde": 25.8,
   "reseau": "iad",
-  "n": 94033,
+  "n": 94173,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 27.6,
+  "seconde": 27.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.0,
+  "seconde": 28.2,
   "reseau": "iad",
-  "connues": 15918,
-  "ecartees": 2263
+  "connues": 16126,
+  "ecartees": 2284
  },
  {
   "etape": "departement",
-  "seconde": 311.5,
+  "seconde": 334.4,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "59",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 9,
+   "garde": 36,
+   "vendu": 13,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 5 pièces de 91 m² à Aulnoye-Aymeries (59620)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 612.0,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 41,
+  "gardes": 36,
+  "tronquee": true,
+  "etats": {
+   "garde": 36,
+   "vendu": 4,
    "ecarte": 1,
    "illisible": 0
   },
@@ -102,80 +123,46 @@
    "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 6 pièces de 108 m² à Bellefontaine (95270)"
+   "hors_perimetre": "Maison traditionnelle 6 pièces de 187 m² à Gourdon (06620)"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 585.8,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 9,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 605.2,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 2,
-  "gardes": 2,
-  "tronquee": true,
-  "etats": {
-   "garde": 2,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
   "etape": "reseau_debut",
-  "seconde": 605.2,
+  "seconde": 612.0,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 591
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 606.1,
+  "seconde": 612.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 607.8,
+  "seconde": 614.2,
   "reseau": "safti",
-  "n": 28836,
+  "n": 28872,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 608.5,
+  "seconde": 615.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 608.9,
+  "seconde": 615.3,
   "reseau": "safti",
-  "connues": 15937,
-  "ecartees": 2282
+  "connues": 16145,
+  "ecartees": 2303
  },
  {
   "etape": "departement",
-  "seconde": 934.5,
+  "seconde": 1018.3,
   "reseau": "safti",
-  "departement": "18",
+  "departement": "55",
   "visitees": 50,
   "gardes": 50,
   "tronquee": true,
@@ -190,28 +177,24 @@
  },
  {
   "etape": "departement",
-  "seconde": 1203.3,
+  "seconde": 1205.8,
   "reseau": "safti",
-  "departement": "54",
-  "visitees": 43,
-  "gardes": 41,
+  "departement": "72",
+  "visitees": 23,
+  "gardes": 22,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 0,
-   "ecarte": 2,
+   "garde": 22,
+   "vendu": 1,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à LANEUVEVILLE-DEVANT-NANCY de 265m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1203.3,
-  "gardes": 174
+  "seconde": 1205.8,
+  "gardes": 144
  }
 ]
