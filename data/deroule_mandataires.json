@@ -6,14 +6,15 @@
  },
  {
   "etape": "communes",
-  "seconde": 3.0,
+  "seconde": 2.9,
   "departements": 109,
-  "communes": 34079,
+  "communes": 36595,
+  "anciennes": 2576,
   "homonymes_ecrases": 109
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 3.0,
+  "seconde": 2.9,
   "ordre": [
    "capifrance",
    "iad",
@@ -22,164 +23,149 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 3.0,
+  "seconde": 2.9,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.8,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.2,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.3,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.7,
+  "seconde": 6.8,
   "reseau": "capifrance",
-  "connues": 16221,
-  "ecartees": 2304
+  "connues": 16445,
+  "ecartees": 2329
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.7,
+  "seconde": 6.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.0,
+  "seconde": 7.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.7,
+  "seconde": 24.7,
   "reseau": "iad",
-  "n": 94173,
+  "n": 94124,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 21.8,
+  "seconde": 26.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 22.2,
+  "seconde": 27.2,
   "reseau": "iad",
-  "connues": 16221,
-  "ecartees": 2304
+  "connues": 16445,
+  "ecartees": 2329
  },
  {
   "etape": "departement",
-  "seconde": 309.2,
+  "seconde": 336.3,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 5,
-   "ecarte": 6,
-   "illisible": 1
+   "garde": 36,
+   "vendu": 6,
+   "ecarte": 8,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6
+   "prix_trop_haut": 1,
+   "hors_perimetre": 7
   },
   "exemples": {
-   "hors_perimetre": "Maison de campagne 6 pièces de 142 m² à Pierrefitte (79330)"
+   "prix_trop_haut": "Domaine 16 pièces de 900 m² à Reims (51100)",
+   "hors_perimetre": "Maison 4 pièces de 73 m² à L"
   }
  },
  {
   "etape": "departement",
-  "seconde": 587.3,
+  "seconde": 607.2,
   "reseau": "iad",
-  "departement": "45",
-  "visitees": 50,
-  "gardes": 40,
+  "departement": "52",
+  "visitees": 43,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 8,
-   "ecarte": 2,
+   "garde": 35,
+   "vendu": 7,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 110 m² à Bellegarde (30127)"
+   "hors_perimetre": "Maison 6 pièces de 174 m² à Richebourg (78550)"
   }
- },
- {
-  "etape": "departement",
-  "seconde": 611.6,
-  "reseau": "iad",
-  "departement": "50",
-  "visitees": 4,
-  "gardes": 3,
-  "tronquee": true,
-  "etats": {
-   "garde": 3,
-   "vendu": 1,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 611.6,
+  "seconde": 607.2,
   "reseau": "safti",
-  "part_secondes": 591
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 612.0,
+  "seconde": 608.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 613.4,
+  "seconde": 610.0,
   "reseau": "safti",
-  "n": 28872,
+  "n": 28909,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 614.3,
+  "seconde": 610.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 614.6,
+  "seconde": 611.2,
   "reseau": "safti",
-  "connues": 16244,
-  "ecartees": 2327
+  "connues": 16467,
+  "ecartees": 2351
  },
  {
   "etape": "departement",
-  "seconde": 943.8,
+  "seconde": 1004.5,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "57",
   "visitees": 50,
   "gardes": 50,
   "tronquee": true,
@@ -194,30 +180,28 @@
  },
  {
   "etape": "departement",
-  "seconde": 1204.3,
+  "seconde": 1213.4,
   "reseau": "safti",
-  "departement": "25",
-  "visitees": 42,
-  "gardes": 40,
+  "departement": "76",
+  "visitees": 29,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 40,
+   "garde": 24,
    "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à SAINT-VIT de 330m²",
-   "hors_perimetre": "Maison à vendre à Sochaux de 125m²"
+   "hors_perimetre": "Maison à vendre à FRENEUSE de 125m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1204.3,
-  "gardes": 171
+  "seconde": 1213.4,
+  "gardes": 145
  }
 ]
