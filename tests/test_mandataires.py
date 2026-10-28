@@ -185,6 +185,29 @@ def test_un_homonyme_bien_plus_peuple_ailleurs_fait_passer_la_page_apres():
     assert mandataires.homonymes_ecrases({}, cibles) == set()
 
 
+def test_l_adresse_et_le_titre_de_la_page_qui_concordent_donnent_le_code_postal():
+    """Seulement quand les deux concordent : l'adresse de la maison de
+    Pacy-sur-Eure a gardé Chaufour-lès-Bonnières (78270), et seul son titre
+    dit vrai. Ni la référence ni le prix ne passent pour un code postal."""
+    safti = mandataires.RESEAUX["safti"]
+    houlbec = "https://www.safti.fr/annonces/achat/maison/houlbec-cocherel-27120/1728334"
+    assert mandataires.code_postal_confirme(
+        houlbec, safti, "Vente de maison 6 pièces à Houlbec-Cocherel 27120 : 118m², "
+                        "prix 189 000 €. Réf : 1728334 | SAFTI") == "27120"
+    assert mandataires.code_postal_confirme(
+        "https://www.safti.fr/annonces/achat/maison/chaufour-les-bonnieres-78270/1706529",
+        safti, "Vente de maison 6 pièces à Pacy-Sur-Eure 27120 : 143m², "
+               "prix 240 000 €. Réf : 1706529 | SAFTI") is None
+    assert mandataires.code_postal_confirme(
+        houlbec, safti, "Maison à vendre à HOULBEC-COCHEREL de 118m²") is None
+    assert mandataires.code_postal_confirme(
+        houlbec, safti, "Réf : 1027120 | prix 27 120 €") is None
+    # IAD ne met pas de code postal dans ses adresses : rien à confirmer.
+    assert mandataires.code_postal_confirme(
+        "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-givry-90m2/r1", IAD,
+        "Maison 4 pièces de 90 m² à Givry (71640)") is None
+
+
 def test_une_ancienne_commune_d_ailleurs_n_est_plus_lue_comme_une_des_notres():
     """Pierrefitte-sur-Seine est fondue dans Saint-Denis depuis le 1er janvier
     2025 : elle a quitté la liste des communes, pas les annonces. Mesuré le

@@ -211,6 +211,45 @@ def test_les_anciennes_communes_se_lisent_dans_leur_fichier(monkeypatch, tmp_pat
         assert COLLECTEUR.communes_anciennes() == {}
 
 
+# La fiche Safti d'Houlbec-Cocherel du 28 octobre 2026, réduite à l'essentiel :
+# le titre lu ne porte pas de code postal, la page ne le dit qu'une fois, et
+# les « biens similaires » répètent celui de Bennecourt.
+FICHE_HOULBEC = (
+    "<html><head><title>Vente de maison 6 pièces à Houlbec-Cocherel 27120 : 118m², "
+    "prix 189 000 €. Réf : 1728334 | SAFTI</title>"
+    '<meta property="og:title" content="Maison à vendre à HOULBEC-COCHEREL de 118m²">'
+    "</head><body><h1>Maison à vendre à HOULBEC-COCHEREL de 118m²</h1>"
+    "<p>189 000 €</p><p>Houlbec-Cocherel - 27120</p>"
+    "<p>Surface habitable : 118m²</p><p>Terrain : 1 935m²</p>"
+    "<p>Au calme d'une impasse, cette maison à rénover bénéficie d'un cadre "
+    "verdoyant, sur un terrain boisé d'environ 2 000 m².</p>"
+    "<h2>Ce bien vous est proposé par :</h2><p>Vernon (27200)</p>"
+    "<h3>Maison - 5 pièces - 117m²</h3><p>Lommoye (78270)</p><p>203 000 €</p>"
+    "<h3>Maison - 6 pièces - 126m²</h3><p>Bennecourt (78270)</p><p>200 000 €</p>"
+    "<h3>Maison - 5 pièces - 79m²</h3><p>Bennecourt (78270)</p><p>195 000 €</p>"
+    "</body></html>")
+
+
+def test_le_code_postal_d_un_bien_voisin_n_ecarte_plus_une_maison_de_chez_nous(monkeypatch):
+    """Le texte de la fiche cite plus souvent Bennecourt (78270) que la maison
+    elle-même : elle était écartée comme hors de nos terroirs. L'adresse et le
+    titre de la page disent tous deux 27120 — elle reste dans l'Eure."""
+    url = "https://www.safti.fr/annonces/achat/maison/houlbec-cocherel-27120/1728334"
+    gardees = []
+    monkeypatch.setattr(COLLECTEUR, "lire", lambda adresse: FICHE_HOULBEC.encode())
+    monkeypatch.setattr(COLLECTEUR.db, "upsert_annonce", lambda conn, a: gardees.append(a))
+    monkeypatch.setattr(COLLECTEUR, "_geocoder", lambda *a: (49.04, 1.36, None, None, None))
+    monkeypatch.setattr(COLLECTEUR, "_geocoder_cp", lambda *a: None)
+    monkeypatch.setattr(COLLECTEUR, "_altitude", lambda *a: 120)
+    monkeypatch.setattr(COLLECTEUR, "_densite", lambda *a: 40)
+    annonce = {"url": url, "commune": "Houlbec-Cocherel", "departement": "27",
+               "agence": "Safti (27)"}
+    etat, _ = COLLECTEUR.enregistrer_une(None, annonce, mandataires.RESEAUX["safti"], set())
+    assert etat == "garde"
+    assert [(a["code_postal"], a["departement"], a["agence"]) for a in gardees] == [
+        ("27120", "27", "Safti (27)")]
+
+
 def test_la_memoire_des_mandataires_ne_touche_pas_celle_des_agences(passage, tmp_path):
     """Deux journaux : celui des agences est committé par la collecte, celui
     des réseaux par le passage des mandataires. Un passage n'écrit que le sien."""

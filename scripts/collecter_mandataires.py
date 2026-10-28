@@ -53,7 +53,7 @@ sys.path.insert(0, str(RACINE))
 from app import db, exclusions, historique, mandataires, robot  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
-from app.extraction import extraire_annonce  # noqa: E402
+from app.extraction import RE_TITRE, extraire_annonce  # noqa: E402
 from app.qualite import est_vendu, motif_de_rejet  # noqa: E402
 
 JOURNAL = RACINE / "data" / "mandataires_visites.json"
@@ -283,7 +283,8 @@ def enregistrer_une(conn, annonce: dict, reseau: dict,
     donnees = lire(annonce["url"])
     if not donnees:
         return "illisible", ""
-    brut = extraire_annonce(donnees.decode("utf-8", "replace"), annonce["url"],
+    html = donnees.decode("utf-8", "replace")
+    brut = extraire_annonce(html, annonce["url"],
                             source=mandataires.normaliser(annonce["agence"]),
                             agence=annonce["agence"], agence_url=reseau["site"])
     if not brut:
@@ -295,6 +296,15 @@ def enregistrer_une(conn, annonce: dict, reseau: dict,
     # code postal mais rarement la commune, et jamais les coordonnées.
     brut.setdefault("commune", annonce["commune"])
     brut["commune"] = brut.get("commune") or annonce["commune"]
+    # Un code postal deviné dans le texte peut être celui d'un bien voisin :
+    # l'adresse et le titre de la page, quand ils concordent, l'emportent (voir
+    # mandataires.code_postal_confirme).
+    balise = RE_TITRE.search(html)
+    code = mandataires.code_postal_confirme(annonce["url"], reseau,
+                                            balise.group(1) if balise else "")
+    if code and code != brut.get("code_postal"):
+        brut["code_postal"] = code
+        brut["departement"] = mandataires.departement_du_code_postal(code)
 
     # Le département deviné depuis l'adresse ne fait pas foi : les homonymes
     # existent — Péronne est en Saône-et-Loire ET dans la Somme, Sainte-Hélène
