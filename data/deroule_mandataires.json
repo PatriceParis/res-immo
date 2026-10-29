@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.4,
+  "seconde": 1.3,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.4,
+  "seconde": 1.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,187 +23,221 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.4,
+  "seconde": 1.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.0,
+  "seconde": 2.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.4,
+  "seconde": 4.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.4,
+  "seconde": 4.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 4.9,
+  "seconde": 4.8,
   "reseau": "capifrance",
-  "connues": 16740,
-  "ecartees": 2392
+  "connues": 16814,
+  "ecartees": 2421
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.9,
+  "seconde": 4.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.1,
+  "seconde": 5.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 15.6,
+  "seconde": 12.0,
   "reseau": "iad",
   "n": 94174,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.7,
+  "seconde": 14.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.2,
+  "seconde": 14.5,
   "reseau": "iad",
-  "connues": 16740,
-  "ecartees": 2392
+  "connues": 16814,
+  "ecartees": 2421
  },
  {
   "etape": "departement",
-  "seconde": 320.2,
+  "seconde": 286.0,
   "reseau": "iad",
-  "departement": "08",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 37,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 37,
-   "vendu": 5,
-   "ecarte": 8,
+   "garde": 43,
+   "vendu": 6,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 111 m² à Perthes (77930)"
+   "hors_perimetre": "Maison 6 pièces de 133 m² à Le Tronchet (35540)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 605.5,
+  "seconde": 539.3,
   "reseau": "iad",
-  "departement": "10",
-  "visitees": 44,
-  "gardes": 32,
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 32,
-   "vendu": 10,
-   "ecarte": 2,
+   "garde": 44,
+   "vendu": 6,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 604.9,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 13,
+  "gardes": 10,
+  "tronquee": true,
+  "etats": {
+   "garde": 10,
+   "vendu": 2,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 110 m² à Saint-Mesmin (85700)"
+   "hors_perimetre": "Maison de ville 2 pièces de 65 m² à Les Ormes (86220)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 605.5,
+  "seconde": 604.9,
   "reseau": "safti",
   "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.7,
+  "seconde": 605.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.6,
+  "seconde": 606.1,
   "reseau": "safti",
   "n": 28791,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.5,
+  "seconde": 607.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 608.0,
+  "seconde": 607.5,
   "reseau": "safti",
-  "connues": 16765,
-  "ecartees": 2417
+  "connues": 16830,
+  "ecartees": 2437
  },
  {
   "etape": "departement",
-  "seconde": 984.4,
+  "seconde": 902.6,
   "reseau": "safti",
-  "departement": "58",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 47,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 0,
-   "ecarte": 2,
+   "garde": 47,
+   "vendu": 2,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "ni_surface_ni_prix_credible": 2
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "ni_surface_ni_prix_credible": "Maison à vendre à COSNE-COURS-SUR-LOIRE de 52m²"
+   "prix_trop_haut": "Maison à vendre à NEUVILLEY de 485m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1202.4,
+  "seconde": 1182.0,
   "reseau": "safti",
-  "departement": "37",
-  "visitees": 28,
-  "gardes": 26,
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 26,
+   "garde": 45,
    "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à CHEMILLE-SUR-DEME de 478m²"
+   "hors_perimetre": "Maison à vendre à DEVISE de 62m²"
   }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1207.7,
+  "reseau": "safti",
+  "departement": "88",
+  "visitees": 4,
+  "gardes": 4,
+  "tronquee": true,
+  "etats": {
+   "garde": 4,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1202.5,
-  "gardes": 143
+  "seconde": 1207.7,
+  "gardes": 193
  }
 ]
