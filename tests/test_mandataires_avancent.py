@@ -213,10 +213,10 @@ def test_les_anciennes_communes_se_lisent_dans_leur_fichier(monkeypatch, tmp_pat
 
 # La fiche Safti d'Houlbec-Cocherel du 28 octobre 2026, réduite à l'essentiel :
 # le titre lu ne porte pas de code postal, la page ne le dit qu'une fois, et
-# les « biens similaires » répètent celui de Bennecourt.
+# les « biens similaires » répètent celui de Bennecourt. Pas de <title> : ce
+# que le robot en reçoit ne confirmait rien (voir mandataires.code_postal_confirme).
 FICHE_HOULBEC = (
-    "<html><head><title>Vente de maison 6 pièces à Houlbec-Cocherel 27120 : 118m², "
-    "prix 189 000 €. Réf : 1728334 | SAFTI</title>"
+    "<html><head>"
     '<meta property="og:title" content="Maison à vendre à HOULBEC-COCHEREL de 118m²">'
     "</head><body><h1>Maison à vendre à HOULBEC-COCHEREL de 118m²</h1>"
     "<p>189 000 €</p><p>Houlbec-Cocherel - 27120</p>"

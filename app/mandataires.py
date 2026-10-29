@@ -319,30 +319,40 @@ def departement_du_code_postal(code_postal) -> str | None:
     return code[:2] if len(code) == 5 and code.isdigit() else None
 
 
-def code_postal_confirme(url: str, reseau: dict, titre_de_page: str) -> str | None:
-    """Le code postal de l'adresse, quand le titre de la page le donne aussi.
+def code_postal_confirme(url: str, reseau: dict, titre: str) -> str | None:
+    """Le code postal de l'adresse, quand le titre de la fiche la confirme.
 
     Sans données structurées, le code postal d'une fiche est deviné : celui qui
     revient le plus dans le texte (voir extraction._code_postal). Or Safti finit
     chaque fiche par des « biens similaires », chacun suivi de son code postal.
     Sur la fiche d'Houlbec-Cocherel, le 78270 de Bennecourt et de ses voisines
     revenait au moins cinq fois, le 27120 de la maison une seule : elle a été
-    écartée, le 28 octobre 2026, comme hors de nos terroirs. Mesuré ce jour-là au fichier : 25 des 418 fiches Safti dont le
-    titre lu ne porte pas de code postal en avaient un faux, et ces fiches
-    sont de plus en plus nombreuses — 351 vues pour la première fois en
-    octobre. Le titre de la page, lui, dit « Vente de maison 6 pièces à
-    Houlbec-Cocherel 27120 ».
+    écartée, le 28 octobre 2026, comme hors de nos terroirs. Mesuré le 29 au
+    fichier : 25 des 477 fiches Safti dont le titre ne porte pas de code postal
+    en avaient un faux, et ces fiches se multiplient.
 
-    Les deux sources doivent concorder : une adresse peut garder le nom d'une
-    commune que l'annonce a quittée — Chaufour-lès-Bonnières (78270) pour une
-    maison de Pacy-sur-Eure.
+    Le titre confirme l'adresse quand il en cite le code postal, ou, s'il n'en
+    cite aucun, quand il nomme sa commune : « Maison à vendre à MOUZAY de
+    145m² » pour « …/mouzay-55700/1586620 ». Les 477 le font toutes. Il faut
+    cette confirmation : une adresse peut garder une commune que l'annonce a
+    quittée — Chaufour-lès-Bonnières (78270) pour une maison de Pacy-sur-Eure,
+    que le titre nomme ; c'est le cas de 4 fiches sur 5 347.
+
+    Une première version cherchait la confirmation dans la balise <title>, qui
+    porte le code postal dans un navigateur ; elle ne venait pas pour le robot,
+    et Mouzay est encore sortie 55600 le 29 octobre.
     """
     motif = reseau.get("cp_dans_l_adresse")
-    trouve = motif.search(urlparse(url).path) if motif else None
+    chemin = urlparse(url).path
+    trouve = motif.search(chemin) if motif else None
     if not trouve:
         return None
     code = trouve.group(1)
-    return code if code in re.findall(r"(?<!\d)\d{5}(?!\d)", titre_de_page or "") else None
+    codes = re.findall(r"(?<!\d)\d{5}(?!\d)", titre or "")
+    if codes:
+        return code if code in codes else None
+    commune = normaliser(chemin[chemin.rfind("/", 0, trouve.start()) + 1:trouve.start()])
+    return code if commune and f"-{commune}-" in f"-{normaliser(titre)}-" else None
 
 
 def nom_d_agence(reseau: dict, departement: str) -> str:

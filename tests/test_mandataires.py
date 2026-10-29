@@ -185,27 +185,29 @@ def test_un_homonyme_bien_plus_peuple_ailleurs_fait_passer_la_page_apres():
     assert mandataires.homonymes_ecrases({}, cibles) == set()
 
 
-def test_l_adresse_et_le_titre_de_la_page_qui_concordent_donnent_le_code_postal():
-    """Seulement quand les deux concordent : l'adresse de la maison de
-    Pacy-sur-Eure a gardé Chaufour-lès-Bonnières (78270), et seul son titre
-    dit vrai. Ni la référence ni le prix ne passent pour un code postal."""
+def test_le_titre_qui_confirme_l_adresse_en_donne_le_code_postal():
+    """Le titre confirme l'adresse en citant son code postal ou, s'il n'en cite
+    aucun, en nommant sa commune. L'adresse de la maison de Pacy-sur-Eure a
+    gardé Chaufour-lès-Bonnières (78270) : son titre ne la confirme pas. Ni la
+    référence ni le prix ne passent pour un code postal."""
     safti = mandataires.RESEAUX["safti"]
     houlbec = "https://www.safti.fr/annonces/achat/maison/houlbec-cocherel-27120/1728334"
-    assert mandataires.code_postal_confirme(
-        houlbec, safti, "Vente de maison 6 pièces à Houlbec-Cocherel 27120 : 118m², "
-                        "prix 189 000 €. Réf : 1728334 | SAFTI") == "27120"
-    assert mandataires.code_postal_confirme(
-        "https://www.safti.fr/annonces/achat/maison/chaufour-les-bonnieres-78270/1706529",
-        safti, "Vente de maison 6 pièces à Pacy-Sur-Eure 27120 : 143m², "
-               "prix 240 000 €. Réf : 1706529 | SAFTI") is None
-    assert mandataires.code_postal_confirme(
-        houlbec, safti, "Maison à vendre à HOULBEC-COCHEREL de 118m²") is None
-    assert mandataires.code_postal_confirme(
-        houlbec, safti, "Réf : 1027120 | prix 27 120 €") is None
+    mouzay = "https://www.safti.fr/annonces/achat/maison/mouzay-55700/1586620"
+    chaufour = ("https://www.safti.fr/annonces/achat/maison/"
+                "chaufour-les-bonnieres-78270/1706529")
+    confirme = mandataires.code_postal_confirme
+    assert confirme(houlbec, safti, "Maison à vendre à HOULBEC-COCHEREL de 118m²") == "27120"
+    assert confirme(mouzay, safti, "Maison à vendre à MOUZAY de 145m²") == "55700"
+    assert confirme(houlbec, safti, "Vente de maison 7 pièces à Houlbec-Cocherel 27120 : "
+                                    "180m², prix 420 000 €. Réf : 1719192") == "27120"
+    assert confirme(chaufour, safti, "Vente de maison 6 pièces à Pacy-Sur-Eure 27120 : "
+                                     "143m², prix 240 000 €. Réf : 1706529") is None
+    assert confirme(chaufour, safti, "Maison à vendre à PACY-SUR-EURE de 143m²") is None
+    assert confirme(mouzay, safti, "Maison à vendre à MOUZAYVILLE de 145m²") is None
+    assert confirme(houlbec, safti, "Réf : 1027120 | prix 27 120 € | Cocherel") is None
     # IAD ne met pas de code postal dans ses adresses : rien à confirmer.
-    assert mandataires.code_postal_confirme(
-        "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-givry-90m2/r1", IAD,
-        "Maison 4 pièces de 90 m² à Givry (71640)") is None
+    assert confirme("https://www.iadfrance.fr/annonce/maison-vente-4-pieces-givry-90m2/r1",
+                    IAD, "Maison 4 pièces de 90 m² à Givry (71640)") is None
 
 
 def test_une_ancienne_commune_d_ailleurs_n_est_plus_lue_comme_une_des_notres():
