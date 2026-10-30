@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.9,
+  "seconde": 2.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.9,
+  "seconde": 2.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,155 +23,79 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.9,
+  "seconde": 2.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.8,
+  "seconde": 4.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.3,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.4,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.8,
+  "seconde": 6.0,
   "reseau": "capifrance",
-  "connues": 17020,
-  "ecartees": 2445
+  "connues": 17099,
+  "ecartees": 2475
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.8,
+  "seconde": 6.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.3,
+  "seconde": 6.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.3,
+  "seconde": 17.7,
   "reseau": "iad",
   "n": 94213,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.9,
+  "seconde": 19.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.3,
+  "seconde": 20.4,
   "reseau": "iad",
-  "connues": 17020,
-  "ecartees": 2445
+  "connues": 17099,
+  "ecartees": 2475
  },
  {
   "etape": "departement",
-  "seconde": 356.4,
+  "seconde": 312.8,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "37",
   "visitees": 50,
-  "gardes": 35,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 35,
+   "garde": 38,
    "vendu": 12,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Manoir 11 pièces de 505 m² à Balleroy (14490)",
-   "hors_perimetre": "Maison traditionnelle 4 pièces de 134 m² à Saint-Rémy (79410)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 606.6,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 41,
-  "gardes": 31,
-  "tronquee": true,
-  "etats": {
-   "garde": 31,
-   "vendu": 6,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 5 pièces de 125 m² à Civray (86400)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 606.6,
-  "reseau": "safti",
-  "part_secondes": 595
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 607.0,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 608.4,
-  "reseau": "safti",
-  "n": 28787,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 609.0,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 609.4,
-  "reseau": "safti",
-  "connues": 17045,
-  "ecartees": 2470
- },
- {
-  "etape": "departement",
-  "seconde": 970.6,
-  "reseau": "safti",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
    "ecarte": 0,
    "illisible": 0
   },
@@ -180,28 +104,115 @@
  },
  {
   "etape": "departement",
-  "seconde": 1202.7,
-  "reseau": "safti",
-  "departement": "41",
-  "visitees": 34,
-  "gardes": 29,
+  "seconde": 585.3,
+  "reseau": "iad",
+  "departement": "54",
+  "visitees": 50,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 29,
-   "vendu": 0,
-   "ecarte": 5,
+   "garde": 33,
+   "vendu": 13,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à Saint-Ouen de 188m²"
+   "hors_perimetre": "Maison traditionnelle 4 pièces de 90 m² à Méréville (91660)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 605.0,
+  "reseau": "iad",
+  "departement": "55",
+  "visitees": 2,
+  "gardes": 2,
+  "tronquee": true,
+  "etats": {
+   "garde": 2,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 605.0,
+  "reseau": "safti",
+  "part_secondes": 597
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 605.9,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 607.6,
+  "reseau": "safti",
+  "n": 28787,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 608.5,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 608.9,
+  "reseau": "safti",
+  "connues": 17128,
+  "ecartees": 2504
+ },
+ {
+  "etape": "departement",
+  "seconde": 937.1,
+  "reseau": "safti",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 49,
+  "tronquee": true,
+  "etats": {
+   "garde": 49,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 1
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 1203.7,
+  "reseau": "safti",
+  "departement": "60",
+  "visitees": 39,
+  "gardes": 37,
+  "tronquee": true,
+  "etats": {
+   "garde": 37,
+   "vendu": 0,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à COMPIEGNE de 317m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.7,
-  "gardes": 145
+  "seconde": 1203.7,
+  "gardes": 159
  }
 ]
