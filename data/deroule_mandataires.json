@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.3,
+  "seconde": 1.9,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.3,
+  "seconde": 1.9,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,100 +23,155 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.3,
+  "seconde": 1.9,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 2.9,
+  "seconde": 3.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.3,
+  "seconde": 5.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.3,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 4.8,
+  "seconde": 5.8,
   "reseau": "capifrance",
-  "connues": 16814,
-  "ecartees": 2421
+  "connues": 17020,
+  "ecartees": 2445
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.8,
+  "seconde": 5.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.0,
+  "seconde": 6.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 12.0,
+  "seconde": 23.3,
   "reseau": "iad",
-  "n": 94174,
+  "n": 94213,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 14.0,
+  "seconde": 24.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 14.5,
+  "seconde": 25.3,
   "reseau": "iad",
-  "connues": 16814,
-  "ecartees": 2421
+  "connues": 17020,
+  "ecartees": 2445
  },
  {
   "etape": "departement",
-  "seconde": 286.0,
+  "seconde": 356.4,
   "reseau": "iad",
-  "departement": "72",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 43,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 6,
-   "ecarte": 1,
+   "garde": 35,
+   "vendu": 12,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1
+   "prix_trop_haut": 1,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 6 pièces de 133 m² à Le Tronchet (35540)"
+   "prix_trop_haut": "Manoir 11 pièces de 505 m² à Balleroy (14490)",
+   "hors_perimetre": "Maison traditionnelle 4 pièces de 134 m² à Saint-Rémy (79410)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 539.3,
+  "seconde": 606.6,
   "reseau": "iad",
-  "departement": "76",
-  "visitees": 50,
-  "gardes": 44,
+  "departement": "18",
+  "visitees": 41,
+  "gardes": 31,
   "tronquee": true,
   "etats": {
-   "garde": 44,
+   "garde": 31,
    "vendu": 6,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de ville 5 pièces de 125 m² à Civray (86400)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 606.6,
+  "reseau": "safti",
+  "part_secondes": 595
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 607.0,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 608.4,
+  "reseau": "safti",
+  "n": 28787,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 609.0,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 609.4,
+  "reseau": "safti",
+  "connues": 17045,
+  "ecartees": 2470
+ },
+ {
+  "etape": "departement",
+  "seconde": 970.6,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 50,
+  "tronquee": true,
+  "etats": {
+   "garde": 50,
+   "vendu": 0,
    "ecarte": 0,
    "illisible": 0
   },
@@ -125,88 +180,14 @@
  },
  {
   "etape": "departement",
-  "seconde": 604.9,
-  "reseau": "iad",
-  "departement": "89",
-  "visitees": 13,
-  "gardes": 10,
+  "seconde": 1202.7,
+  "reseau": "safti",
+  "departement": "41",
+  "visitees": 34,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 10,
-   "vendu": 2,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 2 pièces de 65 m² à Les Ormes (86220)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 604.9,
-  "reseau": "safti",
-  "part_secondes": 596
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 605.2,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 606.1,
-  "reseau": "safti",
-  "n": 28791,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 607.0,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 607.5,
-  "reseau": "safti",
-  "connues": 16830,
-  "ecartees": 2437
- },
- {
-  "etape": "departement",
-  "seconde": 902.6,
-  "reseau": "safti",
-  "departement": "39",
-  "visitees": 50,
-  "gardes": 47,
-  "tronquee": true,
-  "etats": {
-   "garde": 47,
-   "vendu": 2,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à NEUVILLEY de 485m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1182.0,
-  "reseau": "safti",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 45,
-  "tronquee": true,
-  "etats": {
-   "garde": 45,
+   "garde": 29,
    "vendu": 0,
    "ecarte": 5,
    "illisible": 0
@@ -215,29 +196,12 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à DEVISE de 62m²"
+   "hors_perimetre": "Maison à vendre à Saint-Ouen de 188m²"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 1207.7,
-  "reseau": "safti",
-  "departement": "88",
-  "visitees": 4,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
   "etape": "fin",
-  "seconde": 1207.7,
-  "gardes": 193
+  "seconde": 1202.7,
+  "gardes": 145
  }
 ]
