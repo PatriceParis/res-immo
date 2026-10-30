@@ -134,3 +134,22 @@ def test_le_collecteur_consigne_le_motif():
     appel = source[source.index('etape("departement"'):]
     assert "motifs=" in appel[:appel.index(")\n")], (
         "les motifs ne sont pas consignés dans le déroulé")
+
+
+def test_un_bien_d_outre_mer_est_ecarte_meme_place_chez_nous():
+    """La maison de Rivière-du-Mât-les-Bas, à La Réunion : lue « Rivière » par
+    son adresse, géolocalisée dans le Pas-de-Calais, elle était servie le
+    30 octobre 2026 sous « IAD France (37) ». Son titre disait (97440). Un
+    prix collé à l'euro n'est pas un code postal."""
+    reunion = bien(titre="Maison traditionnelle 4 pièces de 100 m² à RIVIERE du mat "
+                         "les bas (97440)", departement="37", code_postal="62173",
+                   lat=50.234953, lon=2.695074)
+    assert qualite.motif_de_rejet(reunion) == "outre_mer"
+    assert qualite.est_bien_valide(reunion) is False
+    assert qualite.motif_de_rejet(bien(
+        titre="Vente de maison 4 pièces à La Trinite 97220 : 95m², prix 361 000 €. "
+              "Réf : 1638170")) == "outre_mer"
+    for titre in ("Maison 4 pièces de 79 m² à Berny-Rivière (02290)",
+                  "Maison 3 pièces à Givry, 97000 €",
+                  "Maison 3 pièces à Givry, 98500 euros"):
+        assert qualite.motif_de_rejet(bien(titre=titre)) != "outre_mer", titre

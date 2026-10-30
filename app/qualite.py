@@ -130,6 +130,9 @@ _LOCATION_TITRE = re.compile(r"\ba louer\b|\blocation\b|\blouer\b|\bloyer\b")
 # « Cuisine meublée » décrit une cuisine, pas un bail.
 _LOCATION_SANS_PRIX = re.compile(
     r"\bcolocation\b|\bcoloc\b|\bco-?living\b|(?<!cuisine )\bmeublee?\b")
+# Un code postal d'outre-mer dans le titre : « (97440) », « 97220 : ». Un prix
+# collé — « 97000 € » — n'en est pas un.
+_OUTRE_MER = re.compile(r"(?<!\d)9[78]\d{3}(?!\d)(?!\s*(?:€|eur))", re.IGNORECASE)
 # Le chemin de l'URL est le signal le plus sûr : /location/, /louer/, ou le
 # gabarit « maison-a-louer-Commune.htm ». On exige les séparateurs autour du
 # mot pour ne pas attraper un domaine comme « avendrealouer.fr ».
@@ -364,6 +367,14 @@ def motif_de_rejet(a: dict) -> str | None:
     # Déjà vendu : l'annonce traîne en ligne, mais on ne la propose pas.
     if est_vendu(a):
         return "vendu"
+    # Outre-mer : le titre le dit, et la lecture des codes postaux, faite pour
+    # la métropole, ne l'entend pas (voir extraction.RE_CP). La maison de
+    # Rivière-du-Mât-les-Bas (97440), à La Réunion, lue « Rivière » par son
+    # adresse, a été géolocalisée dans le Pas-de-Calais et servie le 30 octobre
+    # 2026 sous « IAD France (37) ». Ce jour-là, 63 titres du fichier portaient
+    # un tel code, tous d'outre-mer ; la distance écartait déjà les 62 autres.
+    if _OUTRE_MER.search(a.get("titre") or ""):
+        return "outre_mer"
     # On nomme le FRAGMENT qui a déclenché le refus, et pas seulement la règle.
     # Ces deux expressions comptent une soixantaine d'alternatives : savoir que
     # « le titre est hors cible » ne dit rien d'exploitable quand 217 pages
