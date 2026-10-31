@@ -2,457 +2,28 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "VAI LPI",
-   "secondes": 29,
-   "pages": 6,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 49,
-   "sitemap_dates": 14,
-   "sitemap": "ok 14",
-   "deja_ecartees": 8,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lorrainepierresimmobilier.fr/vente/1-nancy/maison/t9/286-casa-felice/",
-     "titre": "// CASA FELICE //"
-    }
-   }
-  },
-  {
-   "agence": "VIP Immobilier",
-   "secondes": 68,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 91,
-   "sitemap_dates": 213,
-   "sitemap": "ok 213",
-   "deja_ecartees": 64
-  },
-  {
-   "agence": "VIP Immobilier",
-   "secondes": 97,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 76,
-   "sitemap": "ok 112",
-   "deja_ecartees": 15
-  },
-  {
-   "agence": "Vacherand Immobilier - Vauban / Nationale",
-   "secondes": 46,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 211,
-   "sitemap": "ok 225",
-   "deja_ecartees": 13,
-   "motifs": {
-    "prix_trop_haut": 1,
-    "titre_hors_cible:appartement": 2,
-    "titre_hors_cible:parking": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.vacherand.fr/immobilier/vente-maison-merville/ref-VM7142-VACHERAND",
-     "titre": "Vente Maison à vendre Merville - Annonce immobilière VM7142-VACHERAND"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.vacherand.fr/immobilier/vente-appartement-lille/ref-AB207049-VACHERAND",
-     "titre": "Vente Projet appartement 127m² - Eurallile - Annonce immobilière AB207049-VACHERAND"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.vacherand.fr/immobilier/vente-appartement-lille/ref-VA14834-VACHERAND",
-     "titre": "Vente T2 PARKING - GAMBETTA - Annonce immobilière VA14834-VACHERAND"
-    }
-   }
-  },
-  {
-   "agence": "Valoire Habîtat",
-   "secondes": 115,
-   "pages": 27,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 19,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 65,
-   "sitemap": "ok 65",
-   "deja_ecartees": 3,
-   "motifs": {
-    "titre_hors_cible:maison neuve": 19
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:maison neuve": {
-     "url": "https://www.valloire-habitat.com/logement/maison-neuve-t3-t4-jou-ls-tours-ds-179-000-2/",
-     "titre": "Maison neuve T3/T4 – Joué-lès-Tours – dès 179 000 € - Valloire Habitat"
-    }
-   }
-  },
-  {
-   "agence": "Versus Immobilier",
-   "secondes": 20,
-   "pages": 8,
-   "gardes": 0,
-   "vendus": 6,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 55,
-   "sitemap_dates": 53,
-   "sitemap": "ok 53",
-   "deja_ecartees": 45,
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.versus-immobilier.com/vente/307-vandoeuvre-les-nancy/maison/14028-maison-renovee-avec-gout",
-     "titre": "Maison rénovée avec goût"
-    }
-   }
-  },
-  {
-   "agence": "Villers St Paul Immobilier",
-   "secondes": 53,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Vivest",
-   "secondes": 15,
-   "pages": 1,
+   "agence": "Agence Joly",
+   "secondes": 8,
+   "pages": 3,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "illisible_exemple": {
-    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
-    "cause": "aucune annonce lue",
-    "titre": "Nos programmes en vente à venir - Vivest",
-    "octets": 387575
-   }
-  },
-  {
-   "agence": "action immo",
-   "secondes": 12,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
-  },
-  {
-   "agence": "agence 147",
-   "secondes": 58,
-   "pages": 9,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 209,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 38,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agence147.fr/vente/1-nancy/duplex/1780-t4-duplex-rue-jeanne-d-arc",
-     "titre": "T4 - Duplex rue Jeanne d"
-    }
-   }
-  },
-  {
-   "agence": "ilm Immobilier",
-   "secondes": 10,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "deja_ecartees": 21,
-   "illisible_exemple": {
-    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
-    "octets": 66854
-   }
-  },
-  {
-   "agence": "AFTim",
-   "secondes": 115,
-   "pages": 14,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 62,
-   "sitemap": "ok 31",
-   "deja_ecartees": 17,
-   "motifs": {
-    "prix_trop_haut": 9
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.aftim.fr/vente/maison-villa-6-pieces-le-touquet-paris-plage-62520,VM3126",
-     "titre": "TRIANGLE D'OR – Villa typique avec jardin et garage"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://www.aftim.fr/vente/maison-villa-5-pieces-le-touquet-paris-plage-62520,VM11169",
-    "cause": "aucune annonce lue",
-    "titre": "À vendre - Villa, 5 pièces située à Le Touquet-Paris-Plage (62520)",
-    "octets": 889264
-   }
-  },
-  {
-   "agence": "AIC Immobilier",
-   "secondes": 123,
-   "pages": 45,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 44,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 13,
-   "sitemap_dates": 70,
-   "sitemap": "ok 73",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.aicimmobilier.fr/property/luxury-family-home-4/",
-    "cause": "aucune annonce lue",
-    "titre": "Single family home – AIC Immobilier",
-    "octets": 105778
-   }
-  },
-  {
-   "agence": "AJC immobilier",
-   "secondes": 58,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 15,
-   "sitemap_dates": 22,
-   "sitemap": "ok 22"
-  },
-  {
-   "agence": "AS Immobilier",
-   "secondes": 49,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 46,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "deja_ecartees": 7
-  },
-  {
-   "agence": "Abbesses Immobilier",
-   "secondes": 48,
-   "pages": 9,
-   "gardes": 4,
-   "vendus": 1,
-   "ecartes": 1,
    "illisibles": 3,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 89,
-   "sitemap_dates": 99,
-   "sitemap": "ok 99",
-   "deja_ecartees": 90,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t12/1614-extra-centre-magnifique-demeure-de-1904-avec-jardin-paysage-et-piscine/",
-     "titre": "Extra Centre : Magnifique demeure de 1904 avec jardin paysagé et piscine"
-    }
-   },
+   "sitemap_dates": 4,
+   "sitemap": "ok 4",
+   "deja_ecartees": 1,
    "illisible_exemple": {
-    "url": "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/terrain-a-batir/1539-saint-etienne-les-remiremont-terrain-d-environ-2-248-m",
+    "url": "https://www.agence-joly.com/biens-a-vendre-epron.html",
     "cause": "aucune annonce lue",
-    "titre": "SAINT ETIENNE LES REMIREMONT : Terrain d'environ 2 248 m² | ABBESSES IMMOBILIER",
-    "octets": 235436
+    "titre": "Biens à vendre à Épron : maisons et appartements avec Agence JOLY",
+    "octets": 225204
    }
   },
   {
-   "agence": "Abithéa",
-   "secondes": 77,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 171,
-   "sitemap_dates": 575,
-   "sitemap": "ok 575",
-   "deja_ecartees": 2,
-   "motifs": {
-    "titre_hors_cible:terrain constructible": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain constructible": {
-     "url": "https://www.abithea.fr/vente/33-gironde/2076-libourne/5-terrain/t/102106-libourne-terrain-constructible-55-000/",
-     "titre": "LIBOURNE - TERRAIN CONSTRUCTIBLE - 55 000€"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.abithea.fr/vente/62-pas-de-calais/1820-arras/1-maison/t9/102108-maison-de-caractere-en-hyper-centre/",
-     "titre": "MAISON DE CARACTÈRE EN HYPER-CENTRE"
-    }
-   }
-  },
-  {
-   "agence": "Abrinor Immobilier",
-   "secondes": 61,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 292,
-   "sitemap_dates": 278,
-   "sitemap": "ok 278",
-   "motifs": {
-    "prix_trop_haut": 4
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.abrinor.fr/annonce/vente-maison-premesques-59840-lom-34530-jl/",
-     "titre": "PREMESQUES CORPS DE FERME SUR PLUS 20 000 M²"
-    }
-   }
-  },
-  {
-   "agence": "Accord Immobilier",
-   "secondes": 68,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 108,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "deja_ecartees": 22,
-   "motifs": {
-    "titre_hors_cible:terrain constructible": 1,
-    "titre_hors_cible:appart": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain constructible": {
-     "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/dommartin-les-remiremont/bien/24306/exclu-dommartin-les-rt-terrain-constructible-de-900-m-sup2-avec-tr-egraves-belle-exposition-.html",
-     "titre": "EXCLU : Dommartin les Rt Terrain constructible de 900 m² avec très belle exposition"
-    },
-    "titre_hors_cible:appart": {
-     "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/rupt-sur-moselle/bien/24242/rupt-sur-moselle-appart-f3-en-duplex-avec-jardin-2-caves-2-stationnements-.html",
-     "titre": "Rupt sur moselle Appart F3 en duplex avec jardin, 2 caves, 2 stationnements.."
-    }
-   }
-  },
-  {
-   "agence": "Action Vente 37",
-   "secondes": 31,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 28",
-   "deja_ecartees": 25
-  },
-  {
-   "agence": "AdressImmo",
+   "agence": "Agence Mosellane Immobilière",
    "secondes": 5,
    "pages": 0,
    "gardes": 0,
@@ -461,45 +32,29 @@
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "sans <loc>",
-   "index_statut": 200,
-   "index_titre": "Accès interdit"
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": ""
   },
   {
-   "agence": "Agence Afico",
-   "secondes": 89,
-   "pages": 11,
-   "gardes": 8,
+   "agence": "Agence Olleon",
+   "secondes": 5,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 2,
+   "ecartes": 0,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 101,
-   "sitemap_dates": 69,
-   "sitemap": "ok 69",
-   "deja_ecartees": 46,
-   "illisible_exemple": {
-    "url": "https://www.afico.fr/iwp_type/maison-villa/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison/Villa - Afico",
-    "octets": 61315
-   },
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.afico.fr/annonce/particulier-hyper-centre-avec-jardin-sud-et-garage-167m%c2%b2/",
-     "titre": "Maison de Ville - 167 m² - TOURS - Afico"
-    }
-   }
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "index_statut": 403,
+   "index_titre": "403 Forbidden"
   },
   {
-   "agence": "Agence Albert 1er",
-   "secondes": 81,
+   "agence": "Agence Saint-Joseph",
+   "secondes": 88,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -508,101 +63,429 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 148,
-   "sitemap": "ok 105",
-   "deja_ecartees": 41
+   "adresses_ecartees": 41,
+   "sitemap": "ok 137",
+   "deja_ecartees": 1
   },
   {
-   "agence": "Agence Armance Immobilier",
-   "secondes": 65,
-   "pages": 7,
-   "gardes": 7,
+   "agence": "Cap Immobilier",
+   "secondes": 64,
+   "pages": 6,
+   "gardes": 6,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Armance immobilier",
-   "deja_ecartees": 1
+   "sitemap_statut": 200,
+   "adresses_ecartees": 19,
+   "sitemap": "ok 23",
+   "deja_ecartees": 2
   },
   {
-   "agence": "Agence Blancoise",
-   "secondes": 68,
+   "agence": "Carrara Immobilier",
+   "secondes": 52,
    "pages": 9,
-   "gardes": 8,
+   "gardes": 6,
    "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 20,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11",
+   "deja_ecartees": 2,
+   "motifs": {
+    "prix_trop_haut": 3
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.carrara.immo/vente/40-vaux/propriete/10067-vaux-maison-d-exeption",
+     "titre": "Vaux - MAISON D’EXEPTION"
+    }
+   }
+  },
+  {
+   "agence": "Casa",
+   "secondes": 83,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 1,
    "ecartes": 0,
-   "illisibles": 1,
+   "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 10,
-   "sitemap_dates": 43,
-   "sitemap": "ok 43",
-   "deja_ecartees": 1,
+   "sitemap_dates": 401,
+   "sitemap": "ok 401",
+   "deja_ecartees": 3,
    "illisible_exemple": {
-    "url": "https://www.agenceblancoise.com/biens-vendus/1",
+    "url": "https://www.immo-casa.fr/louer-un-bien/maison-de-ville-a-louvigny-sur-3-niveau/",
     "cause": "aucune annonce lue",
-    "titre": "Biens vendus | Agence Blancoise",
-    "octets": 169024
+    "titre": "Maison de ville à LOUVIGNY sur 3 niveau - Casa Agence immobilière",
+    "octets": 244177
    }
   },
   {
-   "agence": "Agence Boilot",
-   "secondes": 25,
-   "pages": 11,
-   "gardes": 0,
+   "agence": "Causeret Immobilier",
+   "secondes": 44,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 11,
+   "ecartes": 1,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Agence immobilière à Château-Thierry 02 : vente et location ",
-   "illisible_exemple": {
-    "url": "https://www.agence-boilot.net/vente-maison-viffort.php",
-    "cause": "aucune annonce lue",
-    "titre": "Vente de maison à Viffort, dans l’Aisne (02)&nbsp;: AGENCE BOILOT",
-    "octets": 33293
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 97,
+   "sitemap": "ok 97",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://causeretimmobilier.fr/maison/la-maison-iris/",
+     "titre": "La maison Iris - © CAUSERET IMMOBILIER"
+    }
    }
   },
   {
-   "agence": "Agence Creil Immo",
-   "secondes": 30,
-   "pages": 13,
-   "gardes": 0,
+   "agence": "Century 21",
+   "secondes": 44,
+   "pages": 6,
+   "gardes": 6,
    "vendus": 0,
-   "ecartes": 13,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 65,
+   "sitemap": "ok 66",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 60,
+   "pages": 8,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 58,
+   "sitemap": "ok 58",
+   "deja_ecartees": 17,
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "location": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/17082598680/",
+     "titre": "Appartement F4 à louer - 4 pièces - 81.15 m2 - CREPY EN VALOIS - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    },
+    "location": {
+     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/15734078535/",
+     "titre": "maison à louer - 7 pièces - 157.29 m2 - TRUMILLY - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 63,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 63,
+   "sitemap": "ok 63",
+   "deja_ecartees": 28,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21agencegrandsud.com/trouver_logement/detail/17019582660/",
+     "titre": "Appartement F2 à vendre - 2 pièces - 40.0 m2 - TOURS - 37 - CENTRE - Century 21 Agence Grand Sud"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 46,
+   "pages": 7,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 36,
+   "sitemap": "ok 37",
+   "deja_ecartees": 30,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-centre-habitat-tours.com/trouver_logement/detail/17087989356/",
+     "titre": "Appartement T2 à louer - 2 pièces - 34.4 m2 - TOURS - 37 - CENTRE - Century 21 Centre Habitat"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 63,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 63,
+   "sitemap": "ok 63",
+   "deja_ecartees": 14,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/17080784093/",
+     "titre": "Appartement T2 à louer - 2 pièces - 46.18 m2 - BEAUNE - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 98,
+   "pages": 33,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 24,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 320,
+   "sitemap": "ok 321",
+   "deja_ecartees": 89,
+   "motifs": {
+    "titre_hors_cible:appartement": 23,
+    "location": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/16458854371/",
+     "titre": "Appartement F1 à vendre - 1 pièce - 26.79 m2 - ST JULIEN LES VILLAS - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immob"
+    },
+    "location": {
+     "url": "https://www.century21-martinot-immobilier-troyes.com/trouver_logement/detail/17021380152/",
+     "titre": "maison à louer - 4 pièces - 94.5 m2 - ARCIS SUR AUBE - 10 - CHAMPAGNE-ARDENNE - Century 21 Martinot Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 64,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 64,
+   "sitemap": "ok 64",
+   "deja_ecartees": 18,
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:parking": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-bertin-caen.com/trouver_logement/detail/15443511989/",
+     "titre": "Appartement F4 à vendre - 4 pièces - 80.0 m2 - CAEN - 14 - BASSE-NORMANDIE - Century 21 Bertin Immobilier"
+    },
+    "titre_hors_cible:parking": {
+     "url": "https://www.century21-bertin-caen.com/trouver_logement/detail/17085517144/",
+     "titre": "parking à vendre - 15.0 m2 - CAEN - 14 - BASSE-NORMANDIE - Century 21 Bertin Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 47,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 94,
+   "sitemap": "ok 94",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 45,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 218,
+   "sitemap": "ok 219",
+   "deja_ecartees": 81,
+   "motifs": {
+    "titre_hors_cible:appartement": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/16177171970/",
+     "titre": "Appartement à vendre - 2 pièces - 65.71 m2 - NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 77,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 79,
+   "sitemap": "ok 80",
+   "deja_ecartees": 39,
+   "motifs": {
+    "titre_hors_cible:parking": 1,
+    "titre_hors_cible:appartement": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:parking": {
+     "url": "https://www.century21-po-st-max.com/trouver_logement/detail/17091726338/",
+     "titre": "parking à louer - 16.0 m2 - ST MAX - 54 - LORRAINE - Century 21 Les Portes D"
+    },
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-po-st-max.com/trouver_logement/detail/17084301286/",
+     "titre": "Appartement F1 à louer - 1 pièce - 20.25 m2 - MAXEVILLE - 54 - LORRAINE - Century 21 Les Portes D"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 59,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 27,
+   "sitemap": "ok 27",
+   "deja_ecartees": 1,
+   "motifs": {
+    "titre_hors_cible:terrain": 2
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21-agence-albert.com/trouver_logement/detail/1520524458/",
+     "titre": "terrain à vendre - 717.0 m2 - ALBERT - 80 - PICARDIE - Century 21 Agence Albert"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 59,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "sitemap_dates": 20,
    "sitemap": "ok 20",
-   "deja_ecartees": 7,
+   "deja_ecartees": 11,
    "motifs": {
-    "prix_trop_haut": 8,
-    "ni_surface_ni_prix_credible": 5
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.creilimmo.fr/vente/60-oise/9-monchy-st-eloi/21-immeuble/549-tres-exclusif-ensemble-immobilier-locatif/",
-     "titre": "TRES EXCLUSIF ENSEMBLE IMMOBILIER LOCATIF"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.creilimmo.fr/vente/60-oise/209-cramoisy/2-appartement/t5/555-exclusif-apt-f5-duplex-dans-corps-de-ferme-renove/",
-     "titre": "EXCLUSIF APT F5 DUPLEX DANS CORPS DE FERME RENOVE"
+     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/13080497186/",
+     "titre": "maison à vendre - 5 pièces - 133.0 m2 - DEAUVILLE - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
     }
    }
   },
   {
-   "agence": "Agence Du Centre",
-   "secondes": 62,
+   "agence": "Century 21",
+   "secondes": 60,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 9,
+   "sitemap_dates": 40,
+   "sitemap": "ok 41",
+   "deja_ecartees": 3,
+   "motifs": {
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:terrain": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21estagence.com/trouver_logement/detail/17003505047/",
+     "titre": "Appartement F6 à vendre - 6 pièces - 106.69 m2 - VESOUL - 70 - FRANCHE-COMTE - Century 21 Est Agence"
+    },
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21estagence.com/trouver_logement/detail/14276382049/",
+     "titre": "terrain à vendre - 1609.0 m2 - LARIANS ET MUNANS - 70 - FRANCHE-COMTE - Century 21 Est Agence"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 72,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -611,23 +494,23 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 53,
-   "sitemap_dates": 50,
-   "sitemap": "ok 50",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 34,
+   "sitemap": "ok 34",
    "deja_ecartees": 9,
    "motifs": {
-    "prix_trop_haut": 1
+    "titre_hors_cible:appartement": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agenceducentre.net/vente/1-fecamp/maison/5929-villa-avec-terrasse-jardin-dependance-et-garage-en-vente-a-fecamp-prestige",
-     "titre": "Maison 11pièce(s) 4chambre(s) 370 m² Fécamp (76400)"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-guyon-epinal.com/trouver_logement/detail/17032804259/",
+     "titre": "Appartement Studio à vendre - 1 pièce - 32.0 m2 - EPINAL - 88 - LORRAINE - Century 21 Guyon Immobilier"
     }
    }
   },
   {
-   "agence": "Agence Greub",
-   "secondes": 93,
+   "agence": "Champanelle Immobilier",
+   "secondes": 51,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -636,22 +519,167 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap": "ok 10"
+   "adresses_ecartees": 9,
+   "sitemap_dates": 19,
+   "sitemap": "ok 19",
+   "deja_ecartees": 3
   },
   {
-   "agence": "Agence Immobilière Océane Cric",
-   "secondes": 17,
-   "pages": 1,
-   "gardes": 1,
+   "agence": "Château-Thierry Immobilier",
+   "secondes": 1,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Clic house",
+   "secondes": 60,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
+   "sitemap_dates": 57,
+   "sitemap": "ok 57",
+   "deja_ecartees": 9,
+   "motifs": {
+    "prix_trop_haut": 2,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.clichouse.fr/vente/14-calvados/792-vire/propriete-d-exception-500-m-9-chambres-piscine-tennis-3h30-paris-40-min-mer-prestige/6584-propriete",
+     "titre": "PROPRIETE D"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.clichouse.fr/vente/14-calvados/75-bernieres-sur-mer/a-vendre-bernieres-sur-mer/6813-maison",
+     "titre": "A VENDRE BERNIERES SUR MER"
+    }
+   }
+  },
+  {
+   "agence": "Concept Immo 54",
+   "secondes": 61,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 500,
+   "sitemap": "HTTP 500",
+   "index_statut": 200,
+   "index_titre": "Agence immobilière à Toul et Saizerais | Concept Immo 54",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://concept-immo54.fr/biens-loues/1",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers déjà loués | Concept Immo 54",
+    "octets": 595584
+   }
+  },
+  {
+   "agence": "Concordis",
+   "secondes": 87,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 105,
+   "sitemap": "ok 98",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Coup de Coeur Immo",
+   "secondes": 57,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 18,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Cv Immobilier",
+   "secondes": 60,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 13,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://www.cvimmobilier.fr/biens-vendus/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 biens vendus | CV Immobilier",
+    "octets": 186669
+   }
+  },
+  {
+   "agence": "Cyril Thienpont Immobilier",
+   "secondes": 92,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 35,
+   "sitemap": "ok 117",
+   "deja_ecartees": 13
+  },
+  {
+   "agence": "Côté Ouest Immobilier",
+   "secondes": 9,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 65,
-   "sitemap": "ok 32"
+   "adresses_ecartees": 74,
+   "sitemap": "ok 79",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.cote-ouest-immo.fr/vente/maison-7-pieces-saint-martin-du-manoir-76290,VM4952",
+     "titre": "SAINT MARTIN DU MANOIR"
+    }
+   }
   }
  ]
 }
