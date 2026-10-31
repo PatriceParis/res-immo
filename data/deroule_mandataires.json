@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.8,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,198 +23,175 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.8,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.2,
+  "seconde": 3.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.6,
+  "seconde": 4.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.6,
+  "seconde": 4.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.0,
+  "seconde": 5.5,
   "reseau": "capifrance",
-  "connues": 17351,
-  "ecartees": 2507
+  "connues": 17473,
+  "ecartees": 2548
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.1,
+  "seconde": 5.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.4,
+  "seconde": 5.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 18.4,
+  "seconde": 14.4,
   "reseau": "iad",
   "n": 94244,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.9,
+  "seconde": 16.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.3,
+  "seconde": 16.6,
   "reseau": "iad",
-  "connues": 17351,
-  "ecartees": 2507
+  "connues": 17473,
+  "ecartees": 2548
  },
  {
   "etape": "departement",
-  "seconde": 270.3,
+  "seconde": 276.2,
   "reseau": "iad",
-  "departement": "60",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 32,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 32,
-   "vendu": 16,
+   "garde": 41,
+   "vendu": 7,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 1
+   "location": 2
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 53 m² à Précy-sur-Oise (60460)",
-   "hors_perimetre": "Longère 4 pièces de 150 m² à Allonne (79130)"
+   "location": "Maison 2 pièces de 43 m² à Mesnil-Rousset (27390)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 517.4,
+  "seconde": 518.1,
   "reseau": "iad",
-  "departement": "21",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 35,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 35,
-   "vendu": 6,
-   "ecarte": 9,
+   "garde": 38,
+   "vendu": 9,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9
+   "location": 1,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison de campagne 4 pièces de 100 m² à Massingy (74150)"
+   "location": "Maison 5 pièces de 80 m² à Chartres (28000)",
+   "hors_perimetre": "Maison 4 pièces de 110 m² à Saint-Christophe (17220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 605.0,
+  "seconde": 606.9,
   "reseau": "iad",
-  "departement": "25",
-  "visitees": 18,
-  "gardes": 11,
+  "departement": "61",
+  "visitees": 19,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 11,
-   "vendu": 1,
-   "ecarte": 6,
+   "garde": 12,
+   "vendu": 5,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Grange 5 pièces de 137 m² à Saint-Hippolyte (66510)"
+   "hors_perimetre": "Demeure 13 pièces de 385 m² à Avrilly (03130)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 605.0,
+  "seconde": 606.9,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.4,
+  "seconde": 607.5,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.8,
+  "seconde": 609.4,
   "reseau": "safti",
   "n": 28848,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.4,
+  "seconde": 610.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.8,
+  "seconde": 610.6,
   "reseau": "safti",
-  "connues": 17383,
-  "ecartees": 2540
+  "connues": 17495,
+  "ecartees": 2570
  },
  {
   "etape": "departement",
-  "seconde": 932.8,
+  "seconde": 898.3,
   "reseau": "safti",
-  "departement": "89",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 47,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 47,
-   "vendu": 0,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à VILLENEUVE-SUR-YONNE de 481m²",
-   "hors_perimetre": "Maison à vendre à Bois-d'Arcy de 143m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1211.4,
-  "reseau": "safti",
-  "departement": "08",
-  "visitees": 46,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
+   "garde": 45,
    "vendu": 0,
    "ecarte": 5,
    "illisible": 0
@@ -223,12 +200,50 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à LA ROMAGNE de 95m²"
+   "hors_perimetre": "Maison à vendre à AULNAY de 130m²"
   }
  },
  {
+  "etape": "departement",
+  "seconde": 1178.3,
+  "reseau": "safti",
+  "departement": "45",
+  "visitees": 50,
+  "gardes": 45,
+  "tronquee": true,
+  "etats": {
+   "garde": 45,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à CERDON de 131m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1209.8,
+  "reseau": "safti",
+  "departement": "50",
+  "visitees": 5,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
   "etape": "fin",
-  "seconde": 1211.4,
-  "gardes": 166
+  "seconde": 1209.8,
+  "gardes": 186
  }
 ]
