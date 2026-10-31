@@ -2,109 +2,8 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "Jean Jaurès Immobilier",
-   "secondes": 60,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 73,
-   "sitemap_dates": 126,
-   "sitemap": "ok 126",
-   "deja_ecartees": 9
-  },
-  {
-   "agence": "L'Agence",
-   "secondes": 8,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 3,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lagenceimmobilier.com/a-vendre/1",
-     "titre": "Vente - L'Agence"
-    }
-   }
-  },
-  {
-   "agence": "L'Agence Smith",
-   "secondes": 71,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 176,
-   "sitemap": "ok 178",
-   "deja_ecartees": 23,
-   "motifs": {
-    "titre_hors_cible:appartement": 3
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.agence-smith.com/bien-immobilier/nouveaute-smith-appartement-centre-ville-duplex-3-pieces/",
-     "titre": "L'agence Smith - NOUVEAUTÉ SMITH: APPARTEMENT CENTRE VILLE DUPLEX 3 PIÈCES /"
-    }
-   }
-  },
-  {
-   "agence": "L'Immobilière Conseils",
-   "secondes": 7,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "L’immobilière Conseils : agence immobilière Noyon, transacti"
-  },
-  {
-   "agence": "La Plaine Immobilier",
-   "secondes": 99,
-   "pages": 37,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 37,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "La Plaine Immobilier : agence immobilière Caen, achat immobi",
-   "illisible_exemple": {
-    "url": "https://laplaine-immobilier.com/fr/maison-carrouges-2-pieces-35-m2",
-    "cause": "aucune annonce lue",
-    "titre": "",
-    "octets": 154448
-   }
-  },
-  {
-   "agence": "Lelièvre immobilier",
-   "secondes": 72,
+   "agence": ".la petite agence",
+   "secondes": 63,
    "pages": 12,
    "gardes": 8,
    "vendus": 0,
@@ -113,266 +12,52 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 297,
-   "sitemap_dates": 108,
-   "sitemap": "ok 108",
-   "deja_ecartees": 2,
+   "sitemap_dates": 57,
+   "sitemap": "ok 57",
+   "deja_ecartees": 17,
    "motifs": {
-    "prix_trop_haut": 4
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lelievre-immobilier.com/vente/hotel-particulier-souligne-sous-ballon-ref-61875",
-     "titre": "Vente - Hôtel particulier 312 m2 SOULIGNE SOUS BALLON| Lelièvre Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "Lemaistre Immobilier Yvetot",
-   "secondes": 71,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap": "ok 432",
-   "deja_ecartees": 8,
-   "illisible_exemple": {
-    "url": "https://www.lemaistre-immo.fr/fr/vendre-bien-immobilier-le-havre.htm",
-    "cause": "aucune annonce lue",
-    "titre": "Agence Immobilière Le Havre - Lemaistre immobilier Le Havre et sa périphérie",
-    "octets": 48411
-   },
-   "motifs": {
-    "titre_hors_cible:appartement": 1,
-    "ni_surface_ni_prix_credible": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/appartement-rouen-76000/61521112.htm",
-     "titre": "vente achat Appartement ROUEN 76000"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.lemaistre-immo.fr/vente-achat/terrain-goderville-76110/60210353.htm",
-     "titre": "vente achat Terrain GODERVILLE 76110"
-    }
-   }
-  },
-  {
-   "agence": "Les Artisans 2 l'immobilier",
-   "secondes": 70,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 37",
-   "deja_ecartees": 9
-  },
-  {
-   "agence": "Les Clés de la Suisse Normande",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Les Clés du Littoral",
-   "secondes": 101,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 24,
-   "sitemap": "ok 49",
-   "illisible_exemple": {
-    "url": "https://www.lesclesdulittoral.com/vente/maison-ancienne-7-pieces-luc-sur-mer-14530,VM302",
-    "cause": "aucune annonce lue",
-    "titre": "À vendre - Maison ancienne, 7 pièces située à Luc-sur-Mer (14530)",
-    "octets": 924994
-   }
-  },
-  {
-   "agence": "Les nouvelles pépites",
-   "secondes": 103,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 85,
-   "sitemap": "ok 169",
-   "deja_ecartees": 104,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-5-pieces-wasquehal-59290,VM1043",
-     "titre": "Maison individuelle 177 m² – 5 pièces – Jardin 1800 m² – Garages & stationnements privatifs – Wasquehal Boers"
-    }
-   }
-  },
-  {
-   "agence": "Loft & House",
-   "secondes": 35,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 44,
-   "sitemap_dates": 49,
-   "sitemap": "ok 49",
-   "motifs": {
+    "titre_hors_cible:appartement": 3,
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-10-pieces-376-m2-bieville-beuville-61547115/",
-     "titre": "Maison de 10 pièces de 376 m² à BIEVILLE BEUVILLE - Loft & House"
-    }
-   }
-  },
-  {
-   "agence": "Logehome",
-   "secondes": 6,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "deja_ecartees": 1,
-   "motifs": {
-    "ni_surface_ni_prix_credible": 1
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.logehome.fr/vendre-mon-bien",
-     "titre": "Vendre mon bien, le HOMEPACK de logéhome"
-    }
-   }
-  },
-  {
-   "agence": "Logia",
-   "secondes": 78,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": "Loading https://www.les-agents.com/"
-  },
-  {
-   "agence": "Logimmo Conseil",
-   "secondes": 66,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 92,
-   "sitemap_dates": 68,
-   "sitemap": "ok 68",
-   "deja_ecartees": 9
-  },
-  {
-   "agence": "Logéal Immobilière",
-   "secondes": 49,
-   "pages": 6,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 9,
-   "sitemap": "ok 9",
-   "deja_ecartees": 3,
-   "illisible_exemple": {
-    "url": "https://www.logeal-immobiliere.fr/qui-nous-sommes/nos-engagements/bien-vieillir-a-domicile/",
-    "cause": "aucune annonce lue",
-    "titre": "Bien vieillir à domicile - Logéal Immobilière",
-    "octets": 144126
-   }
-  },
-  {
-   "agence": "Lorn Habitat",
-   "secondes": 23,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 355,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Accueil - Lor'n Habitat Agence immobilière Custines"
-  },
-  {
-   "agence": "Lotz",
-   "secondes": 54,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 36,
-   "sitemap_dates": 26,
-   "sitemap": "ok 26",
-   "deja_ecartees": 7,
-   "motifs": {
-    "titre_hors_cible:appartement": 2
-   },
-   "ecartes_exemples": {
     "titre_hors_cible:appartement": {
-     "url": "https://www.fabien-lotz-immobilier.com/fr/annonces-immobilieres/offre/remiremont/bien/1151/investisseurs--appartement-type-f3-4-de-76-m2-38-m2-carrez-lou-eacute.html",
-     "titre": "INVESTISSEURS ! APPARTEMENT type F3/4 de 76 m2 (38 m2 Carrez) Loué"
+     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/appartement-f3-%C3%A0-300m-de-la-plage/merville-franceville",
+     "titre": "Appartement F3 à 300m de la plage"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-bourgeoise-du-xixe/caen",
+     "titre": "Maison bourgeoise du XIXe"
     }
    }
   },
   {
-   "agence": "Maison Ancienne du Bessin",
-   "secondes": 65,
+   "agence": "A Et B Conseil Immobilier",
+   "secondes": 46,
+   "pages": 19,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 19,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 25,
+   "sitemap_dates": 203,
+   "sitemap": "ok 203",
+   "deja_ecartees": 184,
+   "motifs": {
+    "prix_trop_haut": 19
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.aandbimmobilier.com/vente/10-aube/332-vendeuvre-sur-barse/1-maison/t8/434-maison-d-architecte-a-trente-minutes-de-troyes-prestige/",
+     "titre": "Maison d"
+    }
+   }
+  },
+  {
+   "agence": "A Tri Home",
+   "secondes": 59,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -382,60 +67,69 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 2,
-   "sitemap_dates": 29,
-   "sitemap": "ok 29",
-   "deja_ecartees": 5
+   "sitemap_dates": 20,
+   "sitemap": "ok 20",
+   "deja_ecartees": 2
   },
   {
-   "agence": "Maison du Perche",
-   "secondes": 47,
-   "pages": 6,
-   "gardes": 4,
-   "vendus": 0,
+   "agence": "ACBI",
+   "secondes": 64,
+   "pages": 10,
+   "gardes": 6,
+   "vendus": 3,
    "ecartes": 1,
-   "illisibles": 1,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 23,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "deja_ecartees": 2,
+   "adresses_ecartees": 117,
+   "sitemap_dates": 700,
+   "sitemap": "ok 700",
+   "deja_ecartees": 8,
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.maisonduperche.fr/propriete/maison-de-campagne-a-vendre-foret-de-belleme/",
-     "titre": "MAISON DE CAMPAGNE A VENDRE FORET DE BELLEME ⋆ Maison du Perche"
+     "url": "https://www.agencecbi.com/vente/1-vendome/duplex/t3/3177-coup-de-coeur-en-hypercentre-duplex-d-exception-en-residence-de-prestige-avec-terrasse-et-jardin-plein-sud-prestige/",
+     "titre": "Coup de cœur en hypercentre – Duplex d"
     }
-   },
-   "illisible_exemple": {
-    "url": "https://www.maisonduperche.fr/iwp_type/maison/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison ⋆ Maison du Perche",
-    "octets": 107296
    }
   },
   {
-   "agence": "Maisons Nobless",
-   "secondes": 41,
-   "pages": 8,
+   "agence": "ACI Agence Capital Immobilier",
+   "secondes": 180,
+   "pages": 11,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
+   "ecartes": 1,
+   "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 1,
-   "sitemap_dates": 173,
-   "sitemap": "ok 173",
-   "deja_ecartees": 3
+   "sitemap_dates": 67,
+   "sitemap": "ok 67",
+   "deja_ecartees": 13,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://agence-aci.com/propriete/exclusivite-aci-caen-maison-t11-de-244-m2/",
+     "titre": "EXCLUSIVITE ACI &#8211; CAEN &#8211; MAISON T11 DE 244 m2"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://agence-aci.com/type-propriete/maison-villa/",
+    "cause": "titre = nom du site",
+    "titre": "Archives des Maison/Villa - ACI AGENCE CAPITAL IMMOBILIER",
+    "octets": 481583
+   }
   },
   {
-   "agence": "Manson",
-   "secondes": 92,
+   "agence": "Agence de l'étoile",
+   "secondes": 97,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -444,207 +138,44 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 48,
-   "sitemap": "ok 71",
-   "deja_ecartees": 20
+   "adresses_ecartees": 51,
+   "sitemap": "ok 46",
+   "deja_ecartees": 2
   },
   {
-   "agence": "Marc Foujols",
-   "secondes": 48,
-   "pages": 8,
+   "agence": "Agence de la bourse",
+   "secondes": 94,
+   "pages": 19,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 47,
-   "sitemap_dates": 496,
-   "sitemap": "ok 496",
-   "deja_ecartees": 16
-  },
-  {
-   "agence": "Martel Expertises",
-   "secondes": 10,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 10,
    "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "adresses_ecartees": 22,
+   "sitemap_dates": 64,
+   "sitemap": "ok 64",
+   "deja_ecartees": 1,
    "illisible_exemple": {
-    "url": "https://www.martel-expertises.fr/nos-expertises/immobilier/biens-residentiels",
+    "url": "https://agencedelabourse.com/property/bar-brasserie-en-centre-commercial-a-vendre/",
     "cause": "aucune annonce lue",
-    "titre": "Expertise immobilière appartement et maison | Martel Expertises",
-    "octets": 195950
-   }
-  },
-  {
-   "agence": "Mathis Mazon",
-   "secondes": 14,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap": "ok 2",
+    "titre": "BAR BRASSERIE EN CENTRE COMMERCIAL A VENDRE - Agence de la bourse | Agence immobilière Le Havre",
+    "octets": 254029
+   },
    "motifs": {
-    "titre_hors_cible:local professionnel": 2
+    "ni_surface_ni_prix_credible": 10
    },
    "ecartes_exemples": {
-    "titre_hors_cible:local professionnel": {
-     "url": "https://www.mathisnazon.com/vente/immobilier-pro-local-commercial-55-m2-nancy-54000,VP077",
-     "titre": "A VENDRE ! Local Professionnel NANCY III Maisons"
+    "ni_surface_ni_prix_credible": {
+     "url": "https://agencedelabourse.com/property/bar-tabac-loto-francaise-des-jeux-a-vendre-2/",
+     "titre": "BAR TABAC LOTO FRANCAISE DES JEUX A VENDRE"
     }
    }
   },
   {
-   "agence": "Meet Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
-  },
-  {
-   "agence": "Michaël Zingraf",
-   "secondes": 65,
-   "pages": 16,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 8,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 27,
-   "sitemap_dates": 1557,
-   "sitemap": "ok 1558",
-   "deja_ecartees": 19,
-   "motifs": {
-    "prix_trop_haut": 5,
-    "titre_hors_cible:appartement": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.michaelzingraf.com/fr/vente/MZIMD270-maison-avec-piscine-et-apercu-mer",
-     "titre": "Villa à vendre à Mandelieu-la-Napoule – 4 chambres, 145 m²"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.michaelzingraf.com/fr/vente/MZIPB442-palm-beach-appartement-3-pieces-avec-jardin-privatif-et-piscine",
-     "titre": "Appartement à vendre à Cannes – 2 chambres, 85 m²"
-    }
-   }
-  },
-  {
-   "agence": "Michel et Neumayer",
-   "secondes": 20,
-   "pages": 2,
-   "gardes": 2,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Mon Agence Immo",
-   "secondes": 79,
-   "pages": 15,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 7,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 55,
-   "sitemap": "ok 55",
-   "deja_ecartees": 3,
-   "motifs": {
-    "prix_trop_haut": 7
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.mon-agenceimmo.fr/vente/17-mehun-sur-yevre/maison/522-mehun-sur-yevre-pavillon-sur-sous-sol-4-chambres-garage-et-jardin",
-     "titre": "Mehun-Sur-Yèvre - Pavillon sur sous-sol 4 chambres, garage et jardin"
-    }
-   }
-  },
-  {
-   "agence": "Mon Saint-André",
-   "secondes": 23,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 61,
-   "sitemap_dates": 18,
-   "sitemap": "ok 18",
-   "deja_ecartees": 15
-  },
-  {
-   "agence": "Morvan Immobilier",
-   "secondes": 161,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 45,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 105,
-   "sitemap": "ok 105",
-   "illisible_exemple": {
-    "url": "https://morvan-immobilier.com/annonce/2336",
-    "cause": "titre = nom du site",
-    "titre": "Morvan immobilier - Vente maison - \"Maison à Brassy\" (58140) Brassy - 49500 €",
-    "octets": 133669
-   }
-  },
-  {
-   "agence": "Morvan Patrimoine",
-   "secondes": 10,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Morvan Patrimoine, agences immobilières Château Chinon et St"
-  },
-  {
-   "agence": "Moselis OPH Moselle",
-   "secondes": 14,
+   "agence": "Agence des Lacs",
+   "secondes": 6,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -654,25 +185,291 @@
    "robots": "ok",
    "sitemap_statut": 404,
    "sitemap": "HTTP 404",
-   "adresses_ecartees": 64,
    "index_statut": 200,
-   "index_titre": "Moselis | Location / Vente de Logements Sociaux & Locaux | O"
+   "index_titre": "Agence immobilière des Lacs à Brienne le Chateau."
   },
   {
-   "agence": "NC Immo",
-   "secondes": 19,
+   "agence": "Agence du Terroir",
+   "secondes": 5,
    "pages": 1,
-   "gardes": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "sitemap_dates": 124,
+   "sitemap": "ok 124",
+   "deja_ecartees": 123,
+   "illisible_exemple": {
+    "url": "https://www.agenceduterroir.com/maison-a-vendre-perche-sargyo-sur-braye-1536.html",
+    "cause": "aucune annonce lue",
+    "titre": "Agence du Terroir - Maison à vendre Sargé sur Braye",
+    "octets": 29845
+   }
+  },
+  {
+   "agence": "Alain Guyony Immobilier",
+   "secondes": 100,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap": "ok 111"
+  },
+  {
+   "agence": "Alexandra Cablat",
+   "secondes": 58,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 134,
+   "sitemap_dates": 254,
+   "sitemap": "ok 254",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Alliance Immobilier",
+   "secondes": 83,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 4,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 167,
+   "sitemap_dates": 142,
+   "sitemap": "ok 142",
+   "deja_ecartees": 44
+  },
+  {
+   "agence": "Amrimmo",
+   "secondes": 99,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 48,
+   "sitemap": "ok 127",
+   "deja_ecartees": 81
+  },
+  {
+   "agence": "Angledroit.immo",
+   "secondes": 62,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 18,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 3
+  },
+  {
+   "agence": "Angélot Immo",
+   "secondes": 9,
+   "pages": 2,
+   "gardes": 1,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "deja_ecartees": 1,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
+     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
+    }
+   }
+  },
+  {
+   "agence": "Année Hoinville",
+   "secondes": 134,
+   "pages": 16,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 8,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 95,
+   "sitemap": "ok 85",
+   "deja_ecartees": 14,
+   "motifs": {
+    "prix_trop_haut": 8
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
+     "titre": "MAISON TROUVILLE"
+    }
+   }
+  },
+  {
+   "agence": "Antony Vesque Immobilier",
+   "secondes": 67,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 60,
+   "sitemap": "ok 69",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Arsenal Immobilier",
+   "secondes": 48,
+   "pages": 4,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 94,
+   "sitemap": "ok 65",
+   "deja_ecartees": 61
+  },
+  {
+   "agence": "ArthurImmo.com Agence Saint-Hubert",
+   "secondes": 60,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 19,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11"
+  },
+  {
+   "agence": "Arthurimmo",
+   "secondes": 70,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 7,
+   "sitemap_dates": 44,
+   "sitemap": "ok 44"
+  },
+  {
+   "agence": "Arthurimmo.com",
+   "secondes": 54,
+   "pages": 7,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://metz.arthurimmo.com/annonces/achat/maison/lorry-les-metz-57050/33122031.htm",
+     "titre": "Acheter maison de 10 pièces 245 m² 893 000 € à Lorry-Lès-Metz (57050) : une annonce Arthurimmo.com"
+    }
+   }
+  },
+  {
+   "agence": "Arturimmo.com",
+   "secondes": 25,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 36,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3"
+  },
+  {
+   "agence": "Hamaris",
+   "secondes": 74,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 14,
+   "sitemap": "ok 14"
+  },
+  {
+   "agence": "Helman Immobilier",
+   "secondes": 123,
+   "pages": 17,
+   "gardes": 2,
+   "vendus": 12,
+   "ecartes": 0,
+   "illisibles": 3,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap_dates": 9,
-   "sitemap": "ok 9",
-   "deja_ecartees": 3
+   "adresses_ecartees": 85,
+   "sitemap": "ok 460",
+   "deja_ecartees": 146,
+   "illisible_exemple": {
+    "url": "https://www.helman-immobilier.com/vente/entrepot",
+    "cause": "aucune annonce lue",
+    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
+    "octets": 907027
+   }
   }
  ]
 }
