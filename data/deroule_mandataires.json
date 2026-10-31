@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.2,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.2,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,53 +23,53 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.2,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.0,
+  "seconde": 3.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.5,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.5,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.0,
+  "seconde": 5.0,
   "reseau": "capifrance",
-  "connues": 17099,
-  "ecartees": 2475
+  "connues": 17351,
+  "ecartees": 2507
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.1,
+  "seconde": 5.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.5,
+  "seconde": 5.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.7,
+  "seconde": 18.4,
   "reseau": "iad",
-  "n": 94213,
+  "n": 94244,
   "complet": false
  },
  {
@@ -80,65 +80,75 @@
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.4,
+  "seconde": 20.3,
   "reseau": "iad",
-  "connues": 17099,
-  "ecartees": 2475
+  "connues": 17351,
+  "ecartees": 2507
  },
  {
   "etape": "departement",
-  "seconde": 312.8,
+  "seconde": 270.3,
   "reseau": "iad",
-  "departement": "37",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 32,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 12,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 585.3,
-  "reseau": "iad",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 33,
-  "tronquee": true,
-  "etats": {
-   "garde": 33,
-   "vendu": 13,
-   "ecarte": 4,
+   "garde": 32,
+   "vendu": 16,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4
+   "location": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 4 pièces de 90 m² à Méréville (91660)"
+   "location": "Maison de ville 3 pièces de 53 m² à Précy-sur-Oise (60460)",
+   "hors_perimetre": "Longère 4 pièces de 150 m² à Allonne (79130)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 517.4,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 35,
+  "tronquee": true,
+  "etats": {
+   "garde": 35,
+   "vendu": 6,
+   "ecarte": 9,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 9
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de campagne 4 pièces de 100 m² à Massingy (74150)"
   }
  },
  {
   "etape": "departement",
   "seconde": 605.0,
   "reseau": "iad",
-  "departement": "55",
-  "visitees": 2,
-  "gardes": 2,
+  "departement": "25",
+  "visitees": 18,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 2,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 11,
+   "vendu": 1,
+   "ecarte": 6,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Grange 5 pièces de 137 m² à Saint-Hippolyte (66510)"
+  }
  },
  {
   "etape": "reseau_debut",
@@ -148,71 +158,77 @@
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.9,
+  "seconde": 605.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 607.6,
+  "seconde": 606.8,
   "reseau": "safti",
-  "n": 28787,
+  "n": 28848,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 608.5,
+  "seconde": 607.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 608.9,
+  "seconde": 607.8,
   "reseau": "safti",
-  "connues": 17128,
-  "ecartees": 2504
+  "connues": 17383,
+  "ecartees": 2540
  },
  {
   "etape": "departement",
-  "seconde": 937.1,
+  "seconde": 932.8,
   "reseau": "safti",
-  "departement": "59",
+  "departement": "89",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 47,
   "tronquee": true,
   "etats": {
-   "garde": 49,
+   "garde": 47,
    "vendu": 0,
-   "ecarte": 0,
-   "illisible": 1
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1203.7,
-  "reseau": "safti",
-  "departement": "60",
-  "visitees": 39,
-  "gardes": 37,
-  "tronquee": true,
-  "etats": {
-   "garde": 37,
-   "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2
+   "prix_trop_haut": 1,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à COMPIEGNE de 317m²"
+   "prix_trop_haut": "Maison à vendre à VILLENEUVE-SUR-YONNE de 481m²",
+   "hors_perimetre": "Maison à vendre à Bois-d'Arcy de 143m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1211.4,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 46,
+  "gardes": 41,
+  "tronquee": true,
+  "etats": {
+   "garde": 41,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à LA ROMAGNE de 95m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1203.7,
-  "gardes": 159
+  "seconde": 1211.4,
+  "gardes": 166
  }
 ]
