@@ -153,3 +153,15 @@ def test_un_bien_d_outre_mer_est_ecarte_meme_place_chez_nous():
                   "Maison 3 pièces à Givry, 97000 €",
                   "Maison 3 pièces à Givry, 98500 euros"):
         assert qualite.motif_de_rejet(bien(titre=titre)) != "outre_mer", titre
+
+
+def test_un_appartement_au_titre_coupe_ou_mal_ecrit_reste_un_appartement():
+    """Servis comme des maisons le 1er novembre 2026 : le titre de Bon'Appart
+    était coupé en plein mot, celui de PBH Immo écrit avec une faute."""
+    for titre in ("Rare sur le marché ! Situé au-dessus de la Poste en plein centre-ville "
+                  "de Fameck, découvrez ce grand apparteme",
+                  "appartemenet atypique F2 - centre ville de LA BOURBOULE"):
+        motif = qualite.motif_de_rejet(bien(titre=titre))
+        assert motif and motif.startswith("titre_hors_cible:appartem"), (titre, motif)
+    assert qualite.motif_de_rejet(bien(titre="Maison qui appartient à la même famille "
+                                             "depuis 1900")) is None

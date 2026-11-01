@@ -77,7 +77,11 @@ _NON_ANNONCE = re.compile(
 _TYPES_EXCLUS = re.compile(
     # « appt », « appart » : abréviations courantes dans les titres d'agences
     # (« A VENDRE APPT T2 »), qui passaient à travers « appartements? ».
-    r"appartements?|\bapparts?\b|\bappts?\b|studios?|\bloft\b|parkings?|\bbox\b"
+    # « appartem » plutôt que le mot entier : le 1er novembre 2026, deux
+    # appartements étaient servis comme des maisons, l'un au titre coupé
+    # (« …découvrez ce grand apparteme »), l'autre écrit « appartemenet ».
+    # Aucun autre mot ne commence ainsi.
+    r"appartem\w*|\bapparts?\b|\bappts?\b|studios?|\bloft\b|parkings?|\bbox\b"
     r"|emplacement de parking"
     r"|local (commercial|professionnel|d'activite)|locaux (commerciaux|professionnels)"
     r"|\bbureaux\b|entrepots?|fonds de commerce|murs commerciaux"
