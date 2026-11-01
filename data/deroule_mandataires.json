@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 1.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.7,
+  "seconde": 1.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,176 +23,182 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.7,
+  "seconde": 1.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.5,
+  "seconde": 3.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.9,
+  "seconde": 4.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.9,
+  "seconde": 4.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
-  "connues": 17473,
-  "ecartees": 2548
+  "connues": 17634,
+  "ecartees": 2580
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.5,
+  "seconde": 5.0,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.7,
+  "seconde": 5.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 14.4,
+  "seconde": 17.0,
   "reseau": "iad",
-  "n": 94244,
+  "n": 93391,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.2,
+  "seconde": 19.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 16.6,
+  "seconde": 19.6,
   "reseau": "iad",
-  "connues": 17473,
-  "ecartees": 2548
+  "connues": 17634,
+  "ecartees": 2580
  },
  {
   "etape": "departement",
-  "seconde": 276.2,
+  "seconde": 278.2,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 7,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 43 m² à Mesnil-Rousset (27390)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 518.1,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 38,
-  "tronquee": true,
-  "etats": {
-   "garde": 38,
-   "vendu": 9,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "location": "Maison 5 pièces de 80 m² à Chartres (28000)",
-   "hors_perimetre": "Maison 4 pièces de 110 m² à Saint-Christophe (17220)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 606.9,
-  "reseau": "iad",
-  "departement": "61",
-  "visitees": 19,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
+   "garde": 40,
    "vendu": 5,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "hors_perimetre": 2,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 75 m² à AMIENS (80000)",
+   "hors_perimetre": "Maison 4 pièces de 90 m² à Berneuil (17460)",
+   "prix_trop_haut": "Maison d"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 562.9,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 46,
+  "tronquee": true,
+  "etats": {
+   "garde": 46,
+   "vendu": 2,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "hors_perimetre": 1,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Demeure 13 pièces de 385 m² à Avrilly (03130)"
+   "hors_perimetre": "Maison de ville 4 pièces de 104 m² à Ruffec (16700)",
+   "prix_trop_haut": "Domaine 40 pièces de 2 000 m² à Châtillon-sur-Indre (36700)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 614.7,
+  "reseau": "iad",
+  "departement": "39",
+  "visitees": 12,
+  "gardes": 5,
+  "tronquee": true,
+  "etats": {
+   "garde": 5,
+   "vendu": 0,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 2,
+   "outre_mer": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 6 pièces de 120 m² à Bellefontaine (95270)",
+   "outre_mer": "Maison traditionnelle 4 pièces de 85 m² à Saint-Pierre (97410)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 606.9,
+  "seconde": 614.7,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 587
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.5,
+  "seconde": 615.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 609.4,
+  "seconde": 616.3,
   "reseau": "safti",
-  "n": 28848,
+  "n": 28853,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 610.2,
+  "seconde": 617.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 610.6,
+  "seconde": 617.7,
   "reseau": "safti",
-  "connues": 17495,
-  "ecartees": 2570
+  "connues": 17654,
+  "ecartees": 2601
  },
  {
   "etape": "departement",
-  "seconde": 898.3,
+  "seconde": 900.5,
   "reseau": "safti",
-  "departement": "10",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 0,
+   "garde": 42,
+   "vendu": 3,
    "ecarte": 5,
    "illisible": 0
   },
@@ -200,40 +206,40 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à AULNAY de 130m²"
+   "hors_perimetre": "Maison à vendre à AUBUSSON de 95m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1178.3,
+  "seconde": 1188.6,
   "reseau": "safti",
-  "departement": "45",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 0,
+   "garde": 43,
+   "vendu": 1,
    "ecarte": 5,
-   "illisible": 0
+   "illisible": 1
   },
   "motifs": {
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à CERDON de 131m²"
+   "hors_perimetre": "Maison à vendre à CHENAY de 139m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1209.8,
+  "seconde": 1208.0,
   "reseau": "safti",
-  "departement": "50",
-  "visitees": 5,
-  "gardes": 5,
+  "departement": "52",
+  "visitees": 2,
+  "gardes": 2,
   "tronquee": true,
   "etats": {
-   "garde": 5,
+   "garde": 2,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -243,7 +249,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1209.8,
-  "gardes": 186
+  "seconde": 1208.1,
+  "gardes": 178
  }
 ]
