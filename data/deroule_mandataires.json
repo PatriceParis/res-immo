@@ -50,8 +50,8 @@
   "etape": "catalogue_relu",
   "seconde": 5.0,
   "reseau": "capifrance",
-  "connues": 17634,
-  "ecartees": 2580
+  "connues": 17733,
+  "ecartees": 2616
  },
  {
   "etape": "reseau_debut",
@@ -67,179 +67,167 @@
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.0,
+  "seconde": 15.7,
   "reseau": "iad",
   "n": 93391,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.1,
+  "seconde": 17.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 19.6,
+  "seconde": 18.1,
   "reseau": "iad",
-  "connues": 17634,
-  "ecartees": 2580
+  "connues": 17733,
+  "ecartees": 2616
  },
  {
   "etape": "departement",
-  "seconde": 278.2,
+  "seconde": 286.3,
   "reseau": "iad",
-  "departement": "80",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 40,
+   "garde": 45,
    "vendu": 5,
-   "ecarte": 5,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 2,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 75 m² à AMIENS (80000)",
-   "hors_perimetre": "Maison 4 pièces de 90 m² à Berneuil (17460)",
-   "prix_trop_haut": "Maison d"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 562.9,
+  "seconde": 512.2,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 2,
+   "garde": 33,
+   "vendu": 15,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1,
-   "prix_trop_haut": 1
+   "location": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 4 pièces de 104 m² à Ruffec (16700)",
-   "prix_trop_haut": "Domaine 40 pièces de 2 000 m² à Châtillon-sur-Indre (36700)"
+   "location": "Maison de village 4 pièces de 95 m² à Lachambre (57730)",
+   "hors_perimetre": "Maison 4 pièces de 91 m² à Marsilly (17137)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 614.7,
+  "seconde": 604.5,
   "reseau": "iad",
-  "departement": "39",
-  "visitees": 12,
-  "gardes": 5,
+  "departement": "62",
+  "visitees": 21,
+  "gardes": 13,
   "tronquee": true,
   "etats": {
-   "garde": 5,
-   "vendu": 0,
-   "ecarte": 7,
+   "garde": 13,
+   "vendu": 7,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2,
-   "outre_mer": 5
+   "location": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 6 pièces de 120 m² à Bellefontaine (95270)",
-   "outre_mer": "Maison traditionnelle 4 pièces de 85 m² à Saint-Pierre (97410)"
+   "location": "Maison de ville 2 pièces de 32 m² à Boulogne-sur-Mer (62200)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 614.7,
+  "seconde": 604.5,
   "reseau": "safti",
-  "part_secondes": 587
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 615.1,
+  "seconde": 604.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 616.3,
+  "seconde": 605.7,
   "reseau": "safti",
   "n": 28853,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 617.2,
+  "seconde": 606.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 617.7,
+  "seconde": 607.0,
   "reseau": "safti",
-  "connues": 17654,
-  "ecartees": 2601
+  "connues": 17763,
+  "ecartees": 2646
  },
  {
   "etape": "departement",
-  "seconde": 900.5,
+  "seconde": 894.3,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "53",
   "visitees": 50,
-  "gardes": 42,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 42,
-   "vendu": 3,
-   "ecarte": 5,
+   "garde": 44,
+   "vendu": 0,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 5,
+   "ni_surface_ni_prix_credible": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à AUBUSSON de 95m²"
+   "hors_perimetre": "Maison à vendre à DESERTINES de 75m²",
+   "ni_surface_ni_prix_credible": "Maison à vendre à COURCITE de 60m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1188.6,
+  "seconde": 1176.4,
   "reseau": "safti",
-  "departement": "51",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 43,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 1,
-   "ecarte": 5,
+   "garde": 49,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 1
   },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à CHENAY de 139m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 1208.0,
+  "seconde": 1202.7,
   "reseau": "safti",
-  "departement": "52",
-  "visitees": 2,
-  "gardes": 2,
+  "departement": "70",
+  "visitees": 4,
+  "gardes": 4,
   "tronquee": true,
   "etats": {
-   "garde": 2,
+   "garde": 4,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -249,7 +237,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1208.1,
-  "gardes": 178
+  "seconde": 1202.7,
+  "gardes": 188
  }
 ]
