@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.5,
+  "seconde": 22.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.5,
+  "seconde": 22.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,119 +23,100 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.5,
+  "seconde": 22.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.0,
+  "seconde": 24.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.4,
+  "seconde": 25.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.4,
+  "seconde": 25.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.0,
+  "seconde": 26.3,
   "reseau": "capifrance",
-  "connues": 17733,
-  "ecartees": 2616
+  "connues": 17950,
+  "ecartees": 2653
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.0,
+  "seconde": 26.3,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.2,
+  "seconde": 26.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 15.7,
+  "seconde": 38.8,
   "reseau": "iad",
-  "n": 93391,
+  "n": 93836,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.6,
+  "seconde": 40.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.1,
+  "seconde": 40.7,
   "reseau": "iad",
-  "connues": 17733,
-  "ecartees": 2616
+  "connues": 17950,
+  "ecartees": 2653
  },
  {
   "etape": "departement",
-  "seconde": 286.3,
+  "seconde": 465.5,
   "reseau": "iad",
-  "departement": "41",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 45,
+   "garde": 42,
    "vendu": 5,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 512.2,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 33,
-  "tronquee": true,
-  "etats": {
-   "garde": 33,
-   "vendu": 15,
-   "ecarte": 2,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 3
   },
   "exemples": {
-   "location": "Maison de village 4 pièces de 95 m² à Lachambre (57730)",
-   "hors_perimetre": "Maison 4 pièces de 91 m² à Marsilly (17137)"
+   "hors_perimetre": "Maison de ville 4 pièces de 165 m² à Flagy (77940)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 604.5,
+  "seconde": 624.7,
   "reseau": "iad",
-  "departement": "62",
-  "visitees": 21,
-  "gardes": 13,
+  "departement": "45",
+  "visitees": 20,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 13,
-   "vendu": 7,
+   "garde": 18,
+   "vendu": 1,
    "ecarte": 1,
    "illisible": 0
   },
@@ -143,101 +124,24 @@
    "location": 1
   },
   "exemples": {
-   "location": "Maison de ville 2 pièces de 32 m² à Boulogne-sur-Mer (62200)"
+   "location": "Maison 4 pièces de 75 m² à Tavers (45190)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 604.5,
+  "seconde": 624.7,
   "reseau": "safti",
   "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 604.9,
+  "seconde": 624.9,
   "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 605.7,
-  "reseau": "safti",
-  "n": 28853,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 606.5,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 607.0,
-  "reseau": "safti",
-  "connues": 17763,
-  "ecartees": 2646
- },
- {
-  "etape": "departement",
-  "seconde": 894.3,
-  "reseau": "safti",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 44,
-  "tronquee": true,
-  "etats": {
-   "garde": 44,
-   "vendu": 0,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5,
-   "ni_surface_ni_prix_credible": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à DESERTINES de 75m²",
-   "ni_surface_ni_prix_credible": "Maison à vendre à COURCITE de 60m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1176.4,
-  "reseau": "safti",
-  "departement": "62",
-  "visitees": 50,
-  "gardes": 49,
-  "tronquee": true,
-  "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 1
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1202.7,
-  "reseau": "safti",
-  "departement": "70",
-  "visitees": 4,
-  "gardes": 4,
-  "tronquee": true,
-  "etats": {
-   "garde": 4,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
+  "n": 0
  },
  {
   "etape": "fin",
-  "seconde": 1202.7,
-  "gardes": 188
+  "seconde": 624.9,
+  "gardes": 60
  }
 ]
