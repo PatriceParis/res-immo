@@ -2,35 +2,72 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "VAI LPI",
-   "secondes": 34,
-   "pages": 6,
-   "gardes": 3,
+   "agence": "Angélot Immo",
+   "secondes": 11,
+   "pages": 2,
+   "gardes": 1,
    "vendus": 0,
-   "ecartes": 3,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 50,
-   "sitemap_dates": 14,
-   "sitemap": "ok 14",
-   "deja_ecartees": 8,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "deja_ecartees": 1,
    "motifs": {
-    "prix_trop_haut": 3
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.lorrainepierresimmobilier.fr/vente/1-nancy/maison/t9/286-casa-felice/",
-     "titre": "// CASA FELICE //"
+     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
+     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
     }
    }
   },
   {
-   "agence": "VIP Immobilier",
-   "secondes": 69,
+   "agence": "Année Hoinville",
+   "secondes": 237,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 45,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 95,
+   "sitemap": "ok 85",
+   "deja_ecartees": 14,
+   "illisible_exemple": {
+    "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
+    "cause": "aucune annonce lue",
+    "titre": "",
+    "octets": 213
+   }
+  },
+  {
+   "agence": "Antony Vesque Immobilier",
+   "secondes": 74,
    "pages": 8,
    "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 60,
+   "sitemap": "ok 69",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Arsenal Immobilier",
+   "secondes": 57,
+   "pages": 4,
+   "gardes": 4,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
@@ -38,417 +75,26 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 94,
-   "sitemap_dates": 215,
-   "sitemap": "ok 215",
-   "deja_ecartees": 64
+   "sitemap": "ok 65",
+   "deja_ecartees": 61
   },
   {
-   "agence": "VIP Immobilier",
-   "secondes": 96,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 77,
-   "sitemap": "ok 115",
-   "deja_ecartees": 15
-  },
-  {
-   "agence": "Vacherand Immobilier - Vauban / Nationale",
-   "secondes": 41,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 213,
-   "sitemap": "ok 226",
-   "deja_ecartees": 16,
-   "motifs": {
-    "titre_hors_cible:appartement": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.vacherand.fr/immobilier/vente-appartement-bailleul/ref-VA14849-VACHERAND",
-     "titre": "Vente Appartement à vendre Bailleul - Annonce immobilière VA14849-VACHERAND"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.vacherand.fr/immobilier/vente-maison-merville/ref-VM7142-VACHERAND",
-     "titre": "Vente Maison à vendre Merville - Annonce immobilière VM7142-VACHERAND"
-    }
-   }
-  },
-  {
-   "agence": "Valoire Habîtat",
-   "secondes": 77,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 64,
-   "sitemap": "ok 64",
-   "deja_ecartees": 22
-  },
-  {
-   "agence": "Versus Immobilier",
-   "secondes": 6,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 55,
-   "sitemap_dates": 53,
-   "sitemap": "ok 53",
-   "deja_ecartees": 51,
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.versus-immobilier.com/vente/307-vandoeuvre-les-nancy/maison/14028-maison-renovee-avec-gout",
-     "titre": "Maison rénovée avec goût"
-    }
-   }
-  },
-  {
-   "agence": "Villers St Paul Immobilier",
-   "secondes": 97,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Vivest",
-   "secondes": 13,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
-   "illisible_exemple": {
-    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
-    "cause": "aucune annonce lue",
-    "titre": "Nos programmes en vente à venir - Vivest",
-    "octets": 639055
-   }
-  },
-  {
-   "agence": "action immo",
-   "secondes": 9,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
-  },
-  {
-   "agence": "agence 147",
-   "secondes": 46,
-   "pages": 9,
+   "agence": "ArthurImmo.com Agence Saint-Hubert",
+   "secondes": 54,
+   "pages": 6,
    "gardes": 6,
    "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 209,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 38,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agence147.fr/vente/1-nancy/duplex/1780-t4-duplex-rue-jeanne-d-arc",
-     "titre": "T4 - Duplex rue Jeanne d"
-    }
-   }
-  },
-  {
-   "agence": "ilm Immobilier",
-   "secondes": 8,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "deja_ecartees": 21,
-   "illisible_exemple": {
-    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
-    "octets": 66859
-   }
-  },
-  {
-   "agence": ".la petite agence",
-   "secondes": 42,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 57,
-   "sitemap": "ok 57",
-   "deja_ecartees": 20,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-bourgeoise-du-xixe/caen",
-     "titre": "Maison bourgeoise du XIXe"
-    }
-   }
-  },
-  {
-   "agence": "A Et B Conseil Immobilier",
-   "secondes": 41,
-   "pages": 19,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 19,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 25,
-   "sitemap_dates": 203,
-   "sitemap": "ok 203",
-   "deja_ecartees": 184,
-   "motifs": {
-    "prix_trop_haut": 19
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.aandbimmobilier.com/vente/10-aube/332-vendeuvre-sur-barse/1-maison/t8/434-maison-d-architecte-a-trente-minutes-de-troyes-prestige/",
-     "titre": "Maison d"
-    }
-   }
-  },
-  {
-   "agence": "A Tri Home",
-   "secondes": 63,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 2
+   "adresses_ecartees": 19,
+   "sitemap_dates": 11,
+   "sitemap": "ok 11"
   },
   {
-   "agence": "ACBI",
-   "secondes": 61,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 117,
-   "sitemap_dates": 700,
-   "sitemap": "ok 700",
-   "deja_ecartees": 11,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agencecbi.com/vente/1-vendome/duplex/t3/3177-coup-de-coeur-en-hypercentre-duplex-d-exception-en-residence-de-prestige-avec-terrasse-et-jardin-plein-sud-prestige/",
-     "titre": "Coup de cœur en hypercentre – Duplex d"
-    }
-   }
-  },
-  {
-   "agence": "ACI Agence Capital Immobilier",
-   "secondes": 161,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 67,
-   "sitemap": "ok 67",
-   "deja_ecartees": 13,
-   "illisible_exemple": {
-    "url": "https://agence-aci.com/type-propriete/maison-villa/",
-    "cause": "titre = nom du site",
-    "titre": "Archives des Maison/Villa - ACI AGENCE CAPITAL IMMOBILIER",
-    "octets": 481693
-   }
-  },
-  {
-   "agence": "Agence Saint-Joseph",
-   "secondes": 102,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 40,
-   "sitemap": "ok 137",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Agence de l'étoile",
-   "secondes": 97,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 51,
-   "sitemap": "ok 46",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Agence de la bourse",
-   "secondes": 91,
-   "pages": 19,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 10,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 22,
-   "sitemap_dates": 64,
-   "sitemap": "ok 64",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://agencedelabourse.com/property/bar-brasserie-en-centre-commercial-a-vendre/",
-    "cause": "aucune annonce lue",
-    "titre": "BAR BRASSERIE EN CENTRE COMMERCIAL A VENDRE - Agence de la bourse | Agence immobilière Le Havre",
-    "octets": 254040
-   },
-   "motifs": {
-    "ni_surface_ni_prix_credible": 10
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://agencedelabourse.com/property/bar-tabac-loto-francaise-des-jeux-a-vendre-2/",
-     "titre": "BAR TABAC LOTO FRANCAISE DES JEUX A VENDRE"
-    }
-   }
-  },
-  {
-   "agence": "Agence des Lacs",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Agence immobilière des Lacs à Brienne le Chateau."
-  },
-  {
-   "agence": "Agence du Terroir",
-   "secondes": 4,
-   "pages": 1,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "absent",
-   "sitemap_statut": 200,
-   "sitemap_dates": 124,
-   "sitemap": "ok 124",
-   "deja_ecartees": 123,
-   "illisible_exemple": {
-    "url": "https://www.agenceduterroir.com/maison-a-vendre-perche-sargyo-sur-braye-1536.html",
-    "cause": "aucune annonce lue",
-    "titre": "Agence du Terroir - Maison à vendre Sargé sur Braye",
-    "octets": 29845
-   }
-  },
-  {
-   "agence": "Alain Guyony Immobilier",
-   "secondes": 109,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap": "ok 110"
-  },
-  {
-   "agence": "Alexandra Cablat",
+   "agence": "Arthurimmo",
    "secondes": 72,
    "pages": 8,
    "gardes": 8,
@@ -458,14 +104,179 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 134,
-   "sitemap_dates": 254,
-   "sitemap": "ok 254",
+   "adresses_ecartees": 7,
+   "sitemap_dates": 44,
+   "sitemap": "ok 44"
+  },
+  {
+   "agence": "Arthurimmo.com",
+   "secondes": 63,
+   "pages": 7,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 14,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://metz.arthurimmo.com/annonces/achat/maison/lorry-les-metz-57050/33122031.htm",
+     "titre": "Acheter maison de 10 pièces 245 m² 893 000 € à Lorry-Lès-Metz (57050) : une annonce Arthurimmo.com"
+    }
+   }
+  },
+  {
+   "agence": "Arturimmo.com",
+   "secondes": 27,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 36,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3"
+  },
+  {
+   "agence": "Cap Immobilier",
+   "secondes": 74,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 19,
+   "sitemap": "ok 23",
    "deja_ecartees": 2
   },
   {
-   "agence": "Alliance Immobilier",
-   "secondes": 80,
+   "agence": "Carrara Immobilier",
+   "secondes": 60,
+   "pages": 10,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 20,
+   "sitemap_dates": 12,
+   "sitemap": "ok 12",
+   "deja_ecartees": 2,
+   "motifs": {
+    "prix_trop_haut": 3
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.carrara.immo/vente/40-vaux/propriete/10067-vaux-maison-d-exeption",
+     "titre": "Vaux - MAISON D’EXEPTION"
+    }
+   }
+  },
+  {
+   "agence": "Casa",
+   "secondes": 100,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap_dates": 403,
+   "sitemap": "ok 403",
+   "deja_ecartees": 4,
+   "illisible_exemple": {
+    "url": "https://www.immo-casa.fr/louer-un-bien/maison-de-ville-a-louvigny-sur-3-niveau/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison de ville à LOUVIGNY sur 3 niveau - Casa Agence immobilière",
+    "octets": 244159
+   }
+  },
+  {
+   "agence": "Causeret Immobilier",
+   "secondes": 42,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 97,
+   "sitemap": "ok 97",
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://causeretimmobilier.fr/maison/la-maison-iris/",
+     "titre": "La maison Iris - © CAUSERET IMMOBILIER"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 62,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 64,
+   "sitemap": "ok 65",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 66,
+   "pages": 7,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 58,
+   "sitemap": "ok 58",
+   "deja_ecartees": 19,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/15100445747/",
+     "titre": "Appartement F3 à vendre - 3 pièces - 55.52 m2 - CREPY EN VALOIS - 60 - PICARDIE - Century 21 Vandôme Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 56,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -474,47 +285,200 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 167,
-   "sitemap_dates": 142,
-   "sitemap": "ok 142",
-   "deja_ecartees": 48
+   "adresses_ecartees": 6,
+   "sitemap_dates": 63,
+   "sitemap": "ok 63",
+   "deja_ecartees": 29
   },
   {
-   "agence": "Amrimmo",
-   "secondes": 235,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 45,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 48,
-   "sitemap": "ok 127",
-   "deja_ecartees": 81,
-   "illisible_exemple": {
-    "url": "https://www.amrimmo.com/vente/maison-mitoyenne-1-cote",
-    "cause": "aucune annonce lue",
-    "titre": "",
-    "octets": 196
-   }
-  },
-  {
-   "agence": "Angledroit.immo",
-   "secondes": 19,
-   "pages": 2,
-   "gardes": 2,
+   "agence": "Century 21",
+   "secondes": 56,
+   "pages": 6,
+   "gardes": 6,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
-   "fin": "budget global épuisé",
+   "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap_dates": 16,
-   "sitemap": "ok 16",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 36,
+   "sitemap": "ok 37",
+   "deja_ecartees": 31
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 65,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 62,
+   "sitemap": "ok 62",
+   "deja_ecartees": 15,
+   "motifs": {
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:terrain": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/15467551671/",
+     "titre": "Appartement F3 à vendre - 3 pièces - 78.68 m2 - BEAUNE - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
+    },
+    "titre_hors_cible:terrain": {
+     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/17092456747/",
+     "titre": "terrain à vendre - 1000.0 m2 - MERCEUIL - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 73,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 321,
+   "sitemap": "ok 322",
+   "deja_ecartees": 114
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 61,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 64,
+   "sitemap": "ok 64",
+   "deja_ecartees": 20
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 62,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 94,
+   "sitemap": "ok 94",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 59,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 219,
+   "sitemap": "ok 220",
+   "deja_ecartees": 83,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/12772233541/",
+     "titre": "maison à vendre - 8 pièces - 246.55 m2 - NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 69,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 80,
+   "sitemap": "ok 81",
+   "deja_ecartees": 42
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 68,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 28,
+   "sitemap": "ok 28",
    "deja_ecartees": 3
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 56,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 20,
+   "sitemap": "ok 20",
+   "deja_ecartees": 11,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/13080497186/",
+     "titre": "maison à vendre - 5 pièces - 133.0 m2 - DEAUVILLE - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
+    }
+   }
+  },
+  {
+   "agence": "Century 21",
+   "secondes": 56,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 9,
+   "sitemap_dates": 40,
+   "sitemap": "ok 41",
+   "deja_ecartees": 6
   }
  ]
 }
