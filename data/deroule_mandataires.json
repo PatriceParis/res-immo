@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 22.2,
+  "seconde": 4.6,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 22.2,
+  "seconde": 4.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,125 +23,212 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 22.2,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 24.2,
+  "seconde": 6.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 25.9,
+  "seconde": 8.1,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.9,
+  "seconde": 8.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.3,
+  "seconde": 8.6,
   "reseau": "capifrance",
-  "connues": 17950,
-  "ecartees": 2653
+  "connues": 17946,
+  "ecartees": 2663
  },
  {
   "etape": "reseau_debut",
-  "seconde": 26.3,
+  "seconde": 8.6,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 26.5,
+  "seconde": 9.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 38.8,
+  "seconde": 24.6,
   "reseau": "iad",
   "n": 93836,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 40.3,
+  "seconde": 26.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 40.7,
+  "seconde": 27.2,
   "reseau": "iad",
-  "connues": 17950,
-  "ecartees": 2653
+  "connues": 17946,
+  "ecartees": 2663
  },
  {
   "etape": "departement",
-  "seconde": 465.5,
+  "seconde": 312.2,
   "reseau": "iad",
-  "departement": "70",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 42,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 42,
-   "vendu": 5,
-   "ecarte": 3,
+   "garde": 38,
+   "vendu": 7,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
+   "prix_trop_haut": 2,
    "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 4 pièces de 165 m² à Flagy (77940)"
+   "prix_trop_haut": "Maison 10 pièces de 231 m² à Auderville (50440)",
+   "hors_perimetre": "Maison 4 pièces de 140 m² à Chanteloup (35150)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 624.7,
+  "seconde": 598.0,
   "reseau": "iad",
-  "departement": "45",
-  "visitees": 20,
-  "gardes": 18,
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 18,
-   "vendu": 1,
+   "garde": 36,
+   "vendu": 12,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison de ville 6 pièces de 118 m² à Maubeuge (59600)",
+   "prix_trop_haut": "Ferme 10 pièces de 389 m² à La Gorgue (59253)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 607.4,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 4,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
+   "vendu": 2,
    "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "location": 1
+   "hors_perimetre": 1
   },
   "exemples": {
-   "location": "Maison 4 pièces de 75 m² à Tavers (45190)"
+   "hors_perimetre": "Maison de campagne 3 pièces de 70 m² à Montjay (05150)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 624.7,
+  "seconde": 607.4,
   "reseau": "safti",
   "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 624.9,
+  "seconde": 608.1,
   "reseau": "safti",
-  "n": 0
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 610.1,
+  "reseau": "safti",
+  "n": 28787,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 611.0,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 611.5,
+  "reseau": "safti",
+  "connues": 17975,
+  "ecartees": 2692
+ },
+ {
+  "etape": "departement",
+  "seconde": 942.6,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 47,
+  "tronquee": true,
+  "etats": {
+   "garde": 47,
+   "vendu": 1,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à LE BREUIL-EN-AUGE de 300m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1208.3,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 38,
+  "gardes": 37,
+  "tronquee": true,
+  "etats": {
+   "garde": 37,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à SAINT-HILAIRE-DE-COURT de 670m²"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 624.9,
-  "gardes": 60
+  "seconde": 1208.3,
+  "gardes": 159
  }
 ]
