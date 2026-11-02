@@ -50,6 +50,8 @@
   "densite_hab_km2": 108.5,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 106.5,
+   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -59,9 +61,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 106.5,
-   "nucleaire_nom": "Flamanville"
+   "source": "georisques"
   },
   "photos": [
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-171801-1024x576.jpg",
@@ -74,7 +74,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-171801.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -228,7 +228,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/08/2026-130252.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -317,7 +317,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-160739.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -516,10 +516,12 @@
   "plusieurs_biens": false,
   "lat": 49.225399,
   "lon": -0.490016,
-  "altitude": 49.0,
+  "altitude": 47.0,
   "densite_hab_km2": 108.5,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 106.5,
+   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -529,9 +531,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 106.5,
-   "nucleaire_nom": "Flamanville"
+   "source": "georisques"
   },
   "photos": [
    "https://a-tri-home.fr/wp-content/uploads/2026/10/salle-de-bain-1024x768.jpg",
@@ -554,7 +554,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-173448.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -636,7 +636,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/07/2026-112939.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -688,7 +688,7 @@
   "plusieurs_biens": false,
   "lat": 49.225399,
   "lon": -0.490016,
-  "altitude": 47.0,
+  "altitude": 49.0,
   "densite_hab_km2": 108.5,
   "dpe": "D",
   "risques": {
@@ -716,7 +716,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/08/2026-171246.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1003,7 +1003,7 @@
   "plusieurs_biens": false,
   "lat": 49.225399,
   "lon": -0.490016,
-  "altitude": 49.0,
+  "altitude": 47.0,
   "densite_hab_km2": 108.5,
   "dpe": "D",
   "risques": {
@@ -1032,7 +1032,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-142437.jpg"
   ],
   "vue_le": "2026-10-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1168,7 +1168,7 @@
   "plusieurs_biens": false,
   "lat": 49.225399,
   "lon": -0.490016,
-  "altitude": 47.0,
+  "altitude": 49.0,
   "densite_hab_km2": 108.5,
   "dpe": "D",
   "risques": {
@@ -1186,7 +1186,7 @@
    "https://a-tri-home.fr/wp-content/uploads/2026/10/2026-084722.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -10269,7 +10269,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/d12dedfeda27fa287e169188e91ab27e/photo_9bdc917af8d3f2fe93ad6ddfbffc320d.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -10390,7 +10390,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/1fb37e34f955d48d535d325336a23f48/photo_34a6817242b0b5ba5629595141d80573.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -10502,7 +10502,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/f32628ae1874db6b2bcaf33887257201/photo_d238f067ddf1f731bbb1cb8b5d200c69.jpg"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -11120,7 +11120,7 @@
   "plusieurs_biens": false,
   "lat": 47.795789,
   "lon": 1.062738,
-  "altitude": 81.0,
+  "altitude": 79.0,
   "densite_hab_km2": 660.3,
   "dpe": "G",
   "risques": {
@@ -11167,7 +11167,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/9e0d979f45b4690ee768beda6b856fbf/photo_0c7ff0071e1c8ccf79eab953000e89a5.jpg"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -12894,9 +12894,11 @@
   "lat": 47.795789,
   "lon": 1.062738,
   "altitude": 81.0,
-  "densite_hab_km2": 660.3,
+  "densite_hab_km2": null,
   "dpe": "G",
   "risques": {
+   "nucleaire_km": 39.4,
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -12906,9 +12908,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 39.4,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "source": "georisques"
   },
   "photos": [
    "https://cbiimmobilier.staticlbi.com/1200xauto/images/biens/1/f5aa251443d8007c434d5ad03dbb5f22/photo_c5f4253df69fb2cc91be9ceb02b142cb.jpg",
@@ -12953,7 +12953,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/f5aa251443d8007c434d5ad03dbb5f22/photo_9ecdd1139894c278f218f1197f44f986.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -13080,7 +13080,7 @@
    "https://cbiimmobilier.staticlbi.com/580xauto/images/biens/1/f415b86a42e88708d16cbc5f45bf7068/photo_db933a99ce021444ec6f45794c9c56e6.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -17617,6 +17617,8 @@
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 99.8,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -17626,9 +17628,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 99.8,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_aa859a95a483279a920a4073721caa9f-796719-0.jpg",
@@ -17678,16 +17678,16 @@
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_fde17ba10532acb812c457a745643a57-795850-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_f850c9b001488be85aa377b60adada57-795850-0.jpg",
    "https://demo32-eng.houzez.co/wp-content/uploads/2023/01/Group-18-Copy.png",
-   "https://agence-aci.com/wp-content/uploads/2026/09/photo_997c1ecb2150f73e7a18df7bd5769d8c-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_71c3f458bf536bcb071e97b76278b7fb-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_94d2549ba91a70d9465f10871f3c0594-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_0a9ee7c0b04020176aef00437d361288-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_38089d09d839e2e28298793e02f1fcff-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/09/photo_55c32901a35f11561fd6bd01a6dad2d0-796719-0.jpg",
+   "https://agence-aci.com/wp-content/uploads/2026/09/photo_997c1ecb2150f73e7a18df7bd5769d8c-796719-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -17981,6 +17981,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_c2bbcfde55293f3a6ed42108b9ac81e3-797089-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_45f7bd8fb1170005cea571ad4ca18e24-797089-0.jpg",
    "https://demo32-eng.houzez.co/wp-content/uploads/2023/01/Group-18-Copy.png",
+   "https://agence-aci.com/wp-content/uploads/2026/06/photo_082ac946a31130e340eca94db1b355d7-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_d4007f740ec09fc300181852e4c50259-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_76d0bdf6a0080e471d517ec41fdebf71-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_20c453046794487b7dcbd42fffbc073c-783903-0.jpg",
@@ -17988,11 +17989,10 @@
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_03df4b6706eabd70dd0568124c69c32a-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_62b4f11adb714c110573c39dff69fca1-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/06/photo_078b5ffe6df355a8e3eb222a5ef7d2ca-783903-0.jpg",
-   "https://agence-aci.com/wp-content/uploads/2026/06/photo_082ac946a31130e340eca94db1b355d7-783903-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -18475,6 +18475,7 @@
    "https://agence-aci.com/wp-content/uploads/2025/10/photo_1983116d53e98818b0be2001196f8f06-777291-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2025/10/photo_8e866179f22b822ca12739d0bb36bd55-777291-0.jpg",
    "https://demo32-eng.houzez.co/wp-content/uploads/2023/01/Group-18-Copy.png",
+   "https://agence-aci.com/wp-content/uploads/2026/10/photo_4a45ae8a95b78d8c184e72ccddb17b02-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_47476adcba14810b3d026f607c864242-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_225084627e803189c34406447e085c72-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_a7eb44785cf57b190a91c5fba837553e-797122-0.jpg",
@@ -18482,11 +18483,10 @@
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_05a2eae5eef3d63018b5b26e08058c9d-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_9f9c89d86feefda4e03ac9981a1db89d-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_087c6e3680c6273073fb8e25acffb5f2-797122-0.jpg",
-   "https://agence-aci.com/wp-content/uploads/2026/10/photo_4a45ae8a95b78d8c184e72ccddb17b02-797122-0.jpg",
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -18799,7 +18799,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-29",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -19031,7 +19031,7 @@
   "plusieurs_biens": false,
   "lat": 49.1581,
   "lon": -0.392534,
-  "altitude": 11.0,
+  "altitude": 15.0,
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
@@ -19092,7 +19092,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -19738,10 +19738,12 @@
   "plusieurs_biens": false,
   "lat": 49.181561,
   "lon": -0.400232,
-  "altitude": 41.0,
+  "altitude": 40.0,
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 106.0,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -19751,9 +19753,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 106.0,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://agence-aci.com/wp-content/uploads/2026/10/photo_bd66410316a028745648e54f68e236d5-797004-0.jpg",
@@ -19823,7 +19823,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -19938,7 +19938,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -20027,7 +20027,7 @@
    "https://agence-aci.com/wp-content/uploads/2026/04/Fichier-13@1500x.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -21479,7 +21479,7 @@
   "plusieurs_biens": false,
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 216.0,
+  "altitude": 221.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -21566,7 +21566,7 @@
    "https://www.agence147.fr/vente/30-lay-st-christophe/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -21618,7 +21618,7 @@
   "plusieurs_biens": false,
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 221.0,
+  "altitude": 216.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -21706,7 +21706,7 @@
    "https://www.agence147.fr/vente/4-bouxieres-aux-dames/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 345000,
   "prix_baisse_le": "2026-10-12"
@@ -21858,7 +21858,7 @@
    "https://www.agence147.fr/vente/1-nancy/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 590000,
   "prix_baisse_le": "2026-10-12"
@@ -21997,7 +21997,7 @@
    "https://www.agence147.fr/vente/1-nancy/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -22049,7 +22049,7 @@
   "plusieurs_biens": false,
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 216.0,
+  "altitude": 221.0,
   "densite_hab_km2": 6938.4,
   "dpe": null,
   "risques": {
@@ -22144,7 +22144,7 @@
    "https://www.agence147.fr/vente/1-nancy/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -22311,7 +22311,7 @@
    "https://www.agence147.fr/vente/36-houdemont/maison/images/partners/amanda.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -28496,7 +28496,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -28548,10 +28548,12 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 21.0,
+  "altitude": 16.0,
   "densite_hab_km2": 507.8,
   "dpe": "E",
   "risques": {
+   "nucleaire_km": 63.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -28561,9 +28563,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 63.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company54876qit/2/VM283/maison-ancienne-4-pieces-cucq-62780-1780413737-VM283_6_original.jpg",
@@ -28576,7 +28576,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -28628,7 +28628,7 @@
   "plusieurs_biens": false,
   "lat": 50.454686,
   "lon": 1.603765,
-  "altitude": 15.0,
+  "altitude": 19.0,
   "densite_hab_km2": 164.7,
   "dpe": "F",
   "risques": {
@@ -28646,7 +28646,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -28699,7 +28699,7 @@
   "lat": 50.490321,
   "lon": 1.609766,
   "altitude": 21.0,
-  "densite_hab_km2": 507.8,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 63.8,
@@ -28726,7 +28726,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -28778,10 +28778,12 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
+  "altitude": 21.0,
   "densite_hab_km2": 507.8,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 63.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -28791,9 +28793,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 63.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company54876qit/2/VM286/maison-individuelle-4-pieces-cucq-62780-1780413737-VM286_7_original.jpg",
@@ -28806,7 +28806,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 450000,
   "prix_baisse_le": "2026-10-07"
@@ -28933,7 +28933,7 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
+  "altitude": 21.0,
   "densite_hab_km2": 507.8,
   "dpe": "E",
   "risques": {
@@ -28951,7 +28951,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29003,7 +29003,7 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 21.0,
+  "altitude": 16.0,
   "densite_hab_km2": 507.8,
   "dpe": "D",
   "risques": {
@@ -29021,7 +29021,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29101,7 +29101,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29177,7 +29177,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/56358833m-1024x768.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29304,7 +29304,7 @@
   "lat": 49.507345,
   "lon": 0.129995,
   "altitude": 59.0,
-  "densite_hab_km2": 3140.3,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 53.3,
@@ -29325,7 +29325,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/06/IMG_1527-1024x768.jpeg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29465,7 +29465,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/08/IMG_5435-1024x768.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29545,7 +29545,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/03/IMG_5770-1024x768.jpeg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29609,7 +29609,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/IMG_0097-1024x768.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29683,7 +29683,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/pexels-weekendplayer-735869-1024x683.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29735,7 +29735,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 58.0,
+  "altitude": 59.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -29758,7 +29758,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/04/PASSERELLE.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29810,7 +29810,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 58.0,
+  "altitude": 59.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -29822,7 +29822,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/05/pexels-marina-m-3820766-5663303-1024x744.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -34615,7 +34615,7 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM2158/maison-individuelle-7-pieces-yvetot-76190-1765282042-VM2158_5_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -34629,7 +34629,7 @@
   "type_bien": "maison",
   "prix": 317000,
   "surface_m2": 400.0,
-  "terrain_m2": 970.0,
+  "terrain_m2": null,
   "pieces": 5,
   "commune": "Yerville",
   "code_postal": "76760",
@@ -34690,20 +34690,10 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM2438/maison-individuelle-5-pieces-yerville-76760-1765283081-VM2438_2_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2438/maison-individuelle-5-pieces-yerville-76760-1765283081-VM2438_3_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2438/maison-individuelle-5-pieces-yerville-76760-1765283082-VM2438_4_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM2438/maison-individuelle-5-pieces-yerville-76760-1765283082-VM2438_5_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6939/maison-individuelle-4-pieces-yerville-76760-1788856065-VM6939_3_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6887/maison-individuelle-7-pieces-yerville-76760-1782813178-VM6887_1_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6752/maison-bourgeoise-6-pieces-yerville-76760-1774948447-VM6752_18_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6987/maison-individuelle-5-pieces-auzouville-l-esneval-76760-1792762653-VM6987_1_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6985/maison-maison-de-campagne-7-pieces-yvetot-76190-1792487310-VM6985_2_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/4/VM6637/maison-ancienne-5-pieces-doudeville-76560-1785863493-VM6637_22_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6984/maison-ancienne-7-pieces-yvetot-76190-1792428173-VM6984_22_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6891/maison-traditionnelle-6-pieces-limesy-76570-1783413798-VM6891_3_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6979/maison-maison-de-campagne-4-pieces-yvetot-76190-1791906516-VM6979_16_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/4/VM6973/maison-bourgeoise-6-pieces-doudeville-76560-1791821762-VM6973_1_original.jpg"
+   "https://img.netty.immo/productcw/company53808dau/2/VM2438/maison-individuelle-5-pieces-yerville-76760-1765283082-VM2438_5_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -34858,7 +34848,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM6637/maison-ancienne-5-pieces-doudeville-76560-1785863493-VM6637_22_original.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -34910,7 +34900,7 @@
   "plusieurs_biens": false,
   "lat": 49.822957,
   "lon": 0.919682,
-  "altitude": 88.0,
+  "altitude": 82.0,
   "densite_hab_km2": 421.2,
   "dpe": null,
   "risques": {
@@ -34936,7 +34926,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM5810/maison-traditionnelle-6-pieces-luneray-76810-1767350126-VM5810_5_original.jpg"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -34970,7 +34960,7 @@
    "verger_potager": false,
    "serre": false,
    "grange_dependance": true,
-   "atelier": true,
+   "atelier": false,
    "troglodyte": false,
    "source": false,
    "prairie": false,
@@ -34980,7 +34970,7 @@
    "pierre": false,
    "pompe_chaleur": false,
    "assainissement": false,
-   "isolement": true,
+   "isolement": false,
    "autonomie": false
   },
   "etat_declare": "inconnu",
@@ -35012,6 +35002,7 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM2458/maison-traditionnelle-6-pieces-yvetot-76190-1765283168-VM2458_2_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2458/maison-traditionnelle-6-pieces-yvetot-76190-1765283168-VM2458_3_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2458/maison-traditionnelle-6-pieces-yvetot-76190-1765283168-VM2458_4_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6923/maison-individuelle-6-pieces-yvetot-76190-1786984192-VM6923_1_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM6949/maison-individuelle-5-pieces-yvetot-76190-1789564902-VM6949_6_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM6904/maison-individuelle-6-pieces-yvetot-76190-1785154625-VM6904_12_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM6985/maison-maison-de-campagne-7-pieces-yvetot-76190-1792487310-VM6985_2_original.jpg",
@@ -35020,11 +35011,10 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM6980/maison-individuelle-4-pieces-yvetot-76190-1792077975-VM6980_14_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM6979/maison-maison-de-campagne-4-pieces-yvetot-76190-1791906516-VM6979_16_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM6975/maison-contemporaine-4-pieces-yvetot-76190-1791980906-VM6975_12_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6762/maison-traditionnelle-5-pieces-yvetot-76190-1792420782-VM6762_13_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM6893/maison-5-pieces-yvetot-76190-1783598550-VM6893_1_original.jpg"
+   "https://img.netty.immo/productcw/company53808dau/2/VM6762/maison-traditionnelle-5-pieces-yvetot-76190-1792420782-VM6762_13_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -35037,8 +35027,8 @@
   "description": null,
   "type_bien": "maison",
   "prix": 219000,
-  "surface_m2": 91.0,
-  "terrain_m2": null,
+  "surface_m2": 115.0,
+  "terrain_m2": 1500.0,
   "pieces": 4,
   "commune": "Yvetot",
   "code_postal": "76190",
@@ -35058,7 +35048,7 @@
    "verger_potager": false,
    "serre": false,
    "grange_dependance": false,
-   "atelier": false,
+   "atelier": true,
    "troglodyte": false,
    "source": false,
    "prairie": false,
@@ -35068,7 +35058,7 @@
    "pierre": false,
    "pompe_chaleur": false,
    "assainissement": false,
-   "isolement": false,
+   "isolement": true,
    "autonomie": false
   },
   "etat_declare": "sans_travaux",
@@ -35099,10 +35089,20 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM2408/maison-mitoyenne-2-cotes-4-pieces-yvetot-76190-1765282992-VM2408_2_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2408/maison-mitoyenne-2-cotes-4-pieces-yvetot-76190-1765282993-VM2408_3_original.jpg",
    "https://img.netty.immo/productcw/company53808dau/2/VM2408/maison-mitoyenne-2-cotes-4-pieces-yvetot-76190-1765282993-VM2408_4_original.jpg",
-   "https://img.netty.immo/productcw/company53808dau/2/VM2408/maison-mitoyenne-2-cotes-4-pieces-yvetot-76190-1765282994-VM2408_5_original.jpg"
+   "https://img.netty.immo/productcw/company53808dau/2/VM2408/maison-mitoyenne-2-cotes-4-pieces-yvetot-76190-1765282994-VM2408_5_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6949/maison-individuelle-5-pieces-yvetot-76190-1789564902-VM6949_6_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6904/maison-individuelle-6-pieces-yvetot-76190-1785154625-VM6904_12_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6847/maison-individuelle-4-pieces-yvetot-76190-1780564631-VM6847_1_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6980/maison-individuelle-4-pieces-yvetot-76190-1792077975-VM6980_14_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6968/maison-individuelle-4-pieces-yvetot-76190-1791295947-VM6968_12_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6956/maison-mitoyenne-1-cote-3-pieces-yvetot-76190-1790689691-VM6956_10_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6893/maison-5-pieces-yvetot-76190-1783598550-VM6893_1_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6963/maison-mitoyenne-1-cote-5-pieces-yvetot-76190-1790848255-VM6963_3_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/2/VM6961/maison-mitoyenne-1-cote-4-pieces-yvetot-76190-1790683348-VM6961_1_original.jpg",
+   "https://img.netty.immo/productcw/company53808dau/4/VM6770/maison-maison-de-campagne-4-pieces-yvetot-76190-1775805654-VM6770_25_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 225000,
   "prix_baisse_le": "2026-10-16"
@@ -35154,7 +35154,7 @@
   "plusieurs_biens": false,
   "lat": 49.725499,
   "lon": 0.784482,
-  "altitude": 140.0,
+  "altitude": 138.0,
   "densite_hab_km2": 166.5,
   "dpe": "D",
   "risques": {
@@ -35179,7 +35179,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM5958/maison-traditionnelle-4-pieces-doudeville-76560-1767350126-VM5958_4_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -35231,7 +35231,7 @@
   "plusieurs_biens": false,
   "lat": 49.725499,
   "lon": 0.784482,
-  "altitude": 140.0,
+  "altitude": 138.0,
   "densite_hab_km2": 166.5,
   "dpe": "F",
   "risques": {
@@ -35267,7 +35267,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM6839/maison-individuelle-5-pieces-doudeville-76560-1780583827-VM6839_16_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38364,8 +38364,8 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 24.0,
-  "densite_hab_km2": 482.7,
+  "altitude": 33.0,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 57.9,
@@ -38380,7 +38380,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM794/maison-ancienne-6-pieces-honfleur-14600-1765879512-VM794_5_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38516,7 +38516,7 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 24.0,
+  "altitude": 33.0,
   "densite_hab_km2": 482.7,
   "dpe": "D",
   "risques": {
@@ -38542,7 +38542,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1216/maison-contemporaine-7-pieces-honfleur-14600-1765880337-VM1216_5_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38620,7 +38620,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM756/maison-traditionnelle-4-pieces-villers-sur-mer-14640-1781703011-VM756_11_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38672,7 +38672,7 @@
   "plusieurs_biens": false,
   "lat": 49.273479,
   "lon": 0.452566,
-  "altitude": 165.0,
+  "altitude": 162.0,
   "densite_hab_km2": 60.8,
   "dpe": "D",
   "risques": {
@@ -38688,7 +38688,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM810/maison-bourgeoise-8-pieces-cormeilles-27260-1765879548-VM810_6_original.jpg"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38740,7 +38740,7 @@
   "plusieurs_biens": false,
   "lat": 49.291108,
   "lon": 0.188367,
-  "altitude": 16.0,
+  "altitude": 19.0,
   "densite_hab_km2": 391.8,
   "dpe": "C",
   "risques": {
@@ -38766,7 +38766,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1100/maison-ancienne-6-pieces-pont-l-eveque-14130-1780068916-VM1100_15_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38924,7 +38924,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1236/maison-ancienne-6-pieces-cormeilles-27260-1774623390-VM1236_10_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -39214,7 +39214,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM944/maison-ancienne-10-pieces-pont-l-eveque-14130-1765879793-VM944_7_original.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -39419,7 +39419,7 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 33.0,
+  "altitude": 24.0,
   "densite_hab_km2": 482.7,
   "dpe": "D",
   "risques": {
@@ -39435,7 +39435,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM888/maison-ancienne-8-pieces-honfleur-14600-1765879697-VM888_5_original.jpg"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -39705,7 +39705,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t5/1226-maison-mitoyenne-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -39853,7 +39853,7 @@
   "plusieurs_biens": false,
   "lat": 49.698329,
   "lon": 4.934086,
-  "altitude": 156.0,
+  "altitude": 157.0,
   "densite_hab_km2": 1024.1,
   "dpe": null,
   "risques": {
@@ -39907,7 +39907,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t5/1060-maison-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -40157,7 +40157,7 @@
   "plusieurs_biens": false,
   "lat": 49.698329,
   "lon": 4.934086,
-  "altitude": 156.0,
+  "altitude": 157.0,
   "densite_hab_km2": 1024.1,
   "dpe": null,
   "risques": {
@@ -40215,7 +40215,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t10/1266-maison-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -40480,7 +40480,7 @@
   "plusieurs_biens": false,
   "lat": 49.733319,
   "lon": 4.828226,
-  "altitude": 166.0,
+  "altitude": 165.0,
   "densite_hab_km2": 291.8,
   "dpe": null,
   "risques": {
@@ -40512,7 +40512,7 @@
    "https://www.cablat-immobilier.com/vente/270-lumes/maison/t5/1268-maison-lumes/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41027,7 +41027,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t7/1122-maison-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41079,7 +41079,7 @@
   "plusieurs_biens": false,
   "lat": 49.819058,
   "lon": 4.746653,
-  "altitude": 167.0,
+  "altitude": 160.0,
   "densite_hab_km2": 502.9,
   "dpe": null,
   "risques": {
@@ -41133,7 +41133,7 @@
    "https://www.cablat-immobilier.com/vente/461-gespunsart/maison-de-village/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41441,7 +41441,7 @@
    "https://www.cablat-immobilier.com/vente/25-bogny-sur-meuse/maison/t3/1241-maison-bongy-sur-meuse/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41803,7 +41803,7 @@
   "lat": 49.698329,
   "lon": 4.934086,
   "altitude": 156.0,
-  "densite_hab_km2": 1024.1,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 44.8,
@@ -41843,7 +41843,7 @@
    "https://www.cablat-immobilier.com/vente/9-balan/maison/t5/1277-maison-balan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44207,7 +44207,7 @@
    "https://www.allianceimmobilier.com/vente/2-audincourt/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44260,7 +44260,7 @@
   "lat": 47.508197,
   "lon": 6.794689,
   "altitude": 318.0,
-  "densite_hab_km2": 1643.9,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 216.4,
@@ -44327,7 +44327,7 @@
    "https://www.allianceimmobilier.com/vente/1-montbeliard/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44752,7 +44752,7 @@
    "https://www.allianceimmobilier.com/vente/531-lebetain/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -45982,7 +45982,7 @@
    "https://www.allianceimmobilier.com/vente/1-montbeliard/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -46440,7 +46440,7 @@
    "https://www.allianceimmobilier.com/vente/28-mathay/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-09-26",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -46822,7 +46822,7 @@
   "lat": 47.523062,
   "lon": 6.902361,
   "altitude": 332.0,
-  "densite_hab_km2": 615.9,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 216.4,
@@ -46867,7 +46867,7 @@
    "https://www.allianceimmobilier.com/vente/42-fesches-le-chatel/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -49774,7 +49774,7 @@
   "plusieurs_biens": false,
   "lat": 47.507701,
   "lon": 6.998231,
-  "altitude": 365.0,
+  "altitude": 364.0,
   "densite_hab_km2": 604.8,
   "dpe": null,
   "risques": {
@@ -49881,7 +49881,7 @@
    "https://www.allianceimmobilier.com/vente/183-croix/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 149000,
   "prix_baisse_le": "2026-10-31"
@@ -50071,7 +50071,7 @@
    "https://www.allianceimmobilier.com/vente/40-montbouton/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -51622,7 +51622,7 @@
    "https://angledroit.immo/wp-content/uploads/2020/05/angledroit-immo-1.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -52548,7 +52548,7 @@
    "https://b.tile.openstreetmap.org/14/8416/5580.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -186550,7 +186550,17 @@
   "dpe": "G",
   "risques": {
    "nucleaire_km": 53.3,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://fochimmobilierlehavre.staticlbi.com/wa/images/biens/1/ef499597b8f228c8179e9fad56ff5502/photo_3a6d33bdaac35670a299b341bf71d11a.jpg",
@@ -186814,7 +186824,17 @@
   "dpe": "E",
   "risques": {
    "nucleaire_km": 49.7,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://fochimmobilierlehavre.staticlbi.com/wa/images/biens/1/e36a814f9d5d949bfb123b38d3958c35/photo_a1e2410f530befac991e4aba1672c852.jpg",
@@ -645121,7 +645141,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/grande-maison-individuelle/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -645282,7 +645302,7 @@
    "https://www.lapetiteagencecaen.com/quality_auto/maison-mezidon.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -645344,25 +645364,11 @@
    "https://static.wixstatic.com/media/63cc49_1fef724e74384398a6b28c60a82e0f82~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_1fef724e74384398a6b28c60a82e0f82~mv2.jpg",
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_76212c417b9e4baeb328a085930c0cea~mv2.jpg",
    "https://static.wixstatic.com/media/63cc49_76212c417b9e4baeb328a085930c0cea~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_76212c417b9e4baeb328a085930c0cea~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_09dba825ee42495280d7c87cc516e844~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_09dba825ee42495280d7c87cc516e844~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_09dba825ee42495280d7c87cc516e844~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_b074a117bf8847d7ad3481f20525e4eb~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_b074a117bf8847d7ad3481f20525e4eb~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_b074a117bf8847d7ad3481f20525e4eb~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_c6a73a2d28444daf80cc473a58d8e552~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_c6a73a2d28444daf80cc473a58d8e552~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_c6a73a2d28444daf80cc473a58d8e552~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_fa8a96aa615a47dca7314d7091ecb5d1~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_fa8a96aa615a47dca7314d7091ecb5d1~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_fa8a96aa615a47dca7314d7091ecb5d1~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_01475aa7a50e4438a51b84ded9e2fea5~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_01475aa7a50e4438a51b84ded9e2fea5~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_01475aa7a50e4438a51b84ded9e2fea5~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_d43a63e3d1df4d3db6318889b45021e2~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_d43a63e3d1df4d3db6318889b45021e2~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_d43a63e3d1df4d3db6318889b45021e2~mv2.jpg",
-   "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/63cc49_2ad60f1d647e4399bb6cf12ae15d806c~mv2.jpg",
-   "https://static.wixstatic.com/media/63cc49_2ad60f1d647e4399bb6cf12ae15d806c~mv2.jpg/v1/fill/w_760,h_481,q_90,enc_avif,quality_auto/63cc49_2ad60f1d647e4399bb6cf12ae15d806c~mv2.jpg",
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/corentin-gianerini-caen.webp",
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-mitoyenne-avec-garage/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 294000,
   "prix_baisse_le": "2026-10-29"
@@ -645731,7 +645737,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-des-ann%C3%A9es-30/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -646248,7 +646254,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-des-ann%C3%A9es-50/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-10-27",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -646432,7 +646438,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-%C3%A0-3-minutes-de-la-plage/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-10-27",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -646687,7 +646693,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/duplex-centre-ancien-de-caen/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-09-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 349900,
   "prix_baisse_le": "2026-10-20"
@@ -650751,7 +650757,7 @@
    "https://www.lapetiteagencecaen.com/biens-a-la-vente/maison-familiale-de-caract%C3%A8re/quality_auto/mascotte-avec-calculatrice.webp"
   ],
   "vue_le": "2026-10-27",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1245306,7 +1245312,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 57.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://www.rouen-sothebysrealty.com/datas/biens/images/1902/1902_00-2026-10-08-0141.png",
@@ -1252727,6 +1252743,98 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "vacherand-immobilier-vauban-nationale-48ccde69cecb",
+  "source": "vacherand-immobilier-vauban-nationale",
+  "url": "https://www.vacherand.fr/immobilier/vente-maison-lambersart/ref-VM7152-VACHERAND",
+  "titre": "Vente MAISON LAMBERSART - CANON D",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 329500,
+  "surface_m2": 99.0,
+  "terrain_m2": 82.0,
+  "pieces": 4,
+  "commune": null,
+  "code_postal": null,
+  "departement": null,
+  "region": null,
+  "agence": "Vacherand Immobilier - Vauban / Nationale",
+  "agence_url": "https://vacherand.fr",
+  "photo": "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375166_VM7152_10_original_compressed.webp",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
+  "dpe": null,
+  "risques": {},
+  "photos": [
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375166_VM7152_10_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375155_VM7152_2_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375153_VM7152_1_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375158_VM7152_4_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375159_VM7152_5_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375161_VM7152_6_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375156_VM7152_3_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375162_VM7152_7_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375164_VM7152_8_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/biens/2650/1793375165_VM7152_9_original_compressed.webp",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/energy_schemas.png",
+   "https://www.vacherand.fr/extensions/leaflet/images/marker-shadow.png",
+   "https://www.vacherand.fr/extensions/leaflet/images/marker-icon.png",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/equipe/sarah-francois-152729.jpg",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/x.png",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/youtube.png",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/badge.png",
+   "https://www.vacherand.fr/immobilier/vente-maison-lambersart/img/amepi.png",
+   "https://tile.openstreetmap.org/13/4165/2755.png",
+   "https://tile.openstreetmap.org/13/4165/2754.png",
+   "https://tile.openstreetmap.org/13/4164/2755.png",
+   "https://tile.openstreetmap.org/13/4166/2755.png",
+   "https://tile.openstreetmap.org/13/4165/2756.png",
+   "https://tile.openstreetmap.org/13/4164/2754.png",
+   "https://tile.openstreetmap.org/13/4166/2754.png",
+   "https://tile.openstreetmap.org/13/4164/2756.png",
+   "https://tile.openstreetmap.org/13/4166/2756.png",
+   "https://tile.openstreetmap.org/13/4163/2755.png",
+   "https://tile.openstreetmap.org/13/4167/2755.png",
+   "https://tile.openstreetmap.org/13/4163/2754.png",
+   "https://tile.openstreetmap.org/13/4167/2754.png",
+   "https://tile.openstreetmap.org/13/4163/2756.png",
+   "https://tile.openstreetmap.org/13/4167/2756.png"
+  ],
+  "vue_le": "2026-11-02",
+  "revue_le": "2026-11-02",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "vacherand-immobilier-vauban-nationale-493af82541f3",
   "source": "vacherand-immobilier-vauban-nationale",
   "url": "https://www.vacherand.fr/immobilier/vente-bureaux-lille/ref-AB530038-VACHERAND",
@@ -1253520,23 +1253628,24 @@
    "https://www.vacherand.fr/immobilier/vente-maison-faches-thumesnil/img/badge.png",
    "https://www.vacherand.fr/immobilier/vente-maison-faches-thumesnil/img/amepi.png",
    "https://tile.openstreetmap.org/13/4165/2756.png",
-   "https://tile.openstreetmap.org/13/4165/2755.png",
-   "https://tile.openstreetmap.org/13/4164/2756.png",
    "https://tile.openstreetmap.org/13/4166/2756.png",
    "https://tile.openstreetmap.org/13/4165/2757.png",
-   "https://tile.openstreetmap.org/13/4164/2755.png",
-   "https://tile.openstreetmap.org/13/4166/2755.png",
-   "https://tile.openstreetmap.org/13/4164/2757.png",
    "https://tile.openstreetmap.org/13/4166/2757.png",
-   "https://tile.openstreetmap.org/13/4163/2756.png",
+   "https://tile.openstreetmap.org/13/4165/2755.png",
+   "https://tile.openstreetmap.org/13/4166/2755.png",
+   "https://tile.openstreetmap.org/13/4164/2756.png",
    "https://tile.openstreetmap.org/13/4167/2756.png",
-   "https://tile.openstreetmap.org/13/4163/2755.png",
+   "https://tile.openstreetmap.org/13/4164/2757.png",
+   "https://tile.openstreetmap.org/13/4167/2757.png",
+   "https://tile.openstreetmap.org/13/4165/2758.png",
+   "https://tile.openstreetmap.org/13/4166/2758.png",
+   "https://tile.openstreetmap.org/13/4164/2755.png",
    "https://tile.openstreetmap.org/13/4167/2755.png",
-   "https://tile.openstreetmap.org/13/4163/2757.png",
-   "https://tile.openstreetmap.org/13/4167/2757.png"
+   "https://tile.openstreetmap.org/13/4164/2758.png",
+   "https://tile.openstreetmap.org/13/4167/2758.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1253789,24 +1253898,28 @@
    "https://www.vacherand.fr/immobilier/vente-appartement-lille/img/badge.png",
    "https://www.vacherand.fr/immobilier/vente-appartement-lille/img/amepi.png",
    "https://tile.openstreetmap.org/13/4165/2755.png",
-   "https://tile.openstreetmap.org/13/4166/2755.png",
    "https://tile.openstreetmap.org/13/4165/2756.png",
+   "https://tile.openstreetmap.org/13/4164/2755.png",
+   "https://tile.openstreetmap.org/13/4166/2755.png",
+   "https://tile.openstreetmap.org/13/4164/2756.png",
    "https://tile.openstreetmap.org/13/4166/2756.png",
    "https://tile.openstreetmap.org/13/4165/2754.png",
-   "https://tile.openstreetmap.org/13/4166/2754.png",
-   "https://tile.openstreetmap.org/13/4164/2755.png",
-   "https://tile.openstreetmap.org/13/4167/2755.png",
-   "https://tile.openstreetmap.org/13/4164/2756.png",
-   "https://tile.openstreetmap.org/13/4167/2756.png",
    "https://tile.openstreetmap.org/13/4165/2757.png",
-   "https://tile.openstreetmap.org/13/4166/2757.png",
    "https://tile.openstreetmap.org/13/4164/2754.png",
-   "https://tile.openstreetmap.org/13/4167/2754.png",
+   "https://tile.openstreetmap.org/13/4166/2754.png",
    "https://tile.openstreetmap.org/13/4164/2757.png",
+   "https://tile.openstreetmap.org/13/4166/2757.png",
+   "https://tile.openstreetmap.org/13/4163/2755.png",
+   "https://tile.openstreetmap.org/13/4167/2755.png",
+   "https://tile.openstreetmap.org/13/4163/2756.png",
+   "https://tile.openstreetmap.org/13/4167/2756.png",
+   "https://tile.openstreetmap.org/13/4163/2754.png",
+   "https://tile.openstreetmap.org/13/4167/2754.png",
+   "https://tile.openstreetmap.org/13/4163/2757.png",
    "https://tile.openstreetmap.org/13/4167/2757.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1255020,7 +1255133,7 @@
    "https://tile.openstreetmap.org/13/4167/2756.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1256621,7 +1256734,7 @@
    "https://tile.openstreetmap.org/13/4151/2742.png"
   ],
   "vue_le": "2026-10-24",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1257156,28 +1257269,20 @@
    "https://www.vacherand.fr/immobilier/vente-parking-box-faches-thumesnil/img/badge.png",
    "https://www.vacherand.fr/immobilier/vente-parking-box-faches-thumesnil/img/amepi.png",
    "https://tile.openstreetmap.org/13/4165/2756.png",
-   "https://tile.openstreetmap.org/13/4165/2757.png",
-   "https://tile.openstreetmap.org/13/4164/2756.png",
    "https://tile.openstreetmap.org/13/4166/2756.png",
-   "https://tile.openstreetmap.org/13/4164/2757.png",
-   "https://tile.openstreetmap.org/13/4166/2757.png",
    "https://tile.openstreetmap.org/13/4165/2755.png",
-   "https://tile.openstreetmap.org/13/4165/2758.png",
-   "https://tile.openstreetmap.org/13/4164/2755.png",
    "https://tile.openstreetmap.org/13/4166/2755.png",
-   "https://tile.openstreetmap.org/13/4164/2758.png",
-   "https://tile.openstreetmap.org/13/4166/2758.png",
-   "https://tile.openstreetmap.org/13/4163/2756.png",
+   "https://tile.openstreetmap.org/13/4165/2757.png",
+   "https://tile.openstreetmap.org/13/4166/2757.png",
+   "https://tile.openstreetmap.org/13/4164/2756.png",
    "https://tile.openstreetmap.org/13/4167/2756.png",
-   "https://tile.openstreetmap.org/13/4163/2757.png",
-   "https://tile.openstreetmap.org/13/4167/2757.png",
-   "https://tile.openstreetmap.org/13/4163/2755.png",
+   "https://tile.openstreetmap.org/13/4164/2755.png",
    "https://tile.openstreetmap.org/13/4167/2755.png",
-   "https://tile.openstreetmap.org/13/4163/2758.png",
-   "https://tile.openstreetmap.org/13/4167/2758.png"
+   "https://tile.openstreetmap.org/13/4164/2757.png",
+   "https://tile.openstreetmap.org/13/4167/2757.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1257350,24 +1257455,25 @@
    "https://www.vacherand.fr/immobilier/vente-maison-esquelbecq/img/youtube.png",
    "https://www.vacherand.fr/immobilier/vente-maison-esquelbecq/img/badge.png",
    "https://www.vacherand.fr/immobilier/vente-maison-esquelbecq/img/amepi.png",
-   "https://tile.openstreetmap.org/13/4151/2746.png",
+   "https://tile.openstreetmap.org/13/4150/2745.png",
    "https://tile.openstreetmap.org/13/4151/2745.png",
    "https://tile.openstreetmap.org/13/4150/2746.png",
-   "https://tile.openstreetmap.org/13/4152/2746.png",
-   "https://tile.openstreetmap.org/13/4151/2747.png",
-   "https://tile.openstreetmap.org/13/4150/2745.png",
-   "https://tile.openstreetmap.org/13/4152/2745.png",
-   "https://tile.openstreetmap.org/13/4150/2747.png",
-   "https://tile.openstreetmap.org/13/4152/2747.png",
-   "https://tile.openstreetmap.org/13/4149/2746.png",
-   "https://tile.openstreetmap.org/13/4153/2746.png",
+   "https://tile.openstreetmap.org/13/4151/2746.png",
+   "https://tile.openstreetmap.org/13/4150/2744.png",
+   "https://tile.openstreetmap.org/13/4151/2744.png",
    "https://tile.openstreetmap.org/13/4149/2745.png",
-   "https://tile.openstreetmap.org/13/4153/2745.png",
+   "https://tile.openstreetmap.org/13/4152/2745.png",
+   "https://tile.openstreetmap.org/13/4149/2746.png",
+   "https://tile.openstreetmap.org/13/4152/2746.png",
+   "https://tile.openstreetmap.org/13/4150/2747.png",
+   "https://tile.openstreetmap.org/13/4151/2747.png",
+   "https://tile.openstreetmap.org/13/4149/2744.png",
+   "https://tile.openstreetmap.org/13/4152/2744.png",
    "https://tile.openstreetmap.org/13/4149/2747.png",
-   "https://tile.openstreetmap.org/13/4153/2747.png"
+   "https://tile.openstreetmap.org/13/4152/2747.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1258085,7 +1258191,7 @@
    "https://tile.openstreetmap.org/13/4168/2755.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1258300,7 +1258406,7 @@
    "https://lorrainepierresimmobilier.staticlbi.com/580xauto/images/biens/1/faf9294dcd0758a877aaa14254e62948/photo_2739b6d5837f632f15ac33dcb621927d.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1258356,6 +1258462,16 @@
   "densite_hab_km2": 532.1,
   "dpe": "G",
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 85.4,
    "nucleaire_nom": "Cattenom"
   },
@@ -1258403,7 +1258519,7 @@
    "https://lorrainepierresimmobilier.staticlbi.com/580xauto/images/biens/1/c414838d58e42184e70fb72194575036/photo_bca0cffed270324c84c9c5ad1f90a028.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1258455,7 +1258571,7 @@
   "plusieurs_biens": false,
   "lat": 48.757942,
   "lon": 6.083109,
-  "altitude": 245.0,
+  "altitude": 226.0,
   "densite_hab_km2": 221.1,
   "dpe": "E",
   "risques": {
@@ -1258522,7 +1258638,7 @@
    "https://lorrainepierresimmobilier.staticlbi.com/580xauto/images/biens/1/0d500a6bca10f2eefd52b27a5ad0866d/photo_11519ff4626656f12f2dcf7bffcd1385.jpg"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1258760,6 +1258876,88 @@
   "vue_le": "2026-08-10",
   "revue_le": "2026-08-13",
   "absences": 1,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "valoire-hab-tat-1720b9302a76",
+  "source": "valoire-hab-tat",
+  "url": "https://www.valloire-habitat.com/logement/maison-1-pieces-sully-sur-loire/",
+  "titre": "MAISON - 1 pièce(s) - SULLY SUR LOIRE - Valloire Habitat",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 20000,
+  "surface_m2": 33.0,
+  "terrain_m2": null,
+  "pieces": 1,
+  "commune": "Ajaccio",
+  "code_postal": "20000",
+  "departement": "20",
+  "region": null,
+  "agence": "Valoire Habîtat",
+  "agence_url": "https://valloire-habitat.com",
+  "photo": "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_2152_0.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 41.93368,
+  "lon": 8.715325,
+  "altitude": 116.0,
+  "densite_hab_km2": 925.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 418.8,
+   "nucleaire_nom": "Tricastin"
+  },
+  "photos": [
+   "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_2152_0.jpg",
+   "https://www.valloire-habitat.com/wp-content/themes/valloire/images/marker-icon.png",
+   "https://c.tile.openstreetmap.org/13/4149/2855.png",
+   "https://a.tile.openstreetmap.org/13/4150/2855.png",
+   "https://b.tile.openstreetmap.org/13/4149/2854.png",
+   "https://c.tile.openstreetmap.org/13/4150/2854.png",
+   "https://a.tile.openstreetmap.org/13/4149/2856.png",
+   "https://b.tile.openstreetmap.org/13/4150/2856.png",
+   "https://b.tile.openstreetmap.org/13/4148/2855.png",
+   "https://b.tile.openstreetmap.org/13/4151/2855.png",
+   "https://a.tile.openstreetmap.org/13/4148/2854.png",
+   "https://a.tile.openstreetmap.org/13/4151/2854.png",
+   "https://c.tile.openstreetmap.org/13/4148/2856.png",
+   "https://c.tile.openstreetmap.org/13/4151/2856.png",
+   "https://a.tile.openstreetmap.org/13/4147/2855.png",
+   "https://c.tile.openstreetmap.org/13/4152/2855.png",
+   "https://c.tile.openstreetmap.org/13/4147/2854.png",
+   "https://b.tile.openstreetmap.org/13/4152/2854.png",
+   "https://b.tile.openstreetmap.org/13/4147/2856.png",
+   "https://a.tile.openstreetmap.org/13/4152/2856.png"
+  ],
+  "vue_le": "2026-11-02",
+  "revue_le": "2026-11-02",
+  "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -1259541,7 +1259739,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": 20000,
-  "surface_m2": 60.0,
+  "surface_m2": 51.97,
   "terrain_m2": null,
   "pieces": 3,
   "commune": "Ajaccio",
@@ -1259580,7 +1259778,7 @@
   "plusieurs_biens": false,
   "lat": 41.93368,
   "lon": 8.715325,
-  "altitude": 131.0,
+  "altitude": 116.0,
   "densite_hab_km2": 925.3,
   "dpe": null,
   "risques": {
@@ -1259604,7 +1259802,7 @@
    "https://b.tile.openstreetmap.org/13/4098/4096.png"
   ],
   "vue_le": "2026-09-28",
-  "revue_le": "2026-10-02",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1260004,7 +1260202,7 @@
   "plusieurs_biens": false,
   "lat": 41.93368,
   "lon": 8.715325,
-  "altitude": 131.0,
+  "altitude": 116.0,
   "densite_hab_km2": 925.3,
   "dpe": null,
   "risques": {
@@ -1260044,7 +1260242,7 @@
    "https://b.tile.openstreetmap.org/13/4152/2860.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-24",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1260537,7 +1260735,7 @@
    "https://b.tile.openstreetmap.org/13/4098/4096.png"
   ],
   "vue_le": "2026-10-12",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1260936,6 +1261134,16 @@
   "densite_hab_km2": 925.3,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": true,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 418.8,
    "nucleaire_nom": "Tricastin"
   },
@@ -1260964,7 +1261172,7 @@
    "https://c.tile.openstreetmap.org/13/4155/2861.png"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-10-24",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1261016,7 +1261224,7 @@
   "plusieurs_biens": false,
   "lat": 41.93368,
   "lon": 8.715325,
-  "altitude": 116.0,
+  "altitude": 131.0,
   "densite_hab_km2": 925.3,
   "dpe": null,
   "risques": {
@@ -1261048,7 +1261256,7 @@
    "https://c.tile.openstreetmap.org/13/4155/2861.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-07",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1261350,8 +1261558,8 @@
   "plusieurs_biens": false,
   "lat": 41.93368,
   "lon": 8.715325,
-  "altitude": 116.0,
-  "densite_hab_km2": 925.3,
+  "altitude": 131.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 418.8,
@@ -1261380,7 +1261588,7 @@
    "https://a.tile.openstreetmap.org/13/4156/2846.png"
   ],
   "vue_le": "2026-10-02",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1261563,6 +1261771,90 @@
   ],
   "vue_le": "2026-10-12",
   "revue_le": "2026-10-24",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "valoire-hab-tat-d3d9f0bf84f6",
+  "source": "valoire-hab-tat",
+  "url": "https://www.valloire-habitat.com/logement/maison-4-pieces-st-brisson-sur-loire/",
+  "titre": "MAISON - 4 pièce(s) - ST BRISSON SUR LOIRE - Valloire Habitat",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 20000,
+  "surface_m2": 30.0,
+  "terrain_m2": null,
+  "pieces": 4,
+  "commune": "Ajaccio",
+  "code_postal": "20000",
+  "departement": "20",
+  "region": null,
+  "agence": "Valoire Habîtat",
+  "agence_url": "https://valloire-habitat.com",
+  "photo": "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_0274_0.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 41.93368,
+  "lon": 8.715325,
+  "altitude": 131.0,
+  "densite_hab_km2": 925.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 418.8,
+   "nucleaire_nom": "Tricastin"
+  },
+  "photos": [
+   "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_0274_0.jpg",
+   "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_0274_1.jpg",
+   "https://www.valloire-habitat.com/wp-content/uploads/valloire/images/GRP_0274_2.jpg",
+   "https://www.valloire-habitat.com/wp-content/themes/valloire/images/marker-icon.png",
+   "https://b.tile.openstreetmap.org/13/4156/2859.png",
+   "https://c.tile.openstreetmap.org/13/4157/2859.png",
+   "https://a.tile.openstreetmap.org/13/4156/2858.png",
+   "https://b.tile.openstreetmap.org/13/4157/2858.png",
+   "https://c.tile.openstreetmap.org/13/4156/2860.png",
+   "https://a.tile.openstreetmap.org/13/4157/2860.png",
+   "https://a.tile.openstreetmap.org/13/4155/2859.png",
+   "https://a.tile.openstreetmap.org/13/4158/2859.png",
+   "https://c.tile.openstreetmap.org/13/4155/2858.png",
+   "https://c.tile.openstreetmap.org/13/4158/2858.png",
+   "https://b.tile.openstreetmap.org/13/4155/2860.png",
+   "https://b.tile.openstreetmap.org/13/4158/2860.png",
+   "https://c.tile.openstreetmap.org/13/4154/2859.png",
+   "https://b.tile.openstreetmap.org/13/4159/2859.png",
+   "https://b.tile.openstreetmap.org/13/4154/2858.png",
+   "https://a.tile.openstreetmap.org/13/4159/2858.png",
+   "https://a.tile.openstreetmap.org/13/4154/2860.png",
+   "https://c.tile.openstreetmap.org/13/4159/2860.png"
+  ],
+  "vue_le": "2026-11-02",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1262595,7 +1262887,7 @@
   "lat": 49.297753,
   "lon": 2.445801,
   "altitude": 45.0,
-  "densite_hab_km2": 576.2,
+  "densite_hab_km2": null,
   "dpe": "F",
   "risques": {
    "nucleaire_km": 116.5,
@@ -1262627,7 +1262919,7 @@
    "https://villerssaintpaulimmo.fr/vente/8-nogent-sur-oise/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1262763,7 +1263055,7 @@
   "lat": 49.259476,
   "lon": 2.433931,
   "altitude": 48.0,
-  "densite_hab_km2": 1341.1,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 114.6,
@@ -1262799,7 +1263091,7 @@
    "https://villerssaintpaulimmo.fr/vente/52-montataire/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1262851,7 +1263143,7 @@
   "plusieurs_biens": false,
   "lat": 49.297753,
   "lon": 2.445801,
-  "altitude": 45.0,
+  "altitude": 43.0,
   "densite_hab_km2": 576.2,
   "dpe": null,
   "risques": {
@@ -1262882,7 +1263174,7 @@
    "https://villerssaintpaulimmo.fr/vente/10-monchy-st-eloi/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1263036,7 +1263328,7 @@
   "lat": 49.288257,
   "lon": 2.491239,
   "altitude": 36.0,
-  "densite_hab_km2": 1307.1,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 114.1,
@@ -1263078,7 +1263370,7 @@
    "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1263169,7 +1263461,7 @@
    "https://villerssaintpaulimmo.fr/vente/28-angicourt/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-12",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": 260000,
   "prix_baisse_le": "2026-10-24"
@@ -1263464,8 +1263756,8 @@
   "plusieurs_biens": false,
   "lat": 49.279703,
   "lon": 2.521525,
-  "altitude": 33.0,
-  "densite_hab_km2": 214.0,
+  "altitude": 32.0,
+  "densite_hab_km2": null,
   "dpe": "E",
   "risques": {
    "nucleaire_km": 112.0,
@@ -1263513,7 +1263805,7 @@
    "https://villerssaintpaulimmo.fr/vente/36-verneuil-en-halatte/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-09-12",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1263648,7 +1263940,7 @@
   "plusieurs_biens": false,
   "lat": 49.288257,
   "lon": 2.491239,
-  "altitude": 36.0,
+  "altitude": 34.0,
   "densite_hab_km2": 1307.1,
   "dpe": "C",
   "risques": {
@@ -1263679,7 +1263971,7 @@
    "https://villerssaintpaulimmo.fr/vente/1-villers-st-paul/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1263812,7 +1264104,7 @@
   "plusieurs_biens": false,
   "lat": 49.37814,
   "lon": 2.413758,
-  "altitude": 87.0,
+  "altitude": 85.0,
   "densite_hab_km2": 1818.9,
   "dpe": null,
   "risques": {
@@ -1263851,7 +1264143,7 @@
    "https://villerssaintpaulimmo.fr/vente/48-fitz-james/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1264165,7 +1264457,7 @@
   "region": null,
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026a.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -1264200,16 +1264492,16 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/47726026g.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/47726026g.jpg"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1264231,7 +1264523,7 @@
   "region": "Normandie",
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -1264279,19 +1264571,19 @@
    "source": "georisques"
   },
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478i.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/52741478j.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478i.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/52741478j.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1264461,7 +1264753,7 @@
   "region": null,
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -1264496,22 +1264788,22 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110i.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110j.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110k.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110l.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59393110m.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110i.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110j.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110k.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110l.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59393110m.jpg"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1264911,8 +1265203,8 @@
   "plusieurs_biens": false,
   "lat": 50.705404,
   "lon": 3.100737,
-  "altitude": 35.0,
-  "densite_hab_km2": 749.8,
+  "altitude": 32.0,
+  "densite_hab_km2": null,
   "dpe": "F",
   "risques": {
    "nucleaire_km": 76.3,
@@ -1264928,7 +1265220,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1265059,8 +1265351,6 @@
   "densite_hab_km2": 6528.9,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 79.2,
-   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -1265070,7 +1265360,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 79.2,
+   "nucleaire_nom": "Gravelines"
   },
   "photos": [
    "https://img.netty.immo/productcw/company51802zux/2/VM346/maison-7-pieces-tourcoing-59200-1759433986-VM346_7_original.jpg",
@@ -1265082,7 +1265374,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/001@640x576.jpg?cache=1730406488"
   ],
   "vue_le": "2026-10-12",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1265428,6 +1265720,8 @@
   "densite_hab_km2": 4039.3,
   "dpe": "G",
   "risques": {
+   "nucleaire_km": 80.8,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -1265437,9 +1265731,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 80.8,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productcw/company51802zux/2/VM377/maison-individuelle-5-pieces-faches-thumesnil-59155-1768895966-VM377_1_original.jpg",
@@ -1265451,7 +1265743,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1265473,7 +1265765,7 @@
   "region": null,
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043a.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -1265508,20 +1265800,20 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043i.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043j.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59182043k.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043i.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043j.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59182043k.jpg"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1265543,7 +1265835,7 @@
   "region": "Normandie",
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -1265573,7 +1265865,7 @@
   "plusieurs_biens": false,
   "lat": 49.403115,
   "lon": 1.180328,
-  "altitude": 156.0,
+  "altitude": 157.0,
   "densite_hab_km2": 721.0,
   "dpe": null,
   "risques": {
@@ -1265591,18 +1265883,18 @@
    "source": "georisques"
   },
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/48861821i.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/48861821i.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1266090,12 +1266382,10 @@
   "plusieurs_biens": false,
   "lat": 50.671644,
   "lon": 3.21584,
-  "altitude": 30.0,
+  "altitude": 31.0,
   "densite_hab_km2": 4303.1,
   "dpe": "D",
   "risques": {
-   "nucleaire_km": 85.3,
-   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -1266105,7 +1266395,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 85.3,
+   "nucleaire_nom": "Gravelines"
   },
   "photos": [
    "https://img.netty.immo/productcw/company51802zux/2/VM334/maison-mitoyenne-1-cote-6-pieces-lannoy-59390-1759558846-VM334_3_original.jpg",
@@ -1266117,7 +1266409,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1266139,7 +1266431,7 @@
   "region": null,
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -1266174,25 +1266466,25 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327i.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327j.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327k.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327l.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327m.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327n.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327o.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/57611327p.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327i.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327j.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327k.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327l.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327m.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327n.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327o.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/57611327p.jpg"
   ],
   "vue_le": "2026-10-24",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1266214,7 +1266506,7 @@
   "region": "Normandie",
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/49040708a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/49040708a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -1266262,11 +1266554,11 @@
    "source": "georisques"
   },
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/49040708a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/49040708b.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/49040708a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/49040708b.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-27",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1266699,7 +1266991,7 @@
   "plusieurs_biens": false,
   "lat": 50.512769,
   "lon": 3.023725,
-  "altitude": 34.0,
+  "altitude": 33.0,
   "densite_hab_km2": 605.7,
   "dpe": "D",
   "risques": {
@@ -1266716,7 +1267008,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1267527,7 +1267819,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1267579,7 +1267871,7 @@
   "plusieurs_biens": false,
   "lat": 50.586719,
   "lon": 3.040384,
-  "altitude": 38.0,
+  "altitude": 36.0,
   "densite_hab_km2": 2465.0,
   "dpe": "C",
   "risques": {
@@ -1267596,7 +1267888,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1267618,7 +1267910,7 @@
   "region": null,
   "agence": "VIP Immobilier",
   "agence_url": "https://agence-vip.immo",
-  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433a.jpg",
+  "photo": "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433a.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -1267653,21 +1267945,24 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433a.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/61646655a-525x328.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433b.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433c.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433d.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433e.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433f.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433g.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433h.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433i.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433j.jpg",
-   "https://www.agence-vip.immo/wp-content/uploads/2026/10/59108433k.jpg"
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433a.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/61646655a-525x328.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/61646655b-525x328.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/61646655c-525x328.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/61646655d-525x328.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433b.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433c.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433d.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433e.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433f.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433g.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433h.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433i.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433j.jpg",
+   "https://www.agence-vip.immo/wp-content/uploads/2026/11/59108433k.jpg"
   ],
   "vue_le": "2026-10-24",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1267719,10 +1268014,12 @@
   "plusieurs_biens": false,
   "lat": 50.586719,
   "lon": 3.040384,
-  "altitude": 36.0,
+  "altitude": 38.0,
   "densite_hab_km2": 2465.0,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 79.8,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": null,
@@ -1267732,9 +1268029,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 79.8,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productcw/company51802zux/2/VM343/maison-mitoyenne-1-cote-6-pieces-wattignies-59139-1759247114-VM343_4_original.jpg",
@@ -1267746,7 +1268041,7 @@
    "https://img.netty.immo/company51802zux/assets/nego/103@1105x1280.jpg?cache=1775135346"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-10-30",
+  "revue_le": "2026-11-02",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
