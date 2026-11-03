@@ -1,100 +1,8 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "Angélot Immo",
-   "secondes": 11,
-   "pages": 2,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3",
-   "deja_ecartees": 1,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.angelot-immo.fr/vente/2-tours/maison/576-tours-prebendes-particulier-t8-avec-jardin-garage-et-cave",
-     "titre": "Maison 8pièce(s) 5chambre(s) 188 m² Tours (37000)"
-    }
-   }
-  },
-  {
-   "agence": "Année Hoinville",
-   "secondes": 237,
-   "pages": 45,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 45,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 95,
-   "sitemap": "ok 85",
-   "deja_ecartees": 14,
-   "illisible_exemple": {
-    "url": "https://www.anneehoinvilleimmobilier.com/vente/maison-ancienne-5-pieces-trouville-sur-mer-14360,VM1566",
-    "cause": "aucune annonce lue",
-    "titre": "",
-    "octets": 213
-   }
-  },
-  {
-   "agence": "Antony Vesque Immobilier",
-   "secondes": 74,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 15,
-   "sitemap_dates": 60,
-   "sitemap": "ok 69",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Arsenal Immobilier",
-   "secondes": 57,
-   "pages": 4,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 94,
-   "sitemap": "ok 65",
-   "deja_ecartees": 61
-  },
-  {
-   "agence": "ArthurImmo.com Agence Saint-Hubert",
-   "secondes": 54,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap_dates": 11,
-   "sitemap": "ok 11"
-  },
-  {
-   "agence": "Arthurimmo",
+   "agence": "Century 21",
    "secondes": 72,
    "pages": 8,
    "gardes": 8,
@@ -104,369 +12,14 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 7,
-   "sitemap_dates": 44,
-   "sitemap": "ok 44"
-  },
-  {
-   "agence": "Arthurimmo.com",
-   "secondes": 63,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 7,
-   "sitemap": "ok 7",
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://metz.arthurimmo.com/annonces/achat/maison/lorry-les-metz-57050/33122031.htm",
-     "titre": "Acheter maison de 10 pièces 245 m² 893 000 € à Lorry-Lès-Metz (57050) : une annonce Arthurimmo.com"
-    }
-   }
-  },
-  {
-   "agence": "Arturimmo.com",
-   "secondes": 27,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 36,
-   "sitemap_dates": 3,
-   "sitemap": "ok 3"
-  },
-  {
-   "agence": "Cap Immobilier",
-   "secondes": 74,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap": "ok 23",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Carrara Immobilier",
-   "secondes": 60,
-   "pages": 10,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap_dates": 12,
-   "sitemap": "ok 12",
-   "deja_ecartees": 2,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.carrara.immo/vente/40-vaux/propriete/10067-vaux-maison-d-exeption",
-     "titre": "Vaux - MAISON D’EXEPTION"
-    }
-   }
-  },
-  {
-   "agence": "Casa",
-   "secondes": 100,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 10,
-   "sitemap_dates": 403,
-   "sitemap": "ok 403",
-   "deja_ecartees": 4,
-   "illisible_exemple": {
-    "url": "https://www.immo-casa.fr/louer-un-bien/maison-de-ville-a-louvigny-sur-3-niveau/",
-    "cause": "aucune annonce lue",
-    "titre": "Maison de ville à LOUVIGNY sur 3 niveau - Casa Agence immobilière",
-    "octets": 244159
-   }
-  },
-  {
-   "agence": "Causeret Immobilier",
-   "secondes": 42,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
    "adresses_ecartees": 2,
-   "sitemap_dates": 97,
-   "sitemap": "ok 97",
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://causeretimmobilier.fr/maison/la-maison-iris/",
-     "titre": "La maison Iris - © CAUSERET IMMOBILIER"
-    }
-   }
+   "sitemap_dates": 33,
+   "sitemap": "ok 33",
+   "deja_ecartees": 10
   },
   {
-   "agence": "Century 21",
-   "secondes": 62,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 64,
-   "sitemap": "ok 65",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 66,
-   "pages": 7,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 58,
-   "sitemap": "ok 58",
-   "deja_ecartees": 19,
-   "motifs": {
-    "titre_hors_cible:appartement": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-vandome-crepy.com/trouver_logement/detail/15100445747/",
-     "titre": "Appartement F3 à vendre - 3 pièces - 55.52 m2 - CREPY EN VALOIS - 60 - PICARDIE - Century 21 Vandôme Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 56,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 63,
-   "sitemap": "ok 63",
-   "deja_ecartees": 29
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 56,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 36,
-   "sitemap": "ok 37",
-   "deja_ecartees": 31
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 65,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 62,
-   "sitemap": "ok 62",
-   "deja_ecartees": 15,
-   "motifs": {
-    "titre_hors_cible:appartement": 2,
-    "titre_hors_cible:terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/15467551671/",
-     "titre": "Appartement F3 à vendre - 3 pièces - 78.68 m2 - BEAUNE - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
-    },
-    "titre_hors_cible:terrain": {
-     "url": "https://www.century21agencemassot-nouveau.com/trouver_logement/detail/17092456747/",
-     "titre": "terrain à vendre - 1000.0 m2 - MERCEUIL - 21 - BOURGOGNE - Century 21 Agence Massot-Nouveau"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 73,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 321,
-   "sitemap": "ok 322",
-   "deja_ecartees": 114
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 61,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 64,
-   "sitemap": "ok 64",
-   "deja_ecartees": 20
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 62,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 59,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 219,
-   "sitemap": "ok 220",
-   "deja_ecartees": 83,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/12772233541/",
-     "titre": "maison à vendre - 8 pièces - 246.55 m2 - NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 69,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 80,
-   "sitemap": "ok 81",
-   "deja_ecartees": 42
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 68,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "deja_ecartees": 3
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 56,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 11,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.century21-arconance-honfleur.com/trouver_logement/detail/13080497186/",
-     "titre": "maison à vendre - 5 pièces - 133.0 m2 - DEAUVILLE - 14 - BASSE-NORMANDIE - Century 21 Arconance Immobilier"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 56,
+   "agence": "Champanelle Immobilier",
+   "secondes": 67,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -476,9 +29,384 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 9,
-   "sitemap_dates": 40,
-   "sitemap": "ok 41",
+   "sitemap_dates": 19,
+   "sitemap": "ok 19",
+   "deja_ecartees": 3
+  },
+  {
+   "agence": "Château-Thierry Immobilier",
+   "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "illisible",
+   "sitemap": "injoignable (ConnectionError)",
+   "index_statut": "Error"
+  },
+  {
+   "agence": "Clic house",
+   "secondes": 71,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 29,
+   "sitemap_dates": 54,
+   "sitemap": "ok 54",
+   "deja_ecartees": 10
+  },
+  {
+   "agence": "Concept Immo 54",
+   "secondes": 104,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 500,
+   "sitemap": "HTTP 500",
+   "index_statut": 200,
+   "index_titre": "Agence immobilière à Toul et Saizerais | Concept Immo 54",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://concept-immo54.fr/biens-loues/1",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers déjà loués | Concept Immo 54",
+    "octets": 595389
+   }
+  },
+  {
+   "agence": "Concordis",
+   "secondes": 93,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 105,
+   "sitemap": "ok 95",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Coup de Coeur Immo",
+   "secondes": 64,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 18,
+   "sitemap_dates": 15,
+   "sitemap": "ok 15",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Cv Immobilier",
+   "secondes": 80,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 13,
+   "sitemap_dates": 48,
+   "sitemap": "ok 48",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://www.cvimmobilier.fr/biens-vendus/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 biens vendus | CV Immobilier",
+    "octets": 186670
+   }
+  },
+  {
+   "agence": "Cyril Thienpont Immobilier",
+   "secondes": 112,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 36,
+   "sitemap": "ok 117",
+   "deja_ecartees": 13
+  },
+  {
+   "agence": "Côté Ouest Immobilier",
+   "secondes": 103,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 74,
+   "sitemap": "ok 79",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.cote-ouest-immo.fr/vente/maison-7-pieces-saint-martin-du-manoir-76290,VM4952",
+     "titre": "SAINT MARTIN DU MANOIR"
+    }
+   }
+  },
+  {
+   "agence": "Damonte Immobilier",
+   "secondes": 19,
+   "pages": 9,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 9,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 2,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "illisible_exemple": {
+    "url": "https://www.yves-damonte.fr/bien-professionnel",
+    "cause": "aucune annonce lue",
+    "titre": "Groupe Damonte",
+    "octets": 1474
+   }
+  },
+  {
+   "agence": "De Noray Immobilier",
+   "secondes": 87,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 38,
+   "sitemap_dates": 93,
+   "sitemap": "ok 93",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.denoray-immobilier.com/vente/1755-amboise/maison/t10/4989-propriete-avec-piscine-tennis-et-gites-sur-2-7-hectares/",
+     "titre": "propriété avec piscine , tennis et gites sur 2,7 hectares."
+    }
+   }
+  },
+  {
+   "agence": "Fontette Immobilier",
+   "secondes": 136,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 43,
+   "sitemap": "ok 73",
+   "deja_ecartees": 6,
+   "motifs": {
+    "prix_trop_haut": 3
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.fontette-immobilier.fr/vente/maison-individuelle-8-pieces-caen-14000,VM296",
+     "titre": "Maison individuelle à vendre, 8 pièces - Caen 14000"
+    }
+   }
+  },
+  {
+   "agence": "France4U",
+   "secondes": 56,
+   "pages": 23,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 19,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 19
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.france4u.eu/property-and-houses-for-sale-in-auvergne.html",
+     "titre": "property and houses for sale in Auvergne"
+    }
+   }
+  },
+  {
+   "agence": "GIN Immobilier",
+   "secondes": 78,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 110,
+   "sitemap_dates": 196,
+   "sitemap": "ok 196",
+   "deja_ecartees": 7
+  },
+  {
+   "agence": "GSM Immobilier",
+   "secondes": 92,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 96,
+   "sitemap": "ok 244",
+   "deja_ecartees": 56
+  },
+  {
+   "agence": "Girault Immo",
+   "secondes": 79,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 2,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 27,
+   "sitemap": "ok 27",
    "deja_ecartees": 6
+  },
+  {
+   "agence": "Groupe Centrum",
+   "secondes": 76,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 117,
+   "sitemap_dates": 44,
+   "sitemap": "ok 44",
+   "deja_ecartees": 3,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
+     "titre": "Villa de luxe en vente, proche plage 7 chambres"
+    }
+   }
+  },
+  {
+   "agence": "Groupe123immo",
+   "secondes": 66,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 85,
+   "sitemap_dates": 221,
+   "sitemap": "ok 221",
+   "deja_ecartees": 20
+  },
+  {
+   "agence": "Gueudry",
+   "secondes": 90,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 165,
+   "sitemap": "ok 165",
+   "deja_ecartees": 1,
+   "illisible_exemple": {
+    "url": "https://www.gueudry.fr/maison-neuve-construction/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison neuve construction : les étapes clés | Gueudry",
+    "octets": 133937
+   }
+  },
+  {
+   "agence": "HF Immobilier",
+   "secondes": 40,
+   "pages": 5,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 6,
+   "sitemap": "ok 6",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Habitat Immobilier",
+   "secondes": 98,
+   "pages": 7,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "budget global épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 64,
+   "sitemap": "ok 130"
   }
  ]
 }
