@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 13.4,
+  "seconde": 2.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 13.4,
+  "seconde": 2.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,183 +23,179 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 13.4,
+  "seconde": 2.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 15.0,
+  "seconde": 4.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.4,
+  "seconde": 5.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.4,
+  "seconde": 5.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.0,
+  "seconde": 6.1,
   "reseau": "capifrance",
-  "connues": 18148,
-  "ecartees": 2696
+  "connues": 18202,
+  "ecartees": 2719
  },
  {
   "etape": "reseau_debut",
-  "seconde": 17.0,
+  "seconde": 6.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 17.2,
+  "seconde": 6.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 28.3,
+  "seconde": 23.8,
   "reseau": "iad",
   "n": 93963,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 30.5,
+  "seconde": 25.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 31.0,
+  "seconde": 26.5,
   "reseau": "iad",
-  "connues": 18148,
-  "ecartees": 2696
+  "connues": 18202,
+  "ecartees": 2719
  },
  {
   "etape": "departement",
-  "seconde": 471.2,
+  "seconde": 341.1,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 4,
-   "ecarte": 8,
+   "garde": 35,
+   "vendu": 11,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 8
+   "hors_perimetre": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison de campagne 6 pièces de 204 m² à Pierrefitte (79330)"
+   "hors_perimetre": "Maison de ville 4 pièces de 95 m² à L"
   }
  },
  {
   "etape": "departement",
-  "seconde": 622.8,
+  "seconde": 604.6,
   "reseau": "iad",
-  "departement": "02",
-  "visitees": 19,
-  "gardes": 12,
+  "departement": "52",
+  "visitees": 41,
+  "gardes": 30,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 2,
-   "ecarte": 5,
+   "garde": 30,
+   "vendu": 5,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:studio": 1,
-   "titre_hors_cible:appartement": 1,
-   "hors_perimetre": 3
+   "hors_perimetre": 6
   },
   "exemples": {
-   "titre_hors_cible:studio": "Studio 1 pièce de 26 m² à Château-Thierry (02400)",
-   "titre_hors_cible:appartement": "Appartement 4 pièces de 87 m² à Château-Thierry (02400)",
-   "hors_perimetre": "Maison de village 3 pièces de 40 m² à Fayet (12360)"
+   "hors_perimetre": "Domaine 6 pièces de 220 m² à RICHEBOURG (78550)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 622.8,
+  "seconde": 604.6,
   "reseau": "safti",
-  "part_secondes": 591
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.1,
+  "seconde": 605.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 623.9,
+  "seconde": 607.0,
   "reseau": "safti",
   "n": 28812,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 624.8,
+  "seconde": 607.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 625.4,
+  "seconde": 608.4,
   "reseau": "safti",
-  "connues": 18165,
-  "ecartees": 2715
+  "connues": 18228,
+  "ecartees": 2745
  },
  {
   "etape": "departement",
-  "seconde": 1172.0,
+  "seconde": 1057.4,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 4,
+   "garde": 48,
+   "vendu": 1,
    "ecarte": 0,
-   "illisible": 0
+   "illisible": 1
   },
   "motifs": {},
   "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 1227.9,
+  "seconde": 1203.1,
   "reseau": "safti",
-  "departement": "71",
-  "visitees": 4,
-  "gardes": 4,
+  "departement": "25",
+  "visitees": 20,
+  "gardes": 18,
   "tronquee": true,
   "etats": {
-   "garde": 4,
+   "garde": 18,
    "vendu": 0,
    "ecarte": 0,
-   "illisible": 0
+   "illisible": 2
   },
   "motifs": {},
   "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1227.9,
-  "gardes": 100
+  "seconde": 1203.1,
+  "gardes": 131
  }
 ]
