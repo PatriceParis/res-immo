@@ -1099,6 +1099,10 @@
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:studio"
  },
+ "https://immobilieredefrance.com/fr/propriete/location+appartement+berck+t2-de-41-79-m-meuble-a-l-annee+87106781": {
+  "jour": "2026-11-03",
+  "motif": "location"
+ },
  "https://immobilieredefrance.com/fr/propriete/location+appartement+boulogne-sur-mer+location-boulogne-sur-mer-appartement-27-m-2-pieces+85427988": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
@@ -1114,6 +1118,10 @@
  "https://immobilieredefrance.com/fr/propriete/location+appartement+samer+appartement-58m-samer+87444914": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:appartement"
+ },
+ "https://immobilieredefrance.com/fr/propriete/location+commerce+berck+local-commercial-de-64-35-m-proche-plage+85773035": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:local commercial"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-1-chambre+85775262": {
   "jour": "2026-10-21",
@@ -1179,17 +1187,33 @@
   "jour": "2026-10-21",
   "motif": "titre_hors_cible:immeuble de rapport"
  },
+ "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+immeuble-de-rapport-2-f3-et-1-garage+86839668": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:immeuble de rapport"
+ },
  "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+immeuble-de-rapport-a-vendre-belle-opportunite+86872590": {
   "jour": "2026-10-16",
   "motif": "titre_hors_cible:immeuble de rapport"
+ },
+ "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+murs-commerciaux-loues+83184821": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:murs commerciaux"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+locaux-d-activite-entrepots+boulogne-sur-mer+murs-d-un-local-commercial-entierement-renove+83188256": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:local commercial"
  },
+ "https://immobilieredefrance.com/fr/propriete/vente+maison+saint-omer+appt-f3-avec-garage-2-voitures+87033179": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appt"
+ },
  "https://immobilieredefrance.com/fr/propriete/vente+terrain+aire-sur-la-lys+terrain-a-batir-proche-centre-ville+86691962": {
   "jour": "2026-10-16",
   "motif": "titre_hors_cible:terrain a batir"
+ },
+ "https://immobilieredefrance.com/fr/propriete/vente+terrain+bellebrune+terrains-constructibles-viabilises-libres-de-constructeurs+85463862": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:constructeur"
  },
  "https://jfmeyerimmobilier.com/vente/1-pompey/terrain-a-batir/541-exceptionnel-terrain-constructible-a-vendre-a-pompey": {
   "jour": "2026-10-17",
@@ -9179,12 +9203,20 @@
   "jour": "2026-10-31",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/https-www-vente-maison-villa-semiplainpied-soussolcomplet-13000m2-le-parcq-62770-vm2674,VM2674": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/longere-demi-plain-pied-5-pieces-enquin-lez-guinegatte-62145,VM2382": {
   "jour": "2026-10-29",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-1-2-plain-pied-5-pieces-garage-jardin-longuenesse-62219,VM2499": {
   "jour": "2026-10-31",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-1-2-plain-pied-5-pieces-garage40m2-8000m2-aire-sur-la-lys-62120,VM2781": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-1-2-plain-pied-5-pieces-saint-martin-au-laert-62500,VM1960": {
@@ -9311,6 +9343,10 @@
   "jour": "2026-10-29",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-ancienne-longere-semiplainpied-doublegarage-5-pieces-herly-62650,VM2585": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-10-pieces-eperlecques-62910,VM1690": {
   "jour": "2026-10-19",
   "motif": "vendu"
@@ -9329,6 +9365,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-12-pieces-arques-62510,VM1412": {
   "jour": "2026-10-19",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-bourgeoise-12-pieces-cachet-grands-volumes-saint-omer-62500,VM2797": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-14-pieces-saint-omer-62500,VM1732": {
@@ -9415,6 +9455,10 @@
   "jour": "2026-10-24",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-bourgeoise-coeurdeville-saint-omer,VM2802": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-chateau-12-pieces-wizernes-62570,VM1296": {
   "jour": "2026-10-17",
   "motif": "vendu"
@@ -9455,6 +9499,10 @@
   "jour": "2026-10-22",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-contemporaine-passive-basse-consommation-5-pieces-1000m2-moulle-62910,VM2577": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-contemporaine-plainpied-4-pieces-garage-wizernes-62570,VM2299": {
   "jour": "2026-10-29",
   "motif": "vendu"
@@ -9463,8 +9511,20 @@
   "jour": "2026-10-22",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-contemporaine-recente-6-pieces-3000m2-st-omer-et-peripherie-immediate,VM2642": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-de-maitre-10-pieces-blendecques,VM2491": {
   "jour": "2026-10-31",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-de-maitre-10000m2-dependances-blendecques,VM2722": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-de-ville-4-pieces-jardin-saint-omer-62500,VM2771": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-10-pieces,VM1854": {
@@ -9493,6 +9553,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-4-pieces-wizernes-62570,VM2317": {
   "jour": "2026-10-29",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-157m2-jardin-garage-longuenesse-62219,VM2740": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-arques-62510,VM2162": {
@@ -9555,6 +9619,14 @@
   "jour": "2026-10-19",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-dohem-62380,VM2626": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-double-garage-atelier-wavrans-sur-l-aa-62380,VM2734": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-helfaut-62570,VM2370": {
   "jour": "2026-10-29",
   "motif": "vendu"
@@ -9615,6 +9687,10 @@
   "jour": "2026-10-24",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-7-pieces-semiplainpied-1100m2-doublegarage-bellinghem-62129,VM2641": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-7-pieces-semiplainpied-longuenesse-62219,VM2423": {
   "jour": "2026-10-29",
   "motif": "vendu"
@@ -9631,6 +9707,10 @@
   "jour": "2026-10-24",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-8pieces-semiplainpied-garage-proche-saint-omer-saint-martin-lez-tatinghem-62500,VM2667": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-9-pieces,VM1252": {
   "jour": "2026-10-17",
   "motif": "vendu"
@@ -9643,16 +9723,40 @@
   "jour": "2026-10-24",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-demeure-annees1800-renovee-aire-sur-la-lys,VM2695": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-plain-pied-5-pieces-mametz-62120,VM2331": {
   "jour": "2026-10-29",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-recente-plainpied-6-pieces-basse-consommation-1200m-racquinghem,VM2791": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-recente-saint-omer-leulinghem,VM2784": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-semi-plainpied-5-pieces-bellinghem-62129,VM2489": {
   "jour": "2026-10-31",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-semi-plainpied-6-pieces-garages-1590m2-avroult-62560,VM2750": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-semiplainpied-6-pieces-garage-1200m2-flandre-zegerscappel-59470,VM2736": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-semiplainpied-7-pieces-garage-axe-st-omer-aire-sur-la-lys,VM2481": {
   "jour": "2026-10-31",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-semiplainpied-8-pieces-suiteparentale-1hectare-constructible-journy-62850,VM2563": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-maison-de-maitre-10-pieces-axe-st-omer-gravelines-dunkerque,VM2404": {
@@ -9703,6 +9807,10 @@
   "jour": "2026-10-29",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-6-pieces-jardin-proche-centre-saint-omer-62500,VM2693": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-6-pieces-longuenesse-62219,VM1794": {
   "jour": "2026-10-19",
   "motif": "vendu"
@@ -9715,12 +9823,24 @@
   "jour": "2026-10-19",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-4-pieces-jardin-saint-omer-62500,VM2778": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-5-pieces-saint-martin-au-laert-62500,VM1718": {
   "jour": "2026-10-19",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-5-pieces-saint-omer-62500,VM2444": {
   "jour": "2026-10-29",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-6-pieces-jardin-longuenesse-62219,VM2749": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-renovee-jardinet-saint-omer,VM2638": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-plain-pied-3-pieces-longuenesse-62219,VM2036": {
@@ -9733,6 +9853,14 @@
  },
  "https://www.helman-immobilier.com/vente/maison-plain-pied-4-pieces-campagne-les-wardrecques-62120,VM2028": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-plain-pied-5-pieces-jardin-2500m2-garage-dependance-ecques-62129,VM2561": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-plainpied-4-pieces-3700m2-racquinghem-62120,VM2789": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-plainpied-5-pieces-soussol-complet-audomarois-alquines-62850,VM2493": {
@@ -9759,8 +9887,16 @@
   "jour": "2026-10-22",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-propriete-7-pieces-11000m2-axe-saintomer-calais,VM2599": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-propriete-7-pieces-eperlecques-62910,VM1882": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-propriete-8-pieces-ardres-centre-ville-garage-atelier-pavillondechasse-jardin-62610,VM2644": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-propriete-9-pieces-alquines-62850,VM2058": {
@@ -9769,6 +9905,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-propriete-9-pieces-longuenesse-62219,VM1976": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-semimitoyenne-4-pieces-jardin-garage-saint-omer-62500,VM2607": {
+  "jour": "2026-11-03",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-traditionnelle-4-pieces,VM1754": {
@@ -10691,6 +10831,62 @@
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:biens immobiliers"
  },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/1-maison/t6/12610-nancy-maison-de-ville-t6-135m-avec-jardin-et-garage/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/16-parking/t/14962-nancy-hypercentre-parking-en-sous-sol/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t1/20255-3-maisons-special-investisseur-studio-avec-cave-situe-au-4-eme-etage/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t1/8089-nancy-place-du-marche-studio-24m/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/12406-nancy-mon-desert-appartement-2-pieces-42-m/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/12515-nancy-proche-centre-2-pieces-48m-en-rez-de-jardin-avec-terrasse-et-garage-inclus/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/15900-nancy-studio-ou-2-chambres/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/20260-quartier-pepiniere-canal-jolie-t2-avec-cave-10-mm-de-la-place-stanislas/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/7360-a-nancy-grand-appartement-a-acheter-avec-balcon/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/8782-nancy-centre-gare-appartement-2-pieces-48-m/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/9158-nancy-vieille-ville-appartement-2-pieces-35-m/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/9290-nancy-centre-gare-2-pieces-38-m-possibilite-parking/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/9292-nancy-centre-gare-2-pieces-34-m-avec-balcon-possibilite-parking/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t2/9937-nancy-appartement-2-pieces-46m-avec-balcon/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t3/19969-nancy-appartement-t3-place-godefroy-de-bouillon/": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:appartement"
@@ -10699,13 +10895,97 @@
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t3/20245-t3-traversant-de-56-m-avec-vue-imprenable-sur-nancy/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t3/7506-rue-verlaine-appartement-3-pieces-ancien-dernier-etage/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t3/8090-nancy-jeanne-d-arc-appartement-3-pieces-avec-balcons-garage-cave/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t4/11189-nancy-appartement-4-pieces-avec-balcons-garage-cave/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t4/12539-nancy-secteur-charlemagne-t4-81-m-avec-balcon/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
  "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t4/20197-nancy-bel-appartement-de-4-pieces-de-95-m/": {
   "jour": "2026-10-18",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t5/7177-nancy-grand-appartement-5-pieces-de-125m-avec-garage-cave-balcon/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/2-appartement/t6/20243-nancy-commanderie-120-m-4-chambres/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/21-immeuble/t/12517-nancy-artem-thermal-immeuble-de-rapport-8-logements-deux-pieces-345m/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/21-immeuble/t/8256-nancy-immeuble-257-m-habitables-et-jardin/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/21-immeuble/t/9293-nancy-proche-centre-quartier-mon-desert-immeuble-de-rapport/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/1-nancy/21-immeuble/t/9294-rare-nancy-immeuble-de-rapport-14-logements/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/164-st-max/2-appartement/t3/17085-saint-max-quartier-match-joli-t3-avec-cave-au-rdc-acces-ascenseur/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/164-st-max/2-appartement/t4/20215-parc-de-saurupt-t4-au-dernier-etage-avec-balcon-cave-et-stationnement/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/268-champigneulles/21-immeuble/t/10551-proche-nancy-immeuble-de-rapport-bonne-rentabilite/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/301-essey-les-nancy/2-appartement/t1/20203-vendu-loue-pour-investisseur-essey-les-nancy/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/301-essey-les-nancy/2-appartement/t3/20259-essey-kleber-magnifique-appartement-de-3-piece-lumineux-de-65-53-m/": {
+  "jour": "2026-11-03",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/304-vandoeuvre-les-nancy/2-appartement/t1/20239-axe-velodrome-brabois-appartement-t2-49-m-avec-cave-et-place-de-parking/": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/304-vandoeuvre-les-nancy/2-appartement/t4/20262-vandoeuvre-velodrome-un-appartement-a-rafraichir-de-4-pieces-lumineux-de-63-53-m-situe-au-rdc-avec-cave-et/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/320-villers-les-nancy/1-maison/t6/15797-maison-villers-les-nancy-125-m-habitable/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/4-laxou/2-appartement/t2/20256-en-exclusivite-a-laxou-grand-t2-de-70-m-lumineux-spacieux-il-n-attend-plus-que-vous/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/4-laxou/2-appartement/t3/19800-baisse-de-prix-laxou-emile-zola-t3-en-duplex/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/61-malzeville/16-parking/t/19713-malzeville-saint-max-parc-de-libremont-une-place-de-parking-aerienne/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:parking"
  },
  "https://www.immoconseil-debever.com/vente/maisons/1": {
   "jour": "2026-10-18",
@@ -11218,6 +11498,18 @@
  "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/2-appartement/t3/6519-vendome/": {
   "jour": "2026-10-18",
   "motif": "vendu"
+ },
+ "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/4-studio/6642-vendome/": {
+  "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/43-terrain-a-batir/6358-nord-vendome/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:terrain a batir"
+ },
+ "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/43-terrain-a-batir/6564-ouest-vendome/": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:terrain a batir"
  },
  "https://www.indicateurvendomois.com/vente/maisons-villas/1": {
   "jour": "2026-10-16",
@@ -12679,6 +12971,10 @@
   "jour": "2026-10-17",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.lemaistre-immo.fr/vente-achat/appartement-le-havre-76600/61680098.htm": {
+  "jour": "2026-11-03",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.lemaistre-immo.fr/vente-achat/appartement-rouen-76000/60325605.htm": {
   "jour": "2026-10-17",
   "motif": "titre_hors_cible:appartement"
@@ -12689,6 +12985,10 @@
  },
  "https://www.lemaistre-immo.fr/vente-achat/appartement-rouen-76100/61635709.htm": {
   "jour": "2026-10-20",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.lemaistre-immo.fr/vente-achat/appartement-yvetot-76190/61338708.htm": {
+  "jour": "2026-11-03",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.lemaistre-immo.fr/vente-achat/appartement-yvetot-76190/61654328.htm": {

@@ -211996,7 +211996,7 @@
    "https://a.tile.openstreetmap.org/16/33636/22650.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212088,7 +212088,7 @@
    "https://b.tile.openstreetmap.org/16/33703/22716.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212165,7 +212165,7 @@
    "https://b.tile.openstreetmap.org/16/33738/22765.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212294,6 +212294,16 @@
   "densite_hab_km2": 4986.4,
   "dpe": null,
   "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
    "nucleaire_km": 130.3,
    "nucleaire_nom": "Chinon"
   },
@@ -212314,7 +212324,7 @@
    "https://www.hamaris.fr/wp-content/uploads/2026/10/2012.10.20_VISUEL_OFFRE-GARAGE_SITE_2.jpg"
   ],
   "vue_le": "2026-09-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212386,7 +212396,7 @@
    "https://b.tile.openstreetmap.org/16/33673/22731.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212459,7 +212469,7 @@
    "https://c.tile.openstreetmap.org/16/33649/22669.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212511,7 +212521,7 @@
   "plusieurs_biens": false,
   "lat": 48.036528,
   "lon": 5.354463,
-  "altitude": 417.0,
+  "altitude": 419.0,
   "densite_hab_km2": 64.4,
   "dpe": null,
   "risques": {
@@ -212526,7 +212536,7 @@
    "https://b.tile.openstreetmap.org/16/33738/22765.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212593,7 +212603,7 @@
    "https://b.tile.openstreetmap.org/16/33706/22683.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212793,7 +212803,7 @@
   "plusieurs_biens": false,
   "lat": 50.763422,
   "lon": 2.275524,
-  "altitude": 2.0,
+  "altitude": 1.0,
   "densite_hab_km2": 872.2,
   "dpe": "C",
   "risques": {
@@ -212811,7 +212821,7 @@
    "https://img.netty.immo/helman/assets//agence/agence_20210915155747_90942_6772cc122_2@2560x1440.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -212973,7 +212983,7 @@
    "https://img.netty.immo/helman/assets//agence/agence_20210915155747_90942_6772cc122_2@2560x1440.jpg"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -217149,7 +217159,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 58.4,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/09/29/01a0ed17c076211f030e778c82bc3cf5.jpg?format=jpeg&width=1200",
@@ -219856,7 +219876,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 60.3,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/08/04/019fccfad695b73d90a6524f7f6a15e1.jpg?format=jpeg&width=1200",
@@ -220528,7 +220558,17 @@
   "dpe": "F",
   "risques": {
    "nucleaire_km": 103.5,
-   "nucleaire_nom": "Chooz"
+   "nucleaire_nom": "Chooz",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/09/04/01a06cb6729e9fb049473432caf81032.jpg?format=jpeg&width=1200",
@@ -221765,7 +221805,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 54.6,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/11/02/01a19c183b51335ae3ea25f27eac2621.jpg?format=jpeg&width=1200",
@@ -472349,7 +472399,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 74.2,
-   "nucleaire_nom": "Penly"
+   "nucleaire_nom": "Penly",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/11/02/01a19bdfee6e81ae12890f7eff40c083.jpg?format=jpeg&width=1200",
@@ -588197,7 +588257,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 153.4,
-   "nucleaire_nom": "Cattenom"
+   "nucleaire_nom": "Cattenom",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/07/21/019f843a15f649d489af49b225b602cf.jpg?format=jpeg&width=1200",
@@ -593950,7 +594020,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 147.7,
-   "nucleaire_nom": "Cattenom"
+   "nucleaire_nom": "Cattenom",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/10/21/01a15f5580962e6e9cf1e0f5450184ae.jpg?format=jpeg&width=1200",
@@ -618388,7 +618468,7 @@
   "plusieurs_biens": false,
   "lat": 50.411178,
   "lon": 1.58198,
-  "altitude": 13.0,
+  "altitude": 9.0,
   "densite_hab_km2": 894.1,
   "dpe": null,
   "risques": {
@@ -618445,7 +618525,7 @@
    "https://www.immocotedopale.com/vente/31-groffliers/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -618497,7 +618577,7 @@
   "plusieurs_biens": false,
   "lat": 50.411178,
   "lon": 1.58198,
-  "altitude": 9.0,
+  "altitude": 13.0,
   "densite_hab_km2": 894.1,
   "dpe": null,
   "risques": {
@@ -618550,7 +618630,7 @@
    "https://www.immocotedopale.com/vente/15-berck/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -618645,7 +618725,7 @@
    "https://www.immocotedopale.com/vente/27-boulogne-sur-mer/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -618756,7 +618836,7 @@
    "https://www.immocotedopale.com/vente/21-cucq/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -618860,7 +618940,7 @@
   ],
   "vue_le": "2026-08-11",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -618911,7 +618991,7 @@
   "plusieurs_biens": false,
   "lat": 50.411178,
   "lon": 1.58198,
-  "altitude": 9.0,
+  "altitude": 13.0,
   "densite_hab_km2": 894.1,
   "dpe": null,
   "risques": {
@@ -618948,7 +619028,7 @@
    "https://www.immocotedopale.com/vente/15-berck/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -619000,7 +619080,7 @@
   "plusieurs_biens": false,
   "lat": 50.411178,
   "lon": 1.58198,
-  "altitude": 13.0,
+  "altitude": 9.0,
   "densite_hab_km2": 894.1,
   "dpe": null,
   "risques": {
@@ -619033,7 +619113,7 @@
    "https://www.immocotedopale.com/vente/15-berck/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -619121,13 +619201,13 @@
   "id": "immo-conseil-debever-02b22a2f1d57",
   "source": "immo-conseil-debever",
   "url": "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/86-jarville-la-malgrange/1-maison/t6/19294-centre-de-jarville-la-malgrange-belle-maison-a-renover-de-7-pieces-avec-garage-et-jardin/",
-  "titre": "CENTRE DE JARVILLE LA MALGRANGE BELLE MAISON A RENOVER DE 7 PIECES AVEC GARAGE ET JARDIN.",
+  "titre": "Maison 6pièce(s) 5chambre(s) 140 m² Jarville-la-Malgrange (54140)",
   "description": null,
   "type_bien": "maison",
   "prix": 219000,
   "surface_m2": 140.0,
   "terrain_m2": 350.0,
-  "pieces": 7,
+  "pieces": 6,
   "commune": "Jarville-la-Malgrange",
   "code_postal": "54140",
   "departement": "54",
@@ -619182,6 +619262,7 @@
    "source": "georisques"
   },
   "photos": [
+   "https://immo-debever.staticlbi.com/600xauto/images/1/76402bbf8b6a137010da9e51258921ca/photo_594c1548983aaa99852b174f100ec5db.png",
    "https://immo-debever.staticlbi.com/1200xauto/images/biens/1/76402bbf8b6a137010da9e51258921ca/photo_594c1548983aaa99852b174f100ec5db.png",
    "https://immo-debever.staticlbi.com/1600xauto/images/biens/1/76402bbf8b6a137010da9e51258921ca/photo_594c1548983aaa99852b174f100ec5db.png",
    "https://immo-debever.staticlbi.com/1600xauto/images/biens/1/76402bbf8b6a137010da9e51258921ca/photo_7839f2cd4d34c2b8819090180f15a326.jpg",
@@ -619265,7 +619346,7 @@
    "https://www.immoconseil-debever.com/vente/54-meurthe-et-moselle/86-jarville-la-malgrange/1-maison/t6/19294-centre-de-jarville-la-malgrange-belle-maison-a-renover-de-7-pieces-avec-garage-et-jardin/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -619376,7 +619457,7 @@
   ],
   "vue_le": "2026-08-07",
   "revue_le": "2026-10-04",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": 222000,
   "prix_baisse_le": "2026-09-26"
  },
@@ -619466,7 +619547,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -619601,7 +619682,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -619721,7 +619802,7 @@
   ],
   "vue_le": "2026-10-13",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -619838,7 +619919,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-09-16",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -619946,7 +620027,7 @@
   ],
   "vue_le": "2026-10-13",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -620042,7 +620123,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -620143,7 +620224,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-09-16",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -620245,7 +620326,7 @@
   ],
   "vue_le": "2026-08-07",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -620341,7 +620422,7 @@
   ],
   "vue_le": "2026-09-16",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -620444,7 +620525,7 @@
    "https://www.immocoupdecoeur3.fr/vente/339-st-germain/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -620596,7 +620677,7 @@
   "plusieurs_biens": false,
   "lat": 48.277223,
   "lon": 4.050881,
-  "altitude": 111.0,
+  "altitude": 110.0,
   "densite_hab_km2": 2219.6,
   "dpe": "D",
   "risques": {
@@ -620656,7 +620737,7 @@
    "https://www.immocoupdecoeur3.fr/vente/339-st-germain/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -620766,7 +620847,7 @@
    "https://www.immocoupdecoeur3.fr/vente/341-st-lye/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -620818,7 +620899,7 @@
   "plusieurs_biens": false,
   "lat": 48.316787,
   "lon": 4.04803,
-  "altitude": 104.0,
+  "altitude": 108.0,
   "densite_hab_km2": 1203.3,
   "dpe": "D",
   "risques": {
@@ -620866,7 +620947,7 @@
    "https://www.immocoupdecoeur3.fr/vente/393-mergey/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -621024,7 +621105,7 @@
   "plusieurs_biens": false,
   "lat": 48.277223,
   "lon": 4.050881,
-  "altitude": 110.0,
+  "altitude": 111.0,
   "densite_hab_km2": 2219.6,
   "dpe": null,
   "risques": {
@@ -621083,7 +621164,7 @@
    "https://www.immocoupdecoeur3.fr/vente/339-st-germain/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -621175,7 +621256,7 @@
    "https://www.immocoupdecoeur3.fr/vente/397-montaulin/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -621404,7 +621485,7 @@
    "https://www.immocoupdecoeur3.fr/vente/212-vanlay/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -621456,7 +621537,7 @@
   "plusieurs_biens": false,
   "lat": 48.292817,
   "lon": 4.075149,
-  "altitude": 114.0,
+  "altitude": 106.0,
   "densite_hab_km2": 4670.4,
   "dpe": null,
   "risques": {
@@ -621505,7 +621586,7 @@
    "https://www.immocoupdecoeur3.fr/vente/534-chavanges/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -621808,23 +621889,116 @@
   "prix_baisse_le": ""
  },
  {
-  "id": "immobili-re-de-france-1e0ab2133df4",
+  "id": "immobili-re-de-france-3575413a14e4",
   "source": "immobili-re-de-france",
-  "url": "https://immobilieredefrance.com/fr/propriete/location+appartement+equihen-plage+duplex-de-52m2-vue-mer+83882491",
-  "titre": "Duplex de 52m2 vue mer",
+  "url": "https://immobilieredefrance.com/fr/propriete/vente+maison+saint-omer+propriete-8-chambres-garage-et-parc+87474323",
+  "titre": "Propriété 8 chambres garage et parc",
   "description": null,
-  "type_bien": "maison",
-  "prix": null,
-  "surface_m2": 52.0,
-  "terrain_m2": null,
-  "pieces": null,
-  "commune": "Le Portel",
-  "code_postal": "62480",
+  "type_bien": "propriété",
+  "prix": 286000,
+  "surface_m2": 360.0,
+  "terrain_m2": 1240.0,
+  "pieces": 23,
+  "commune": "Saint-Omer",
+  "code_postal": "62500",
   "departement": "62",
   "region": "Hauts-de-France",
   "agence": "Immobilière de France",
   "agence_url": "https://immobilieredefrance.com",
-  "photo": "https://media.apimo.pro/cache/ac8f6aeded40cdf0560f82e4e23f085e_9f9629969d_1920-original.jpg",
+  "photo": "https://media.apimo.pro/cache/2c1edff5e1d4d631e0e2dea14937d68a_eedf4da354_1920-original.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": true,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": true,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 50.763422,
+  "lon": 2.275524,
+  "altitude": 1.0,
+  "densite_hab_km2": 872.2,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 29.8,
+   "nucleaire_nom": "Gravelines"
+  },
+  "photos": [
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/59ca2ecc20e2580b8eae10dabe7b5ac6.webp",
+   "https://media.apimo.pro/cache/2c1edff5e1d4d631e0e2dea14937d68a_eedf4da354_1920-original.jpg",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/48ef06d9a878f95ad5929c3efc1b8d93.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/d42d637fa500562d7dfaee7d56551623.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/19678c5c7b17e029116491ac07f51851.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/a67684efe5a1e60b5ec5987fc2da3906.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/3ca34fd6a11a91cb6792ece353c5546c.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/550207faeb75501d289269857d0bb3e0.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/4d71d3f8372373dab7edb00a363a89cd.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/1e69a638a749f77ea452c01222cd34dc.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/e50844827d288a086daf3477b8c39faf.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/5b3d5a0f2c44c5dc3f1510369a962eb8.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/35499dd41abdfe76395c890a2c1d35ce.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/7d43451f1b3b3431293fc5ff78261cfd.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/69f7095abfc7dee6c4d9664ac8728962.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/f8db337a9dce567d8bd46e652627a899.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/31cccea6d3b8455d8f2bb731f8518f6c.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/81831d3880b4d34c9494b062d14541e6.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/47a21fb6d4fcda8b469d51e66c60b303.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/41dace03c75c60157ca3c9b6ed719da7.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/bdcd503084efb0ddf5eb229bea720e8b.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/598820abf1a0ca3f8b70682028485bc4.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/99db2ea56e1ad243f2372e6483e614a8.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/b130256bfdf976fd064a939051d276a9.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/55b113bae04af74ed81201ef57b97520.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/dbc4dd56b997f08648ef2fcca1e05590.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/a52394be826c91f7051961a4637119fa.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/e6eaffd5be574304350476d81ab2c45b.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/dc7b2a19cc38c7f83ec1d2a033835025.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/003b06db7d5d696ed321051cb343190e.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/ec4a220ab44d245a04c27fa29807e0f0.webp"
+  ],
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "immobili-re-de-france-358db9b24adb",
+  "source": "immobili-re-de-france",
+  "url": "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+87450886",
+  "titre": "NOUVEAUTÉ ! Immeuble à vendre libre de toute occupation",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 169000,
+  "surface_m2": 101.0,
+  "terrain_m2": null,
+  "pieces": null,
+  "commune": "Boulogne-sur-Mer",
+  "code_postal": "62200",
+  "departement": "62",
+  "region": "Hauts-de-France",
+  "agence": "Immobilière de France",
+  "agence_url": "https://immobilieredefrance.com",
+  "photo": "https://media.apimo.pro/cache/99913921ba251d07ba80386a8e7aea9f_3ede3b79ee_1920-original.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -621849,45 +622023,53 @@
    "isolement": false,
    "autonomie": false
   },
-  "etat_declare": "inconnu",
+  "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "lat": 50.712174,
-  "lon": 1.57873,
-  "altitude": 33.0,
-  "densite_hab_km2": 2259.6,
+  "lat": 50.726334,
+  "lon": 1.607492,
+  "altitude": 18.0,
+  "densite_hab_km2": 5205.4,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 51.3,
-   "nucleaire_nom": "Gravelines",
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": null,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": true,
-   "portee": "commune",
-   "source": "georisques"
+   "nucleaire_km": 48.7,
+   "nucleaire_nom": "Gravelines"
   },
   "photos": [
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/21a160113ff6eaa67b06c3d81c7ff8b9.webp",
-   "https://media.apimo.pro/cache/ac8f6aeded40cdf0560f82e4e23f085e_9f9629969d_1920-original.jpg",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/73132b6691782a02d65cb3009914554e.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/e5250ad5384074d277690b01ef1d10fb.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/b5ecfbee2a0c3929daa37426787c4340.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/f6dfcc2acc6915f62a67a2433e93560e.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/8038fa7520f1968fbd93e431034bc456.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/9e9fd5233c925c156164a374188b8124.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/27e7dfee94effad5d7298ab0f1f3266a.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/a1a397431e69de17c93192ba62c1f815.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/ba6283ce7fd7cb44fbcd206aa0c82d61.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/b806072eac80e7f20b178216f2de9c05.jpg"
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/1243304abae1e0967feb2f8ec8994fc5.webp",
+   "https://media.apimo.pro/cache/99913921ba251d07ba80386a8e7aea9f_3ede3b79ee_1920-original.jpg",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/e150cc07ffbfcb503d432c7ef81430f5.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/09cbf7b867cc9ad60719512d41da7b8f.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/f15930e1eed21e2809fe9cfbc2993320.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/6c107b09eb5109a8059c022d79ee725b.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/fcb559032d9c8d842a8b749fda7e2548.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/f17da69881560e33671535911445f8b0.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/e6fe3dc078c8d67c44145e2e6a110201.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/80ecd4aefcbf3803367753887928fcb1.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/c4a37338e985058a123a418e0840f82f.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/21cdd444b72d6a0e40b388e7599a19fe.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/70c3bf5ce238fd1bf7e75ba97109af94.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/c68fcce12fd84abca3fdaa8e338b0948.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/cb7dd35983d1ff5d5fecd704e8a29d40.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/44c76e058d5688b1a768f9fc48e809f3.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/d666cbf740ffbe6f9e67a6f73cd1899d.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/5495c201a8c9d0f92ed4d3688c896823.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/03bca96e1ddd55c0b114228450fd2e24.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/878f205d7f2c7e8dd22117cde8b65aaf.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/ccd80bf51ed1950bf5c4bb01ff4dc90b.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/62c76b678e6f5eba8895a5ab68106fd8.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/abeb8e51aee820c2edd0eec541f597fb.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/028909ec0d9828285f0f872e148a2520.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/405aaa3ad0a8e5ee8a17454336f270c2.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/fd1acb69db666b79a51f8ef1b36dffe7.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/7b2fdace661b2e3d24d73a69d22a93f6.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/fa6c4d106dfaee60a4d2cebd0cbc41c4.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/859bec3fe910433271862bcc17f52348.webp",
+   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/65daeaaa9ea3908d6837df1936a13fec.jpg"
   ],
-  "vue_le": "2026-10-21",
-  "revue_le": "2026-10-28",
-  "absences": 1,
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
+  "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -621975,7 +622157,7 @@
   ],
   "vue_le": "2026-10-31",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -622065,7 +622247,7 @@
   ],
   "vue_le": "2026-10-31",
   "revue_le": "2026-10-31",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -622138,154 +622320,6 @@
   ],
   "vue_le": "2026-10-31",
   "revue_le": "2026-10-31",
-  "absences": 0,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "immobili-re-de-france-a3d6db60fc88",
-  "source": "immobili-re-de-france",
-  "url": "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+83192993",
-  "titre": "INVESTISSEMENT ! Immeuble à usage de commerce et d'Habitation",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 286200,
-  "surface_m2": 300.0,
-  "terrain_m2": null,
-  "pieces": null,
-  "commune": "Boulogne-sur-Mer",
-  "code_postal": "62200",
-  "departement": "62",
-  "region": "Hauts-de-France",
-  "agence": "Immobilière de France",
-  "agence_url": "https://immobilieredefrance.com",
-  "photo": "https://media.apimo.pro/cache/b515db46612ca11667663c5c1c57ca86_9e5fcc266b_399-original.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "inconnu",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 50.726334,
-  "lon": 1.607492,
-  "altitude": 18.0,
-  "densite_hab_km2": 5205.4,
-  "dpe": null,
-  "risques": {
-   "nucleaire_km": 48.7,
-   "nucleaire_nom": "Gravelines"
-  },
-  "photos": [
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/b07532cf692bbfa55d41cb0095de4c27.webp",
-   "https://media.apimo.pro/cache/b515db46612ca11667663c5c1c57ca86_9e5fcc266b_399-original.jpg",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/6a3f1dd57b127c4d7a8588df112e3d61.jpg"
-  ],
-  "vue_le": "2026-10-25",
-  "revue_le": "2026-10-28",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "immobili-re-de-france-b427c330f0ee",
-  "source": "immobili-re-de-france",
-  "url": "https://immobilieredefrance.com/fr/propriete/vente+maison+longuenesse+87334815",
-  "titre": "Vente immobilière : Maison de ville à Longuenesse 5 pièces 125 m² 225 130 €- AGENCE BLONDEL - L'IMMOBILIERE DE FRANCE.",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 225130,
-  "surface_m2": 125.0,
-  "terrain_m2": 517.0,
-  "pieces": 5,
-  "commune": "Saint-Omer",
-  "code_postal": "62500",
-  "departement": "62",
-  "region": "Hauts-de-France",
-  "agence": "Immobilière de France",
-  "agence_url": "https://immobilieredefrance.com",
-  "photo": "https://media.apimo.pro/cache/5c0f9964f152cab67bf564baedef200d_b5a088c5a2_960-original.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "inconnu",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 50.763422,
-  "lon": 2.275524,
-  "altitude": 1.0,
-  "densite_hab_km2": 872.2,
-  "dpe": null,
-  "risques": {
-   "nucleaire_km": 29.8,
-   "nucleaire_nom": "Gravelines"
-  },
-  "photos": [
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/d440c68186fdf15a5bd84fd6cb44f6a0.webp",
-   "https://media.apimo.pro/cache/5c0f9964f152cab67bf564baedef200d_b5a088c5a2_960-original.jpg",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/237875f3d3c12223f9df67f939d9628e.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/90fc53f25f6b63d2e30105081c90df51.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/4f604194783fa28f57ce8b0a448ae36d.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/552d4d5515014a48c6b501bb15ed840b.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/8f0cec4c3c0417f1a78257d0a1a6669b.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/b972eaeb14a225f22a39e3fa08719f2a.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/69a85f8e532c09d9836d0db35c58504f.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/85d6658cfd57c520fd7bca217c4cdb62.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/2e24a14097e189a9ea31d1cb0e80de80.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/da793e197b0337f67452042c333b5e48.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/c7401c85205499744f77998bca65c151.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/081821ca107bec70c40ee0d6edd0ea90.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/0a3f3c9dc17688f25e659865387f08b8.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/a5b1a311fc618f8f2e50008535c2f9ef.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/9a054d69fa562fdcca32b73e3772255e.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/75ff9c1636b5f6dd1a261f74b0d7bc15.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/7760b9dfef6e204ad6eb39f7ec37b042.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/df93c8e9128c655d674d5db902d1bc4e.webp",
-   "https://d36vnx92dgl2c5.cloudfront.net/prod/Stax/2912/media/5a383854d01e382710f9995002ac0a24.webp"
-  ],
-  "vue_le": "2026-10-25",
-  "revue_le": "2026-10-28",
   "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -622337,7 +622371,7 @@
   "plusieurs_biens": false,
   "lat": 48.841321,
   "lon": 6.065457,
-  "altitude": 200.0,
+  "altitude": 199.0,
   "densite_hab_km2": 254.2,
   "dpe": null,
   "risques": {
@@ -622464,7 +622498,7 @@
    "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -622516,7 +622550,7 @@
   "plusieurs_biens": false,
   "lat": 48.841321,
   "lon": 6.065457,
-  "altitude": 200.0,
+  "altitude": 199.0,
   "densite_hab_km2": 254.2,
   "dpe": null,
   "risques": {
@@ -622599,7 +622633,7 @@
    "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -622651,7 +622685,7 @@
   "plusieurs_biens": false,
   "lat": 48.841321,
   "lon": 6.065457,
-  "altitude": 199.0,
+  "altitude": 200.0,
   "densite_hab_km2": 254.2,
   "dpe": null,
   "risques": {
@@ -622742,7 +622776,7 @@
    "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -622794,7 +622828,7 @@
   "plusieurs_biens": false,
   "lat": 48.817171,
   "lon": 6.101349,
-  "altitude": 192.0,
+  "altitude": 196.0,
   "densite_hab_km2": 146.0,
   "dpe": null,
   "risques": {
@@ -622886,7 +622920,7 @@
    "https://www.immoscarponaise.fr/vente/130-belleville/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -622938,7 +622972,7 @@
   "plusieurs_biens": false,
   "lat": 48.619336,
   "lon": 6.106616,
-  "altitude": 232.0,
+  "altitude": 241.0,
   "densite_hab_km2": 1468.4,
   "dpe": null,
   "risques": {
@@ -623086,7 +623120,7 @@
    "https://www.immoscarponaise.fr/vente/209-chavigny/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -623138,7 +623172,7 @@
   "plusieurs_biens": false,
   "lat": 48.841321,
   "lon": 6.065457,
-  "altitude": 199.0,
+  "altitude": 200.0,
   "densite_hab_km2": 254.2,
   "dpe": null,
   "risques": {
@@ -623237,7 +623271,7 @@
    "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -623289,7 +623323,7 @@
   "plusieurs_biens": false,
   "lat": 48.841321,
   "lon": 6.065457,
-  "altitude": 199.0,
+  "altitude": 200.0,
   "densite_hab_km2": 254.2,
   "dpe": null,
   "risques": {
@@ -623416,7 +623450,7 @@
    "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-09-03",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -623630,7 +623664,7 @@
    "https://www.immoscarponaise.fr/vente/160-jezainville/maison/images/partners/seeif.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -623782,7 +623816,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2025/11/IMG_9426-82x60.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -623857,7 +623891,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2026/09/IMG_2776-Petit-244x163.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -624194,7 +624228,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2026/09/IMG_2776-Petit-244x163.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -624258,7 +624292,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2025/11/IMG_9414-244x163.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -624406,7 +624440,7 @@
   "plusieurs_biens": false,
   "lat": 46.580769,
   "lon": 1.496044,
-  "altitude": 172.0,
+  "altitude": 171.0,
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
@@ -624419,7 +624453,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2025/08/IMG_7622-244x163.jpg"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -625223,7 +625257,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2026/06/IMG_1519-Petit.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 176550,
   "prix_baisse_le": "2026-10-31"
@@ -625275,7 +625309,7 @@
   "plusieurs_biens": false,
   "lat": 46.580769,
   "lon": 1.496044,
-  "altitude": 171.0,
+  "altitude": 172.0,
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
@@ -625307,7 +625341,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2026/10/Ahq95xxf0zt6mnwe_22-82x60.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -625597,7 +625631,7 @@
   "plusieurs_biens": false,
   "lat": 46.580769,
   "lon": 1.496044,
-  "altitude": 172.0,
+  "altitude": 171.0,
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
@@ -625629,7 +625663,7 @@
    "https://immobilier-center.fr/wp-content/uploads/2026/10/IMG_2942-Petit.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626043,7 +626077,7 @@
    "https://img.netty.immo/company53848lmf/assets/nego/126@640x480.jpg?cache=1747127524"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626112,7 +626146,7 @@
    "https://img.netty.immo/company53848lmf/assets/nego/126@640x480.jpg?cache=1747127524"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626322,7 +626356,7 @@
   "plusieurs_biens": false,
   "lat": 47.684245,
   "lon": 6.496245,
-  "altitude": 295.0,
+  "altitude": 292.0,
   "densite_hab_km2": 319.3,
   "dpe": "C",
   "risques": {
@@ -626349,7 +626383,7 @@
    "https://img.netty.immo/company53848lmf/assets/nego/126@640x480.jpg?cache=1747127524"
   ],
   "vue_le": "2026-09-03",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626510,7 +626544,7 @@
   "type_bien": "maison",
   "prix": 34000,
   "surface_m2": 110.0,
-  "terrain_m2": 903.0,
+  "terrain_m2": 817.0,
   "pieces": 9,
   "commune": "Vauvillers",
   "code_postal": "70210",
@@ -626522,7 +626556,7 @@
   "features": {
    "cave": true,
    "puits": false,
-   "eau_proximite": true,
+   "eau_proximite": false,
    "recuperation_pluie": false,
    "bois": false,
    "poele_de_masse": false,
@@ -626538,7 +626572,7 @@
    "vigne": false,
    "ruches": false,
    "pierre": false,
-   "pompe_chaleur": false,
+   "pompe_chaleur": true,
    "assainissement": false,
    "isolement": false,
    "autonomie": false
@@ -626548,7 +626582,7 @@
   "plusieurs_biens": false,
   "lat": 47.921391,
   "lon": 6.098597,
-  "altitude": 295.0,
+  "altitude": 301.0,
   "densite_hab_km2": 63.3,
   "dpe": "G",
   "risques": {
@@ -626573,19 +626607,19 @@
    "https://img.netty.immo/productcw/company53848lmf/2/VM510/maison-maison-de-village-9-pieces-demangevelle-70210-1747753801-VM510_5_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM510/maison-maison-de-village-9-pieces-demangevelle-70210-1747753801-VM510_6_original.jpg",
    "https://img.netty.immo/company53848lmf/assets/nego/104@236x320.jpg?cache=1747127476",
+   "https://img.netty.immo/productcw/company53848lmf/6/VM13082/maison-individuelle-5-pieces-magny-vernois-70200-1779646634-VM13082_2_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13305/maison-7-pieces-la-corbiere-70300-1793265260-VM13305_19_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13288/maison-individuelle-4-pieces-luxeuil-les-bains-70300-1792512199-VM13288_37_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12746/maison-6-pieces-lure-70200-1792510970-VM12746_37_original.jpg",
-   "https://img.netty.immo/productcw/company53848lmf/2/VM13181/maison-6-pieces-saint-loup-sur-semouse-70800-1790847037-VM13181_15_original.jpg",
+   "https://img.netty.immo/productcw/company53848lmf/2/VM13181/maison-6-pieces-saint-loup-sur-semouse-70800-1793626567-VM13181_19_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12795/maison-maison-de-campagne-3-pieces-fontaine-les-luxeuil-70800-1792427250-VM12795_43_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13276/maison-maison-de-ville-6-pieces-fougerolles-saint-valbert-70220-1791531495-VM13276_36_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12776/maison-maison-de-village-5-pieces-fontaine-les-luxeuil-70800-1782806345-VM12776_44_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/6/VM13173/maison-mitoyenne-1-cote-5-pieces-servance-miellin-70440-1786111777-VM13173_55_original.jpg",
-   "https://img.netty.immo/productcw/company53848lmf/6/VM13174/maison-mitoyenne-1-cote-5-pieces-servance-miellin-70440-1786112911-VM13174_37_original.jpg",
-   "https://img.netty.immo/productcw/company53848lmf/6/VM13180/maison-ancienne-4-pieces-fougerolles-saint-valbert-70220-1788508894-VM13180_52_original.jpg"
+   "https://img.netty.immo/productcw/company53848lmf/6/VM13174/maison-mitoyenne-1-cote-5-pieces-servance-miellin-70440-1786112911-VM13174_37_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626743,7 +626777,7 @@
    "https://img.netty.immo/company53848lmf/assets/nego/126@640x480.jpg?cache=1747127524"
   ],
   "vue_le": "2026-09-30",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626759,7 +626793,7 @@
   "surface_m2": 340.0,
   "terrain_m2": 1253.0,
   "pieces": 8,
-  "commune": "Lure",
+  "commune": null,
   "code_postal": "70200",
   "departement": "70",
   "region": "Bourgogne-Franche-Comté",
@@ -626793,10 +626827,10 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "lat": 47.684245,
-  "lon": 6.496245,
-  "altitude": 292.0,
-  "densite_hab_km2": 319.3,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
   "dpe": "E",
   "risques": {
    "nucleaire_km": 193.6,
@@ -626822,17 +626856,17 @@
    "https://img.netty.immo/company53848lmf/assets/nego/110@551x640.jpg?cache=1792137671",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12746/maison-6-pieces-lure-70200-1792510970-VM12746_37_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13209/maison-plain-pied-4-pieces-lure-70200-1788357979-VM13209_103_original.jpg",
+   "https://img.netty.immo/productcw/company53848lmf/2/VM13311/maison-mitoyenne-1-cote-6-pieces-corbenay-70320-1793624021-VM13311_37_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13305/maison-7-pieces-la-corbiere-70300-1793265260-VM13305_19_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13303/maison-maison-bourgeoise-8-pieces-luxeuil-les-bains-70300-1793123635-VM13303_80_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12797/maison-8-pieces-quers-70200-1793022383-VM12797_21_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13300/maison-maison-de-maitre-6-pieces-raddon-et-chapendu-70280-1792757200-VM13300_105_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13262/maison-propriete-6-pieces-esboz-brest-70300-1792066194-VM13262_84_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13265/maison-plain-pied-6-pieces-luxeuil-les-bains-70300-1792515608-VM13265_33_original.jpg",
-   "https://img.netty.immo/productcw/company53848lmf/6/VM13020/maison-6-pieces-quers-70200-1780063193-VM13020_49_original.jpg",
-   "https://img.netty.immo/productcw/company53848lmf/2/VM12959/maison-maison-de-village-10-pieces-fontaine-les-luxeuil-70800-1772615610-VM12959_16_original.jpg"
+   "https://img.netty.immo/productcw/company53848lmf/6/VM13020/maison-6-pieces-quers-70200-1780063193-VM13020_49_original.jpg"
   ],
   "vue_le": "2026-09-10",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626909,7 +626943,7 @@
    "https://img.netty.immo/productcw/company53848lmf/2/VM644/maison-12-pieces-saint-loup-sur-semouse-70800-1747753801-VM644_4_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM644/maison-12-pieces-saint-loup-sur-semouse-70800-1747753801-VM644_5_original.jpg",
    "https://img.netty.immo/company53848lmf/assets/nego/110@551x640.jpg?cache=1792137671",
-   "https://img.netty.immo/productcw/company53848lmf/2/VM13181/maison-6-pieces-saint-loup-sur-semouse-70800-1790847037-VM13181_15_original.jpg",
+   "https://img.netty.immo/productcw/company53848lmf/2/VM13181/maison-6-pieces-saint-loup-sur-semouse-70800-1793626567-VM13181_19_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM302/maison-ancienne-3-pieces-saint-loup-sur-semouse-70800-1747753801-VM302_1_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM12823/maison-ancienne-14-pieces-saint-loup-sur-semouse-70800-1774298507-VM12823_51_original.jpg",
    "https://img.netty.immo/productcw/company53848lmf/2/VM13305/maison-7-pieces-la-corbiere-70300-1793265260-VM13305_19_original.jpg",
@@ -626921,7 +626955,7 @@
    "https://img.netty.immo/productcw/company53848lmf/2/VM12776/maison-maison-de-village-5-pieces-fontaine-les-luxeuil-70800-1782806345-VM12776_44_original.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -626973,7 +627007,7 @@
   "plusieurs_biens": false,
   "lat": 47.817813,
   "lon": 6.374503,
-  "altitude": 297.0,
+  "altitude": 296.0,
   "densite_hab_km2": 302.8,
   "dpe": "D",
   "risques": {
@@ -627000,7 +627034,7 @@
    "https://img.netty.immo/company53848lmf/assets/nego/116@611x640.jpg?cache=1775719784"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627198,9 +627232,9 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "lat": 49.702386,
-  "lon": 4.793205,
-  "altitude": 156.0,
+  "lat": 49.705984,
+  "lon": 4.792411,
+  "altitude": 161.0,
   "densite_hab_km2": 248.5,
   "dpe": "D",
   "risques": {
@@ -627227,7 +627261,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/114@575x1280.jpg?cache=1790255160"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627279,7 +627313,7 @@
   "plusieurs_biens": false,
   "lat": 49.819058,
   "lon": 4.746653,
-  "altitude": 167.0,
+  "altitude": 160.0,
   "densite_hab_km2": 502.9,
   "dpe": "D",
   "risques": {
@@ -627306,7 +627340,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/114@575x1280.jpg?cache=1790255160"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627395,7 +627429,7 @@
    "https://img.netty.immo/productcw/company40213czv/2/VM848/maison-individuelle-8-pieces-montcy-notre-dame-08090-1789114849-VM848_1_original.jpg"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627537,7 +627571,7 @@
   "plusieurs_biens": false,
   "lat": 49.767639,
   "lon": 4.71728,
-  "altitude": 148.0,
+  "altitude": 152.0,
   "densite_hab_km2": 1439.2,
   "dpe": "E",
   "risques": {
@@ -627564,7 +627598,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/114@575x1280.jpg?cache=1790255160"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627860,7 +627894,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/111@959x1280.jpg?cache=1770461604"
   ],
   "vue_le": "2026-08-13",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -627910,9 +627944,9 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "lat": 49.702386,
-  "lon": 4.793205,
-  "altitude": 156.0,
+  "lat": 49.705984,
+  "lon": 4.792411,
+  "altitude": 158.0,
   "densite_hab_km2": 248.5,
   "dpe": "F",
   "risques": {
@@ -627939,7 +627973,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/111@959x1280.jpg?cache=1770461604"
   ],
   "vue_le": "2026-08-11",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 117000,
   "prix_baisse_le": "2026-09-19"
@@ -628087,7 +628121,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/114@575x1280.jpg?cache=1790255160"
   ],
   "vue_le": "2026-09-26",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 125000,
   "prix_baisse_le": "2026-10-21"
@@ -628166,7 +628200,7 @@
    "https://img.netty.immo/company40213czv/assets/nego/111@959x1280.jpg?cache=1770461604"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -628414,7 +628448,7 @@
   "plusieurs_biens": false,
   "lat": 49.374461,
   "lon": -1.037543,
-  "altitude": 27.0,
+  "altitude": 31.0,
   "densite_hab_km2": 102.5,
   "dpe": "G",
   "risques": {
@@ -628462,7 +628496,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/6ef83181152146a05759abd8a65e2a08/photo_1b3d1bfe171a28352e41a15283621034.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -628682,7 +628716,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/582f8dc23adb3b1a9ae83a9bd37bbd24/photo_078caa83456fd85d2bc86378502ad707.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -628797,7 +628831,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/682927bf0eed1aba5363e7e705eea86b/photo_3246d789d5e102e729edc96bd409c6ab.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -628912,7 +628946,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/2034fa89ccd3519d70052ec199c65d08/photo_757bf30c5ff42900bfa656abc05c4fd2.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629102,7 +629136,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/49b5e536e25272bb4d12a9fa8e7efc45/photo_9e94fc1bbaef73c9fc00a5f37c29eb33.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629205,7 +629239,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/3690c4fd2051848184ff64256707acfa/photo_a8d5f18f2afad1a7573ea4b01dd5a910.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629314,7 +629348,7 @@
   "region": "Normandie",
   "agence": "Immobilier Saint-Marcouf",
   "agence_url": "https://immo-grandcamp.com",
-  "photo": "https://immobilier-saintmarcouf.staticlbi.com/1200xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_23285deebd056ed70d4f26825a41c1e8.jpg",
+  "photo": "https://immobilier-saintmarcouf.staticlbi.com/1200xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_0b075d3661a2c9c6185bd57e9b2b4f0c.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -629344,7 +629378,7 @@
   "plusieurs_biens": false,
   "lat": 49.343641,
   "lon": -0.762775,
-  "altitude": 27.0,
+  "altitude": 28.0,
   "densite_hab_km2": 247.6,
   "dpe": "G",
   "risques": {
@@ -629352,8 +629386,8 @@
    "nucleaire_nom": "Flamanville"
   },
   "photos": [
-   "https://immobilier-saintmarcouf.staticlbi.com/1200xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_23285deebd056ed70d4f26825a41c1e8.jpg",
-   "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_23285deebd056ed70d4f26825a41c1e8.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/1200xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_0b075d3661a2c9c6185bd57e9b2b4f0c.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_0b075d3661a2c9c6185bd57e9b2b4f0c.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b02da42939aaf844df52b5794e8da273.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_4adc1733998557ca540509dcf7cd62fc.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_e29e2e0be85260fda86a917bd0d56c23.jpg",
@@ -629364,7 +629398,8 @@
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bb5eb6c35006921c10ecea3a4253d22d.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b8ee011a56af1ee7d236b862ecf1b760.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bc154926da4fd7c96f4f4edcccc8f4bc.jpg",
-   "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_23285deebd056ed70d4f26825a41c1e8.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/1600xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_512ee614289bf77127f1a97f4356b35e.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_0b075d3661a2c9c6185bd57e9b2b4f0c.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b02da42939aaf844df52b5794e8da273.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_4adc1733998557ca540509dcf7cd62fc.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_e29e2e0be85260fda86a917bd0d56c23.jpg",
@@ -629375,7 +629410,8 @@
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bb5eb6c35006921c10ecea3a4253d22d.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b8ee011a56af1ee7d236b862ecf1b760.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bc154926da4fd7c96f4f4edcccc8f4bc.jpg",
-   "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_23285deebd056ed70d4f26825a41c1e8.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/980xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_512ee614289bf77127f1a97f4356b35e.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_0b075d3661a2c9c6185bd57e9b2b4f0c.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b02da42939aaf844df52b5794e8da273.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_4adc1733998557ca540509dcf7cd62fc.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_e29e2e0be85260fda86a917bd0d56c23.jpg",
@@ -629385,10 +629421,11 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_58a3da16ded7e9b3af5cfe615e7c7b8d.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bb5eb6c35006921c10ecea3a4253d22d.jpg",
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_b8ee011a56af1ee7d236b862ecf1b760.jpg",
-   "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bc154926da4fd7c96f4f4edcccc8f4bc.jpg"
+   "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_bc154926da4fd7c96f4f4edcccc8f4bc.jpg",
+   "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/fcb6f4d242cfbe806735c583d0d02948/photo_512ee614289bf77127f1a97f4356b35e.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629440,7 +629477,7 @@
   "plusieurs_biens": false,
   "lat": 49.374461,
   "lon": -1.037543,
-  "altitude": 27.0,
+  "altitude": 31.0,
   "densite_hab_km2": 102.5,
   "dpe": "G",
   "risques": {
@@ -629500,7 +629537,7 @@
    "https://immobilier-saintmarcouf.staticlbi.com/580xauto/images/biens/1/b607aa5b2fd58dd860bfb55619389982/photo_780e0b447e542de0690acd47fbc57bbb.jpg"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629619,11 +629656,11 @@
   "id": "indicateur-vend-mois-0bdfeb7a0f23",
   "source": "indicateur-vend-mois",
   "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t8/6583-vendome/",
-  "titre": "VENDOME",
+  "titre": "Maison 8pièce(s) 5chambre(s) 168 m² Vendôme (41100)",
   "description": null,
   "type_bien": "maison",
   "prix": 428400,
-  "surface_m2": 185.0,
+  "surface_m2": 168.0,
   "terrain_m2": 974.0,
   "pieces": 8,
   "commune": "Vendôme",
@@ -629662,7 +629699,7 @@
   "plusieurs_biens": false,
   "lat": 47.795789,
   "lon": 1.062738,
-  "altitude": 81.0,
+  "altitude": 79.0,
   "densite_hab_km2": 660.3,
   "dpe": null,
   "risques": {
@@ -629670,6 +629707,7 @@
    "nucleaire_nom": "Saint-Laurent-des-Eaux"
   },
   "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/4fc6db41fdc410610a6567123a5150e8/photo_65632a3ae207e898739c0104ba7323c4.jpg",
    "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/4fc6db41fdc410610a6567123a5150e8/photo_65632a3ae207e898739c0104ba7323c4.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/4fc6db41fdc410610a6567123a5150e8/photo_65632a3ae207e898739c0104ba7323c4.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/4fc6db41fdc410610a6567123a5150e8/photo_355d9b31e48d246d548f9692932ae2a0.jpg",
@@ -629716,7 +629754,7 @@
    "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t8/6583-vendome/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629725,7 +629763,7 @@
   "id": "indicateur-vend-mois-18799b75f896",
   "source": "indicateur-vend-mois",
   "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t6/6246-aux-portes-de-vendome-maison-132-m/",
-  "titre": "AUX PORTES DE VENDOME, maison 132 m²",
+  "titre": "Maison 6pièce(s) 5chambre(s) 132 m² Vendôme (41100)",
   "description": null,
   "type_bien": "maison",
   "prix": 253900,
@@ -629768,7 +629806,7 @@
   "plusieurs_biens": false,
   "lat": 47.795789,
   "lon": 1.062738,
-  "altitude": 81.0,
+  "altitude": 79.0,
   "densite_hab_km2": 660.3,
   "dpe": null,
   "risques": {
@@ -629786,6 +629824,7 @@
    "source": "georisques"
   },
   "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/ed90f4486daf61fc285e26e3231779ed/photo_ca7822a16d911ea38658766d19797bbe.jpg",
    "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/ed90f4486daf61fc285e26e3231779ed/photo_ca7822a16d911ea38658766d19797bbe.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/ed90f4486daf61fc285e26e3231779ed/photo_ca7822a16d911ea38658766d19797bbe.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/ed90f4486daf61fc285e26e3231779ed/photo_989268d9e885921abb167c6f0525d6ee.jpg",
@@ -629826,7 +629865,111 @@
    "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t6/6246-aux-portes-de-vendome-maison-132-m/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-09-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "indicateur-vend-mois-2070e337484e",
+  "source": "indicateur-vend-mois",
+  "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6877-maison-refaite-a-neuf-vendome-quartier-calme/",
+  "titre": "Maison 4pièce(s) 3chambre(s) 78 m² Vendôme (41100)",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 192900,
+  "surface_m2": 78.0,
+  "terrain_m2": null,
+  "pieces": 4,
+  "commune": "Vendôme",
+  "code_postal": "41100",
+  "departement": "41",
+  "region": "Centre-Val de Loire",
+  "agence": "Indicateur Vendômois",
+  "agence_url": "https://www.indicateurvendomois.com",
+  "photo": "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_0d747c60a54e01da5a7bbb4c2c6b1615.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 47.795789,
+  "lon": 1.062738,
+  "altitude": 79.0,
+  "densite_hab_km2": 660.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 39.4,
+   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+  },
+  "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_0d747c60a54e01da5a7bbb4c2c6b1615.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_09cd13d42e5cd208e8c9f42e523a70f0.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_3deea469fc3e97efa1f7544d96b4d1dc.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_32d98ea7c7f08e4bdf729162119e801f.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_c8eb4911360967f8cc06bfbb2e0da315.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_73f28e3db1f4f4990dd3f49a077b3c45.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_45a3671020a1841d0573e54c41fea3b0.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_89eb2805d5968f138650af0ea358814a.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_9dde125d18a72bd351306753b2807e01.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_37e4a193e2508ea45b315ad270954463.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_87c92b5f1997288f576b278e0929698d.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_0d747c60a54e01da5a7bbb4c2c6b1615.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_09cd13d42e5cd208e8c9f42e523a70f0.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_3deea469fc3e97efa1f7544d96b4d1dc.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_32d98ea7c7f08e4bdf729162119e801f.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_c8eb4911360967f8cc06bfbb2e0da315.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_73f28e3db1f4f4990dd3f49a077b3c45.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_45a3671020a1841d0573e54c41fea3b0.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_89eb2805d5968f138650af0ea358814a.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_9dde125d18a72bd351306753b2807e01.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_37e4a193e2508ea45b315ad270954463.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_87c92b5f1997288f576b278e0929698d.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/d3d6adb0ae89057bae83db4670f185c0/photo_1bc43b3dbf1f5e68f872c9300c234eda.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/a8eabf82e94d970b9032ac655b4f4fd9/photo_f09a6444eb7bc6792830bb6b725f6585.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_0d747c60a54e01da5a7bbb4c2c6b1615.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_09cd13d42e5cd208e8c9f42e523a70f0.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_3deea469fc3e97efa1f7544d96b4d1dc.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_32d98ea7c7f08e4bdf729162119e801f.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_c8eb4911360967f8cc06bfbb2e0da315.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_73f28e3db1f4f4990dd3f49a077b3c45.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_45a3671020a1841d0573e54c41fea3b0.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_89eb2805d5968f138650af0ea358814a.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_9dde125d18a72bd351306753b2807e01.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_37e4a193e2508ea45b315ad270954463.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_87c92b5f1997288f576b278e0929698d.jpg",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6877-maison-refaite-a-neuf-vendome-quartier-calme/images/modules/partners/socaf.png",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6877-maison-refaite-a-neuf-vendome-quartier-calme/images/modules/partners/interkab.png"
+  ],
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -629921,6 +630064,113 @@
   ],
   "vue_le": "2026-10-23",
   "revue_le": "2026-10-25",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "indicateur-vend-mois-312ac47b78c1",
+  "source": "indicateur-vend-mois",
+  "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6824-opportunite-a-saisir/",
+  "titre": "Maison 4pièce(s) 2chambre(s) 101,30 m² Vendôme (41100)",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 92900,
+  "surface_m2": 101.3,
+  "terrain_m2": 1500.0,
+  "pieces": 4,
+  "commune": "Vendôme",
+  "code_postal": "41100",
+  "departement": "41",
+  "region": "Centre-Val de Loire",
+  "agence": "Indicateur Vendômois",
+  "agence_url": "https://www.indicateurvendomois.com",
+  "photo": "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": true,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 47.795789,
+  "lon": 1.062738,
+  "altitude": 81.0,
+  "densite_hab_km2": 660.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 39.4,
+   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+  },
+  "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+   "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ea26aa86c91ddc601cb31d1d99233336.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_6c6b6f6ba640eafb8d32cefa0d32f304.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_4466ee1541d01e78f0f51814983ce2fd.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_fb3848769e803bd20ad616e8e34bd5b3.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_d6e9c0fb7d24364972f1563e59cb8110.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_f47e82cbb3692e34cd914b9b19b4270e.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_56e0aa61b95dd5bb5867607755ad0319.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_2c9f357b5cae3c70fe91b24a972a8659.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_551134851dc547e4be08f8db29dc6d7a.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_e5e15025e844a6943a45d08a2243dacc.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ec994523b5224e04281387a56e5dec6a.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_57ffe4a3574c3757a93822c2a0880dd6.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ea26aa86c91ddc601cb31d1d99233336.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_6c6b6f6ba640eafb8d32cefa0d32f304.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_4466ee1541d01e78f0f51814983ce2fd.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_fb3848769e803bd20ad616e8e34bd5b3.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_d6e9c0fb7d24364972f1563e59cb8110.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_f47e82cbb3692e34cd914b9b19b4270e.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_56e0aa61b95dd5bb5867607755ad0319.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_2c9f357b5cae3c70fe91b24a972a8659.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_551134851dc547e4be08f8db29dc6d7a.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_e5e15025e844a6943a45d08a2243dacc.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ec994523b5224e04281387a56e5dec6a.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_57ffe4a3574c3757a93822c2a0880dd6.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/6412dbd0359fd51238abb474764395a9/photo_3581ccd8f85877f85eba2ad0b51c187f.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/dd77ac514feda03f7df2296a283e5914/photo_69a16dd52ff1ba78596b2f536ddb3486.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_377cacc45ca032aac8a3b28ceee58aaa.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ea26aa86c91ddc601cb31d1d99233336.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_6c6b6f6ba640eafb8d32cefa0d32f304.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_4466ee1541d01e78f0f51814983ce2fd.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_fb3848769e803bd20ad616e8e34bd5b3.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_d6e9c0fb7d24364972f1563e59cb8110.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_f47e82cbb3692e34cd914b9b19b4270e.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_56e0aa61b95dd5bb5867607755ad0319.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_2c9f357b5cae3c70fe91b24a972a8659.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_551134851dc547e4be08f8db29dc6d7a.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_e5e15025e844a6943a45d08a2243dacc.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_ec994523b5224e04281387a56e5dec6a.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/60a09928971bef3dd2c0ec167f253f4d/photo_57ffe4a3574c3757a93822c2a0880dd6.jpg",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6824-opportunite-a-saisir/images/modules/partners/socaf.png",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6824-opportunite-a-saisir/images/modules/partners/interkab.png"
+  ],
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -630326,11 +630576,11 @@
   "id": "indicateur-vend-mois-5c60f38ca5d3",
   "source": "indicateur-vend-mois",
   "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6386-hyper-centre-vendome/",
-  "titre": "HYPER CENTRE VENDÔME",
+  "titre": "Maison 4pièce(s) 3chambre(s) 125 m² Vendôme (41100)",
   "description": null,
   "type_bien": "maison",
   "prix": 347900,
-  "surface_m2": 134.35,
+  "surface_m2": 125.0,
   "terrain_m2": 483.0,
   "pieces": 4,
   "commune": "Vendôme",
@@ -630377,6 +630627,7 @@
    "nucleaire_nom": "Saint-Laurent-des-Eaux"
   },
   "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/da87e7479dc0d4f770c9e237b199fef4/photo_b3ed4baa8378b8040c94c0ab443108f6.jpg",
    "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/da87e7479dc0d4f770c9e237b199fef4/photo_b3ed4baa8378b8040c94c0ab443108f6.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/da87e7479dc0d4f770c9e237b199fef4/photo_b3ed4baa8378b8040c94c0ab443108f6.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/da87e7479dc0d4f770c9e237b199fef4/photo_418f0df00e1a13311306d6e6f701cd49.jpg",
@@ -630411,7 +630662,7 @@
    "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t4/6386-hyper-centre-vendome/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -630624,11 +630875,11 @@
   "id": "indicateur-vend-mois-98614979198b",
   "source": "indicateur-vend-mois",
   "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/138-mondoubleau/1-maison/t4/6590-mondoubleau/",
-  "titre": "MONDOUBLEAU",
+  "titre": "Maison 4pièce(s) 3chambre(s) 120 m² Mondoubleau (41170)",
   "description": null,
   "type_bien": "maison",
   "prix": 160900,
-  "surface_m2": 127.0,
+  "surface_m2": 120.0,
   "terrain_m2": 1000.0,
   "pieces": 4,
   "commune": "Mondoubleau",
@@ -630675,6 +630926,7 @@
    "nucleaire_nom": "Saint-Laurent-des-Eaux"
   },
   "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/03433a2bf160194059d1a61153ba87c6/photo_633759b80546d736e17ca7aad69938a8.jpg",
    "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/03433a2bf160194059d1a61153ba87c6/photo_633759b80546d736e17ca7aad69938a8.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/03433a2bf160194059d1a61153ba87c6/photo_633759b80546d736e17ca7aad69938a8.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/03433a2bf160194059d1a61153ba87c6/photo_12a1a73a2c4626defe737a5df376caf8.jpg",
@@ -630706,7 +630958,7 @@
    "https://www.indicateurvendomois.com/vente/41-loir-et-cher/138-mondoubleau/1-maison/t4/6590-mondoubleau/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -630792,6 +631044,116 @@
   ],
   "vue_le": "2026-10-23",
   "revue_le": "2026-10-25",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "indicateur-vend-mois-bcfe513f13dc",
+  "source": "indicateur-vend-mois",
+  "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t5/6887-pavillon-cles-en-mains-dans-vendome/",
+  "titre": "Maison 5pièce(s) 3chambre(s) 91 m² Vendôme (41100)",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 191900,
+  "surface_m2": 91.0,
+  "terrain_m2": 1000.0,
+  "pieces": 5,
+  "commune": "Vendôme",
+  "code_postal": "41100",
+  "departement": "41",
+  "region": "Centre-Val de Loire",
+  "agence": "Indicateur Vendômois",
+  "agence_url": "https://www.indicateurvendomois.com",
+  "photo": "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "sans_travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 47.795789,
+  "lon": 1.062738,
+  "altitude": 81.0,
+  "densite_hab_km2": 660.3,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 39.4,
+   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+  },
+  "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+   "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_f34fe26903466d88c1a665343a033cb3.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_ed6967aee3a176d52c60c9ab79359423_Inc_1.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_bc5d807dcaaab64bf818e1bf54998250.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_af9b67bed5a5fc9c000eac045d78fbe4.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465444fb4cf168eb104f3fc9bf7d68c2.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5c86393c81d7d444d44fda1fa97fa144.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_98bfb2c44515bab0abdbc5af6b750c05.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5ac6c7458e359e2c22a0762777996dfb.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_9df0cb4db70c66e89f1a4a01718c1e76.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_cc54328c92004773ba28db40a7a91e27.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_badde763d7878491ea0dc29d8253f0cb.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_d050be2ee24dd072136d6d55688b0bd4.jpg",
+   "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_1f698b2b83f3766d93600cd6e62fea00.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_f34fe26903466d88c1a665343a033cb3.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_ed6967aee3a176d52c60c9ab79359423_Inc_1.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_bc5d807dcaaab64bf818e1bf54998250.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_af9b67bed5a5fc9c000eac045d78fbe4.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465444fb4cf168eb104f3fc9bf7d68c2.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5c86393c81d7d444d44fda1fa97fa144.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_98bfb2c44515bab0abdbc5af6b750c05.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5ac6c7458e359e2c22a0762777996dfb.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_9df0cb4db70c66e89f1a4a01718c1e76.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_cc54328c92004773ba28db40a7a91e27.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_badde763d7878491ea0dc29d8253f0cb.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_d050be2ee24dd072136d6d55688b0bd4.jpg",
+   "https://indicvendomois.staticlbi.com/980xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_1f698b2b83f3766d93600cd6e62fea00.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/d3d6adb0ae89057bae83db4670f185c0/photo_1bc43b3dbf1f5e68f872c9300c234eda.jpg",
+   "https://indicvendomois.staticlbi.com/800xauto/images/biens/1/f6a155591ceecc5776b6b4a88f0231ea/photo_5eea188da77eee58c209455d9ce6564b.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465211f4d831eaf3fc183e92cf11ca09.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_f34fe26903466d88c1a665343a033cb3.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_ed6967aee3a176d52c60c9ab79359423_Inc_1.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_bc5d807dcaaab64bf818e1bf54998250.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_af9b67bed5a5fc9c000eac045d78fbe4.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_465444fb4cf168eb104f3fc9bf7d68c2.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5c86393c81d7d444d44fda1fa97fa144.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_98bfb2c44515bab0abdbc5af6b750c05.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_5ac6c7458e359e2c22a0762777996dfb.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_9df0cb4db70c66e89f1a4a01718c1e76.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_cc54328c92004773ba28db40a7a91e27.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_badde763d7878491ea0dc29d8253f0cb.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_d050be2ee24dd072136d6d55688b0bd4.jpg",
+   "https://indicvendomois.staticlbi.com/580xauto/images/biens/1/2b7efc88fa3c938cf031a7ed71ece99b/photo_1f698b2b83f3766d93600cd6e62fea00.jpg",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t5/6887-pavillon-cles-en-mains-dans-vendome/images/modules/partners/socaf.png",
+   "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t5/6887-pavillon-cles-en-mains-dans-vendome/images/modules/partners/interkab.png"
+  ],
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -630991,7 +631353,7 @@
   "id": "indicateur-vend-mois-fa18a507ac43",
   "source": "indicateur-vend-mois",
   "url": "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t7/6454-vendome/",
-  "titre": "VENDOME",
+  "titre": "Maison 7pièce(s) 4chambre(s) 185 m² Vendôme (41100)",
   "description": null,
   "type_bien": "maison",
   "prix": 321900,
@@ -631034,7 +631396,7 @@
   "plusieurs_biens": false,
   "lat": 47.795789,
   "lon": 1.062738,
-  "altitude": 79.0,
+  "altitude": 81.0,
   "densite_hab_km2": 660.3,
   "dpe": null,
   "risques": {
@@ -631042,6 +631404,7 @@
    "nucleaire_nom": "Saint-Laurent-des-Eaux"
   },
   "photos": [
+   "https://indicvendomois.staticlbi.com/600xauto/images/1/1f4da61355c0f29042bbdb7d1e9353e6/photo_97232283d020731d3f0ce7269f86dc7f.jpg",
    "https://indicvendomois.staticlbi.com/1200xauto/images/biens/1/1f4da61355c0f29042bbdb7d1e9353e6/photo_97232283d020731d3f0ce7269f86dc7f.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/1f4da61355c0f29042bbdb7d1e9353e6/photo_97232283d020731d3f0ce7269f86dc7f.jpg",
    "https://indicvendomois.staticlbi.com/1600xauto/images/biens/1/1f4da61355c0f29042bbdb7d1e9353e6/photo_8addee684b5082074d4ab744f531695f.jpg",
@@ -631094,7 +631457,7 @@
    "https://www.indicateurvendomois.com/vente/41-loir-et-cher/1-vendome/1-maison/t7/6454-vendome/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -631184,7 +631547,7 @@
    "https://agence-investimmo.fr/vente/44-samer/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -631236,7 +631599,7 @@
   "plusieurs_biens": false,
   "lat": 50.808855,
   "lon": 1.708814,
-  "altitude": 9.0,
+  "altitude": 10.0,
   "densite_hab_km2": 388.3,
   "dpe": "A",
   "risques": {
@@ -631275,7 +631638,7 @@
    "https://agence-investimmo.fr/vente/36-marquise/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -631488,7 +631851,7 @@
   "plusieurs_biens": false,
   "lat": 50.726334,
   "lon": 1.607492,
-  "altitude": 18.0,
+  "altitude": 19.0,
   "densite_hab_km2": 5205.4,
   "dpe": "A",
   "risques": {
@@ -631511,7 +631874,7 @@
    "https://agence-investimmo.fr/vente/10-boulogne-sur-mer/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -631714,7 +632077,7 @@
   "region": "Hauts-de-France",
   "agence": "Investimmo",
   "agence_url": "https://agence-investimmo.fr",
-  "photo": "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
+  "photo": "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
   "features": {
    "cave": false,
    "puits": false,
@@ -631744,7 +632107,7 @@
   "plusieurs_biens": false,
   "lat": 50.669813,
   "lon": 1.609355,
-  "altitude": 101.0,
+  "altitude": 105.0,
   "densite_hab_km2": 365.3,
   "dpe": "A",
   "risques": {
@@ -631762,28 +632125,28 @@
    "source": "georisques"
   },
   "photos": [
-   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
-   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
-   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_776b3343de866affc49bc65b59ca8d1c.png",
-   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5b48693b2ed28d60a7e5ae719bbf5ccd.png",
-   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_3434af0d6de811a912c557d1513296a9.png",
+   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
+   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
+   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5b48693b2ed28d60a7e5ae719bbf5ccd.png",
+   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_776b3343de866affc49bc65b59ca8d1c.png",
+   "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_3434af0d6de811a912c557d1513296a9.png",
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5d74cd3650d8cbf23dd141eb49760866.png",
    "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/ccd7425182317f2e9b9fe295a63a943a/photo_048cfaeb47604d054b04e58095badd97.png",
    "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/1a18482a6e1a65609c9a0459f6da1be0/photo_d945a7f7e8a185e3e560ca81275c54f0.png",
-   "https://agenceinvest.staticlbi.com/768xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
-   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
-   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_776b3343de866affc49bc65b59ca8d1c.png",
-   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5b48693b2ed28d60a7e5ae719bbf5ccd.png",
-   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_3434af0d6de811a912c557d1513296a9.png",
+   "https://agenceinvest.staticlbi.com/768xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
+   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
+   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5b48693b2ed28d60a7e5ae719bbf5ccd.png",
+   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_776b3343de866affc49bc65b59ca8d1c.png",
+   "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_3434af0d6de811a912c557d1513296a9.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_5d74cd3650d8cbf23dd141eb49760866.png",
    "https://agenceinvest.staticlbi.com/original/images/default-mandataire.png",
    "https://agence-investimmo.fr/vente/31-la-capelle-les-boulogne/maison/images/modules/home/1.jpg",
    "https://agence-investimmo.fr/vente/31-la-capelle-les-boulogne/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 219350,
   "prix_baisse_le": "2026-10-23"
@@ -631835,7 +632198,7 @@
   "plusieurs_biens": false,
   "lat": 50.726334,
   "lon": 1.607492,
-  "altitude": 18.0,
+  "altitude": 19.0,
   "densite_hab_km2": 5205.4,
   "dpe": "A",
   "risques": {
@@ -631861,7 +632224,7 @@
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/6a5fc636f6a9d95d743cb89f4ab3ef70/photo_07af8beaf6c7eaa46ddf434e602d1b80.jpg",
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/6a5fc636f6a9d95d743cb89f4ab3ef70/photo_9e09827bccdb9ae13331a46fd74043f9.jpg",
    "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/c125457133af6e8590e2e7617b361897/photo_3fbbbedbd43fb06cc91f8c1dbe9d3e55.png",
-   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/47dc0e9059de9cacb3b06d669d6ebee9/photo_091de98fd5ad4eb684abdc0e5192690b.png",
+   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/47dc0e9059de9cacb3b06d669d6ebee9/photo_e3e5af2efec29ec4b86f83bd4c3f448a.png",
    "https://agenceinvest.staticlbi.com/768xauto/images/biens/1/6a5fc636f6a9d95d743cb89f4ab3ef70/photo_d1b94419250c5c767795770a15f2420e.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/6a5fc636f6a9d95d743cb89f4ab3ef70/photo_d1b94419250c5c767795770a15f2420e.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/6a5fc636f6a9d95d743cb89f4ab3ef70/photo_588dfc7c451f296031f682856f55d4e8.png",
@@ -631874,7 +632237,7 @@
    "https://agence-investimmo.fr/vente/10-boulogne-sur-mer/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-04",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -632082,7 +632445,7 @@
   "plusieurs_biens": false,
   "lat": 50.669813,
   "lon": 1.609355,
-  "altitude": 105.0,
+  "altitude": 101.0,
   "densite_hab_km2": 365.3,
   "dpe": "A",
   "risques": {
@@ -632125,7 +632488,7 @@
    "https://agence-investimmo.fr/vente/46-st-leonard/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -632298,7 +632661,7 @@
    "https://agence-investimmo.fr/vente/47-st-martin-boulogne/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -632540,7 +632903,7 @@
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/0bc35c938a1c50a55a32bddfda6c5787/photo_a5728cf676aece3ff0a5179922834561.png",
    "https://agenceinvest.staticlbi.com/1600xauto/images/biens/1/0bc35c938a1c50a55a32bddfda6c5787/photo_4db416e20daed6daad609ecd0dd70a9a.png",
    "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/1a18482a6e1a65609c9a0459f6da1be0/photo_d945a7f7e8a185e3e560ca81275c54f0.png",
-   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_b63f0b223cd9b94181b185469f0c3a93.png",
+   "https://agenceinvest.staticlbi.com/1200xauto/images/biens/1/00f810b36fed0dd75e3b492d97d43d6f/photo_aeeadb77a0da91d4583f7d2fc6ff8061.png",
    "https://agenceinvest.staticlbi.com/768xauto/images/biens/1/0bc35c938a1c50a55a32bddfda6c5787/photo_7409d044fbd676d180cbf243b36c9666.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/0bc35c938a1c50a55a32bddfda6c5787/photo_7409d044fbd676d180cbf243b36c9666.png",
    "https://agenceinvest.staticlbi.com/160xauto/images/biens/1/0bc35c938a1c50a55a32bddfda6c5787/photo_cee6971134e197ec660558192c294080.png",
@@ -632555,7 +632918,7 @@
    "https://agence-investimmo.fr/vente/1-outreau/maison/images/modules/home/2.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -634930,7 +635293,7 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -634954,7 +635317,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635064,7 +635427,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635116,7 +635479,7 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -635161,7 +635524,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-28",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635261,7 +635624,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635372,7 +635735,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635523,7 +635886,7 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 173.0,
+  "altitude": 177.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -635561,7 +635924,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-28",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635613,7 +635976,7 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -635654,7 +636017,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635832,7 +636195,7 @@
    "https://jki-immo.fr/wp-content/uploads/2022/09/prop-1-1.jpeg"
   ],
   "vue_le": "2026-09-22",
-  "revue_le": "2026-10-28",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -635987,7 +636350,7 @@
   "plusieurs_biens": false,
   "lat": 48.295636,
   "lon": 4.035083,
-  "altitude": 111.0,
+  "altitude": 114.0,
   "densite_hab_km2": 1354.7,
   "dpe": "A",
   "risques": {
@@ -636050,7 +636413,7 @@
    "https://www.jean-jaures-immobilier.com/vente/52-ste-savine/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 210000,
   "prix_baisse_le": "2026-10-28"
@@ -636328,7 +636691,7 @@
   "plusieurs_biens": false,
   "lat": 48.294602,
   "lon": 4.119897,
-  "altitude": 112.0,
+  "altitude": 107.0,
   "densite_hab_km2": 270.8,
   "dpe": "A",
   "risques": {
@@ -636395,7 +636758,7 @@
    "https://www.jean-jaures-immobilier.com/vente/70-villechetif/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -636554,7 +636917,7 @@
   "plusieurs_biens": false,
   "lat": 48.292817,
   "lon": 4.075149,
-  "altitude": 106.0,
+  "altitude": 114.0,
   "densite_hab_km2": 4670.4,
   "dpe": "A",
   "risques": {
@@ -636605,7 +636968,7 @@
    "https://www.jean-jaures-immobilier.com/vente-neuf/1-troyes/maison/716-troyes-maison-de-ville-avec-terrasse-dans-le-bouchon/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -636809,7 +637172,7 @@
    "https://www.jean-jaures-immobilier.com/vente/50-la-riviere-de-corps/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -637031,7 +637394,7 @@
    "https://www.jean-jaures-immobilier.com/vente/87-st-germain/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -637083,7 +637446,7 @@
   "plusieurs_biens": false,
   "lat": 48.292817,
   "lon": 4.075149,
-  "altitude": 114.0,
+  "altitude": 106.0,
   "densite_hab_km2": 4670.4,
   "dpe": "A",
   "risques": {
@@ -637148,7 +637511,7 @@
    "https://www.jean-jaures-immobilier.com/vente/1-troyes/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": 215000,
   "prix_baisse_le": "2026-10-16"
@@ -637390,7 +637753,7 @@
    "https://www.jean-jaures-immobilier.com/vente/16-/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-09",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -637596,7 +637959,7 @@
    "https://www.jean-jaures-immobilier.com/vente/8-st-andre-les-vergers/maison/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643191,7 +643554,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-09.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643278,7 +643641,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-01.png"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643535,7 +643898,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-01.png"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643612,7 +643975,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-09.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643767,7 +644130,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/03/equipe_lagence-smith-04.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643914,7 +644277,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/03/equipe_lagence-smith-04.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -643990,7 +644353,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-09.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -644128,7 +644491,7 @@
   "plusieurs_biens": false,
   "lat": 49.440051,
   "lon": 1.093912,
-  "altitude": 24.0,
+  "altitude": 19.0,
   "densite_hab_km2": 5502.4,
   "dpe": null,
   "risques": {
@@ -644154,7 +644517,7 @@
    "https://www.agence-smith.com/wp-content/uploads/2024/02/lagence-smith-equipe-01.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -677585,7 +677948,7 @@
    "https://maps.gstatic.com/mapfiles/undo_poly.png"
   ],
   "vue_le": "2026-10-02",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -677796,7 +678159,7 @@
   "plusieurs_biens": false,
   "lat": 47.709696,
   "lon": 2.678216,
-  "altitude": 181.0,
+  "altitude": 171.0,
   "densite_hab_km2": 198.6,
   "dpe": "A",
   "risques": {
@@ -677814,7 +678177,7 @@
    "https://maps.gstatic.com/mapfiles/undo_poly.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -677888,7 +678251,7 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/49.021692/49_021692_1.jpg?itok=KzsfncL7"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -677964,7 +678327,7 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/921MC/62666p1.jpg?itok=pZDG4FPu"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -678202,7 +678565,7 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/1600366CS/62678p1.jpg?itok=uMp-GqjN"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -678254,7 +678617,7 @@
   "plusieurs_biens": false,
   "lat": 48.223409,
   "lon": 0.119925,
-  "altitude": 86.0,
+  "altitude": 84.0,
   "densite_hab_km2": 297.5,
   "dpe": null,
   "risques": {
@@ -678274,7 +678637,7 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/2025-SM-SOLESMESVILLA/62116p1.jpg?itok=XdjJs-fS"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -678342,13 +678705,12 @@
    "https://www.lelievre-immobilier.com/themes/custom/Lelievre/images/btn-services.png",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/7639-CD/61555p1.jpg?itok=zseCTafe",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/7735-ET/62832p1.jpg?itok=KHRWLAHp",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/7707-DA/62620p1.jpg?itok=yTp_zJvH",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/7706-ET/62625p1.jpg?itok=XinU2Xv6",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/7736-CLG/62818p1.jpg?itok=2FJ-67J7"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -678421,7 +678783,7 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/72.003085/611581010_72_003085_1.jpg?itok=t6mpzsRK"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -679015,7 +679377,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -679211,7 +679573,7 @@
   "plusieurs_biens": false,
   "lat": 49.651388,
   "lon": 0.358996,
-  "altitude": 119.0,
+  "altitude": 121.0,
   "densite_hab_km2": 352.1,
   "dpe": null,
   "risques": {
@@ -679231,7 +679593,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -679300,7 +679662,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -679352,7 +679714,7 @@
   "plusieurs_biens": false,
   "lat": 49.542715,
   "lon": 0.18932,
-  "altitude": 13.0,
+  "altitude": 8.0,
   "densite_hab_km2": 813.8,
   "dpe": null,
   "risques": {
@@ -679372,7 +679734,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -679604,6 +679966,78 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "lemaistre-immobilier-yvetot-4e1fbfa124bb",
+  "source": "lemaistre-immobilier-yvetot",
+  "url": "https://www.lemaistre-immo.fr/vente-achat/maison-villa-yvetot-76190/60868322.htm",
+  "titre": "vente achat Maison-Villa YVETOT 76190",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 189900,
+  "surface_m2": 83.6,
+  "terrain_m2": 390.0,
+  "pieces": null,
+  "commune": "Yvetot",
+  "code_postal": "76190",
+  "departement": "76",
+  "region": "Normandie",
+  "agence": "Lemaistre Immobilier Yvetot",
+  "agence_url": "https://lemaistre-immo.fr",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/60868322-1/maison-villa-yvetot-76190-1790046681.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "lat": 49.61982,
+  "lon": 0.764902,
+  "altitude": 144.0,
+  "densite_hab_km2": 1530.5,
+  "dpe": "D",
+  "risques": {
+   "nucleaire_km": 28.1,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-1/maison-villa-yvetot-76190-1790046681.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-2/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-3/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-4/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-5/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-6/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-7/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60868322-8/maison-villa-yvetot-76190-1790007793.jpg",
+   "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
+   "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
+  ],
+  "vue_le": "2026-11-03",
+  "revue_le": "2026-11-03",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "lemaistre-immobilier-yvetot-50473f7b765f",
   "source": "lemaistre-immobilier-yvetot",
   "url": "https://www.lemaistre-immo.fr/vente-achat/maison-villa-saint-romain-de-colbosc-76430/61060634.htm",
@@ -679790,7 +680224,7 @@
   "plusieurs_biens": false,
   "lat": 49.725499,
   "lon": 0.784482,
-  "altitude": 140.0,
+  "altitude": 138.0,
   "densite_hab_km2": 166.5,
   "dpe": "D",
   "risques": {
@@ -679810,7 +680244,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -681173,7 +681607,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -681317,7 +681751,7 @@
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -681493,7 +681927,7 @@
   "region": "Grand Est",
   "agence": "Les Artisans 2 l'immobilier",
   "agence_url": "https://artisans-immobilier.com",
-  "photo": "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793030105-VM691_18_l.jpg",
+  "photo": "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793180324-VM691_37_l.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -681532,10 +681966,10 @@
   },
   "photos": [
    "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg2.jpg\"",
-   "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793030105-VM691_18_l.jpg"
+   "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793180324-VM691_37_l.jpg"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -681798,7 +682232,7 @@
   "region": "Grand Est",
   "agence": "Les Artisans 2 l'immobilier",
   "agence_url": "https://artisans-immobilier.com",
-  "photo": "https://img.netty.immo/productw/artisans/2/VM693/maison-individuelle-verny-vente-21793180406-VM693_37_l.jpg",
+  "photo": "https://img.netty.immo/productw/artisans/2/VM693/maison-individuelle-verny-vente-21793033931-VM693_15_l.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -681836,11 +682270,11 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg1.jpg\"",
-   "https://img.netty.immo/productw/artisans/2/VM693/maison-individuelle-verny-vente-21793180406-VM693_37_l.jpg"
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg2.jpg\"",
+   "https://img.netty.immo/productw/artisans/2/VM693/maison-individuelle-verny-vente-21793033931-VM693_15_l.jpg"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -681900,11 +682334,11 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg1.jpg\"",
    "https://img.netty.immo/productw/artisans/2/VM685/maison-individuelle-retonfey-vente-21793367755-VM685_57_l.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -682096,7 +682530,7 @@
    "https://img.netty.immo/productw/artisans/2/VM681/maison-saulny-vente-21789632467-VM681_11_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -682544,11 +682978,11 @@
    "source": "georisques"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg2.jpg\"",
    "https://img.netty.immo/productw/artisans/2/VM679/maison-individuelle-aube-vente-21789637320-VM679_27_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -682883,7 +683317,7 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 173.0,
+  "altitude": 177.0,
   "densite_hab_km2": 2979.8,
   "dpe": "B",
   "risques": {
@@ -682896,7 +683330,7 @@
    "https://img.netty.immo/productw/artisans/2/VM666/maison-metz-vente-21781516775-VM666_15_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-10-31",
+  "revue_le": "2026-11-03",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
