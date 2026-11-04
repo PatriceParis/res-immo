@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.4,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.4,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,104 +23,121 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.4,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.0,
+  "seconde": 6.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.3,
+  "seconde": 8.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.3,
+  "seconde": 8.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 4.8,
+  "seconde": 9.0,
   "reseau": "capifrance",
-  "connues": 18396,
-  "ecartees": 2749
+  "connues": 18414,
+  "ecartees": 2763
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.8,
+  "seconde": 9.0,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.9,
+  "seconde": 9.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 15.8,
+  "seconde": 21.8,
   "reseau": "iad",
   "n": 93877,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.3,
+  "seconde": 23.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.7,
+  "seconde": 24.3,
   "reseau": "iad",
-  "connues": 18396,
-  "ecartees": 2749
+  "connues": 18414,
+  "ecartees": 2763
  },
  {
   "etape": "departement",
-  "seconde": 335.1,
+  "seconde": 295.8,
   "reseau": "iad",
-  "departement": "53",
+  "departement": "08",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 2,
-   "ecarte": 3,
+   "garde": 41,
+   "vendu": 7,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 1,
-   "url_type_exclu": 1
+   "hors_perimetre": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison de ville 10 pièces de 309 m² à Laval (53000)",
-   "hors_perimetre": "Maison 9 pièces de 193 m² à Saint-Mars-du-Désert (44850)",
-   "url_type_exclu": "Local d’activité de 131 m² à CHÂTEAU-GONTIER (53200)"
+   "hors_perimetre": "110 043 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 609.7,
+  "seconde": 548.1,
   "reseau": "iad",
-  "departement": "58",
-  "visitees": 40,
-  "gardes": 31,
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 9,
+   "garde": 36,
+   "vendu": 11,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 85 m² à Saint-Mesmin (85700)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 606.6,
+  "reseau": "iad",
+  "departement": "72",
+  "visitees": 10,
+  "gardes": 8,
+  "tronquee": true,
+  "etats": {
+   "garde": 8,
+   "vendu": 2,
    "ecarte": 0,
    "illisible": 0
   },
@@ -129,73 +146,81 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 609.7,
+  "seconde": 606.6,
   "reseau": "safti",
-  "part_secondes": 592
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 610.2,
+  "seconde": 607.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 611.0,
+  "seconde": 608.7,
   "reseau": "safti",
   "n": 28858,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 611.5,
+  "seconde": 609.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 612.0,
+  "seconde": 610.1,
   "reseau": "safti",
-  "connues": 18407,
-  "ecartees": 2763
+  "connues": 18439,
+  "ecartees": 2788
  },
  {
   "etape": "departement",
-  "seconde": 1000.8,
+  "seconde": 917.3,
   "reseau": "safti",
-  "departement": "55",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 50,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 50,
+   "garde": 45,
    "vendu": 0,
-   "ecarte": 0,
+   "ecarte": 5,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à BONNIERES-SUR-SEINE de 76m²"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 1203.9,
+  "seconde": 1201.9,
   "reseau": "safti",
-  "departement": "72",
-  "visitees": 23,
-  "gardes": 23,
+  "departement": "28",
+  "visitees": 47,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 23,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 42,
+   "vendu": 1,
+   "ecarte": 4,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à MAGNY de 99m²"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 1203.9,
-  "gardes": 149
+  "seconde": 1201.9,
+  "gardes": 172
  }
 ]
