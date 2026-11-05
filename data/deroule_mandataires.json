@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 4.1,
+  "seconde": 1.8,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 4.2,
+  "seconde": 1.9,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,79 +23,125 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.2,
+  "seconde": 1.9,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.4,
+  "seconde": 3.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 8.1,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 8.1,
+  "seconde": 5.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 8.6,
+  "seconde": 6.0,
   "reseau": "capifrance",
-  "connues": 18571,
-  "ecartees": 2798
+  "connues": 18722,
+  "ecartees": 2823
  },
  {
   "etape": "reseau_debut",
-  "seconde": 8.6,
+  "seconde": 6.0,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 8.9,
+  "seconde": 6.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.6,
+  "seconde": 14.8,
   "reseau": "iad",
   "n": 93505,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 28.1,
+  "seconde": 16.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 28.6,
+  "seconde": 17.1,
   "reseau": "iad",
-  "connues": 18571,
-  "ecartees": 2798
+  "connues": 18722,
+  "ecartees": 2823
  },
  {
   "etape": "departement",
-  "seconde": 320.4,
+  "seconde": 292.5,
   "reseau": "iad",
-  "departement": "76",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 33,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 33,
-   "vendu": 16,
+   "garde": 44,
+   "vendu": 3,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 1,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Longère 5 pièces de 80 m² à Livarot (14140)",
+   "hors_perimetre": "Maison de campagne 4 pièces de 140 m² à Aubigny (79390)",
+   "prix_trop_haut": "Maison 5 pièces de 118 m² à Deauville (14800)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 516.1,
+  "reseau": "iad",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 32,
+  "tronquee": true,
+  "etats": {
+   "garde": 32,
+   "vendu": 9,
+   "ecarte": 9,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 9
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 4 pièces de 166 m² à Saint-Symphorien (33113)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 610.8,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 17,
+  "gardes": 13,
+  "tronquee": true,
+  "etats": {
+   "garde": 13,
+   "vendu": 3,
    "ecarte": 1,
    "illisible": 0
   },
@@ -103,101 +149,86 @@
    "location": 1
   },
   "exemples": {
-   "location": "Maison 3 pièces de 70 m² à Saint-Clair-sur-les-Monts (76190)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 606.6,
-  "reseau": "iad",
-  "departement": "89",
-  "visitees": 45,
-  "gardes": 37,
-  "tronquee": true,
-  "etats": {
-   "garde": 37,
-   "vendu": 6,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "location": "Maison de ville 2 pièces de 49 m² à Ancy-le-Franc (89160)",
-   "hors_perimetre": "Maison de ville 4 pièces de 70 m² à Saint-Martin-du-Tertre (95270)"
+   "location": "Maison 3 pièces de 92 m² à Joué-lès-Tours (37300)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 606.6,
+  "seconde": 610.8,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 591
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.3,
+  "seconde": 611.5,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 609.1,
+  "seconde": 612.8,
   "reseau": "safti",
   "n": 28864,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 609.7,
+  "seconde": 613.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 610.2,
+  "seconde": 614.0,
   "reseau": "safti",
-  "connues": 18596,
-  "ecartees": 2823
+  "connues": 18750,
+  "ecartees": 2851
  },
  {
   "etape": "departement",
-  "seconde": 982.5,
+  "seconde": 915.9,
   "reseau": "safti",
-  "departement": "36",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 50,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 50,
+   "garde": 45,
    "vendu": 0,
-   "ecarte": 0,
+   "ecarte": 5,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à FRENEUSE de 335m²"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 1207.8,
+  "seconde": 1204.0,
   "reseau": "safti",
-  "departement": "57",
-  "visitees": 30,
-  "gardes": 30,
+  "departement": "37",
+  "visitees": 48,
+  "gardes": 46,
   "tronquee": true,
   "etats": {
-   "garde": 30,
+   "garde": 46,
    "vendu": 0,
-   "ecarte": 0,
+   "ecarte": 2,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à ROCHECORBON de 277m²"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 1207.8,
-  "gardes": 150
+  "seconde": 1204.1,
+  "gardes": 180
  }
 ]
