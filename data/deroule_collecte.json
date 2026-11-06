@@ -2,32 +2,63 @@
  "minutes": 28.0,
  "agences": [
   {
-   "agence": "Versus Immobilier",
-   "secondes": 8,
-   "pages": 2,
-   "gardes": 0,
+   "agence": "GSM Immobilier",
+   "secondes": 93,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 56,
-   "sitemap_dates": 53,
-   "sitemap": "ok 53",
-   "deja_ecartees": 51,
+   "adresses_ecartees": 96,
+   "sitemap": "ok 241",
+   "deja_ecartees": 56
+  },
+  {
+   "agence": "Girault Immo",
+   "secondes": 52,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 11,
+   "sitemap_dates": 26,
+   "sitemap": "ok 26",
+   "deja_ecartees": 8
+  },
+  {
+   "agence": "Groupe Centrum",
+   "secondes": 64,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 117,
+   "sitemap_dates": 43,
+   "sitemap": "ok 43",
+   "deja_ecartees": 3,
    "motifs": {
-    "prix_trop_haut": 2
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.versus-immobilier.com/vente/307-vandoeuvre-les-nancy/maison/14028-maison-renovee-avec-gout",
-     "titre": "Maison rénovée avec goût"
+     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
+     "titre": "Villa de luxe en vente, proche plage 7 chambres"
     }
    }
   },
   {
-   "agence": "Villers St Paul Immobilier",
+   "agence": "Groupe123immo",
    "secondes": 61,
    "pages": 8,
    "gardes": 8,
@@ -37,34 +68,110 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 20,
-   "sitemap": "ok 20",
-   "deja_ecartees": 1
+   "adresses_ecartees": 84,
+   "sitemap_dates": 219,
+   "sitemap": "ok 219",
+   "deja_ecartees": 20
   },
   {
-   "agence": "Vivest",
-   "secondes": 14,
-   "pages": 1,
-   "gardes": 0,
+   "agence": "Gueudry",
+   "secondes": 64,
+   "pages": 11,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 1,
+   "illisibles": 3,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 1,
-   "sitemap": "ok 1",
+   "sitemap_dates": 165,
+   "sitemap": "ok 165",
+   "deja_ecartees": 1,
    "illisible_exemple": {
-    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
+    "url": "https://www.gueudry.fr/maison-neuve-construction/",
     "cause": "aucune annonce lue",
-    "titre": "Nos programmes en vente à venir - Vivest",
-    "octets": 623747
+    "titre": "Maison neuve construction : les étapes clés | Gueudry",
+    "octets": 136190
    }
   },
   {
-   "agence": "action immo",
-   "secondes": 10,
+   "agence": "HF Immobilier",
+   "secondes": 35,
+   "pages": 5,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 6,
+   "sitemap": "ok 6",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "Habitat Immobilier",
+   "secondes": 101,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 61,
+   "sitemap": "ok 131"
+  },
+  {
+   "agence": "Hamaris",
+   "secondes": 63,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 14,
+   "sitemap": "ok 14"
+  },
+  {
+   "agence": "Helman Immobilier",
+   "secondes": 245,
+   "pages": 36,
+   "gardes": 2,
+   "vendus": 29,
+   "ecartes": 1,
+   "illisibles": 4,
+   "fin": "temps de l'agence épuisé",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 85,
+   "sitemap": "ok 459",
+   "deja_ecartees": 187,
+   "illisible_exemple": {
+    "url": "https://www.helman-immobilier.com/vente/entrepot",
+    "cause": "aucune annonce lue",
+    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
+    "octets": 911291
+   },
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.helman-immobilier.com/vente/maison-de-maitre-11000m2-blendecques,VM3074",
+     "titre": "Superbe maison de maître, parc arboré de 1,1 ha et dépendances à 10 minutes de Saint-Omer"
+    }
+   }
+  },
+  {
+   "agence": "Immo Centre 61",
+   "secondes": 2,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -73,168 +180,55 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
+   "adresses_ecartees": 3,
+   "sitemap_dates": 5,
+   "sitemap": "ok 5",
+   "deja_ecartees": 5
   },
   {
-   "agence": "agence 147",
-   "secondes": 56,
-   "pages": 9,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 209,
-   "sitemap_dates": 46,
-   "sitemap": "ok 46",
-   "deja_ecartees": 37,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agence147.fr/vente/1-nancy/duplex/1780-t4-duplex-rue-jeanne-d-arc",
-     "titre": "T4 - Duplex rue Jeanne d"
-    }
-   }
-  },
-  {
-   "agence": "ilm Immobilier",
-   "secondes": 9,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "deja_ecartees": 21,
-   "illisible_exemple": {
-    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
-    "octets": 66838
-   }
-  },
-  {
-   "agence": "AFTim",
-   "secondes": 121,
-   "pages": 13,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 68,
-   "sitemap": "ok 30",
-   "deja_ecartees": 17,
-   "motifs": {
-    "prix_trop_haut": 9
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.aftim.fr/vente/maison-villa-6-pieces-le-touquet-paris-plage-62520,VM3126",
-     "titre": "TRIANGLE D'OR – Villa typique avec jardin et garage"
-    }
-   }
-  },
-  {
-   "agence": "AIC Immobilier",
-   "secondes": 116,
-   "pages": 45,
+   "agence": "Immo Conseil Debever",
+   "secondes": 6,
+   "pages": 1,
    "gardes": 1,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 44,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 13,
-   "sitemap_dates": 70,
-   "sitemap": "ok 73",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.aicimmobilier.fr/property/luxury-family-home-4/",
-    "cause": "aucune annonce lue",
-    "titre": "Single family home – AIC Immobilier",
-    "octets": 105862
-   }
-  },
-  {
-   "agence": "AJC immobilier",
-   "secondes": 55,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 15,
-   "sitemap_dates": 22,
-   "sitemap": "ok 22"
+   "adresses_ecartees": 12,
+   "sitemap_dates": 32,
+   "sitemap": "ok 32",
+   "deja_ecartees": 31
   },
   {
-   "agence": "AS Immobilier",
-   "secondes": 60,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 46,
-   "sitemap_dates": 28,
-   "sitemap": "ok 28",
-   "deja_ecartees": 7
-  },
-  {
-   "agence": "Abbesses Immobilier",
-   "secondes": 47,
-   "pages": 8,
-   "gardes": 4,
+   "agence": "Immo Côte d'Opale",
+   "secondes": 41,
+   "pages": 7,
+   "gardes": 6,
    "vendus": 0,
    "ecartes": 1,
-   "illisibles": 3,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 88,
-   "sitemap_dates": 99,
-   "sitemap": "ok 99",
-   "deja_ecartees": 91,
+   "adresses_ecartees": 10,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 9,
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t12/1614-extra-centre-magnifique-demeure-de-1904-avec-jardin-paysage-et-piscine/",
-     "titre": "Extra Centre : Magnifique demeure de 1904 avec jardin paysagé et piscine"
+     "url": "https://www.immocotedopale.com/vente/15-berck/propriete/935-ensemble-immobilier-de-3-maisons-et-un-hangar-dont-une-maison-de-maitre",
+     "titre": "Propriete 11pièce(s) 8chambre(s) 450 m² Berck (62600)"
     }
-   },
-   "illisible_exemple": {
-    "url": "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/terrain-a-batir/1539-saint-etienne-les-remiremont-terrain-d-environ-2-248-m",
-    "cause": "aucune annonce lue",
-    "titre": "SAINT ETIENNE LES REMIREMONT : Terrain d'environ 2 248 m² | ABBESSES IMMOBILIER",
-    "octets": 235448
    }
   },
   {
-   "agence": "Abithéa",
-   "secondes": 70,
+   "agence": "Immo coup de coeur",
+   "secondes": 61,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -243,14 +237,14 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 173,
-   "sitemap_dates": 573,
-   "sitemap": "ok 573",
+   "adresses_ecartees": 56,
+   "sitemap_dates": 47,
+   "sitemap": "ok 47",
    "deja_ecartees": 4
   },
   {
-   "agence": "Century 21",
-   "secondes": 73,
+   "agence": "Immobilier Center (Fnaim)",
+   "secondes": 100,
    "pages": 10,
    "gardes": 8,
    "vendus": 0,
@@ -259,23 +253,63 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 34,
-   "sitemap": "ok 34",
+   "adresses_ecartees": 4,
+   "sitemap_dates": 82,
+   "sitemap": "ok 85",
    "deja_ecartees": 9,
    "motifs": {
-    "titre_hors_cible:appartement": 2
+    "ni_surface_ni_prix_credible": 2
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-guyon-epinal.com/trouver_logement/detail/17110640789/",
-     "titre": "Appartement F3 à vendre - 3 pièces - 57.34 m2 - EPINAL - 88 - LORRAINE - Century 21 Guyon Immobilier"
+    "ni_surface_ni_prix_credible": {
+     "url": "https://immobilier-center.fr/property/en-quete-dun-projet-ambitieux/",
+     "titre": "En quête d’un projet ambitieux ? - Immobilier Center - Découvrez un large choix de propriétés immobilières en vente dans"
     }
    }
   },
   {
-   "agence": "Champanelle Immobilier",
-   "secondes": 70,
+   "agence": "Immobilier ILL",
+   "secondes": 105,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 2,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 50,
+   "sitemap": "ok 95",
+   "deja_ecartees": 31
+  },
+  {
+   "agence": "Immobilier Saint-Marcouf",
+   "secondes": 62,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 71,
+   "sitemap_dates": 153,
+   "sitemap": "ok 153",
+   "deja_ecartees": 2,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/propriete/t14/887-propriete-de-390m-grandcamp-maisy-gite/",
+     "titre": "Propriété de 390m² - GRANDCAMP-MAISY - Gite"
+    }
+   }
+  },
+  {
+   "agence": "Immobilier du Chêne",
+   "secondes": 85,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -284,27 +318,13 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "deja_ecartees": 3
+   "adresses_ecartees": 40,
+   "sitemap": "ok 117",
+   "deja_ecartees": 13
   },
   {
-   "agence": "Château-Thierry Immobilier",
-   "secondes": 1,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
-  },
-  {
-   "agence": "Clic house",
-   "secondes": 70,
+   "agence": "Immobilière Scarponaise",
+   "secondes": 62,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -314,35 +334,81 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 31,
-   "sitemap_dates": 55,
-   "sitemap": "ok 55",
-   "deja_ecartees": 10
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 8
   },
   {
-   "agence": "Concept Immo 54",
-   "secondes": 73,
-   "pages": 10,
-   "gardes": 8,
+   "agence": "Immobilière de France",
+   "secondes": 49,
+   "pages": 9,
+   "gardes": 3,
    "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
+   "ecartes": 2,
+   "illisibles": 4,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 500,
-   "sitemap": "HTTP 500",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
    "index_statut": 200,
-   "index_titre": "Agence immobilière à Toul et Saizerais | Concept Immo 54",
+   "index_titre": "Trouvez le bien de vos rêves avec",
    "deja_ecartees": 2,
    "illisible_exemple": {
-    "url": "https://concept-immo54.fr/biens-loues/1",
+    "url": "https://immobilieredefrance.com/fr/propriete/location+garage-parking+lille+garage-centre-lille-wazemmes+87176730",
     "cause": "aucune annonce lue",
-    "titre": "Biens immobiliers déjà loués | Concept Immo 54",
-    "octets": 595401
+    "titre": "Garage centre Lille Wazemmes",
+    "octets": 68329
+   },
+   "motifs": {
+    "titre_hors_cible:appartement": 1,
+    "titre_hors_cible:appartements": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-1-chambre-1-stationnement+87198037",
+     "titre": "Appartement 1 chambre, 1 stationnement"
+    },
+    "titre_hors_cible:appartements": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+immeuble-libre-de-2-appartements-proche-vieille-ville+86160967",
+     "titre": "Immeuble libre de 2 appartements proche vieille ville"
+    }
    }
   },
   {
-   "agence": "Concordis",
-   "secondes": 108,
+   "agence": "Immobilière de Lille",
+   "secondes": 2,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "deja_ecartees": 23
+  },
+  {
+   "agence": "Indicateur Vendômois",
+   "secondes": 75,
+   "pages": 14,
+   "gardes": 8,
+   "vendus": 6,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 316,
+   "sitemap": "ok 316",
+   "deja_ecartees": 6
+  },
+  {
+   "agence": "Investimmo",
+   "secondes": 59,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -351,219 +417,88 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 105,
-   "sitemap": "ok 97",
+   "adresses_ecartees": 53,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
    "deja_ecartees": 2
   },
   {
-   "agence": "Coup de Coeur Immo",
-   "secondes": 75,
+   "agence": "Jacques Klein Immeubles",
+   "secondes": 79,
    "pages": 11,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap_dates": 17,
-   "sitemap": "ok 17",
-   "motifs": {
-    "titre_hors_cible:biens a vendre": 1,
-    "titre_hors_cible:terrains a batir": 1,
-    "titre_hors_cible:maison avec fort potentiel + terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:biens a vendre": {
-     "url": "https://www.coup2coeurimmobilier.fr/vente/1",
-     "titre": "Biens à vendre | Coup2Coeur Immobilier"
-    },
-    "titre_hors_cible:terrains a batir": {
-     "url": "https://www.coup2coeurimmobilier.fr/vente-neuf/-/terrain-a-batir/929-13-terrains-a-batir-disponibles-a-la-frontiere-luxembourgeoise",
-     "titre": "13 TERRAINS À BÂTIR DISPONIBLES À LA FRONTIÈRE LUXEMBOURGEOISE"
-    },
-    "titre_hors_cible:maison avec fort potentiel + terrain": {
-     "url": "https://www.coup2coeurimmobilier.fr/vente/46-fillieres/maison/t5/1080-maison-avec-fort-potentiel-terrains-constructibles-2800-m-fillieres/",
-     "titre": "Maison avec fort potentiel + terrains constructibles – 2800 m² – Fillières"
-    }
-   }
-  },
-  {
-   "agence": "Cv Immobilier",
-   "secondes": 64,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 1,
    "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
-   "deja_ecartees": 2,
-   "illisible_exemple": {
-    "url": "https://www.cvimmobilier.fr/biens-vendus/1",
-    "cause": "aucune annonce lue",
-    "titre": "0 biens vendus | CV Immobilier",
-    "octets": 187161
-   }
-  },
-  {
-   "agence": "Cyril Thienpont Immobilier",
-   "secondes": 103,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 36,
-   "sitemap": "ok 115",
-   "deja_ecartees": 13,
-   "illisible_exemple": {
-    "url": "https://www.ctimmo.fr/vente/maison-plain-pied-5-pieces-abbeville-80100,VM1394",
-    "cause": "aucune annonce lue",
-    "titre": "À vendre - Maison plain-pied, 5 pièces située à Abbeville (80100)",
-    "octets": 830112
-   }
-  },
-  {
-   "agence": "Côté Ouest Immobilier",
-   "secondes": 101,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 72,
-   "sitemap": "ok 79",
-   "deja_ecartees": 5,
-   "motifs": {
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.cote-ouest-immo.fr/vente/maison-7-pieces-saint-martin-du-manoir-76290,VM4952",
-     "titre": "SAINT MARTIN DU MANOIR"
-    }
-   }
-  },
-  {
-   "agence": "Damonte Immobilier",
-   "secondes": 19,
-   "pages": 9,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 9,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 9,
-   "sitemap": "ok 9",
-   "illisible_exemple": {
-    "url": "https://www.yves-damonte.fr/bien-professionnel",
-    "cause": "aucune annonce lue",
-    "titre": "Groupe Damonte",
-    "octets": 1474
-   }
-  },
-  {
-   "agence": "De Noray Immobilier",
-   "secondes": 69,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 37,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "deja_ecartees": 6,
+   "adresses_ecartees": 40,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 3,
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.denoray-immobilier.com/vente/11-la-membrolle-sur-choisille/maison/t8/14357-propriete-aux-portes-de-tours/",
-     "titre": "Propriété aux portes de Tours"
+     "url": "https://jki-immo.fr/annonces/f5-metz-vallieres/",
+     "titre": "F5-METZ VALLIÈRES - Jacques Klein Immobilier"
     }
+   },
+   "illisible_exemple": {
+    "url": "https://jki-immo.fr/annonces/maison-individuelle-metz-queuleu/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison individuelle - METZ QUEULEU - Jacques Klein Immobilier",
+    "octets": 321922
    }
   },
   {
-   "agence": "Fontette Immobilier",
-   "secondes": 121,
-   "pages": 11,
+   "agence": "Jean Jaurès Immobilier",
+   "secondes": 81,
+   "pages": 9,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
+   "vendus": 1,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 43,
-   "sitemap": "ok 73",
-   "deja_ecartees": 6,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.fontette-immobilier.fr/vente/maison-individuelle-8-pieces-caen-14000,VM296",
-     "titre": "Maison individuelle à vendre, 8 pièces - Caen 14000"
-    }
-   }
+   "adresses_ecartees": 74,
+   "sitemap_dates": 128,
+   "sitemap": "ok 128",
+   "deja_ecartees": 9
   },
   {
-   "agence": "France4U",
-   "secondes": 54,
-   "pages": 23,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 19,
+   "agence": "L'Agence",
+   "secondes": 7,
+   "pages": 2,
+   "gardes": 0,
+   "vendus": 2,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 23,
-   "sitemap": "ok 23",
-   "motifs": {
-    "ni_surface_ni_prix_credible": 19
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.france4u.eu/property-and-houses-for-sale-in-auvergne.html",
-     "titre": "property and houses for sale in Auvergne"
-    }
-   }
+   "adresses_ecartees": 3,
+   "sitemap_dates": 2,
+   "sitemap": "ok 2"
   },
   {
-   "agence": "GIN Immobilier",
-   "secondes": 49,
-   "pages": 7,
-   "gardes": 7,
+   "agence": "L'Agence Smith",
+   "secondes": 28,
+   "pages": 3,
+   "gardes": 3,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 112,
-   "sitemap_dates": 195,
-   "sitemap": "ok 195",
-   "deja_ecartees": 7
+   "adresses_ecartees": 15,
+   "sitemap_dates": 177,
+   "sitemap": "ok 179",
+   "deja_ecartees": 25
   }
  ]
 }
