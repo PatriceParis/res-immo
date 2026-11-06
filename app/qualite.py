@@ -90,10 +90,34 @@ _TYPES_EXCLUS = re.compile(
     r"|programme neuf|investissement locatif|viager"
 )
 
+# L'ÉTAGE d'un immeuble dit l'appartement quand le titre ne le dit pas :
+# « F3 au 1er étage », « 3 pièces de 50 m² au dernier étage », « Les docks,
+# dernier étage », « 3 pièces en étage ». Mesuré le 6 novembre 2026 :
+# dix-sept titres du fichier parlaient d'étage — seize appartements, dont sept
+# servis comme des maisons (Remiremont, Deauville, Le Havre, Nancy, Épinal),
+# et une « maison bel étage » du Nord, qui reste. « À l'étage » n'en est pas :
+# c'est là que dorment les chambres d'une maison.
+_ETAGE_D_IMMEUBLE = re.compile(
+    r"\b(?:au|en)\s+(?:\d+\s*(?:er|e|eme)|premier|deuxieme|troisieme|quatrieme|cinquieme)"
+    r"\s+etage\b|\bdernier\s+etage\b|\ben\s+etage\b")
+# Un titre qui nomme une maison décrit ses pièces, pas un palier : « Maison
+# de ville, trois chambres au 1er étage » reste.
+_MOT_DE_MAISON = re.compile(
+    r"\b(?:maisons?|villas?|longeres?|fermettes?|fermes?|pavillons?|proprietes?|demeures?"
+    r"|manoirs?|chateaux?|moulins?|chaumieres?|bastides?|chalets?|mas)\b")
+
 # Le chemin de l'URL porte souvent le VRAI type du bien (…/vente/ville/terrain/…)
 # — signal bien plus fiable que le titre, souvent tronqué ou commercial.
 _URL_TYPE_EXCLU = re.compile(
-    r"/(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
+    # La rubrique peut porter un numéro devant son nom : « /vente/10-aube/
+    # 1-troyes/2-appartement/t3/781-… », « /21-immeuble/ », « /5-terrain/ »,
+    # « /20-autre/ ». Ce gabarit est commun à une dizaine d'agences, et le
+    # numéro cachait la rubrique : le 6 novembre 2026, il servait trente biens
+    # comme des maisons — seize appartements, sept immeubles, trois hangars,
+    # deux terrains, un garage, un studio — chez Bon'Appart, L'Hôtel
+    # Immobilier, Bien chez soi, Creil Immo, Cabinet Lebourg, Versus…
+    # Le segment entier reste exigé : « /1-maison/ » n'est pas visé.
+    r"/(?:\d+-)?(terrains?|appartements?|studios?|parkings?|garages?|box|locaux|local"
     r"|commerces?|bureaux|immeubles?|autres?|viagers?|neuf"
     # Le commerce ne dit pas « local » : sa rubrique s'appelle /vente-pro/,
     # /fonds-de-commerce/, /local-commercial/, /murs-commerciaux/,
@@ -400,6 +424,11 @@ def motif_de_rejet(a: dict) -> str | None:
     hors_cible = _NON_ANNONCE.search(sans_agence) or _TYPES_EXCLUS.search(sans_agence)
     if hors_cible:
         return f"titre_hors_cible:{hors_cible.group(0)}"
+    # Un étage d'immeuble, sauf si le titre nomme une maison (voir
+    # _ETAGE_D_IMMEUBLE). Le fragment est fixe — « etage » — pour que le
+    # compteur des motifs ne compte pas un motif par numéro d'étage.
+    if _ETAGE_D_IMMEUBLE.search(sans_agence) and not _MOT_DE_MAISON.search(sans_agence):
+        return "titre_hors_cible:etage"
     # Page catalogue qui a pris le titre de son premier bien : le titre ne la
     # trahit pas, l'énumération de ses références, si.
     if enumere_plusieurs_biens(a):

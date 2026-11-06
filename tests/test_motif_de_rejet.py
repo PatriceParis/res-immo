@@ -165,3 +165,45 @@ def test_un_appartement_au_titre_coupe_ou_mal_ecrit_reste_un_appartement():
         assert motif and motif.startswith("titre_hors_cible:appartem"), (titre, motif)
     assert qualite.motif_de_rejet(bien(titre="Maison qui appartient à la même famille "
                                              "depuis 1900")) is None
+
+
+def test_un_appartement_qui_ne_dit_que_son_etage_est_ecarte():
+    """Servis comme des maisons le 6 novembre 2026 : le titre ne disait pas
+    « appartement », l'étage le disait pour lui."""
+    for titre in ("REMIREMONT - Bel F3 au 1er étage avec garage",
+                  "Deauville centre 3 pièces de 50m² au dernier étage.",
+                  "Les docks, dernier étage",
+                  "Nouveauté Saint - Etienne les Rt : Plateau situé au 2 ème étage à aménager",
+                  "Proche Senlis – 3 pièces en étage",
+                  "Vente T3 au 5e Etage Place Leclerc"):
+        motif = qualite.motif_de_rejet(bien(titre=titre))
+        assert motif == "titre_hors_cible:etage", (titre, motif)
+
+
+def test_une_maison_qui_parle_de_son_etage_reste_une_maison():
+    """La « maison bel étage » du Nord était au fichier ce jour-là, servie à
+    juste titre ; les chambres d'une maison sont à l'étage, ou au premier."""
+    for titre in ("LARGE MAISON BEL ETAGE - DOUBLE GARAGE ET ATELIER PERENCHIES 59840",
+                  "Maison de ville, trois chambres au 1er étage",
+                  "Longère rénovée, suite parentale au dernier étage",
+                  "Belle 4 pièces avec deux chambres à l'étage"):
+        assert qualite.motif_de_rejet(bien(titre=titre)) is None, titre
+
+
+def test_la_rubrique_numerotee_dit_le_type_du_bien():
+    """« /2-appartement/ », « /21-immeuble/ » : le numéro cachait la rubrique,
+    et trente biens de ce gabarit étaient servis comme des maisons le
+    6 novembre 2026 — l'adresse prime sur le titre, ici « maison »."""
+    for url in ("https://www.bienchezsoi-immo.com/vente/10-aube/1-troyes/2-appartement/t3/"
+                "781-a-vendre-centre-de-troyes-duplex-",
+                "https://www.creilimmo.fr/vente/60-oise/10-montataire/21-immeuble/"
+                "485-rare-immeuble-de-6-logements/",
+                "https://www.agence-berry-immobilier.fr/vente/36-indre/39-neuvy-pailloux/"
+                "5-terrain/3119-exclusivite-terrain-de-",
+                "https://www.bon-appart.fr/vente/54-meurthe-et-moselle/557-val-de-briey/"
+                "20-autre/6096-hangar-100m2-1-piece-100m"):
+        motif = qualite.motif_de_rejet(bien(url=url))
+        assert motif == "url_type_exclu", (url, motif)
+    maison = ("https://www.bienchezsoi-immo.com/vente/10-aube/264-plancy-l-abbaye/1-maison/t5/"
+              "836-achat-maison-98m2-sur-746m2-de-terrain-et-sous-sol/")
+    assert qualite.motif_de_rejet(bien(url=maison)) is None
