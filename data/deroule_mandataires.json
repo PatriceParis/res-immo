@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.8,
+  "seconde": 2.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.9,
+  "seconde": 2.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,212 +23,177 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.9,
+  "seconde": 2.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.7,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.5,
+  "seconde": 6.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.5,
+  "seconde": 6.2,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.0,
+  "seconde": 6.6,
   "reseau": "capifrance",
-  "connues": 18722,
-  "ecartees": 2823
+  "connues": 18926,
+  "ecartees": 2858
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.0,
+  "seconde": 6.6,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.1,
+  "seconde": 6.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 14.8,
+  "seconde": 19.3,
   "reseau": "iad",
-  "n": 93505,
+  "n": 93512,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 16.6,
+  "seconde": 20.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.1,
+  "seconde": 20.7,
   "reseau": "iad",
-  "connues": 18722,
-  "ecartees": 2823
+  "connues": 18926,
+  "ecartees": 2858
  },
  {
   "etape": "departement",
-  "seconde": 292.5,
+  "seconde": 344.3,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 44,
-   "vendu": 3,
-   "ecarte": 3,
+   "garde": 33,
+   "vendu": 12,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 1,
-   "prix_trop_haut": 1
+   "hors_perimetre": 4
   },
   "exemples": {
-   "location": "Longère 5 pièces de 80 m² à Livarot (14140)",
-   "hors_perimetre": "Maison de campagne 4 pièces de 140 m² à Aubigny (79390)",
-   "prix_trop_haut": "Maison 5 pièces de 118 m² à Deauville (14800)"
+   "location": "Maison 5 pièces de 133 m² à Dombasle-sur-Meurthe (54110)",
+   "hors_perimetre": "109 353 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 516.1,
+  "seconde": 607.2,
   "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
+  "departement": "55",
+  "visitees": 36,
   "gardes": 32,
   "tronquee": true,
   "etats": {
    "garde": 32,
-   "vendu": 9,
-   "ecarte": 9,
+   "vendu": 4,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 4 pièces de 166 m² à Saint-Symphorien (33113)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 610.8,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 17,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 3,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1
-  },
-  "exemples": {
-   "location": "Maison 3 pièces de 92 m² à Joué-lès-Tours (37300)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 610.8,
+  "seconde": 607.2,
   "reseau": "safti",
-  "part_secondes": 591
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 611.5,
+  "seconde": 607.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 612.8,
+  "seconde": 609.0,
   "reseau": "safti",
   "n": 28864,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 613.5,
+  "seconde": 609.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 614.0,
+  "seconde": 609.9,
   "reseau": "safti",
-  "connues": 18750,
-  "ecartees": 2851
+  "connues": 18946,
+  "ecartees": 2879
  },
  {
   "etape": "departement",
-  "seconde": 915.9,
+  "seconde": 1038.8,
   "reseau": "safti",
-  "departement": "76",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 50,
   "tronquee": true,
   "etats": {
-   "garde": 45,
+   "garde": 50,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à FRENEUSE de 335m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 1204.0,
+  "seconde": 1206.5,
   "reseau": "safti",
-  "departement": "37",
-  "visitees": 48,
-  "gardes": 46,
+  "departement": "58",
+  "visitees": 20,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 46,
+   "garde": 20,
    "vendu": 0,
-   "ecarte": 2,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à ROCHECORBON de 277m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1204.1,
-  "gardes": 180
+  "seconde": 1206.5,
+  "gardes": 135
  }
 ]
