@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.3,
+  "seconde": 1.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.3,
+  "seconde": 1.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,212 +23,204 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.3,
+  "seconde": 1.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.0,
+  "seconde": 3.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.5,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.1,
+  "seconde": 5.4,
   "reseau": "capifrance",
-  "connues": 19182,
-  "ecartees": 2916
+  "connues": 19279,
+  "ecartees": 2942
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.1,
+  "seconde": 5.4,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.3,
+  "seconde": 5.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.1,
+  "seconde": 19.0,
   "reseau": "iad",
   "n": 93818,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.2,
+  "seconde": 20.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.7,
+  "seconde": 20.8,
   "reseau": "iad",
-  "connues": 19182,
-  "ecartees": 2916
+  "connues": 19279,
+  "ecartees": 2942
  },
  {
   "etape": "departement",
-  "seconde": 274.7,
+  "seconde": 293.7,
   "reseau": "iad",
-  "departement": "28",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 39,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 7,
-   "ecarte": 4,
+   "garde": 41,
+   "vendu": 8,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 3
+   "hors_perimetre": 1
   },
   "exemples": {
-   "location": "Maison 5 pièces de 140 m² à Ymonville (28150)",
-   "hors_perimetre": "Maison 5 pièces de 124 m² à Allonnes (49650)"
+   "hors_perimetre": "Maison traditionnelle 5 pièces de 90 m² à Ruffec (16700)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 525.9,
+  "seconde": 522.3,
   "reseau": "iad",
-  "departement": "60",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 25,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 10,
-   "ecarte": 2,
+   "garde": 25,
+   "vendu": 15,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "prix_trop_haut": 3,
+   "hors_perimetre": 2,
+   "outre_mer": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison d"
+   "prix_trop_haut": "Domaine 16 pièces de 900 m² à Lons-le-Saunier (39000)",
+   "hors_perimetre": "Maison de campagne 8 pièces de 188 m² à Rosay (78790)",
+   "outre_mer": "Maison 2 pièces de 60 m² à Saint-Pierre (97432)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 604.8,
+  "seconde": 609.0,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "41",
   "visitees": 16,
-  "gardes": 12,
+  "gardes": 13,
   "tronquee": true,
   "etats": {
-   "garde": 12,
-   "vendu": 2,
-   "ecarte": 2,
+   "garde": 13,
+   "vendu": 3,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 6 pièces de 140 m² à Courtomer (77390)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 604.9,
+  "seconde": 609.1,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.4,
+  "seconde": 609.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.3,
+  "seconde": 610.5,
   "reseau": "safti",
   "n": 28879,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.1,
+  "seconde": 611.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.7,
+  "seconde": 611.5,
   "reseau": "safti",
-  "connues": 19205,
-  "ecartees": 2940
+  "connues": 19298,
+  "ecartees": 2962
  },
  {
   "etape": "departement",
-  "seconde": 904.6,
+  "seconde": 952.5,
   "reseau": "safti",
-  "departement": "02",
+  "departement": "59",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 50,
   "tronquee": true,
   "etats": {
-   "garde": 49,
+   "garde": 50,
    "vendu": 0,
-   "ecarte": 1,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à FAVEROLLES de 500m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 1202.6,
+  "seconde": 1206.8,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 48,
+  "departement": "60",
+  "visitees": 43,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 0,
-   "ecarte": 2,
+   "garde": 36,
+   "vendu": 1,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1,
-   "prix_trop_haut": 1
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à TERNAY de 224m²",
-   "prix_trop_haut": "Maison à vendre à BLOIS de 304m²"
+   "prix_trop_haut": "Maison à vendre à CHANTILLY de 190m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.6,
-  "gardes": 186
+  "seconde": 1206.8,
+  "gardes": 165
  }
 ]
