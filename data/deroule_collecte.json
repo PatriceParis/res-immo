@@ -1,578 +1,647 @@
 {
- "minutes": 28.1,
+ "minutes": 28.0,
  "agences": [
   {
-   "agence": "Abrinor Immobilier",
-   "secondes": 59,
-   "pages": 12,
+   "agence": "Brique rouge",
+   "secondes": 51,
+   "pages": 18,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 295,
-   "sitemap_dates": 276,
-   "sitemap": "ok 276",
-   "motifs": {
-    "prix_trop_haut": 4
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.abrinor.fr/annonce/vente-maison-premesques-59840-lom-34530-jl/",
-     "titre": "PREMESQUES CORPS DE FERME SUR PLUS 20 000 M²"
-    }
-   }
-  },
-  {
-   "agence": "Accord Immobilier",
-   "secondes": 65,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 108,
-   "sitemap_dates": 94,
-   "sitemap": "ok 94",
-   "deja_ecartees": 22
-  },
-  {
-   "agence": "Action Vente 37",
-   "secondes": 31,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 20,
-   "sitemap": "ok 28",
-   "deja_ecartees": 25
-  },
-  {
-   "agence": "AdressImmo",
-   "secondes": 5,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "sans <loc>",
-   "index_statut": 200,
-   "index_titre": "Accès interdit"
-  },
-  {
-   "agence": "Agence Afico",
-   "secondes": 95,
-   "pages": 13,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 101,
-   "sitemap_dates": 71,
-   "sitemap": "ok 71",
-   "deja_ecartees": 53,
-   "illisible_exemple": {
-    "url": "https://www.afico.fr/iwp_type/maison-villa/",
-    "cause": "aucune annonce lue",
-    "titre": "Archives des Maison/Villa - Afico",
-    "octets": 61296
-   },
-   "motifs": {
-    "location": 1,
-    "prix_trop_haut": 2
-   },
-   "ecartes_exemples": {
-    "location": {
-     "url": "https://www.afico.fr/annonce/maison-meublee-84-m%c2%b2-fondettes/",
-     "titre": "Maison MEUBLÉE - 84 m² - FONDETTES - Afico"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.afico.fr/annonce/particulier-hyper-centre-avec-jardin-sud-et-garage-167m%c2%b2/",
-     "titre": "Maison de Ville - 167 m² - TOURS - Afico"
-    }
-   }
-  },
-  {
-   "agence": "Agence Albert 1er",
-   "secondes": 93,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 146,
-   "sitemap": "ok 103",
-   "deja_ecartees": 41
-  },
-  {
-   "agence": "Agence Armance Immobilier",
-   "secondes": 52,
-   "pages": 7,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Armance immobilier",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Agence Blancoise",
-   "secondes": 67,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 45,
-   "sitemap": "ok 45",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.agenceblancoise.com/biens-vendus/1",
-    "cause": "aucune annonce lue",
-    "titre": "Biens vendus | Agence Blancoise",
-    "octets": 169006
-   }
-  },
-  {
-   "agence": "Agence Boilot",
-   "secondes": 26,
-   "pages": 11,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 11,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 200,
-   "index_titre": "Agence immobilière à Château-Thierry 02 : vente et location ",
-   "illisible_exemple": {
-    "url": "https://www.agence-boilot.net/vente-maison-viffort.php",
-    "cause": "aucune annonce lue",
-    "titre": "Vente de maison à Viffort, dans l’Aisne (02)&nbsp;: AGENCE BOILOT",
-    "octets": 33293
-   }
-  },
-  {
-   "agence": "Agence Creil Immo",
-   "secondes": 49,
-   "pages": 7,
-   "gardes": 7,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 11,
-   "sitemap": "ok 11",
-   "deja_ecartees": 4
-  },
-  {
-   "agence": "Agence Du Centre",
-   "secondes": 63,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 54,
-   "sitemap_dates": 51,
-   "sitemap": "ok 51",
-   "deja_ecartees": 9,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.agenceducentre.net/vente/1-fecamp/maison/5929-villa-avec-terrasse-jardin-dependance-et-garage-en-vente-a-fecamp-prestige",
-     "titre": "Maison 11pièce(s) 4chambre(s) 370 m² Fécamp (76400)"
-    }
-   }
-  },
-  {
-   "agence": "Agence Greub",
-   "secondes": 96,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap": "ok 11"
-  },
-  {
-   "agence": "Agence Immobilière Océane Cric",
-   "secondes": 95,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 70,
-   "sitemap": "ok 34"
-  },
-  {
-   "agence": "Agence Joly",
-   "secondes": 9,
-   "pages": 3,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 4,
-   "sitemap": "ok 4",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.agence-joly.com/biens-a-vendre-epron.html",
-    "cause": "aucune annonce lue",
-    "titre": "Biens à vendre à Épron : maisons et appartements avec Agence JOLY",
-    "octets": 225204
-   }
-  },
-  {
-   "agence": "Agence Mosellane Immobilière",
-   "secondes": 6,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": ""
-  },
-  {
-   "agence": "Agence Olleon",
-   "secondes": 5,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 403,
-   "index_titre": "403 Forbidden"
-  },
-  {
-   "agence": "Aude Immo 18",
-   "secondes": 70,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 8,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Aurélie Bonnet Immobilier",
-   "secondes": 73,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 2,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 46,
-   "sitemap_dates": 268,
-   "sitemap": "ok 268",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "BAP Immo",
-   "secondes": 89,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 10,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 38,
-   "sitemap": "ok 47",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Bagnoles Immobilier",
-   "secondes": 83,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 99,
-   "sitemap": "ok 177",
-   "deja_ecartees": 25
-  },
-  {
-   "agence": "Baudart Immo",
-   "secondes": 21,
-   "pages": 1,
-   "gardes": 1,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 202,
-   "sitemap": "HTTP 202",
-   "index_statut": 202,
-   "index_titre": "Loading https://www.baudartimmo.fr/annonces/transaction/vent",
-   "deja_ecartees": 1
-  },
-  {
-   "agence": "Benedic Immobilier",
-   "secondes": 33,
-   "pages": 3,
-   "gardes": 3,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 30,
-   "sitemap": "aucune page de bien",
-   "index_statut": 200,
-   "index_titre": "Benedic immobilier Agence immobilière à Metz Nancy ... | Ben"
-  },
-  {
-   "agence": "Berry Immobilier",
-   "secondes": 71,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 50,
-   "sitemap_dates": 142,
-   "sitemap": "ok 142",
-   "deja_ecartees": 3,
+   "sitemap": "ok 191",
+   "deja_ecartees": 5,
    "motifs": {
-    "prix_trop_haut": 4
+    "prix_trop_haut": 1,
+    "ni_surface_ni_prix_credible": 9
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.agence-berry-immobilier.fr/vente/1-issoudun/maison/3750-maison-de-plain-pied-a-issoudun",
-     "titre": "Maison de plain-pied à Issoudun"
-    }
-   }
-  },
-  {
-   "agence": "Bias Immobilier",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Bien chez soi immobilier",
-   "secondes": 60,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 48,
-   "sitemap_dates": 73,
-   "sitemap": "ok 73",
-   "deja_ecartees": 50,
-   "motifs": {
-    "ni_surface_ni_prix_credible": 1
-   },
-   "ecartes_exemples": {
+     "url": "https://www.brique-rouge-immobilier.fr/vente/maison/campagne-de-bethune-domaine-familial_19969",
+     "titre": "Campagne de Béthune - Domaine familial - ESSARS"
+    },
     "ni_surface_ni_prix_credible": {
-     "url": "https://www.bienchezsoi-immo.com/vendre-son-bien-immobilier",
-     "titre": "Vendre son bien immobilier Troyes | Bien chez soi Immobilier"
+     "url": "https://www.brique-rouge-immobilier.fr/acheter/maison/essars/tous_quartiers/toutes_chambres/0-0",
+     "titre": "Acheter une maison à Essars - Brique Rouge Immobilier"
     }
    }
   },
   {
-   "agence": "Bon'Appart",
-   "secondes": 70,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 1,
-   "illisibles": 0,
+   "agence": "Brosset Immobilier",
+   "secondes": 4,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 54,
-   "sitemap_dates": 79,
-   "sitemap": "ok 79",
-   "deja_ecartees": 3,
-   "motifs": {
-    "titre_hors_cible:viager": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:viager": {
-     "url": "https://www.bon-appart.fr/vente/57-moselle/458-volstroff/49-viager-maison/7019-maison-en-viager-occupe-sans-rente-femme-84-ans/",
-     "titre": "viager maison 5pièce(s) 3chambre(s) 106 m² Volstroff (57940)"
-    }
+   "adresses_ecartees": 6,
+   "sitemap_dates": 7,
+   "sitemap": "ok 7",
+   "deja_ecartees": 6,
+   "illisible_exemple": {
+    "url": "https://www.brosset-immobilier.fr/vendre-son-appartement-maison",
+    "cause": "aucune annonce lue",
+    "titre": "Comment bien vendre votre appartement ou maison à Tours | Brosset Immobilier",
+    "octets": 61326
    }
   },
   {
-   "agence": "Bonnabelle",
-   "secondes": 74,
+   "agence": "Bréville immobilier",
+   "secondes": 59,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
-   "robots": "absent",
+   "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 59,
-   "sitemap": "ok 59"
+   "adresses_ecartees": 105,
+   "sitemap_dates": 45,
+   "sitemap": "ok 45",
+   "deja_ecartees": 7
   },
   {
-   "agence": "Boost Immo",
-   "secondes": 69,
-   "pages": 9,
-   "gardes": 8,
+   "agence": "Cabinet Aelion immobilier",
+   "secondes": 40,
+   "pages": 5,
+   "gardes": 4,
    "vendus": 0,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 178,
-   "sitemap_dates": 29,
-   "sitemap": "ok 29",
-   "deja_ecartees": 4,
+   "adresses_ecartees": 10,
+   "sitemap_dates": 6,
+   "sitemap": "ok 6",
+   "deja_ecartees": 1,
    "motifs": {
     "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://boost-immo.com/vente/24-dordogne/5328-riberac/1-maison/t20/8374-maison-riberac-20-piece-s-572-m2/",
-     "titre": "Maison 20pièce(s) 12chambre(s) 572 m² Ribérac (24600)"
+     "url": "https://www.aelion-immobilier.com/vente/381-cresseveuille/propriete/t5/24-propriete-150-m-avec-dependances-19-ha-de-terrain/",
+     "titre": "PROPRIÉTÉ 150 M² AVEC DÉPENDANCES - 19 ha de terrain"
     }
    }
   },
   {
-   "agence": "Bouctot Immobilier & Commerces",
-   "secondes": 81,
-   "pages": 32,
+   "agence": "Cabinet Choquet",
+   "secondes": 17,
+   "pages": 0,
    "gardes": 0,
    "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 28,
+   "ecartes": 0,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 34,
-   "sitemap": "ok 34",
-   "deja_ecartees": 2,
-   "illisible_exemple": {
-    "url": "https://agence-immobiliere-cherbourg.net/project/salon-de-coiffure-mixte-3/vente-salon-de-coiffure-ec2232/",
-    "cause": "aucune annonce lue",
-    "titre": "Vente salon de coiffure ec2232 - Bouctot Immobilier",
-    "octets": 167403
-   },
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Cabinet Choquet - agence immobilière à Lille"
+  },
+  {
+   "agence": "Cabinet Courel",
+   "secondes": 10,
+   "pages": 1,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 4,
+   "sitemap_dates": 1,
+   "sitemap": "ok 1",
    "motifs": {
-    "prix_trop_haut": 1,
-    "ni_surface_ni_prix_credible": 3
+    "ni_surface_ni_prix_credible": 1
    },
    "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://agence-immobiliere-cherbourg.net/project/maison-darchitecte-a-cherbourg-en-cotentin/",
-     "titre": "Maison d"
-    },
     "ni_surface_ni_prix_credible": {
-     "url": "https://agence-immobiliere-cherbourg.net/project/maison-recente-de-plain-pied-dans-le-cotentin/",
-     "titre": "Maison récente de plain pied dans le Cotentin - Bouctot Immobilier"
+     "url": "https://cabinet-courel.fr/nos-biens-dinvestissement/",
+     "titre": "Immobilier d"
     }
    }
   },
   {
-   "agence": "Bourgogne Buxy Immobilier",
-   "secondes": 74,
+   "agence": "Cabinet Dero Renard",
+   "secondes": 102,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 164,
+   "sitemap": "ok 121",
+   "deja_ecartees": 101,
+   "illisible_exemple": {
+    "url": "https://www.immorenard.com/vente/maison-4-pieces-sainte-adresse-76310,VM462",
+    "cause": "aucune annonce lue",
+    "titre": "À vendre - Maison, 4 pièces située à Sainte-Adresse (76310)",
+    "octets": 816524
+   }
+  },
+  {
+   "agence": "Cabinet Faudais",
+   "secondes": 142,
+   "pages": 45,
+   "gardes": 5,
+   "vendus": 40,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 148,
+   "sitemap_dates": 324,
+   "sitemap": "ok 324",
+   "deja_ecartees": 5
+  },
+  {
+   "agence": "Cabinet JC Lebourg",
+   "secondes": 59,
    "pages": 8,
-   "gardes": 7,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 16,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "deja_ecartees": 3
+  },
+  {
+   "agence": "Cabinet Lintot",
+   "secondes": 12,
+   "pages": 4,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 6,
+   "sitemap_dates": 13,
+   "sitemap": "ok 13",
+   "deja_ecartees": 9,
+   "illisible_exemple": {
+    "url": "https://www.cabinet-lintot.fr/annonces-immobilieres",
+    "cause": "aucune annonce lue",
+    "titre": "Biens immobiliers",
+    "octets": 5019
+   },
+   "motifs": {
+    "titre_hors_cible:biens immobiliers": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.cabinet-lintot.fr/annonces-immobilieres/maisons",
+     "titre": "Biens immobiliers"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Quesnée Immobilier",
+   "secondes": 36,
+   "pages": 5,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 45,
+   "sitemap_dates": 12,
+   "sitemap": "ok 12",
+   "deja_ecartees": 7
+  },
+  {
+   "agence": "Cabinet Ray",
+   "secondes": 65,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 2,
+   "ecartes": 3,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "absent",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 78,
+   "sitemap": "ok 78",
+   "deja_ecartees": 13,
+   "motifs": {
+    "prix_trop_haut": 3
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2027/region-montcenis-belle-demeure-au-calme-avec-etang-3-ha-environ",
+     "titre": "Région Montcenis. BELLE DEMEURE AU CALME AVEC ETANG 3 HA ENVIRON"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Reca",
+   "secondes": 41,
+   "pages": 5,
+   "gardes": 4,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Agence Immobilière à Noyon. Vente et location",
+   "motifs": {
+    "titre_hors_cible:terrain a batir": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://cabinet-reca.fr/a-vendre/ognes-02300-terrain-a-batir-951m2-ognes-v50002577/",
+     "titre": "OGNES 02300 – TERRAIN à BÂTIR 951m2 - Cabinet Reca"
+    }
+   }
+  },
+  {
+   "agence": "Cabinet Vasse",
+   "secondes": 17,
+   "pages": 3,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Cabinet Vasse - 2 agences immobilières à Caen dans le Calvad",
+   "deja_ecartees": 5,
+   "motifs": {
+    "titre_hors_cible:appartement": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://cabinet-vasse.com/fr/propriete/location+appartement+caen+87554715",
+     "titre": "Location immobilière : Appartement à Caen 2 pièces 34.79 m² 685 € / Mois (Charges comprises)- CABINET VASSE."
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://cabinet-vasse.com/fr/propriete/location+garage-parking+caen+87512161",
+    "cause": "aucune annonce lue",
+    "titre": "Location immobilière : Garage à Caen 128&nbsp;€ / Mois (Charges comprises)- CABINET VASSE.",
+    "octets": 95150
+   }
+  },
+  {
+   "agence": "Cabinet de Simencourt",
+   "secondes": 73,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 127,
+   "sitemap_dates": 69,
+   "sitemap": "ok 69",
+   "deja_ecartees": 9,
+   "illisible_exemple": {
+    "url": "https://www.de-simencourtimmobilier.fr/vente/vallee-de-la-bresle/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 annonces immobilières : Vallée de la Bresle",
+    "octets": 150382
+   },
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.de-simencourtimmobilier.fr/vente/1-ault/maison/t9/5690-magnifique-villa-offrant-une-vue-imprenable-sur-la-mer-et-les-falaises/",
+     "titre": "MAGNIFIQUE VILLA OFFRANT UNE VUE IMPRENABLE SUR LA MER ET LES FALAISES"
+    }
+   }
+  },
+  {
+   "agence": "Delafosse & Associée",
+   "secondes": 79,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 1,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 168,
+   "sitemap_dates": 431,
+   "sitemap": "ok 431",
+   "deja_ecartees": 6,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://delafosse.immo/annonces/demeure-de-caractere-avec-jardin/",
+     "titre": "DEMEURE DE CARACTÈRE AVEC JARDIN - Delafosse & Associée"
+    }
+   }
+  },
+  {
+   "agence": "Delaitre immobilier",
+   "secondes": 149,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 12,
+   "sitemap_dates": 347,
+   "sitemap": "ok 348",
+   "deja_ecartees": 36,
+   "motifs": {
+    "prix_trop_haut": 1,
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.delaitreimmobilier.fr/biens/402/bien-exceptionnel-sur-site-exceptionnel-maison-ancienne-renovee-avec-vue-incroyable",
+     "titre": "Bien exceptionnel sur site exceptionnel, maison ancienne rénovée avec vue incroyable , stationnements, jardin"
+    },
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.delaitreimmobilier.fr/biens/427/mont-saint-aignan-maison-de-qualite-calme-lumineuse-de-170-m2",
+     "titre": "mont Saint Aignan Maison de qualité calme, lumineuse de 170 m2"
+    }
+   }
+  },
+  {
+   "agence": "Deletan Immobilier",
+   "secondes": 74,
+   "pages": 18,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 9,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 34",
+   "adresses_ecartees": 2,
+   "sitemap_dates": 34,
+   "deja_ecartees": 1,
+   "motifs": {
+    "prix_trop_haut": 9
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://deletang-immobilier.com/nos-biens/contemporaine-de-plain-pied-d-rsquo-architecte-parc-1-hectare-7-120",
+     "titre": "Deletang Immobilier : des demeures d"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://deletang-immobilier.com/nos-biens/hyper-centre-tours-appartement-t2-de-charme-129",
+    "cause": "aucune annonce lue",
+    "titre": "Deletang Immobilier : des demeures d'exception",
+    "octets": 72431
+   }
+  },
+  {
+   "agence": "Demeures du Perche et de Normandie",
+   "secondes": 55,
+   "pages": 10,
+   "gardes": 2,
+   "vendus": 0,
+   "ecartes": 5,
+   "illisibles": 3,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 30,
+   "sitemap": "ok 30",
+   "deja_ecartees": 20,
+   "motifs": {
+    "prix_trop_haut": 5
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://demeures-perche-normandie.fr/demeures/propriete-a-vendre-mortagne-au-perche/",
+     "titre": "Propriété familiale à vendre Mortagne-au-Perche"
+    }
+   },
+   "illisible_exemple": {
+    "url": "https://demeures-perche-normandie.fr/le-perche/maison-de-campagne/",
+    "cause": "navigation : Error",
+    "titre": "",
+    "octets": 0
+   }
+  },
+  {
+   "agence": "Demonchy",
+   "secondes": 89,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 27,
+   "sitemap": "ok 72",
+   "deja_ecartees": 24,
+   "illisible_exemple": {
+    "url": "https://www.agence-demonchy.fr/nos-biens-vendus/",
+    "cause": "aucune annonce lue",
+    "titre": "appartements, maisons, terrains vendu à Aumale,Poix de Picardie | %site_title%",
+    "octets": 152177
+   }
+  },
+  {
+   "agence": "Dorimmo",
+   "secondes": 66,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 10,
+   "sitemap_dates": 208,
+   "sitemap": "ok 208",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Du Côté de Chez Vous",
+   "secondes": 63,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 173,
+   "sitemap_dates": 330,
+   "sitemap": "ok 330",
+   "deja_ecartees": 14
+  },
+  {
+   "agence": "E&B Immo",
+   "secondes": 53,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 107,
+   "sitemap_dates": 61,
+   "sitemap": "ok 61"
+  },
+  {
+   "agence": "Echinard",
+   "secondes": 8,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 404,
+   "sitemap": "HTTP 404",
+   "index_statut": 429,
+   "index_titre": ""
+  },
+  {
+   "agence": "Eco Immo 60",
+   "secondes": 43,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 18,
+   "sitemap_dates": 26,
+   "sitemap": "ok 26",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Ernoult Immobilier",
+   "secondes": 59,
+   "pages": 5,
+   "gardes": 3,
+   "vendus": 1,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 20,
+   "sitemap": "ok 59",
+   "deja_ecartees": 54,
+   "illisible_exemple": {
+    "url": "https://www.ernoult-immobilier.fr/vente/,VM382",
+    "cause": "aucune annonce lue",
+    "titre": "FREDERIQUE ERNOULT IMMOBILIER",
+    "octets": 787948
+   }
+  },
+  {
+   "agence": "Espace Pro",
+   "secondes": 70,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 97,
+   "sitemap_dates": 193,
+   "sitemap": "ok 193",
+   "deja_ecartees": 1,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.espacepro-immobilier.fr/propriete/maison-a-vendre-beaumont-en-auge/",
+     "titre": "Maison à vendre Beaumont-en-Auge"
+    }
+   }
+  },
+  {
+   "agence": "Espaces Atypiques",
+   "secondes": 103,
+   "pages": 28,
+   "gardes": 4,
+   "vendus": 17,
+   "ecartes": 0,
+   "illisibles": 7,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 9,
+   "sitemap_dates": 30,
+   "sitemap": "ok 29",
+   "deja_ecartees": 1,
+   "illisible_exemple": {
+    "url": "https://www.espaces-atypiques.com/architecture-et-inspiration/maison-atypique-cap-ferret-renovation/",
+    "cause": "aucune annonce lue",
+    "titre": "Visite d'une maison atypique rénovée au Cap Ferret par un architecte",
+    "octets": 173765
+   }
+  },
+  {
+   "agence": "Estime",
+   "secondes": 45,
+   "pages": 6,
+   "gardes": 6,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 14,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
-   "illisible_exemple": {
-    "url": "https://www.bbi.fr/type-de-bien-en-vente/biens-dexceptions/",
-    "cause": "aucune annonce lue",
-    "titre": "Biens d'exceptions en vente - BBI",
-    "octets": 151569
-   }
+   "adresses_ecartees": 126,
+   "sitemap_dates": 58,
+   "sitemap": "ok 58",
+   "deja_ecartees": 51
   }
  ]
 }
