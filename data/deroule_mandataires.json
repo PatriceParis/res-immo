@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.1,
+  "seconde": 1.3,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.1,
+  "seconde": 1.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,127 +23,176 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.1,
+  "seconde": 1.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.0,
+  "seconde": 3.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.4,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.4,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.0,
+  "seconde": 5.1,
   "reseau": "capifrance",
-  "connues": 19004,
-  "ecartees": 2879
+  "connues": 19182,
+  "ecartees": 2916
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.0,
+  "seconde": 5.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.2,
+  "seconde": 5.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.9,
+  "seconde": 16.1,
   "reseau": "iad",
-  "n": 93512,
+  "n": 93818,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.9,
+  "seconde": 18.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.5,
+  "seconde": 18.7,
   "reseau": "iad",
-  "connues": 19004,
-  "ecartees": 2879
+  "connues": 19182,
+  "ecartees": 2916
  },
  {
   "etape": "departement",
-  "seconde": 252.1,
+  "seconde": 274.7,
   "reseau": "iad",
-  "departement": "21",
+  "departement": "28",
   "visitees": 50,
-  "gardes": 25,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 4,
-   "ecarte": 21,
+   "garde": 39,
+   "vendu": 7,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 20,
-   "prix_trop_haut": 1
+   "location": 1,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison 1 pièce de 120 m² à Colombier (24560)",
-   "prix_trop_haut": "Ferme 4 pièces de 103 m² à Chaux (21700)"
+   "location": "Maison 5 pièces de 140 m² à Ymonville (28150)",
+   "hors_perimetre": "Maison 5 pièces de 124 m² à Allonnes (49650)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 484.0,
+  "seconde": 525.9,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 28,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 28,
-   "vendu": 9,
-   "ecarte": 13,
+   "garde": 38,
+   "vendu": 10,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9,
-   "prix_trop_haut": 1,
-   "outre_mer": 3
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 98 m² à Saint-Hippolyte (66510)",
-   "prix_trop_haut": "Ferme 8 pièces de 250 m² à Les Combes (25500)",
-   "outre_mer": "Maison traditionnelle 4 pièces de 140 m² à Sainte-Anne (97180)"
+   "hors_perimetre": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 605.9,
+  "seconde": 604.8,
   "reseau": "iad",
-  "departement": "27",
-  "visitees": 22,
-  "gardes": 17,
+  "departement": "61",
+  "visitees": 16,
+  "gardes": 12,
   "tronquee": true,
   "etats": {
-   "garde": 17,
-   "vendu": 4,
+   "garde": 12,
+   "vendu": 2,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 6 pièces de 140 m² à Courtomer (77390)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 604.9,
+  "reseau": "safti",
+  "part_secondes": 596
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 605.4,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 606.3,
+  "reseau": "safti",
+  "n": 28879,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 607.1,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 607.7,
+  "reseau": "safti",
+  "connues": 19205,
+  "ecartees": 2940
+ },
+ {
+  "etape": "departement",
+  "seconde": 904.6,
+  "reseau": "safti",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 49,
+  "tronquee": true,
+  "etats": {
+   "garde": 49,
+   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
@@ -151,82 +200,35 @@
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Demeure 13 pièces de 310 m² à Pont-Audemer (27500)"
+   "prix_trop_haut": "Maison à vendre à FAVEROLLES de 500m²"
   }
  },
  {
-  "etape": "reseau_debut",
-  "seconde": 606.0,
-  "reseau": "safti",
-  "part_secondes": 596
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 606.6,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 608.3,
-  "reseau": "safti",
-  "n": 28864,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 609.2,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 609.8,
-  "reseau": "safti",
-  "connues": 19035,
-  "ecartees": 2911
- },
- {
   "etape": "departement",
-  "seconde": 935.9,
+  "seconde": 1202.6,
   "reseau": "safti",
-  "departement": "80",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 1,
-   "ecarte": 4,
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4
+   "hors_perimetre": 1,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à Maurepas de 85m²"
+   "hors_perimetre": "Maison à vendre à TERNAY de 224m²",
+   "prix_trop_haut": "Maison à vendre à BLOIS de 304m²"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 1209.2,
-  "reseau": "safti",
-  "departement": "88",
-  "visitees": 39,
-  "gardes": 39,
-  "tronquee": true,
-  "etats": {
-   "garde": 39,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
   "etape": "fin",
-  "seconde": 1209.2,
-  "gardes": 154
+  "seconde": 1202.6,
+  "gardes": 186
  }
 ]
