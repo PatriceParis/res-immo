@@ -85,6 +85,12 @@ _TYPES_EXCLUS = re.compile(
     r"|emplacement de parking"
     r"|local (commercial|professionnel|d'activite)|locaux (commerciaux|professionnels)"
     r"|\bbureaux\b|entrepots?|fonds de commerce|murs commerciaux"
+    # Le bail d'un commerce et les lots d'un lotisseur : le 7 novembre 2026,
+    # quatre « DROIT AU BAIL » (Caen, un institut de beauté…) et deux
+    # « TERRAINS VIABILISES A VENDRE » (Valenciennes, Crespin) étaient servis
+    # comme des maisons. Aucun titre de maison du fichier ne dit l'un ou
+    # l'autre ; le pluriel seul est visé pour les terrains.
+    r"|droit au bail|terrains viabilises"
     r"|immeuble de rapport|terrains? (a batir|constructibles?|nus?)"
     r"|^terrains?\b|vente de terrains?|batiment d'activite|hangar agricole"
     r"|programme neuf|investissement locatif|viager"

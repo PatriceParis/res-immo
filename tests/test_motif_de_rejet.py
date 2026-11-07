@@ -190,6 +190,18 @@ def test_une_maison_qui_parle_de_son_etage_reste_une_maison():
         assert qualite.motif_de_rejet(bien(titre=titre)) is None, titre
 
 
+def test_un_bail_commercial_ou_des_lots_a_batir_ne_sont_pas_des_maisons():
+    """Servis comme des maisons le 7 novembre 2026."""
+    for titre, fragment in (("CAEN CENTRE DROIT AU BAIL INSTITUT DE BEAUTE", "droit au bail"),
+                            ("Droit au bail | LECOEUR IMMOBILIER", "droit au bail"),
+                            ("VALENCIENNES - TERRAINS VIABILISES A VENDRE - SIGH",
+                             "terrains viabilises")):
+        motif = qualite.motif_de_rejet(bien(titre=titre))
+        assert motif == f"titre_hors_cible:{fragment}", (titre, motif)
+    assert qualite.motif_de_rejet(bien(titre="Maison de bourg, bail rural en cours "
+                                             "sur la prairie")) is None
+
+
 def test_la_rubrique_numerotee_dit_le_type_du_bien():
     """« /2-appartement/ », « /21-immeuble/ » : le numéro cachait la rubrique,
     et trente biens de ce gabarit étaient servis comme des maisons le
