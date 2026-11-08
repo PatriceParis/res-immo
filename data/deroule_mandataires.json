@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.5,
+  "seconde": 2.0,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.5,
+  "seconde": 2.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,125 +23,79 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.5,
+  "seconde": 2.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.2,
+  "seconde": 3.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.0,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.0,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.4,
+  "seconde": 5.8,
   "reseau": "capifrance",
-  "connues": 19279,
-  "ecartees": 2942
+  "connues": 19480,
+  "ecartees": 2969
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.4,
+  "seconde": 5.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.6,
+  "seconde": 6.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.0,
+  "seconde": 23.8,
   "reseau": "iad",
-  "n": 93818,
+  "n": 93876,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.4,
+  "seconde": 25.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.8,
+  "seconde": 25.4,
   "reseau": "iad",
-  "connues": 19279,
-  "ecartees": 2942
+  "connues": 19480,
+  "ecartees": 2969
  },
  {
   "etape": "departement",
-  "seconde": 293.7,
+  "seconde": 277.7,
   "reseau": "iad",
-  "departement": "36",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 8,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 90 m² à Ruffec (16700)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 522.3,
-  "reseau": "iad",
-  "departement": "39",
-  "visitees": 50,
-  "gardes": 25,
-  "tronquee": true,
-  "etats": {
-   "garde": 25,
-   "vendu": 15,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 3,
-   "hors_perimetre": 2,
-   "outre_mer": 5
-  },
-  "exemples": {
-   "prix_trop_haut": "Domaine 16 pièces de 900 m² à Lons-le-Saunier (39000)",
-   "hors_perimetre": "Maison de campagne 8 pièces de 188 m² à Rosay (78790)",
-   "outre_mer": "Maison 2 pièces de 60 m² à Saint-Pierre (97432)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 609.0,
-  "reseau": "iad",
-  "departement": "41",
-  "visitees": 16,
-  "gardes": 13,
-  "tronquee": true,
-  "etats": {
-   "garde": 13,
-   "vendu": 3,
+   "garde": 39,
+   "vendu": 11,
    "ecarte": 0,
    "illisible": 0
   },
@@ -149,47 +103,36 @@
   "exemples": {}
  },
  {
-  "etape": "reseau_debut",
-  "seconde": 609.1,
-  "reseau": "safti",
-  "part_secondes": 592
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 609.4,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 610.5,
-  "reseau": "safti",
-  "n": 28879,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 611.1,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 611.5,
-  "reseau": "safti",
-  "connues": 19298,
-  "ecartees": 2962
+  "etape": "departement",
+  "seconde": 566.4,
+  "reseau": "iad",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 7,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 3 pièces de 105 m² à Saint-Augustin (17570)"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 952.5,
-  "reseau": "safti",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 50,
+  "seconde": 604.7,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 5,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 50,
+   "garde": 5,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -198,29 +141,82 @@
   "exemples": {}
  },
  {
-  "etape": "departement",
-  "seconde": 1206.8,
+  "etape": "reseau_debut",
+  "seconde": 604.7,
   "reseau": "safti",
-  "departement": "60",
-  "visitees": 43,
-  "gardes": 36,
+  "part_secondes": 597
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 605.5,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 606.8,
+  "reseau": "safti",
+  "n": 28827,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 607.2,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 607.6,
+  "reseau": "safti",
+  "connues": 19499,
+  "ecartees": 2988
+ },
+ {
+  "etape": "departement",
+  "seconde": 937.1,
+  "reseau": "safti",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 36,
+   "garde": 44,
    "vendu": 1,
-   "ecarte": 6,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 6
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à CHANTILLY de 190m²"
+   "hors_perimetre": "Maison à vendre à SAINT-LAURENT de 49m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1203.1,
+  "reseau": "safti",
+  "departement": "10",
+  "visitees": 43,
+  "gardes": 38,
+  "tronquee": true,
+  "etats": {
+   "garde": 38,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à AULNAY de 131m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1206.8,
-  "gardes": 165
+  "seconde": 1203.1,
+  "gardes": 168
  }
 ]
