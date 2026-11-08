@@ -1183,6 +1183,10 @@
   "jour": "2026-11-03",
   "motif": "location"
  },
+ "https://immobilieredefrance.com/fr/propriete/location+appartement+boulogne-sur-mer+appartement-3-chambre-112-m-en-centre-ville+87515866": {
+  "jour": "2026-11-08",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://immobilieredefrance.com/fr/propriete/location+appartement+boulogne-sur-mer+location-boulogne-sur-mer-appartement-27-m-2-pieces+85427988": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
@@ -1202,6 +1206,14 @@
  "https://immobilieredefrance.com/fr/propriete/location+commerce+berck+local-commercial-de-64-35-m-proche-plage+85773035": {
   "jour": "2026-11-03",
   "motif": "titre_hors_cible:local commercial"
+ },
+ "https://immobilieredefrance.com/fr/propriete/location+commerce+outreau+entrepot-68-71-m2-outreau+83192725": {
+  "jour": "2026-11-08",
+  "motif": "titre_hors_cible:entrepot"
+ },
+ "https://immobilieredefrance.com/fr/propriete/location+garage-parking+boulogne-sur-mer+parking-boulogne-sur-mer-10-m-+83190904": {
+  "jour": "2026-11-08",
+  "motif": "titre_hors_cible:parking"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-1-chambre+85775262": {
   "jour": "2026-10-21",
@@ -1231,12 +1243,20 @@
   "jour": "2026-10-25",
   "motif": "titre_hors_cible:studio"
  },
+ "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+a-boulogne-sur-mer-appartement-duplex-original+83193467": {
+  "jour": "2026-11-08",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-de-type-studio-38-m2-en-rez-de-chaussee+84928759": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:appartement"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-duplex-85-m-residence-recente-avec-ascenseur-boulogne-sur-mer+86775425": {
   "jour": "2026-10-25",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-duplex-de-caractere-en-plein-centre-ville+87253379": {
+  "jour": "2026-11-08",
   "motif": "titre_hors_cible:appartement"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-t2-en-rez-de-chaussee-avec-courette+84544344": {
@@ -10035,6 +10055,10 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-5-pieces-piscine-interieure-jardin-sainte-marie-cappel,VM3263": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-5-pieces-saint-omer-62500,VM1624": {
   "jour": "2026-10-19",
   "motif": "vendu"
@@ -10141,6 +10165,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-10-pieces-saint-omer-62500,VM2248": {
   "jour": "2026-10-24",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-bourgeoise-10-pieces-saint-omer-62500,VM3291": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-11-pieces-saint-omer-62500,VM1726": {
@@ -10263,12 +10291,20 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-centreville-jardin-garages-gravelines,VM3101": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-chateau-12-pieces-wizernes-62570,VM1296": {
   "jour": "2026-10-17",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-contemporaine-10-pieces-axe-st-omer-le-touquet,VM1968": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-contemporaine-4-pieces-garage-basse-consommation-heuringhem,VM3286": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-contemporaine-4-pieces-heuringhem-62575,VM2309": {
@@ -10327,6 +10363,10 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-de-campagne-2150m2-rumilly,VM3203": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-de-campagne-7600m2-nielles-les-ardres,VM2840": {
   "jour": "2026-11-06",
   "motif": "vendu"
@@ -10341,6 +10381,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-de-maitre-10000m2-dependances-blendecques,VM2722": {
   "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-de-maitre-1450m2-garage-xl-blendecques,VM3208": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-de-maitre-jardin-grand-garage-gravelines,VM2856": {
@@ -10387,6 +10431,10 @@
   "jour": "2026-11-03",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-2garages-1760m2-boisdinghem,VM3305": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-arques-62510,VM2162": {
   "jour": "2026-10-24",
   "motif": "vendu"
@@ -10421,6 +10469,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-saint-omer-62500,VM2242": {
   "jour": "2026-10-24",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-semi-plainpied-garagexl-pihem,VM3298": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-5-pieces-semiplainpied-garage-racquinghem-62120,VM2473": {
@@ -10531,6 +10583,10 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-8-pieces-7500m2-ardres-autingues,VM3307": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-8-pieces-blendecques-62575,VM2124": {
   "jour": "2026-10-24",
   "motif": "vendu"
@@ -10561,6 +10617,18 @@
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-architecte-1500m2-quelmes,VM2942": {
   "jour": "2026-11-06",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-architecte-8-pieces-4790m2-clairmarais,VM3193": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-architecte-soussol-1450m2-bellinghem,VM3257": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-architecte-soussol-complet-1500m2-longuenesse,VM3233": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-demeure-annees1800-renovee-aire-sur-la-lys,VM2695": {
@@ -10603,6 +10671,10 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-maison-de-campagne-6-pieces-gites-etang-5300m-blessy,VM3306": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-maison-de-maitre-10-pieces-axe-st-omer-gravelines-dunkerque,VM2404": {
   "jour": "2026-10-29",
   "motif": "vendu"
@@ -10629,6 +10701,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-manoir-7-pieces-fauquembergues-62560,VM1432": {
   "jour": "2026-10-19",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-3-pieces-saint-omer,VM3211": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-3-pieces-therouanne-62129,VM2278": {
@@ -10667,6 +10743,18 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-garage-jardin-saint-omer,VM3113": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-garage-jardin-saint-omer,VM3141": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-1-cote-jardin-garage-saint-martin-lez-tatinghem,VM3297": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-204m2-garage-saint-omer,VM3027": {
   "jour": "2026-11-06",
   "motif": "vendu"
@@ -10701,6 +10789,14 @@
  },
  "https://www.helman-immobilier.com/vente/maison-mitoyenne-2-cotes-renovee-jardinet-saint-omer,VM2638": {
   "jour": "2026-11-03",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-mitoyenne-7-pieces-garage-centre-saint-omer,VM3312": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-plain-pied-3-pieces-garage-saint-momelin,VM3123": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-plain-pied-3-pieces-longuenesse-62219,VM2036": {
@@ -10755,8 +10851,16 @@
   "jour": "2026-11-03",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-propriete-7-pieces-4hectares-equestre-wismes,VM3311": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-propriete-7-pieces-eperlecques-62910,VM1882": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-propriete-8-pieces-7500m2-piscine-baincthun,VM3261": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-propriete-8-pieces-ardres-centre-ville-garage-atelier-pavillondechasse-jardin-62610,VM2644": {
@@ -10771,12 +10875,20 @@
   "jour": "2026-10-22",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-propriete-longere-gites-4000m2-noordpeene,VM3324": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-propriete-piscine-18000m2-mametz,VM2853": {
   "jour": "2026-11-06",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-propriete-renovee-5300m2-pature-pihem,VM2886": {
   "jour": "2026-11-06",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-propriete-standing-piscine-1ha-proche-hazebrouck,VM3232": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-semi-plainpied-soussol-complet-1500m2-heuringhem,VM3067": {
@@ -10797,6 +10909,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-traditionnelle-5-pieces-arques-62510,VM1836": {
   "jour": "2026-10-19",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-traditionnelle-5-pieces-renovee-900m2-garage-sainte-marie-cappel,VM3262": {
+  "jour": "2026-11-08",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-traditionnelle-6-pieces-saint-omer-62500,VM2060": {
@@ -10827,9 +10943,17 @@
   "jour": "2026-10-29",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/propriete-longeres-gites-dependances-equestre-proche-cassel-flandre,VM3094": {
+  "jour": "2026-11-08",
+  "motif": "vendu"
+ },
  "https://www.hf-immo.fr/vente/1": {
   "jour": "2026-10-17",
   "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.hf-immo.fr/vente/34-nancy/duplex/597-nancy-centre-ville-duplex-avec-terrasse-au-dernier-etage-180-m-5-chambres-80-m-de-terrasse-ascenseur": {
+  "jour": "2026-11-08",
+  "motif": "titre_hors_cible:etage"
  },
  "https://www.homeloop.fr/fr/immobilier/vendu/maison/bourg-les-valence/mandat-bourg-les-valence_primeveres_lagopede/83942": {
   "jour": "2026-10-21",
@@ -14109,6 +14233,10 @@
  },
  "https://www.lemaistre-immo.fr/vente-achat/appartement-le-havre-76600/61696246.htm": {
   "jour": "2026-11-06",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.lemaistre-immo.fr/vente-achat/appartement-le-havre-76600/61716981.htm": {
+  "jour": "2026-11-08",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.lemaistre-immo.fr/vente-achat/appartement-rouen-76000/60325605.htm": {
