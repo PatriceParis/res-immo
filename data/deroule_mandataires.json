@@ -29,7 +29,7 @@
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.5,
+  "seconde": 3.8,
   "reseau": "capifrance",
   "n": 1
  },
@@ -48,71 +48,75 @@
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.8,
+  "seconde": 5.9,
   "reseau": "capifrance",
-  "connues": 19480,
-  "ecartees": 2969
+  "connues": 19566,
+  "ecartees": 2998
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.8,
+  "seconde": 5.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.0,
+  "seconde": 6.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 23.8,
+  "seconde": 17.1,
   "reseau": "iad",
   "n": 93876,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.0,
+  "seconde": 18.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.4,
+  "seconde": 19.0,
   "reseau": "iad",
-  "connues": 19480,
-  "ecartees": 2969
+  "connues": 19566,
+  "ecartees": 2998
  },
  {
   "etape": "departement",
-  "seconde": 277.7,
+  "seconde": 289.0,
   "reseau": "iad",
-  "departement": "57",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 39,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 11,
-   "ecarte": 0,
+   "garde": 36,
+   "vendu": 13,
+   "ecarte": 1,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "titre_hors_cible:biens immobiliers a vendre": 1
+  },
+  "exemples": {
+   "titre_hors_cible:biens immobiliers a vendre": "110 353 biens immobiliers à vendre"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 566.4,
+  "seconde": 560.7,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 42,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 42,
-   "vendu": 7,
+   "garde": 36,
+   "vendu": 13,
    "ecarte": 1,
    "illisible": 0
   },
@@ -120,20 +124,20 @@
    "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 105 m² à Saint-Augustin (17570)"
+   "hors_perimetre": "Maison 5 pièces de 140 m² à Chanteloup (35150)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 604.7,
+  "seconde": 606.6,
   "reseau": "iad",
-  "departement": "80",
-  "visitees": 5,
+  "departement": "59",
+  "visitees": 8,
   "gardes": 5,
   "tronquee": true,
   "etats": {
    "garde": 5,
-   "vendu": 0,
+   "vendu": 3,
    "ecarte": 0,
    "illisible": 0
   },
@@ -142,67 +146,46 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 604.7,
+  "seconde": 606.6,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.5,
+  "seconde": 607.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.8,
+  "seconde": 608.6,
   "reseau": "safti",
   "n": 28827,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.2,
+  "seconde": 609.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.6,
+  "seconde": 609.7,
   "reseau": "safti",
-  "connues": 19499,
-  "ecartees": 2988
+  "connues": 19597,
+  "ecartees": 3029
  },
  {
   "etape": "departement",
-  "seconde": 937.1,
+  "seconde": 928.3,
   "reseau": "safti",
-  "departement": "08",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 44,
-   "vendu": 1,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à SAINT-LAURENT de 49m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1203.1,
-  "reseau": "safti",
-  "departement": "10",
-  "visitees": 43,
-  "gardes": 38,
-  "tronquee": true,
-  "etats": {
-   "garde": 38,
+   "garde": 45,
    "vendu": 0,
    "ecarte": 5,
    "illisible": 0
@@ -211,12 +194,29 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à AULNAY de 131m²"
+   "hors_perimetre": "Maison à vendre à SAINTE-GENEVIEVE-DES-BOIS de 190m²"
   }
  },
  {
+  "etape": "departement",
+  "seconde": 1206.1,
+  "reseau": "safti",
+  "departement": "50",
+  "visitees": 42,
+  "gardes": 41,
+  "tronquee": true,
+  "etats": {
+   "garde": 41,
+   "vendu": 1,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
   "etape": "fin",
-  "seconde": 1203.1,
-  "gardes": 168
+  "seconde": 1206.1,
+  "gardes": 163
  }
 ]
