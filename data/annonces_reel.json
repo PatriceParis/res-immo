@@ -31071,7 +31071,7 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
+  "altitude": 21.0,
   "densite_hab_km2": 507.8,
   "dpe": "E",
   "risques": {
@@ -31089,7 +31089,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31141,7 +31141,7 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
+  "altitude": 21.0,
   "densite_hab_km2": 507.8,
   "dpe": "E",
   "risques": {
@@ -31169,7 +31169,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31239,7 +31239,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31291,7 +31291,7 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
+  "altitude": 21.0,
   "densite_hab_km2": 507.8,
   "dpe": "D",
   "risques": {
@@ -31319,7 +31319,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31399,7 +31399,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 450000,
   "prix_baisse_le": "2026-10-07"
@@ -31544,7 +31544,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31596,10 +31596,12 @@
   "plusieurs_biens": false,
   "lat": 50.490321,
   "lon": 1.609766,
-  "altitude": 16.0,
-  "densite_hab_km2": 507.8,
+  "altitude": 21.0,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 63.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -31609,9 +31611,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 63.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company54876qit/2/VM272/maison-individuelle-4-pieces-cucq-62780-1780413737-VM272_3_original.jpg",
@@ -31624,7 +31624,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31704,7 +31704,7 @@
    "https://img.netty.immo/company54876qit/assets//agence/agence_4__1@2560x1920.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31756,7 +31756,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
+  "altitude": 58.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -31780,7 +31780,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/56358833m-1024x768.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31906,7 +31906,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
+  "altitude": 58.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -31928,7 +31928,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/06/IMG_1527-1024x768.jpeg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32048,7 +32048,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
+  "altitude": 58.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -32068,7 +32068,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/08/IMG_5435-1024x768.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32148,7 +32148,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/03/IMG_5770-1024x768.jpeg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32200,7 +32200,7 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
+  "altitude": 58.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
@@ -32212,7 +32212,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/IMG_0097-1024x768.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32286,7 +32286,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2025/01/pexels-weekendplayer-735869-1024x683.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32435,7 +32435,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/04/Hamburger-1024x768.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32499,7 +32499,7 @@
    "https://agencedelabourse.com/wp-content/uploads/2026/05/pexels-marina-m-3820766-5663303-1024x744.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37396,8 +37396,6 @@
   "densite_hab_km2": 1530.5,
   "dpe": "D",
   "risques": {
-   "nucleaire_km": 28.1,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -37407,7 +37405,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 28.1,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/company53808dau/2/VM2158/maison-individuelle-7-pieces-yvetot-76190-1765282041-VM2158_1_original.jpg",
@@ -37418,7 +37418,7 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM2158/maison-individuelle-7-pieces-yvetot-76190-1765282042-VM2158_5_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37661,7 +37661,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM6977/maison-individuelle-5-pieces-doudeville-76560-1792484305-VM6977_12_original.jpg"
   ],
   "vue_le": "2026-10-18",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37739,7 +37739,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM5810/maison-traditionnelle-6-pieces-luneray-76810-1767350126-VM5810_5_original.jpg"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37791,7 +37791,7 @@
   "plusieurs_biens": false,
   "lat": 49.61982,
   "lon": 0.764902,
-  "altitude": 144.0,
+  "altitude": 146.0,
   "densite_hab_km2": 1530.5,
   "dpe": "E",
   "risques": {
@@ -37827,7 +37827,7 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM6980/maison-individuelle-4-pieces-yvetot-76190-1792077975-VM6980_14_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37879,8 +37879,8 @@
   "plusieurs_biens": false,
   "lat": 49.725499,
   "lon": 0.784482,
-  "altitude": 138.0,
-  "densite_hab_km2": null,
+  "altitude": 140.0,
+  "densite_hab_km2": 166.5,
   "dpe": null,
   "risques": {
    "nucleaire_km": 18.2,
@@ -37895,7 +37895,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM6346/maison-traditionnelle-5-pieces-doudeville-76560-1774516610-VM6346_16_original.jpg"
   ],
   "vue_le": "2026-11-05",
-  "revue_le": "2026-11-05",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -37983,7 +37983,7 @@
    "https://img.netty.immo/productcw/company53808dau/2/VM6963/maison-mitoyenne-1-cote-5-pieces-yvetot-76190-1790848255-VM6963_3_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 225000,
   "prix_baisse_le": "2026-10-16"
@@ -38060,7 +38060,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM5958/maison-traditionnelle-4-pieces-doudeville-76560-1767350126-VM5958_4_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -38113,7 +38113,7 @@
   "lat": 49.725499,
   "lon": 0.784482,
   "altitude": 140.0,
-  "densite_hab_km2": 166.5,
+  "densite_hab_km2": null,
   "dpe": "F",
   "risques": {
    "nucleaire_km": 18.2,
@@ -38148,7 +38148,7 @@
    "https://img.netty.immo/productcw/company53808dau/4/VM6930/maison-plain-pied-3-pieces-doudeville-76560-1788012074-VM6930_1_original.jpg"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41261,7 +41261,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM794/maison-ancienne-6-pieces-honfleur-14600-1765879512-VM794_5_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41397,7 +41397,7 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 24.0,
+  "altitude": 33.0,
   "densite_hab_km2": 482.7,
   "dpe": "D",
   "risques": {
@@ -41423,7 +41423,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1216/maison-contemporaine-7-pieces-honfleur-14600-1765880337-VM1216_5_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41501,7 +41501,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM756/maison-traditionnelle-4-pieces-villers-sur-mer-14640-1781703011-VM756_11_original.jpg"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41553,7 +41553,7 @@
   "plusieurs_biens": false,
   "lat": 49.273479,
   "lon": 0.452566,
-  "altitude": 165.0,
+  "altitude": 162.0,
   "densite_hab_km2": 60.8,
   "dpe": "D",
   "risques": {
@@ -41569,7 +41569,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM810/maison-bourgeoise-8-pieces-cormeilles-27260-1765879548-VM810_6_original.jpg"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41622,7 +41622,7 @@
   "lat": 49.291108,
   "lon": 0.188367,
   "altitude": 19.0,
-  "densite_hab_km2": 391.8,
+  "densite_hab_km2": null,
   "dpe": "C",
   "risques": {
    "nucleaire_km": 70.8,
@@ -41647,7 +41647,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1100/maison-ancienne-6-pieces-pont-l-eveque-14130-1780068916-VM1100_15_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41805,7 +41805,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM1236/maison-ancienne-6-pieces-cormeilles-27260-1774623390-VM1236_10_original.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42095,7 +42095,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM944/maison-ancienne-10-pieces-pont-l-eveque-14130-1765879793-VM944_7_original.jpg"
   ],
   "vue_le": "2026-09-15",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42300,8 +42300,8 @@
   "plusieurs_biens": false,
   "lat": 49.409387,
   "lon": 0.227344,
-  "altitude": 33.0,
-  "densite_hab_km2": 482.7,
+  "altitude": 24.0,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 57.9,
@@ -42316,7 +42316,7 @@
    "https://img.netty.immo/productcw/company55304lpb/2/VM888/maison-ancienne-8-pieces-honfleur-14600-1765879697-VM888_5_original.jpg"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42537,7 +42537,7 @@
   "plusieurs_biens": false,
   "lat": 49.698329,
   "lon": 4.934086,
-  "altitude": 157.0,
+  "altitude": 156.0,
   "densite_hab_km2": 1024.1,
   "dpe": null,
   "risques": {
@@ -42586,7 +42586,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t5/1226-maison-mitoyenne-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -43039,7 +43039,7 @@
   "lat": 49.698329,
   "lon": 4.934086,
   "altitude": 156.0,
-  "densite_hab_km2": 1024.1,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 44.8,
@@ -43098,7 +43098,7 @@
    "https://www.cablat-immobilier.com/vente/1-sedan/maison/t10/1266-maison-sedan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -43395,7 +43395,7 @@
    "https://www.cablat-immobilier.com/vente/270-lumes/maison/t5/1268-maison-lumes/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -43963,7 +43963,7 @@
   "lat": 49.858506,
   "lon": 4.746626,
   "altitude": 140.0,
-  "densite_hab_km2": 210.6,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 25.9,
@@ -44002,7 +44002,7 @@
    "https://www.cablat-immobilier.com/vente/25-bogny-sur-meuse/maison/t3/1241-maison-bogny-sur-meuse/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-11-05",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44054,7 +44054,7 @@
   "plusieurs_biens": false,
   "lat": 49.767639,
   "lon": 4.71728,
-  "altitude": 148.0,
+  "altitude": 152.0,
   "densite_hab_km2": 1439.2,
   "dpe": null,
   "risques": {
@@ -44114,7 +44114,7 @@
    "https://www.cablat-immobilier.com/vente/116-les-ayvelles/maison/t6/1178-maison-les-ayvelles/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-11-05",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44166,7 +44166,7 @@
   "plusieurs_biens": false,
   "lat": 49.819058,
   "lon": 4.746653,
-  "altitude": 167.0,
+  "altitude": 160.0,
   "densite_hab_km2": 502.9,
   "dpe": null,
   "risques": {
@@ -44220,7 +44220,7 @@
    "https://www.cablat-immobilier.com/vente/461-gespunsart/maison-de-village/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -44837,7 +44837,7 @@
    "https://www.cablat-immobilier.com/vente/6-st-menges/maison/t6/1253-maison-mitoyenne-saint-menges/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 229000,
   "prix_baisse_le": "2026-11-05"
@@ -44889,7 +44889,7 @@
   "plusieurs_biens": false,
   "lat": 49.698329,
   "lon": 4.934086,
-  "altitude": 157.0,
+  "altitude": 156.0,
   "densite_hab_km2": 1024.1,
   "dpe": null,
   "risques": {
@@ -44930,7 +44930,7 @@
    "https://www.cablat-immobilier.com/vente/9-balan/maison/t5/1277-maison-balan/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -45084,7 +45084,7 @@
    "https://www.allianceimmobilier.com/vente/36-delle/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -45217,7 +45217,7 @@
    "https://www.allianceimmobilier.com/vente/50-beaucourt/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -45315,7 +45315,7 @@
    "https://www.allianceimmobilier.com/vente/50-beaucourt/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -49801,7 +49801,7 @@
   "plusieurs_biens": false,
   "lat": 47.508197,
   "lon": 6.794689,
-  "altitude": 316.0,
+  "altitude": 318.0,
   "densite_hab_km2": 1643.9,
   "dpe": null,
   "risques": {
@@ -49911,7 +49911,7 @@
    "https://www.allianceimmobilier.com/vente/1-montbeliard/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -50589,7 +50589,7 @@
   "lat": 47.523062,
   "lon": 6.902361,
   "altitude": 333.0,
-  "densite_hab_km2": 615.9,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 216.4,
@@ -50690,7 +50690,7 @@
    "https://www.allianceimmobilier.com/vente/42-fesches-le-chatel/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -50845,7 +50845,7 @@
    "https://www.allianceimmobilier.com/vente/91-courcelles-les-montbeliard/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -51627,7 +51627,7 @@
    "https://www.allianceimmobilier.com/vente/210-grosmagny/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -54190,7 +54190,7 @@
    "https://www.allianceimmobilier.com/vente/50-beaucourt/maison/images/partners/amepi.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 374500,
   "prix_baisse_le": "2026-10-29"
@@ -55140,7 +55140,7 @@
    "https://www.angelot-immo.fr/vente/8-veigne/maison/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -55534,7 +55534,7 @@
    "https://c.tile.openstreetmap.org/14/8419/5578.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -55626,7 +55626,7 @@
    "https://angledroit.immo/wp-content/uploads/2020/05/angledroit-immo-1.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -55814,7 +55814,7 @@
    "https://b.tile.openstreetmap.org/14/8415/5575.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -56193,7 +56193,7 @@
    "https://c.tile.openstreetmap.org/14/8418/5576.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -56284,7 +56284,7 @@
    "https://c.tile.openstreetmap.org/14/8419/5578.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -56556,7 +56556,7 @@
    "https://b.tile.openstreetmap.org/14/8416/5580.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -56627,6 +56627,7 @@
    "https://angledroit.immo/wp-content/uploads/2026/05/Capture-decran-2026-05-26-111123-584x438.png",
    "https://angledroit.immo/wp-content/uploads/2026/05/Capture-decran-2026-05-26-111150-584x438.png",
    "https://angledroit.immo/wp-content/uploads/2022/06/marker-ad.png",
+   "https://angledroit.immo/wp-content/uploads/2026/11/2IMG20261027143251-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027143630-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027143522-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027143545-scaled.jpg",
@@ -56634,7 +56635,6 @@
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027143907-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027144113-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2026/11/IMG20261027144301-scaled.jpg",
-   "https://angledroit.immo/wp-content/uploads/2026/11/2IMG20261027143251-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2020/05/angledroit-immo-1.png",
    "https://a.tile.openstreetmap.org/14/8412/5577.png",
    "https://c.tile.openstreetmap.org/14/8412/5576.png",
@@ -56653,7 +56653,7 @@
    "https://a.tile.openstreetmap.org/14/8414/5578.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -57184,7 +57184,7 @@
   "plusieurs_biens": false,
   "lat": 49.737655,
   "lon": 4.857277,
-  "altitude": 165.0,
+  "altitude": 163.0,
   "densite_hab_km2": null,
   "dpe": "A",
   "risques": {
@@ -57204,10 +57204,10 @@
    "https://angledroit.immo/wp-content/uploads/2026/10/chambre-584x438.png",
    "https://angledroit.immo/wp-content/uploads/2026/10/3sdb-584x438.png",
    "https://angledroit.immo/wp-content/uploads/2022/06/marker-ad.png",
-   "https://angledroit.immo/wp-content/uploads/2024/04/IMG20240408142946-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2024/04/IMG20240408142916-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2024/04/IMG20240408142841-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2024/04/IMG20240408142937-scaled.jpg",
+   "https://angledroit.immo/wp-content/uploads/2024/04/IMG20240408142946-scaled.jpg",
    "https://angledroit.immo/wp-content/uploads/2020/05/angledroit-immo-1.png",
    "https://c.tile.openstreetmap.org/14/8413/5575.png",
    "https://a.tile.openstreetmap.org/14/8412/5574.png",
@@ -57223,7 +57223,7 @@
    "https://b.tile.openstreetmap.org/14/8415/5575.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -58762,1301 +58762,6 @@
   "prix_baisse_le": ""
  },
  {
-  "id": "antony-vesque-immobilier-1004b8a38a68",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-4-chambres-monthuchon-village-1-1022v988m.html",
-  "titre": "Vente maison 4 chambres Monthuchon Village 130 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 240000,
-  "surface_m2": 85.0,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Coutances",
-  "code_postal": "50200",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5bf71e86-photo-hd.jpg",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": true,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.054264,
-  "lon": -1.445325,
-  "altitude": 58.0,
-  "densite_hab_km2": 660.3,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 62.2,
-   "nucleaire_nom": "Flamanville",
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": 2,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": true,
-   "portee": "commune",
-   "source": "georisques"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5bf71e86-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5bf71e86-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a79e8d207165-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc57e14721-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc57b61c98-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc580eec8f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc583b61de-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc586d180d-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc58aaff25-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc58d2b023-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5947b302-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc59c83769-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc59a0e61a-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5b8b8ea9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5b10d103-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5b3887c0-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v988m/6a6cc5b61840c-photo-vignette.webp"
-  ],
-  "vue_le": "2026-08-12",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-103ae0cba9a8",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-4-chambres-blainville-sur-mer-proche-plages-1-1022v993m.html",
-  "titre": "Vente maison 4 chambres Blainville-sur-Mer Proche plages 170 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 514500,
-  "surface_m2": null,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Blainville-sur-Mer",
-  "code_postal": "50560",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bcb353ff0-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": true,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.069347,
-  "lon": -1.570875,
-  "altitude": 42.0,
-  "densite_hab_km2": 135.6,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 56.6,
-   "nucleaire_nom": "Flamanville",
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": null,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": false,
-   "portee": "commune",
-   "source": "georisques"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bcb353ff0-photo-hd.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bd7b7467f-photo-hd.webp",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bcb353ff0-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bd5f35b03-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bd7b7467f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4c018d7314-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bd36072c9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bdc516dac-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bd9e26cf9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bdf82e9e9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bec13a798-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v993m/6ac4bdde1cad8-photo-vignette.webp"
-  ],
-  "vue_le": "2026-10-08",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-228e6ebb952a",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-2-chambres-cerisy-la-salle-1-1022v992m.html",
-  "titre": "Vente maison 2 chambres Cerisy-la-Salle 130 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 199000,
-  "surface_m2": null,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Quettreville-sur-Sienne",
-  "code_postal": "50210",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab2ad52187ed-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": true,
-   "serre": false,
-   "grange_dependance": true,
-   "atelier": false,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 48.96763,
-  "lon": -1.432072,
-  "altitude": 31.0,
-  "densite_hab_km2": 63.6,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 71.1,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab2ad52187ed-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab2ad52187ed-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab2ad56279c2-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62d9c389ca-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab633ab67c9b-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62d7ef22cb-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62dbcc9a3a-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62e25617b6-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62e82dff2b-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab6340eb9cb6-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62de0cece8-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62e0a66d79-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62ea654322-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab62ecd08e7f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v992m/6ab2ad6338898-photo-vignette.webp"
-  ],
-  "vue_le": "2026-09-27",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-3400d5df2b2c",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-3-chambres-blainville-sur-mer-proche-plages-1-1022v991m.html",
-  "titre": "Vente maison 3 chambres Blainville-sur-Mer Proche plages 128 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 336000,
-  "surface_m2": null,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Blainville-sur-Mer",
-  "code_postal": "50560",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7880eb0b18-photo-hd.jpg",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": true,
-   "atelier": false,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.069347,
-  "lon": -1.570875,
-  "altitude": 42.0,
-  "densite_hab_km2": 135.6,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 56.6,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7880eb0b18-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7880eb0b18-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab786a1db28f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab78819bbccd-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7868344154-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab786f1d7cc3-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab786daab0d8-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7870e44a73-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab788367dff7-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab78729dcfb1-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7873de9d65-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab78a1d79baf-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v991m/6ab7887936689-photo-vignette.webp"
-  ],
-  "vue_le": "2026-09-27",
-  "revue_le": "2026-10-27",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-3b475157e2c1",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-3-chambres-agon-coutainville-bord-de-mer-1-1022v989m.html",
-  "titre": "Vente maison 3 chambres Agon-Coutainville Bord de mer 129 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 525000,
-  "surface_m2": 420.0,
-  "terrain_m2": null,
-  "pieces": null,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cb9040773-photo-hd.jpg",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 27.0,
-  "densite_hab_km2": 239.0,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville",
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": null,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": false,
-   "portee": "commune",
-   "source": "georisques"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cb9040773-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cb9040773-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cb9feaa0d-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc9875da2-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cbaff2ba0-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cbc3920f3-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cbd2b6b58-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cbe30643d-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cbf59c0df-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc08e257c-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc306ee78-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc3ec7c7f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc4e3cd71-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v989m/6aa7cc5f3d94d-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v736m/6866288acb54f-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v947m/6931c53684fa1-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v963m/698ef808be670-photo-moyenne.jpg"
-  ],
-  "vue_le": "2026-09-15",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-3c5174a17f6e",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-3-chambres-saint-malo-de-la-lande-village-1-1022v994m.html",
-  "titre": "Vente maison 3 chambres Saint-Malo-de-la-Lande Village 175 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 472500,
-  "surface_m2": 120.0,
-  "terrain_m2": 10000.0,
-  "pieces": 2,
-  "commune": "Coutances",
-  "code_postal": "50200",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adcac1d1cd51-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": true,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.054264,
-  "lon": -1.445325,
-  "altitude": 58.0,
-  "densite_hab_km2": 660.3,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 62.2,
-   "nucleaire_nom": "Flamanville",
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": 2,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": true,
-   "portee": "commune",
-   "source": "georisques"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adcac1d1cd51-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adcac1d1cd51-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93cc6ef01-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93bd90fec-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb939ba221d-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93a060b7b-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93a54cef5-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb939dedc61-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93a2d1fd7-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93a79feb9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93aebefe3-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93b193f89-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93b3c1b7c-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93bfe80f6-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adcaf7e53524-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93c271bfd-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93c4d44fb-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v994m/6adb93cf216a8-photo-vignette.webp"
-  ],
-  "vue_le": "2026-10-25",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-4ad33e3d0bcf",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-2-chambres-tourville-sur-sienne-1-1022v982m.html",
-  "titre": "Vente maison 2 chambres Tourville-sur-Sienne 120 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 294500,
-  "surface_m2": 555.0,
-  "terrain_m2": null,
-  "pieces": null,
-  "commune": "Coutances",
-  "code_postal": "50200",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-hd.jpg",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.054264,
-  "lon": -1.445325,
-  "altitude": 60.0,
-  "densite_hab_km2": 660.3,
-  "dpe": "E",
-  "risques": {
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": 2,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": true,
-   "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 62.2,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-hd.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34147d06405-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a341483773f7-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a341480e438b-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34148d86912-photo-hd.webp",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34147d06405-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a341483773f7-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a341480e438b-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34148d86912-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34148acb876-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a34148822221-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v738m/a06fb37c64747d5e8070eadf212f15df-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v732m/b0818f56d6fa55e872058cd7c941a488-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c56a3cff-photo-moyenne.jpg"
-  ],
-  "vue_le": "2026-08-18",
-  "revue_le": "2026-09-12",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-5bd6c032331a",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-5-pieces-belval-1-1022v995m.html",
-  "titre": "Vente maison 5 pièces Belval 85 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 170500,
-  "surface_m2": null,
-  "terrain_m2": 450.0,
-  "pieces": 5,
-  "commune": "Quettreville-sur-Sienne",
-  "code_postal": "50210",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4d7b00fa-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 48.96763,
-  "lon": -1.432072,
-  "altitude": 29.0,
-  "densite_hab_km2": 63.6,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 71.1,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4d7b00fa-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4d7b00fa-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4e5b2933-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4dd020e0-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4e8e59be-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f5042f8dc-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4f62c046-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4edc1e34-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4e2359c1-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4f160576-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4fa93434-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f4ff59015-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v995m/6ae9f50b104f3-photo-vignette.webp"
-  ],
-  "vue_le": "2026-11-05",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-5da48edbfe7d",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-1-chambre-agon-coutainville-proche-plages-1-1022v985m.html",
-  "titre": "Vente maison 1 chambre Agon-Coutainville Proche plages 85 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 169000,
-  "surface_m2": 110.0,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c961dcc43-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": false,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 27.0,
-  "densite_hab_km2": 239.0,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c961dcc43-photo-hd.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c961dcc43-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f5763059fc-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c9659137f-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f576798b65-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f57698c88e-photo-hd.webp",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c961dcc43-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f5763059fc-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c9659137f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f576798b65-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f57698c88e-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f576e85bdb-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f57c704bd5-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a4f5772c40e2-photo-vignette.webp"
-  ],
-  "vue_le": "2026-08-06",
-  "revue_le": "2026-11-02",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-75d3d1cd9485",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-3-chambres-tourville-sur-sienne-proche-plages-1-1022v983m.html",
-  "titre": "Vente maison 3 chambres Tourville-sur-Sienne Proche plages 140 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 320000,
-  "surface_m2": 100.0,
-  "terrain_m2": null,
-  "pieces": 2,
-  "commune": "Coutances",
-  "code_postal": "50200",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c56a3cff-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": true,
-   "atelier": false,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.054264,
-  "lon": -1.445325,
-  "altitude": 60.0,
-  "densite_hab_km2": 660.3,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 62.2,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c56a3cff-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c56a3cff-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a39583fb5f37-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c47a5c35-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c3fab5bf-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c4256426-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c4ab4ba8-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c5305e94-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a3958b8a5dd4-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c4d55504-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c4f894bb-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a3958c1e51de-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a3958bba8fc9-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a3958425257e-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c594e698-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c3c60fde-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v738m/a06fb37c64747d5e8070eadf212f15df-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v908m/683dc32b59723-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v732m/b0818f56d6fa55e872058cd7c941a488-photo-moyenne.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-moyenne.jpg"
-  ],
-  "vue_le": "2026-08-18",
-  "revue_le": "2026-09-24",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-78726ed23c3a",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-2-chambres-gouville-sur-mer-village-1-1022v987m.html",
-  "titre": "Vente maison 2 chambres Gouville-sur-Mer Village 70 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 185000,
-  "surface_m2": 145.0,
-  "terrain_m2": 720.0,
-  "pieces": 2,
-  "commune": "Coutances",
-  "code_postal": "50200",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1ed40055-photo-hd.jpg",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": true,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.054264,
-  "lon": -1.445325,
-  "altitude": 58.0,
-  "densite_hab_km2": 660.3,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 62.2,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1ed40055-photo-hd.jpg",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1ed40055-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1d0c6c89-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1d711767-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1d993d7c-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1dbf033a-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1de500b4-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1e0a6d5e-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1e38766a-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1e5ee827-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1e832518-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1eaab937-photo-vignette.webp"
-  ],
-  "vue_le": "2026-08-12",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-94e00d8c9cdf",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/annonces-vente-maison.html",
-  "titre": "Maison à vendre Manche 50 | ANTONY VESQUE IMMOBILIER",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 997500,
-  "surface_m2": 700.0,
-  "terrain_m2": 14000.0,
-  "pieces": null,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v902m/2a70d320f5983aac1d180d4580df05d6-photo-moyenne.webp",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 26.0,
-  "densite_hab_km2": 239.0,
-  "dpe": null,
-  "risques": {
-   "inondation_commune": true,
-   "argile": 1,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": false,
-   "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://www.vesque-immobilier.fr/images/header-agence.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v907m/6824cd5917a39-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v968m/6a49332378528-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v975m/69fb63e1283c8-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v902m/2a70d320f5983aac1d180d4580df05d6-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v973m/69f36ec16eae7-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v974m/6a4681b3712e0-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v950m/690f2089c7c91-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v960m/694acf41556ea-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v941m/68e0e6720a7d9-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v731m/2333a4f2e4fe8576628e166d2b14671f-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v947m/6931c53684fa1-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v728m/58f4f21f2a9843f358e7d2e11aefc73e-photo-moyenne.webp"
-  ],
-  "vue_le": "2026-08-06",
-  "revue_le": "2026-08-16",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-a69d5c78dade",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-a-tourville+sur+sienne.html",
-  "titre": "Maison à vendre Tourville sur sienne | ANTONY VESQUE IMMOBILIER",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 325500,
-  "surface_m2": 560.0,
-  "terrain_m2": 700.0,
-  "pieces": null,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v908m/683dc32b59723-photo-moyenne.webp",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "inconnu",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 26.0,
-  "densite_hab_km2": 239.0,
-  "dpe": null,
-  "risques": {
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://www.vesque-immobilier.fr/images/header-agence.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v908m/683dc32b59723-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v983m/6a393c56a3cff-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v755m/5977e1c9f07c8ce52a4aecc81558d887-photo-moyenne.webp",
-   "https://www.vesque-immobilier.fr/images/vendu.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v732m/b0818f56d6fa55e872058cd7c941a488-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v982m/6a3414da29f68-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v964m/69942ec7a7c87-photo-moyenne.webp"
-  ],
-  "vue_le": "2026-08-06",
-  "revue_le": "2026-10-03",
-  "absences": 1,
-  "prix_precedent": 346400,
-  "prix_baisse_le": "2026-09-30"
- },
- {
-  "id": "antony-vesque-immobilier-b166195d83ea",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-4-chambres-pirou-proche-plages-1-1022v990m.html",
-  "titre": "Vente maison 4 chambres Pirou Proche plages 107 m²",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 267500,
-  "surface_m2": null,
-  "terrain_m2": 595.0,
-  "pieces": 2,
-  "commune": "Pirou",
-  "code_postal": "50770",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51845379f-photo-hd.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.167414,
-  "lon": -1.574259,
-  "altitude": 11.0,
-  "densite_hab_km2": 52.1,
-  "dpe": "E",
-  "risques": {
-   "nucleaire_km": 46.7,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51845379f-photo-hd.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51845379f-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c5199bf0f3-photo-hd.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51a853ac5-photo-hd.webp",
-   "https://medias.twimmopro.com/agencetwimmonet/1022/0/6870e409658fb0be7e0613a7-portrait.jpg",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51845379f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c5199bf0f3-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51a853ac5-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c519e6d616-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c5178de7bd-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c516420533-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c516b6415f-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c5175c6af8-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51b02c7a3-photo-vignette.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v990m/6a7c51baecd19-photo-vignette.webp"
-  ],
-  "vue_le": "2026-08-14",
-  "revue_le": "2026-11-05",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-eb98a5ccedbe",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-a-agon+coutainville.html",
-  "titre": "Maison à vendre Agon coutainville | ANTONY VESQUE IMMOBILIER",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 1050000,
-  "surface_m2": 600.0,
-  "terrain_m2": 14000.0,
-  "pieces": null,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v520m/1c48c898ca71dd64567f2272c534cf19-photo-moyenne.webp",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": false,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "inconnu",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 27.0,
-  "densite_hab_km2": 239.0,
-  "dpe": null,
-  "risques": {
-   "inondation_commune": true,
-   "argile": 1,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": false,
-   "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://www.vesque-immobilier.fr/images/header-agence.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v520m/1c48c898ca71dd64567f2272c534cf19-photo-moyenne.webp",
-   "https://www.vesque-immobilier.fr/images/vendu.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v907m/6824cd5917a39-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v975m/69fb63e1283c8-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v973m/69f36ec16eae7-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v947m/6931c53684fa1-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v736m/6866288acb54f-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v963m/698ef808be670-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v753m/f95182d600fa88d7ce3d964832264090-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v977m/6a107450968c0-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v951m/6972626cc5d07-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v952m/69732ff6491ef-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v985m/6a50c961dcc43-photo-moyenne.webp"
-  ],
-  "vue_le": "2026-08-06",
-  "revue_le": "2026-08-16",
-  "absences": 1,
-  "prix_precedent": null,
-  "prix_baisse_le": ""
- },
- {
-  "id": "antony-vesque-immobilier-fba496a38af9",
-  "source": "antony-vesque-immobilier",
-  "url": "https://www.vesque-immobilier.fr/vente-maison-a-gouville+sur+mer.html",
-  "titre": "Maison à vendre Gouville sur mer | ANTONY VESQUE IMMOBILIER",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 467000,
-  "surface_m2": 679.0,
-  "terrain_m2": 400.0,
-  "pieces": null,
-  "commune": "Agon-Coutainville",
-  "code_postal": "50230",
-  "departement": "50",
-  "region": "Normandie",
-  "agence": "Antony Vesque Immobilier",
-  "agence_url": "https://vesque-immobilier.fr",
-  "photo": "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1ed40055-photo-moyenne.webp",
-  "features": {
-   "cave": true,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": false,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "inconnu",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "lat": 49.044277,
-  "lon": -1.58078,
-  "altitude": 27.0,
-  "densite_hab_km2": 239.0,
-  "dpe": null,
-  "risques": {
-   "nucleaire_km": 58.9,
-   "nucleaire_nom": "Flamanville"
-  },
-  "photos": [
-   "https://www.vesque-immobilier.fr/images/header-agence.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v941m/68e0e6720a7d9-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v987m/6a6cc1ed40055-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v888m/68499b93c369a-photo-moyenne.webp",
-   "https://www.vesque-immobilier.fr/images/vendu.png",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v876m/bc04dc1415ae553484b6a44d00bd7ec8-photo-moyenne.webp",
-   "https://medias.twimmopro.com/visueloffre/1-1022/1-1022/1022v484m/ee4df9641072aba3deba7fb47e63d8d0-photo-moyenne.webp"
-  ],
-  "vue_le": "2026-08-06",
-  "revue_le": "2026-10-03",
-  "absences": 1,
-  "prix_precedent": 498750,
-  "prix_baisse_le": "2026-09-03"
- },
- {
   "id": "arsenal-immobilier-088ba30da82e",
   "source": "arsenal-immobilier",
   "url": "https://www.arsenal-immobilier.com/vente/maison-individuelle-9-pieces-lorry-les-metz-57050,VM961",
@@ -60122,7 +58827,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -60175,7 +58880,7 @@
   "lat": 49.175442,
   "lon": 5.968073,
   "altitude": 241.0,
-  "densite_hab_km2": 206.3,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 32.3,
@@ -60189,7 +58894,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -60242,7 +58947,7 @@
   "lat": 49.157719,
   "lon": 6.149873,
   "altitude": 172.0,
-  "densite_hab_km2": 1026.4,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 29.1,
@@ -60256,7 +58961,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 538000,
   "prix_baisse_le": "2026-10-31"
@@ -60343,7 +59048,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 538000,
   "prix_baisse_le": "2026-10-31"
@@ -60412,7 +59117,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -60434,7 +59139,7 @@
   "region": "Pays de la Loire",
   "agence": "Arthurimmo",
   "agence_url": "https://adfoncier.arthurimmo.com",
-  "photo": "https://media.studio-net.fr/biens/33424618/x6a4ee08d0ea2a",
+  "photo": "https://media.studio-net.fr/biens/33424618/x6a4ee08d0ea2a?width=1920&height=1440",
   "features": {
    "cave": true,
    "puits": false,
@@ -60491,7 +59196,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -60582,7 +59287,7 @@
   "region": "Pays de la Loire",
   "agence": "Arthurimmo",
   "agence_url": "https://adfoncier.arthurimmo.com",
-  "photo": "https://media.studio-net.fr/biens/33476859/x6a43b0740102c",
+  "photo": "https://media.studio-net.fr/biens/33476859/x6a43b0740102c?width=1920&height=1440",
   "features": {
    "cave": true,
    "puits": false,
@@ -60629,7 +59334,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -60936,8 +59641,8 @@
   "plusieurs_biens": false,
   "lat": 47.729533,
   "lon": 0.580468,
-  "altitude": 56.0,
-  "densite_hab_km2": 156.1,
+  "altitude": 55.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 63.4,
@@ -60953,7 +59658,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-09-16",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61032,7 +59737,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-28",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61101,7 +59806,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61153,8 +59858,8 @@
   "plusieurs_biens": false,
   "lat": 49.035655,
   "lon": 6.068213,
-  "altitude": 204.0,
-  "densite_hab_km2": 264.0,
+  "altitude": 203.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 43.7,
@@ -61170,7 +59875,7 @@
    "https://metz.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-11-05",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 315000,
   "prix_baisse_le": "2026-08-28"
@@ -61223,7 +59928,7 @@
   "lat": 49.123687,
   "lon": 6.143731,
   "altitude": 177.0,
-  "densite_hab_km2": 2979.8,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 32.9,
@@ -61239,7 +59944,7 @@
    "https://metz.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-09-19",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61308,7 +60013,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61567,8 +60272,8 @@
   "plusieurs_biens": false,
   "lat": 49.400877,
   "lon": 2.981528,
-  "altitude": 43.0,
-  "densite_hab_km2": 187.3,
+  "altitude": 46.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 106.0,
@@ -61584,7 +60289,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61636,7 +60341,7 @@
   "plusieurs_biens": false,
   "lat": 49.405934,
   "lon": 2.844366,
-  "altitude": 63.0,
+  "altitude": 64.0,
   "densite_hab_km2": 767.7,
   "dpe": null,
   "risques": {
@@ -61653,7 +60358,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -61892,7 +60597,7 @@
   "region": "Hauts-de-France",
   "agence": "ArthurImmo.com Agence Saint-Hubert",
   "agence_url": "https://compiegne.arthurimmo.com",
-  "photo": "https://media.studio-net.fr/biens/34096551/x6ad8a8f297b41",
+  "photo": "https://media.studio-net.fr/biens/34096551/x6ad8a8f297b41?width=1920&height=1440",
   "features": {
    "cave": true,
    "puits": false,
@@ -61923,7 +60628,7 @@
   "lat": 49.405934,
   "lon": 2.844366,
   "altitude": 64.0,
-  "densite_hab_km2": 767.7,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 110.6,
@@ -61939,7 +60644,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62071,7 +60776,7 @@
   "plusieurs_biens": false,
   "lat": 49.427428,
   "lon": 2.815584,
-  "altitude": 39.0,
+  "altitude": 42.0,
   "densite_hab_km2": 1298.7,
   "dpe": null,
   "risques": {
@@ -62088,7 +60793,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 185000,
   "prix_baisse_le": "2026-10-21"
@@ -62141,7 +60846,7 @@
   "lat": 49.435771,
   "lon": 2.891215,
   "altitude": 51.0,
-  "densite_hab_km2": 216.4,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 112.1,
@@ -62157,7 +60862,7 @@
    "https://compiegne.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 257000,
   "prix_baisse_le": "2026-10-03"
@@ -62305,7 +61010,7 @@
    "https://metz.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-28",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62374,7 +61079,7 @@
    "https://metz.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-28",
-  "revue_le": "2026-11-05",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62426,8 +61131,8 @@
   "plusieurs_biens": false,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 173.0,
-  "densite_hab_km2": 2979.8,
+  "altitude": 177.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 32.9,
@@ -62453,7 +61158,7 @@
    "https://metz.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-16",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62506,7 +61211,7 @@
   "lat": 47.762834,
   "lon": 0.848476,
   "altitude": 64.0,
-  "densite_hab_km2": 171.3,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 54.8,
@@ -62537,7 +61242,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62589,8 +61294,8 @@
   "plusieurs_biens": false,
   "lat": 47.873181,
   "lon": 0.451987,
-  "altitude": 129.0,
-  "densite_hab_km2": 71.0,
+  "altitude": 130.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 74.5,
@@ -62606,7 +61311,7 @@
    "https://adfoncier.arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-09-16",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62658,10 +61363,12 @@
   "plusieurs_biens": false,
   "lat": 49.440051,
   "lon": 1.093912,
-  "altitude": 19.0,
-  "densite_hab_km2": 5502.4,
+  "altitude": 24.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 57.0,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -62671,9 +61378,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 57.0,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://media.studio-net.fr/biens/32861314/x6a32b6c8e9db1",
@@ -62683,7 +61388,7 @@
    "https://www.rouen-arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62739,6 +61444,8 @@
   "densite_hab_km2": 2654.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 51.2,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -62748,9 +61455,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 51.2,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://media.studio-net.fr/biens/33788698/x6aa01528ef8b2",
@@ -62758,7 +61463,7 @@
    "https://www.rouen-arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-09-10",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -62827,7 +61532,7 @@
    "https://www.rouen-arthurimmo.com/assets/2025/soyez-le-premier-informe2.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91120,7 +89825,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/3/254bacdd7d54599bc0b315af50b69a13/photo_813842971f3423f8d0c70a76e536f1ec.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91172,7 +89877,7 @@
   "plusieurs_biens": false,
   "lat": 49.269069,
   "lon": -0.192608,
-  "altitude": 15.0,
+  "altitude": 14.0,
   "densite_hab_km2": 208.2,
   "dpe": null,
   "risques": {
@@ -91218,7 +89923,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/2/6626dba88bb34153e76fce8c3d3a9350/photo_52f5ffd51864f7df972295ddd7950ace.jpg"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 449000,
   "prix_baisse_le": "2026-11-07"
@@ -91270,7 +89975,7 @@
   "plusieurs_biens": false,
   "lat": 49.269069,
   "lon": -0.192608,
-  "altitude": 15.0,
+  "altitude": 14.0,
   "densite_hab_km2": 208.2,
   "dpe": null,
   "risques": {
@@ -91319,7 +90024,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/5/55939fa8db00b020dcfda982837dccff/photo_205dfb33e467ae0c7b11816207ba416c.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91415,7 +90120,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/2/a0f785bda9cfc36f04895fc9a333947d/photo_31fcb4af397dbf6718ea75b8b8fc42d8.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -91468,7 +90173,7 @@
   "lat": 49.269069,
   "lon": -0.192608,
   "altitude": 14.0,
-  "densite_hab_km2": 208.2,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 88.6,
@@ -91513,7 +90218,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/5/a58b412b14abc51b82bc696a29d0c28c/photo_52f5ffd51864f7df972295ddd7950ace.jpg"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 449000,
   "prix_baisse_le": "2026-11-07"
@@ -91834,7 +90539,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/2/35303b7756dcc24390d379df9a76cef3/photo_669f4022130426368269406f9847c6ad.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -92136,7 +90841,7 @@
   "plusieurs_biens": false,
   "lat": 49.269069,
   "lon": -0.192608,
-  "altitude": 15.0,
+  "altitude": 14.0,
   "densite_hab_km2": 208.2,
   "dpe": null,
   "risques": {
@@ -92183,7 +90888,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/5/4f333d3dd3c45d2acf27ed662f020a1e/photo_669f4022130426368269406f9847c6ad.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -92337,6 +91042,8 @@
   "densite_hab_km2": 208.2,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 88.6,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -92346,9 +91053,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.6,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://brevilleimmobilier.staticlbi.com/600xauto/images/2/8d8e54855d84e37082508a7dcbb607c2/photo_ab80f840c13d9497569e8a65a6a7537c.jpg",
@@ -92392,7 +91097,7 @@
    "https://brevilleimmobilier.staticlbi.com/576xauto/images/biens/2/8d8e54855d84e37082508a7dcbb607c2/photo_205dfb33e467ae0c7b11816207ba416c.jpg"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -93112,7 +91817,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -93665,7 +92370,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-25",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -94079,7 +92784,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -94310,7 +93015,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -95486,6 +94191,8 @@
   "densite_hab_km2": 723.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 74.1,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -95495,9 +94202,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 74.1,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.brique-rouge-immobilier.fr/images/biens/B/27387/00_6a8f2541926b0.jpg?v=1792508523",
@@ -95516,7 +94221,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -95680,7 +94385,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -96000,7 +94705,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -96079,7 +94784,7 @@
    "https://www.brique-rouge-immobilier.fr/compte_2.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -98723,7 +97428,7 @@
   "lat": 49.291108,
   "lon": 0.188367,
   "altitude": 19.0,
-  "densite_hab_km2": 391.8,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 70.8,
@@ -98776,7 +97481,7 @@
    "https://www.aelion-immobilier.com/vente/499-st-philbert-des-champs/maison/t6/15-charmante-maison-avec-jardin-et-garage-environnement-campagne/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -98828,7 +97533,7 @@
   "plusieurs_biens": false,
   "lat": 49.371571,
   "lon": 0.102801,
-  "altitude": 101.0,
+  "altitude": 104.0,
   "densite_hab_km2": 678.1,
   "dpe": null,
   "risques": {
@@ -98883,7 +97588,7 @@
    "https://www.aelion-immobilier.com/vente/2-trouville-sur-mer/maison/t6/10-maison-5-6-pp-proche-centre-et-plage/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -98936,7 +97641,7 @@
   "lat": 49.357601,
   "lon": 0.111023,
   "altitude": 88.0,
-  "densite_hab_km2": 480.5,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 67.2,
@@ -98996,7 +97701,7 @@
    "https://www.aelion-immobilier.com/vente/1-deauville/maison/t6/29-maison-112-m-avec-jardin/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -99048,7 +97753,7 @@
   "plusieurs_biens": false,
   "lat": 49.323071,
   "lon": 0.027412,
-  "altitude": 38.0,
+  "altitude": 46.0,
   "densite_hab_km2": 235.8,
   "dpe": null,
   "risques": {
@@ -99105,7 +97810,7 @@
    "https://www.aelion-immobilier.com/vente/105-blonville-sur-mer/maison/t3/26-blonville-sur-mer-maison-avec-jardin-et-garage/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 383250,
   "prix_baisse_le": "2026-09-17"
@@ -101189,7 +99894,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101242,7 +99947,7 @@
   "lat": 49.510805,
   "lon": 0.226063,
   "altitude": 98.0,
-  "densite_hab_km2": 339.4,
+  "densite_hab_km2": null,
   "dpe": "B",
   "risques": {
    "nucleaire_km": 48.5,
@@ -101262,7 +99967,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101387,7 +100092,7 @@
   "plusieurs_biens": false,
   "lat": 49.542715,
   "lon": 0.18932,
-  "altitude": 13.0,
+  "altitude": 8.0,
   "densite_hab_km2": 813.8,
   "dpe": null,
   "risques": {
@@ -101408,7 +100113,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-27",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101491,7 +100196,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101543,10 +100248,12 @@
   "plusieurs_biens": false,
   "lat": 49.509498,
   "lon": 0.078887,
-  "altitude": 90.0,
+  "altitude": 96.0,
   "densite_hab_km2": 3022.7,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 55.7,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -101556,9 +100263,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 55.7,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/dero/2/VM1554/maison-ancienne-6-pieces-sainte-adresse-76310-1790603115-VM1554_17_original.jpg",
@@ -101574,7 +100279,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101626,8 +100331,8 @@
   "plusieurs_biens": false,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
-  "densite_hab_km2": 3140.3,
+  "altitude": 58.0,
+  "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
    "nucleaire_km": 53.3,
@@ -101654,14 +100359,20 @@
    "https://img.netty.immo/productw/dero/2/VM1451/maison-ancienne-8-pieces-le-havre-76600-1779113430-VM1451_30_original.jpg",
    "https://c.tile.openstreetmap.org/15/16392/11183.png",
    "https://a.tile.openstreetmap.org/15/16393/11183.png",
+   "https://b.tile.openstreetmap.org/15/16392/11182.png",
+   "https://c.tile.openstreetmap.org/15/16393/11182.png",
    "https://a.tile.openstreetmap.org/15/16392/11184.png",
    "https://b.tile.openstreetmap.org/15/16393/11184.png",
    "https://b.tile.openstreetmap.org/15/16391/11183.png",
    "https://b.tile.openstreetmap.org/15/16394/11183.png",
+   "https://a.tile.openstreetmap.org/15/16391/11182.png",
+   "https://a.tile.openstreetmap.org/15/16394/11182.png",
    "https://c.tile.openstreetmap.org/15/16391/11184.png",
    "https://c.tile.openstreetmap.org/15/16394/11184.png",
    "https://a.tile.openstreetmap.org/15/16390/11183.png",
    "https://c.tile.openstreetmap.org/15/16395/11183.png",
+   "https://c.tile.openstreetmap.org/15/16390/11182.png",
+   "https://b.tile.openstreetmap.org/15/16395/11182.png",
    "https://b.tile.openstreetmap.org/15/16390/11184.png",
    "https://a.tile.openstreetmap.org/15/16395/11184.png",
    "https://img.netty.immo/netty_media/website_gallery/indoor/shutterstock_73428649@2560.jpg",
@@ -101669,7 +100380,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -101848,7 +100559,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-19",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102086,6 +100797,8 @@
   "densite_hab_km2": 3022.7,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 55.7,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -102095,9 +100808,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 55.7,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/dero/2/VM1563/maison-ancienne-6-pieces-sainte-adresse-76310-1791272132-VM1563_5_original.jpg",
@@ -102112,24 +100823,30 @@
    "https://img.netty.immo/productw/dero/2/VM1563/maison-ancienne-6-pieces-sainte-adresse-76310-1791272132-VM1563_9_original.jpg",
    "https://img.netty.immo/productw/dero/2/VM1563/maison-ancienne-6-pieces-sainte-adresse-76310-1791272132-VM1563_10_original.jpg",
    "https://img.netty.immo/productw/dero/2/VM1563/maison-ancienne-6-pieces-sainte-adresse-76310-1791272132-VM1563_11_original.jpg",
-   "https://a.tile.openstreetmap.org/18/131133/89451.png",
-   "https://b.tile.openstreetmap.org/18/131134/89451.png",
    "https://b.tile.openstreetmap.org/18/131133/89452.png",
    "https://c.tile.openstreetmap.org/18/131134/89452.png",
-   "https://c.tile.openstreetmap.org/18/131132/89451.png",
-   "https://c.tile.openstreetmap.org/18/131135/89451.png",
+   "https://a.tile.openstreetmap.org/18/131133/89451.png",
+   "https://b.tile.openstreetmap.org/18/131134/89451.png",
+   "https://c.tile.openstreetmap.org/18/131133/89453.png",
+   "https://a.tile.openstreetmap.org/18/131134/89453.png",
    "https://a.tile.openstreetmap.org/18/131132/89452.png",
    "https://a.tile.openstreetmap.org/18/131135/89452.png",
-   "https://b.tile.openstreetmap.org/18/131131/89451.png",
-   "https://a.tile.openstreetmap.org/18/131136/89451.png",
+   "https://c.tile.openstreetmap.org/18/131132/89451.png",
+   "https://c.tile.openstreetmap.org/18/131135/89451.png",
+   "https://b.tile.openstreetmap.org/18/131132/89453.png",
+   "https://b.tile.openstreetmap.org/18/131135/89453.png",
    "https://c.tile.openstreetmap.org/18/131131/89452.png",
    "https://b.tile.openstreetmap.org/18/131136/89452.png",
+   "https://b.tile.openstreetmap.org/18/131131/89451.png",
+   "https://a.tile.openstreetmap.org/18/131136/89451.png",
+   "https://a.tile.openstreetmap.org/18/131131/89453.png",
+   "https://c.tile.openstreetmap.org/18/131136/89453.png",
    "https://img.netty.immo/netty_media/website_gallery/indoor/shutterstock_73428649@2560.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-21",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102563,7 +101280,7 @@
   "surface_m2": 59.0,
   "terrain_m2": 348.0,
   "pieces": 3,
-  "commune": "La Haye",
+  "commune": null,
   "code_postal": "50250",
   "departement": "50",
   "region": "Normandie",
@@ -102597,10 +101314,10 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "lat": 49.280984,
-  "lon": -1.590045,
-  "altitude": 38.0,
-  "densite_hab_km2": 62.6,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
   "dpe": "F",
   "risques": {
    "nucleaire_km": 35.4,
@@ -102665,7 +101382,7 @@
    "https://www.cabinet-faudais.com/vente/540-surville/maison/t3/22298-maison-a-2-5-kms-de-la-mer/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -102717,7 +101434,7 @@
   "plusieurs_biens": false,
   "lat": 49.035977,
   "lon": -1.132507,
-  "altitude": 121.0,
+  "altitude": 115.0,
   "densite_hab_km2": null,
   "dpe": "D",
   "risques": {
@@ -102821,7 +101538,7 @@
    "https://www.cabinet-faudais.com/vente/139-quibou/maison/t7/22285-corps-de-ferme-entre-coutances-et-saint-lo/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-19",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -103228,7 +101945,7 @@
   "lat": 48.989138,
   "lon": -1.534644,
   "altitude": 49.0,
-  "densite_hab_km2": 150.3,
+  "densite_hab_km2": null,
   "dpe": "E",
   "risques": {
    "nucleaire_km": 65.8,
@@ -103331,7 +102048,7 @@
    "https://www.cabinet-faudais.com/vente/15-hauteville-sur-mer/villa/t9/22289-hauteville-sur-mer-plage-400-metres-de-la-mer/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-09-14",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 298000,
   "prix_baisse_le": "2026-09-26"
@@ -103383,8 +102100,8 @@
   "plusieurs_biens": false,
   "lat": 49.22443,
   "lon": -1.525736,
-  "altitude": 10.0,
-  "densite_hab_km2": 77.0,
+  "altitude": 13.0,
+  "densite_hab_km2": null,
   "dpe": "E",
   "risques": {
    "nucleaire_km": 43.2,
@@ -103470,7 +102187,7 @@
    "https://www.cabinet-faudais.com/vente/49-st-germain-sur-ay/maison/t3/22290-saint-germain-sur-ay-2-km-des-plages/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -103603,11 +102320,11 @@
   "id": "cabinet-faudais-8d0ffebfe088",
   "source": "cabinet-faudais",
   "url": "https://www.cabinet-faudais.com/vente/3948-les-issambres/maison/t5/22280-proche-quettreville-sur-sienne-7-km-de-la-mer/",
-  "titre": "PROCHE QUETTREVILLE SUR SIENNE 7 KM DE LA MER",
+  "titre": "Maison 5pièce(s) 3chambre(s) 134,50 m² ()",
   "description": null,
   "type_bien": "maison",
   "prix": 171500,
-  "surface_m2": 140.0,
+  "surface_m2": 134.5,
   "terrain_m2": 6700.0,
   "pieces": 5,
   "commune": "Roquebrune-sur-Argens",
@@ -103647,7 +102364,7 @@
   "lat": 43.426919,
   "lon": 6.661756,
   "altitude": 16.0,
-  "densite_hab_km2": 144.6,
+  "densite_hab_km2": null,
   "dpe": "G",
   "risques": {
    "nucleaire_km": 184.4,
@@ -103664,6 +102381,7 @@
    "source": "georisques"
   },
   "photos": [
+   "https://cabinetfaudais.staticlbi.com/600xauto/images/8/7d8b5c225e1afb1d1e18da0e75f17680/photo_import_90235513bac73e5295d1829fe3a25e18.jpg",
    "https://cabinetfaudais.staticlbi.com/1200xauto/images/biens/8/7d8b5c225e1afb1d1e18da0e75f17680/photo_import_90235513bac73e5295d1829fe3a25e18.jpg",
    "https://cabinetfaudais.staticlbi.com/1600xauto/images/biens/8/7d8b5c225e1afb1d1e18da0e75f17680/photo_import_90235513bac73e5295d1829fe3a25e18.jpg",
    "https://cabinetfaudais.staticlbi.com/1600xauto/images/biens/8/7d8b5c225e1afb1d1e18da0e75f17680/photo_import_d86e023d5a3f52079a31b34dd17dca93.jpg",
@@ -103726,7 +102444,7 @@
    "https://www.cabinet-faudais.com/vente/3948-les-issambres/maison/t5/22280-proche-quettreville-sur-sienne-7-km-de-la-mer/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 175000,
   "prix_baisse_le": "2026-09-26"
@@ -103779,7 +102497,7 @@
   "lat": 49.280984,
   "lon": -1.590045,
   "altitude": 38.0,
-  "densite_hab_km2": 62.6,
+  "densite_hab_km2": null,
   "dpe": "E",
   "risques": {
    "nucleaire_km": 56.3,
@@ -103841,7 +102559,7 @@
    "https://www.cabinet-faudais.com/vente/3750-la-haye/maison/t4/22296-maison-au-coeur-de-la-ville/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -103925,7 +102643,7 @@
    "https://www.cabinet-faudais.com/vente/15-hauteville-sur-mer/maison/t3/22281-nouveau-programme-immobilier-a-hauteville-sur-mer-villas-d/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -104122,7 +102840,7 @@
   "plusieurs_biens": false,
   "lat": 49.22443,
   "lon": -1.525736,
-  "altitude": 10.0,
+  "altitude": 13.0,
   "densite_hab_km2": 77.0,
   "dpe": null,
   "risques": {
@@ -104161,7 +102879,7 @@
    "https://cabinetfaudais.staticlbi.com/980xauto/images/biens/12/6ad7866024409f0a0fce09d34d08f253/photo_import_af743930fd09adeeaf65277dc6f08d24.jpg",
    "https://cabinetfaudais.staticlbi.com/980xauto/images/biens/12/6ad7866024409f0a0fce09d34d08f253/photo_import_28b1365662307877f6779a5827434edd.jpg",
    "https://cabinetfaudais.staticlbi.com/800xauto/images/biens/9/afe31ae1df63bd18e71006616eefcc37/photo_import_eec9a76a90fee0fd629594d6a0c961e6.jpg",
-   "https://cabinetfaudais.staticlbi.com/800xauto/images/biens/2/3b569e58eeb5201da2d32042fcefda8f/photo_import_5c86bcccf6cad66eb9af28b5b8fb82dd.jpg",
+   "https://cabinetfaudais.staticlbi.com/800xauto/images/biens/2/eeb52e508dc21b8a2346e18907a712e7/photo_import_5c86bcccf6cad66eb9af28b5b8fb82dd.jpg",
    "https://cabinetfaudais.staticlbi.com/580xauto/images/biens/12/6ad7866024409f0a0fce09d34d08f253/photo_import_34df5f136eb6afa10d28560cbd53630f.jpg",
    "https://cabinetfaudais.staticlbi.com/580xauto/images/biens/12/6ad7866024409f0a0fce09d34d08f253/photo_import_5ae3c6d0143ea5245e02940ceb8af85c.jpg",
    "https://cabinetfaudais.staticlbi.com/580xauto/images/biens/12/6ad7866024409f0a0fce09d34d08f253/photo_import_9a91211c437fc8fe6d7f881f20b378c6.jpg",
@@ -104181,7 +102899,7 @@
    "https://www.cabinet-faudais.com/vente/312-vesly/maison/t9/22313-ancien-corps-de-ferme-a-renover/images/modules/partners/fnaim.png"
   ],
   "vue_le": "2026-11-01",
-  "revue_le": "2026-11-04",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -104608,6 +103326,8 @@
   "densite_hab_km2": 235.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 47.2,
+   "nucleaire_nom": "Penly",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -104617,9 +103337,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 47.2,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://cabinet-jc-lebourg.staticlbi.com/600xauto/images/1/f31d7bcf22f4eb0446634858941fbce3/photo_e009f1f27d48e3b975a678de2287c1ba.jpg",
@@ -104683,7 +103401,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/365-forges-les-eaux/1-maison/t4/4292-maison-de-maitre-t4-a-restaurer/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-11-01",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -104735,8 +103453,8 @@
   "plusieurs_biens": false,
   "lat": 49.61255,
   "lon": 1.552617,
-  "altitude": 155.0,
-  "densite_hab_km2": 235.8,
+  "altitude": 154.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 65.7,
@@ -104790,7 +103508,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/365-forges-les-eaux/1-maison/t4/4225-maison-de-ville-refaite-a-neuf/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -105135,6 +103853,8 @@
   "densite_hab_km2": 235.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 47.2,
+   "nucleaire_nom": "Penly",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -105144,9 +103864,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 47.2,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://cabinet-jc-lebourg.staticlbi.com/600xauto/images/1/fbf3eb155d395a59708c38b721b4c3c5/photo_b7ea38e275e330e31797a806f7f2c55b.jpg",
@@ -105207,7 +103925,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/344-saumont-la-poterie/1-maison/t6/4252-belle-maison-meublee-de-187-m/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -105427,8 +104145,8 @@
   "plusieurs_biens": false,
   "lat": 49.482734,
   "lon": 1.714086,
-  "altitude": 108.0,
-  "densite_hab_km2": 549.5,
+  "altitude": 99.0,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 65.7,
@@ -105482,7 +104200,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/1-gournay-en-bray/1-maison/t2/4069-special-investisseur/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -106089,7 +104807,7 @@
   "plusieurs_biens": false,
   "lat": 49.771602,
   "lon": 1.747712,
-  "altitude": 181.0,
+  "altitude": 183.0,
   "densite_hab_km2": 221.9,
   "dpe": null,
   "risques": {
@@ -106131,7 +104849,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/332-criquiers/1-maison/t3/1753-maison-de-style-normand/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": 163000,
   "prix_baisse_le": "2026-10-21"
@@ -106377,7 +105095,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/535-bully/22-propriete/t9/4219-grande-propriete-de-style-normand/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -106544,7 +105262,7 @@
    "https://cabinet-lebourg.fr/vente/60-oise/275-troissereux/22-propriete/t10/4288-ensemble-immobilier-special-investisseur/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -106696,7 +105414,7 @@
   "lat": 49.61255,
   "lon": 1.552617,
   "altitude": 154.0,
-  "densite_hab_km2": 235.8,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "nucleaire_km": 47.2,
@@ -106750,7 +105468,7 @@
    "https://cabinet-lebourg.fr/vente/76-seine-maritime/317-haussez/1-maison/t3/4213-maison-normande-tres-bon-etat/images/modules/partners/galian.png"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-07",
+  "revue_le": "2026-11-09",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
