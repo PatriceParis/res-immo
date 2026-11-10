@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.0,
+  "seconde": 1.6,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.0,
+  "seconde": 1.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,233 +23,206 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.0,
+  "seconde": 1.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.8,
+  "seconde": 3.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.8,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.8,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.2,
+  "seconde": 5.2,
   "reseau": "capifrance",
-  "connues": 19780,
-  "ecartees": 3064
+  "connues": 19910,
+  "ecartees": 3111
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.2,
+  "seconde": 5.2,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.7,
+  "seconde": 5.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.7,
+  "seconde": 15.1,
   "reseau": "iad",
-  "n": 93399,
+  "n": 94004,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 25.8,
+  "seconde": 17.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 26.1,
+  "seconde": 17.8,
   "reseau": "iad",
-  "connues": 19780,
-  "ecartees": 3064
+  "connues": 19910,
+  "ecartees": 3111
  },
  {
   "etape": "departement",
-  "seconde": 261.3,
+  "seconde": 282.2,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 31,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 11,
-   "ecarte": 8,
+   "garde": 34,
+   "vendu": 10,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
+   "prix_trop_haut": 2,
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "prix_trop_haut": "Domaine 17 pièces de 506 m² à Saulcy-sur-Meurthe (88580)",
+   "hors_perimetre": "Maison traditionnelle 7 pièces de 171 m² à Ollainville (91340)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 559.1,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 37,
+  "tronquee": true,
+  "etats": {
+   "garde": 37,
+   "vendu": 6,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
    "hors_perimetre": 7
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 2 pièces de 47 m² à Château-Thierry (02400)",
-   "hors_perimetre": "Maison 4 pièces de 83 m² à Fleury (11560)"
+   "hors_perimetre": "Maison 5 pièces de 110 m² à Saint-Marcel (01390)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 516.3,
+  "seconde": 610.0,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 33,
+  "departement": "10",
+  "visitees": 7,
+  "gardes": 6,
   "tronquee": true,
   "etats": {
-   "garde": 33,
-   "vendu": 14,
-   "ecarte": 3,
+   "garde": 6,
+   "vendu": 1,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 91 m² à Vinay (38470)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 613.0,
-  "reseau": "iad",
-  "departement": "52",
-  "visitees": 19,
-  "gardes": 14,
-  "tronquee": true,
-  "etats": {
-   "garde": 14,
-   "vendu": 3,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "location": "Maison de ville 4 pièces de 90 m² à Nogent (52800)",
-   "prix_trop_haut": "Domaine 15 pièces de 486 m² à Planrupt (52220)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 613.1,
+  "seconde": 610.0,
   "reseau": "safti",
-  "part_secondes": 589
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 613.5,
+  "seconde": 610.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 615.2,
+  "seconde": 611.2,
   "reseau": "safti",
-  "n": 28872,
+  "n": 28898,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 615.6,
+  "seconde": 612.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 616.0,
+  "seconde": 612.7,
   "reseau": "safti",
-  "connues": 19820,
-  "ecartees": 3105
+  "connues": 19930,
+  "ecartees": 3131
  },
  {
   "etape": "departement",
-  "seconde": 794.7,
+  "seconde": 947.8,
   "reseau": "safti",
-  "departement": "52",
-  "visitees": 32,
-  "gardes": 26,
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 26,
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 1
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à FRENCQ de 195m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1202.5,
+  "reseau": "safti",
+  "departement": "70",
+  "visitees": 40,
+  "gardes": 35,
+  "tronquee": true,
+  "etats": {
+   "garde": 35,
    "vendu": 0,
    "ecarte": 5,
-   "illisible": 1
+   "illisible": 0
   },
   "motifs": {
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à BOURG de 107m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1126.5,
-  "reseau": "safti",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 47,
-  "tronquee": true,
-  "etats": {
-   "garde": 47,
-   "vendu": 1,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à SAINT-MARS-DU-DESERT de 125m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1206.7,
-  "reseau": "safti",
-  "departement": "61",
-  "visitees": 13,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
-   "vendu": 0,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à ORGERES de 107m²"
+   "hors_perimetre": "Maison à vendre à LA ROCHELLE de 67m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1206.7,
-  "gardes": 163
+  "seconde": 1202.5,
+  "gardes": 160
  }
 ]
