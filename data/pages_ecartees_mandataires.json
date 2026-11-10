@@ -43,6 +43,10 @@
   "jour": "2026-10-19",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-chateau-thierry-47m2/r2153311": {
+  "jour": "2026-11-09",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.iadfrance.fr/annonce/appartement-vente-2-pieces-chateau-thierry-48m2/r2046456": {
   "jour": "2026-10-19",
   "motif": "titre_hors_cible:appartement"
@@ -486,6 +490,10 @@
  "https://www.iadfrance.fr/annonce/maison-location-4-pieces-moulins-sur-cephons-88m2/r2096506": {
   "jour": "2026-10-17",
   "motif": "illisible"
+ },
+ "https://www.iadfrance.fr/annonce/maison-location-4-pieces-nogent-90m2/r2152999": {
+  "jour": "2026-11-09",
+  "motif": "location"
  },
  "https://www.iadfrance.fr/annonce/maison-location-4-pieces-pernes-76m2/r2034962": {
   "jour": "2026-10-20",
@@ -1923,6 +1931,10 @@
   "jour": "2026-10-19",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-15-pieces-planrupt-486m2/r2138322": {
+  "jour": "2026-11-09",
+  "motif": "prix_trop_haut"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-15-pieces-saint-barthelemy-d-anjou-350m2/r2107489": {
   "jour": "2026-10-18",
   "motif": "hors_perimetre"
@@ -2093,6 +2105,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-2-pieces-cambrai-44m2/r2096264": {
   "jour": "2026-10-27",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-2-pieces-champigny-52m2/r2113325": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-2-pieces-chapelle-viviers-121m2/r2018671": {
@@ -3107,6 +3123,10 @@
   "jour": "2026-11-03",
   "motif": "hors_perimetre"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-fere-champenoise-100m2/r2022023": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-ferrieres-90m2/r2056536": {
   "jour": "2026-10-19",
   "motif": "hors_perimetre"
@@ -3281,6 +3301,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-henin-beaumont-63m2/r2016756": {
   "jour": "2026-10-20",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-igny-comblizy-92m2/r2090669": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-janvry-50m2/r2116478": {
@@ -4723,6 +4747,10 @@
   "jour": "2026-10-24",
   "motif": "hors_perimetre"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-anglure-77m2/r2116873": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-annay-80m2/r2094005": {
   "jour": "2026-10-22",
   "motif": "vendu"
@@ -5257,6 +5285,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-brienon-sur-armancon-85m2/r2093031": {
   "jour": "2026-11-05",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-brousseval-87m2/r2110870": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-brugny-vaudancourt-99m2/r2044722": {
@@ -5855,6 +5887,10 @@
   "jour": "2026-10-20",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-etrepilly-67m2/r2107671": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-evron-68m2/r2067770": {
   "jour": "2026-10-18",
   "motif": "vendu"
@@ -5906,6 +5942,14 @@
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-flesselles-93m2/r2007923": {
   "jour": "2026-10-19",
   "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-fleury-75m2/r2014133": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-fleury-83m2/r2105729": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-fleury-les-aubrais-85m2/r2061484": {
   "jour": "2026-10-27",
@@ -5983,8 +6027,16 @@
   "jour": "2026-10-20",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-gauchy-75m2/r2086990": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-geffosses-112m2/r2079834": {
   "jour": "2026-10-18",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-genevrieres-141m2/r2084685": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-genouilly-98m2/r2095123": {
@@ -6099,6 +6151,10 @@
   "jour": "2026-11-07",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-hauteville-140m2/r2074209": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-hautmont-74m2/r2077997": {
   "jour": "2026-11-02",
   "motif": "vendu"
@@ -6177,6 +6233,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-janvilliers-82m2/r2025264": {
   "jour": "2026-10-28",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-joncourt-230m2/r2056700": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-jonquieres-110m2/r2132247": {
@@ -6779,6 +6839,14 @@
   "jour": "2026-10-23",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-neuilly-l-eveque-113m2/r2098656": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-neuilly-saint-front-110m2/r2088719": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-neuvy-en-sullias-104m2/r2091748": {
   "jour": "2026-11-08",
   "motif": "vendu"
@@ -6883,6 +6951,10 @@
   "jour": "2026-11-05",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-oulchy-le-chateau-98m2/r2066543": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-outreau-70m2/r2116825": {
   "jour": "2026-11-08",
   "motif": "vendu"
@@ -6938,6 +7010,10 @@
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-pierrefitte-sur-seine-93m2/r2125004": {
   "jour": "2026-10-21",
   "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-pierrepont-147m2/r2096974": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-pirou-76m2/r2088482": {
   "jour": "2026-11-08",
@@ -7025,6 +7101,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-precy-sur-marne-78m2/r2012808": {
   "jour": "2026-10-19",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-premontre-105m2/r2047138": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-presilly-107m2/r2074886": {
@@ -7222,6 +7302,18 @@
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-ciers-champagne-147m2/r2044892": {
   "jour": "2026-10-18",
   "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-clement-104m2/r2070276": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-clement-123m2/r2142800": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-clement-152m2/r2142538": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-cyr-sur-loire-112m2/r2053834": {
   "jour": "2026-10-30",
@@ -7483,6 +7575,14 @@
   "jour": "2026-11-04",
   "motif": "hors_perimetre"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-michel-80m2/r2131215": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-michel-85m2/r2096486": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-omer-65m2/r2095494": {
   "jour": "2026-10-30",
   "motif": "vendu"
@@ -7565,6 +7665,14 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-privat-la-montagne-99m2/r2068024": {
   "jour": "2026-11-08",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-quentin-87m2/r2052688": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-quentin-89m2/r2119164": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-saint-remy-134m2/r2103817": {
@@ -7762,6 +7870,10 @@
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-servon-82m2/r2107530": {
   "jour": "2026-10-22",
   "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-soissons-102m2/r2073744": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-soues-62m2/r2080377": {
   "jour": "2026-10-19",
@@ -7977,6 +8089,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-vinay-91m2/r2074491": {
   "jour": "2026-11-03",
+  "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-vinay-91m2/r2137162": {
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-4-pieces-vitot-75m2/r2037355": {
@@ -8251,6 +8367,10 @@
   "jour": "2026-10-25",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-broyes-135m2/r2060928": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-bruyeres-91m2/r2041258": {
   "jour": "2026-10-21",
   "motif": "vendu"
@@ -8301,6 +8421,14 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-chalons-du-maine-115m2/r2058427": {
   "jour": "2026-11-04",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-chalons-en-champagne-103m2/r2075408": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-chalons-en-champagne-103m2/r2093082": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-chamoy-114m2/r2094607": {
@@ -8475,6 +8603,10 @@
   "jour": "2026-11-05",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-compertrix-117m2/r2076891": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-conde-en-normandie-113m2/r2021668": {
   "jour": "2026-11-05",
   "motif": "vendu"
@@ -8497,6 +8629,14 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cormeilles-127m2/r2018597": {
   "jour": "2026-10-31",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cormontreuil-103m2/r2130277": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cormontreuil-108m2/r2056830": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cornimont-102m2/r2077209": {
@@ -8523,9 +8663,17 @@
   "jour": "2026-11-07",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cramant-125m2/r2050925": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-craon-146m2/r2128006": {
   "jour": "2026-10-18",
   "motif": "hors_perimetre"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-crugny-98m2/r2081435": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-cussangy-120m2/r2033522": {
   "jour": "2026-11-04",
@@ -8567,12 +8715,24 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-dompremy-147m2/r2146847": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-dreuil-les-amiens-92m2/r2067218": {
   "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-ducey-124m2/r2075800": {
   "jour": "2026-11-02",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-epernay-153m2/r2122610": {
+  "jour": "2026-11-09",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-escardes-800m2/r2064284": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-estissac-157m2/r2084397": {
@@ -8589,6 +8749,10 @@
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-faulx-142m2/r2026497": {
   "jour": "2026-11-06",
+  "motif": "vendu"
+ },
+ "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-fere-champenoise-130m2/r2032446": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.iadfrance.fr/annonce/maison-vente-5-pieces-flagy-102m2/r2122043": {
@@ -10648,15 +10812,15 @@
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1594082": {
-  "jour": "2026-10-25",
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1619808": {
-  "jour": "2026-10-18",
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1636865": {
-  "jour": "2026-10-18",
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1684472": {
@@ -10664,7 +10828,7 @@
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1727491": {
-  "jour": "2026-10-25",
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1728361": {
@@ -10673,6 +10837,10 @@
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-33710/1729274": {
   "jour": "2026-10-25",
+  "motif": "hors_perimetre"
+ },
+ "https://www.safti.fr/annonces/achat/maison/bourg-33710/1734210": {
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/bourg-archambault-86390/1705520": {
@@ -11050,6 +11218,10 @@
  "https://www.safti.fr/annonces/achat/maison/chateaumeillant-18370/1607960": {
   "jour": "2026-10-19",
   "motif": "prix_trop_haut"
+ },
+ "https://www.safti.fr/annonces/achat/maison/chaudenay-71150/1667674": {
+  "jour": "2026-11-09",
+  "motif": "illisible"
  },
  "https://www.safti.fr/annonces/achat/maison/chemille-sur-deme-37370/1731147": {
   "jour": "2026-10-29",
@@ -11943,6 +12115,10 @@
   "jour": "2026-10-21",
   "motif": "vendu"
  },
+ "https://www.safti.fr/annonces/achat/maison/orgeres-35230/1713389": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
  "https://www.safti.fr/annonces/achat/maison/orleans-45000/1682526": {
   "jour": "2026-10-24",
   "motif": "prix_trop_haut"
@@ -12093,6 +12269,14 @@
  },
  "https://www.safti.fr/annonces/achat/maison/saint-marcel-56140/1619702": {
   "jour": "2026-11-08",
+  "motif": "hors_perimetre"
+ },
+ "https://www.safti.fr/annonces/achat/maison/saint-mars-du-desert-44850/1426243": {
+  "jour": "2026-11-09",
+  "motif": "hors_perimetre"
+ },
+ "https://www.safti.fr/annonces/achat/maison/saint-mars-du-desert-44850/1724284": {
+  "jour": "2026-11-09",
   "motif": "hors_perimetre"
  },
  "https://www.safti.fr/annonces/achat/maison/saint-martin-de-boscherville-76840/1632564": {
@@ -12249,6 +12433,10 @@
  },
  "https://www.safti.fr/annonces/achat/maison/vimartin-sur-orthe-53160/1699986": {
   "jour": "2026-10-25",
+  "motif": "vendu"
+ },
+ "https://www.safti.fr/annonces/achat/maison/vimartin-sur-orthe-53160/1738907": {
+  "jour": "2026-11-09",
   "motif": "vendu"
  },
  "https://www.safti.fr/annonces/achat/maison/witry-les-reims-51420/1685048": {
