@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.6,
+  "seconde": 2.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.6,
+  "seconde": 2.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,123 +23,123 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.6,
+  "seconde": 2.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.2,
+  "seconde": 4.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.6,
+  "seconde": 5.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.6,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.2,
+  "seconde": 6.2,
   "reseau": "capifrance",
-  "connues": 19910,
-  "ecartees": 3111
+  "connues": 19988,
+  "ecartees": 3138
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.2,
+  "seconde": 6.3,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.4,
+  "seconde": 6.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 15.1,
+  "seconde": 19.3,
   "reseau": "iad",
   "n": 94004,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.2,
+  "seconde": 20.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.8,
+  "seconde": 20.8,
   "reseau": "iad",
-  "connues": 19910,
-  "ecartees": 3111
+  "connues": 19988,
+  "ecartees": 3138
  },
  {
   "etape": "departement",
-  "seconde": 282.2,
+  "seconde": 247.3,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "53",
   "visitees": 50,
-  "gardes": 34,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 34,
-   "vendu": 10,
-   "ecarte": 6,
+   "garde": 29,
+   "vendu": 12,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 4
+   "hors_perimetre": 9
   },
   "exemples": {
-   "prix_trop_haut": "Domaine 17 pièces de 506 m² à Saulcy-sur-Meurthe (88580)",
-   "hors_perimetre": "Maison traditionnelle 7 pièces de 171 m² à Ollainville (91340)"
+   "hors_perimetre": "Maison 4 pièces de 96 m² à SAINT-LEGER (17800)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 559.1,
+  "seconde": 502.7,
   "reseau": "iad",
-  "departement": "08",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 37,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 37,
-   "vendu": 6,
-   "ecarte": 7,
+   "garde": 39,
+   "vendu": 9,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 7
+   "url_type_exclu": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 110 m² à Saint-Marcel (01390)"
+   "url_type_exclu": "Immeuble de 266 m² à CHATEAU CHINON (VILLE) (58120)",
+   "hors_perimetre": "110 552 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 610.0,
+  "seconde": 605.7,
   "reseau": "iad",
-  "departement": "10",
-  "visitees": 7,
-  "gardes": 6,
+  "departement": "72",
+  "visitees": 18,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 1,
+   "garde": 16,
+   "vendu": 2,
    "ecarte": 0,
    "illisible": 0
   },
@@ -148,81 +148,83 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 610.0,
+  "seconde": 605.7,
   "reseau": "safti",
-  "part_secondes": 592
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 610.3,
+  "seconde": 606.1,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 611.2,
+  "seconde": 607.1,
   "reseau": "safti",
   "n": 28898,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 612.1,
+  "seconde": 607.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 612.7,
+  "seconde": 607.9,
   "reseau": "safti",
-  "connues": 19930,
-  "ecartees": 3131
+  "connues": 19991,
+  "ecartees": 3147
  },
  {
   "etape": "departement",
-  "seconde": 947.8,
+  "seconde": 930.1,
   "reseau": "safti",
-  "departement": "62",
+  "departement": "14",
   "visitees": 50,
   "gardes": 48,
   "tronquee": true,
   "etats": {
    "garde": 48,
    "vendu": 0,
-   "ecarte": 1,
-   "illisible": 1
+   "ecarte": 2,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à FRENCQ de 195m²"
+   "prix_trop_haut": "Maison à vendre à LESSARD-ET-LE-CHENE de 315m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1202.5,
+  "seconde": 1205.9,
   "reseau": "safti",
-  "departement": "70",
-  "visitees": 40,
-  "gardes": 35,
+  "departement": "18",
+  "visitees": 46,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 35,
+   "garde": 40,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
+   "prix_trop_haut": 1,
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à LA ROCHELLE de 67m²"
+   "prix_trop_haut": "Maison à vendre à VOUZERON de 800m²",
+   "hors_perimetre": "Maison à vendre à ACHERES de 121m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.5,
-  "gardes": 160
+  "seconde": 1205.9,
+  "gardes": 172
  }
 ]
