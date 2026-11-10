@@ -195,7 +195,10 @@ def test_un_bail_commercial_ou_des_lots_a_batir_ne_sont_pas_des_maisons():
     for titre, fragment in (("CAEN CENTRE DROIT AU BAIL INSTITUT DE BEAUTE", "droit au bail"),
                             ("Droit au bail | LECOEUR IMMOBILIER", "droit au bail"),
                             ("VALENCIENNES - TERRAINS VIABILISES A VENDRE - SIGH",
-                             "terrains viabilises")):
+                             "terrains viabilises"),
+                            # Servi le 10 novembre 2026, avec la faute.
+                            ("A vendre Fond de Commerce -Bureau de Tabac / FDJ - Secteur "
+                             "bruyères.", "fond de commerce")):
         motif = qualite.motif_de_rejet(bien(titre=titre))
         assert motif == f"titre_hors_cible:{fragment}", (titre, motif)
     assert qualite.motif_de_rejet(bien(titre="Maison de bourg, bail rural en cours "

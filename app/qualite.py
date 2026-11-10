@@ -84,7 +84,10 @@ _TYPES_EXCLUS = re.compile(
     r"appartem\w*|\bapparts?\b|\bappts?\b|studios?|\bloft\b|parkings?|\bbox\b"
     r"|emplacement de parking"
     r"|local (commercial|professionnel|d'activite)|locaux (commerciaux|professionnels)"
-    r"|\bbureaux\b|entrepots?|fonds de commerce|murs commerciaux"
+    # « Fond de commerce », sans s, est la faute courante : le 10 novembre
+    # 2026, un bureau de tabac d'Accord Immobilier, à Bruyères, était servi
+    # comme une maison sous ce titre.
+    r"|\bbureaux\b|entrepots?|fonds? de commerce|murs commerciaux"
     # Le bail d'un commerce et les lots d'un lotisseur : le 7 novembre 2026,
     # quatre « DROIT AU BAIL » (Caen, un institut de beauté…) et deux
     # « TERRAINS VIABILISES A VENDRE » (Valenciennes, Crespin) étaient servis
