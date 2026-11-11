@@ -1183,6 +1183,10 @@
   "jour": "2026-10-28",
   "motif": "vendu"
  },
+ "https://immobilieredefrance.com/fr/propriete/location+appartement+berck+appartement-duplex-4-pieces-72-20-m-residence-neuve-berck-plage+87560746": {
+  "jour": "2026-11-11",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://immobilieredefrance.com/fr/propriete/location+appartement+berck+studio-de-24-53m-berck-plage+83233034": {
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:studio"
@@ -1201,6 +1205,10 @@
  },
  "https://immobilieredefrance.com/fr/propriete/location+appartement+le-portel+appartement-de-46m2-face-mer+87415363": {
   "jour": "2026-10-18",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://immobilieredefrance.com/fr/propriete/location+appartement+saint-omer+appartement-de-50-m-en-2-chambres-a-saint-omer+83195035": {
+  "jour": "2026-11-11",
   "motif": "titre_hors_cible:appartement"
  },
  "https://immobilieredefrance.com/fr/propriete/location+appartement+saint-omer+beau-studio-25-m-lumineux-en-centre-ville+83191832": {
@@ -1233,6 +1241,10 @@
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-1-chambre-1-stationnement+87198037": {
   "jour": "2026-11-06",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-1-chambre-terrasse-et-jardin+87541658": {
+  "jour": "2026-11-11",
   "motif": "titre_hors_cible:appartement"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-2-chambres-cave+87104483": {
@@ -1294,6 +1306,10 @@
  "https://immobilieredefrance.com/fr/propriete/vente+commerce+boulogne-sur-mer+murs-commerciaux-a-vendre-boulogne-sur-mer+85301263": {
   "jour": "2026-10-16",
   "motif": "titre_hors_cible:murs commerciaux"
+ },
+ "https://immobilieredefrance.com/fr/propriete/vente+commerce+saint-omer+86973019": {
+  "jour": "2026-11-11",
+  "motif": "titre_hors_cible:local commercial"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+immeuble+boulogne-sur-mer+a-vendre-immeuble-de-rapport-centre-ville-zone-pietonne+86352474": {
   "jour": "2026-10-21",
@@ -10143,6 +10159,10 @@
   "jour": "2026-10-22",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-10-pieces-avec-2f2-jardin-boulogne-sur-mer,VM3361": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-139m2-renovee-jardin-hesdin-l-abbe,VM2894": {
   "jour": "2026-11-06",
   "motif": "vendu"
@@ -10377,6 +10397,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-8-pieces,VM2042": {
   "jour": "2026-10-22",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-bourgeoise-8-pieces-avec-t2-garage-saint-omer,VM3365": {
+  "jour": "2026-11-11",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-bourgeoise-8-pieces-patio-centreville-saint-omer,VM3073": {
@@ -10639,6 +10663,10 @@
   "jour": "2026-10-29",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-jardin-garage-saint-martin-lez-tatinghem,VM3370": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-lumbres-62380,VM2044": {
   "jour": "2026-10-22",
   "motif": "vendu"
@@ -10655,8 +10683,20 @@
   "jour": "2026-10-24",
   "motif": "vendu"
  },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-piscine-soussol-complet-4700m2-proche-lumbres-bayenghem-les-seninghem,VM3345": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-quelmes-62500,VM2250": {
   "jour": "2026-10-24",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-semi-plainpied-jardin-pihem,VM3367": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-soussol-complet-garage-2000m2-blendecques,VM3379": {
+  "jour": "2026-11-11",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-6-pieces-st-omer-et-peripherie-immediate,VM2366": {
@@ -10685,6 +10725,10 @@
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-7-pieces-ecques-62129,VM2240": {
   "jour": "2026-10-24",
+  "motif": "vendu"
+ },
+ "https://www.helman-immobilier.com/vente/maison-individuelle-7-pieces-garage-jardin-longuenesse,VM3357": {
+  "jour": "2026-11-11",
   "motif": "vendu"
  },
  "https://www.helman-immobilier.com/vente/maison-individuelle-7-pieces-renescure-59173,VM2210": {
@@ -12243,6 +12287,10 @@
   "jour": "2026-10-16",
   "motif": "vendu"
  },
+ "https://www.immocotedopale.com/vente/27-boulogne-sur-mer/maison/886-maison-sans-travaux-avec-garage-et-jardin": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.immocoupdecoeur3.fr/biens-vendus/1": {
   "jour": "2026-10-16",
   "motif": "vendu"
@@ -12775,12 +12823,20 @@
   "jour": "2026-10-18",
   "motif": "titre_hors_cible:biens immobiliers"
  },
+ "https://www.jean-jaures-immobilier.com/vente/1-troyes/maison/691-secteur-prisee-a-quelques-minutes-a-pied-du-centre-ville-charmante-maison-de-114m": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.jean-jaures-immobilier.com/vente/1-troyes/terrain-a-batir/826-troyes-rare-terrain-a-batir-proche-centre-ville": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:terrain a batir"
  },
  "https://www.jean-jaures-immobilier.com/vente/103-les-noes-pres-troyes/maison/619-maison-authentique-et-renove-dans-un-quartier-recherche": {
   "jour": "2026-10-16",
+  "motif": "vendu"
+ },
+ "https://www.jean-jaures-immobilier.com/vente/129-souligny/maison/655-maison-recente-de-plain-pied-avec-4-chambres-dpe-a": {
+  "jour": "2026-11-11",
   "motif": "vendu"
  },
  "https://www.jean-jaures-immobilier.com/vente/207-mergey/maison/636-authentique-maison-de-village-renovee-avec-gout-171m-4-chambres": {
@@ -12795,8 +12851,16 @@
   "jour": "2026-10-16",
   "motif": "vendu"
  },
+ "https://www.jean-jaures-immobilier.com/vente/52-ste-savine/maison/730-maison-4-chambres-avec-jardin-et-terrasse-sainte-savine": {
+  "jour": "2026-11-11",
+  "motif": "vendu"
+ },
  "https://www.jean-jaures-immobilier.com/vente/56-pont-ste-marie/maison/739-maison-lumineuse-avec-sous-sol-complet-a-pont-sainte-marie": {
   "jour": "2026-10-28",
+  "motif": "vendu"
+ },
+ "https://www.jean-jaures-immobilier.com/vente/58-barberey-st-sulpice/maison/664-maison-lumineuse-terrain-arbore-1-101-m-sous-sol": {
+  "jour": "2026-11-11",
   "motif": "vendu"
  },
  "https://www.jean-jaures-immobilier.com/vente/8-st-andre-les-vergers/maison/531-st-andre-maison-familiale-proche-ecoles": {
