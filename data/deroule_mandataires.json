@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 1.6,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.7,
+  "seconde": 1.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,210 +23,250 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.7,
+  "seconde": 1.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.1,
+  "seconde": 3.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.5,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.5,
+  "seconde": 4.6,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 4.9,
+  "seconde": 5.2,
   "reseau": "capifrance",
-  "connues": 20152,
-  "ecartees": 3155
+  "connues": 20280,
+  "ecartees": 3190
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.9,
+  "seconde": 5.2,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.2,
+  "seconde": 5.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 18.6,
+  "seconde": 16.0,
   "reseau": "iad",
   "n": 93980,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.7,
+  "seconde": 18.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.1,
+  "seconde": 18.7,
   "reseau": "iad",
-  "connues": 20152,
-  "ecartees": 3155
+  "connues": 20280,
+  "ecartees": 3190
  },
  {
   "etape": "departement",
-  "seconde": 273.0,
+  "seconde": 194.2,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 6,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 115 m² à Aubigny (85430)",
-   "prix_trop_haut": "Maison 5 pièces de 177 m² à Deauville (14800)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 559.2,
-  "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 40,
-  "tronquee": true,
-  "etats": {
-   "garde": 40,
-   "vendu": 3,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 7
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de campagne 6 pièces de 211 m² à Chambon (17290)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 610.7,
-  "reseau": "iad",
-  "departement": "37",
-  "visitees": 11,
-  "gardes": 7,
-  "tronquee": true,
-  "etats": {
-   "garde": 7,
-   "vendu": 2,
+   "garde": 41,
+   "vendu": 7,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 2
+   "hors_perimetre": 1,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Maison d"
+   "hors_perimetre": "Maison de village 4 pièces de 99 m² à Bully (42260)",
+   "prix_trop_haut": "Maison 5 pièces de 140 m² à Bois-Guillaume (76230)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 375.2,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 43,
+  "tronquee": true,
+  "etats": {
+   "garde": 43,
+   "vendu": 7,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 541.2,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 30,
+  "tronquee": true,
+  "etats": {
+   "garde": 30,
+   "vendu": 10,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 10
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 4 pièces de 80 m² à Millery (69390)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 606.3,
+  "reseau": "iad",
+  "departement": "25",
+  "visitees": 22,
+  "gardes": 12,
+  "tronquee": true,
+  "etats": {
+   "garde": 12,
+   "vendu": 4,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "outre_mer": 4,
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "outre_mer": "Maison 3 pièces de 61 m² à Sainte-Anne (97227)",
+   "hors_perimetre": "Maison 10 pièces de 232 m² à Vairé (85150)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 610.7,
+  "seconde": 606.3,
   "reseau": "safti",
-  "part_secondes": 591
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 611.1,
+  "seconde": 606.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 612.2,
+  "seconde": 607.9,
   "reseau": "safti",
   "n": 28916,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 612.8,
+  "seconde": 608.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 613.2,
+  "seconde": 609.3,
   "reseau": "safti",
-  "connues": 20178,
-  "ecartees": 3181
+  "connues": 20304,
+  "ecartees": 3221
  },
  {
   "etape": "departement",
-  "seconde": 919.3,
+  "seconde": 834.7,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 0,
-   "ecarte": 4,
+   "garde": 48,
+   "vendu": 1,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à Beaulieu de 118m²"
+   "prix_trop_haut": "Maison à vendre à LAXOU de 244m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1203.3,
+  "seconde": 1052.5,
   "reseau": "safti",
-  "departement": "25",
-  "visitees": 46,
-  "gardes": 41,
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 41,
+   "garde": 49,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à BELMONT de 113m²"
+   "prix_trop_haut": "Maison à vendre à PRISSE de 295m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1202.6,
+  "reseau": "safti",
+  "departement": "27",
+  "visitees": 38,
+  "gardes": 35,
+  "tronquee": true,
+  "etats": {
+   "garde": 35,
+   "vendu": 1,
+   "ecarte": 1,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à LA TRINITE de 130m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1203.3,
-  "gardes": 172
+  "seconde": 1202.6,
+  "gardes": 258
  }
 ]
