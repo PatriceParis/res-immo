@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.5,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.6,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,172 +23,123 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.6,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.0,
+  "seconde": 3.1,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.8,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.9,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.2,
+  "seconde": 4.9,
   "reseau": "capifrance",
-  "connues": 19988,
-  "ecartees": 3138
+  "connues": 20152,
+  "ecartees": 3155
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.3,
+  "seconde": 4.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.5,
+  "seconde": 5.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.3,
+  "seconde": 18.6,
   "reseau": "iad",
-  "n": 94004,
+  "n": 93980,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.4,
+  "seconde": 19.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.8,
+  "seconde": 20.1,
   "reseau": "iad",
-  "connues": 19988,
-  "ecartees": 3138
+  "connues": 20152,
+  "ecartees": 3155
  },
  {
   "etape": "departement",
-  "seconde": 247.3,
+  "seconde": 273.0,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 29,
-  "tronquee": true,
-  "etats": {
-   "garde": 29,
-   "vendu": 12,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 9
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 96 m² à SAINT-LEGER (17800)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 502.7,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 39,
-  "tronquee": true,
-  "etats": {
-   "garde": 39,
-   "vendu": 9,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "url_type_exclu": 1,
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "url_type_exclu": "Immeuble de 266 m² à CHATEAU CHINON (VILLE) (58120)",
-   "hors_perimetre": "110 552 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 605.7,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 18,
-  "gardes": 16,
-  "tronquee": true,
-  "etats": {
-   "garde": 16,
-   "vendu": 2,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 605.7,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 606.1,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 607.1,
-  "reseau": "safti",
-  "n": 28898,
-  "complet": true
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 607.5,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 607.9,
-  "reseau": "safti",
-  "connues": 19991,
-  "ecartees": 3147
- },
- {
-  "etape": "departement",
-  "seconde": 930.1,
-  "reseau": "safti",
   "departement": "14",
   "visitees": 50,
-  "gardes": 48,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 0,
+   "garde": 38,
+   "vendu": 6,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 5 pièces de 115 m² à Aubigny (85430)",
+   "prix_trop_haut": "Maison 5 pièces de 177 m² à Deauville (14800)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 559.2,
+  "reseau": "iad",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 3,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 7
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de campagne 6 pièces de 211 m² à Chambon (17290)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 610.7,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 11,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 2,
    "ecarte": 2,
    "illisible": 0
   },
@@ -196,35 +147,86 @@
    "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à LESSARD-ET-LE-CHENE de 315m²"
+   "prix_trop_haut": "Maison d"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 610.7,
+  "reseau": "safti",
+  "part_secondes": 591
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 611.1,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 612.2,
+  "reseau": "safti",
+  "n": 28916,
+  "complet": true
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 612.8,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 613.2,
+  "reseau": "safti",
+  "connues": 20178,
+  "ecartees": 3181
+ },
+ {
+  "etape": "departement",
+  "seconde": 919.3,
+  "reseau": "safti",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 46,
+  "tronquee": true,
+  "etats": {
+   "garde": 46,
+   "vendu": 0,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à Beaulieu de 118m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1205.9,
+  "seconde": 1203.3,
   "reseau": "safti",
-  "departement": "18",
+  "departement": "25",
   "visitees": 46,
-  "gardes": 40,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 40,
+   "garde": 41,
    "vendu": 0,
-   "ecarte": 6,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
    "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à VOUZERON de 800m²",
-   "hors_perimetre": "Maison à vendre à ACHERES de 121m²"
+   "hors_perimetre": "Maison à vendre à BELMONT de 113m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1205.9,
+  "seconde": 1203.3,
   "gardes": 172
  }
 ]
