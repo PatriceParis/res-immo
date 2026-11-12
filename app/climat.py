@@ -11,14 +11,17 @@ position — qui est celle de sa COMMUNE, l'adresse n'étant presque jamais
 publiée (voir pages._carte_aerienne). À 8 km près, c'est le climat de la
 commune que l'on décrit, et la fiche le dit.
 
-Les valeurs vivent dans data/climat_2050.json, sous cette forme :
+Les valeurs vivent dans data/climat_2050.json, construit par
+scripts/importer_drias.py à partir d'une extraction DRIAS :
 
-    {"source": "...", "horizon": "...", "reference": "1976-2005",
+    {"source": "...", "horizon": "2050", "reference": "1976-2005",
+     "avertissement": "...",
      "points": [[lat, lon, {"tx35d": [reference, horizon], ...}], ...]}
 
-Le fichier est construit à partir d'un export DRIAS. Absent ou illisible,
-aucune fiche n'affiche de climat : un chiffre manquant vaut mieux qu'un
-chiffre inventé.
+La référence vaut null quand l'extraction ne la fournit pas : la fiche
+donne alors la seule valeur de 2050. Fichier absent ou illisible : aucune
+fiche n'affiche de climat — un chiffre manquant vaut mieux qu'un chiffre
+inventé.
 """
 
 from __future__ import annotations
@@ -35,16 +38,18 @@ FICHIER = Path(__file__).resolve().parent.parent / "data" / "climat_2050.json"
 # commune, voire d'un autre pays : on se tait.
 DISTANCE_MAX_KM = 10
 
-# Ce que la fiche montre, dans cet ordre. Un indicateur absent du fichier
-# est simplement omis.
-# Les codes sont ceux des indicateurs TRACC du portail DRIAS (TX35D, TX30D,
-# TR, SWI04D, IFM40D), en minuscules.
+# Ce que la fiche montre, dans cet ordre : (thème, code, libellé, unité,
+# décimales). Les codes sont ceux des indicateurs TRACC du portail DRIAS
+# (TMm, TXm été, TX35D, TX30D, TR, SWI04, IFM40), en minuscules. Un
+# indicateur absent du fichier est simplement omis.
 INDICATEURS = (
-    ("chaleur", "tx35d", "Journées au-delà de 35 °C", "par an"),
-    ("chaleur", "tx30d", "Journées au-delà de 30 °C", "par an"),
-    ("chaleur", "tr", "Nuits à plus de 20 °C", "par an"),
-    ("secheresse", "swi04d", "Jours de sol sec", "par an"),
-    ("secheresse", "ifm40d", "Jours à fort risque de feu de forêt", "par an"),
+    ("chaleur", "tmm", "Température moyenne annuelle", "°C", 1),
+    ("chaleur", "txm_jja", "Température maximale moyenne en été", "°C", 1),
+    ("chaleur", "tx35d", "Journées au-delà de 35 °C", "par an", 0),
+    ("chaleur", "tx30d", "Journées au-delà de 30 °C", "par an", 0),
+    ("chaleur", "tr", "Nuits à plus de 20 °C", "par an", 0),
+    ("secheresse", "swi04d", "Jours de sol sec", "par an", 0),
+    ("secheresse", "ifm40d", "Jours à fort risque de feu de forêt", "par an", 0),
 )
 
 
@@ -93,31 +98,43 @@ def au_point(lat, lon, chemin: Path | str | None = None) -> dict | None:
         return None
     valeurs = meilleur[2] if len(meilleur) > 2 and isinstance(meilleur[2], dict) else {}
     indicateurs = []
-    for theme, code, libelle, unite in INDICATEURS:
+    for theme, code, libelle, unite, decimales in INDICATEURS:
         paire = valeurs.get(code)
-        if not isinstance(paire, (list, tuple)) or len(paire) != 2 or None in paire:
+        if not isinstance(paire, (list, tuple)) or len(paire) != 2 or paire[1] is None:
             continue
         indicateurs.append({"theme": theme, "code": code, "libelle": libelle, "unite": unite,
-                            "reference": paire[0], "horizon": paire[1]})
+                            "decimales": decimales, "reference": paire[0], "horizon": paire[1]})
     if not indicateurs:
         return None
     return {"source": grille.get("source") or "DRIAS, Météo-France",
             "horizon": grille.get("horizon") or "2050",
             "reference": grille.get("reference") or "1976-2005",
+            "avertissement": grille.get("avertissement") or "",
             "distance_km": round(distance, 1),
             "indicateurs": indicateurs}
 
 
-def _nombre(valeur) -> str:
-    arrondi = round(float(valeur))
-    return str(arrondi) if arrondi or float(valeur) == 0 else "moins de 1"
+def _nombre(valeur, decimales: int = 0) -> str:
+    valeur = float(valeur)
+    if decimales:
+        return f"{valeur:.{decimales}f}".replace(".", ",")
+    arrondi = round(valeur)
+    return str(arrondi) if arrondi or valeur == 0 else "moins de 1"
 
 
 def phrases(climat: dict | None) -> list[str]:
-    """« Journées au-delà de 35 °C : 2 par an sur la période 1976-2005,
-    9 vers 2050. »"""
+    """« Jours de sol sec : 41 par an sur la période 1976-2005, 63 vers
+    2050. », ou « Journées au-delà de 35 °C : 3 par an vers 2050. » quand la
+    référence manque."""
     if not climat:
         return []
-    return [f"{i['libelle']} : {_nombre(i['reference'])} {i['unite']} sur la période "
-            f"{climat['reference']}, {_nombre(i['horizon'])} vers {climat['horizon']}."
-            for i in climat["indicateurs"]]
+    lignes = []
+    for i in climat["indicateurs"]:
+        futur = f"{_nombre(i['horizon'], i['decimales'])} {i['unite']}"
+        if i["reference"] is None:
+            lignes.append(f"{i['libelle']} : {futur} vers {climat['horizon']}.")
+        else:
+            lignes.append(f"{i['libelle']} : {_nombre(i['reference'], i['decimales'])} "
+                          f"{i['unite']} sur la période {climat['reference']}, "
+                          f"{futur} vers {climat['horizon']}.")
+    return lignes

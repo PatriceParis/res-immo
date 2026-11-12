@@ -113,7 +113,10 @@ def detail_annonce(annonce_id: str):
         raise HTTPException(status_code=404, detail="Annonce introuvable")
     bien = db._row_vers_dict(row)
     # Projections DRIAS vers 2050, s'il y en a pour cette maille (app/climat.py).
+    # Les phrases sont rédigées ici, une seule fois, pour la carte comme pour
+    # la page du bien.
     bien["climat_2050"] = climat.au_point(bien.get("lat"), bien.get("lon"))
+    bien["climat_2050_texte"] = climat.phrases(bien["climat_2050"])
     return bien
 
 

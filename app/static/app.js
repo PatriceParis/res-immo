@@ -711,6 +711,8 @@ function ouvrirFiche(id) {
         <ul class="vigilances">${vigilances}</ul>` : ""}
     </section>
 
+    <section id="climat-2050" data-id="${echap(a.id)}"></section>
+
     <section>
       <h4>La commune vue du ciel</h4>
       ${/* Le descriptif rédigé par l'agence ne s'affiche PLUS ici. C'était le
@@ -749,6 +751,28 @@ function ouvrirFiche(id) {
 
   $("#voile").hidden = false;
   document.body.style.overflow = "hidden";
+  afficherClimat(a.id);
+}
+
+/* Le climat de la commune vers 2050 (projections DRIAS, voir app/climat.py).
+   La liste ne le porte pas : on le demande à l'ouverture de la fiche. C'est
+   un complément — s'il manque ou tarde, la fiche reste entière. */
+async function afficherClimat(id) {
+  try {
+    const d = await (await fetch("/api/annonces/" + encodeURIComponent(id))).json();
+    const zone = $("#climat-2050");
+    const c = d.climat_2050, lignes = d.climat_2050_texte || [];
+    // La fiche a pu changer pendant la requête : on n'écrit que dans la bonne.
+    if (!zone || zone.dataset.id !== id || !c || !lignes.length) return;
+    zone.innerHTML = `
+      <h4>Le climat de la commune vers 2050</h4>
+      <ul class="vigilances">${lignes.map((l) => `<li>${echap(l)}</li>`).join("")}</ul>
+      <p class="note-detail">Projections ${echap(c.source)}, trajectoire de référence
+        pour l'adaptation (TRACC) : +2,7 °C en France vers 2050. Maille de 8 km la
+        plus proche de la commune, et non de la parcelle. ${echap(c.avertissement || "")}</p>`;
+  } catch (e) {
+    /* rien : la fiche s'affiche sans le climat */
+  }
 }
 
 function fermerFiche() {

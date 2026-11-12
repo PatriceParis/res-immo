@@ -255,7 +255,8 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
         f'<ul class="climat">{"".join(f"<li>{_e(p)}</li>" for p in climat.phrases(projection))}</ul>'
         f'<p class="note">Projections {_e(projection["source"])}, trajectoire de référence '
         f'pour l’adaptation (TRACC) : +2,7 °C en France vers 2050. Valeurs de la maille de '
-        f'8 km la plus proche de la commune, et non de la parcelle.</p>'
+        f'8 km la plus proche de la commune, et non de la parcelle. '
+        f'{_e(projection["avertissement"])}</p>'
     ) if projection else ""
 
     corps = f"""
