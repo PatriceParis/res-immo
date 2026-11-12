@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.6,
+  "seconde": 11.3,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.6,
+  "seconde": 11.4,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,102 +23,79 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.6,
+  "seconde": 11.4,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.2,
+  "seconde": 13.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.6,
+  "seconde": 14.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 4.6,
+  "seconde": 14.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.2,
+  "seconde": 15.3,
   "reseau": "capifrance",
-  "connues": 20280,
-  "ecartees": 3190
+  "connues": 20519,
+  "ecartees": 3227
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.2,
+  "seconde": 15.3,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.5,
+  "seconde": 15.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.0,
+  "seconde": 33.1,
   "reseau": "iad",
-  "n": 93980,
+  "n": 93588,
   "complet": false
  },
  {
   "etape": "tentative_notee",
-  "seconde": 18.1,
+  "seconde": 34.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 18.7,
+  "seconde": 35.0,
   "reseau": "iad",
-  "connues": 20280,
-  "ecartees": 3190
+  "connues": 20519,
+  "ecartees": 3227
  },
  {
   "etape": "departement",
-  "seconde": 194.2,
+  "seconde": 618.5,
   "reseau": "iad",
-  "departement": "76",
-  "visitees": 50,
-  "gardes": 41,
+  "departement": "27",
+  "visitees": 49,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 7,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 4 pièces de 99 m² à Bully (42260)",
-   "prix_trop_haut": "Maison 5 pièces de 140 m² à Bois-Guillaume (76230)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 375.2,
-  "reseau": "iad",
-  "departement": "89",
-  "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
-   "vendu": 7,
+   "garde": 39,
+   "vendu": 10,
    "ecarte": 0,
    "illisible": 0
   },
@@ -126,147 +103,61 @@
   "exemples": {}
  },
  {
-  "etape": "departement",
-  "seconde": 541.2,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 30,
-  "tronquee": true,
-  "etats": {
-   "garde": 30,
-   "vendu": 10,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 10
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 4 pièces de 80 m² à Millery (69390)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 606.3,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 22,
-  "gardes": 12,
-  "tronquee": true,
-  "etats": {
-   "garde": 12,
-   "vendu": 4,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "outre_mer": 4,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "outre_mer": "Maison 3 pièces de 61 m² à Sainte-Anne (97227)",
-   "hors_perimetre": "Maison 10 pièces de 232 m² à Vairé (85150)"
-  }
- },
- {
   "etape": "reseau_debut",
-  "seconde": 606.3,
+  "seconde": 618.5,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 593
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 606.7,
+  "seconde": 619.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 607.9,
+  "seconde": 620.5,
   "reseau": "safti",
-  "n": 28916,
+  "n": 28855,
   "complet": true
  },
  {
   "etape": "tentative_notee",
-  "seconde": 608.7,
+  "seconde": 621.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 609.3,
+  "seconde": 621.5,
   "reseau": "safti",
-  "connues": 20304,
-  "ecartees": 3221
+  "connues": 20529,
+  "ecartees": 3237
  },
  {
   "etape": "departement",
-  "seconde": 834.7,
+  "seconde": 1226.5,
   "reseau": "safti",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 48,
+  "departement": "28",
+  "visitees": 45,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 1,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à LAXOU de 244m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1052.5,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 49,
-  "tronquee": true,
-  "etats": {
-   "garde": 49,
+   "garde": 40,
    "vendu": 0,
-   "ecarte": 1,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à PRISSE de 295m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1202.6,
-  "reseau": "safti",
-  "departement": "27",
-  "visitees": 38,
-  "gardes": 35,
-  "tronquee": true,
-  "etats": {
-   "garde": 35,
-   "vendu": 1,
-   "ecarte": 1,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à LA TRINITE de 130m²"
+   "hors_perimetre": "Maison à vendre à MONTREUIL de 139m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.6,
-  "gardes": 258
+  "seconde": 1226.5,
+  "gardes": 79
  }
 ]
