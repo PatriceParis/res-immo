@@ -505,3 +505,48 @@ body { overflow-x: hidden; }
   font-size: 10.5px; letter-spacing: .2px; padding: 3px 9px; border-radius: 99px;
   background: rgba(20, 30, 24, .62); color: #f2efe6; pointer-events: none;
 }
+
+/* ---------- climat 2050 (projections DRIAS) ----------
+   Même dessin que la page du bien (app/pages.py, climat_html) : chiffres
+   clés, puis par thème une ligne par indicateur avec deux barres — 1976-2005
+   en gris, 2050 en couleur — sur une échelle commune à toute la zone. */
+.climat { background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: 12px;
+  padding: 12px 16px 14px; }
+.climat h4 { margin-top: 0; }
+.theme-climat { font-size: 13.5px; margin: 14px 0 2px; color: var(--encre); }
+.cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.cle { border-radius: 10px; padding: 8px 11px; background: #fbf3ec; border-left: 4px solid #d9622b;
+  display: flex; flex-direction: column; }
+.cle.secheresse { background: #fbf6ea; border-left-color: #b5852b; }
+.cle b { font-size: 22px; line-height: 1.15; color: var(--encre); white-space: nowrap; }
+.cle span { font-size: 12.5px; color: var(--encre); }
+.cle small { font-size: 11.5px; color: var(--encre-2); }
+@media (max-width: 480px) {
+  .cles-climat { grid-template-columns: 1fr; gap: 6px; }
+  .cle { display: grid; grid-template-columns: 5.2rem 1fr; column-gap: 10px; align-items: center; padding: 7px 10px; }
+  .cle b { grid-row: 1 / 3; font-size: 20px; }
+  .cle span, .cle small { grid-column: 2; }
+}
+.ligne-climat { padding: 7px 0; border-bottom: 1px solid #efece4; font-size: 13px; }
+.ligne-climat:last-of-type { border-bottom: 0; }
+.l-tete { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.l-nom small { color: var(--encre-2); }
+.l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.v-ref { color: var(--encre-2); }
+.ecart { display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 700;
+  padding: 1px 7px; border-radius: 99px; background: #efede6; color: var(--encre-2); }
+.ecart.pire { background: var(--alerte-fond); color: var(--alerte-texte); }
+.ecart.mieux { background: var(--badge-fond); color: var(--marque); }
+.barres { display: grid; gap: 3px; margin: 6px 0 2px; }
+.piste { height: 8px; background: #f2efe7; border-radius: 4px; overflow: hidden; }
+.piste span { display: block; height: 100%; border-radius: 4px; min-width: 2px; }
+.b-ref { background: #cfc8b8; }
+.b-fut { background: #d9622b; }
+.b-fut.secheresse { background: #b5852b; }
+.b-fut.rr_jja { background: #3a7ca5; }
+.b-fut.ifm40d { background: #b33a2a; }
+.rang { font-size: 12px; color: var(--encre-2); }
+.legende-climat { font-size: 12px; color: var(--encre-2); margin: 10px 0 0; display: flex; gap: 14px;
+  flex-wrap: wrap; align-items: center; }
+.legende-climat i { display: inline-block; width: 20px; height: 8px; border-radius: 4px; margin-right: 6px;
+  vertical-align: 1px; }

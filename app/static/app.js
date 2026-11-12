@@ -754,6 +754,46 @@ function ouvrirFiche(id) {
   afficherClimat(a.id);
 }
 
+/* Le dessin du climat 2050 : le contenu, déjà rédigé, vient de
+   climat.vue côté serveur ; pages.climat_html dessine le même sur la page du
+   bien. Deux dessins, une seule rédaction. */
+function climatHtml(v) {
+  const cles = v.cles.map((c) => `
+    <div class="cle ${echap(c.theme)}"><b>${echap(c.valeur)}</b>
+      <span>${echap(c.titre)}</span><small>${echap(c.detail)}</small></div>`).join("");
+  const themes = v.themes.map((t) => {
+    const lignes = t.lignes.map((l) => {
+      const barres = l.barre_horizon == null ? "" : `
+        <div class="barres" aria-hidden="true">
+          ${l.barre_reference == null ? "" :
+            `<div class="piste"><span class="b-ref" style="width:${Number(l.barre_reference)}%"></span></div>`}
+          <div class="piste"><span class="b-fut ${echap(t.code)} ${echap(l.code)}"
+            style="width:${Number(l.barre_horizon)}%"></span></div>
+        </div>`;
+      return `
+        <div class="ligne-climat">
+          <div class="l-tete">
+            <span class="l-nom">${echap(l.libelle)}${l.unite ? ` <small>${echap(l.unite)}</small>` : ""}</span>
+            <span class="l-chiffres">${l.reference ? `<span class="v-ref">${echap(l.reference)}</span> → ` : ""}<b>${echap(l.horizon)}</b>${
+              l.ecart ? `<span class="ecart ${echap(l.sens)}">${echap(l.ecart)}</span>` : ""}</span>
+          </div>
+          ${barres}
+          ${l.rang ? `<div class="rang">${echap(l.rang)}</div>` : ""}
+        </div>`;
+    }).join("");
+    return `<h5 class="theme-climat">${echap(t.icone)} ${echap(t.nom)}</h5>${lignes}`;
+  }).join("");
+  return `
+    <div class="climat">
+      <h4>${echap(v.titre)}</h4>
+      <div class="cles-climat">${cles}</div>
+      ${themes}
+      <p class="legende-climat"><span><i class="b-ref"></i>${echap(v.legende[0])}</span>
+        <span><i class="b-fut"></i>${echap(v.legende[1])}</span></p>
+      <p class="note-detail">${echap(v.note)}</p>
+    </div>`;
+}
+
 /* Le climat de la commune vers 2050 (projections DRIAS, voir app/climat.py).
    La liste ne le porte pas : on le demande à l'ouverture de la fiche. C'est
    un complément — s'il manque ou tarde, la fiche reste entière. */
@@ -761,15 +801,9 @@ async function afficherClimat(id) {
   try {
     const d = await (await fetch("/api/annonces/" + encodeURIComponent(id))).json();
     const zone = $("#climat-2050");
-    const c = d.climat_2050, lignes = d.climat_2050_texte || [];
     // La fiche a pu changer pendant la requête : on n'écrit que dans la bonne.
-    if (!zone || zone.dataset.id !== id || !c || !lignes.length) return;
-    zone.innerHTML = `
-      <h4>Le climat de la commune vers 2050</h4>
-      <ul class="vigilances">${lignes.map((l) => `<li>${echap(l)}</li>`).join("")}</ul>
-      <p class="note-detail">Projections ${echap(c.source)}, trajectoire de référence
-        pour l'adaptation (TRACC) : +2,7 °C en France vers 2050. Maille de 8 km la
-        plus proche de la commune, et non de la parcelle. ${echap(c.avertissement || "")}</p>`;
+    if (!zone || zone.dataset.id !== id || !d.climat_2050_vue) return;
+    zone.innerHTML = climatHtml(d.climat_2050_vue);
   } catch (e) {
     /* rien : la fiche s'affiche sans le climat */
   }

@@ -231,3 +231,55 @@ def test_la_mediane_des_modeles_donne_la_reference_des_jours_de_chaleur(tmp_path
     assert valeurs["swi04d"] == [116.0, 145.0]
     assert resultat["modeles"] == ["Q50"]
     assert "Médiane des 17 modèles" in resultat["avertissement"]
+
+
+# ---------------------------------------------------------------- dessin
+
+def test_la_vue_calcule_l_ecart_sur_les_valeurs_affichees(grille):
+    """« 1 → 6 » doit dire +5, même si l'écart brut (4,5) s'arrondirait à 4."""
+    climat._reperes.cache_clear()
+    projection = climat.au_point(*BELLEME)
+    projection["indicateurs"] = [dict(i, reference=1.3, horizon=5.8, ecart=4.5)
+                                 if i["code"] == "tr" else i
+                                 for i in projection["indicateurs"]]
+    ligne = next(l for t in climat.vue(projection)["themes"] for l in t["lignes"]
+                 if l["code"] == "tr")
+    assert (ligne["reference"], ligne["horizon"], ligne["ecart"]) == ("1", "6", "+5 j")
+    assert ligne["sens"] == "pire"
+
+
+def test_les_barres_tiennent_sur_l_echelle_commune_de_la_zone(grille):
+    climat._reperes.cache_clear()
+    vue = climat.vue(climat.au_point(*BELLEME))
+    lignes = [l for t in vue["themes"] for l in t["lignes"]]
+    for ligne in lignes:
+        for barre in (ligne["barre_reference"], ligne["barre_horizon"]):
+            assert barre is None or 0 <= barre <= 100
+    # Bellême, 63 jours de sol sec, sous la maille voisine qui n'en a pas :
+    # la seule maille portant l'indicateur est la sienne, d'où 100 %.
+    sol = next(l for l in lignes if l["code"] == "swi04d")
+    assert sol["barre_horizon"] == 100.0
+    # Les journées > 35 °C : 2,4 sur une échelle de 99 (la maille voisine).
+    chaud = next(l for l in lignes if l["code"] == "tx35d")
+    assert chaud["barre_horizon"] == pytest.approx(2.4, abs=0.1)
+    assert chaud["rang"] == "Moins exposé que 50 % du territoire couvert"
+
+
+def test_moins_de_pluie_en_ete_est_le_sens_inquietant():
+    i = {"code": "rr_jja", "unite": "mm", "reference": 170.0, "horizon": 150.0,
+         "ecart": -20.0, "baisse_inquietante": True, "centile": (80, 15)}
+    assert climat._ecart(i) == ("−12 %", "pire")
+    assert climat._rang(i) == "Été plus sec que 80 % du territoire couvert"
+
+
+def test_la_fiche_dessine_chiffres_cles_et_barres(grille):
+    climat._reperes.cache_clear()
+    html = pages.page_annonce(_bien(), [])
+    assert 'class="cles-climat"' in html and "+2,0 °C" in html
+    assert 'class="b-fut chaleur tx35d"' in html
+    assert "Chaleur" in html and "Sécheresse" in html
+
+
+def test_sans_ecart_net_a_la_moitie_on_dit_dans_la_moyenne():
+    i = {"code": "ifm40d", "baisse_inquietante": False, "centile": (43, 40)}
+    assert climat._rang(i) == "Dans la moyenne du territoire couvert"

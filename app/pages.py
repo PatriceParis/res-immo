@@ -58,6 +58,50 @@ figure.aerienne { margin: 14px 0 }
 figure.aerienne img { width: 100%; border-radius: 10px }
 figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .manque { color: #9a6a2b; font-style: italic }
+.climat { background: #fff; border: 1px solid #e4e0d5; border-radius: 14px;
+          padding: 18px 18px 14px; margin: 28px 0 }
+.climat h2 { margin: 0 0 12px }
+.climat h3 { font-size: 15px; margin: 18px 0 4px; letter-spacing: .2px }
+.cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+               gap: 10px }
+.cle { border-radius: 10px; padding: 10px 12px; background: #fbf3ec;
+       border-left: 4px solid #d9622b; display: flex; flex-direction: column }
+.cle.secheresse { background: #fbf6ea; border-left-color: #b5852b }
+.cle b { font-size: 26px; line-height: 1.1; color: #23301f; white-space: nowrap }
+.cle span { font-size: 14px; color: #46543f }
+.cle small { font-size: 12.5px; color: #6b7663 }
+@media (max-width: 520px) {
+  .cles-climat { grid-template-columns: 1fr; gap: 6px }
+  .cle { display: grid; grid-template-columns: 5.8rem 1fr; column-gap: 12px; align-items: center; padding: 8px 12px }
+  .cle b { grid-row: 1 / 3; font-size: 22px }
+  .cle span, .cle small { grid-column: 2 }
+}
+.ligne-climat { padding: 9px 0; border-bottom: 1px solid #efece4 }
+.ligne-climat:last-child { border-bottom: 0 }
+.l-tete { display: flex; justify-content: space-between; align-items: baseline;
+          gap: 10px; flex-wrap: wrap }
+.l-nom { font-size: 15px }
+.l-nom small { color: #6b7663 }
+.l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 15px }
+.v-ref { color: #6b7663 }
+.ecart { display: inline-block; margin-left: 6px; font-size: 12.5px; font-weight: 700;
+         padding: 1px 8px; border-radius: 99px; background: #efede6; color: #5c6b60 }
+.ecart.pire { background: #fbece8; color: #8c3325 }
+.ecart.mieux { background: #e6f0e8; color: #1b4332 }
+.barres { display: grid; gap: 3px; margin: 7px 0 3px }
+.piste { height: 9px; background: #f2efe7; border-radius: 5px; overflow: hidden }
+.piste span { display: block; height: 100%; border-radius: 5px; min-width: 2px }
+.b-ref { background: #cfc8b8 }
+.b-fut { background: #d9622b }
+.b-fut.secheresse { background: #b5852b }
+.b-fut.rr_jja { background: #3a7ca5 }
+.b-fut.ifm40d { background: #b33a2a }
+.rang { font-size: 13px; color: #6b7663 }
+.legende-climat { font-size: 13px; color: #6b7663; margin: 12px 0 0;
+                  display: flex; gap: 14px; flex-wrap: wrap; align-items: center }
+.legende-climat i { display: inline-block; width: 22px; height: 8px; border-radius: 4px;
+                    margin-right: 6px; vertical-align: 1px }
+.note-climat { font-size: 13px; color: #6b7663; margin: 8px 0 0 }
 .pied { font-size: 13px; color: #6b7663; margin-top: 10px }
 .pied a { color: #46543f }
 /* Le bloc professionnel, sur fond blanc : il ne s'adresse pas au même
@@ -172,6 +216,48 @@ def _carte_aerienne(bien: dict, largeur: int = 640, hauteur: int = 320) -> str:
             f"&WIDTH={largeur}&HEIGHT={hauteur}")
 
 
+def climat_html(v: dict | None) -> str:
+    """Le climat de 2050, dessiné : chiffres clés, puis par thème une ligne
+    par indicateur — valeurs, écart, deux barres (1976-2005, 2050) sur
+    l'échelle commune à la zone, et le rang de la maille. Le contenu vient de
+    climat.vue ; app/static/app.js dessine le même pour la carte."""
+    if not v:
+        return ""
+    cles = "".join(
+        f'<div class="cle {_e(c["theme"])}"><b>{_e(c["valeur"])}</b>'
+        f'<span>{_e(c["titre"])}</span><small>{_e(c["detail"])}</small></div>'
+        for c in v["cles"])
+    themes = []
+    for t in v["themes"]:
+        lignes = []
+        for ligne in t["lignes"]:
+            barres = ""
+            if ligne["barre_horizon"] is not None:
+                ref = ("" if ligne["barre_reference"] is None else
+                       f'<div class="piste"><span class="b-ref" '
+                       f'style="width:{ligne["barre_reference"]}%"></span></div>')
+                barres = (f'<div class="barres" aria-hidden="true">{ref}'
+                          f'<div class="piste"><span class="b-fut {_e(t["code"])} {_e(ligne["code"])}" '
+                          f'style="width:{ligne["barre_horizon"]}%"></span></div></div>')
+            avant = (f'<span class="v-ref">{_e(ligne["reference"])}</span> → '
+                     if ligne["reference"] else "")
+            ecart = (f'<span class="ecart {_e(ligne["sens"])}">{_e(ligne["ecart"])}</span>'
+                     if ligne["ecart"] else "")
+            unite = f' <small>{_e(ligne["unite"])}</small>' if ligne["unite"] else ""
+            rang = f'<div class="rang">{_e(ligne["rang"])}</div>' if ligne["rang"] else ""
+            lignes.append(
+                f'<div class="ligne-climat"><div class="l-tete">'
+                f'<span class="l-nom">{_e(ligne["libelle"])}{unite}</span>'
+                f'<span class="l-chiffres">{avant}<b>{_e(ligne["horizon"])}</b>{ecart}</span>'
+                f'</div>{barres}{rang}</div>')
+        themes.append(f'<h3>{_e(t["icone"])} {_e(t["nom"])}</h3>{"".join(lignes)}')
+    legende = (f'<p class="legende-climat"><span><i class="b-ref"></i>{_e(v["legende"][0])}</span>'
+               f'<span><i class="b-fut"></i>{_e(v["legende"][1])}</span></p>')
+    return (f'<section class="climat"><h2>{_e(v["titre"])}</h2>'
+            f'<div class="cles-climat">{cles}</div>{"".join(themes)}{legende}'
+            f'<p class="note-climat">{_e(v["note"])}</p></section>')
+
+
 def _temps(minutes) -> str:
     if not minutes:
         return ""
@@ -250,14 +336,7 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
     # Le climat de 2050 : projections DRIAS de la maille la plus proche. La
     # section n'existe que si les données existent — voir app/climat.py.
     projection = climat.au_point(bien.get("lat"), bien.get("lon"))
-    bloc_climat = (
-        "<h2>Le climat de la commune vers 2050</h2>"
-        f'<ul class="climat">{"".join(f"<li>{_e(p)}</li>" for p in climat.phrases(projection))}</ul>'
-        f'<p class="note">Projections {_e(projection["source"])}, trajectoire de référence '
-        f'pour l’adaptation (TRACC) : +2,7 °C en France vers 2050. Valeurs de la maille de '
-        f'8 km la plus proche de la commune, et non de la parcelle. '
-        f'{_e(projection["avertissement"])}</p>'
-    ) if projection else ""
+    bloc_climat = climat_html(climat.vue(projection))
 
     corps = f"""
 <nav class="fil">{" › ".join(

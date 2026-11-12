@@ -117,6 +117,7 @@ def detail_annonce(annonce_id: str):
     # la page du bien.
     bien["climat_2050"] = climat.au_point(bien.get("lat"), bien.get("lon"))
     bien["climat_2050_texte"] = climat.phrases(bien["climat_2050"])
+    bien["climat_2050_vue"] = climat.vue(bien["climat_2050"])
     return bien
 
 
