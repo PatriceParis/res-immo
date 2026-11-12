@@ -37,13 +37,14 @@ DISTANCE_MAX_KM = 10
 
 # Ce que la fiche montre, dans cet ordre. Un indicateur absent du fichier
 # est simplement omis.
+# Les codes sont ceux des indicateurs TRACC du portail DRIAS (TX35D, TX30D,
+# TR, SWI04D, IFM40D), en minuscules.
 INDICATEURS = (
     ("chaleur", "tx35d", "Journées au-delà de 35 °C", "par an"),
     ("chaleur", "tx30d", "Journées au-delà de 30 °C", "par an"),
-    ("chaleur", "hwd", "Jours de vague de chaleur", "par an"),
     ("chaleur", "tr", "Nuits à plus de 20 °C", "par an"),
     ("secheresse", "swi04d", "Jours de sol sec", "par an"),
-    ("secheresse", "sech_rr", "Plus longue période sans pluie", "jours"),
+    ("secheresse", "ifm40d", "Jours à fort risque de feu de forêt", "par an"),
 )
 
 
