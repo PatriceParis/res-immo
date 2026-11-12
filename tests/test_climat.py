@@ -194,3 +194,40 @@ def test_le_fichier_converti_se_lit_par_la_fiche(tmp_path, monkeypatch):
     projection = climat.au_point(*BELLEME, chemin=sortie)
     assert projection and projection["indicateurs"][0]["code"] == "tmm"
     climat._grille.cache_clear()
+
+
+# La médiane des 17 modèles, telle que DRIAS la livre (« Quantiles… », Q50) :
+# une ligne par point, sans colonne Annee, colonnes NOR… et A… (relevé sur
+# l'extraction réelle du 12 novembre 2026).
+COLONNES_Q50 = ("Point;Latitude;Longitude;Niveau;NORTMm_yr;NORTXm_seas_JJA;NORTX35D_yr;"
+                "NORTX30D_yr;NORTR_yr;NORRR_seas_JJA;NORIFM40_yr;NORSWI04_yr;ATMm_yr;"
+                "ATXm_seas_JJA;ATX35D_yr;ATX30D_yr;ATR_yr;AIFM40_yr;ASWI04_yr;ARRR_seas_JJA;")
+
+
+def _mediane(dossier: Path, lignes: list[str]) -> Path:
+    texte = "\n".join([
+        "# Experience : TRACC2023_DISTRIBUTION",
+        "# Modele     : Q50",
+        "#     GWL20 : Niveau de réchauffement Monde 2.0 degrés -> 2050 / France +2.7°C",
+        "# " + COLONNES_Q50, *lignes, ""])
+    chemin = dossier / "indicesQ50.txt"
+    chemin.write_text(texte, encoding="utf-8")
+    return chemin
+
+
+def test_la_mediane_des_modeles_donne_la_reference_des_jours_de_chaleur(tmp_path):
+    q50 = _mediane(tmp_path, [
+        # tmm 12,6 (écart 2,1) ; tx35d 2,4 (écart 1,9) ; pluie d'été 160 mm, -20 %
+        "1;48.40;0.57;GWL20;12.6;24.6;2.4;15.2;9.8;160;3;145;2.1;2.7;1.9;9.1;8.6;2;29;-0.2;",
+    ])
+    # Un modèle isolé fourni en même temps ne fausse pas la médiane.
+    isole = _extraction(tmp_path, "A_X", [_ligne(1, 48.40, 0.57, 2052, 20.0, 50, 60, 2.0, 20)])
+    resultat = importer_drias.convertir([isole, q50])
+    valeurs = resultat["points"][0][2]
+    assert valeurs["tmm"] == [10.5, 12.6]
+    assert valeurs["tx35d"] == [0.5, 2.4]
+    assert valeurs["tx30d"] == [6.1, 15.2]
+    assert valeurs["rr_jja"] == [200.0, 160.0]
+    assert valeurs["swi04d"] == [116.0, 145.0]
+    assert resultat["modeles"] == ["Q50"]
+    assert "Médiane des 17 modèles" in resultat["avertissement"]

@@ -48,6 +48,7 @@ INDICATEURS = (
     ("chaleur", "tx35d", "Journées au-delà de 35 °C", "par an", 0),
     ("chaleur", "tx30d", "Journées au-delà de 30 °C", "par an", 0),
     ("chaleur", "tr", "Nuits à plus de 20 °C", "par an", 0),
+    ("secheresse", "rr_jja", "Pluie en été (juin à août)", "mm", 0),
     ("secheresse", "swi04d", "Jours de sol sec", "par an", 0),
     ("secheresse", "ifm40d", "Jours à fort risque de feu de forêt", "par an", 0),
 )

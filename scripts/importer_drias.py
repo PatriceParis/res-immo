@@ -23,6 +23,13 @@ fenêtre de réchauffement (20 ans). On en tire, point par point :
   porte la colonne d'écart (ECART…), sinon rien ;
 - avec plusieurs modèles, la MÉDIANE des modèles, comme le fait la TRACC.
 
+Le meilleur produit est la médiane déjà calculée par Météo-France :
+« Quantiles des indicateurs annuels TRACC-2023 moyennés par niveau de
+réchauffement », modèle « Q50 ». Une ligne par point, sans colonne Annee,
+des colonnes NORTX35D_yr (valeur) et ATX35D_yr (écart à la référence) —
+écarts compris pour les jours de chaleur, que l'extraction d'un modèle seul
+ne donnait pas. Quand ce fichier est fourni, il fait foi seul.
+
 Seuls les points à moins de RAYON_KM de Paris sont gardés : le site ne sert
 que des biens à moins de 350 km, et un bien prend la maille la plus proche
 à 10 km au plus.
@@ -44,16 +51,25 @@ SORTIE = RACINE / "data" / "climat_2050.json"
 PARIS = (48.8530, 2.3499)
 RAYON_KM = 365
 
-# Code de app/climat.py -> colonne DRIAS (valeur absolue).
+# Code de app/climat.py -> (colonnes de la valeur, colonnes de l'écart à la
+# référence, écart relatif ?). Deux écritures selon le produit DRIAS : un
+# modèle seul (« TX35D_yr », « ECARTTX35D_yr ») ou la distribution des 17
+# modèles (« NORTX35D_yr », « ATX35D_yr »), relevées sur deux extractions
+# réelles du 12 novembre 2026.
 COLONNES = {
-    "tmm": "TMm_yr",
-    "txm_jja": "TXm_seas_JJA",
-    "tx35d": "TX35D_yr",
-    "tx30d": "TX30D_yr",
-    "tr": "TR_yr",
-    "swi04d": "SWI04_yr",
-    "ifm40d": "IFM40_yr",
+    "tmm": (("TMm_yr", "NORTMm_yr"), ("ECARTTMm_yr", "ATMm_yr"), False),
+    "txm_jja": (("TXm_seas_JJA", "NORTXm_seas_JJA"), ("ECARTTXm_seas_JJA", "ATXm_seas_JJA"), False),
+    "tx35d": (("TX35D_yr", "NORTX35D_yr"), ("ECARTTX35D_yr", "ATX35D_yr"), False),
+    "tx30d": (("TX30D_yr", "NORTX30D_yr"), ("ECARTTX30D_yr", "ATX30D_yr"), False),
+    "tr": (("TR_yr", "NORTR_yr"), ("ECARTTR_yr", "ATR_yr"), False),
+    "rr_jja": (("RR_seas_JJA", "NORRR_seas_JJA"), ("ECARTRELRR_seas_JJA", "ARRR_seas_JJA"), True),
+    "swi04d": (("SWI04_yr", "NORSWI04_yr"), ("ECARTSWI04_yr", "ASWI04_yr"), False),
+    "ifm40d": (("IFM40_yr", "NORIFM40_yr"), ("ECARTIFM40_yr", "AIFM40_yr"), False),
 }
+# La médiane des 17 modèles, calculée par Météo-France (« Quantiles des
+# indicateurs annuels TRACC-2023 », modèle « Q50 »). Quand on la donne, elle
+# fait foi seule : la mêler à des modèles isolés fausserait la médiane.
+MEDIANE = "Q50"
 NIVEAU_2050 = "GWL20"
 
 
@@ -115,6 +131,7 @@ def _arrondi(valeur):
 
 def convertir(chemins: list[Path], centre=PARIS, rayon_km: float = RAYON_KM) -> dict:
     fichiers = [lire(Path(c)) for c in chemins]
+    fichiers = [f for f in fichiers if f["modele"] == MEDIANE] or fichiers
     modeles = sorted({f["modele"] for f in fichiers})
     positions = {}
     for f in fichiers:
@@ -127,17 +144,23 @@ def convertir(chemins: list[Path], centre=PARIS, rayon_km: float = RAYON_KM) -> 
         refs = {n: v for n, v in f["niveaux"].items() if not n.upper().startswith("GWL")}
         refs = next(iter(refs.values()), {})
         for point, colonnes in futurs.items():
-            for code, colonne in COLONNES.items():
-                if colonne not in colonnes:
+            for code, (absolues, ecarts, relatif) in COLONNES.items():
+                valeur = next((colonnes[c] for c in absolues if c in colonnes), None)
+                if valeur is None:
                     continue
-                horizon[point][code].append(colonnes[colonne])
-                ecart = colonnes.get("ECART" + colonne)
-                if ecart is not None:
-                    reference[point][code].append(colonnes[colonne] - ecart)
+                horizon[point][code].append(valeur)
+                ecart = next((colonnes[c] for c in ecarts if c in colonnes), None)
+                if ecart is None:
+                    continue
+                if not relatif:
+                    reference[point][code].append(valeur - ecart)
+                elif ecart > -1:
+                    reference[point][code].append(valeur / (1 + ecart))
         for point, colonnes in refs.items():
-            for code, colonne in COLONNES.items():
-                if colonne in colonnes:
-                    reference[point][code].append(colonnes[colonne])
+            for code, (absolues, _, _) in COLONNES.items():
+                valeur = next((colonnes[c] for c in absolues if c in colonnes), None)
+                if valeur is not None:
+                    reference[point][code].append(valeur)
     points = []
     for point in sorted(horizon, key=lambda p: positions.get(p, (0, 0))):
         if point not in positions or _km(centre, positions[point]) > rayon_km:
@@ -154,7 +177,10 @@ def convertir(chemins: list[Path], centre=PARIS, rayon_km: float = RAYON_KM) -> 
             lat, lon = positions[point]
             points.append([round(lat, 4), round(lon, 4), valeurs])
     noms = ", ".join(m.replace("_", " / ") for m in modeles)
-    if len(modeles) == 1:
+    if modeles == [MEDIANE]:
+        avertissement = ("Médiane des 17 modèles climatiques de la trajectoire, calculée par "
+                         "Météo-France : une moitié des modèles voit plus, l'autre moins.")
+    elif len(modeles) == 1:
         avertissement = (f"D'après un seul modèle climatique ({noms}) parmi les 17 de la "
                          "trajectoire : un ordre de grandeur, pas une prévision.")
     else:
