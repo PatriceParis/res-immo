@@ -262,6 +262,67 @@ def _index(annonces: list[dict]) -> dict:
     return {a["id"]: a for a in annonces or [] if a.get("id")}
 
 
+# La position d'un bien et ce qui en découle. Elle vient de la Base Adresse
+# Nationale, sur la commune et le code postal — jamais de l'adresse, que les
+# annonces ne donnent pas.
+CHAMPS_DE_POSITION = ("lat", "lon", "altitude", "densite_hab_km2")
+
+
+def _cle_commune(bien: dict) -> tuple[str, str] | None:
+    """(commune normalisée, code postal), ou None s'il manque l'un des deux."""
+    import re
+    import unicodedata
+    commune = unicodedata.normalize("NFD", bien.get("commune") or "")
+    commune = re.sub(r"[^a-z0-9]+", "-",
+                     commune.encode("ascii", "ignore").decode().lower()).strip("-")
+    code = str(bien.get("code_postal") or "").strip()
+    return (commune, code) if commune and code else None
+
+
+def completer_positions(biens: list[dict]) -> int:
+    """Donne à un bien sans position celle de sa commune, quand on la connaît.
+
+    Le 11 novembre 2026, la Base Adresse Nationale a mal répondu toute la
+    journée : 258 des 430 biens de mandataires revisités et 109 des 468
+    biens d'agences sont repartis sans coordonnées, donc sans carte, sans
+    distance ni climat. La position étant celle de la COMMUNE, un autre bien
+    de la même commune, au même code postal, la porte déjà : mesuré ce
+    jour-là, dans les 1 575 communes d'au moins trois biens, tous partagent
+    le même point (part médiane du point majoritaire : 100 %). On prend donc
+    le point le plus fréquent de la commune, avec l'altitude et la densité
+    qui l'accompagnent. Rien n'est inventé : une commune que personne n'a
+    encore située reste sans position, et une position connue n'est jamais
+    remplacée. Renvoie le nombre de biens complétés.
+    """
+    from collections import Counter
+    points: dict[tuple, Counter] = {}
+    details: dict[tuple, dict] = {}
+    for bien in biens:
+        cle = _cle_commune(bien)
+        if cle is None or bien.get("lat") is None or bien.get("lon") is None:
+            continue
+        point = (round(bien["lat"], 5), round(bien["lon"], 5))
+        points.setdefault(cle, Counter())[point] += 1
+        connu = details.setdefault((cle, point), {})
+        for champ in ("altitude", "densite_hab_km2"):
+            if connu.get(champ) is None and bien.get(champ) is not None:
+                connu[champ] = bien[champ]
+    completes = 0
+    for bien in biens:
+        if bien.get("lat") is not None:
+            continue
+        cle = _cle_commune(bien)
+        if cle not in points:
+            continue
+        point = points[cle].most_common(1)[0][0]
+        bien["lat"], bien["lon"] = point
+        for champ, valeur in details.get((cle, point), {}).items():
+            if bien.get(champ) is None:
+                bien[champ] = valeur
+        completes += 1
+    return completes
+
+
 def fusionner(precedentes: list[dict], nouvelles: list[dict],
               sites_visites: set | None = None, aujourd_hui: str = "") -> list[dict]:
     """Reporte l'historique des annonces précédentes sur la collecte du jour.
@@ -304,6 +365,18 @@ def fusionner(precedentes: list[dict], nouvelles: list[dict],
             if (anciens_risques.get("source") == "georisques"
                     and nouveaux_risques.get("source") != "georisques"):
                 enrichi["risques"] = {**nouveaux_risques, **anciens_risques}
+            # La position aussi est un acquis — tant que le bien n'a pas changé
+            # de commune ni de code postal. Le 11 novembre 2026, la Base
+            # Adresse Nationale a mal répondu, et chaque bien revisité ce
+            # jour-là a remplacé sa position connue par aucune : 265 biens de
+            # mandataires servis sans carte le lendemain, dont la maison de
+            # Quemigny-sur-Seine, située depuis le 17 octobre. Une position
+            # fraîche, elle, l'emporte toujours.
+            if (bien.get("lat") is None and ancien.get("lat") is not None
+                    and _cle_commune(bien) == _cle_commune(ancien)):
+                for champ in CHAMPS_DE_POSITION:
+                    if enrichi.get(champ) is None and ancien.get(champ) is not None:
+                        enrichi[champ] = ancien[champ]
         gardees.append(enrichi)
 
     vus = {b.get("id") for b in nouvelles}

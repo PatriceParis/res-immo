@@ -209,6 +209,12 @@ def main() -> None:
     visites = historique.cibles_qui_font_autorite(biens)
     fusionnees = historique.fusionner(precedentes, biens, visites,
                                       date.today().isoformat())
+    # Un bien resté sans position — la Base Adresse Nationale n'a pas répondu
+    # — prend celle de sa commune quand un autre bien de la même commune la
+    # porte (voir historique.completer_positions).
+    situes = historique.completer_positions(fusionnees)
+    if situes:
+        print(f"  {situes} bien(s) situé(s) par la position connue de leur commune")
     # Les annonces dont le LIEN est mort — vérifié deux fois, à deux passages
     # distincts (scripts/verifier_liens.py) — sortent du catalogue, quelle que
     # soit la règle de sortie : sur les gros départements tronqués à chaque
