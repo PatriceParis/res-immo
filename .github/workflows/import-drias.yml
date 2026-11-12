@@ -1,0 +1,65 @@
+name: Import — fichier DRIAS
+
+# Le portail DRIAS livre ses extractions sous forme d'un lien de
+# téléchargement (www.drias-climat.fr/donnees/...). La session de
+# développement n'atteint pas ce site ; le runner, si. Ce workflow télécharge
+# le fichier dont on lui donne le lien, le range dans data/drias/ et
+# rapporte son en-tête en annotations, pour qu'on écrive la conversion sur
+# le vrai format plutôt que sur une supposition.
+#
+# Il n'écrit que dans data/drias/ et ne touche pas aux annonces.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Lien de téléchargement DRIAS (www.drias-climat.fr/donnees/...)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: donnees-refuge
+  cancel-in-progress: false
+
+jobs:
+  importer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Télécharger et ranger le fichier
+        env:
+          URL: ${{ github.event.inputs.url }}
+        run: |
+          case "$URL" in
+            https://www.drias-climat.fr/donnees/*) ;;
+            *) echo "::error::Lien refusé : seuls les liens www.drias-climat.fr/donnees/ sont acceptés."; exit 1 ;;
+          esac
+          mkdir -p data/drias
+          NOM=$(basename "$URL")
+          curl -fsSL --retry 3 --max-time 900 -A "RefugeImmoBot (import DRIAS)" -o "data/drias/$NOM" "$URL"
+          TAILLE=$(stat -c %s "data/drias/$NOM")
+          LIGNES=$(wc -l < "data/drias/$NOM")
+          echo "::notice title=DRIAS fichier::$NOM — $TAILLE octets, $LIGNES lignes"
+          # L'en-tête (lignes « # ») et les premières lignes de données.
+          ENTETE=$(grep -m 80 '^#' "data/drias/$NOM" | cut -c1-200 | sed ':a;N;$!ba;s/\n/%0A/g' || true)
+          echo "::notice title=DRIAS en-tête::$ENTETE"
+          DONNEES=$(grep -v '^#' "data/drias/$NOM" | head -8 | cut -c1-300 | sed ':a;N;$!ba;s/\n/%0A/g' || true)
+          echo "::notice title=DRIAS données::$DONNEES"
+          # Un fichier de plus de 90 Mo ne passe pas sur GitHub : on le garde
+          # compressé.
+          if [ "$TAILLE" -gt 90000000 ]; then gzip -9 "data/drias/$NOM"; fi
+      - name: Enregistrer dans le dépôt
+        run: |
+          git config user.name "refuge-immo-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/drias/
+          git commit -m "Import DRIAS : $(ls data/drias | tr '\n' ' ')" || { echo "Aucun changement."; exit 0; }
+          for essai in 1 2 3 4; do
+            if git push; then break; fi
+            git pull --rebase origin main
+          done
