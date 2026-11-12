@@ -22,7 +22,7 @@ from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import alertes, alertes_db, courriels, db, pages, redaction, regions, seo
+from . import alertes, alertes_db, climat, courriels, db, pages, redaction, regions, seo
 from .chargement import charger_liste
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -111,7 +111,10 @@ def detail_annonce(annonce_id: str):
         conn.close()
     if row is None:
         raise HTTPException(status_code=404, detail="Annonce introuvable")
-    return db._row_vers_dict(row)
+    bien = db._row_vers_dict(row)
+    # Projections DRIAS vers 2050, s'il y en a pour cette maille (app/climat.py).
+    bien["climat_2050"] = climat.au_point(bien.get("lat"), bien.get("lon"))
+    return bien
 
 
 @app.get("/api/meta")

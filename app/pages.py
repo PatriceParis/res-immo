@@ -22,7 +22,7 @@ from __future__ import annotations
 import html
 import json
 
-from . import redaction, seo
+from . import climat, redaction, seo
 
 _ENTETE_STYLE = """
 :root { color-scheme: light }
@@ -247,6 +247,17 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
         f'<li><a href="{_e(base + seo.url_annonce(v))}">{_e(seo.titre_annonce(v))}</a></li>'
         for v in voisins[:8])
 
+    # Le climat de 2050 : projections DRIAS de la maille la plus proche. La
+    # section n'existe que si les données existent — voir app/climat.py.
+    projection = climat.au_point(bien.get("lat"), bien.get("lon"))
+    bloc_climat = (
+        "<h2>Le climat de la commune vers 2050</h2>"
+        f'<ul class="climat">{"".join(f"<li>{_e(p)}</li>" for p in climat.phrases(projection))}</ul>'
+        f'<p class="note">Projections {_e(projection["source"])}, trajectoire de référence '
+        f'pour l’adaptation (TRACC) : +2,7 °C en France vers 2050. Valeurs de la maille de '
+        f'8 km la plus proche de la commune, et non de la parcelle.</p>'
+    ) if projection else ""
+
     corps = f"""
 <nav class="fil">{" › ".join(
     f'<a href="{_e(base + lien)}">{_e(nom)}</a>' if rang < len(fil) else _e(nom)
@@ -265,6 +276,8 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 <h2>Caractéristiques et analyse en bref</h2>
 <dl>{"".join(faits)}{"".join(analyse)}</dl>
 {f'<ul class="jetons">{badges}</ul>' if badges else ""}
+
+{bloc_climat}
 
 <h2>Comment visiter ce bien ?</h2>
 <p>L'annonce est publiée par <strong>{_e(bien.get("agence") or "une agence partenaire")}</strong>.
