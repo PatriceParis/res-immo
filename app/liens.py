@@ -95,6 +95,58 @@ def _domaine(url: str) -> str:
     return urlparse(url or "").netloc.lower().removeprefix("www.")
 
 
+# Le sitemap d'un réseau de mandataires, lu en entier, est la liste de ses
+# annonces en ligne. Signalé le 12 novembre 2026 : une maison IAD de Charny,
+# servie chez nous, renvoyait vers la liste de toutes les annonces IAD. Ni
+# la collecte (revue le 17 octobre, son département étant tronqué à chaque
+# passage) ni le vérificateur (9 408 liens servis jamais regardés, ~170 par
+# jour) ne l'avaient revue. Or le collecteur lit déjà ce sitemap à chaque
+# passage, en entier, pour choisir quoi visiter — il savait que la maison
+# n'y était plus, et ne s'en servait pas.
+MOTIF_SITEMAP = "absente du sitemap complet du réseau"
+# Un sitemap qui perdrait d'un coup plus d'un cinquième des annonces connues
+# du réseau est un sitemap malade, pas un réseau qui vend tout en un jour :
+# on ne note rien.
+PART_MAX_ABSENTES = 0.2
+
+
+def absentes_du_sitemap(connues, adresses, site: str, motif) -> list[str] | None:
+    """Les annonces connues de ce réseau qui ne figurent plus au sitemap.
+
+    `connues` : les URL du catalogue ; seules comptent celles du domaine du
+    réseau et de la forme de ses annonces (`motif`). `adresses` : le sitemap
+    ENTIÈREMENT lu — c'est à l'appelant de ne pas en passer un écourté. La
+    comparaison se fait sur le chemin, comme pour une redirection : http,
+    https ou une barre finale ne font pas deux annonces. None quand la part
+    d'absentes dépasse PART_MAX_ABSENTES.
+    """
+    domaine = _domaine(site)
+    presentes = {_chemin(u) for u in adresses}
+    du_reseau = [u for u in connues if _domaine(u) == domaine and motif.search(u)]
+    absentes = [u for u in du_reseau if _chemin(u) not in presentes]
+    if du_reseau and len(absentes) > PART_MAX_ABSENTES * len(du_reseau):
+        return None
+    return absentes
+
+
+def noter_sitemap(journal: dict, absentes: list[str], adresses, jour: str) -> int:
+    """Reporte au journal des liens morts ce que le sitemap a montré.
+
+    Une absence est un constat de mort comme un autre : deux, à deux jours
+    distincts, et l'annonce sort (voir `noter`). Une annonce revenue au
+    sitemap est innocentée — mais seulement des constats que le sitemap avait
+    portés : une redirection observée par le vérificateur reste à sa charge.
+    Renvoie le nombre d'annonces notées.
+    """
+    for url in absentes:
+        noter(journal, url, "mort", jour, MOTIF_SITEMAP)
+    presentes = {_chemin(u) for u in adresses}
+    for url in [u for u, c in journal.items()
+                if c.get("motif") == MOTIF_SITEMAP and _chemin(u) in presentes]:
+        journal.pop(url)
+    return len(absentes)
+
+
 def reconstate_le(annonce: dict, verifies: dict, journal: dict | None = None) -> str:
     """La dernière fois qu'on a VU ce bien en ligne, par l'un ou l'autre œil.
 

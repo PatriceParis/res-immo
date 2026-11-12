@@ -50,7 +50,7 @@ from urllib.parse import urljoin, urlparse
 RACINE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RACINE))
 
-from app import db, exclusions, historique, mandataires, robot  # noqa: E402
+from app import db, exclusions, historique, liens, mandataires, robot  # noqa: E402
 from app.chargement import DEPARTEMENTS_CIBLES, preparer_annonce  # noqa: E402
 from app.enrichissement import _altitude, _densite, _geocoder, _geocoder_cp  # noqa: E402
 from app.extraction import extraire_annonce  # noqa: E402
@@ -108,6 +108,12 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
     les départements tronqués quand ce n'est pas le cas.
     """
     a_lire, annonces, vus = list(sitemaps), [], set()
+    # Un fichier du sitemap illisible, ou coupé au plafond de lecture, et
+    # l'arbre n'est plus lu en entier — même si l'on est allé au bout. Depuis
+    # le 12 novembre 2026, ce qui manque au sitemap compte comme une annonce
+    # disparue (voir liens.absentes_du_sitemap) : un fichier sauté en silence
+    # ferait disparaître toutes ses annonces.
+    entier = True
     for _ in range(PROFONDEUR):
         suivants = []
         for sitemap in a_lire:
@@ -117,6 +123,8 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
                 continue
             vus.add(sitemap)
             donnees = lire(sitemap)
+            if not donnees or len(donnees) >= PLAFOND:
+                entier = False
             if not donnees:
                 continue
             liens = RE_LOC.findall(donnees.decode("utf-8", "replace"))
@@ -124,10 +132,10 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
             annonces += [u for u in liens if motif.search(u)]
         a_lire = suivants
         if not a_lire:
-            return annonces, True
+            return annonces, entier
     # La profondeur est épuisée alors qu'il restait des sitemaps à ouvrir :
     # on n'a pas tout vu non plus.
-    return annonces, not a_lire
+    return annonces, entier and not a_lire
 
 
 DEROULE = RACINE / "data" / "deroule_mandataires.json"
@@ -246,6 +254,30 @@ def annonces_deja_connues() -> dict:
     except (OSError, ValueError):
         return {}
     return {b["url"]: b.get("revue_le") or "" for b in biens if b.get("url")}
+
+
+JOURNAL_MORTS = RACINE / "data" / "liens_morts.json"
+
+
+def noter_absentes_du_sitemap(adresses: list[str], reseau: dict, cle: str) -> None:
+    """Les annonces du catalogue que le sitemap complet ne porte plus vont au
+    journal des liens morts — voir liens.absentes_du_sitemap. Deux constats,
+    à deux jours distincts, et l'export les retire."""
+    absentes = liens.absentes_du_sitemap(annonces_deja_connues(), adresses,
+                                         reseau["site"], reseau["motif_annonce"])
+    if absentes is None:
+        etape("absentes_du_sitemap", reseau=cle, suspect=True)
+        print("  sitemap suspect : trop d'annonces connues y manquent — rien n'est noté.")
+        return
+    try:
+        journal = json.loads(JOURNAL_MORTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        journal = {}
+    notees = liens.noter_sitemap(journal, absentes, adresses, date.today().isoformat())
+    JOURNAL_MORTS.write_text(json.dumps(journal, ensure_ascii=False, indent=1, sort_keys=True)
+                             + "\n", encoding="utf-8")
+    etape("absentes_du_sitemap", reseau=cle, notees=notees)
+    print(f"  {notees} annonce(s) du catalogue absente(s) du sitemap — notées au journal")
 
 
 def derniere_visite() -> dict:
@@ -384,6 +416,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
           complet=sitemap_complet)
     print(f"  {len(adresses)} annonce(s) au sitemap"
           f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
+    if sitemap_complet:
+        noter_absentes_du_sitemap(adresses, reseau, cle)
     a_visiter = mandataires.annonces_a_visiter(adresses, reseau, index, DEPARTEMENTS_CIBLES,
                                                ecrases)
     groupes = mandataires.par_departement(a_visiter)
