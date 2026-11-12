@@ -1,0 +1,91 @@
+name: Sonde — projections DRIAS
+
+# Le 12 novembre 2026, on a demandé d'afficher les projections climatiques
+# 2050 (chaleur, sécheresse) de chaque commune. Le portail DRIAS ne délivre ses
+# indicateurs qu'à un compte, mais le CNRM publie les données DRIAS sur un
+# serveur ouvert, climatedata.umr-cnrm.fr. La session de développement n'y a
+# pas accès : cette sonde dresse, depuis le runner, la carte de ce qui s'y
+# trouve — répertoires, noms de fichiers d'indicateurs, tailles.
+#
+# Elle n'écrit rien dans le dépôt. Elle rapporte en annotations (« notice »),
+# lisibles par l'API des check-runs, faute de pouvoir lire le journal.
+
+on:
+  workflow_dispatch:
+    inputs:
+      racine:
+        description: "Répertoire à explorer"
+        required: false
+        default: "https://climatedata.umr-cnrm.fr/public/dcsc/projects/DRIAS/"
+      profondeur:
+        description: "Profondeur d'exploration"
+        required: false
+        default: "3"
+
+jobs:
+  sonder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - name: Explorer le serveur
+        env:
+          RACINE: ${{ github.event.inputs.racine }}
+          PROFONDEUR: ${{ github.event.inputs.profondeur }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python - <<'PY'
+          import os, re, time
+          from urllib.parse import urljoin
+          import requests
+
+          racine = os.environ["RACINE"]
+          profondeur = int(os.environ.get("PROFONDEUR") or 3)
+          session = requests.Session()
+          session.headers["User-Agent"] = "RefugeImmoBot (sonde DRIAS)"
+          lignes, vus, appels = [], set(), 0
+
+          def lister(url):
+              global appels
+              appels += 1
+              r = session.get(url, timeout=30)
+              liens = re.findall(r'href="([^"?#]+)"', r.text)
+              # Les index Apache donnent taille et date à droite du lien.
+              tailles = dict(re.findall(r'href="([^"?#]+)">[^<]*</a>\s+\S+\s+\S+\s+(\S+)', r.text))
+              return r.status_code, [l for l in liens if not l.startswith(("/", "..", "http"))], tailles
+
+          def explorer(url, niveau):
+              if url in vus or appels > 250:
+                  return
+              vus.add(url)
+              try:
+                  statut, liens, tailles = lister(url)
+              except Exception as e:
+                  lignes.append(f"{url} : {type(e).__name__}")
+                  return
+              dossiers = [l for l in liens if l.endswith("/")]
+              fichiers = [l for l in liens if not l.endswith("/")]
+              chemin = url.replace(racine, "") or "/"
+              apercu = ", ".join(f"{f} ({tailles.get(f, '?')})" for f in fichiers[:6])
+              lignes.append(f"[{statut}] {chemin} : {len(dossiers)} dossiers {dossiers[:25]} ; "
+                            f"{len(fichiers)} fichiers {apercu}")
+              if niveau < profondeur:
+                  for d in dossiers:
+                      explorer(urljoin(url, d), niveau + 1)
+              time.sleep(0.2)
+
+          explorer(racine, 0)
+          print("\n".join(lignes))
+          # Une annotation par paquet de lignes : l'API des check-runs les rend.
+          paquet = ""
+          for ligne in lignes:
+              if len(paquet) + len(ligne) > 3500:
+                  print("::notice title=DRIAS::" + paquet.replace("\n", "%0A"))
+                  paquet = ""
+              paquet += ligne[:900] + "\n"
+          if paquet:
+              print("::notice title=DRIAS::" + paquet.replace("\n", "%0A"))
+          PY
