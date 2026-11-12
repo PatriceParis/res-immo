@@ -160,6 +160,37 @@ def test_une_page_de_rubrique_n_est_pas_une_annonce():
         assert qualite.motif_url_hors_cible(url) is None, url
 
 
+def test_une_page_d_archive_wordpress_n_est_pas_une_annonce():
+    """Mesuré le 12 novembre 2026 : dix-sept pages d'archive servies comme
+    des maisons — « Chaillac Archives - Immobilier Center » à 75 000 €,
+    « Volets roulants Archives - Stéphane Picart Immobilier », « Archives des
+    Liverdun - LOGIMMO CONSEIL ». Le thème WordPress range les biens par
+    commune, type, statut ou équipement ; chaque rangement a sa page, qui
+    liste des biens et n'en est aucun."""
+    archives = [
+        "https://immobilier-center.fr/property-city/chaillac/",
+        "https://immobilier-center.fr/property-type/maison/",
+        "https://immobilier-center.fr/property-status/a-vendre/",
+        "https://www.picartimmobilier.fr/property-feature/volets-roulants/",
+        "https://www.logimmo-conseil.fr/property-state/grand-est/",
+        "https://www.logia-immo.net/type-de-bien/maison/",
+        "https://www.bbi.fr/type-de-bien-en-vente/maison-bressane/",
+        "https://immobilier-center.fr/property-city/chaillac/page/2/",
+    ]
+    for url in archives:
+        assert qualite.motif_url_hors_cible(url) == "rubrique", url
+        assert qualite.motif_de_rejet({"titre": "Maison de famille avec jardin", "url": url,
+                                       "type_bien": "maison", "surface_m2": 120,
+                                       "prix": 290000}) == "rubrique", url
+        assert not collecteur._est_page_de_bien(url), url
+    # Le bien lui-même, chez les mêmes agences, reste une annonce.
+    for url in ("https://immobilier-center.fr/property/maison-de-bourg-chaillac/",
+                "https://www.picartimmobilier.fr/property/maison-5-pieces-custines/",
+                "https://www.bbi.fr/biens/maison-bressane-louhans-71500/",
+                "https://www.agence.fr/vente/maison/property-type-ancienne-12/"):
+        assert qualite.motif_url_hors_cible(url) is None, url
+
+
 def test_le_type_en_tete_du_libelle_condamne_l_adresse():
     """Mesuré le 13 octobre 2026 : cent vingt et un biens servis dont le libellé
     d'adresse commence par un type hors cible — « appartement-t2-2-pieces-

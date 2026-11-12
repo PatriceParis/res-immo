@@ -226,6 +226,20 @@ _URL_RUBRIQUE = re.compile(
     # annonce : zéro des 11 402 adresses du fichier n'a cette forme.
     r"|(?:ventes?|achat|acheter|a-vendre)-(?:" + _TYPES_DE_RUBRIQUE + r")/[a-z-]+"
     r")/?$", re.IGNORECASE)
+# La page d'ARCHIVE d'un site WordPress prise pour une annonce : le thème
+# immobilier range ses biens par type, commune, statut ou équipement, et
+# publie pour chaque rangement une page qui les liste — « /property-city/
+# chaillac/ », « /property-feature/volets-roulants/ », « /type-de-bien/
+# maison/ ». Titrée « Chaillac Archives - Immobilier Center » ou « Archives
+# des Liverdun », elle prête à la commune entière le prix de son premier bien.
+# Mesuré le 12 novembre 2026 : dix-sept pages servies comme des maisons chez
+# cinq agences (Immobilier Center, Logimmo Conseil, Logia, Picart, BBI) ;
+# vingt-cinq adresses de cette forme au fichier, toutes des listes, aucune
+# annonce. Le dernier segment est le nom du rangement, rien après.
+_URL_TAXONOMIE = re.compile(
+    r"^/(?:[a-z]{2}/)?(?:property-(?:types?|city|cities|status|features?|labels?|areas?"
+    r"|states?|categor(?:y|ies)|tags?)|type-de-biens?(?:-[a-z-]+)?)/[^/]+/?(?:page/\d+/?)?$",
+    re.IGNORECASE)
 # Le TYPE en tête du libellé : « appartement-t3-3-pieces-deauville-14800,VA4416 »,
 # « immeuble-de-rapport », « terrain-a-batir-vincelles », « vente-appartement-
 # lille-… », « 6537-appartement ». Le gabarit forge le libellé à partir du type
@@ -265,7 +279,7 @@ def motif_url_hors_cible(url: str | None) -> str | None:
         return "url_type_exclu"
     if _URL_LANGUE.match(chemin):
         return "langue"
-    if _URL_RUBRIQUE.match(chemin):
+    if _URL_RUBRIQUE.match(chemin) or _URL_TAXONOMIE.match(chemin):
         return "rubrique"
     return None
 
