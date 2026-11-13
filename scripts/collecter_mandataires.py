@@ -89,8 +89,8 @@ def sitemaps_declares(site: str) -> list[str]:
     return re.findall(r"(?im)^\s*Sitemap:\s*(\S+)", donnees.decode("utf-8", "replace"))
 
 
-def adresses_du_sitemap(sitemaps: list[str], motif,
-                        fin_prevue: float | None = None) -> tuple[list[str], bool]:
+def adresses_du_sitemap(sitemaps: list[str], motif, fin_prevue: float | None = None,
+                        pourquoi: dict | None = None) -> tuple[list[str], bool]:
     """(adresses trouvées, arbre entièrement parcouru).
 
     Cette lecture n'était bornée par rien. Un réseau publie son catalogue en
@@ -114,17 +114,28 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
     # disparue (voir liens.absentes_du_sitemap) : un fichier sauté en silence
     # ferait disparaître toutes ses annonces.
     entier = True
+    # Ce qui a rendu la lecture incomplète, pour le déroulé. Le sitemap IAD
+    # n'a été lu en entier à AUCUN passage du 9 au 12 novembre 2026, et rien
+    # ne disait pourquoi : fichier illisible, plafond, échéance ou profondeur.
+    # Tant qu'il ne l'est pas, ses annonces disparues restent servies.
+    pourquoi = pourquoi if pourquoi is not None else {}
+    pourquoi.update(fichiers=0, illisibles=[], au_plafond=[], echeance=False, restants=0)
     for _ in range(PROFONDEUR):
         suivants = []
         for sitemap in a_lire:
             if fin_prevue is not None and time.monotonic() > fin_prevue:
+                pourquoi["echeance"] = True
                 return annonces, False
             if sitemap in vus:
                 continue
             vus.add(sitemap)
             donnees = lire(sitemap)
+            pourquoi["fichiers"] += 1
             if not donnees or len(donnees) >= PLAFOND:
                 entier = False
+                cle = "illisibles" if not donnees else "au_plafond"
+                if len(pourquoi[cle]) < 5:
+                    pourquoi[cle].append(sitemap if not donnees else f"{sitemap} ({len(donnees)} o)")
             if not donnees:
                 continue
             liens = RE_LOC.findall(donnees.decode("utf-8", "replace"))
@@ -135,6 +146,7 @@ def adresses_du_sitemap(sitemaps: list[str], motif,
             return annonces, entier
     # La profondeur est épuisée alors qu'il restait des sitemaps à ouvrir :
     # on n'a pas tout vu non plus.
+    pourquoi["restants"] = len(a_lire)
     return annonces, entier and not a_lire
 
 
@@ -410,10 +422,12 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     # réseau n'ouvrait pas une annonce — c'est ce qui s'est produit.
     fin_sitemap = min(time.monotonic() + (fin_prevue - time.monotonic()) / 2,
                       fin_prevue)
+    pourquoi: dict = {}
     adresses, sitemap_complet = adresses_du_sitemap(
-        sitemaps, reseau["motif_annonce"], fin_sitemap)
+        sitemaps, reseau["motif_annonce"], fin_sitemap, pourquoi)
     etape("adresses_du_sitemap", reseau=cle, n=len(adresses),
-          complet=sitemap_complet)
+          complet=sitemap_complet,
+          **({} if sitemap_complet else {"pourquoi": pourquoi}))
     print(f"  {len(adresses)} annonce(s) au sitemap"
           f"{'' if sitemap_complet else ' — LECTURE ÉCOURTÉE'}")
     if sitemap_complet:

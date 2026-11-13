@@ -24,6 +24,7 @@ retirer. Et un lien revenu vivant efface tout — le doute profite à l'annonce.
 
 from __future__ import annotations
 
+import re
 from urllib.parse import urlparse
 
 from .qualite import est_vendu
@@ -108,6 +109,24 @@ MOTIF_SITEMAP = "absente du sitemap complet du réseau"
 # du réseau est un sitemap malade, pas un réseau qui vend tout en un jour :
 # on ne note rien.
 PART_MAX_ABSENTES = 0.2
+# Une annonce de réseau se reconnaît à son NUMÉRO, pas à son adresse. Safti
+# range la même maison sous la commune de son choix, et en change :
+# « …/belhomert-guehouville-28240/1559934 » devient « …/la-loupe-28240/
+# 1559934 ». Comparer les chemins faisait de chaque déménagement une
+# disparition. Mesuré le 13 novembre 2026 au premier passage de la règle :
+# 834 annonces Safti notées absentes, dont 133 figuraient déjà au fichier sous
+# une autre commune avec le même numéro ; sur un échantillon de quatre
+# absentes, deux étaient en ligne. Le second constat les aurait retirées.
+_NUMERO_D_ANNONCE = re.compile(r"/(r?\d{5,})/?$", re.IGNORECASE)
+
+
+def _identite(url: str) -> str:
+    """Le numéro d'annonce en fin d'adresse quand il y en a un, le chemin
+    sinon : « safti.fr#1559934 », « iadfrance.fr#r2124994 »."""
+    numero = _NUMERO_D_ANNONCE.search(urlparse(url or "").path)
+    if numero:
+        return f"{_domaine(url)}#{numero.group(1).lower()}"
+    return _chemin(url)
 
 
 def absentes_du_sitemap(connues, adresses, site: str, motif) -> list[str] | None:
@@ -117,13 +136,14 @@ def absentes_du_sitemap(connues, adresses, site: str, motif) -> list[str] | None
     réseau et de la forme de ses annonces (`motif`). `adresses` : le sitemap
     ENTIÈREMENT lu — c'est à l'appelant de ne pas en passer un écourté. La
     comparaison se fait sur le chemin, comme pour une redirection : http,
-    https ou une barre finale ne font pas deux annonces. None quand la part
-    d'absentes dépasse PART_MAX_ABSENTES.
+    https ou une barre finale ne font pas deux annonces — et, quand l'adresse
+    finit par un numéro d'annonce, sur ce numéro (voir `_identite`). None
+    quand la part d'absentes dépasse PART_MAX_ABSENTES.
     """
     domaine = _domaine(site)
-    presentes = {_chemin(u) for u in adresses}
+    presentes = {_identite(u) for u in adresses}
     du_reseau = [u for u in connues if _domaine(u) == domaine and motif.search(u)]
-    absentes = [u for u in du_reseau if _chemin(u) not in presentes]
+    absentes = [u for u in du_reseau if _identite(u) not in presentes]
     if du_reseau and len(absentes) > PART_MAX_ABSENTES * len(du_reseau):
         return None
     return absentes
@@ -140,9 +160,9 @@ def noter_sitemap(journal: dict, absentes: list[str], adresses, jour: str) -> in
     """
     for url in absentes:
         noter(journal, url, "mort", jour, MOTIF_SITEMAP)
-    presentes = {_chemin(u) for u in adresses}
+    presentes = {_identite(u) for u in adresses}
     for url in [u for u, c in journal.items()
-                if c.get("motif") == MOTIF_SITEMAP and _chemin(u) in presentes]:
+                if c.get("motif") == MOTIF_SITEMAP and _identite(u) in presentes]:
         journal.pop(url)
     return len(absentes)
 

@@ -41,6 +41,29 @@ def test_l_annonce_disparue_du_sitemap_est_reperee():
     assert liens.absentes_du_sitemap(connues, sitemap, SITE, MOTIF) == [CHARNY]
 
 
+def test_une_annonce_qui_change_de_commune_n_a_pas_disparu():
+    """Safti range la même maison sous la commune de son choix, et en change.
+    Le 13 novembre 2026, 834 annonces Safti avaient été notées absentes ; 133
+    figuraient au fichier sous une autre commune avec le même numéro, et deux
+    absentes sur quatre tirées au hasard étaient en ligne."""
+    safti = "https://www.safti.fr"
+    motif = re.compile(r"/annonces/achat/", re.IGNORECASE)
+    vieille = f"{safti}/annonces/achat/maison/belhomert-guehouville-28240/1559934"
+    nouvelle = f"{safti}/annonces/achat/maison/la-loupe-28240/1559934"
+    vendue = f"{safti}/annonces/achat/maison/ciry-le-noble-71420/1596880"
+    autres = [f"{safti}/annonces/achat/maison/autun-71400/{n}" for n in range(1700000, 1700010)]
+    assert liens.absentes_du_sitemap([vieille, vendue, *autres], [nouvelle, *autres],
+                                     safti, motif) == [vendue]
+    # Chez IAD, le numéro porte un « r » : « …-charny-90m2/r2124994 ».
+    ailleurs = CHARNY.replace("charny-90m2", "charny-orvanne-90m2")
+    assert liens.absentes_du_sitemap([CHARNY, *AUTRES], [ailleurs, *AUTRES], SITE, MOTIF) == []
+    # Une absence notée hier est levée quand le numéro reparaît, sous une autre adresse.
+    journal = {}
+    liens.noter_sitemap(journal, [vieille], autres, "2026-11-12")
+    liens.noter_sitemap(journal, [], [nouvelle, *autres], "2026-11-13")
+    assert vieille not in journal
+
+
 def test_un_sitemap_qui_perd_un_cinquieme_du_catalogue_est_suspect():
     assert liens.absentes_du_sitemap([CHARNY, *AUTRES], AUTRES[:7], SITE, MOTIF) is None
 
@@ -80,6 +103,27 @@ def test_un_fichier_de_sitemap_illisible_rend_la_lecture_incomplete(monkeypatch)
     pages["b.xml"] = f"<urlset><url><loc>{CHARNY}</loc></url></urlset>".encode()
     adresses, complet = collecteur.adresses_du_sitemap(["index.xml"], MOTIF)
     assert complet is True and sorted(adresses) == sorted([AUTRES[0], CHARNY])
+
+
+def test_une_lecture_incomplete_dit_pourquoi(monkeypatch):
+    """Le sitemap IAD n'a été lu en entier à aucun passage du 9 au 12 novembre
+    2026, et le déroulé ne disait pas pourquoi. Tant qu'il ne l'est pas, ses
+    annonces disparues — Charny — restent servies."""
+    pages = {
+        "index.xml": b"<sitemapindex><sitemap><loc>a.xml</loc></sitemap>"
+                     b"<sitemap><loc>b.xml</loc></sitemap></sitemapindex>",
+        "a.xml": f"<urlset><url><loc>{AUTRES[0]}</loc></url></urlset>".encode(),
+    }
+    monkeypatch.setattr(collecteur, "lire", lambda url: pages.get(url, b""))
+    pourquoi = {}
+    _, complet = collecteur.adresses_du_sitemap(["index.xml"], MOTIF, None, pourquoi)
+    assert complet is False
+    assert pourquoi["illisibles"] == ["b.xml"] and pourquoi["fichiers"] == 3
+    monkeypatch.setattr(collecteur, "PLAFOND", 60)
+    pages["b.xml"] = f"<urlset><url><loc>{CHARNY}</loc></url></urlset>".encode()
+    _, complet = collecteur.adresses_du_sitemap(["index.xml"], MOTIF, None, pourquoi)
+    assert complet is False and pourquoi["illisibles"] == []
+    assert [p.split(" ")[0] for p in pourquoi["au_plafond"]] == ["index.xml", "a.xml", "b.xml"]
 
 
 def test_le_collecteur_ecrit_le_journal(tmp_path, monkeypatch):
