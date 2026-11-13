@@ -1455,6 +1455,10 @@
   "jour": "2026-10-15",
   "motif": "vendu"
  },
+ "https://ncimmo71.fr/biens/maison-le-breuil-185-00000-e-ref-124/": {
+  "jour": "2026-11-13",
+  "motif": "vendu"
+ },
  "https://ncimmo71.fr/biens/maison-montchanin-175-000-euros-ref-119/": {
   "jour": "2026-10-15",
   "motif": "vendu"
@@ -15387,6 +15391,10 @@
   "jour": "2026-10-17",
   "motif": "titre_hors_cible:biens a vendre"
  },
+ "https://www.marcfoujols.com/propriete/champ-de-mars-dernier-etage-balcon-vue-tour-eiffel/": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:etage"
+ },
  "https://www.marcfoujols.com/propriete/champs-elysees-appartement-climatise-de-125m%c2%b2/": {
   "jour": "2026-11-06",
   "motif": "titre_hors_cible:appartement"
@@ -15399,9 +15407,17 @@
   "jour": "2026-10-20",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.marcfoujols.com/propriete/paris-16eme-muette-appartement-a-vendre-215-m%c2%b2-vue-degagee-2-780-000-e/": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.marcfoujols.com/propriete/paris-1er-rivoli-les-halles-appartement-traversant-de-100-m%c2%b2-avec-balcon/": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.marcfoujols.com/propriete/paris-vi-saint-germain-des-pres-deux-trois-pieces-en-etage-eleve/": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:etage"
  },
  "https://www.marcfoujols.com/propriete/paris-viii-faubourg-saint-honore-appartement-dangle-de-115-m%c2%b2-avec-sa-terrasse-jardin-de-19-m%c2%b2/": {
   "jour": "2026-10-17",
@@ -15451,6 +15467,10 @@
   "jour": "2026-10-17",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.marcfoujols.com/propriete/plateau-de-bureaux-neuf-livre-aux-portes-de-monaco/": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:bureaux"
+ },
  "https://www.marcfoujols.com/propriete/senlis-appartement-avec-garage/": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
@@ -15487,6 +15507,10 @@
   "jour": "2026-10-17",
   "motif": "vendu"
  },
+ "https://www.michaelzingraf.com/fr/vente/MZICA6399-cannes-croisette-appartement-dexception-avec-vue-mer-panoramique": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.michaelzingraf.com/fr/vente/MZICA7460-exclusivite-cannes-croix-des-gardes-appartement-5-pieces-terrasses-et-jardin": {
   "jour": "2026-10-23",
   "motif": "titre_hors_cible:appartement"
@@ -15503,12 +15527,60 @@
   "jour": "2026-11-06",
   "motif": "vendu"
  },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4730-appartement-de-grand-standing-avec-vue-sur-la-mer": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4751-superbe-4-pieces-vue-mer-panoramique-dans-residence-de-prestige": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.michaelzingraf.com/fr/vente/MZICC4843-opportunite-exceptionnelle-villa-toit-proche-de-lhypercentre-de-cannes": {
   "jour": "2026-10-20",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.michaelzingraf.com/fr/vente/MZICC4845-appartement-dexception-dans-residence-de-standing": {
   "jour": "2026-10-20",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4871-quartier-montrose-appartement-de-3-pieces-avec-jardin-de-160m2": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4873-le-cannet-europe-des-volumes-exceptionnels-pour-cet-appartement": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4874-magnifique-appartement-contemporain-a-la-vue-mer-feerique": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4875-superbe-appartement-2-pieces-au-coeur-de-la-californie": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4876-vaste-studio-entierement-renove-au-sein-dune-residence-de-grand-standing": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4877-entre-cannes-et-golfe-juan-dernier-etage-avec-vue-mer-panoramique": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4879-quartier-montfleury-ideal-pied-a-terre-et-investissement": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4885-cannes-montfleury-a-pied-du-centre-de-cannes": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4887-exclusivite-charmant-3-pieces-a-la-vue-mer-panoramique": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4888-exclusivite-a-voir-absolument": {
+  "jour": "2026-11-13",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.michaelzingraf.com/fr/vente/MZICC4892-exceptionnel-appartement-raffine-a-la-vue-mer-panoramique": {
@@ -15546,6 +15618,26 @@
  "https://www.michaelzingraf.com/fr/vente/MZIMC1489-villa-meublee-avec-piscine-un-art-de-vivre-a-grand-baie": {
   "jour": "2026-11-09",
   "motif": "vendu"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZIMC1495-appartement-elegant-a-business-bay-dubai": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZIMC1497-appartement-en-duplex-de-deux-chambres-business-bay-dubai": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZIMC1498-appartement-de-deux-chambres-business-bay-dubai": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZIMC1499-appartement-elegant-au-coeur-de-business-bay": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZIMC1500-appartement-avec-vue-sur-le-burj-khalifa-et-le-canal-dubai": {
+  "jour": "2026-11-13",
+  "motif": "titre_hors_cible:appartement"
  },
  "https://www.michaelzingraf.com/fr/vente/MZINC26-bel-appartement-3-pieces-entierement-renove-quartier-des-musicienscarre-dor": {
   "jour": "2026-10-23",
