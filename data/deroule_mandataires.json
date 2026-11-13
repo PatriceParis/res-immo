@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.2,
+  "seconde": 4.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.2,
+  "seconde": 4.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,265 +23,242 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.2,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.1,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.4,
+  "seconde": 7.9,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.9,
+  "seconde": 8.5,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.9,
+  "seconde": 8.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 7.3,
+  "seconde": 9.0,
   "reseau": "capifrance",
-  "connues": 20534,
-  "ecartees": 3242
+  "connues": 20516,
+  "ecartees": 3271
  },
  {
   "etape": "reseau_debut",
-  "seconde": 7.3,
+  "seconde": 9.0,
   "reseau": "iad",
-  "part_secondes": 597
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.5,
+  "seconde": 9.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 15.6,
+  "seconde": 27.8,
   "reseau": "iad",
-  "n": 93588,
-  "complet": false
+  "n": 94121,
+  "complet": false,
+  "pourquoi": {
+   "fichiers": 18,
+   "illisibles": [],
+   "au_plafond": [
+    "https://www.iadfrance.fr/sitemap/fr/ads/house.xml (20000000 o)"
+   ],
+   "echeance": false,
+   "restants": 2
+  }
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.0,
+  "seconde": 29.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.4,
+  "seconde": 29.8,
   "reseau": "iad",
-  "connues": 20534,
-  "ecartees": 3242
+  "connues": 20516,
+  "ecartees": 3271
  },
  {
   "etape": "departement",
-  "seconde": 279.9,
+  "seconde": 302.9,
   "reseau": "iad",
-  "departement": "54",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 37,
+  "gardes": 32,
   "tronquee": true,
   "etats": {
-   "garde": 37,
+   "garde": 32,
    "vendu": 10,
-   "ecarte": 3,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 3
+   "outre_mer": 6,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison traditionnelle 5 pièces de 87 m² à Andilly (95580)"
+   "outre_mer": "Maison 5 pièces de 125 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 6 pièces de 108 m² à Bellefontaine (95270)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 445.4,
+  "seconde": 513.5,
   "reseau": "iad",
-  "departement": "55",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 43,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 6,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 100 m² à Verdun (09310)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 597.1,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 50,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 7,
+   "garde": 44,
+   "vendu": 4,
    "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "location": 1,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 5 pièces de 83 m² à Bouville (91880)"
+   "location": "Maison 4 pièces de 79 m² à Villiers-sur-Loir (41100)",
+   "prix_trop_haut": "Domaine 8 pièces de 280 m² à Cormeray (41120)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 607.5,
+  "seconde": 607.4,
   "reseau": "iad",
-  "departement": "36",
-  "visitees": 3,
-  "gardes": 3,
+  "departement": "60",
+  "visitees": 23,
+  "gardes": 20,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 20,
+   "vendu": 1,
+   "ecarte": 2,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "location": 1,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "location": "Maison 3 pièces de 63 m² à COMPIÈGNE (60200)",
+   "prix_trop_haut": "Maison traditionnelle 4 pièces de 105 m² à Lamorlaye (60260)"
+  }
  },
  {
   "etape": "reseau_debut",
   "seconde": 607.5,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 608.3,
+  "seconde": 607.9,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 610.2,
+  "seconde": 609.3,
   "reseau": "safti",
-  "n": 28855,
+  "n": 28863,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 610.8,
+  "seconde": 610.1,
   "reseau": "safti",
-  "notees": 834
+  "notees": 428
  },
  {
   "etape": "tentative_notee",
-  "seconde": 611.4,
+  "seconde": 610.7,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 611.8,
+  "seconde": 611.2,
   "reseau": "safti",
-  "connues": 20557,
-  "ecartees": 3266
+  "connues": 20530,
+  "ecartees": 3288
  },
  {
   "etape": "departement",
-  "seconde": 792.9,
+  "seconde": 830.3,
   "reseau": "safti",
-  "departement": "55",
+  "departement": "57",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 47,
   "tronquee": true,
   "etats": {
-   "garde": 49,
+   "garde": 47,
+   "vendu": 2,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à PANGE de 230m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1123.6,
+  "reseau": "safti",
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 45,
+  "tronquee": true,
+  "etats": {
+   "garde": 45,
    "vendu": 0,
-   "ecarte": 1,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à Bar-le-Duc de 631m²"
+   "hors_perimetre": "Maison à vendre à FRENEUSE de 88m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 980.2,
+  "seconde": 1206.7,
   "reseau": "safti",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 46,
+  "departement": "39",
+  "visitees": 16,
+  "gardes": 16,
   "tronquee": true,
   "etats": {
-   "garde": 46,
-   "vendu": 3,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à SAINT-PAVACE de 706m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1172.5,
-  "reseau": "safti",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 49,
-  "tronquee": true,
-  "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à PAULNAY de 231m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1205.5,
-  "reseau": "safti",
-  "departement": "37",
-  "visitees": 8,
-  "gardes": 8,
-  "tronquee": true,
-  "etats": {
-   "garde": 8,
+   "garde": 16,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -291,7 +268,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1205.5,
-  "gardes": 276
+  "seconde": 1206.7,
+  "gardes": 204
  }
 ]
