@@ -60,9 +60,16 @@ JOURNAL = RACINE / "data" / "mandataires_visites.json"
 UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
 RE_LOC = re.compile(r"<loc>\s*([^<\s]+)\s*</loc>", re.IGNORECASE)
 SECONDES = 20
-PLAFOND = 20_000_000
-# Profondeur de descente dans les sitemaps imbriqués (index → ads → pages).
-PROFONDEUR = 3
+# Au-delà du maximum que le protocole sitemap permet à un fichier (50 Mo
+# décompressés). À 20 Mo, le fichier des maisons d'IAD était coupé à chaque
+# passage (`…/sitemap/fr/ads/house.xml`, déroulé du 13 novembre 2026) : le
+# sitemap n'était jamais lu en entier, et ses annonces disparues — la maison
+# de Charny signalée le 12 — restaient servies.
+PLAFOND = 60_000_000
+# Profondeur de descente dans les sitemaps imbriqués (robots → index → ads →
+# pages). À trois niveaux, deux fichiers d'IAD restaient à ouvrir au même
+# passage du 13 novembre.
+PROFONDEUR = 4
 
 
 def lire(url: str) -> bytes:
@@ -147,6 +154,7 @@ def adresses_du_sitemap(sitemaps: list[str], motif, fin_prevue: float | None = N
     # La profondeur est épuisée alors qu'il restait des sitemaps à ouvrir :
     # on n'a pas tout vu non plus.
     pourquoi["restants"] = len(a_lire)
+    pourquoi["exemples_restants"] = a_lire[:3]
     return annonces, entier and not a_lire
 
 

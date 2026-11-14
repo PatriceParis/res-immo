@@ -126,6 +126,25 @@ def test_une_lecture_incomplete_dit_pourquoi(monkeypatch):
     assert [p.split(" ")[0] for p in pourquoi["au_plafond"]] == ["index.xml", "a.xml", "b.xml"]
 
 
+def test_le_sitemap_d_iad_se_lit_jusqu_au_bout(monkeypatch):
+    """Déroulé du 13 novembre 2026 : le fichier des maisons d'IAD dépassait le
+    plafond de 20 Mo, et deux fichiers restaient à ouvrir au-delà de trois
+    niveaux. Le sitemap n'était jamais complet, aucune absence n'y était
+    notée, et la maison de Charny restait servie."""
+    assert collecteur.PLAFOND > 50_000_000, "le protocole permet 50 Mo par fichier"
+    pages = {
+        "robots.xml": b"<sitemapindex><sitemap><loc>index.xml</loc></sitemap></sitemapindex>",
+        "index.xml": b"<sitemapindex><sitemap><loc>fr.xml</loc></sitemap></sitemapindex>",
+        "fr.xml": b"<sitemapindex><sitemap><loc>ads/house.xml</loc></sitemap></sitemapindex>",
+        "ads/house.xml": f"<urlset><url><loc>{CHARNY}</loc></url></urlset>".encode(),
+    }
+    monkeypatch.setattr(collecteur, "lire", lambda url: pages.get(url, b""))
+    pourquoi = {}
+    adresses, complet = collecteur.adresses_du_sitemap(["robots.xml"], MOTIF, None, pourquoi)
+    assert adresses == [CHARNY]
+    assert complet is True, pourquoi
+
+
 def test_le_collecteur_ecrit_le_journal(tmp_path, monkeypatch):
     journal = tmp_path / "liens_morts.json"
     monkeypatch.setattr(collecteur, "JOURNAL_MORTS", journal)
