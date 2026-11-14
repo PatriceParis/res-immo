@@ -106,3 +106,21 @@ def test_le_journal_ne_garde_pas_les_annonces_deja_sorties():
     journal = {URL: {"constats": 2}, "https://x.fr/encore-la": {"constats": 1}}
     propre = liens.nettoyer(journal, {"https://x.fr/encore-la"})
     assert list(propre) == ["https://x.fr/encore-la"]
+
+
+def test_la_page_de_liste_servie_a_l_adresse_de_l_annonce_est_une_mort():
+    """IAD sert, à l'adresse d'une annonce retirée et sans redirection, la page
+    de toutes ses annonces : « 110 767 biens immobiliers à vendre - iad ».
+    Le 14 novembre 2026, deux annonces IAD sur trois jugées vivantes par le
+    vérificateur montraient cette page."""
+    url = "https://www.iadfrance.fr/annonce/maison-vente-3-pieces-russange-68m2/r2104799"
+    for titre in ("110 767 biens immobiliers à vendre - iad",
+                  "110&nbsp;767 biens immobiliers &agrave; vendre - iad",
+                  "110\u202f767 biens immobiliers à vendre"):
+        page = f"<html><head><title>{titre}</title></head><body>…</body></html>"
+        assert liens.verdict(200, url, url, page) == (
+            "mort", "page de liste servie à l'adresse de l'annonce"), titre
+    # Une vraie annonce, même si la page cite le catalogue plus bas.
+    vivante = ("<title>Vente maison à Manthelan (37240) : maison de ville 3 pièces 55 m² "
+               "- 2052072 - iad</title><a>Voir les 110 767 biens immobiliers à vendre</a>")
+    assert liens.verdict(200, url, url, vivante)[0] == "vivant"

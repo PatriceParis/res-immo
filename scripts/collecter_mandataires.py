@@ -277,6 +277,7 @@ def annonces_deja_connues() -> dict:
 
 
 JOURNAL_MORTS = RACINE / "data" / "liens_morts.json"
+JOURNAL_VERIFIES = RACINE / "data" / "liens_verifies.json"
 
 
 def noter_absentes_du_sitemap(adresses: list[str], reseau: dict, cle: str) -> None:
@@ -293,7 +294,13 @@ def noter_absentes_du_sitemap(adresses: list[str], reseau: dict, cle: str) -> No
         journal = json.loads(JOURNAL_MORTS.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         journal = {}
-    notees = liens.noter_sitemap(journal, absentes, adresses, date.today().isoformat())
+    jour = date.today().isoformat()
+    try:
+        verifies = json.loads(JOURNAL_VERIFIES.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        verifies = {}
+    absentes = liens.sans_les_vues_vivantes(absentes, verifies, journal, jour)
+    notees = liens.noter_sitemap(journal, absentes, adresses, jour)
     JOURNAL_MORTS.write_text(json.dumps(journal, ensure_ascii=False, indent=1, sort_keys=True)
                              + "\n", encoding="utf-8")
     etape("absentes_du_sitemap", reseau=cle, notees=notees)

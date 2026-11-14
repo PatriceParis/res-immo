@@ -24,7 +24,9 @@ retirer. Et un lien revenu vivant efface tout — le doute profite à l'annonce.
 
 from __future__ import annotations
 
+import html
 import re
+from datetime import date, timedelta
 from urllib.parse import urlparse
 
 from .qualite import est_vendu
@@ -39,6 +41,23 @@ def _chemin(url: str) -> str:
             + (morceaux.path or "/").rstrip("/"))
 
 
+# La page de LISTE servie à l'adresse même de l'annonce, sans redirection :
+# IAD répond ainsi pour une annonce retirée — « 110 767 biens immobiliers à
+# vendre - iad » sous « …/maison-vente-3-pieces-russange-68m2/r2104799 ».
+# Le 14 novembre 2026, le vérificateur avait jugé vivantes 32 annonces IAD
+# que le sitemap disait disparues ; deux sur trois ouvertes montraient cette
+# page. Le titre suffit : aucune annonce ne s'intitule par un décompte du
+# catalogue entier.
+_TITRE = re.compile(r"<title[^>]*>(.*?)</title>", re.IGNORECASE | re.DOTALL)
+_TITRE_DE_LISTE = re.compile(
+    r"^\s*\d[\d\s.\u00a0\u202f]*\s+biens?\s+immobiliers?\s+(?:à|a)\s+vendre\b", re.IGNORECASE)
+
+
+def _titre(texte: str) -> str:
+    trouve = _TITRE.search(texte or "")
+    return html.unescape(trouve.group(1)).strip() if trouve else ""
+
+
 def verdict(statut: int, url_demandee: str, url_finale: str,
             texte: str) -> tuple[str, str]:
     """(état, motif) pour une réponse observée.
@@ -51,6 +70,8 @@ def verdict(statut: int, url_demandee: str, url_finale: str,
         return "mort", f"HTTP {statut}"
     if url_finale and _chemin(url_finale) != _chemin(url_demandee):
         return "mort", f"redirigé vers {url_finale[:90]}"
+    if _TITRE_DE_LISTE.search(_titre(texte)):
+        return "mort", "page de liste servie à l'adresse de l'annonce"
     if est_vendu({"texte": texte or ""}):
         return "vendu", "la page annonce la vente"
     return "vivant", ""
@@ -147,6 +168,24 @@ def absentes_du_sitemap(connues, adresses, site: str, motif) -> list[str] | None
     if du_reseau and len(absentes) > PART_MAX_ABSENTES * len(du_reseau):
         return None
     return absentes
+
+
+# Ce que le vérificateur a OUVERT et trouvé vivant l'emporte, quelques jours,
+# sur l'absence au sitemap. Sans quoi le sitemap renotait chaque jour une
+# annonce que le vérificateur venait d'innocenter, et deux jours suffisaient
+# à la retirer bien qu'en ligne. Le délai borne ce crédit : une annonce
+# vendue depuis sort quand même, une semaine plus tard au pire.
+VU_VIVANT_JOURS = 7
+
+
+def sans_les_vues_vivantes(absentes: list[str], verifies: dict, journal: dict,
+                           jour: str, jours: int = VU_VIVANT_JOURS) -> list[str]:
+    """Les absentes, moins celles que le vérificateur a trouvées vivantes il y a
+    moins de `jours` jours. Vivante veut dire vérifiée ET hors du journal des
+    morts : un lien vérifié mort y figure, et ne gagne aucun crédit."""
+    depuis = (date.fromisoformat(jour) - timedelta(days=jours)).isoformat()
+    return [u for u in absentes
+            if not ((verifies or {}).get(u, "") > depuis and u not in (journal or {}))]
 
 
 def noter_sitemap(journal: dict, absentes: list[str], adresses, jour: str) -> int:

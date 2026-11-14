@@ -17,6 +17,7 @@ catalogue ; une annonce revenue au sitemap est innocentée.
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
@@ -149,6 +150,7 @@ def test_le_collecteur_ecrit_le_journal(tmp_path, monkeypatch):
     journal = tmp_path / "liens_morts.json"
     monkeypatch.setattr(collecteur, "JOURNAL_MORTS", journal)
     monkeypatch.setattr(collecteur, "DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(collecteur, "JOURNAL_VERIFIES", tmp_path / "verifies.json")
     monkeypatch.setattr(collecteur, "annonces_deja_connues",
                         lambda: {u: "2026-10-17" for u in [CHARNY, *AUTRES]})
     reseau = {"site": SITE, "motif_annonce": MOTIF}
@@ -156,6 +158,35 @@ def test_le_collecteur_ecrit_le_journal(tmp_path, monkeypatch):
     contenu = json.loads(journal.read_text(encoding="utf-8"))
     assert list(contenu) == [CHARNY]
     assert contenu[CHARNY]["motif"] == liens.MOTIF_SITEMAP
+
+
+def test_vue_vivante_par_le_verificateur_elle_n_est_pas_renotee():
+    """Le 14 novembre 2026, le vérificateur avait innocenté 32 annonces IAD
+    que le sitemap disait disparues ; le passage suivant les aurait renotées,
+    et deux jours suffisaient à retirer une annonce en ligne. Ce qu'on a
+    ouvert et trouvé vivant l'emporte une semaine ; un lien vérifié MORT,
+    lui, reste au journal et ne gagne aucun crédit."""
+    vivante, morte, jamais = AUTRES[0], AUTRES[1], AUTRES[2]
+    verifies = {vivante: "2026-11-14", morte: "2026-11-14", AUTRES[3]: "2026-11-01"}
+    journal = {morte: {"constats": 1, "dernier": "2026-11-14", "motif": "redirigé"}}
+    reste = liens.sans_les_vues_vivantes([vivante, morte, jamais, AUTRES[3]],
+                                         verifies, journal, "2026-11-15")
+    assert reste == [morte, jamais, AUTRES[3]]
+    # Passé la semaine, l'absence compte de nouveau.
+    assert liens.sans_les_vues_vivantes([vivante], verifies, {}, "2026-11-22") == [vivante]
+
+
+def test_le_collecteur_tient_compte_du_verificateur(tmp_path, monkeypatch):
+    journal = tmp_path / "liens_morts.json"
+    verifies = tmp_path / "verifies.json"
+    verifies.write_text(json.dumps({CHARNY: date.today().isoformat()}), encoding="utf-8")
+    monkeypatch.setattr(collecteur, "JOURNAL_MORTS", journal)
+    monkeypatch.setattr(collecteur, "JOURNAL_VERIFIES", verifies)
+    monkeypatch.setattr(collecteur, "DEROULE", tmp_path / "deroule.json")
+    monkeypatch.setattr(collecteur, "annonces_deja_connues",
+                        lambda: {u: "2026-10-17" for u in [CHARNY, *AUTRES]})
+    collecteur.noter_absentes_du_sitemap(AUTRES, {"site": SITE, "motif_annonce": MOTIF}, "iad")
+    assert json.loads(journal.read_text(encoding="utf-8")) == {}
 
 
 def test_le_journal_survit_a_une_reprise_de_push():
