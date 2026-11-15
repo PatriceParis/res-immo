@@ -85,6 +85,34 @@ GARES = [
 # pour rejoindre la gare : le bien n'est plus « accessible en train ».
 RAYON_MAX_KM = 25.0
 
+# Ce qui distingue une gare à grande vitesse, MESURÉ plutôt que déclaré.
+#
+# Deux gares seulement portent « TGV » dans leur nom (Vendôme et Le Creusot),
+# alors que Le Mans, Laval ou Montbard en sont tout autant. Lister les lignes
+# de mémoire serait exposé à l'erreur et vieillirait mal ; la vitesse moyenne
+# vers Paris, elle, se calcule et se vérifie.
+#
+# Relevé sur les 41 gares : huit dépassent 150 km/h à vol d'oiseau — les deux
+# nommées TGV, puis Le Mans, Montbard, Chalon-sur-Saône, Laval,
+# Montceau-les-Mines et Sablé-sur-Sarthe —, et la neuvième tombe à 121. Le
+# saut est franc, et il correspond exactement aux lignes à grande vitesse :
+# aucun train classique ne tient 150 km/h de moyenne porte-à-porte, sa pointe
+# étant à 160.
+_PARIS = (48.8566, 2.3522)
+VITESSE_GRANDE_VITESSE_KMH = 150.0
+
+
+def vitesse_vers_paris(lat: float, lon: float, minutes: int | None) -> float:
+    """km/h à vol d'oiseau — une minoration, le rail n'allant pas droit."""
+    if not minutes:
+        return 0.0
+    return haversine_km(_PARIS[0], _PARIS[1], lat, lon) / (minutes / 60)
+
+
+GARES_GRANDE_VITESSE = frozenset(
+    nom for nom, lat, lon, minutes, _ in GARES
+    if vitesse_vers_paris(lat, lon, minutes) >= VITESSE_GRANDE_VITESSE_KMH)
+
 # Le référentiel SNCF des gares de voyageurs (Licence Ouverte), importé par
 # scripts/importer_gares.py. Les 41 gares ci-dessus ne couvraient que les
 # régions d'origine du projet : mesuré le 15 novembre 2026, 72 % des biens
@@ -193,6 +221,7 @@ def gare_la_plus_proche(lat: float, lon: float) -> dict | None:
         "gare_paris": "",
         "nom_vers_paris": "",
         "km_vers_paris": None,
+        "grande_vitesse": False,
     }
     if vers_paris is not None:
         nom_p, km_p, minutes, depuis = vers_paris
@@ -201,5 +230,6 @@ def gare_la_plus_proche(lat: float, lon: float) -> dict | None:
             "gare_paris": f"Paris-{depuis}",
             "nom_vers_paris": nom_p,
             "km_vers_paris": round(km_p, 1),
+            "grande_vitesse": nom_p in GARES_GRANDE_VITESSE,
         })
     return resultat

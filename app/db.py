@@ -12,6 +12,8 @@ import sqlite3
 from datetime import date
 from pathlib import Path
 
+from . import gares as gares_module
+
 RACINE = Path(__file__).resolve().parent.parent
 
 SCHEMA = """
@@ -47,6 +49,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     gare_nom          TEXT DEFAULT '',
     gare_minutes      INTEGER,
     gare_km           REAL,
+    gare_vers_paris   TEXT DEFAULT '',
     score_total       REAL DEFAULT 0,
     score_detail_json TEXT DEFAULT '{}',
     badges_json       TEXT DEFAULT '[]',
@@ -131,6 +134,7 @@ def _migrer(conn: sqlite3.Connection) -> None:
                                 ("gare_nom", "TEXT DEFAULT ''"),
                                 ("gare_minutes", "INTEGER"),
                                 ("gare_km", "REAL"),
+                                ("gare_vers_paris", "TEXT DEFAULT ''"),
                                 ("has_troglodyte", "INTEGER DEFAULT 0"),
                                 ("vue_le", "TEXT DEFAULT ''"),
                                 ("revue_le", "TEXT DEFAULT ''"),
@@ -192,6 +196,13 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         "gare_nom": (a.get("train") or {}).get("nom") or "",
         "gare_minutes": (a.get("train") or {}).get("minutes_paris"),
         "gare_km": (a.get("train") or {}).get("km"),
+        # La gare qui porte le TEMPS, et non la plus proche. Depuis l'import
+        # du référentiel SNCF, ce n'est la même que dans un cas sur trois :
+        # le menu annonçait « Pont-l'Évêque à 105 min » quand ces 105 minutes
+        # sont celles de Lisieux. Le repli sur `nom` sert les biens d'avant
+        # l'import, et les essais qui ne renseignent que lui.
+        "gare_vers_paris": ((a.get("train") or {}).get("nom_vers_paris")
+                            or (a.get("train") or {}).get("nom") or ""),
         "score_total": a.get("score_total", 0),
         "score_detail_json": json.dumps(a.get("score_detail", {}), ensure_ascii=False),
         "badges_json": json.dumps(a.get("badges", []), ensure_ascii=False),
@@ -295,7 +306,7 @@ def _clauses(filtres: dict, ignorer: set | None = None) -> tuple[str, list]:
         params.append(filtres["region"])
 
     if "gare" not in ignorer and filtres.get("gare"):
-        clauses.append("gare_nom = ?")
+        clauses.append("gare_vers_paris = ?")
         params.append(filtres["gare"])
 
     if "gare_km_max" not in ignorer and filtres.get("gare_km_max"):
@@ -393,16 +404,20 @@ def gares(conn: sqlite3.Connection, filtres: dict | None = None) -> list[dict]:
     ou, params = _clauses(filtres or {}, ignorer={"gare", "train_max"})
     rows = conn.execute(
         f"""
-        SELECT gare_nom            AS nom,
+        SELECT gare_vers_paris     AS nom,
                MIN(gare_minutes)   AS minutes_paris,
                COUNT(*)            AS nb
         FROM annonces
-        WHERE {ou} AND gare_nom <> '' AND gare_minutes IS NOT NULL
-        GROUP BY gare_nom
+        WHERE {ou} AND gare_vers_paris <> '' AND gare_minutes IS NOT NULL
+        GROUP BY gare_vers_paris
         ORDER BY minutes_paris, nom
         """, params
     ).fetchall()
-    return [dict(r) for r in rows]
+    # `grande_vitesse` est calculé ici et non stocké : il ne dépend que de la
+    # gare, le menu est le seul à s'en servir, et une colonne de plus se
+    # désynchroniserait le jour où une ligne nouvelle change la donne.
+    return [dict(r, grande_vitesse=r["nom"] in gares_module.GARES_GRANDE_VITESSE)
+            for r in rows]
 
 
 def agences(conn: sqlite3.Connection) -> list[dict]:

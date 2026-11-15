@@ -325,15 +325,29 @@ async function chargerGares() {
   const choix = menu.value;
   menu.innerHTML = '<option value="">Toutes les gares</option>';
 
-  const groupe = document.createElement("optgroup");
-  groupe.label = "Une gare en particulier";
-  for (const g of gares) {
-    const opt = document.createElement("option");
-    opt.value = g.nom;
-    opt.textContent = `${g.nom} — ${fmtTemps(g.minutes_paris)} (${g.nb})`;
-    groupe.appendChild(opt);
-  }
-  if (groupe.children.length) menu.appendChild(groupe);
+  // Les gares à grande vitesse en tête, dans leur propre groupe. C'est ce
+  // que demande celui qui cherche « une gare TGV » : non pas la plus proche,
+  // mais celle qui met Paris à portée d'aller-retour — la condition pour
+  // qu'un repli reste compatible avec un travail qu'on garde.
+  //
+  // Elles ne sont pas reconnues à leur nom : deux seulement portent « TGV »
+  // (Vendôme et Le Creusot) alors que Le Mans, Laval ou Montbard en sont
+  // tout autant. C'est la vitesse moyenne vers Paris qui tranche, mesurée
+  // côté serveur — voir gares.GARES_GRANDE_VITESSE.
+  const bloc = (libelle, liste) => {
+    if (!liste.length) return;
+    const groupe = document.createElement("optgroup");
+    groupe.label = libelle;
+    for (const g of liste) {
+      const opt = document.createElement("option");
+      opt.value = g.nom;
+      opt.textContent = `${g.nom} — ${fmtTemps(g.minutes_paris)} (${g.nb})`;
+      groupe.appendChild(opt);
+    }
+    menu.appendChild(groupe);
+  };
+  bloc("Grande vitesse", gares.filter((g) => g.grande_vitesse));
+  bloc("Autres gares", gares.filter((g) => !g.grande_vitesse));
   // On rétablit le choix de l'utilisateur : ce menu se reconstruit à chaque
   // rafraîchissement des comptes, et le voir se vider serait déroutant.
   menu.value = choix;
