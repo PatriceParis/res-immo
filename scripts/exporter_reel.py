@@ -37,6 +37,10 @@ CHAMPS = [
     # finalité, car personne ne cherche « cave » dans un numéro de téléphone.
     # Le constat voyage désormais seul ; la page reste chez l'agence.
     "features", "etat_declare", "vendu", "plusieurs_biens",
+    # Constaté ici pour la même raison que `vendu` : c'est le dernier moment
+    # où la page entière est lisible. Sans cette colonne, la fiche servie
+    # n'aurait aucun moyen de dire qu'un prix est un bouquet.
+    "viager",
     "lat", "lon", "altitude", "densite_hab_km2", "dpe", "risques",
     # Les autres images de la page, en réserve : si la première se révèle
     # être du mobilier de site, la suivante prend sa place au chargement.
@@ -65,6 +69,9 @@ def _bien(row) -> dict:
     page = {"texte": brut.get("texte") or "", "description": brut.get("description") or ""}
     bien["vendu"] = qualite.est_vendu(page)
     bien["plusieurs_biens"] = qualite.enumere_plusieurs_biens(page)
+    # Le viager se nomme aussi bien dans le titre et l'URL que dans le corps
+    # de la page : on lui donne les deux, la ligne et le texte brut.
+    bien["viager"] = int(qualite.est_viager({**bien, **page}))
     return {cle: bien.get(cle) for cle in CHAMPS}
 
 
@@ -79,7 +86,7 @@ def alleger(bien: dict) -> dict:
 
     On constate donc ici, UNE dernière fois et sur la page entière, ce que le
     chargement y aurait lu — critères, état déclaré, bien vendu, page
-    catalogue —, puis on retire le texte. Un bien exporté sous la forme
+    catalogue, viager —, puis on retire le texte. Un bien exporté sous la forme
     nouvelle n'a plus de texte : pour lui, cette fonction n'est qu'une
     projection sur les champs publiés.
     """
@@ -96,6 +103,8 @@ def alleger(bien: dict) -> dict:
         allege["vendu"] = qualite.est_vendu(allege)
     if allege.get("plusieurs_biens") is None:
         allege["plusieurs_biens"] = qualite.enumere_plusieurs_biens(allege)
+    if allege.get("viager") is None:
+        allege["viager"] = int(qualite.est_viager(allege))
     return {cle: allege.get(cle) for cle in CHAMPS}
 
 

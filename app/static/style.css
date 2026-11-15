@@ -550,3 +550,8 @@ body { overflow-x: hidden; }
   flex-wrap: wrap; align-items: center; }
 .legende-climat i { display: inline-block; width: 20px; height: 8px; border-radius: 4px; margin-right: 6px;
   vertical-align: 1px; }
+
+/* Mention de viager. Reprend les couleurs d'alerte : ce n'est pas un défaut
+   du bien, c'est un avertissement sur la LECTURE du prix. */
+.alerte.viager { display: block; margin: 6px 0 2px; line-height: 1.45; }
+.alerte.viager.compacte { font-size: .82rem; padding: 3px 8px; }

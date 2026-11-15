@@ -93,6 +93,20 @@
       <input type="range" id="f-temps" min="45" max="240" step="15" value="240">
     </label>
 
+    <!-- Le pendant ferroviaire du curseur ci-dessus, et la même question posée
+         autrement : la voiture suppose du carburant et un véhicule en état, le
+         train non. Les deux se combinent — un bien peut être à deux heures de
+         route et à une heure de train.
+
+         Une limite ici ÉCARTE les biens dont nous ne connaissons pas de gare :
+         ils ne remplissent pas la condition, et les garder reviendrait à faire
+         passer une ignorance pour une desserte. L'aide le dit. -->
+    <label class="champ">
+      <span>Paris en train <output id="aff-train">sans limite</output>
+        <span class="aide-filtre" title="Depuis la gare la plus proche du bien, en liaison directe courante. Fixer une limite écarte les biens dont aucune gare n'est connue.">ⓘ</span></span>
+      <input type="range" id="f-train" min="30" max="150" step="15" value="150">
+    </label>
+
     <label class="champ">
       <span>Score de résilience minimum <output id="aff-score">0</output></span>
       <input type="range" id="f-score" min="0" max="90" step="5" value="0">

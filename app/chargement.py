@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 
 from . import (caviardage, db, etat_du_bien, exclusions, extraction, gares, geo,
                marche, regions, scoring)
-from .qualite import PRIX_MINI, est_bien_valide
+from .qualite import PRIX_MINI, est_bien_valide, est_viager
 
 # Au-delà, le nombre de pièces annoncé ne peut pas décrire la surface : même
 # une demeure aux très grands volumes reste sous 120 m² par pièce.
@@ -150,6 +150,12 @@ def preparer_annonce(brut: dict) -> dict:
     if annonce.get("etat_declare") not in etat_du_bien.ETATS:
         annonce["etat_declare"] = etat_du_bien.etat_declare(annonce)
     annonce["sans_travaux"] = int(annonce["etat_declare"] == "sans_travaux")
+    # Le viager, relu ici pour la même raison que l'état : c'est le dernier
+    # endroit où le texte de la page existe encore. Le filtre de collecte
+    # l'écarte sur le titre et l'URL ; celui-ci regarde aussi la description,
+    # et marque ce qui serait passé au travers. Voir qualite.est_viager — un
+    # prix de viager est un bouquet, pas une valeur.
+    annonce["viager"] = int(est_viager(annonce))
     # Mémoire portée par le fichier exporté (app/historique.py) : on la
     # laisse telle quelle, c'est elle qui dit ce qui est nouveau.
     # Le filtre d'inondation lisait encore la clé `inondation`, disparue quand

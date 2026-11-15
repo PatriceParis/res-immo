@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import html
 import json
+import math
 
 from . import climat, redaction, seo
 
@@ -56,6 +57,10 @@ td, th { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e4e0d5 }
 img { max-width: 100%; height: auto; border-radius: 10px }
 figure.aerienne { margin: 14px 0 } 
 figure.aerienne img { width: 100%; border-radius: 10px }
+/* Le viager n'est pas un défaut du bien : c'est un avertissement sur la
+   LECTURE de son prix. D'où le ton d'alerte, juste sous le prix. */
+p.viager { margin: -4px 0 14px; padding: 9px 12px; border-radius: 8px;
+           background: #fbece8; border: 1px solid #efcdc4; color: #8c3325 }
 figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .manque { color: #9a6a2b; font-style: italic }
 .climat { background: #fff; border: 1px solid #e4e0d5; border-radius: 14px;
@@ -195,7 +200,21 @@ de l'immo ?</a></p>
 """
 
 
-def _carte_aerienne(bien: dict, largeur: int = 640, hauteur: int = 320) -> str:
+# L'emprise, en KILOMÈTRES et non en degrés : de quoi lire le bâti, les haies
+# et l'eau sans que la commune se perde dans la campagne. En kilomètres, parce
+# qu'une emprise en degrés change de taille réelle selon la latitude — c'est
+# la cause de la déformation décrite plus bas, et la dire en degrés la
+# ramènerait par la fenêtre.
+_LARGEUR_KM = 1.85
+_KM_PAR_DEGRE_LAT = 111.32
+# Deux fois la taille d'affichage (la figure fait 100 % de sa colonne, soit
+# ~640 px au plus large) : l'image reste nette sur les écrans à forte densité,
+# où le CSS servait jusqu'ici un pixel pour quatre.
+_LARGEUR_PX, _HAUTEUR_PX = 1280, 640
+
+
+def _carte_aerienne(bien: dict, largeur: int = _LARGEUR_PX,
+                    hauteur: int = _HAUTEUR_PX) -> str:
     """La commune vue du ciel — orthophotos IGN, Licence Ouverte.
 
     C'est la seule image de la fiche qui nous appartienne de plein droit, et
@@ -204,11 +223,37 @@ def _carte_aerienne(bien: dict, largeur: int = 640, hauteur: int = 320) -> str:
     géolocalisation vient de la BAN sur commune et code postal, l'adresse
     exacte n'étant presque jamais publiée. La légende le dit en toutes
     lettres : la montrer comme la parcelle serait inventer.
+
+    Deux défauts corrigés le 15 novembre 2026, tous deux invisibles tant
+    qu'on ne mesure pas :
+
+    **L'image était étirée.** Un degré de longitude rétrécit avec la latitude,
+    un degré de latitude jamais. L'emprise était fixée en degrés — 0,024 de
+    longitude sur 0,012 de latitude — ce qui fait à 47° un terrain de 1,82 km
+    sur 1,34, soit un rapport de 1,36, servi dans un cadre de 2,00. Le WMS ne
+    recadre pas : il étire pour remplir. Chaque commune arrivait allongée de
+    moitié dans le sens est-ouest. L'emprise se dit donc maintenant en
+    kilomètres, et les degrés s'en déduisent par la latitude : le rapport
+    colle où qu'on soit, et la vue couvre la même étendue partout.
+
+    **L'image était floue.** 640 pixels pour 1,8 km font 2,85 m par pixel,
+    quand l'orthophoto IGN en offre 0,20 : on jetait quatorze fois le détail
+    disponible, et un écran à forte densité étalait encore ce peu sur quatre
+    fois la surface. La source est désormais rendue au double de sa taille
+    d'affichage, soit 1,45 m par pixel — toujours loin du grain natif, mais
+    c'est la commune qu'on montre, pas la parcelle.
     """
     lat, lon = bien.get("lat"), bien.get("lon")
     if lat is None or lon is None:
         return ""
-    dlat, dlon = 0.006, 0.012
+    demi_largeur_km = _LARGEUR_KM / 2
+    demi_hauteur_km = demi_largeur_km * hauteur / largeur
+    # cos(lat) borné : sans cela une latitude polaire ferait diverger
+    # l'emprise. Aucun bien du catalogue n'en approche, mais une fiche ne
+    # doit pas dépendre de cela pour rester correcte.
+    retrecissement = max(math.cos(math.radians(lat)), 0.15)
+    dlon = demi_largeur_km / (_KM_PAR_DEGRE_LAT * retrecissement)
+    dlat = demi_hauteur_km / _KM_PAR_DEGRE_LAT
     bbox = f"{lon - dlon},{lat - dlat},{lon + dlon},{lat + dlat}"
     return ("https://data.geopf.fr/wms-r?SERVICE=WMS&VERSION=1.3.0"
             "&REQUEST=GetMap&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES="
@@ -347,6 +392,9 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 <p class="chapeau">{_e(seo.description_annonce(bien))}</p>
 {f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy" onerror="this.remove()">' if bien.get("photo") else ""}
 <p class="prix">{_e(seo._euros(bien.get("prix")) or "Prix sur demande")}</p>
+{'<p class="viager">Vente en viager : le prix affiché est le <b>bouquet</b>, '
+ 'pas la valeur du bien. Le prix au m² et la comparaison au marché local ne '
+ 'valent donc pas pour cette annonce.</p>' if bien.get("viager") else ""}
 {f'<ul class="faits-courts">{faits_courts}</ul>' if faits_courts else ""}
 
 <h2>Que disent les données sur ce bien ?</h2>

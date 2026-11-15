@@ -279,10 +279,11 @@ function fraicheur(a) {
 
 // Les gares desservant les biens, classées par temps de trajet vers Paris.
 //
-// Ce menu porte DEUX critères : les premières entrées demandent simplement
-// « une gare rapide » — c'est ce que veut dire « gare TGV » pour qui cherche
-// un repli compatible avec un travail à Paris — et les suivantes désignent
-// une gare précise. Un seul contrôle, parce que c'est une seule question.
+// Ce menu portait DEUX critères : « une gare rapide » (moins d'une heure, une
+// heure et demie, deux heures) et « cette gare-là ». Le premier a désormais
+// son curseur, à côté du temps de route — la même question posée de la même
+// façon pour les deux modes de transport, au lieu d'être cachée dans une
+// liste. Le menu ne garde que le second, et son nom redevient exact.
 async function chargerGares() {
   const menu = $("#f-gare");
   if (!menu) return;
@@ -294,17 +295,6 @@ async function chargerGares() {
   } catch (e) { return; }
   const choix = menu.value;
   menu.innerHTML = '<option value="">Toutes les gares</option>';
-
-  for (const [minutes, etiquette] of [[60, "moins d’1 h"], [90, "moins d’1 h 30"],
-                                      [120, "moins de 2 h"]]) {
-    const nb = gares.filter((g) => g.minutes_paris <= minutes)
-                    .reduce((somme, g) => somme + g.nb, 0);
-    if (!nb) continue;
-    const opt = document.createElement("option");
-    opt.value = `max:${minutes}`;
-    opt.textContent = `Paris en ${etiquette} de train — ${nb} bien${nb > 1 ? "s" : ""}`;
-    menu.appendChild(opt);
-  }
 
   const groupe = document.createElement("optgroup");
   groupe.label = "Une gare en particulier";
@@ -371,12 +361,14 @@ function lireFiltres() {
     ["#f-potager", "potager"], ["#f-troglodyte", "troglodyte"],
     ["#f-hors-inondation", "hors_inondation"],
   ]) if ($(id).checked) p.set(cle, "1");
-  // Une seule liste déroulante porte deux critères : soit une gare précise,
-  // soit un temps de trajet maximal. C'est ainsi que la question se pose —
-  // « celle-là », ou simplement « une gare rapide ».
+  // « Paris en moins d'une heure de train » se demandait par le menu des
+  // gares, qui portait donc deux critères à la fois. Le curseur dédié rend
+  // la question symétrique du temps de route, et le menu redevient ce que
+  // son nom dit : une gare précise.
+  const train = +$("#f-train").value;
+  if (train < +$("#f-train").max) p.set("train_max", train);
   const gare = $("#f-gare").value;
-  if (gare.startsWith("max:")) p.set("train_max", gare.slice(4));
-  else if (gare) p.set("gare", gare);
+  if (gare) p.set("gare", gare);
   if (etat.region) p.set("region", etat.region);
   p.set("tri", $("#f-tri").value);
   return p;
@@ -387,12 +379,15 @@ function majAffichagesFiltres() {
   $("#aff-prix").textContent = prix >= +$("#f-prix").max ? "tous prix" : euros(prix);
   const temps = +$("#f-temps").value;
   $("#aff-temps").textContent = temps >= +$("#f-temps").max ? "sans limite" : fmtTemps(temps);
+  const train = +$("#f-train").value;
+  $("#aff-train").textContent = train >= +$("#f-train").max ? "sans limite" : fmtTemps(train);
   $("#aff-score").textContent = $("#f-score").value > 0 ? `${$("#f-score").value}/100` : "0 (tous)";
 }
 
 function reinitialiser() {
   $("#f-prix").value = $("#f-prix").max;
   $("#f-temps").value = $("#f-temps").max;
+  $("#f-train").value = $("#f-train").max;
   $("#f-score").value = 0;
   $("#f-terrain").value = "0";
   $("#f-gare").value = "";
@@ -494,6 +489,7 @@ function ficheAnnonce(a) {
         ${baisse(a)}
       </div>
       ${prixM2 ? `<div class="prix-m2">${nombre(prixM2)} €/m²</div>` : ""}
+      ${mentionViager(a, false)}
       <div class="specs">${caracteristiques(a)}</div>
       <div class="lieu"><b>${echap(a.commune || "")}</b>${
         a.departement ? ` (${echap(a.departement)})` : ""}</div>
@@ -576,6 +572,25 @@ function rendreCarte() {
   }
 }
 
+/* Un viager porté à la connaissance du lecteur AVANT qu'il lise le prix.
+
+   Le prix d'un viager est un BOUQUET : la part payée comptant, le reste
+   venant en rente. Affiché nu, à côté d'un prix au m² calculé dessus, il
+   désigne une affaire qui n'existe pas — et il fausse la comparaison avec
+   toutes les autres annonces de la liste. D'où la mention aux DEUX endroits
+   où un prix se lit : la carte et la fiche.
+
+   Aucun bien du catalogue ne la déclenche aujourd'hui (le viager est écarté
+   à la collecte). C'est un filet : voir qualite.est_viager. */
+function mentionViager(a, complete) {
+  if (!a.viager) return "";
+  return complete
+    ? `<p class="alerte viager">Vente en viager : le prix affiché est le
+         <b>bouquet</b>, pas la valeur du bien. Le prix au m² et la
+         comparaison au marché local ne valent donc pas pour cette annonce.</p>`
+    : `<div class="alerte viager compacte">Viager — prix = bouquet</div>`;
+}
+
 /* ---------------- fiche détaillée ---------------- */
 
 const ICONES_PILIERS = {
@@ -645,6 +660,7 @@ function ouvrirFiche(id) {
              casse lisible, vient après — c'est une accroche, pas une donnée. -->
         <div class="prix-modale">${a.prix ? euros(a.prix) : "Prix sur demande"}${
           prixM2 ? ` <span class="prix-m2">${nombre(prixM2)} €/m²</span>` : ""}</div>
+        ${mentionViager(a, true)}
         <div class="specs">${caracteristiques(a)}</div>
         <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""}</div>
         <h2 id="modale-titre">${echap(casseNormale(a.titre, a.commune))}</h2>
@@ -898,7 +914,7 @@ function appliquerParametresUrl() {
 /* ---------------- événements ---------------- */
 
 const rafraichirDoucement = attenuer(rafraichir);
-for (const id of ["#f-prix", "#f-temps", "#f-score"]) {
+for (const id of ["#f-prix", "#f-temps", "#f-train", "#f-score"]) {
   $(id).addEventListener("input", () => { majAffichagesFiltres(); rafraichirDoucement(); });
 }
 for (const id of ["#f-terrain", "#f-gare", "#f-tri"]) $(id).addEventListener("change", rafraichir);

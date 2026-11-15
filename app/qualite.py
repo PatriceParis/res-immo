@@ -333,6 +333,52 @@ def est_vendu(a: dict) -> bool:
     return bool(_VENDU.search(texte))
 
 
+# Le viager est déjà écarté à la collecte (voir la liste des titres hors
+# cible). Mais ce filtre-là ne lit que le TITRE et l'URL, et c'est tout ce
+# qu'on a : mesuré le 15 novembre 2026, 81 annonces sur 17 224 — un demi
+# pour cent — conservent une description. Un viager dont le titre dit
+# seulement « Maison 4 pièces à Brienon » passerait donc sans que rien ne
+# l'arrête, et aucune relecture ultérieure ne pourrait le rattraper.
+#
+# Ce que ça coûterait : le prix d'un viager est un BOUQUET, pas une valeur.
+# Un bien affiché 69 900 € qui en vaut 180 000 fausse le prix au m², l'écart
+# au marché et le classement — et promet au lecteur une affaire qui n'existe
+# pas. L'erreur n'est pas de montrer un viager, c'est de le montrer comme
+# une vente ordinaire.
+#
+# D'où ce second regard, porté sur tout ce qu'on a plutôt que sur le seul
+# titre. Il ne retire rien et ne note rien : il fait dire à la fiche ce
+# qu'elle est. Aujourd'hui il ne trouve aucun bien — c'est un filet, et un
+# filet se juge au jour où quelque chose tombe dedans.
+_VIAGER = re.compile(r"\bviagers?\b|\bcredirentiers?\b|\bdebirentiers?\b")
+# Le viager qui ne se nomme pas se trahit par les deux moitiés de son prix.
+# Séparément elles ne prouvent rien : « rente » vit dans « rentabilité » et
+# « rentrée », « bouquet » dans un jardin. Ensemble, dans la même annonce,
+# elles ne décrivent qu'une chose.
+_BOUQUET = re.compile(r"\bbouquet\b")
+_RENTE = re.compile(r"\brentes?\b")
+
+
+def est_viager(a: dict) -> bool:
+    """True si l'annonce porte les marques d'une vente en viager.
+
+    Lit le titre, le texte de la page, la description et l'URL : le mot peut
+    n'apparaître qu'à un seul de ces endroits, et le chemin de l'URL le dit
+    souvent quand le titre le tait (« /vente/viager/… »).
+
+    Ne couvre PAS la nue-propriété ni la vente à terme, qui démembrent le
+    prix de la même façon : les nommer ici élargirait un filet dont on n'a
+    pas encore vu une seule prise, et « nue-propriété » attrape des tournures
+    ordinaires (« propriété » précédé d'un adjectif) qu'il faudrait écarter
+    une à une. À ajouter le jour où un cas réel le demande.
+    """
+    texte = normaliser(" ".join(str(a.get(champ) or "") for champ in
+                                ("titre", "texte", "description", "url")))
+    if _VIAGER.search(texte):
+        return True
+    return bool(_BOUQUET.search(texte) and _RENTE.search(texte))
+
+
 # Une annonce porte UNE référence. Une page qui en énumère plusieurs décrit
 # plusieurs biens : c'est un catalogue, quoi qu'en dise son titre.
 #
