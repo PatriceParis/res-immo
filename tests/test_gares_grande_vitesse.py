@@ -110,3 +110,48 @@ def test_choisir_une_gare_prend_les_biens_qu_elle_dessert(base):
 def test_l_interface_met_le_groupe_rapide_en_premier():
     assert '"Grande vitesse"' in SCRIPT
     assert SCRIPT.index('bloc("Grande vitesse"') < SCRIPT.index('bloc("Autres gares"')
+
+
+def _fiche_train(**train):
+    base = {"nom": "Le Mans", "km": 0.7, "segment": "A", "minutes_paris": 55,
+            "nom_vers_paris": "Le Mans", "km_vers_paris": 0.6,
+            "grande_vitesse": True}
+    from app import pages
+    return pages._gare_vers_paris({"train": {**base, **train}})
+
+
+def test_la_fiche_dit_que_c_est_un_tgv():
+    assert _fiche_train() == "55 min en TGV depuis cette gare"
+
+
+def test_la_fiche_se_tait_quand_le_train_est_classique():
+    """Le silence est la valeur par défaut : sans mesure, pas de mention."""
+    assert _fiche_train(nom="Chartres", nom_vers_paris="Chartres",
+                        minutes_paris=65, grande_vitesse=False) \
+        == "1 h 05 depuis cette gare"
+
+
+def test_la_fiche_ne_dit_pas_deux_fois_tgv():
+    """« en TGV depuis Vendôme–Villiers-sur-Loir TGV » dirait deux fois la
+    même chose. Deux des huit gares portent le mot dans leur nom officiel et
+    pèsent un quart des biens concernés : le cas n'est pas théorique."""
+    phrase = _fiche_train(nom="Saint-Amand-Longpré", segment="C",
+                          nom_vers_paris="Vendôme–Villiers-sur-Loir TGV",
+                          minutes_paris=42, km_vers_paris=12.3)
+    assert phrase.count("TGV") == 1
+    assert phrase == "42 min en TGV depuis Vendôme–Villiers-sur-Loir (à 12.3 km)"
+
+
+def test_le_nom_de_la_gare_reste_entier_pour_un_train_classique():
+    """On ne rogne le suffixe que parce que la phrase vient de dire « TGV ».
+    Sans la mention, le nom officiel doit rester intact."""
+    assert "Vendôme–Villiers-sur-Loir TGV" in _fiche_train(
+        nom="Ailleurs", nom_vers_paris="Vendôme–Villiers-sur-Loir TGV",
+        grande_vitesse=False)
+
+
+def test_la_fiche_de_l_application_porte_le_badge():
+    assert 'class="tgv"' in SCRIPT
+    assert "sansSuffixeTgv" in SCRIPT
+    style = (RACINE / "app" / "static" / "style.css").read_text(encoding="utf-8")
+    assert ".tgv {" in style, "un badge sans style est invisible"

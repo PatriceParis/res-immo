@@ -496,6 +496,12 @@ function caracteristiques(a) {
 // jour pour une desserte.
 const SEGMENT_GARE = {A: "grande gare", B: "gare régionale", C: "halte"};
 
+// Deux des huit gares à grande vitesse portent « TGV » dans leur nom officiel
+// (Vendôme–Villiers-sur-Loir, Le Creusot–Montceau–Montchanin), et elles pèsent
+// un quart des biens concernés. Le badge le dit déjà : le répéter dans le nom
+// juste en dessous ne dirait rien de plus.
+const sansSuffixeTgv = (nom) => nom.replace(/\s+TGV$/, "");
+
 // Accès : la voiture, et le train quand il y a une gare — c'est l'argument
 // propre à ce service, il mérite d'être lisible d'un coup d'œil.
 function acces(a) {
@@ -737,9 +743,16 @@ function ouvrirFiche(id) {
                   ? " · " + SEGMENT_GARE[a.train.segment] : ""}`)
         : ""}
       ${a.train && a.train.minutes_paris != null
-        ? tuile("Paris en train", fmtTemps(a.train.minutes_paris),
+        ? tuile("Paris en train",
+                // Le badge répond à la question de qui garde son travail à
+                // Paris : non pas « y a-t-il un train ? » mais « l'aller-retour
+                // tient-il dans la journée ? ». 21 % des biens au temps connu.
+                fmtTemps(a.train.minutes_paris)
+                  + (a.train.grande_vitesse ? ' <span class="tgv">TGV</span>' : ""),
                 a.train.nom_vers_paris && a.train.nom_vers_paris !== a.train.nom
-                  ? `depuis ${echap(a.train.nom_vers_paris)} · à ${a.train.km_vers_paris} km`
+                  ? `depuis ${echap(a.train.grande_vitesse
+                      ? sansSuffixeTgv(a.train.nom_vers_paris)
+                      : a.train.nom_vers_paris)} · à ${a.train.km_vers_paris} km`
                   : "depuis cette gare")
         : ""}
       ${tuile("Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}

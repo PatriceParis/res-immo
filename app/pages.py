@@ -22,6 +22,7 @@ from __future__ import annotations
 import html
 import json
 import math
+import re
 
 from . import climat, redaction, seo
 
@@ -217,6 +218,12 @@ _LARGEUR_PX, _HAUTEUR_PX = 2048, 1024
 # Ce que le segment DRG du référentiel SNCF veut dire, en clair.
 _SEGMENT_GARE = {"A": "grande gare", "B": "gare régionale", "C": "halte"}
 
+# Deux des huit gares à grande vitesse portent « TGV » dans leur nom officiel
+# (Vendôme–Villiers-sur-Loir, Le Creusot–Montceau–Montchanin), et elles pèsent
+# un quart des biens concernés. Écrire « en TGV depuis Vendôme–Villiers-sur-Loir
+# TGV » dirait deux fois la même chose : la phrase le dit déjà.
+_SUFFIXE_TGV = re.compile(r"\s+TGV$")
+
 
 def _gare_proche(bien: dict) -> str:
     """« Troyes (grande gare) à 4,8 km » — la gare, et ce qu'elle est.
@@ -235,7 +242,7 @@ def _gare_proche(bien: dict) -> str:
 
 
 def _gare_vers_paris(bien: dict) -> str:
-    """« 1 h 30 depuis Troyes (à 4,7 km) » — le temps, et SA gare.
+    """« 1 h 05 en TGV depuis Le Mans (à 15 km) » — le temps, et SA gare.
 
     Le référentiel ne porte aucun temps de trajet : seules les gares saisies
     à la main en ont un. La plus proche n'en fait partie que dans un cas sur
@@ -246,9 +253,16 @@ def _gare_vers_paris(bien: dict) -> str:
         return ""
     temps = _temps(train.get("minutes_paris"))
     depuis = train.get("nom_vers_paris") or train.get("nom")
-    if depuis and depuis != train.get("nom"):
-        return f"{temps} depuis {depuis} (à {train.get('km_vers_paris')} km)"
-    return f"{temps} depuis cette gare"
+    ailleurs = bool(depuis) and depuis != train.get("nom")
+    # « en TGV » répond à la question que se pose qui garde son travail à
+    # Paris : non pas « y a-t-il un train ? » mais « l'aller-retour tient-il
+    # dans une journée ? ». 21 % des biens au temps connu sont dans ce cas.
+    vite = " en TGV" if train.get("grande_vitesse") else ""
+    if vite:
+        depuis = _SUFFIXE_TGV.sub("", depuis)
+    if ailleurs:
+        return f"{temps}{vite} depuis {depuis} (à {train.get('km_vers_paris')} km)"
+    return f"{temps}{vite} depuis cette gare"
 
 
 def _carte_aerienne(bien: dict, largeur: int = _LARGEUR_PX,

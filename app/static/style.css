@@ -271,6 +271,14 @@ body {
 .stat .valeur { font-weight: 700; font-size: 15px; white-space: nowrap; }
 .stat .sous { font-size: 11px; color: var(--encre-2); }
 
+/* « TGV » sur la tuile « Paris en train ». Un mot, pas une couleur seule :
+   comme la lettre du DPE, il se lit en noir et blanc et par un daltonien. */
+.tgv {
+  display: inline-block; margin-left: 5px; padding: 1px 5px; border-radius: 5px;
+  background: var(--marque); color: #fff; vertical-align: 2px;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .5px;
+}
+
 /* étiquette DPE (lettre toujours affichée, jamais la couleur seule) */
 .dpe { display: inline-block; min-width: 26px; text-align: center; padding: 1px 7px; border-radius: 6px; font-weight: 800; }
 .dpe-A { background: #1e7a46; color: #fff; }
