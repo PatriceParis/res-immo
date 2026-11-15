@@ -396,6 +396,8 @@ function lireFiltres() {
   // son nom dit : une gare précise.
   const train = +$("#f-train").value;
   if (train < +$("#f-train").max) p.set("train_max", train);
+  const gareKm = +$("#f-gare-km").value;
+  if (gareKm < +$("#f-gare-km").max) p.set("gare_km_max", gareKm);
   const gare = $("#f-gare").value;
   if (gare) p.set("gare", gare);
   if (etat.region) p.set("region", etat.region);
@@ -410,6 +412,8 @@ function majAffichagesFiltres() {
   $("#aff-temps").textContent = temps >= +$("#f-temps").max ? "sans limite" : fmtTemps(temps);
   const train = +$("#f-train").value;
   $("#aff-train").textContent = train >= +$("#f-train").max ? "sans limite" : fmtTemps(train);
+  const gareKm = +$("#f-gare-km").value;
+  $("#aff-gare-km").textContent = gareKm >= +$("#f-gare-km").max ? "sans limite" : `à ${gareKm} km au plus`;
   $("#aff-score").textContent = $("#f-score").value > 0 ? `${$("#f-score").value}/100` : "0 (tous)";
 }
 
@@ -417,6 +421,7 @@ function reinitialiser() {
   $("#f-prix").value = $("#f-prix").max;
   $("#f-temps").value = $("#f-temps").max;
   $("#f-train").value = $("#f-train").max;
+  $("#f-gare-km").value = $("#f-gare-km").max;
   $("#f-score").value = 0;
   $("#f-terrain").value = "0";
   $("#f-gare").value = "";
@@ -943,7 +948,7 @@ function appliquerParametresUrl() {
 /* ---------------- événements ---------------- */
 
 const rafraichirDoucement = attenuer(rafraichir);
-for (const id of ["#f-prix", "#f-temps", "#f-train", "#f-score"]) {
+for (const id of ["#f-prix", "#f-temps", "#f-train", "#f-gare-km", "#f-score"]) {
   $(id).addEventListener("input", () => { majAffichagesFiltres(); rafraichirDoucement(); });
 }
 for (const id of ["#f-terrain", "#f-gare", "#f-tri"]) $(id).addEventListener("change", rafraichir);

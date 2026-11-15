@@ -86,6 +86,7 @@ def liste_annonces(
     region: str | None = None,
     gare: str | None = Query(None, description="Nom exact de la gare desservant le bien"),
     train_max: int | None = Query(None, description="Paris en N minutes de train au plus"),
+    gare_km_max: float | None = Query(None, description="Gare la plus proche à N km au plus"),
     q: str | None = Query(None, description="Recherche texte (titre, description, commune)"),
     tri: str = "score",
     limit: int = 200,
@@ -150,6 +151,7 @@ def liste_regions(
     type_bien: str | None = None,
     gare: str | None = None,
     train_max: int | None = None,
+    gare_km_max: float | None = None,
     q: str | None = None,
 ):
     """Classement de résilience des terroirs + nombre de biens par région.
@@ -191,6 +193,7 @@ def liste_gares(
     type_bien: str | None = None,
     region: str | None = None,
     train_max: int | None = None,
+    gare_km_max: float | None = None,
     q: str | None = None,
 ):
     """Gares desservant les biens, classées par temps de trajet vers Paris.

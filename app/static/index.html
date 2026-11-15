@@ -107,6 +107,17 @@
       <input type="range" id="f-train" min="30" max="150" step="15" value="150">
     </label>
 
+    <!-- L'autre moitié de l'accès sans voiture. « Paris en une heure » ne vaut
+         rien si la gare est à vingt-cinq kilomètres : il faut une voiture pour
+         l'atteindre, et c'est précisément ce dont on cherchait à se passer.
+         Médiane du catalogue : 13 km — la moitié des biens sont plus loin que
+         cela de leur gare. -->
+    <label class="champ">
+      <span>Gare la plus proche <output id="aff-gare-km">sans limite</output>
+        <span class="aide-filtre" title="Distance à vol d'oiseau jusqu'à la gare la plus proche. Fixer une limite écarte les biens dont aucune gare n'est connue.">ⓘ</span></span>
+      <input type="range" id="f-gare-km" min="2" max="25" step="1" value="25">
+    </label>
+
     <label class="champ">
       <span>Score de résilience minimum <output id="aff-score">0</output></span>
       <input type="range" id="f-score" min="0" max="90" step="5" value="0">

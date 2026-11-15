@@ -106,3 +106,81 @@ def base(tmp_path, monkeypatch):
 def test_le_curseur_coupe_ou_il_doit(base, minutes, attendus):
     _, items = db.chercher(base, {"train_max": minutes})
     assert {b["id"] for b in items} == attendus
+
+
+# --- L'autre moitié de l'accès sans voiture ---------------------------------
+#
+# Le temps de train disait à quelle distance de Paris on se trouve ; il ne
+# disait pas à quelle distance de la GARE. « Paris en une heure » ne vaut rien
+# si la gare est à vingt-cinq kilomètres : il faut une voiture pour l'atteindre,
+# et c'est précisément ce dont le pilier « accès sans voiture » cherche à se
+# passer. La donnée était là — affichée sur la fiche, « Migennes · à 8.5 km » —
+# mais nulle part filtrable.
+#
+# Mesuré sur le catalogue du 15 novembre 2026 : 4 628 biens ont une gare
+# connue, et leur distance médiane est de 13,2 km. La moitié d'entre eux sont
+# donc plus loin de leur gare que ce qu'on parcourt à pied.
+
+def test_le_curseur_de_distance_existe_sous_celui_du_train():
+    """Les trois questions d'accès — route, train, gare — se posent ensemble."""
+    assert 'id="f-gare-km"' in INTERFACE
+    assert INTERFACE.index('id="f-train"') < INTERFACE.index('id="f-gare-km"')
+
+
+def test_il_envoie_le_critere_et_se_tait_au_maximum():
+    assert 'p.set("gare_km_max", gareKm)' in SCRIPT
+    assert 'if (gareKm < +$("#f-gare-km").max) p.set("gare_km_max", gareKm);' in SCRIPT
+
+
+def test_il_se_remet_a_zero_avec_les_autres():
+    assert '$("#f-gare-km").value = $("#f-gare-km").max;' in SCRIPT
+
+
+def test_l_aide_previent_que_les_biens_sans_gare_sortent():
+    """Même exigence que pour le temps de train : ne pas faire passer une
+    ignorance pour une absence de desserte. Elle pèse lourd ici — 27 % du
+    catalogue seulement a une gare connue."""
+    debut = INTERFACE.index('id="f-gare-km"') - 800
+    bloc = INTERFACE[debut:INTERFACE.index('id="f-gare-km"')]
+    assert "aucune gare" in bloc.lower()
+
+
+@pytest.fixture()
+def base_km(tmp_path, monkeypatch):
+    monkeypatch.setenv("REFUGE_DB", str(tmp_path / "km.db"))
+    conn = db.connexion()
+    for identifiant, gare, km in (("pres", "Creil", 3.2), ("loin", "Chartres", 22.0),
+                                  ("sans", None, None)):
+        conn_bien = {"id": identifiant, "titre": "Maison", "type_bien": "maison",
+                     "commune": "X", "prix": 200000}
+        if gare:
+            conn_bien["train"] = {"nom": gare, "km": km, "minutes_paris": 60}
+        db.upsert_annonce(conn, conn_bien)
+    conn.commit()
+    yield conn
+    conn.close()
+
+
+@pytest.mark.parametrize("seuil, attendus", [
+    (3, set()), (5, {"pres"}), (22, {"pres", "loin"}), (25, {"pres", "loin"}),
+])
+def test_le_curseur_coupe_ou_il_doit(base_km, seuil, attendus):
+    _, items = db.chercher(base_km, {"gare_km_max": seuil})
+    assert {b["id"] for b in items} == attendus
+
+
+def test_un_bien_sans_gare_connue_est_ecarte(base_km):
+    """Il ne remplit pas la condition : le garder reviendrait à promettre une
+    gare à portée qu'on n'a pas constatée."""
+    _, items = db.chercher(base_km, {"gare_km_max": 25})
+    assert "sans" not in {b["id"] for b in items}
+    total, _ = db.chercher(base_km, {})
+    assert total == 3, "sans filtre, il reste au catalogue"
+
+
+def test_la_distance_est_rangee_en_colonne(base_km):
+    """Sans colonne, pas de filtre SQL : la distance resterait une note de bas
+    de page sur la fiche, comme elle l'était."""
+    ligne = base_km.execute(
+        "SELECT gare_km FROM annonces WHERE id = 'pres'").fetchone()
+    assert ligne["gare_km"] == pytest.approx(3.2)

@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS annonces (
     train_json        TEXT DEFAULT '{}',
     gare_nom          TEXT DEFAULT '',
     gare_minutes      INTEGER,
+    gare_km           REAL,
     score_total       REAL DEFAULT 0,
     score_detail_json TEXT DEFAULT '{}',
     badges_json       TEXT DEFAULT '[]',
@@ -129,6 +130,7 @@ def _migrer(conn: sqlite3.Connection) -> None:
                                 ("train_json", "TEXT DEFAULT '{}'"),
                                 ("gare_nom", "TEXT DEFAULT ''"),
                                 ("gare_minutes", "INTEGER"),
+                                ("gare_km", "REAL"),
                                 ("has_troglodyte", "INTEGER DEFAULT 0"),
                                 ("vue_le", "TEXT DEFAULT ''"),
                                 ("revue_le", "TEXT DEFAULT ''"),
@@ -189,6 +191,7 @@ def upsert_annonce(conn: sqlite3.Connection, a: dict) -> None:
         # pas une note de bas de page.
         "gare_nom": (a.get("train") or {}).get("nom") or "",
         "gare_minutes": (a.get("train") or {}).get("minutes_paris"),
+        "gare_km": (a.get("train") or {}).get("km"),
         "score_total": a.get("score_total", 0),
         "score_detail_json": json.dumps(a.get("score_detail", {}), ensure_ascii=False),
         "badges_json": json.dumps(a.get("badges", []), ensure_ascii=False),
@@ -291,6 +294,15 @@ def _clauses(filtres: dict, ignorer: set | None = None) -> tuple[str, list]:
     if "gare" not in ignorer and filtres.get("gare"):
         clauses.append("gare_nom = ?")
         params.append(filtres["gare"])
+
+    if "gare_km_max" not in ignorer and filtres.get("gare_km_max"):
+        # « Une heure de Paris » ne vaut rien si la gare est à vingt-cinq
+        # kilomètres et qu'on cherche justement à se passer de voiture : le
+        # pilier « accès sans voiture » tient aux DEUX distances, et une
+        # seule était filtrable. Comme pour le temps de train, un bien sans
+        # gare connue est écarté — il ne remplit pas la condition.
+        clauses.append("gare_km IS NOT NULL AND gare_km <= ?")
+        params.append(float(filtres["gare_km_max"]))
 
     if "train_max" not in ignorer and filtres.get("train_max"):
         # « Paris en moins d'une heure de train » : le critère que recouvre
