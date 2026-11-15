@@ -138,15 +138,39 @@ function photoReelle(a) {
 // qu'un dessin. Le lieu est la commune, pas la parcelle : notre géolocalisation
 // vient de la BAN sur commune + code postal, l'adresse exacte n'étant presque
 // jamais publiée. L'étiquette « © IGN » le dit, et la licence l'exige.
-function tuileAerienne(a) {
+// L'emprise est dite en KILOMÈTRES, et les degrés s'en déduisent par la
+// latitude : un degré de longitude rétrécit vers le nord, un degré de
+// latitude jamais. Même raisonnement et même valeur que pages._carte_aerienne,
+// pour que la fiche servie et la fiche affichée montrent la même étendue.
+const CIEL_LARGEUR_KM = 1.85;
+const KM_PAR_DEGRE_LAT = 111.32;
+
+// Une TUILE WMTS servait cette vue : 256 pixels de côté, zoom 15, soit 3,18 m
+// par pixel sous nos latitudes. Étirée sur les 780 pixels de la fiche — 1456
+// sur un écran à forte densité, ce que montrent les captures — elle était
+// agrandie près de six fois. D'où un flou que rien dans le code ne nommait :
+// une tuile est une image complète, elle ne « rate » jamais, elle arrive
+// seulement trop petite.
+//
+// GetMap rend donc l'image à la taille demandée, au lieu de prendre ce qu'une
+// grille de tuiles veut bien donner. À 2048 pixels pour 1,85 km, on tombe à
+// 0,90 m par pixel : trois fois et demie plus net, et de quoi distinguer une
+// haie d'un talus. L'orthophoto native descend à 0,20 m, mais c'est la
+// commune qu'on montre et non la parcelle — le centre vient de la BAN, pas
+// de l'adresse du bien.
+function urlAerienne(a, largeur = 1200, hauteur = 400) {
   if (a.lat == null || a.lon == null) return "";
-  const z = 15, n = 2 ** z;
-  const x = Math.floor((a.lon + 180) / 360 * n);
-  const phi = a.lat * Math.PI / 180;
-  const y = Math.floor((1 - Math.log(Math.tan(phi) + 1 / Math.cos(phi)) / Math.PI) / 2 * n);
-  return "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0"
-    + "&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&TILEMATRIXSET=PM"
-    + "&FORMAT=image/jpeg&TILEMATRIX=" + z + "&TILEROW=" + y + "&TILECOL=" + x;
+  const demiLargeurKm = CIEL_LARGEUR_KM / 2;
+  const demiHauteurKm = demiLargeurKm * hauteur / largeur;
+  // cos borné : une latitude polaire ferait diverger l'emprise. Aucun bien
+  // n'en approche, mais une URL ne doit pas en dépendre.
+  const retrecissement = Math.max(Math.cos(a.lat * Math.PI / 180), 0.15);
+  const dlon = demiLargeurKm / (KM_PAR_DEGRE_LAT * retrecissement);
+  const dlat = demiHauteurKm / KM_PAR_DEGRE_LAT;
+  const bbox = [a.lon - dlon, a.lat - dlat, a.lon + dlon, a.lat + dlat].join(",");
+  return "https://data.geopf.fr/wms-r?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap"
+    + "&LAYERS=ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&FORMAT=image/jpeg&CRS=CRS:84"
+    + "&BBOX=" + bbox + "&WIDTH=" + largeur + "&HEIGHT=" + hauteur;
 }
 
 /* La vue aérienne de la fiche, en pleine largeur et sur toute annonce.
@@ -156,7 +180,10 @@ function tuileAerienne(a) {
    parcelle serait inventer. La mention « © IGN » est due au titre de la
    Licence Ouverte. */
 function vueDuCiel(a) {
-  const ciel = tuileAerienne(a);
+  // Le conteneur fait 780 × 200 au plus large (.vue-ciel img) : la source est
+  // rendue au double, pour qu'un écran à forte densité ait un pixel d'image
+  // par pixel d'écran au lieu d'un pour quatre.
+  const ciel = urlAerienne(a, 2048, 525);
   if (!ciel) return "";
   return `<figure class="vue-ciel">
       <img src="${ciel}" loading="lazy" alt="Vue aérienne de ${echap(a.commune || "la commune")}"
@@ -169,7 +196,9 @@ function vueDuCiel(a) {
 
 function imgPhoto(a) {
   const src = photoReelle(a);
-  const ciel = tuileAerienne(a);
+  // Repli quand l'agence ne fournit pas de photo : le conteneur est plus
+  // court (.photo-grande, 230 px) et l'image y est recadrée en `cover`.
+  const ciel = urlAerienne(a, 1600, 520);
   const premiere = src || ciel;
   if (!premiere) return "";
   // Trois étages : la photo de l'agence si elle charge, sinon la vue

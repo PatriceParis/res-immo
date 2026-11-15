@@ -70,7 +70,9 @@ def test_la_vue_aerienne_est_sur_toute_fiche():
     assert "vueDuCiel(a)" in APP_JS
     bloc = APP_JS[APP_JS.index("function vueDuCiel"):]
     bloc = bloc[:bloc.index("\nfunction imgPhoto")]
-    assert "tuileAerienne" in bloc
+    # `tuileAerienne` jusqu'au 15 novembre 2026 : elle servait une tuile
+    # WMTS de 256 px, six fois trop petite pour la fiche.
+    assert "urlAerienne" in bloc
     # Aucune condition sur la présence d'une photo d'agence : la seule
     # raison de ne rien afficher est l'absence de coordonnées.
     assert "photoReelle" not in bloc

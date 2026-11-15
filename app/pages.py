@@ -207,10 +207,11 @@ de l'immo ?</a></p>
 # ramènerait par la fenêtre.
 _LARGEUR_KM = 1.85
 _KM_PAR_DEGRE_LAT = 111.32
-# Deux fois la taille d'affichage (la figure fait 100 % de sa colonne, soit
-# ~640 px au plus large) : l'image reste nette sur les écrans à forte densité,
-# où le CSS servait jusqu'ici un pixel pour quatre.
-_LARGEUR_PX, _HAUTEUR_PX = 1280, 640
+# La colonne fait 760 px moins ses marges (voir `main` dans la feuille de
+# style), soit ~720 px d'image. Un écran à forte densité en réclame donc
+# 1 440, et c'est ce que montraient les captures : 1 280 ne suffisait pas,
+# l'image restait étirée d'un dixième. 2 048 couvre le double et au-delà.
+_LARGEUR_PX, _HAUTEUR_PX = 2048, 1024
 
 
 def _carte_aerienne(bien: dict, largeur: int = _LARGEUR_PX,
@@ -239,9 +240,10 @@ def _carte_aerienne(bien: dict, largeur: int = _LARGEUR_PX,
     **L'image était floue.** 640 pixels pour 1,8 km font 2,85 m par pixel,
     quand l'orthophoto IGN en offre 0,20 : on jetait quatorze fois le détail
     disponible, et un écran à forte densité étalait encore ce peu sur quatre
-    fois la surface. La source est désormais rendue au double de sa taille
-    d'affichage, soit 1,45 m par pixel — toujours loin du grain natif, mais
-    c'est la commune qu'on montre, pas la parcelle.
+    fois la surface. La source est désormais rendue bien au-delà de sa taille
+    d'affichage, soit 0,90 m par pixel — toujours loin du grain natif, mais
+    c'est la commune qu'on montre, pas la parcelle, et une haie s'y distingue
+    d'un talus.
     """
     lat, lon = bien.get("lat"), bien.get("lon")
     if lat is None or lon is None:
