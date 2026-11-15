@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.5,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.5,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,256 +23,241 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.5,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.1,
+  "seconde": 3.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.4,
+  "seconde": 4.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.1,
+  "seconde": 5.3,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.1,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.7,
+  "seconde": 5.8,
   "reseau": "capifrance",
-  "connues": 20326,
-  "ecartees": 3319
+  "connues": 20579,
+  "ecartees": 3387
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.7,
+  "seconde": 5.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.9,
+  "seconde": 6.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 12.4,
+  "seconde": 18.8,
   "reseau": "iad",
-  "n": 112570,
+  "n": 112637,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 14.5,
+  "seconde": 20.4,
   "reseau": "iad",
-  "notees": 508
+  "notees": 520
  },
  {
   "etape": "tentative_notee",
-  "seconde": 17.2,
+  "seconde": 22.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 17.8,
+  "seconde": 22.9,
   "reseau": "iad",
-  "connues": 20326,
-  "ecartees": 3319
+  "connues": 20579,
+  "ecartees": 3387
  },
  {
   "etape": "departement",
-  "seconde": 205.1,
+  "seconde": 245.3,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 15,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 2,
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "prix_trop_haut": "Demeure 14 pièces de 357 m² à Coutances (50200)",
-   "hors_perimetre": "Maison 3 pièces de 80 m² à SAINT-BARTHELEMY (97133)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 398.3,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 36,
-  "tronquee": true,
-  "etats": {
-   "garde": 36,
-   "vendu": 13,
+   "garde": 38,
+   "vendu": 11,
    "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "outre_mer": 1
   },
   "exemples": {
-   "prix_trop_haut": "Ferme 18 pièces de 872 m² à Arraincourt (57380)"
+   "outre_mer": "Maison 4 pièces de 69 m² à Trois-Rivières (97114)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 570.4,
+  "seconde": 431.8,
   "reseau": "iad",
-  "departement": "59",
+  "departement": "02",
   "visitees": 50,
-  "gardes": 25,
+  "gardes": 31,
   "tronquee": true,
   "etats": {
-   "garde": 25,
-   "vendu": 16,
-   "ecarte": 9,
+   "garde": 31,
+   "vendu": 9,
+   "ecarte": 10,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "prix_trop_haut": 7,
-   "hors_perimetre": 1
+   "location": 2,
+   "hors_perimetre": 6,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "location": "Maison de ville 6 pièces de 88 m² à Roubaix (59100)",
-   "prix_trop_haut": "Maison 1 pièce de 240 m² à Lille (59000)",
-   "hors_perimetre": "Maison de campagne 3 pièces de 53 m² à Naves (19460)"
+   "location": "Maison 4 pièces de 80 m² à PAVANT (02310)",
+   "hors_perimetre": "Grange 1 pièce de 102 m² à Saint-Simon (16120)",
+   "prix_trop_haut": "Maison 11 pièces de 513 m² à Sainte-Preuve (02350)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 604.2,
+  "seconde": 607.0,
   "reseau": "iad",
-  "departement": "62",
-  "visitees": 11,
-  "gardes": 6,
+  "departement": "51",
+  "visitees": 41,
+  "gardes": 21,
   "tronquee": true,
   "etats": {
-   "garde": 6,
-   "vendu": 3,
-   "ecarte": 2,
+   "garde": 21,
+   "vendu": 14,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "location": 2
+   "prix_trop_haut": 4,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "location": "Maison 2 pièces de 50 m² à Saint-Hilaire-Cottes (62120)"
+   "prix_trop_haut": "Maison d",
+   "hors_perimetre": "Maison de campagne 3 pièces de 49 m² à CHENIERS (23220)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 604.2,
+  "seconde": 607.0,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 604.7,
+  "seconde": 607.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 605.6,
+  "seconde": 608.4,
   "reseau": "safti",
-  "n": 28914,
+  "n": 28894,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 606.6,
+  "seconde": 609.3,
   "reseau": "safti",
-  "notees": 42
+  "notees": 63
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.4,
+  "seconde": 609.9,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 608.0,
+  "seconde": 610.4,
   "reseau": "safti",
-  "connues": 20390,
-  "ecartees": 3383
+  "connues": 20630,
+  "ecartees": 3438
  },
  {
   "etape": "departement",
-  "seconde": 881.1,
+  "seconde": 864.4,
   "reseau": "safti",
-  "departement": "80",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1129.2,
-  "reseau": "safti",
-  "departement": "88",
+  "departement": "41",
   "visitees": 50,
   "gardes": 46,
   "tronquee": true,
   "etats": {
    "garde": 46,
-   "vendu": 2,
-   "ecarte": 2,
+   "vendu": 0,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 2
+   "prix_trop_haut": 1,
+   "hors_perimetre": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à LES FORGES de 95m²"
+   "prix_trop_haut": "Maison à vendre à SOUESMES de 282m²",
+   "hors_perimetre": "Maison à vendre à LISLE de 137m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1210.7,
+  "seconde": 1096.1,
   "reseau": "safti",
-  "departement": "02",
-  "visitees": 16,
-  "gardes": 16,
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 16,
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à LILLE de 181m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1205.1,
+  "reseau": "safti",
+  "departement": "60",
+  "visitees": 19,
+  "gardes": 19,
+  "tronquee": true,
+  "etats": {
+   "garde": 19,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -282,7 +267,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1210.7,
-  "gardes": 209
+  "seconde": 1205.1,
+  "gardes": 203
  }
 ]
