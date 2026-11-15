@@ -214,6 +214,43 @@ _KM_PAR_DEGRE_LAT = 111.32
 _LARGEUR_PX, _HAUTEUR_PX = 2048, 1024
 
 
+# Ce que le segment DRG du référentiel SNCF veut dire, en clair.
+_SEGMENT_GARE = {"A": "grande gare", "B": "gare régionale", "C": "halte"}
+
+
+def _gare_proche(bien: dict) -> str:
+    """« Troyes (grande gare) à 4,8 km » — la gare, et ce qu'elle est.
+
+    Depuis l'import du référentiel, 46 % des gares les plus proches sont des
+    haltes. Écrire « gare à 2 km » sans le dire ferait passer deux trains par
+    jour pour une desserte, et c'est exactement le genre de demi-vérité que
+    le reste de la fiche refuse.
+    """
+    train = bien.get("train")
+    if not isinstance(train, dict) or not train.get("nom"):
+        return ""
+    quoi = _SEGMENT_GARE.get(train.get("segment") or "")
+    return (f"{train['nom']}{f' ({quoi})' if quoi else ''} "
+            f"à {train.get('km')} km")
+
+
+def _gare_vers_paris(bien: dict) -> str:
+    """« 1 h 30 depuis Troyes (à 4,7 km) » — le temps, et SA gare.
+
+    Le référentiel ne porte aucun temps de trajet : seules les gares saisies
+    à la main en ont un. La plus proche n'en fait partie que dans un cas sur
+    trois, d'où la mention de la gare d'où part ce temps.
+    """
+    train = bien.get("train")
+    if not isinstance(train, dict) or train.get("minutes_paris") is None:
+        return ""
+    temps = _temps(train.get("minutes_paris"))
+    depuis = train.get("nom_vers_paris") or train.get("nom")
+    if depuis and depuis != train.get("nom"):
+        return f"{temps} depuis {depuis} (à {train.get('km_vers_paris')} km)"
+    return f"{temps} depuis cette gare"
+
+
 def _carte_aerienne(bien: dict, largeur: int = _LARGEUR_PX,
                     hauteur: int = _HAUTEUR_PX) -> str:
     """La commune vue du ciel — orthophotos IGN, Licence Ouverte.
@@ -345,9 +382,12 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
             ("Score de résilience", f"{round(bien['score_total'])} / 100" if bien.get("score_total") else ""),
             ("Altitude", f"{round(bien['altitude'])} m" if bien.get("altitude") is not None else ""),
             ("Route depuis Paris", _temps(bien.get("temps_voiture_min"))),
-            ("Gare la plus proche", (f"{bien['train']['nom']} à {bien['train']['km']} km, "
-                                     f"{_temps(bien['train'].get('minutes_paris'))} de Paris")
-             if isinstance(bien.get("train"), dict) and bien["train"].get("nom") else ""),
+            # Deux faits, deux lignes. Les réunir attribuait à la gare la
+            # plus proche un temps qui, deux fois sur trois, est celui d'une
+            # autre — depuis que le référentiel SNCF a remplacé les 41 gares
+            # saisies à la main, la plus proche est souvent une halte.
+            ("Gare la plus proche", _gare_proche(bien)),
+            ("Paris en train", _gare_vers_paris(bien)),
             ("Densité de la commune", f"{round(bien['densite_hab_km2'])} hab/km²" if bien.get("densite_hab_km2") else ""),
     ):
         if valeur:

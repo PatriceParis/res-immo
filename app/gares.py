@@ -17,6 +17,9 @@ arrondis ; ils servent à *classer* les communes, pas à réserver un billet.
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 from .geo import haversine_km
 
 # (nom de la gare, latitude, longitude, minutes depuis Paris, gare parisienne)
@@ -82,14 +85,62 @@ GARES = [
 # pour rejoindre la gare : le bien n'est plus « accessible en train ».
 RAYON_MAX_KM = 25.0
 
+# Le référentiel SNCF des gares de voyageurs (Licence Ouverte), importé par
+# scripts/importer_gares.py. Les 41 gares ci-dessus ne couvraient que les
+# régions d'origine du projet : mesuré le 15 novembre 2026, 72 % des biens
+# n'avaient aucune gare à moins de 25 km, et les départements découverts
+# étaient ceux de Lille, Nancy, Rouen, Caen et Tours. Ce n'était pas une
+# absence de desserte, c'était notre ignorance — et le filtre « gare la plus
+# proche » écartait les biens sur elle. Avec le référentiel : 95 %.
+_FICHIER_SNCF = Path(__file__).resolve().parent.parent / "data" / "gares_sncf.json"
+# Un degré de latitude fait 111 km, un degré de longitude au moins 68 aux
+# latitudes du périmètre : chercher dans la cellule du point et ses huit
+# voisines couvre donc largement les 25 km du rayon. Sans cette grille, un
+# chargement comparerait 17 000 biens à 2 792 gares — quarante-sept millions
+# de distances, plusieurs minutes, à chaque démarrage.
+_GRILLE: dict[tuple[int, int], list[tuple[str, float, float, str]]] = {}
 
-def gare_la_plus_proche(lat: float, lon: float) -> dict | None:
-    """Gare la plus proche d'un point, si elle est à moins de RAYON_MAX_KM.
 
-    Renvoie {"nom", "km", "minutes_paris", "gare_paris"} ou None.
-    """
-    if lat is None or lon is None:
+def _charger_referentiel() -> None:
+    if _GRILLE:
+        return
+    try:
+        brut = json.loads(_FICHIER_SNCF.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        brut = []                      # le fichier manque : on garde les 41
+    for gare in brut:
+        try:
+            lat, lon = float(gare["lat"]), float(gare["lon"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        _GRILLE.setdefault((int(lat), int(lon)), []).append(
+            (gare.get("nom") or "", lat, lon, gare.get("segment") or ""))
+
+
+def _plus_proche_du_referentiel(lat: float, lon: float):
+    """(nom, km, segment) de la gare la plus proche, toutes gares confondues."""
+    _charger_referentiel()
+    meilleure, distance_min = None, None
+    for dlat in (-1, 0, 1):
+        for dlon in (-1, 0, 1):
+            for nom, glat, glon, segment in _GRILLE.get(
+                    (int(lat) + dlat, int(lon) + dlon), ()):
+                d = haversine_km(lat, lon, glat, glon)
+                if distance_min is None or d < distance_min:
+                    meilleure, distance_min = (nom, segment), d
+    if meilleure is None:
         return None
+    return meilleure[0], distance_min, meilleure[1]
+
+
+def _plus_proche_vers_paris(lat: float, lon: float):
+    """(nom, km, minutes, gare parisienne) parmi les gares au temps connu.
+
+    Le référentiel SNCF ne porte AUCUN temps de trajet, et il ne faut pas en
+    inventer : Vendôme est à 42 min pour 160 km, Creil à 30 min pour 50 — le
+    rapport varie du simple au triple selon la ligne. Les 41 gares saisies à
+    la main gardent donc leur rôle, et c'est le seul : dire « Paris en ».
+    """
     meilleure, distance_min = None, None
     for nom, glat, glon, minutes, depuis in GARES:
         d = haversine_km(lat, lon, glat, glon)
@@ -98,9 +149,57 @@ def gare_la_plus_proche(lat: float, lon: float) -> dict | None:
     if meilleure is None or distance_min > RAYON_MAX_KM:
         return None
     nom, minutes, depuis = meilleure
-    return {
+    return nom, distance_min, minutes, depuis
+
+
+def gare_la_plus_proche(lat: float, lon: float) -> dict | None:
+    """La desserte ferroviaire d'un point, si une gare est dans le rayon.
+
+    DEUX questions, et elles n'ont pas la même réponse depuis l'import du
+    référentiel :
+
+    - « une gare à portée ? » — le pilier « accès sans voiture ». Toutes les
+      gares comptent, halte comprise, et `segment` dit laquelle on a trouvée
+      (A : grande gare nationale, B : régionale, C : halte). Annoncer « gare
+      à 2 km » sans dire que c'est une halte serait la demi-vérité que ce
+      site évite ailleurs.
+    - « Paris en combien ? » — seules les gares au temps saisi savent
+      répondre. Si c'en est une autre que la plus proche, `nom_vers_paris` le
+      dit, pour que la fiche n'attribue pas à l'une le temps de l'autre.
+
+    Renvoie None si aucune gare n'est dans le rayon : pour ce bien, la
+    question ne se pose pas.
+    """
+    if lat is None or lon is None:
+        return None
+
+    proche = _plus_proche_du_referentiel(lat, lon)
+    vers_paris = _plus_proche_vers_paris(lat, lon)
+    if proche is None or proche[1] > RAYON_MAX_KM:
+        # Aucune gare du référentiel à portée. Les 41 en connaissent-elles
+        # une ? Le référentiel les couvre toutes, donc non en pratique ;
+        # le repli existe pour le jour où le fichier manquerait.
+        if vers_paris is None:
+            return None
+        nom, km, minutes, depuis = vers_paris
+        proche = (nom, km, "")
+
+    nom, km, segment = proche
+    resultat = {
         "nom": nom,
-        "km": round(distance_min, 1),
-        "minutes_paris": minutes,
-        "gare_paris": f"Paris-{depuis}",
+        "km": round(km, 1),
+        "segment": segment,
+        "minutes_paris": None,
+        "gare_paris": "",
+        "nom_vers_paris": "",
+        "km_vers_paris": None,
     }
+    if vers_paris is not None:
+        nom_p, km_p, minutes, depuis = vers_paris
+        resultat.update({
+            "minutes_paris": minutes,
+            "gare_paris": f"Paris-{depuis}",
+            "nom_vers_paris": nom_p,
+            "km_vers_paris": round(km_p, 1),
+        })
+    return resultat

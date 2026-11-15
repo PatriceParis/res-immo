@@ -476,14 +476,25 @@ function caracteristiques(a) {
   return bouts.join(" · ");
 }
 
+// Ce que le segment DRG du référentiel SNCF veut dire, en clair. Depuis
+// l'import des 2 792 gares, 46 % des « gares les plus proches » sont des
+// haltes : écrire « gare à 2 km » sans le dire ferait passer deux trains par
+// jour pour une desserte.
+const SEGMENT_GARE = {A: "grande gare", B: "gare régionale", C: "halte"};
+
 // Accès : la voiture, et le train quand il y a une gare — c'est l'argument
 // propre à ce service, il mérite d'être lisible d'un coup d'œil.
 function acces(a) {
   const bouts = [];
   if (a.temps_voiture_min != null) bouts.push(`🚗 ${fmtTemps(a.temps_voiture_min)}`);
-  if (a.train && a.train.nom && a.train.minutes_paris != null) {
+  if (a.train && a.train.minutes_paris != null) {
+    // `nom_vers_paris` et non `nom` : depuis l'import du référentiel, la gare
+    // la plus proche n'est celle qui porte le temps que dans un cas sur
+    // trois. Afficher « 1 h 05 via la halte d'à côté » attribuerait à l'une
+    // le trajet de l'autre.
+    const gare = a.train.nom_vers_paris || a.train.nom;
     bouts.push(`🚆 ${fmtTemps(a.train.minutes_paris)} <span class="gare">via ${
-      echap(a.train.nom)}</span>`);
+      echap(gare)}</span>`);
   }
   return bouts.length ? `<div class="acces">${bouts.join("<span class='sep'>·</span>")}</div>` : "";
 }
@@ -707,8 +718,15 @@ function ouvrirFiche(id) {
       ${tuile("Paris en voiture", fmtTemps(a.temps_voiture_min),
               a.distance_km ? "~" + Math.round(a.distance_km * 1.25) + " km · estimé" : "estimé")}
       ${a.train && a.train.nom
+        ? tuile("Gare la plus proche", echap(a.train.nom),
+                `${a.train.km} km${SEGMENT_GARE[a.train.segment]
+                  ? " · " + SEGMENT_GARE[a.train.segment] : ""}`)
+        : ""}
+      ${a.train && a.train.minutes_paris != null
         ? tuile("Paris en train", fmtTemps(a.train.minutes_paris),
-                `${echap(a.train.nom)} · à ${a.train.km} km`)
+                a.train.nom_vers_paris && a.train.nom_vers_paris !== a.train.nom
+                  ? `depuis ${echap(a.train.nom_vers_paris)} · à ${a.train.km_vers_paris} km`
+                  : "depuis cette gare")
         : ""}
       ${tuile("Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}
       ${tuile("DPE", a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>` : "n.c.")}
