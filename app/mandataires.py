@@ -399,8 +399,39 @@ def ordre_dans_le_departement(annonces: list[dict], deja_vues: dict) -> list[dic
 # hors de nos terroirs.
 HORS_CIBLE_PAR_PASSAGE = 5
 
+# Part du lot réservée aux annonces DÉJÀ vues, c'est-à-dire à la revisite.
+#
+# `ordre_dans_le_departement` sert les jamais-vues d'abord, puis les plus
+# anciennement revues. L'intention est juste, mais la seconde moitié n'arrive
+# jamais : le sitemap d'IAD compte 112 570 adresses pour 6 487 annonces à
+# notre catalogue, et chaque passage en découvre de nouvelles. La file des
+# jamais-vues ne se vide donc pas — elle s'allonge —, et un ordre strict la
+# sert indéfiniment.
+#
+# Mesuré le 15 novembre 2026 : 93 % des annonces IAD et 80 % des Safti
+# n'avaient jamais été revues depuis leur découverte, certaines datant de
+# quatre-vingt-seize jours. Ce n'est pas un réglage trop prudent, c'est une
+# famine — la même que le tri alphabétique du vérificateur de liens, qui
+# donnait 0 % de couverture à Safti pour la même raison : un ordre strict là
+# où il fallait une part garantie.
+#
+# D'où ce quota, sur le modèle de HORS_CIBLE_PAR_PASSAGE juste au-dessus :
+# garanti mais non bloquant. Un département qui n'a pas assez de revisites à
+# faire rend ses places aux neuves, et inversement — une place réservée que
+# personne ne prend serait du budget perdu.
+#
+# Il porte sur les annonces AU CATALOGUE, et non sur toute page déjà ouverte.
+# La distinction coûte une ligne et évite de défaire le correctif d'octobre :
+# une page écartée — vendue, ou d'une commune homonyme d'une autre région —
+# a été ouverte, mais la rouvrir ne rapporte rien, elle ne reviendra pas au
+# catalogue. Ce sont ces 48 pages-là qui bloquaient la Côte-d'Or, et
+# `dates_de_derniere_visite` les compte à juste titre comme « vues » POUR
+# L'ORDRE. Les revisiter serait une autre affaire.
+PART_DE_REVISITE = 0.5
 
-def lot_du_passage(candidats: list[dict], maximum: int) -> list[dict]:
+
+def lot_du_passage(candidats: list[dict], maximum: int,
+                   au_catalogue: dict | None = None) -> list[dict]:
     """Les pages qu'un passage ouvre dans un département, dans l'ordre donné.
 
     Passer en dernier ne suffisait pas : quand un département compte moins de
@@ -416,17 +447,48 @@ def lot_du_passage(candidats: list[dict], maximum: int) -> list[dict]:
     finisse par être lue, et le reste du lot revient aux pages de chez nous.
     Une page sautée laisse le département « tronqué » : la règle de sortie ne
     retire rien de ce qu'on n'a pas relu.
+
+    `au_catalogue` ouvre le second quota, celui de la REVISITE (voir
+    PART_DE_REVISITE). Ce sont les annonces que le site SERT aujourd'hui, et
+    elles seules : rouvrir une page écartée ne la ramènerait pas. Sans cet
+    argument, le comportement est exactement celui d'avant — les appels qui
+    ne le passent pas servent les candidats dans l'ordre reçu, et c'est ce
+    que vérifient les tests d'origine.
     """
+    au_catalogue = au_catalogue or {}
+    neuves = [a for a in candidats if not au_catalogue.get(a["url"])]
+    revues = [a for a in candidats if au_catalogue.get(a["url"])]
     lot: list[dict] = []
+    prises: set = set()
     hors_cible = 0
-    for annonce in candidats:
-        if len(lot) >= maximum:
-            break
-        if annonce.get("hors_cible_selon_l_adresse"):
-            if hors_cible >= HORS_CIBLE_PAR_PASSAGE:
+
+    def servir(file: list[dict], quota: int) -> None:
+        """Prend au plus `quota` annonces de `file`, dans son ordre."""
+        nonlocal hors_cible
+        pris = 0
+        for annonce in file:
+            if pris >= quota or len(lot) >= maximum:
+                return
+            if annonce["url"] in prises:
                 continue
-            hors_cible += 1
-        lot.append(annonce)
+            if annonce.get("hors_cible_selon_l_adresse"):
+                if hors_cible >= HORS_CIBLE_PAR_PASSAGE:
+                    continue
+                hors_cible += 1
+            lot.append(annonce)
+            prises.add(annonce["url"])
+            pris += 1
+
+    # Sans catalogue, une seule file : l'ordre reçu, comme avant.
+    if not au_catalogue:
+        servir(candidats, maximum)
+        return lot
+
+    servir(revues, int(maximum * PART_DE_REVISITE))
+    servir(neuves, maximum)
+    # Les places qu'une file trop courte n'a pas prises reviennent à l'autre :
+    # réserver sans servir reviendrait à raccourcir le passage.
+    servir(revues, maximum)
     return lot
 
 

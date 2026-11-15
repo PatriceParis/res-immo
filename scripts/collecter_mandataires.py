@@ -471,7 +471,12 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
     aujourd_hui = date.today().isoformat()
     journal_ecartees = historique.journal_ecartees_mandataires()
     ecartees = historique.pages_ecartees(journal_ecartees)
-    deja_vues = mandataires.dates_de_derniere_visite(annonces_deja_connues(), ecartees)
+    au_catalogue = annonces_deja_connues()
+    # Pour l'ORDRE, une page écartée compte comme vue (correctif d'octobre :
+    # sans quoi les 48 refusées de Côte-d'Or repassaient en tête). Pour le
+    # QUOTA de revisite, non : seules les annonces servies méritent qu'on
+    # retourne voir si elles sont encore là.
+    deja_vues = mandataires.dates_de_derniere_visite(au_catalogue, ecartees)
     etape("catalogue_relu", reseau=cle, connues=len(deja_vues), ecartees=len(ecartees))
     total = 0
     # `tronquees` est fourni par l'appelant et PARTAGÉ par tous les réseaux du
@@ -492,7 +497,8 @@ def collecter_un_reseau(conn, cle: str, reseau: dict, index: list,
             print("  budget de temps atteint — la suite au prochain passage.")
             break
         candidats = mandataires.ordre_dans_le_departement(groupes[dept], deja_vues)
-        lot = mandataires.lot_du_passage(candidats, args.max_par_departement)
+        lot = mandataires.lot_du_passage(candidats, args.max_par_departement,
+                                         au_catalogue)
         # Un sitemap écourté rend une liste écourtée pour CHAQUE département
         # du réseau : aucun n'a été vu en entier, quand bien même son lot
         # tiendrait sous le plafond.
