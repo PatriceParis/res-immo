@@ -176,3 +176,54 @@ def test_dans_un_domaine_la_collecte_compte_aussi_comme_un_oeil():
         "personne ne l'a vu, puis vu il y a deux mois, puis vu hier par la collecte")
     assert liens.reconstate_le(verifie_jadis, verifies, {}) == "2026-08-20", \
         "le plus récent des deux yeux fait foi"
+
+
+# --- Les liens qu'on n'a pas réussi à ouvrir --------------------------------
+#
+# Un lien injoignable — réseau coupé, délai dépassé — ne reçoit aucun constat
+# de mort, et c'est juste : notre panne n'est pas la leur. Mais il n'était
+# inscrit nulle part non plus. Pour la rotation il restait donc « jamais
+# regardé », c'est-à-dire prioritaire, et il le redevenait à chaque passage.
+# Un site lent pouvait ainsi occuper la tête de file indéfiniment, pendant que
+# le reste du catalogue attendait derrière.
+#
+# La date de ces tentatives ne pouvait pas rejoindre le journal des vérifiées :
+# celle-là sert aussi à garder une annonce absente du sitemap (voir
+# `sans_les_vues_vivantes`), et un lien qu'on n'a pas su ouvrir ne vaut aucun
+# crédit. D'où un journal à part, lu par la seule rotation.
+
+def test_un_lien_injoignable_ne_repasse_plus_en_tete():
+    """LE test. Deux liens jamais vérifiés, l'un essayé hier sans réponse :
+    c'est l'autre qui doit passer en premier."""
+    annonces = catalogue(**{"safti.fr": 2})
+    essaye, jamais = annonces[0]["url"], annonces[1]["url"]
+    ordre = [a["url"] for a in liens.ordre_de_verification(
+        annonces, {}, {}, {essaye: "2026-11-14"})]
+    assert ordre[0] == jamais, "le lien injoignable monopolise encore le tour"
+
+
+def test_la_tentative_ne_vaut_pas_verification():
+    """Elle ne doit pas servir de crédit de fraîcheur : `reconstate_le` dit
+    quand le bien a été vu VIVANT, et l'audit s'en sert. Une tentative ratée
+    ne prouve rien sur le bien."""
+    annonce = {"url": "https://www.safti.fr/a", "revue_le": "2026-09-01"}
+    assert liens.reconstate_le(annonce, {}, {}) == "2026-09-01"
+
+
+def test_un_suspect_injoignable_cede_aussi_son_tour():
+    """La priorité aux suspects reste, mais entre deux suspects c'est celui
+    qu'on n'a pas encore essayé qui passe — sinon le même échec se rejoue."""
+    annonces = catalogue(**{"safti.fr": 2})
+    essaye, jamais = annonces[0]["url"], annonces[1]["url"]
+    journal = {essaye: {"constats": 1}, jamais: {"constats": 1}}
+    ordre = [a["url"] for a in liens.ordre_de_verification(
+        annonces, {}, journal, {essaye: "2026-11-14"})]
+    assert ordre[0] == jamais
+
+
+def test_sans_journal_de_tentatives_rien_ne_change():
+    """L'argument est facultatif : les appels qui l'ignorent — l'audit, les
+    essais — doivent garder exactement l'ordre d'avant."""
+    annonces = catalogue(**{"iadfrance.fr": 30, "safti.fr": 40})
+    assert ([a["url"] for a in liens.ordre_de_verification(annonces, {}, {})]
+            == [a["url"] for a in liens.ordre_de_verification(annonces, {}, {}, {})])

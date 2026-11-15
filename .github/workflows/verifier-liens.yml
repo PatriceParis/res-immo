@@ -101,7 +101,7 @@ jobs:
           # Le catalogue ne part QUE si l'export l'a reconstruit : sinon le
           # fichier resté sur le disque n'est plus digne de foi. Les journaux,
           # eux, décrivent ce passage-ci et partent dans tous les cas.
-          A_INDEXER="data/liens_morts.json data/liens_verifies.json data/dernier_passage_liens.json"
+          A_INDEXER="data/liens_morts.json data/liens_verifies.json data/liens_tentatives.json data/dernier_passage_liens.json"
           if [ "$CODE_EXPORT" -eq 0 ]; then
             A_INDEXER="data/annonces_reel.json $A_INDEXER"
           fi
@@ -130,12 +130,12 @@ jobs:
             for essai in 1 2 3 4 5; do
               if git push; then echo "Poussé (essai $essai)."; break; fi
               echo "Push rejeté, on se replace sur la version distante ($essai/5)…"
-              for f in liens_morts.json liens_verifies.json; do
+              for f in liens_morts.json liens_verifies.json liens_tentatives.json; do
                 cp "data/$f" "$RUNNER_TEMP/$f" 2>/dev/null || true
               done
               git fetch origin main
               git reset --hard origin/main
-              for f in liens_morts.json liens_verifies.json; do
+              for f in liens_morts.json liens_verifies.json liens_tentatives.json; do
                 cp "$RUNNER_TEMP/$f" "data/$f" 2>/dev/null || true
               done
               python scripts/exporter_reel.py || CODE_EXPORT=$?

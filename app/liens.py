@@ -229,7 +229,8 @@ def reconstate_le(annonce: dict, verifies: dict, journal: dict | None = None) ->
 
 
 def ordre_de_verification(annonces: list[dict], verifies: dict,
-                          journal: dict) -> list[dict]:
+                          journal: dict,
+                          tentatives: dict | None = None) -> list[dict]:
     """Les suspects d'abord ; ensuite chaque domaine à proportion de sa taille.
 
     La priorité aux suspects ne change pas : sans elle, le second constat
@@ -284,6 +285,26 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
     jamais-vérifiés du même domaine. Le palier se vide de lui-même : une
     fois le lien regardé après l'absence, le bien retombe dans la rotation.
     """
+    tentatives = tentatives or {}
+
+    def dernier_passage(annonce: dict) -> str:
+        """Dernière fois qu'on a REGARDÉ ce lien, vu ou pas vu.
+
+        `reconstate_le` dit quand on l'a vu VIVANT, et c'est ce qu'il faut à
+        l'audit de fraîcheur : une tentative qui a échoué ne prouve rien sur
+        le bien, et la compter comme une reconstatation ferait passer pour
+        frais un lien que personne n'a réussi à ouvrir.
+
+        La rotation, elle, a besoin de l'autre question : qui n'a pas encore
+        eu son tour ? Un lien injoignable n'était inscrit nulle part, donc il
+        restait « jamais regardé » et repassait en tête au passage suivant,
+        et au suivant. Un site lent ou momentanément à terre pouvait ainsi
+        occuper la tête de file indéfiniment, pendant que le reste du
+        catalogue attendait derrière.
+        """
+        return max(reconstate_le(annonce, verifies, journal),
+                   tentatives.get(annonce.get("url"), "") or "")
+
     suspects, douteux, reste = [], [], []
     for annonce in annonces:
         if not annonce.get("url"):
@@ -294,7 +315,9 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
             douteux.append(annonce)
         else:
             reste.append(annonce)
-    suspects.sort(key=lambda a: (verifies.get(a["url"], ""), a["url"]))
+    suspects.sort(key=lambda a: (max(verifies.get(a["url"], ""),
+                                     tentatives.get(a["url"], "") or ""),
+                                 a["url"]))
     # Les plus anciennement reconstatés d'abord : ce sont eux qui ont le plus
     # de chances d'être partis.
     douteux.sort(key=lambda a: (a.get("revue_le") or "", a["url"]))
@@ -305,7 +328,7 @@ def ordre_de_verification(annonces: list[dict], verifies: dict,
 
     etale = []
     for groupe in groupes.values():
-        groupe.sort(key=lambda a: (reconstate_le(a, verifies, journal), a["url"]))
+        groupe.sort(key=lambda a: (dernier_passage(a), a["url"]))
         taille = len(groupe)
         for rang, annonce in enumerate(groupe):
             # +0.5 : on vise le milieu de la tranche, pour qu'un domaine de

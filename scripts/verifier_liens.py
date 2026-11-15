@@ -37,6 +37,13 @@ from app import chargement, liens, robot  # noqa: E402
 REEL = RACINE / "data" / "annonces_reel.json"
 JOURNAL_MORTS = RACINE / "data" / "liens_morts.json"
 JOURNAL_VERIFIES = RACINE / "data" / "liens_verifies.json"
+# Les tentatives qui n'ont RIEN constaté — réseau coupé, délai dépassé. Elles
+# ne peuvent pas aller dans le journal des vérifiées : cette date-là sert aussi
+# à décider qu'une annonce absente du sitemap mérite d'être gardée (voir
+# liens.sans_les_vues_vivantes), et un lien qu'on n'a pas réussi à ouvrir ne
+# vaut aucun crédit. Mais elle doit exister quelque part, sans quoi la rotation
+# croit n'avoir jamais regardé et redonne le tour au même lien sans fin.
+JOURNAL_TENTATIVES = RACINE / "data" / "liens_tentatives.json"
 UA = robot.USER_AGENT           # le robot dit son nom (voir app/robot.py)
 
 
@@ -70,7 +77,7 @@ def observer(url: str, timeout: int = 12) -> tuple[int, str, str]:
 
 
 def candidats_dans_l_ordre(biens: list[dict], verifies: dict, morts: dict,
-                           servis: set) -> list[dict]:
+                           servis: set, tentatives: dict | None = None) -> list[dict]:
     """Les liens à vérifier, ceux que le site montre d'abord.
 
     Le fichier n'est pas le catalogue : un bien sur neuf y figure sans être
@@ -79,8 +86,8 @@ def candidats_dans_l_ordre(biens: list[dict], verifies: dict, morts: dict,
     vaut à l'intérieur de chaque moitié (voir liens.servis_d_abord).
     """
     montres, autres = liens.servis_d_abord(biens, servis)
-    return (liens.ordre_de_verification(montres, verifies, morts)
-            + liens.ordre_de_verification(autres, verifies, morts))
+    return (liens.ordre_de_verification(montres, verifies, morts, tentatives)
+            + liens.ordre_de_verification(autres, verifies, morts, tentatives))
 
 
 def main() -> None:
@@ -106,11 +113,13 @@ def main() -> None:
     morts = liens.nettoyer(_charger(JOURNAL_MORTS), urls_du_fichier)
     verifies = {u: j for u, j in _charger(JOURNAL_VERIFIES).items()
                 if u in urls_du_fichier}
+    tentatives = {u: j for u, j in _charger(JOURNAL_TENTATIVES).items()
+                  if u in urls_du_fichier}
 
     # Ce que le site montre vraiment : on rejoue ses filtres plutôt que d'en
     # recopier une liste — une copie finirait par diverger.
     servis = {b["id"] for b in chargement.biens_servis(biens) if b.get("id")}
-    candidats = candidats_dans_l_ordre(biens, verifies, morts, servis)
+    candidats = candidats_dans_l_ordre(biens, verifies, morts, servis, tentatives)
     if args.cibles:
         candidats = [b for b in candidats if args.cibles in b["url"]]
     lot = candidats[:args.max]
@@ -129,11 +138,18 @@ def main() -> None:
         statut, url_finale, texte = observer(url)
         time.sleep(args.delai)
         if statut == 0:
-            injoignables += 1     # notre panne, pas la leur : aucun constat
+            # Notre panne, pas la leur : aucun constat de mort. Mais la
+            # tentative est notée, sans quoi ce lien repasserait en tête au
+            # prochain passage — et à tous les suivants tant que le site
+            # reste injoignable, en occupant la place d'un autre.
+            injoignables += 1
+            tentatives[url] = aujourd_hui
             continue
         etat, motif = liens.verdict(statut, url, url_finale, texte)
         liens.noter(morts, url, etat, aujourd_hui, motif)
         verifies[url] = aujourd_hui
+        # Le lien a répondu : la trace de ses échecs passés n'a plus d'objet.
+        tentatives.pop(url, None)
         if etat == "vivant":
             vivants += 1
         else:
@@ -148,6 +164,7 @@ def main() -> None:
     print(f"retraits confirmés en attente d'export : {len(confirmes)}")
     _ecrire(JOURNAL_MORTS, morts)
     _ecrire(JOURNAL_VERIFIES, verifies)
+    _ecrire(JOURNAL_TENTATIVES, tentatives)
 
 
 if __name__ == "__main__":
