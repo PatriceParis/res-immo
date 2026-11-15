@@ -260,7 +260,10 @@ def _clauses(filtres: dict, ignorer: set | None = None) -> tuple[str, list]:
         "prix_max": "prix <= ?",
         "temps_max": "temps_voiture_min <= ?",
         "surface_min": "surface_m2 >= ?",
-        "terrain_min": "terrain_m2 >= ?",
+        # « terrain_min » retiré le 15 novembre 2026 avec son contrôle : une
+        # clause que plus rien n'appelle finit par être réactivée par
+        # mégarde, et c'est la raison pour laquelle le filtre « agence » a
+        # été effacé jusqu'au SQL lui aussi.
         "score_min": "score_total >= ?",
     }
     for cle, sql in numeriques.items():

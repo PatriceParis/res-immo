@@ -382,8 +382,6 @@ function lireFiltres() {
   if (temps < +$("#f-temps").max) p.set("temps_max", temps);
   const score = +$("#f-score").value;
   if (score > 0) p.set("score_min", score);
-  const terrain = +$("#f-terrain").value;
-  if (terrain > 0) p.set("terrain_min", terrain);
   for (const [id, cle] of [
     ["#f-cave", "cave"], ["#f-puits", "puits"], ["#f-bois", "bois"],
     ["#f-solaire", "solaire"], ["#f-dependances", "dependances"],
@@ -423,7 +421,6 @@ function reinitialiser() {
   $("#f-train").value = $("#f-train").max;
   $("#f-gare-km").value = $("#f-gare-km").max;
   $("#f-score").value = 0;
-  $("#f-terrain").value = "0";
   $("#f-gare").value = "";
   $("#f-tri").value = "score";
   etat.region = null;
@@ -951,7 +948,7 @@ const rafraichirDoucement = attenuer(rafraichir);
 for (const id of ["#f-prix", "#f-temps", "#f-train", "#f-gare-km", "#f-score"]) {
   $(id).addEventListener("input", () => { majAffichagesFiltres(); rafraichirDoucement(); });
 }
-for (const id of ["#f-terrain", "#f-gare", "#f-tri"]) $(id).addEventListener("change", rafraichir);
+for (const id of ["#f-gare", "#f-tri"]) $(id).addEventListener("change", rafraichir);
 document.querySelectorAll(".atouts input").forEach((c) => c.addEventListener("change", rafraichir));
 $("#f-reinit").addEventListener("click", reinitialiser);
 

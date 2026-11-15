@@ -179,12 +179,11 @@ def cases_a_cocher_actives(appeler: Appel) -> Rapport:
 def seuils_numeriques_respectes(appeler: Appel) -> Rapport:
     """Un curseur de budget doit vraiment borner les prix affichés."""
     r = Rapport("seuils_numeriques_respectes",
-                "Les curseurs (budget, surface, terrain, temps de route) "
+                "Les curseurs (budget, surface, temps de route) "
                 "bornent réellement les biens affichés.")
     controles = (
         ("prix_max", 200000, "prix", lambda v, s: v <= s),
         ("surface_min", 150, "surface_m2", lambda v, s: v >= s),
-        ("terrain_min", 5000, "terrain_m2", lambda v, s: v >= s),
         ("temps_max", 150, "temps_voiture_min", lambda v, s: v <= s),
         ("score_min", 40, "score_total", lambda v, s: v >= s),
     )
