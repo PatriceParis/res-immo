@@ -371,6 +371,39 @@ body {
 .btn-reessayer:hover { background: var(--accent); border-color: var(--accent); }
 .btn-reessayer:active { transform: translateY(1px); }
 
+/* ---------- pagination ---------- */
+.pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; flex-wrap: wrap; margin: 24px 2px 8px;
+}
+.page-btn {
+  font: inherit; font-weight: 600; cursor: pointer;
+  padding: 12px 20px; border-radius: 8px; min-height: 44px;
+  border: 1px solid var(--marque); background: var(--marque); color: var(--sur-marque);
+}
+.page-btn:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); }
+.page-btn:active:not(:disabled) { transform: translateY(1px); }
+/* Désactivé et non masqué : le bouton garde sa place, donc l'autre ne se
+   déplace pas sous le doigt entre la première page et la deuxième. */
+.page-btn:disabled { background: transparent; color: var(--encre-2); border-color: var(--bordure); cursor: default; }
+.page-rang { color: var(--encre-2); font-size: 14px; }
+
+/* ---------- amas de la carte ---------- */
+/* Le chiffre est écrit, pas seulement la couleur : même règle que la pastille
+   de score, pour la même raison — un daltonien lit « 128 », pas du vert. */
+/* Neutre, et non d'une couleur de score : la gamme dit la note d'UN bien,
+   et un groupe de quatre-vingt-dix n'a pas de note. */
+.amas {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; border: 2px solid var(--n4);
+  background: var(--carte-fond); color: var(--marque);
+  font-weight: 800; line-height: 1;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .25);
+}
+.amas b { font-size: 13px; }
+.legende-amas { display: block; margin-top: 7px; padding-top: 7px; max-width: 190px;
+  border-top: 1px solid var(--bordure); color: var(--encre-2); font-size: 11.5px; line-height: 1.35; }
+
 /* ---------- terroirs ciblés (priorisation par région) ---------- */
 .terroirs-bloc { margin: 16px 2px 0; }
 .terroirs-titre { font-size: 12.5px; color: var(--encre-2); font-weight: 700; }

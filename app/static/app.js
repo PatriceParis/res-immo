@@ -3,7 +3,7 @@
 
 const $ = (sel) => document.querySelector(sel);
 
-const etat = { annonces: [], carte: null, calque: null, cadre: false, region: null, regions: [] };
+const etat = { annonces: [], carte: null, calque: null, cadre: false, region: null, regions: [], page: 0, total: 0 };
 
 /* ---------------- utilitaires ---------------- */
 
@@ -595,6 +595,10 @@ function initCarte() {
     radius: 7, color: "#24312a", weight: 2, fillColor: "#fff", fillOpacity: 1,
   }).addTo(etat.carte).bindTooltip("Paris", { permanent: false });
   etat.calque = L.layerGroup().addTo(etat.carte);
+  etat.carte.on("moveend zoomend", () => {
+    clearTimeout(minuterieCarte);
+    minuterieCarte = setTimeout(rendreCarte, 250);
+  });
 
   const legende = L.control({ position: "bottomleft" });
   legende.onAdd = () => {
@@ -603,35 +607,96 @@ function initCarte() {
       <span class="pastille n4"></span>70–100 · excellent<br>
       <span class="pastille n3"></span>55–69 · bon<br>
       <span class="pastille n2"></span>40–54 · moyen<br>
-      <span class="pastille n1"></span>0–39 · limité`;
+      <span class="pastille n1"></span>0–39 · limité
+      <span class="legende-amas">Un cercle chiffré regroupe plusieurs biens —
+        zoomez pour les séparer.</span>`;
     return div;
   };
   legende.addTo(etat.carte);
 }
 
-function rendreCarte() {
+// La carte ne suit PAS la pagination. On cherche une maison en regardant où
+// elles sont : une carte qui ne montrerait que la page courante dirait de la
+// région quelque chose de faux. Elle porte donc tous les biens trouvés — mais
+// regroupés par le serveur, parce que seize mille marqueurs ne se posent pas
+// dans un navigateur de téléphone (voir db.points).
+//
+// Le regroupement dépend du zoom ET du cadre visible : la carte redemande
+// donc ses amas à chaque déplacement, une fois le geste terminé.
+let minuterieCarte = null;
+
+function cadreCarte() {
+  const b = etat.carte.getBounds();
+  const p = lireFiltres();
+  p.set("zoom", String(etat.carte.getZoom()));
+  p.set("sud", b.getSouth().toFixed(5));
+  p.set("ouest", b.getWest().toFixed(5));
+  p.set("nord", b.getNorth().toFixed(5));
+  p.set("est", b.getEast().toFixed(5));
+  return p;
+}
+
+async function rendreCarte() {
   if (!etat.carte) return;
+  const p = cadreCarte();
+  // Tant que la carte n'a pas été cadrée sur cette recherche, on demande
+  // aussi son étendue : choisir « Normandie » doit emmener la carte en
+  // Normandie, pas laisser l'utilisateur l'y chercher.
+  const aCadrer = !etat.cadre;
+  if (aCadrer) p.set("cadre", "1");
+  let data;
+  try {
+    const r = await fetch("/api/points?" + p.toString());
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    data = await r.json();
+  } catch (e) {
+    return;                       // la liste reste utilisable ; la carte se tait
+  }
+  if (aCadrer && data.cadre) {
+    etat.cadre = true;            // avant fitBounds : il déclenche moveend
+    etat.carte.fitBounds([[data.cadre[0], data.cadre[1]], [data.cadre[2], data.cadre[3]]],
+                         { padding: [30, 30], maxZoom: 12 });
+    return;                       // moveend redemandera les amas au bon zoom
+  }
+  etat.cadre = true;
   etat.calque.clearLayers();
-  const points = [];
-  for (const a of etat.annonces) {
-    if (a.lat == null || a.lon == null) continue;
-    points.push([a.lat, a.lon]);
-    const marqueur = L.circleMarker([a.lat, a.lon], {
-      radius: 9,
-      color: "#1b4332", weight: 2,
-      fillColor: COULEURS_NIVEAU[niveauScore(a.score_total)], fillOpacity: 0.95,
-    });
-    marqueur.bindPopup(
-      `<b>${Math.round(a.score_total)}/100</b> — ${echap(a.titre)}<br>` +
-      `${a.prix ? euros(a.prix) : ""} · 🚗 ${fmtTemps(a.temps_voiture_min)}<br>` +
-      `<a href="#" data-ouvrir="${echap(a.id)}">Voir la fiche</a>`
-    );
-    marqueur.addTo(etat.calque);
+  for (const a of data.amas || []) {
+    (a.n === 1 ? marqueurBien : marqueurAmas)(a).addTo(etat.calque);
   }
-  if (points.length && !etat.cadre) {
-    etat.carte.fitBounds(points, { padding: [30, 30] });
-    etat.cadre = true;
-  }
+}
+
+// Un bien seul : le marqueur d'avant, à sa couleur de score, qui ouvre la fiche.
+function marqueurBien(a) {
+  const m = L.circleMarker([a.lat, a.lon], {
+    radius: 9, color: "#1b4332", weight: 2,
+    fillColor: COULEURS_NIVEAU[niveauScore(a.haut)], fillOpacity: 0.95,
+  });
+  m.bindPopup(`<b>${a.haut}/100</b><br>
+    <a href="#" data-ouvrir="${echap(a.id)}">Voir la fiche</a>`);
+  return m;
+}
+
+// Un amas est NEUTRE, et c'est délibéré. La gamme de couleurs dit le score
+// d'UN bien ; un groupe de quatre-vingt-dix n'a pas de score. Les colorer sur
+// la même échelle invitait à lire « ce coin vaut 48 » — une moyenne qui, sur
+// un groupe hétérogène, ne décrit personne. L'amas ne porte donc que ce qu'il
+// sait : combien ils sont, et entre quelles notes ils se tiennent.
+function marqueurAmas(a) {
+  const taille = a.n >= 500 ? 52 : a.n >= 100 ? 44 : a.n >= 20 ? 38 : 32;
+  const m = L.marker([a.lat, a.lon], {
+    icon: L.divIcon({
+      className: "",
+      html: `<div class="amas" style="width:${taille}px;height:${taille}px">
+               <b>${nombre(a.n)}</b></div>`,
+      iconSize: [taille, taille],
+      iconAnchor: [taille / 2, taille / 2],
+    }),
+  });
+  m.bindTooltip(`${nombre(a.n)} biens · scores de ${a.bas} à ${a.haut}`);
+  // Cliquer sur un amas, c'est demander à voir ce qu'il contient.
+  m.on("click", () => etat.carte.setView([a.lat, a.lon],
+    Math.min(etat.carte.getZoom() + 3, 16)));
+  return m;
 }
 
 /* Un viager porté à la connaissance du lecteur AVANT qu'il lise le prix.
@@ -908,13 +973,11 @@ function fermerFiche() {
 
 /* ---------------- chargement des données ---------------- */
 
-// Ce que la page d'accueil charge d'un coup. Le catalogue a dépassé trois
-// mille biens servis : les demander tous, c'était plusieurs méga-octets de
-// JSON, autant de marqueurs sur la carte, et un premier affichage qui
-// s'alourdissait à mesure que la collecte progressait. Le compteur continue
-// de dire combien de biens répondent aux filtres ET combien sont montrés —
-// affiner les filtres reste le chemin vers les autres.
-const BIENS_PAR_PAGE = 250;
+// Combien de biens par page. Elles étaient 250 d'un bloc : sur téléphone, la
+// page mesurait 109 000 pixels de haut — environ cent trente écrans — et les
+// biens 251 à 347 n'étaient accessibles QUE par les filtres. Vingt-quatre
+// tiennent en une douzaine d'écrans, et toutes les pages sont atteignables.
+const BIENS_PAR_PAGE = 24;
 
 // Quand la recherche ne répond pas. Le site sait déjà le dire pour la carte
 // (« Carte indisponible sans connexion internet ») ; la liste, elle, restait
@@ -933,9 +996,32 @@ function signalerPanne() {
   });
 }
 
+// Un changement de filtre ramène à la première page : rester page 7 d'une
+// recherche qui n'en compte plus que deux afficherait un vide inexplicable.
 async function rafraichir() {
+  etat.page = 0;
+  await chargerPage();
+  rendreCarte();
+  // Les pastilles de terroir comptent avec les mêmes filtres : elles doivent
+  // donc être recalculées à chaque changement. Le menu des gares aussi —
+  // annoncer « Creil (13) » quand les filtres n'en laisseraient aucun serait
+  // le même mensonge, en plus discret.
+  chargerTerroirs();
+  chargerGares();
+}
+
+async function allerPage(n) {
+  etat.page = n;
+  await chargerPage();
+  // Changer de page sans remonter laisserait le lecteur au milieu de la
+  // suivante, devant des biens qu'il croirait avoir déjà vus.
+  $(".barre-resultats").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+async function chargerPage() {
   const p = lireFiltres();
   p.set("limit", String(BIENS_PAR_PAGE));
+  p.set("offset", String(etat.page * BIENS_PAR_PAGE));
   let data;
   try {
     const reponse = await fetch("/api/annonces?" + p.toString());
@@ -946,24 +1032,37 @@ async function rafraichir() {
     return;
   }
   etat.annonces = data.items;
+  etat.total = data.total;
 
   // Le compteur doit décrire CE QUI EST AFFICHÉ. Annoncer « 250 biens
   // trouvés » en n'en listant que 200 est le même travers que les pastilles
   // de terroir qui comptaient sans les filtres : un chiffre qui ne
   // correspond pas à ce qu'il prétend décrire.
   const n = data.total;
+  const debut = etat.page * BIENS_PAR_PAGE;
   const montres = (data.items || []).length;
-  $("#compteur").textContent = `${n} bien${n > 1 ? "s" : ""} trouvé${n > 1 ? "s" : ""}`
-    + (montres < n ? ` — les ${montres} premiers affichés` : "");
+  $("#compteur").textContent = `${nombre(n)} bien${n > 1 ? "s" : ""} trouvé${n > 1 ? "s" : ""}`
+    + (n > montres ? ` — ${nombre(debut + 1)} à ${nombre(debut + montres)}` : "");
 
   rendreListe();
-  rendreCarte();
-  // Les pastilles de terroir comptent avec les mêmes filtres : elles doivent
-  // donc être recalculées à chaque changement. Le menu des gares aussi —
-  // annoncer « Creil (13) » quand les filtres n'en laisseraient aucun serait
-  // le même mensonge, en plus discret.
-  chargerTerroirs();
-  chargerGares();
+  rendrePagination();
+}
+
+function rendrePagination() {
+  const nav = $("#pagination");
+  const pages = Math.ceil(etat.total / BIENS_PAR_PAGE);
+  if (pages <= 1) { nav.innerHTML = ""; return; }
+  const bouton = (libelle, page, desactive, classe) =>
+    `<button type="button" class="page-btn ${classe || ""}" data-page="${page}"
+       ${desactive ? "disabled" : ""}>${libelle}</button>`;
+  nav.innerHTML =
+    bouton("← Précédents", etat.page - 1, etat.page === 0)
+    + `<span class="page-rang">Page ${nombre(etat.page + 1)}
+         sur ${nombre(pages)}</span>`
+    + bouton("Suivants →", etat.page + 1, etat.page >= pages - 1);
+  for (const b of nav.querySelectorAll(".page-btn")) {
+    b.addEventListener("click", () => allerPage(+b.dataset.page));
+  }
 }
 
 async function initialiser() {

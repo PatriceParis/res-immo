@@ -101,6 +101,57 @@ def liste_annonces(
     return {"total": total, "items": items}
 
 
+@app.get("/api/points")
+def points_carte(
+
+    prix_min: int | None = None,
+    prix_max: int | None = None,
+    temps_max: int | None = Query(None, description="Temps de route max depuis Paris (minutes)"),
+    surface_min: int | None = None,
+    score_min: int | None = None,
+    cave: int = 0,
+    puits: int = 0,
+    bois: int = 0,
+    solaire: int = 0,
+    dependances: int = 0,
+    potager: int = 0,
+    troglodyte: int = 0,
+    hors_inondation: int = 0,
+    type_bien: str | None = None,
+    region: str | None = None,
+    gare: str | None = Query(None, description="Nom exact de la gare desservant le bien"),
+    train_max: int | None = Query(None, description="Paris en N minutes de train au plus"),
+    gare_km_max: float | None = Query(None, description="Gare la plus proche à N km au plus"),
+    q: str | None = Query(None, description="Recherche texte (titre, description, commune)"),
+    tri: str = "score",
+    limit: int = 200,
+    offset: int = 0,
+    zoom: float = Query(7, ge=0, le=20, description="Zoom Leaflet courant"),
+    sud: float | None = None,
+    ouest: float | None = None,
+    nord: float | None = None,
+    est: float | None = None,
+    cadre: int = Query(0, description="1 pour obtenir aussi l'étendue de toute la recherche"),
+):
+    """Les biens de la recherche, regroupés pour la carte.
+
+    La liste est paginée, la carte ne l'est pas : on cherche une maison en
+    regardant OÙ elles sont, et une carte qui ne montrerait que la page
+    courante dirait de la région quelque chose de faux. Elle porte donc tous
+    les biens trouvés, mais en amas — voir db.points.
+    """
+    filtres = {k: v for k, v in locals().items()}
+    bbox = None
+    if None not in (sud, ouest, nord, est):
+        bbox = (sud, ouest, nord, est)
+    assurer_donnees()
+    conn = db.connexion()
+    try:
+        return db.points(conn, filtres, zoom, bbox, avec_cadre=bool(cadre))
+    finally:
+        conn.close()
+
+
 @app.get("/api/annonces/{annonce_id}")
 def detail_annonce(annonce_id: str):
     assurer_donnees()

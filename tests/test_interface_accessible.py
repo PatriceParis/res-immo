@@ -105,7 +105,8 @@ def test_la_recherche_dit_quand_elle_echoue():
     assert "signalerPanne" in SCRIPT
     assert "La recherche n'a pas répondu" in SCRIPT
     assert "reessayer" in SCRIPT, "sans bouton, le message est un cul-de-sac"
-    # et la panne doit être attrapée là où elle se produit
-    bloc = SCRIPT[SCRIPT.index("async function rafraichir()"):]
+    # et la panne doit être attrapée là où elle se produit — c'est-à-dire
+    # autour de l'appel qui charge la liste, pagination comprise
+    bloc = SCRIPT[SCRIPT.index("async function chargerPage()"):]
     bloc = bloc[:bloc.index("\n}")]
     assert "catch" in bloc and "signalerPanne()" in bloc

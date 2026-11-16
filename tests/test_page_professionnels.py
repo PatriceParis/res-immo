@@ -15,10 +15,11 @@ professionnelle pour la perdre serait pire que ne pas la recueillir — c'est
 la leçon de la mise en relation retirée le 17 août, dont le journal vivait
 dans un fichier temporaire effacé à chaque redémarrage.
 
-Quant à l'accueil : le catalogue a dépassé trois mille biens servis, et les
+Quant à l'accueil : le catalogue a dépassé seize mille biens servis, et les
 demander tous d'un coup alourdit le premier affichage à mesure que la collecte
-progresse. Le compteur doit continuer de dire les deux nombres — combien
-répondent aux filtres, combien sont montrés.
+progresse. Depuis novembre 2026 la liste se pagine ; le compteur doit
+continuer de dire les deux nombres — combien répondent aux filtres, et
+lesquels sont montrés.
 """
 
 import re
@@ -41,21 +42,41 @@ def sans_balises(html: str) -> str:
 
 # --- L'accueil ------------------------------------------------------------
 
-def test_l_accueil_ne_demande_que_deux_cent_cinquante_biens():
-    """LE test de la limite. Écrit en clair, pas déduit d'un commentaire."""
-    assert re.search(r"BIENS_PAR_PAGE\s*=\s*250", APP_JS), (
-        "la limite du listing d'accueil n'est pas fixée à 250")
+def test_l_accueil_ne_demande_qu_une_page_de_biens():
+    """LE test de la limite. Écrit en clair, pas déduit d'un commentaire.
+
+    Elle valait 250 jusqu'en novembre 2026, et c'était un compromis bancal :
+    assez pour alourdir la page (109 189 pixels de haut sur téléphone) et
+    trop peu pour tout montrer, les biens suivants n'étant atteignables que
+    par les filtres. La pagination lève le compromis — la limite descend donc
+    à 24, et la contrainte d'origine (une seule limite, déclarée en clair et
+    réellement envoyée) tient toujours.
+    """
+    limite = re.search(r"BIENS_PAR_PAGE\s*=\s*(\d+)", APP_JS)
+    assert limite, "la limite du listing d'accueil n'est pas déclarée en clair"
+    assert int(limite.group(1)) <= 50, (
+        "une page de plus de cinquante biens retombe dans le défilement sans fin")
     assert '"limit", "500"' not in APP_JS, (
         "l'ancienne demande de 500 biens subsiste")
     assert 'p.set("limit", String(BIENS_PAR_PAGE))' in APP_JS, (
         "la requête n'utilise pas la limite déclarée")
+    assert 'p.set("offset", String(etat.page * BIENS_PAR_PAGE))' in APP_JS, (
+        "sans décalage, la pagination afficherait toujours la même page")
 
 
 def test_le_compteur_dit_toujours_combien_sont_montres():
     """Limiter sans le dire ferait annoncer « 3 177 biens trouvés » sous une
-    liste de 250 — le travers que ce compteur avait déjà corrigé une fois."""
-    assert "montres < n" in APP_JS and "premiers affichés" in APP_JS, (
+    liste de 24 — le travers que ce compteur avait déjà corrigé une fois.
+
+    Il disait « les 250 premiers affichés » ; avec des pages il doit dire
+    LESQUELS, car « les 24 premiers » serait faux dès la page 2.
+    """
+    assert "n > montres" in APP_JS, (
         "le compteur ne distingue plus les biens trouvés de ceux affichés")
+    assert "nombre(debut + 1)} à ${nombre(debut + montres)" in APP_JS, (
+        "le compteur ne dit pas quels biens de la liste sont affichés")
+    assert "premiers affichés" not in APP_JS, (
+        "« les N premiers » est faux dès la deuxième page")
 
 
 # --- Le lien du pied de page ---------------------------------------------

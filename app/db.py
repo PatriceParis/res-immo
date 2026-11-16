@@ -7,6 +7,7 @@ Aucune installation de serveur de base de données n'est nécessaire.
 from __future__ import annotations
 
 import json
+import math
 import os
 import sqlite3
 from datetime import date
@@ -359,6 +360,89 @@ def chercher(conn: sqlite3.Connection, filtres: dict) -> tuple[int, list[dict]]:
         params + [limite, decalage],
     ).fetchall()
     return total, [_row_vers_dict(r) for r in rows]
+
+
+# Une grille dont la maille suit le zoom. À 256 px la tuile, un degré de
+# longitude vaut 256·2^zoom/360 pixels ; on veut des amas espacés d'environ
+# 55 px, d'où 55·360/256 ≈ 77 degrés divisés par 2^zoom. En Mercator la
+# latitude est étirée par 1/cos(lat) : à maille carrée à l'écran, la cellule
+# couvre donc MOINS de degrés en latitude qu'en longitude, d'où le cosinus.
+_PIXELS_PAR_AMAS = 55.0
+# Plafond de cellules rendues. Avec une zone visible il n'est jamais atteint ;
+# sans elle, un zoom fin le touche, et la réponse le dit (`tronque`).
+_AMAS_MAX = 1200
+
+
+def maille(zoom: float, latitude: float) -> tuple[float, float]:
+    """(pas en latitude, pas en longitude) pour ce zoom, en degrés."""
+    pas_lon = _PIXELS_PAR_AMAS * 360.0 / 256.0 / (2.0 ** max(zoom, 0.0))
+    pas_lat = pas_lon * max(math.cos(math.radians(latitude)), 0.2)
+    return pas_lat, pas_lon
+
+
+def points(conn: sqlite3.Connection, filtres: dict, zoom: float,
+           bbox: tuple[float, float, float, float] | None = None,
+           avec_cadre: bool = False) -> dict:
+    """Les biens de la recherche, regroupés en amas pour la carte.
+
+    Pourquoi côté serveur : le catalogue dépasse seize mille biens géolocalisés.
+    Les envoyer tous, c'était 210 Ko compressés et autant de marqueurs à poser
+    dans le navigateur — sur un téléphone, où la carte s'affiche aussi. La
+    grille rend quelques centaines de cellules quel que soit le zoom.
+
+    `bbox` (sud, ouest, nord, est) borne au visible : sans elle, un zoom de
+    quartier redemanderait la France entière à la maille du quartier, c'est-à-dire
+    chaque bien un par un.
+
+    Une cellule qui ne contient qu'un bien porte son identifiant : à ce
+    moment-là ce n'est plus un amas, c'est l'annonce, et elle s'ouvre.
+    """
+    ou, params = _clauses(filtres)
+    ou += " AND lat IS NOT NULL AND lon IS NOT NULL"
+    if bbox:
+        sud, ouest, nord, est = bbox
+        ou += " AND lat BETWEEN ? AND ? AND lon BETWEEN ? AND ?"
+        params = params + [min(sud, nord), max(sud, nord), min(ouest, est), max(ouest, est)]
+        centre = (sud + nord) / 2
+    else:
+        centre = 48.5
+    pas_lat, pas_lon = maille(zoom, centre)
+
+    rows = conn.execute(
+        f"""SELECT COUNT(*) AS n, AVG(lat) AS lat, AVG(lon) AS lon,
+                   MIN(score_total) AS bas, MAX(score_total) AS haut, MIN(id) AS id
+            FROM annonces WHERE {ou}
+            GROUP BY CAST(lat / ? AS INTEGER), CAST(lon / ? AS INTEGER)
+            ORDER BY n DESC LIMIT ?""",
+        params + [pas_lat, pas_lon, _AMAS_MAX]).fetchall()
+
+    # L'ÉTENDUE des scores, pas leur moyenne. Moyenner un groupe hétérogène
+    # ramène tout vers le milieu : quatre-vingt-dix biens notés de 23 à 71
+    # donnaient « 48 », et chaque amas de la carte sortait de la même couleur
+    # pâle — un chiffre exact qui ne décrit rien. L'étendue, elle, dit ce que
+    # le coin a de mieux et de pire.
+    amas = [{"lat": round(r["lat"], 5), "lon": round(r["lon"], 5), "n": r["n"],
+             "bas": round(r["bas"] or 0), "haut": round(r["haut"] or 0),
+             "id": r["id"] if r["n"] == 1 else None} for r in rows]
+
+    # Le total vient d'un COUNT, pas de la somme des cellules rendues : si la
+    # limite a coupé, additionner ce qui reste annoncerait moins de biens
+    # qu'il n'y en a. Ce dépôt a déjà payé ce travers une fois, avec les
+    # pastilles de terroir qui comptaient sans les filtres.
+    total = conn.execute(f"SELECT COUNT(*) FROM annonces WHERE {ou}", params).fetchone()[0]
+    reponse = {"amas": amas, "total": total, "tronque": len(rows) >= _AMAS_MAX}
+
+    # L'étendue de TOUTE la recherche, hors cadre visible — sinon elle serait
+    # circulaire : on cadre sur ce qu'on voit déjà. C'est ce qui permet à un
+    # terroir choisi de recentrer la carte dessus.
+    if avec_cadre:
+        ou_tout, p_tout = _clauses(filtres)
+        ou_tout += " AND lat IS NOT NULL AND lon IS NOT NULL"
+        e = conn.execute(f"""SELECT MIN(lat), MIN(lon), MAX(lat), MAX(lon)
+                             FROM annonces WHERE {ou_tout}""", p_tout).fetchone()
+        if e and e[0] is not None:
+            reponse["cadre"] = [e[0], e[1], e[2], e[3]]
+    return reponse
 
 
 def meta(conn: sqlite3.Connection) -> dict:
