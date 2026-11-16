@@ -27,19 +27,21 @@ import re
 from . import climat, redaction, seo
 
 _ENTETE_STYLE = """
-:root { color-scheme: light }
+:root { color-scheme: light; --focus: #1b4332; --focus-clair: #f4f1e8 }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 3px }
+.bande :focus-visible { outline-color: var(--focus-clair) }
 body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
        color: #23301f; background: #f7f6f1 }
 .bande { background: #1b4332; color: #f4f1e8; padding: 14px 20px }
 .bande a { color: #f4f1e8; text-decoration: none; font-weight: 700;
            display: inline-flex; align-items: center; gap: 9px }
 main { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px }
-h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px }
-h2 { font-size: 19px; margin: 32px 0 8px }
+h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance }
+h2 { font-size: 19px; margin: 32px 0 8px; text-wrap: balance }
 .chapeau { font-size: 17px; color: #46543f }
 .prix { font-size: 26px; font-weight: 800; color: #1b4332 }
 dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 12px 0 }
-dt { color: #6b7663 } dd { margin: 0; font-weight: 600 }
+dt { color: #5f6a58 } dd { margin: 0; font-weight: 600 }
 ul { padding-left: 20px } li { margin: 3px 0 }
 .faits-courts { list-style: none; padding: 0; margin: 10px 0 4px; font-size: 16px }
 .faits-courts li { margin: 5px 0 }
@@ -49,9 +51,9 @@ ul { padding-left: 20px } li { margin: 3px 0 }
 .bouton { display: inline-block; background: #1b4332; color: #fff; padding: 11px 20px;
           border-radius: 8px; text-decoration: none; font-weight: 700; margin: 6px 8px 6px 0 }
 .bouton.clair { background: #fff; color: #1b4332; border: 1.5px solid #1b4332 }
-.fil { font-size: 14px; color: #6b7663; margin-bottom: 14px }
+.fil { font-size: 14px; color: #5f6a58; margin-bottom: 14px }
 .fil a { color: #46543f }
-.note { font-size: 14px; color: #6b7663; border-top: 1px solid #ddd8cc;
+.note { font-size: 14px; color: #5f6a58; border-top: 1px solid #ddd8cc;
         margin-top: 34px; padding-top: 14px }
 table { border-collapse: collapse; width: 100%; margin: 10px 0 }
 td, th { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e4e0d5 }
@@ -62,7 +64,7 @@ figure.aerienne img { width: 100%; border-radius: 10px }
    LECTURE de son prix. D'où le ton d'alerte, juste sous le prix. */
 p.viager { margin: -4px 0 14px; padding: 9px 12px; border-radius: 8px;
            background: #fbece8; border: 1px solid #efcdc4; color: #8c3325 }
-figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
+figure.aerienne figcaption { font-size: 13px; color: #5f6a58; margin-top: 5px }
 .manque { color: #9a6a2b; font-style: italic }
 .climat { background: #fff; border: 1px solid #e4e0d5; border-radius: 14px;
           padding: 18px 18px 14px; margin: 28px 0 }
@@ -75,7 +77,7 @@ figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .cle.secheresse { background: #fbf6ea; border-left-color: #b5852b }
 .cle b { font-size: 26px; line-height: 1.1; color: #23301f; white-space: nowrap }
 .cle span { font-size: 14px; color: #46543f }
-.cle small { font-size: 12.5px; color: #6b7663 }
+.cle small { font-size: 12.5px; color: #5f6a58 }
 @media (max-width: 520px) {
   .cles-climat { grid-template-columns: 1fr; gap: 6px }
   .cle { display: grid; grid-template-columns: 5.8rem 1fr; column-gap: 12px; align-items: center; padding: 8px 12px }
@@ -87,9 +89,9 @@ figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .l-tete { display: flex; justify-content: space-between; align-items: baseline;
           gap: 10px; flex-wrap: wrap }
 .l-nom { font-size: 15px }
-.l-nom small { color: #6b7663 }
+.l-nom small { color: #5f6a58 }
 .l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 15px }
-.v-ref { color: #6b7663 }
+.v-ref { color: #5f6a58 }
 .ecart { display: inline-block; margin-left: 6px; font-size: 12.5px; font-weight: 700;
          padding: 1px 8px; border-radius: 99px; background: #efede6; color: #5c6b60 }
 .ecart.pire { background: #fbece8; color: #8c3325 }
@@ -102,13 +104,13 @@ figure.aerienne figcaption { font-size: 13px; color: #6b7663; margin-top: 5px }
 .b-fut.secheresse { background: #b5852b }
 .b-fut.rr_jja { background: #3a7ca5 }
 .b-fut.ifm40d { background: #b33a2a }
-.rang { font-size: 13px; color: #6b7663 }
-.legende-climat { font-size: 13px; color: #6b7663; margin: 12px 0 0;
+.rang { font-size: 13px; color: #5f6a58 }
+.legende-climat { font-size: 13px; color: #5f6a58; margin: 12px 0 0;
                   display: flex; gap: 14px; flex-wrap: wrap; align-items: center }
 .legende-climat i { display: inline-block; width: 22px; height: 8px; border-radius: 4px;
                     margin-right: 6px; vertical-align: 1px }
-.note-climat { font-size: 13px; color: #6b7663; margin: 8px 0 0 }
-.pied { font-size: 13px; color: #6b7663; margin-top: 10px }
+.note-climat { font-size: 13px; color: #5f6a58; margin: 8px 0 0; max-width: 68ch }
+.pied { font-size: 13px; color: #5f6a58; margin-top: 10px }
 .pied a { color: #46543f }
 /* Le bloc professionnel, sur fond blanc : il ne s'adresse pas au même
    visiteur que le reste du pied, et se distingue donc au lieu de se fondre
@@ -124,7 +126,7 @@ ul.offres li { background: #fff; border: 1px solid #e2e6dc; border-radius: 10px;
                padding: 14px 18px }
 ul.offres h3 { margin: 0 0 6px; font-size: 16px }
 ul.offres p { margin: 0 0 4px }
-.modalite { font-size: 13px; color: #6b7663; font-style: italic }
+.modalite { font-size: 13px; color: #5f6a58; font-style: italic }
 """
 
 

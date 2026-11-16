@@ -19,7 +19,34 @@
   --alerte-bord: #efcdc4;
   --badge-fond: #eaf2ec;
   --badge-bord: #cfe0d2;
+  /* Anneau de focus : deux valeurs, parce que le site a deux fonds. L'anneau
+     par défaut du navigateur tombe à 1,7:1 sur le vert de l'en-tête — donc
+     invisible là où se trouvent les premiers liens rencontrés au clavier. */
+  --focus: #1b4332;
+  --focus-clair: #f2efe6;
+  /* L'encre posée sur le vert de marque : l'en-tête et les boutons pleins. */
+  --sur-marque: #f2efe6;
   color-scheme: light;
+}
+
+/* La navigation au clavier est la seule entrée du site pour qui ne tient pas
+   de souris. Un anneau épais, net, et qui apparaît sans délai. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.entete :focus-visible, .score-pastille :focus-visible { outline-color: var(--focus-clair); }
+
+/* Les animations de ce site sont discrètes, mais « discrètes » n'est pas
+   « supportables » : le vertige et la migraine vestibulaire ne négocient pas. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -34,7 +61,7 @@ body {
 }
 
 /* ---------- entête ---------- */
-.entete { background: var(--marque); color: #f2efe6; }
+.entete { background: var(--marque); color: var(--sur-marque); }
 .entete-int {
   max-width: 1280px; margin: 0 auto; padding: 14px 20px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -66,8 +93,12 @@ body {
 }
 .filtres h2 { margin: 0 0 12px; font-size: 16px; }
 .champ { display: block; margin-bottom: 14px; font-size: 13.5px; }
-.champ > span { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; color: var(--encre); font-weight: 600; }
-.champ output { font-weight: 600; color: var(--accent); }
+/* Le libellé peut passer à la ligne, la valeur jamais : « Temps de route
+   depuis Paris » poussait « sans limite » sur deux lignes, et la colonne de
+   filtres se lisait en escalier. */
+.champ > span { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; color: var(--encre); font-weight: 600; }
+.champ > span > output, .champ > span > .aide-filtre { flex: none; }
+.champ output { font-weight: 600; color: var(--accent); white-space: nowrap; }
 .champ input[type=range] { width: 100%; accent-color: var(--accent); }
 .champ select {
   width: 100%; padding: 7px 8px; border: 1px solid var(--bordure);
@@ -95,7 +126,9 @@ body {
 .menu-groupe[open] > summary { opacity: 1; }
 .menu-groupe > ul {
   position: absolute; z-index: 900; top: 100%; left: 0; margin: 6px 0 0;
-  padding: 8px; min-width: 232px; list-style: none;
+  /* 268px et non 232 : « Lorraine, Champagne et Ardennes » est le plus long
+     nom de la liste, et il passait à la ligne à toutes les largeurs. */
+  padding: 8px; min-width: 268px; list-style: none;
   background: var(--carte, #fff); border: 1px solid var(--bordure);
   border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
 }
@@ -113,7 +146,7 @@ body {
 }
 .legende-note { margin: 10px 0 0; line-height: 1.45; }
 .legende-note a { color: var(--marque); }
-.legende-score h3 { margin: 0 0 8px; font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
+.legende-score h3 { margin: 0 0 8px; font-size: 12.5px; font-weight: 700; color: var(--encre-2); }
 .legende-score div { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
 .pastille { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--n4); flex: none; }
 .pastille.n1 { background: var(--n1); } .pastille.n2 { background: var(--n2); }
@@ -179,8 +212,7 @@ body {
   font-style: normal; font-size: 10px; font-weight: 700; opacity: .75; margin-top: 1px;
 }
 .score-pastille small {
-  font-size: 9px; letter-spacing: .6px; text-transform: uppercase;
-  font-weight: 600; opacity: .9; margin-top: 4px;
+  font-size: 10px; font-weight: 600; opacity: .9; margin-top: 4px;
 }
 .score-pastille.n1 { background: var(--n1); color: var(--encre); }
 .score-pastille.n2 { background: var(--n2); color: #14281c; }
@@ -192,17 +224,20 @@ body {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   font-weight: 800; font-size: 18px; line-height: 1; border: 2px solid var(--n4);
 }
-.score-jeton small { font-weight: 600; font-size: 9px; opacity: .8; margin-top: 2px; }
+.score-jeton small { font-weight: 600; font-size: 10px; opacity: .8; margin-top: 2px; }
 .score-jeton.n1 { background: var(--n1); color: var(--encre); }
 .score-jeton.n2 { background: var(--n2); color: #14281c; }
 .score-jeton.n3 { background: var(--n3); color: #fff; }
 .score-jeton.n4 { background: var(--n4); color: #fff; }
 .fiche h3 { margin: 0; font-size: 15px; line-height: 1.3; }
 .fiche .classe { font-size: 12px; color: var(--accent); font-weight: 600; }
+/* Le nom de l'enseigne, tel qu'elle l'écrit. Les majuscules forcées
+   transformaient « IAD France » en « IAD FRANCE » et « Delafosse & Associée »
+   en « DELAFOSSE & ASSOCIÉE » : sur un site bâti sur l'attribution honnête,
+   déformer le nom de celui qu'on attribue n'est pas un détail de style. */
 .agence-ligne {
   font-size: 11.5px; color: var(--encre-2); margin-top: 8px;
   padding-top: 8px; border-top: 1px solid var(--bordure);
-  text-transform: uppercase; letter-spacing: .4px;
 }
 
 .jetons { display: flex; flex-wrap: wrap; gap: 5px; }
@@ -244,7 +279,7 @@ body {
 .fiche-entete .specs b { color: var(--encre); font-weight: 700; }
 .fiche-entete .lieu { font-size: 14px; color: var(--encre-2); margin-top: 2px; }
 .modale .lieu { color: var(--encre-2); }
-.modale h4 { margin: 18px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); }
+.modale h4 { margin: 18px 0 8px; font-size: 13px; font-weight: 700; color: var(--encre-2); }
 .modale .description { font-size: 14.5px; color: var(--encre); line-height: 1.7; }
 .modale .source-ligne { margin-top: 14px; font-size: 12.5px; color: var(--encre-2); }
 .modale .source-ligne a { color: var(--accent); }
@@ -267,7 +302,7 @@ body {
   background: var(--fond); border: 1px solid var(--bordure); border-radius: 10px;
   padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0;
 }
-.stat .etiquette { font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--encre-2); }
+.stat .etiquette { font-size: 11.5px; color: var(--encre-2); }
 .stat .valeur { font-weight: 700; font-size: 15px; white-space: nowrap; }
 .stat .sous { font-size: 11px; color: var(--encre-2); }
 
@@ -282,11 +317,11 @@ body {
 /* étiquette DPE (lettre toujours affichée, jamais la couleur seule) */
 .dpe { display: inline-block; min-width: 26px; text-align: center; padding: 1px 7px; border-radius: 6px; font-weight: 800; }
 .dpe-A { background: #1e7a46; color: #fff; }
-.dpe-B { background: #5fa244; color: #fff; }
+.dpe-B { background: #4d8337; color: #fff; }  /* assombri : 3,12:1 → 4,55:1 */
 .dpe-C { background: #b8bf2b; color: #24312a; }
 .dpe-D { background: #e8c51f; color: #24312a; }
 .dpe-E { background: #e59a27; color: #24312a; }
-.dpe-F { background: #d96f28; color: #fff; }
+.dpe-F { background: #b75d20; color: #fff; }  /* assombri : 3,36:1 → 4,57:1 */
 .dpe-G { background: #c0392b; color: #fff; }
 
 /* panneau du score */
@@ -328,11 +363,18 @@ body {
   grid-column: 1 / -1; text-align: center; color: var(--encre-2);
   padding: 40px 20px; background: var(--carte-fond); border: 1px dashed var(--bordure); border-radius: 12px;
 }
+.btn-reessayer {
+  margin-top: 16px; font: inherit; font-weight: 600; cursor: pointer;
+  padding: 12px 20px; border-radius: 8px;
+  border: 1px solid var(--marque); background: var(--marque); color: var(--sur-marque);
+}
+.btn-reessayer:hover { background: var(--accent); border-color: var(--accent); }
+.btn-reessayer:active { transform: translateY(1px); }
 
 /* ---------- terroirs ciblés (priorisation par région) ---------- */
 .terroirs-bloc { margin: 16px 2px 0; }
-.terroirs-titre { font-size: 12.5px; text-transform: uppercase; letter-spacing: .6px; color: var(--encre-2); font-weight: 700; }
-.terroirs-titre span { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.terroirs-titre { font-size: 12.5px; color: var(--encre-2); font-weight: 700; }
+.terroirs-titre span { font-weight: 400; }
 .terroirs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 .terroir {
   display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font: inherit;
@@ -409,7 +451,7 @@ body {
 .btn-alerte:hover { background: var(--marque); }
 
 /* ---------- responsive / mobile ---------- */
-body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 .filtres-tete { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .filtres-toggle {
   display: none; border: 1px solid var(--bordure); background: var(--fond);

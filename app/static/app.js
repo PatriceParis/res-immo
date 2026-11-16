@@ -916,10 +916,35 @@ function fermerFiche() {
 // affiner les filtres reste le chemin vers les autres.
 const BIENS_PAR_PAGE = 250;
 
+// Quand la recherche ne répond pas. Le site sait déjà le dire pour la carte
+// (« Carte indisponible sans connexion internet ») ; la liste, elle, restait
+// sur « Chargement… » indéfiniment, sans un mot. Le bandeau des terroirs
+// s'affichant de son côté, la page n'avait pas l'air cassée : elle avait l'air
+// vide. C'est la pire des deux, parce qu'on croit la réponse et on s'en va.
+function signalerPanne() {
+  $("#compteur").textContent = "La recherche n'a pas répondu";
+  $("#liste").innerHTML = `<div class="vide">La liste des biens n'a pas pu être
+    chargée — le service est peut-être momentanément indisponible.<br>
+    <button type="button" id="reessayer" class="btn-reessayer">Réessayer</button></div>`;
+  $("#reessayer").addEventListener("click", () => {
+    $("#compteur").textContent = "Chargement…";
+    $("#liste").innerHTML = "";
+    rafraichir();
+  });
+}
+
 async function rafraichir() {
   const p = lireFiltres();
   p.set("limit", String(BIENS_PAR_PAGE));
-  const data = await (await fetch("/api/annonces?" + p.toString())).json();
+  let data;
+  try {
+    const reponse = await fetch("/api/annonces?" + p.toString());
+    if (!reponse.ok) throw new Error("HTTP " + reponse.status);
+    data = await reponse.json();
+  } catch (e) {
+    signalerPanne();
+    return;
+  }
   etat.annonces = data.items;
 
   // Le compteur doit décrire CE QUI EST AFFICHÉ. Annoncer « 250 biens
