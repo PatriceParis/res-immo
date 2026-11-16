@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 7.6,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.8,
+  "seconde": 7.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,241 +23,195 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.8,
+  "seconde": 7.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.4,
+  "seconde": 9.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.8,
+  "seconde": 10.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.3,
+  "seconde": 11.0,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.4,
+  "seconde": 11.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.8,
+  "seconde": 11.6,
   "reseau": "capifrance",
-  "connues": 20579,
-  "ecartees": 3387
+  "connues": 20291,
+  "ecartees": 3457
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.9,
+  "seconde": 11.6,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.0,
+  "seconde": 11.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 18.8,
+  "seconde": 24.3,
   "reseau": "iad",
-  "n": 112637,
+  "n": 112217,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 20.4,
+  "seconde": 26.4,
   "reseau": "iad",
-  "notees": 520
+  "notees": 26
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.4,
+  "seconde": 29.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 22.9,
+  "seconde": 29.6,
   "reseau": "iad",
-  "connues": 20579,
-  "ecartees": 3387
+  "connues": 20291,
+  "ecartees": 3457
  },
  {
   "etape": "departement",
-  "seconde": 245.3,
+  "seconde": 522.3,
   "reseau": "iad",
-  "departement": "80",
+  "departement": "71",
   "visitees": 50,
   "gardes": 38,
   "tronquee": true,
   "etats": {
    "garde": 38,
-   "vendu": 11,
+   "vendu": 7,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 12 pièces de 290 m² à La Frette (38260)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 615.4,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 8,
+  "gardes": 7,
+  "tronquee": true,
+  "etats": {
+   "garde": 7,
+   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "outre_mer": 1
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "outre_mer": "Maison 4 pièces de 69 m² à Trois-Rivières (97114)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 431.8,
-  "reseau": "iad",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 31,
-  "tronquee": true,
-  "etats": {
-   "garde": 31,
-   "vendu": 9,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "hors_perimetre": 6,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 80 m² à PAVANT (02310)",
-   "hors_perimetre": "Grange 1 pièce de 102 m² à Saint-Simon (16120)",
-   "prix_trop_haut": "Maison 11 pièces de 513 m² à Sainte-Preuve (02350)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 607.0,
-  "reseau": "iad",
-  "departement": "51",
-  "visitees": 41,
-  "gardes": 21,
-  "tronquee": true,
-  "etats": {
-   "garde": 21,
-   "vendu": 14,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 4,
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison d",
-   "hors_perimetre": "Maison de campagne 3 pièces de 49 m² à CHENIERS (23220)"
+   "prix_trop_haut": "Château 10 pièces de 450 m² à Haraucourt (08450)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 607.0,
+  "seconde": 615.4,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.3,
+  "seconde": 615.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 608.4,
+  "seconde": 616.5,
   "reseau": "safti",
-  "n": 28894,
+  "n": 28996,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 609.3,
+  "seconde": 617.6,
   "reseau": "safti",
-  "notees": 63
+  "notees": 39
  },
  {
   "etape": "tentative_notee",
-  "seconde": 609.9,
+  "seconde": 618.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 610.4,
+  "seconde": 619.0,
   "reseau": "safti",
-  "connues": 20630,
-  "ecartees": 3438
+  "connues": 20299,
+  "ecartees": 3470
  },
  {
   "etape": "departement",
-  "seconde": 864.4,
+  "seconde": 1106.3,
   "reseau": "safti",
-  "departement": "41",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 46,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 46,
+   "garde": 41,
    "vendu": 0,
-   "ecarte": 4,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 3
+   "hors_perimetre": 5,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à SOUESMES de 282m²",
-   "hors_perimetre": "Maison à vendre à LISLE de 137m²"
+   "hors_perimetre": "Maison à vendre à BELLEGARDE de 158m²",
+   "prix_trop_haut": "Maison à vendre à LORCY de 371m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1096.1,
+  "seconde": 1212.3,
   "reseau": "safti",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 48,
+  "departement": "50",
+  "visitees": 11,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 48,
-   "vendu": 0,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à LILLE de 181m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1205.1,
-  "reseau": "safti",
-  "departement": "60",
-  "visitees": 19,
-  "gardes": 19,
-  "tronquee": true,
-  "etats": {
-   "garde": 19,
+   "garde": 11,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -267,7 +221,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1205.1,
-  "gardes": 203
+  "seconde": 1212.3,
+  "gardes": 97
  }
 ]
