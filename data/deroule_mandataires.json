@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 4.0,
+  "seconde": 7.6,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 4.0,
+  "seconde": 7.6,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,187 +23,195 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.0,
+  "seconde": 7.6,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.8,
+  "seconde": 9.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 7.7,
+  "seconde": 10.3,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 8.1,
+  "seconde": 11.0,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 8.2,
+  "seconde": 11.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 8.6,
+  "seconde": 11.6,
   "reseau": "capifrance",
-  "connues": 20242,
-  "ecartees": 3440
+  "connues": 20291,
+  "ecartees": 3457
  },
  {
   "etape": "reseau_debut",
-  "seconde": 8.6,
+  "seconde": 11.6,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 8.9,
+  "seconde": 11.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 28.1,
+  "seconde": 24.3,
   "reseau": "iad",
-  "n": 112637,
+  "n": 112217,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 29.6,
+  "seconde": 26.4,
   "reseau": "iad",
-  "notees": 16
+  "notees": 26
  },
  {
   "etape": "tentative_notee",
-  "seconde": 31.4,
+  "seconde": 29.0,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 31.8,
+  "seconde": 29.6,
   "reseau": "iad",
-  "connues": 20242,
-  "ecartees": 3440
+  "connues": 20291,
+  "ecartees": 3457
  },
  {
   "etape": "departement",
-  "seconde": 393.0,
+  "seconde": 522.3,
   "reseau": "iad",
-  "departement": "52",
+  "departement": "71",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 5,
-   "ecarte": 0,
+   "garde": 38,
+   "vendu": 7,
+   "ecarte": 5,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 12 pièces de 290 m² à La Frette (38260)",
+   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
+  }
  },
  {
   "etape": "departement",
-  "seconde": 622.6,
+  "seconde": 615.4,
   "reseau": "iad",
-  "departement": "70",
-  "visitees": 36,
-  "gardes": 30,
+  "departement": "08",
+  "visitees": 8,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 5,
+   "garde": 7,
+   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 1
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 86 m² à Flagy (77940)"
+   "prix_trop_haut": "Château 10 pièces de 450 m² à Haraucourt (08450)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 622.6,
+  "seconde": 615.4,
   "reseau": "safti",
-  "part_secondes": 581
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 623.2,
+  "seconde": 615.7,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 625.3,
+  "seconde": 616.5,
   "reseau": "safti",
-  "n": 28894,
+  "n": 28996,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 626.0,
+  "seconde": 617.6,
   "reseau": "safti",
-  "notees": 24
+  "notees": 39
  },
  {
   "etape": "tentative_notee",
-  "seconde": 626.5,
+  "seconde": 618.4,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 626.9,
+  "seconde": 619.0,
   "reseau": "safti",
-  "connues": 20251,
-  "ecartees": 3451
+  "connues": 20299,
+  "ecartees": 3470
  },
  {
   "etape": "departement",
-  "seconde": 1003.6,
+  "seconde": 1106.3,
   "reseau": "safti",
-  "departement": "08",
+  "departement": "45",
   "visitees": 50,
-  "gardes": 43,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 1,
-   "ecarte": 5,
-   "illisible": 1
+   "garde": 41,
+   "vendu": 0,
+   "ecarte": 9,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 5,
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à SAILLY de 168m²"
+   "hors_perimetre": "Maison à vendre à BELLEGARDE de 158m²",
+   "prix_trop_haut": "Maison à vendre à LORCY de 371m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1209.7,
+  "seconde": 1212.3,
   "reseau": "safti",
-  "departement": "10",
-  "visitees": 24,
-  "gardes": 24,
+  "departement": "50",
+  "visitees": 11,
+  "gardes": 11,
   "tronquee": true,
   "etats": {
-   "garde": 24,
+   "garde": 11,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -213,7 +221,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1209.7,
-  "gardes": 142
+  "seconde": 1212.3,
+  "gardes": 97
  }
 ]
