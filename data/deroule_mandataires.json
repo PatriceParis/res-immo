@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 7.6,
+  "seconde": 1.8,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 7.6,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,195 +23,216 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 7.6,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 9.0,
+  "seconde": 3.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 10.3,
+  "seconde": 4.8,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 11.0,
+  "seconde": 5.3,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 11.0,
+  "seconde": 5.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 11.6,
+  "seconde": 5.7,
   "reseau": "capifrance",
-  "connues": 20291,
-  "ecartees": 3457
+  "connues": 20278,
+  "ecartees": 3472
  },
  {
   "etape": "reseau_debut",
-  "seconde": 11.6,
+  "seconde": 5.7,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 11.8,
+  "seconde": 5.9,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 24.3,
+  "seconde": 20.6,
   "reseau": "iad",
   "n": 112217,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 26.4,
+  "seconde": 21.9,
   "reseau": "iad",
-  "notees": 26
+  "notees": 9
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.0,
+  "seconde": 23.4,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 29.6,
+  "seconde": 23.8,
   "reseau": "iad",
-  "connues": 20291,
-  "ecartees": 3457
+  "connues": 20278,
+  "ecartees": 3472
  },
  {
   "etape": "departement",
-  "seconde": 522.3,
+  "seconde": 311.2,
   "reseau": "iad",
-  "departement": "71",
+  "departement": "10",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 38,
+   "garde": 39,
    "vendu": 7,
-   "ecarte": 5,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 1
+   "url_type_exclu": 3,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 12 pièces de 290 m² à La Frette (38260)",
-   "prix_trop_haut": "Demeure 12 pièces de 380 m² à Charrecey (71510)"
+   "url_type_exclu": "Immeuble de 208 m² à Brienne-le-Château (10500)",
+   "hors_perimetre": "111 146 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 615.4,
+  "seconde": 609.3,
   "reseau": "iad",
-  "departement": "08",
-  "visitees": 8,
-  "gardes": 7,
+  "departement": "53",
+  "visitees": 48,
+  "gardes": 39,
   "tronquee": true,
   "etats": {
-   "garde": 7,
-   "vendu": 0,
+   "garde": 39,
+   "vendu": 8,
    "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "hors_perimetre": 1
   },
   "exemples": {
-   "prix_trop_haut": "Château 10 pièces de 450 m² à Haraucourt (08450)"
+   "hors_perimetre": "Maison de ville 4 pièces de 87 m² à Désertines (03630)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 615.4,
+  "seconde": 609.3,
   "reseau": "safti",
   "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 615.7,
+  "seconde": 610.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 616.5,
+  "seconde": 611.4,
   "reseau": "safti",
   "n": 28996,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 617.6,
+  "seconde": 612.1,
   "reseau": "safti",
-  "notees": 39
+  "notees": 15
  },
  {
   "etape": "tentative_notee",
-  "seconde": 618.4,
+  "seconde": 612.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 619.0,
+  "seconde": 613.0,
   "reseau": "safti",
-  "connues": 20299,
-  "ecartees": 3470
+  "connues": 20291,
+  "ecartees": 3492
  },
  {
   "etape": "departement",
-  "seconde": 1106.3,
+  "seconde": 894.5,
   "reseau": "safti",
-  "departement": "45",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 41,
+   "garde": 42,
    "vendu": 0,
-   "ecarte": 9,
+   "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5,
-   "prix_trop_haut": 4
+   "prix_trop_haut": 3,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à BELLEGARDE de 158m²",
-   "prix_trop_haut": "Maison à vendre à LORCY de 371m²"
+   "prix_trop_haut": "Maison à vendre à BEZANNES de 485m²",
+   "hors_perimetre": "Maison à vendre à L' EPINE de 260m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1212.3,
+  "seconde": 1069.2,
   "reseau": "safti",
-  "departement": "50",
-  "visitees": 11,
-  "gardes": 11,
+  "departement": "52",
+  "visitees": 29,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 11,
+   "garde": 24,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à BOURG de 81m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1213.2,
+  "reseau": "safti",
+  "departement": "89",
+  "visitees": 20,
+  "gardes": 20,
+  "tronquee": true,
+  "etats": {
+   "garde": 20,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -221,7 +242,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1212.3,
-  "gardes": 97
+  "seconde": 1213.2,
+  "gardes": 164
  }
 ]
