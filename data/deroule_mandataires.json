@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.8,
+  "seconde": 2.1,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.8,
+  "seconde": 2.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,216 +23,229 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.8,
+  "seconde": 2.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.5,
+  "seconde": 3.9,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.8,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.3,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.3,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.7,
+  "seconde": 6.4,
   "reseau": "capifrance",
-  "connues": 20278,
-  "ecartees": 3472
+  "connues": 20346,
+  "ecartees": 3500
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.7,
+  "seconde": 6.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.9,
+  "seconde": 6.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 20.6,
+  "seconde": 27.5,
   "reseau": "iad",
-  "n": 112217,
+  "n": 113035,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 21.9,
+  "seconde": 29.2,
   "reseau": "iad",
-  "notees": 9
+  "notees": 39
  },
  {
   "etape": "tentative_notee",
-  "seconde": 23.4,
+  "seconde": 31.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.8,
+  "seconde": 31.8,
   "reseau": "iad",
-  "connues": 20278,
-  "ecartees": 3472
+  "connues": 20346,
+  "ecartees": 3500
  },
  {
   "etape": "departement",
-  "seconde": 311.2,
+  "seconde": 313.4,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "58",
   "visitees": 50,
-  "gardes": 39,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 7,
-   "ecarte": 4,
+   "garde": 45,
+   "vendu": 5,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 518.5,
+  "reseau": "iad",
+  "departement": "72",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 8,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "url_type_exclu": 3,
-   "hors_perimetre": 1
+   "location": 1,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "url_type_exclu": "Immeuble de 208 m² à Brienne-le-Château (10500)",
-   "hors_perimetre": "111 146 biens immobiliers à vendre"
+   "location": "Maison de village 3 pièces de 54 m² à Auvers-sous-Montfaucon (72540)",
+   "prix_trop_haut": "Demeure 15 pièces de 422 m² à Arnage (72230)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 609.3,
+  "seconde": 607.4,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 48,
-  "gardes": 39,
+  "departement": "88",
+  "visitees": 21,
+  "gardes": 21,
   "tronquee": true,
   "etats": {
-   "garde": 39,
-   "vendu": 8,
-   "ecarte": 1,
+   "garde": 21,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de ville 4 pièces de 87 m² à Désertines (03630)"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 609.3,
+  "seconde": 607.5,
   "reseau": "safti",
-  "part_secondes": 592
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 610.0,
+  "seconde": 608.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 611.4,
+  "seconde": 609.6,
   "reseau": "safti",
-  "n": 28996,
+  "n": 28961,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 612.1,
+  "seconde": 610.5,
   "reseau": "safti",
-  "notees": 15
+  "notees": 59
  },
  {
   "etape": "tentative_notee",
-  "seconde": 612.6,
+  "seconde": 611.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 613.0,
+  "seconde": 611.6,
   "reseau": "safti",
-  "connues": 20291,
-  "ecartees": 3492
+  "connues": 19855,
+  "ecartees": 3011
  },
  {
   "etape": "departement",
-  "seconde": 894.5,
+  "seconde": 853.0,
   "reseau": "safti",
-  "departement": "51",
+  "departement": "14",
   "visitees": 50,
-  "gardes": 42,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 42,
+   "garde": 48,
    "vendu": 0,
-   "ecarte": 8,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 3,
-   "hors_perimetre": 5
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à BEZANNES de 485m²",
-   "hors_perimetre": "Maison à vendre à L' EPINE de 260m²"
+   "prix_trop_haut": "Maison à vendre à LISIEUX de 322m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1069.2,
+  "seconde": 1078.5,
   "reseau": "safti",
-  "departement": "52",
-  "visitees": 29,
-  "gardes": 24,
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 24,
+   "garde": 43,
    "vendu": 0,
-   "ecarte": 5,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 4,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à BOURG de 81m²"
+   "hors_perimetre": "Maison à vendre à ACHERES de 132m²",
+   "prix_trop_haut": "Maison à vendre à CHATEAUMEILLANT de 357m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1213.2,
+  "seconde": 1205.0,
   "reseau": "safti",
-  "departement": "89",
-  "visitees": 20,
-  "gardes": 20,
+  "departement": "53",
+  "visitees": 28,
+  "gardes": 28,
   "tronquee": true,
   "etats": {
-   "garde": 20,
+   "garde": 28,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -242,7 +255,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1213.2,
-  "gardes": 164
+  "seconde": 1205.0,
+  "gardes": 225
  }
 ]
