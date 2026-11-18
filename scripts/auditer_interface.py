@@ -134,8 +134,35 @@ def plafond_d_affichage(cartes: int, total: int, compteur: str) -> int | None:
     et six promesses sur six étaient déclarées non tenues alors que
     l'interface tenait parole. On ne recopie pas la constante de l'écran :
     on lit l'écran, qui l'annonce lui-même. None quand rien n'est tronqué.
+
+    Depuis le 16 novembre 2026, la liste se lit par pages de 24 et le compteur
+    l'écrit autrement : « 15 076 biens trouvés — 1 à 24 ». L'audit, qui ne
+    connaissait que « premiers affichés », prenait chaque page pour une liste
+    tronquée en silence : neuf promesses sur vingt-huit déclarées non tenues,
+    et « Vérification » au rouge, alors que l'écran disait vrai. La tranche
+    annoncée doit compter exactement les fiches à l'écran : c'est elle qui
+    fait foi, pas la constante de app.js.
     """
-    return cartes if total > cartes and "premiers affichés" in compteur else None
+    if total <= cartes:
+        return None
+    if "premiers affichés" in compteur:
+        return cartes
+    tranche = tranche_affichee(compteur)
+    if tranche and tranche[1] - tranche[0] + 1 == cartes:
+        return cartes
+    return None
+
+
+_TRANCHE = re.compile(r"—\s*(\d[\d\s\u00a0\u202f]*?)\s*à\s*(\d[\d\s\u00a0\u202f]*)")
+
+
+def tranche_affichee(compteur: str) -> tuple[int, int] | None:
+    """(première, dernière) fiche affichée, lue dans « … — 25 à 48 »."""
+    trouve = _TRANCHE.search(compteur or "")
+    if not trouve:
+        return None
+    debut, fin = (int(re.sub(r"\D", "", g)) for g in trouve.groups())
+    return (debut, fin) if fin >= debut else None
 
 
 def attendu_a_l_ecran(attendu: int, plafond: int | None) -> int:
@@ -168,7 +195,7 @@ def verifier_page(page, appeler, constat: Constat) -> None:
     if annonce != total_api:
         constat.manque("compteur affiché",
                        f"la page écrit « {compteur.strip()} », l'API en compte {total_api}")
-    elif cartes != annonce and "premiers affichés" not in compteur:
+    elif cartes != annonce and plafond_d_affichage(cartes, total_api, compteur) is None:
         constat.manque("compteur affiché",
                        f"« {compteur.strip()} » mais {cartes} fiche(s) à l'écran, "
                        "sans mention de troncature")
@@ -214,11 +241,18 @@ def verifier_page(page, appeler, constat: Constat) -> None:
         case.check()
         page.wait_for_timeout(700)
         apres = page.locator(".fiche").count()
+        # Avec des pages de 24, l'écran montre 24 fiches avec comme sans la
+        # case dès qu'elle en laisse plus : compter les fiches ne prouve plus
+        # rien. Le compteur, lui, doit donner le total filtré.
+        compte_apres = _nombre(page.text_content("#compteur") or "")
         attendu = appeler("/api/annonces",
                           {param: 1, "limit": coherence.PLAFOND_API})["total"]
         case.uncheck()
         page.wait_for_timeout(500)
-        if apres != attendu_a_l_ecran(attendu, plafond):
+        if compte_apres != attendu:
+            constat.manque(f"case « {libelle} »",
+                           f"le compteur affiche {compte_apres} bien(s) pour {attendu} attendu(s)")
+        elif apres != attendu_a_l_ecran(attendu, plafond):
             constat.manque(f"case « {libelle} »",
                            f"{apres} fiche(s) affichée(s) pour {attendu} attendue(s)"
                            + (f" (plafond d'affichage {plafond})" if plafond else ""))

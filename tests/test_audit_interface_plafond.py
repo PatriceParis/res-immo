@@ -46,3 +46,21 @@ def test_une_case_inoperante_se_voit_sur_les_totaux_quel_que_soit_le_plafond():
     assert audit.case_sans_effet(8281, 8281), "même total avec et sans : inerte"
     assert not audit.case_sans_effet(12, 12), (
         "sur une poignée de biens, tous peuvent avoir une cave : pas un défaut")
+
+
+def test_la_page_de_24_se_lit_sur_le_compteur():
+    """16 novembre 2026 : la liste passe en pages de 24, et le compteur écrit
+    « 15 076 biens trouvés — 1 à 24 ». L'audit ne connaissait que « premiers
+    affichés » : neuf promesses déclarées non tenues, « Vérification » au
+    rouge, alors que l'écran disait vrai."""
+    compteur = "15\u202f076 biens trouvés — 1 à 24"
+    assert audit.tranche_affichee(compteur) == (1, 24)
+    assert audit.plafond_d_affichage(24, 15076, compteur) == 24
+    assert audit.attendu_a_l_ecran(7249, 24) == 24
+    assert audit.attendu_a_l_ecran(37, 24) == 24
+    # Page suivante, séparateurs de milliers compris.
+    assert audit.tranche_affichee("15 076 biens trouvés — 1\u202f201 à 1\u202f224") == (1201, 1224)
+    # Une tranche qui ne correspond pas à l'écran n'excuse rien.
+    assert audit.plafond_d_affichage(20, 15076, compteur) is None
+    # Pas de tranche du tout : liste complète, ou troncature tue.
+    assert audit.tranche_affichee("37 biens trouvés") is None
