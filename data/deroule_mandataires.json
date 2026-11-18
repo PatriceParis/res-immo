@@ -6,15 +6,15 @@
  },
  {
   "etape": "communes",
-  "seconde": 5.1,
-  "departements": 109,
-  "communes": 36595,
+  "seconde": 35.3,
+  "departements": 33,
+  "communes": 18698,
   "anciennes": 2576,
-  "homonymes_ecrases": 109
+  "homonymes_ecrases": 0
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 5.1,
+  "seconde": 35.3,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,234 +23,270 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.1,
+  "seconde": 35.3,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.2,
+  "seconde": 37.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 9.4,
+  "seconde": 39.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 9.8,
+  "seconde": 39.8,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 9.8,
+  "seconde": 39.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 10.2,
+  "seconde": 40.3,
   "reseau": "capifrance",
-  "connues": 19980,
-  "ecartees": 3058
+  "connues": 19497,
+  "ecartees": 2674
  },
  {
   "etape": "reseau_debut",
-  "seconde": 10.2,
+  "seconde": 40.3,
   "reseau": "iad",
-  "part_secondes": 597
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 10.5,
+  "seconde": 40.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 34.4,
+  "seconde": 51.6,
   "reseau": "iad",
   "n": 112944,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 35.6,
+  "seconde": 53.3,
   "reseau": "iad",
-  "notees": 65
+  "notees": 32
  },
  {
   "etape": "tentative_notee",
-  "seconde": 36.9,
+  "seconde": 55.2,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 37.3,
+  "seconde": 55.7,
   "reseau": "iad",
-  "connues": 19980,
-  "ecartees": 3058
+  "connues": 19497,
+  "ecartees": 2674
  },
  {
   "etape": "departement",
-  "seconde": 388.4,
+  "seconde": 212.8,
   "reseau": "iad",
-  "departement": "25",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 24,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 24,
-   "vendu": 9,
-   "ecarte": 17,
+   "garde": 29,
+   "vendu": 5,
+   "ecarte": 16,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 15,
-   "outre_mer": 2
+   "titre_hors_cible:biens immobiliers a vendre": 1,
+   "location": 2,
+   "prix_trop_haut": 8,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "110 381 biens immobiliers à vendre",
-   "outre_mer": "Maison 14 pièces de 361 m² à Sainte-Anne (97227)"
+   "titre_hors_cible:biens immobiliers a vendre": "110 617 biens immobiliers à vendre",
+   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
+   "prix_trop_haut": "Demeure 10 pièces de 385 m² à Bois-Guillaume (76420)",
+   "hors_perimetre": "Ferme 10 pièces de 400 m² à Guerville (78930)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 612.9,
+  "seconde": 379.9,
   "reseau": "iad",
-  "departement": "37",
-  "visitees": 34,
-  "gardes": 26,
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 31,
   "tronquee": true,
   "etats": {
-   "garde": 26,
-   "vendu": 3,
-   "ecarte": 5,
+   "garde": 31,
+   "vendu": 5,
+   "ecarte": 14,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 4,
-   "hors_perimetre": 1
+   "location": 1,
+   "hors_perimetre": 13
   },
   "exemples": {
-   "prix_trop_haut": "Maison de ville 13 pièces de 450 m² à Tours (37000)",
-   "hors_perimetre": "Gîte 11 pièces de 371 m² à Souvigné (16240)"
+   "location": "Maison de ville 3 pièces de 72 m² à Ancy-le-Franc (89160)",
+   "hors_perimetre": "Maison d"
   }
+ },
+ {
+  "etape": "departement",
+  "seconde": 552.3,
+  "reseau": "iad",
+  "departement": "27",
+  "visitees": 50,
+  "gardes": 29,
+  "tronquee": true,
+  "etats": {
+   "garde": 29,
+   "vendu": 5,
+   "ecarte": 16,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 13,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 10 pièces de 218 m² à La Trinité-Porhoët (56490)",
+   "prix_trop_haut": "Demeure 15 pièces de 392 m² à Pressagny-l"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 639.9,
+  "reseau": "iad",
+  "departement": "28",
+  "visitees": 23,
+  "gardes": 22,
+  "tronquee": true,
+  "etats": {
+   "garde": 22,
+   "vendu": 1,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "reseau_debut",
-  "seconde": 612.9,
+  "seconde": 640.0,
   "reseau": "safti",
-  "part_secondes": 592
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 613.3,
+  "seconde": 640.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 614.9,
+  "seconde": 642.1,
   "reseau": "safti",
   "n": 29068,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 615.6,
+  "seconde": 642.9,
   "reseau": "safti",
-  "notees": 86
+  "notees": 42
  },
  {
   "etape": "tentative_notee",
-  "seconde": 616.0,
+  "seconde": 643.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 616.3,
+  "seconde": 644.0,
   "reseau": "safti",
-  "connues": 19568,
-  "ecartees": 2660
+  "connues": 19553,
+  "ecartees": 2736
  },
  {
   "etape": "departement",
-  "seconde": 879.7,
+  "seconde": 852.4,
   "reseau": "safti",
-  "departement": "21",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 41,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 2,
-   "ecarte": 7,
+   "garde": 49,
+   "vendu": 1,
+   "ecarte": 0,
    "illisible": 0
   },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 1060.2,
+  "reseau": "safti",
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 48,
+  "tronquee": true,
+  "etats": {
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 1
+  },
   "motifs": {
-   "prix_trop_haut": 2,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à LAIZY de 499m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1239.6,
+  "reseau": "safti",
+  "departement": "28",
+  "visitees": 46,
+  "gardes": 38,
+  "tronquee": true,
+  "etats": {
+   "garde": 38,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 3
+  },
+  "motifs": {
    "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à ATHIE de 284m²",
-   "hors_perimetre": "Maison à vendre à BUXEROLLES de 186m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1177.9,
-  "reseau": "safti",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
-   "vendu": 1,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à DANNEMARIE de 110m²",
-   "prix_trop_haut": "Maison à vendre à LE RUSSEY de 805m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1206.9,
-  "reseau": "safti",
-  "departement": "27",
-  "visitees": 9,
-  "gardes": 5,
-  "tronquee": true,
-  "etats": {
-   "garde": 5,
-   "vendu": 0,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à LA TRINITE de 163m²"
+   "hors_perimetre": "Maison à vendre à Bourg-Saint-Christophe de 180m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1206.9,
-  "gardes": 139
+  "seconde": 1239.6,
+  "gardes": 246
  }
 ]
