@@ -321544,7 +321544,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 108.3,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/09/15/01a0a46234c34e63530965b6ebf1baba.jpg?format=jpeg&width=1200",
@@ -578473,7 +578483,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 118.7,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/05/22/019e50c29bb4949b169b53d52e285af4.jpg?format=jpeg&width=1200",
@@ -711142,7 +711162,18 @@
   "altitude": 149.0,
   "densite_hab_km2": 167.4,
   "dpe": null,
-  "risques": {},
+  "risques": {
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
+  },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/09/12/01a095651c9adc95852f31fdf5d721da.jpg?format=jpeg&width=1200",
    "https://images.iadfrance.fr/property/broadcast/2026/09/12/01a095651c9adc95852f31fdf5d721da.jpg?format=auto&width=1560",
@@ -720810,7 +720841,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 53.3,
-   "nucleaire_nom": "Belleville-sur-Loire"
+   "nucleaire_nom": "Belleville-sur-Loire",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://images.iadfrance.fr/property/broadcast/2026/08/12/019ff56698ed61cf2980e0e979160e01.png?format=jpeg&width=1200",
@@ -771874,7 +771915,17 @@
   "dpe": "D",
   "risques": {
    "nucleaire_km": 54.3,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://lb-adresse.staticlbi.com/600xauto/images/1/687c1ab514b81e957604b99399591669/photo_423caddb8b0339b928b4590e723dba8c.jpg",
@@ -788496,7 +788547,7 @@
   "region": "Normandie",
   "agence": "Landimmo Normandie",
   "agence_url": "https://landimmonormandie.fr",
-  "photo": "https://img.netty.immo/productw/company56694gwh/2/VM392/maison-traditionnelle-6-pieces-la-cambe-14230-1791970705-VM392_26_original.jpg",
+  "photo": "https://img.netty.immo/productw/company56694gwh/2/VM392/maison-traditionnelle-6-pieces-la-cambe-14230-1791970705-VM392_26_l.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -788524,15 +788575,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.285961,
   "lon": -1.056105,
   "altitude": 44.0,
   "densite_hab_km2": 57.2,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -788542,7 +788591,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productw/company56694gwh/2/VM392/maison-traditionnelle-6-pieces-la-cambe-14230-1791970705-VM392_26_original.jpg",
@@ -788550,7 +788601,7 @@
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153"
   ],
   "vue_le": "2026-10-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -788670,15 +788721,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.337095,
   "lon": -0.582963,
   "altitude": 10.0,
   "densite_hab_km2": 242.6,
   "dpe": "E",
   "risques": {
-   "nucleaire_km": 96.5,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -788688,7 +788737,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 96.5,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productw/company56694gwh/2/VM320/maison-chalet-4-pieces-asnelles-14960-1776352004-VM320_1_original.jpg",
@@ -788700,7 +788751,7 @@
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153"
   ],
   "vue_le": "2026-08-22",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -788899,7 +788950,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.337095,
   "lon": -0.582963,
   "altitude": 10.0,
@@ -788929,7 +788980,7 @@
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153"
   ],
   "vue_le": "2026-08-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 239000,
   "prix_baisse_le": "2026-10-14"
@@ -789049,15 +789100,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.337958,
   "lon": -0.623592,
-  "altitude": 14.0,
+  "altitude": 16.0,
   "densite_hab_km2": 304.9,
   "dpe": "E",
   "risques": {
-   "nucleaire_km": 93.6,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -789067,7 +789116,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 93.6,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productw/company56694gwh/2/VM2159/maison-villa-6-pieces-arromanches-les-bains-14117-1793894191-VM2159_43_original.jpg",
@@ -789079,7 +789130,7 @@
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -789274,15 +789325,13 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.343641,
   "lon": -0.762775,
-  "altitude": 27.0,
+  "altitude": 28.0,
   "densite_hab_km2": 247.6,
   "dpe": "E",
   "risques": {
-   "nucleaire_km": 83.7,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -789292,7 +789341,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 83.7,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productw/company56694gwh/2/VM306/maison-traditionnelle-6-pieces-port-en-bessin-huppain-14520-1776352004-VM306_1_original.jpg",
@@ -789300,7 +789351,7 @@
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -789316,8 +789367,8 @@
   "surface_m2": 350.0,
   "terrain_m2": 780.0,
   "pieces": 7,
-  "commune": "Bayeux",
-  "code_postal": "14400",
+  "commune": "Arromanches-les-Bains",
+  "code_postal": "14117",
   "departement": "14",
   "region": "Normandie",
   "agence": "Landimmo Normandie",
@@ -789350,25 +789401,25 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": 49.278188,
-  "lon": -0.702334,
-  "altitude": 47.0,
-  "densite_hab_km2": 1787.2,
+  "viager": 0,
+  "lat": 49.337958,
+  "lon": -0.623592,
+  "altitude": 14.0,
+  "densite_hab_km2": 304.9,
   "dpe": "F",
   "risques": {
-   "nucleaire_km": 90.0,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": true,
    "argile_commune": true,
-   "argile": 1,
+   "argile": 3,
    "feu_foret_commune": false,
    "seisme_commune": true,
    "radon_commune": true,
    "seveso_km": null,
-   "icpe_commune": true,
+   "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 93.6,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productw/company56694gwh/2/VM1846/maison-ancienne-7-pieces-le-manoir-14400-1776352004-VM1846_1_original.jpg",
@@ -789379,7 +789430,6 @@
    "https://img.netty.immo/productw/company56694gwh/2/VM1846/maison-ancienne-7-pieces-le-manoir-14400-1776352004-VM1846_5_original.jpg",
    "https://img.netty.immo/company56694gwh/assets/nego/001@498x640.jpg?cache=1775482153",
    "https://img.netty.immo/productw/company56694gwh/2/VM2201/maison-villa-9-pieces-vierville-sur-mer-14710-1791370132-VM2201_1_original.jpg",
-   "https://img.netty.immo/productw/company56694gwh/2/VM284/maison-chateau-10-pieces-vienne-en-bessin-14400-1776352004-VM284_1_original.jpg",
    "https://img.netty.immo/productw/company56694gwh/2/VM2188/maison-bourgeoise-10-pieces-arromanches-les-bains-14117-1787831989-VM2188_1_original.jpg",
    "https://img.netty.immo/productw/company56694gwh/2/VM2171/maison-bourgeoise-8-pieces-arromanches-les-bains-14117-1781596392-VM2171_19_original.jpg",
    "https://img.netty.immo/productw/company56694gwh/2/VM340/maison-8-pieces-asnelles-14960-1776352004-VM340_1_original.jpg",
@@ -789387,10 +789437,11 @@
    "https://img.netty.immo/productw/company56694gwh/2/VM2198/maison-individuelle-5-pieces-arromanches-les-bains-14117-1790953576-VM2198_1_original.jpg",
    "https://img.netty.immo/productw/company56694gwh/2/VM2187/maison-ancienne-3-pieces-arromanches-les-bains-14117-1786977255-VM2187_9_original.jpg",
    "https://img.netty.immo/productw/company56694gwh/2/VM2203/maison-4-pieces-asnelles-14960-1793729779-VM2203_1_original.jpg",
-   "https://img.netty.immo/productw/company56694gwh/2/VM2194/maison-villa-5-pieces-asnelles-14960-1790410779-VM2194_2_original.jpg"
+   "https://img.netty.immo/productw/company56694gwh/2/VM2194/maison-villa-5-pieces-asnelles-14960-1790410779-VM2194_2_original.jpg",
+   "https://img.netty.immo/productw/company56694gwh/2/VM392/maison-traditionnelle-6-pieces-la-cambe-14230-1791970705-VM392_26_original.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -789590,15 +789641,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.63818,
   "lon": 0.265061,
   "altitude": 118.0,
   "densite_hab_km2": 195.5,
   "dpe": "D",
   "risques": {
-   "nucleaire_km": 36.1,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -789608,7 +789657,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 36.1,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/lehavreimmo/2/VM3230/maison-bourgeoise-10-pieces-angerville-l-orcher-76280-1793285515-VM3230_47_original.jpg",
@@ -789660,7 +789711,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -790108,7 +790159,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.507345,
   "lon": 0.129995,
   "altitude": 58.0,
@@ -790151,7 +790202,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -790342,10 +790393,10 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.542715,
   "lon": 0.18932,
-  "altitude": 8.0,
+  "altitude": 13.0,
   "densite_hab_km2": 813.8,
   "dpe": "E",
   "risques": {
@@ -790377,7 +790428,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -790427,7 +790478,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.507345,
   "lon": 0.129995,
   "altitude": 58.0,
@@ -790463,7 +790514,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -790513,10 +790564,10 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.63818,
   "lon": 0.265061,
-  "altitude": 118.0,
+  "altitude": 117.0,
   "densite_hab_km2": 195.5,
   "dpe": "D",
   "risques": {
@@ -790554,7 +790605,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -790926,10 +790977,10 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.63818,
   "lon": 0.265061,
-  "altitude": 118.0,
+  "altitude": 117.0,
   "densite_hab_km2": 195.5,
   "dpe": "D",
   "risques": {
@@ -790973,7 +791024,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/salon/34gbb9s6ov0g@5180x3457.jpeg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -791289,7 +791340,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.419776,
   "lon": 3.654695,
   "altitude": 20.0,
@@ -791347,7 +791398,7 @@
    "https://www.lemercier-immobilier.com/vente/25-crespin/maison/t5/13537-maison-mitoyenne-de-75m-a-crespin/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-11-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -791626,10 +791677,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.358552,
   "lon": 3.510438,
-  "altitude": 39.0,
+  "altitude": 37.0,
   "densite_hab_km2": 3144.6,
   "dpe": null,
   "risques": {
@@ -791672,7 +791723,7 @@
    "https://www.lemercier-immobilier.com/vente/91-valenciennes/maison/t5/13172-maison-centre-ville-de-valenciennes-59300/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -791826,7 +791877,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.358552,
   "lon": 3.510438,
   "altitude": 39.0,
@@ -791911,7 +791962,7 @@
    "https://www.lemercier-immobilier.com/vente/91-valenciennes/maison/t14/13160-maison-bourgeoise-de-274m2-valenciennes-59300/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -792371,10 +792422,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.358552,
   "lon": 3.510438,
-  "altitude": 39.0,
+  "altitude": 37.0,
   "densite_hab_km2": 3144.6,
   "dpe": null,
   "risques": {
@@ -792444,7 +792495,7 @@
    "https://www.lemercier-immobilier.com/vente/91-valenciennes/maison/t7/13203-maison-de-7-pieces-situee-sur-valenciennes-59300/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -792606,7 +792657,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.358552,
   "lon": 3.510438,
   "altitude": 39.0,
@@ -792709,7 +792760,7 @@
    "https://www.lemercier-immobilier.com/vente/91-valenciennes/maison/t10/13504-superbe-maison-de-maitre-sur-la-commune-de-valenciennes/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-11-01",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -793276,7 +793327,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.358552,
   "lon": 3.510438,
   "altitude": 39.0,
@@ -793334,7 +793385,7 @@
    "https://www.lemercier-immobilier.com/vente/5223-aix-noulette/chalet/t6/11855-chalet-a-la-campagne/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -793488,10 +793539,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.33992,
   "lon": 3.576077,
-  "altitude": 68.0,
+  "altitude": 67.0,
   "densite_hab_km2": 387.9,
   "dpe": null,
   "risques": {
@@ -793552,7 +793603,7 @@
    "https://www.lemercier-immobilier.com/vente/84-sebourg/maison/t5/13498-maison-individuelle-de-114m-a-sebourg-59990/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-22",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -794162,7 +794213,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.392602,
   "lon": 3.59755,
   "altitude": 25.0,
@@ -794197,7 +794248,7 @@
    "https://lemercierimmo.staticlbi.com/980xauto/images/biens/5/0e219dc4e5e2143b72d4c55dc1048582/photo_4681bda9d18be5b1ba13f7be084ac46e.jpg",
    "https://lemercierimmo.staticlbi.com/980xauto/images/biens/5/0e219dc4e5e2143b72d4c55dc1048582/photo_8c1e31616570551b5bd6b92297666776.jpg",
    "https://lemercierimmo.staticlbi.com/800xauto/images/biens/5/fe95a10a149f5627c28b3deb33bf3041/photo_a86d3fc7a3e963ffc42814ee16ce02bc.jpg",
-   "https://lemercierimmo.staticlbi.com/800xauto/images/biens/16/6d810f69d9f40dd14e4f2a0a5a0a8e5c/photo_e82f96d006f0efdd2f74506b73ecb153.jpg",
+   "https://lemercierimmo.staticlbi.com/800xauto/images/biens/5/088244511cfb9eb2c176efb2b8bd98c2/photo_f6813ab4b23b6c4c61297036ed71d212.jpg",
    "https://lemercierimmo.staticlbi.com/580xauto/images/biens/5/0e219dc4e5e2143b72d4c55dc1048582/photo_e054029f82d33b9ebc1802948875d925.jpg",
    "https://lemercierimmo.staticlbi.com/580xauto/images/biens/5/0e219dc4e5e2143b72d4c55dc1048582/photo_e6934853681b02a9b29c442beb9e1c93.jpg",
    "https://lemercierimmo.staticlbi.com/580xauto/images/biens/5/0e219dc4e5e2143b72d4c55dc1048582/photo_33bc75da8b161a290956fa7dedbb4ee9.jpg",
@@ -794208,7 +794259,7 @@
    "https://www.lemercier-immobilier.com/vente/1-onnaing/maison/t5/13388-maison-de-74m-59264-onnaing/images/modules/partners/interkab.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -794435,10 +794486,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.274465,
   "lon": -0.260058,
-  "altitude": 13.0,
+  "altitude": 12.0,
   "densite_hab_km2": 1009.1,
   "dpe": null,
   "risques": {
@@ -794469,7 +794520,7 @@
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-11-10",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -794748,7 +794799,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.184316,
   "lon": -0.37193,
   "altitude": 28.0,
@@ -794787,7 +794838,7 @@
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-10-06",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -794910,10 +794961,10 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.111907,
   "lon": -0.365437,
-  "altitude": 52.0,
+  "altitude": 54.0,
   "densite_hab_km2": 317.3,
   "dpe": null,
   "risques": {
@@ -794954,7 +795005,167 @@
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-10-06",
-  "revue_le": "2026-11-10",
+  "revue_le": "2026-11-18",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "le-strat-caen-immo-5a6f96451a09",
+  "source": "le-strat-caen-immo",
+  "url": "https://www.caen-immo.fr/biens/tres-bel-f3-en-centre-ville-56464554/",
+  "titre": "TRES BEL F3 EN CENTRE VILLE",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 110.07,
+  "terrain_m2": null,
+  "pieces": 3,
+  "commune": null,
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Le Strat Caen Immo",
+  "agence_url": "https://caen-immo.fr",
+  "photo": "https://www.caen-immo.fr/wp-content/uploads/2026/11/56464554a.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": true,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
+  "dpe": null,
+  "risques": {},
+  "photos": [
+   "https://www.caen-immo.fr/wp-content/uploads/2026/11/56464554a.jpg",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554a.jpg?DATEMAJ=14/03/2025-12:29:32",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554b.jpg?DATEMAJ=14/03/2025-12:29:32",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554c.jpg?DATEMAJ=14/03/2025-12:29:33",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554d.jpg?DATEMAJ=14/03/2025-12:29:33",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554e.jpg?DATEMAJ=14/03/2025-12:29:33",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554f.jpg?DATEMAJ=14/03/2025-12:29:34",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554g.jpg?DATEMAJ=14/03/2025-12:29:34",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/5/6/4/6/4/5/5/4/56464554h.jpg?DATEMAJ=14/03/2025-12:29:35",
+   "https://www.caen-immo.fr/wp-content/uploads/2025/07/Le-Strat-Equipe-Loc-1.jpg-Le-Strat-Equipe-Loc-2.jpeg",
+   "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
+  ],
+  "vue_le": "2026-11-18",
+  "revue_le": "2026-11-18",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "le-strat-caen-immo-6a153054b2b5",
+  "source": "le-strat-caen-immo",
+  "url": "https://www.caen-immo.fr/biens/f2-hyper-centre-caen-34779002/",
+  "titre": "F2 HYPER CENTRE CAEN",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 51.78,
+  "terrain_m2": null,
+  "pieces": 2,
+  "commune": "Caen",
+  "code_postal": "14000",
+  "departement": "14",
+  "region": "Normandie",
+  "agence": "Le Strat Caen Immo",
+  "agence_url": "https://caen-immo.fr",
+  "photo": "https://www.caen-immo.fr/wp-content/uploads/2026/11/34779002a.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": true,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
+  "lat": 49.184316,
+  "lon": -0.37193,
+  "altitude": 28.0,
+  "densite_hab_km2": 4257.3,
+  "dpe": null,
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.caen-immo.fr/wp-content/uploads/2026/11/34779002a.jpg",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002a.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002b.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002c.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002d.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002e.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002f.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002g.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002h.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002i.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002j.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002k.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002l.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://media.immo-facile.com/office/cabine_1910241622/catalog/images/pr_p/3/4/7/7/9/0/0/2/34779002m.jpg?DATEMAJ=17/11/2026-16:08:59",
+   "https://www.caen-immo.fr/wp-content/uploads/2025/07/Le-Strat-Equipe-Loc-1.jpg-Le-Strat-Equipe-Loc-2.jpeg",
+   "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
+  ],
+  "vue_le": "2026-11-18",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -795660,8 +795871,8 @@
   "description": null,
   "type_bien": "maison",
   "prix": null,
-  "surface_m2": 200.0,
-  "terrain_m2": null,
+  "surface_m2": 107.0,
+  "terrain_m2": 350.0,
   "pieces": 7,
   "commune": "Caen",
   "code_postal": "14000",
@@ -795669,7 +795880,7 @@
   "region": "Normandie",
   "agence": "Le Strat Caen Immo",
   "agence_url": "https://caen-immo.fr",
-  "photo": "https://www.caen-immo.fr/wp-content/uploads/2026/09/34778080a.jpg",
+  "photo": "https://www.caen-immo.fr/wp-content/uploads/2026/11/61744754a.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -795694,10 +795905,10 @@
    "isolement": false,
    "autonomie": false
   },
-  "etat_declare": "sans_travaux",
+  "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.184316,
   "lon": -0.37193,
   "altitude": 28.0,
@@ -795718,17 +795929,19 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
+   "https://www.caen-immo.fr/wp-content/uploads/2026/11/61744754a.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/10/61651754a.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/09/34778080a.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/09/61521455a.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/05/60492832a-74.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/04/60397230a-73.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2026/03/60235701a-85.jpg",
+   "https://www.caen-immo.fr/wp-content/uploads/2025/07/56343320a-98.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2025/07/58370930a-84.jpg",
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-10-06",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -795778,7 +795991,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.184316,
   "lon": -0.37193,
   "altitude": 28.0,
@@ -795813,7 +796026,7 @@
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -796031,7 +796244,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.184316,
   "lon": -0.37193,
   "altitude": 28.0,
@@ -796059,7 +796272,7 @@
    "https://www.caen-immo.fr/wp-content/uploads/2025/06/le-strat-immobilier-2.png"
   ],
   "vue_le": "2026-10-06",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -797448,7 +797661,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": 514300,
-  "surface_m2": 136.0,
+  "surface_m2": 280.0,
   "terrain_m2": 535.0,
   "pieces": 7,
   "commune": null,
@@ -797457,7 +797670,7 @@
   "region": null,
   "agence": "Lelièvre immobilier",
   "agence_url": "https://lelievre-immobilier.com",
-  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SH2506/62075p1.jpg?itok=fw0Bl9Y7",
+  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SH2506/62075p1.webp?itok=bEisk37_",
   "features": {
    "cave": true,
    "puits": false,
@@ -797485,7 +797698,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -797493,25 +797706,25 @@
   "dpe": "D",
   "risques": {},
   "photos": [
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SH2506/62075p1.jpg?itok=fw0Bl9Y7",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SH2506/62075p1.webp?itok=bEisk37_",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/thumbnail/public/pictures/2025-05/sarah%20huitorel.jpg?itok=jh3NZGRu",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p1.jpg?itok=83wABP6O",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p2.jpg?itok=Y-PIgpHD",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p3.jpg?itok=779AQoCt",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p4.jpg?itok=KEguAx__",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p5.jpg?itok=Jlq2VHUJ",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p1.webp?itok=woE8ogn3",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p2.webp?itok=uG9KGikh",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p3.webp?itok=iANmPw2X",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p4.webp?itok=rozA3q4R",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SH2506/62075p5.webp?itok=uDRm1OCm",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2628/62892p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2629/62881p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2611/62862p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2633/62883p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2573/62533p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2606/62583p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2610/62813p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2618/62844p1.jpg"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2612/62002p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2609/62831p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2611/62862p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/JG2603/62781p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2630/62875p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2624/62857p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2622/62420p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2610/62813p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -797524,7 +797737,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": 630000,
-  "surface_m2": 157.0,
+  "surface_m2": 280.0,
   "terrain_m2": null,
   "pieces": 7,
   "commune": null,
@@ -797561,7 +797774,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -797577,17 +797790,17 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/VF2551/62398p4.webp?itok=lmG-qk7p",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/VF2551/62398p5.webp?itok=4pYcAe_4",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SH2589/62629p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2624/62857p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/JG2603/62781p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2613/62843p1.webp",
    "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2591/62663p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2611/62862p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2600/62760p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2573/62533p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2636/62943p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SH2602/62794p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SGT2617/61636p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2625/62854p1.webp"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2615/62826p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/VF2625/62854p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RI2612/62002p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -797766,9 +797979,9 @@
   "description": null,
   "type_bien": "maison",
   "prix": 17000,
-  "surface_m2": 52.0,
+  "surface_m2": 45.0,
   "terrain_m2": null,
-  "pieces": 1,
+  "pieces": 2,
   "commune": null,
   "code_postal": null,
   "departement": null,
@@ -797803,7 +798016,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -797818,17 +798031,17 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/CV4608/62252p3.webp?itok=_jtBgJDa",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/CV4608/62252p4.webp?itok=iENx6eAQ",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/AG4685V2/62905p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/CV4582A/62778p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/0GAP4678/62733p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/DB4701/62909p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/XL4687-1/62871p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/GAP4699/62899p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/GAP4696/62863p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/CV4624C/62773p1.webp"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/2AG4658/62904p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/CV4570C/62582p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/BP4619/62312p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/DBBP4709/62959p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/GAP4656V2/62921p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/ODB04700/62955p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/CL4616bis/62808p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/MBE4684/62833p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -798375,7 +798588,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": 170000,
-  "surface_m2": 175.0,
+  "surface_m2": 163.0,
   "terrain_m2": null,
   "pieces": 4,
   "commune": null,
@@ -798384,7 +798597,7 @@
   "region": null,
   "agence": "Lelièvre immobilier",
   "agence_url": "https://lelievre-immobilier.com",
-  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/20271/62087p1.jpg?itok=CV73r8CZ",
+  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/20271/62087p1.webp?itok=WMzzpQk5",
   "features": {
    "cave": false,
    "puits": false,
@@ -798412,7 +798625,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -798420,25 +798633,25 @@
   "dpe": "D",
   "risques": {},
   "photos": [
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/20271/62087p1.jpg?itok=CV73r8CZ",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/20271/62087p1.webp?itok=WMzzpQk5",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/thumbnail/public/pictures/2025-05/ghislaine%20roynard.jpg?itok=2jSgbmxA",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p1.jpg?itok=me6wz38-",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p2.jpg?itok=1VcQVbT-",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p3.jpg?itok=1FtlAOo7",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p4.jpg?itok=zRR6mGv2",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p5.jpg?itok=tdo5YYO7",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p1.webp?itok=e6IrCDRN",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p2.webp?itok=ewNE1D4f",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p3.webp?itok=KIDm7iEZ",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p4.webp?itok=jrCgZ1er",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20271/62087p5.webp?itok=ipYsmdk1",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600369CS/62777p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7744al/62910p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7741al/62861p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/2025-SM-PRESCHE-T3R1/62046p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600363CS/62657p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.002893/326137466_72_002893_4.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7745al/62911p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7689_YC/62527p1.jpg"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003112/403104110_72_003112_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7652-YC/62436p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7749al/62947p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003007/72_003007_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7698al/62573p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600364CS/62710p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7670al/62378p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003115/243993562_72_003115_1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -798460,7 +798673,7 @@
   "region": null,
   "agence": "Lelièvre immobilier",
   "agence_url": "https://lelievre-immobilier.com",
-  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SMA3356-PA-15/62286p1.jpg?itok=fSI5_aWB",
+  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SMA3356-PA-15/62286p1.webp?itok=LM97kf_B",
   "features": {
    "cave": false,
    "puits": false,
@@ -798488,7 +798701,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -798496,25 +798709,25 @@
   "dpe": "C",
   "risques": {},
   "photos": [
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SMA3356-PA-15/62286p1.jpg?itok=fSI5_aWB",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/SMA3356-PA-15/62286p1.webp?itok=LM97kf_B",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/thumbnail/public/pictures/2025-06/Sabrina%20MARHEM%2002%20-%20150px.png?itok=U785iOS8",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p1.jpg?itok=S01jvpPF",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p2.jpg?itok=2FHFWPNu",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p3.jpg?itok=alM2mhfY",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p4.jpg?itok=0sCph_Gw",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p5.jpg?itok=29HTiysy",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p1.webp?itok=jdq12NtV",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p2.webp?itok=ISZaQ1oF",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p3.webp?itok=YZhq1zVV",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p4.webp?itok=lBGpylo9",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/SMA3356-PA-15/62286p5.webp?itok=J_NbaCyJ",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/LD4242-C002-35/62266p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/LD-3373-G-27/62653p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3378-R-41/62814p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/LD3306-P-24/61717p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/44.022274/380141246_44_022274_1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3372-R-24/62603p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/JAD4242-M1/62267p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3376-A-44/62812p1.jpg"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/LD3306-P-24/61717p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3372-R-24/62603p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/44.022274/380141246_44_022274_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3374-42/62748p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/44.022259/012880364_44_022259_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/RB3380-R-43/62884p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3376-A-44/62812p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/SMA3378-R-41/62814p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -798610,7 +798823,7 @@
   "region": null,
   "agence": "Lelièvre immobilier",
   "agence_url": "https://lelievre-immobilier.com",
-  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/MBE4541B/62126p1.jpg?itok=Ia0GuFnQ",
+  "photo": "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/MBE4541B/62126p1.webp?itok=_PrgraIT",
   "features": {
    "cave": false,
    "puits": false,
@@ -798638,7 +798851,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -798646,17 +798859,17 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/MBE4541B/62126p1.jpg?itok=Ia0GuFnQ",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p1.jpg?itok=ac7u2aqX",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p2.jpg?itok=kamRfRtL",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p3.jpg?itok=QY9iM1a0",
-   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p4.jpg?itok=flUxEY0j",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/article_size/public/import_images_annonces/MBE4541B/62126p1.webp?itok=_PrgraIT",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p1.webp?itok=x8iXfAiz",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p2.webp?itok=cBgHvRW2",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p3.webp?itok=Z-Qo5ajJ",
+   "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/MBE4541B/62126p4.webp?itok=hJVdpfuv",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/BP4695/62806p1.jpg",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/AGGAP4671/62617p1.jpg"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/BP4695/62806p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/AGGAP4671/62617p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -798978,7 +799191,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": 170000,
-  "surface_m2": 155.0,
+  "surface_m2": 220.0,
   "terrain_m2": 530.0,
   "pieces": 4,
   "commune": null,
@@ -799015,7 +799228,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -799031,17 +799244,17 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20284/62172p4.webp?itok=KJO5nnqk",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20284/62172p5.webp?itok=jnV--dkk",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7743-ET/62918p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7747/62901p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7715-ET/62698p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600369CS/62777p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7722-ET/62704p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/20320/62829p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003068/72_003068_1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003112/403104110_72_003112_1.webp"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7631-CLG/62155p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.002952/318645499_72_002952_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003101/588506968_72_003101_6.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/16000338CS/61973p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7750-ET/62937p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7707-DA/62620p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600364CS/62710p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600372CS/62810p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799130,9 +799343,9 @@
   "description": null,
   "type_bien": "maison",
   "prix": 153000,
-  "surface_m2": 444.0,
+  "surface_m2": 175.0,
   "terrain_m2": null,
-  "pieces": null,
+  "pieces": 3,
   "commune": null,
   "code_postal": "20292",
   "departement": "20",
@@ -799167,7 +799380,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 1,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -799182,17 +799395,17 @@
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20292/42295p4.webp?itok=WBnnNKm2",
    "https://www.lelievre-immobilier.com/sites/default/files/styles/diaporama_annonce/public/import_images_annonces/20292/42295p5.webp?itok=11Cauotk",
    "https://maps.gstatic.com/mapfiles/undo_poly.png",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7711al/62662p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7733al/62819p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003098/036983402_72_003098_1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7650/61366p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003120/193520237_72_003120_1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7671/62405p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7710-ET/62672p1.webp",
-   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7582-YC/61816p1.webp"
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600355CS/62526p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7743-ET/62918p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/72.003085/611581010_72_003085_1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7642al/62227p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600375CS/62891p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/1600367CS/62753p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/2025-SM-SOLESMESVILLA/62116p1.webp",
+   "https://www.lelievre-immobilier.com/sites/default/files/import_images_annonces/7741al/62861p1.webp"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799432,7 +799645,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/61661663-1/maison-villa-criquetot-l-esneval-76280-1793765437.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/61661663-1/maison-villa-criquetot-l-esneval-76280-1794835550.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -799460,7 +799673,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.63818,
   "lon": 0.265061,
   "altitude": 118.0,
@@ -799481,7 +799694,7 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/61661663-1/maison-villa-criquetot-l-esneval-76280-1793765437.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-1/maison-villa-criquetot-l-esneval-76280-1794835550.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61661663-2/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61661663-3/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61661663-4/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
@@ -799489,11 +799702,18 @@
    "https://www.lemaistre-immo.fr/photos/biens/61661663-6/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61661663-7/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61661663-8/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-9/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-10/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-11/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-12/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-13/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-14/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61661663-15/maison-villa-criquetot-l-esneval-76280-1793205466.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-11-06",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799515,7 +799735,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/61729199-1/maison-villa-saint-martin-de-l-if-76190-1794370228.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/61729199-1/maison-villa-saint-martin-de-l-if-76190-1794835654.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -799543,10 +799763,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.61982,
   "lon": 0.764902,
-  "altitude": 146.0,
+  "altitude": 144.0,
   "densite_hab_km2": 1530.5,
   "dpe": null,
   "risques": {
@@ -799564,7 +799784,7 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/61729199-1/maison-villa-saint-martin-de-l-if-76190-1794370228.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61729199-1/maison-villa-saint-martin-de-l-if-76190-1794835654.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61729199-2/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61729199-3/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61729199-4/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
@@ -799572,11 +799792,13 @@
    "https://www.lemaistre-immo.fr/photos/biens/61729199-6/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61729199-7/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61729199-8/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61729199-9/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61729199-10/maison-villa-saint-martin-de-l-if-76190-1794325520.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799681,7 +799903,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/57829497-1/maison-villa-terres-de-caux-76640-1794370233.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/57829497-1/maison-villa-terres-de-caux-76640-1794835658.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -799709,7 +799931,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.651625,
   "lon": 0.601001,
   "altitude": 140.0,
@@ -799730,7 +799952,7 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/57829497-1/maison-villa-terres-de-caux-76640-1794370233.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-1/maison-villa-terres-de-caux-76640-1794835658.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/57829497-2/maison-villa-terres-de-caux-76640-1794327408.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/57829497-3/maison-villa-terres-de-caux-76640-1794327408.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/57829497-4/maison-villa-terres-de-caux-76640-1794327408.jpg",
@@ -799738,11 +799960,26 @@
    "https://www.lemaistre-immo.fr/photos/biens/57829497-6/maison-villa-terres-de-caux-76640-1794327408.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/57829497-7/maison-villa-terres-de-caux-76640-1794327408.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/57829497-8/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-9/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-10/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-11/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-12/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-13/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-14/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-15/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-16/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-17/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-18/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-19/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-20/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-21/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-22/maison-villa-terres-de-caux-76640-1794327408.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/57829497-23/maison-villa-terres-de-caux-76640-1794327408.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-11-11",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799910,7 +800147,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/61608898-1/maison-villa-breaute-76110-1794024626.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/61608898-1/maison-villa-breaute-76110-1794835581.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -799938,12 +800175,12 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.651388,
   "lon": 0.358996,
-  "altitude": 121.0,
+  "altitude": 119.0,
   "densite_hab_km2": 352.1,
-  "dpe": null,
+  "dpe": "B",
   "risques": {
    "inondation_commune": false,
    "argile_commune": true,
@@ -799959,7 +800196,7 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/61608898-1/maison-villa-breaute-76110-1794024626.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-1/maison-villa-breaute-76110-1794835581.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61608898-2/maison-villa-breaute-76110-1793979008.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61608898-3/maison-villa-breaute-76110-1793979012.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61608898-4/maison-villa-breaute-76110-1793979015.jpg",
@@ -799967,11 +800204,29 @@
    "https://www.lemaistre-immo.fr/photos/biens/61608898-6/maison-villa-breaute-76110-1793979019.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61608898-7/maison-villa-breaute-76110-1793979021.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61608898-8/maison-villa-breaute-76110-1793979023.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-9/maison-villa-breaute-76110-1793979033.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-10/maison-villa-breaute-76110-1793979036.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-11/maison-villa-breaute-76110-1793979037.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-12/maison-villa-breaute-76110-1793979039.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-13/maison-villa-breaute-76110-1793979041.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-14/maison-villa-breaute-76110-1793979052.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-15/maison-villa-breaute-76110-1793979054.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-16/maison-villa-breaute-76110-1793979056.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-17/maison-villa-breaute-76110-1793979058.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-18/maison-villa-breaute-76110-1793979060.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-19/maison-villa-breaute-76110-1793979062.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-20/maison-villa-breaute-76110-1793979064.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-21/maison-villa-breaute-76110-1793979075.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-22/maison-villa-breaute-76110-1793979077.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-23/maison-villa-breaute-76110-1793886017.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-24/maison-villa-breaute-76110-1793814415.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-25/maison-villa-breaute-76110-1793376794.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61608898-26/maison-villa-breaute-76110-1793376797.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -799993,7 +800248,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/61641083-1/maison-villa-le-havre-dollemard-76620-1792206623.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/61641083-1/maison-villa-le-havre-dollemard-76620-1794835564.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -800021,7 +800276,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -800029,7 +800284,7 @@
   "dpe": null,
   "risques": {},
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/61641083-1/maison-villa-le-havre-dollemard-76620-1792206623.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-1/maison-villa-le-havre-dollemard-76620-1794835564.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61641083-2/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61641083-3/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61641083-4/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
@@ -800037,11 +800292,23 @@
    "https://www.lemaistre-immo.fr/photos/biens/61641083-6/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61641083-7/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61641083-8/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-9/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-10/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-11/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-12/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-13/maison-villa-le-havre-dollemard-76620-1792166305.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-14/maison-villa-le-havre-dollemard-76620-1792166361.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-15/maison-villa-le-havre-dollemard-76620-1792166365.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-16/maison-villa-le-havre-dollemard-76620-1792166382.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-17/maison-villa-le-havre-dollemard-76620-1792166403.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-18/maison-villa-le-havre-dollemard-76620-1792166423.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-19/maison-villa-le-havre-dollemard-76620-1792166432.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61641083-20/maison-villa-le-havre-dollemard-76620-1792166440.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -801422,7 +801689,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/61738834-1/maison-villa-le-tilleul-76790-1794629425.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/61738834-1/maison-villa-le-tilleul-76790-1794835623.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -801450,15 +801717,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.701877,
   "lon": 0.29019,
   "altitude": 109.0,
   "densite_hab_km2": 75.4,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 30.2,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -801468,10 +801733,12 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 30.2,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/61738834-1/maison-villa-le-tilleul-76790-1794629425.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-1/maison-villa-le-tilleul-76790-1794835623.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61738834-2/maison-villa-le-tilleul-76790-1794591763.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61738834-3/maison-villa-le-tilleul-76790-1794591763.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61738834-4/maison-villa-le-tilleul-76790-1794591763.jpg",
@@ -801479,11 +801746,28 @@
    "https://www.lemaistre-immo.fr/photos/biens/61738834-6/maison-villa-le-tilleul-76790-1794591763.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61738834-7/maison-villa-le-tilleul-76790-1794591763.jpg",
    "https://www.lemaistre-immo.fr/photos/biens/61738834-8/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-9/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-10/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-11/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-12/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-13/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-14/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-15/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-16/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-17/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-18/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-19/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-20/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-21/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-22/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-23/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-24/maison-villa-le-tilleul-76790-1794591763.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/61738834-25/maison-villa-le-tilleul-76790-1794592560.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
   "vue_le": "2026-11-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -802072,7 +802356,7 @@
   "region": "Normandie",
   "agence": "Lemaistre Immobilier Yvetot",
   "agence_url": "https://lemaistre-immo.fr",
-  "photo": "https://www.lemaistre-immo.fr/photos/biens/60005338-1/maison-villa-yvetot-76190-1787800325.jpg",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/60005338-1/maison-villa-yvetot-76190-1794835635.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -802100,7 +802384,90 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
+  "lat": 49.61982,
+  "lon": 0.764902,
+  "altitude": 144.0,
+  "densite_hab_km2": 1530.5,
+  "dpe": null,
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 28.1,
+   "nucleaire_nom": "Paluel"
+  },
+  "photos": [
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-1/maison-villa-yvetot-76190-1794835635.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-2/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-3/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-4/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-5/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-6/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-7/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60005338-8/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
+   "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
+  ],
+  "vue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "lemaistre-immobilier-yvetot-c4f16fa6d175",
+  "source": "lemaistre-immobilier-yvetot",
+  "url": "https://www.lemaistre-immo.fr/vente-achat/maison-villa-yvetot-76190/60508856.htm",
+  "titre": "vente achat Maison-Villa YVETOT 76190",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 123500,
+  "surface_m2": 100.0,
+  "terrain_m2": 464.0,
+  "pieces": null,
+  "commune": "Yvetot",
+  "code_postal": "76190",
+  "departement": "76",
+  "region": "Normandie",
+  "agence": "Lemaistre Immobilier Yvetot",
+  "agence_url": "https://lemaistre-immo.fr",
+  "photo": "https://www.lemaistre-immo.fr/photos/biens/60508856-1/maison-villa-yvetot-76190-1794835971.jpg",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
   "lat": 49.61982,
   "lon": 0.764902,
   "altitude": 146.0,
@@ -802121,19 +802488,23 @@
    "nucleaire_nom": "Paluel"
   },
   "photos": [
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-1/maison-villa-yvetot-76190-1787800325.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-2/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-3/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-4/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-5/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-6/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-7/maison-villa-yvetot-76190-1787735683.jpg",
-   "https://www.lemaistre-immo.fr/photos/biens/60005338-8/maison-villa-yvetot-76190-1787735683.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-1/maison-villa-yvetot-76190-1794835971.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-2/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-3/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-4/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-5/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-6/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-7/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-8/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-9/maison-villa-yvetot-76190-1792082171.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-10/maison-villa-yvetot-76190-1792254216.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-11/maison-villa-yvetot-76190-1792254218.jpg",
+   "https://www.lemaistre-immo.fr/photos/biens/60508856-12/maison-villa-yvetot-76190-1792254220.jpg",
    "https://www.lemaistre-immo.fr/photo/img/snpi.png?time=1540913983538",
    "https://www.lemaistre-immo.fr/.framework/themes/silver/images/google-analytics.png"
   ],
-  "vue_le": "2026-11-14",
-  "revue_le": "2026-11-14",
+  "vue_le": "2026-11-18",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -802918,10 +803289,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -802943,7 +803314,7 @@
    "https://img.netty.immo/productw/artisans/2/VM682/maison-chesny-vente-21788167702-VM682_2_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -802965,7 +803336,7 @@
   "region": "Grand Est",
   "agence": "Les Artisans 2 l'immobilier",
   "agence_url": "https://artisans-immobilier.com",
-  "photo": "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793030157-VM691_19_l.jpg",
+  "photo": "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793199421-VM691_38_l.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -802993,7 +803364,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
   "altitude": 177.0,
@@ -803014,11 +803385,11 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg2.jpg\"",
-   "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793030157-VM691_19_l.jpg"
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
+   "https://img.netty.immo/productw/artisans/2/VM691/maison-individuelle-pournoy-la-grasse-vente-21793199421-VM691_38_l.jpg"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -803312,7 +803683,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
   "altitude": 177.0,
@@ -803333,11 +803704,11 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg1.jpg\"",
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
    "https://img.netty.immo/productw/artisans/2/VM693/maison-individuelle-verny-vente-21793033931-VM693_15_l.jpg"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -803387,10 +803758,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -803408,11 +803779,11 @@
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg2.jpg\"",
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
    "https://img.netty.immo/productw/artisans/2/VM695/maison-individuelle-retonfey-vente-21793801045-VM695_2_l.jpg"
   ],
   "vue_le": "2026-10-31",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 284850,
   "prix_baisse_le": "2026-11-06"
@@ -803462,10 +803833,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -803487,7 +803858,7 @@
    "https://img.netty.immo/productw/artisans/2/VM677/maison-individuelle-courcelles-sur-nied-vente-21789637357-VM677_35_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -803537,10 +803908,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
-  "altitude": 177.0,
+  "altitude": 173.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
@@ -803562,7 +803933,7 @@
    "https://img.netty.immo/productw/artisans/2/VM685/maison-individuelle-sainte-barbe-vente-21793367755-VM685_57_l.jpg"
   ],
   "vue_le": "2026-09-06",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 284850,
   "prix_baisse_le": "2026-11-06"
@@ -803612,7 +803983,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
   "altitude": 177.0,
@@ -803637,7 +804008,7 @@
    "https://img.netty.immo/productw/artisans/2/VM681/maison-saulny-vente-21789632467-VM681_11_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -804069,15 +804440,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.123687,
   "lon": 6.143731,
   "altitude": 177.0,
   "densite_hab_km2": 2979.8,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 32.9,
-   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -804087,14 +804456,16 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 32.9,
+   "nucleaire_nom": "Cattenom"
   },
   "photos": [
-   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg3.jpg\"",
+   "https://www.artisans-immobilier.com/\"/tmpl_v3/56_artisans/img/bg1.jpg\"",
    "https://img.netty.immo/productw/artisans/2/VM679/maison-individuelle-aube-vente-21789637320-VM679_27_l.jpg"
   ],
   "vue_le": "2026-08-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -804656,15 +805027,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.286373,
   "lon": -0.125678,
   "altitude": 5.0,
   "densite_hab_km2": 692.1,
   "dpe": "E",
   "risques": {
-   "nucleaire_km": 84.0,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -804674,7 +805043,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 84.0,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/company37345pwq/2/VM595/maison-individuelle-6-pieces-petiville-14390-1773765629-VM595_7_original.jpg",
@@ -804686,7 +805057,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/001@960x1280.jpg?cache=1790668014"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -804736,7 +805107,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.288161,
   "lon": -0.309972,
   "altitude": 6.0,
@@ -804765,7 +805136,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/109@640x626.jpg?cache=1757345636"
   ],
   "vue_le": "2026-09-17",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -804884,15 +805255,13 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.049496,
   "lon": -0.32173,
-  "altitude": 101.0,
+  "altitude": 75.0,
   "densite_hab_km2": 194.2,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 113.4,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -804902,7 +805271,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 113.4,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/company37345pwq/2/VM642/maison-6-pieces-bretteville-sur-laize-14680-1792921138-VM642_73_original.jpg",
@@ -804914,7 +805285,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/116@631x640.jpg?cache=1757357348"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 350000,
   "prix_baisse_le": "2026-10-25"
@@ -804964,15 +805335,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.288161,
   "lon": -0.309972,
-  "altitude": 6.0,
+  "altitude": 7.0,
   "densite_hab_km2": 405.7,
   "dpe": "A",
   "risques": {
-   "nucleaire_km": 93.0,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -804982,7 +805351,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 93.0,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/company37345pwq/2/VM381/maison-5-pieces-hermanville-sur-mer-14880-1791634507-VM381_48_original.jpg",
@@ -804993,7 +805364,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/103@626x640.jpg?cache=1756914503"
   ],
   "vue_le": "2026-09-13",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -805043,15 +805414,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.184316,
   "lon": -0.37193,
   "altitude": 28.0,
   "densite_hab_km2": 4257.3,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 104.4,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -805061,7 +805430,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 104.4,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://img.netty.immo/productcw/company37345pwq/2/VM585/maison-individuelle-9-pieces-caen-14000-1764600849-VM585_3_original.jpg",
@@ -805073,7 +805444,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/109@640x626.jpg?cache=1757345636"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -805192,15 +805563,13 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.986868,
   "lon": -0.509414,
   "altitude": 125.0,
   "densite_hab_km2": 76.5,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 116.8,
-   "nucleaire_nom": "Flamanville",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": null,
@@ -805210,7 +805579,9 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 116.8,
+   "nucleaire_nom": "Flamanville"
   },
   "photos": [
    "https://img.netty.immo/productcw/company37345pwq/2/VM670/maison-mitoyenne-1-cote-4-pieces-ouffieres-14220-1776851936-VM670_22_original.jpg",
@@ -805222,7 +805593,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/112@2533x2560.jpg?cache=1757408172"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -805244,7 +805615,7 @@
   "region": "Normandie",
   "agence": "Les Clés du Littoral",
   "agence_url": "https://lesclesdulittoral.com",
-  "photo": "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1793385743-VM650_41_original.jpg",
+  "photo": "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1794829006-VM650_44_original.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -805272,15 +805643,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.288161,
   "lon": -0.309972,
-  "altitude": 6.0,
+  "altitude": 7.0,
   "densite_hab_km2": 405.7,
   "dpe": "D",
   "risques": {
-   "nucleaire_km": 93.0,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -805290,19 +805659,21 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 93.0,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
+   "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1794829006-VM650_44_original.jpg",
+   "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1794829006-VM650_44_l.jpg",
    "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1793385743-VM650_41_original.jpg",
-   "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1793385743-VM650_41_l.jpg",
    "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1792830267-VM650_31_original.jpg",
    "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1792830264-VM650_26_original.jpg",
-   "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1792830268-VM650_33_original.jpg",
    "https://img.netty.immo/productcw/company37345pwq/2/VM650/maison-plain-pied-4-pieces-colleville-montgomery-14880-1792830265-VM650_27_original.jpg",
    "https://img.netty.immo/company37345pwq/assets/nego/103@626x640.jpg?cache=1756914503"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 299900,
   "prix_baisse_le": "2026-11-06"
@@ -805508,10 +805879,10 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.242608,
   "lon": -0.281747,
-  "altitude": 17.0,
+  "altitude": 14.0,
   "densite_hab_km2": 367.0,
   "dpe": "C",
   "risques": {
@@ -805537,7 +805908,7 @@
    "https://img.netty.immo/company37345pwq/assets/nego/001@960x1280.jpg?cache=1790668014"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -844118,15 +844489,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.630951,
   "lon": 3.045391,
   "altitude": 26.0,
   "densite_hab_km2": 6856.2,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 77.2,
-   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -844136,7 +844505,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 77.2,
+   "nucleaire_nom": "Gravelines"
   },
   "photos": [
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/3231_00-2026-11-10-1909.jpg",
@@ -844150,7 +844521,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/3231_07-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/3231_08-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/3231_09-2026-11-10-1909.jpg",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/31/31_00-2026-11-13-1052.jpg",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/31/31_00-2026-11-17-2221.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/diapo_medium/3231_01-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3231/listing/3231_02-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3028/gallery/3028_00-2026-09-16-1224.jpg",
@@ -844164,7 +844535,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8333/5509"
   ],
   "vue_le": "2026-11-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -844630,7 +845001,7 @@
   "surface_m2": 153.0,
   "terrain_m2": null,
   "pieces": 6,
-  "commune": null,
+  "commune": "Lille",
   "code_postal": "59000",
   "departement": "59",
   "region": "Hauts-de-France",
@@ -844664,11 +845035,11 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 50.630951,
+  "lon": 3.045391,
+  "altitude": 26.0,
+  "densite_hab_km2": 6856.2,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -844703,7 +845074,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3073/3073_14-2026-09-16-1228.png",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3073/3073_15-2026-09-16-1228.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3073/3073_16-2026-09-16-1228.png",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/31/31_00-2026-11-13-1052.jpg",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/31/31_00-2026-11-17-2221.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3073/diapo_medium/3073_01-2026-09-16-1228.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3073/listing/3073_02-2026-09-16-1228.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3024/gallery/3024_00-2026-09-16-1216.jpg",
@@ -844717,7 +845088,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8331/5512"
   ],
   "vue_le": "2026-10-23",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -844767,7 +845138,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.630951,
   "lon": 3.045391,
   "altitude": 26.0,
@@ -844804,7 +845175,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2809/2809_12-2026-09-16-1216.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2809/2809_13-2026-09-16-1216.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2809/2809_14-2026-09-16-1216.jpg",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-13-1052.jpg",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-17-2221.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2809/diapo_medium/2809_01-2026-09-16-1216.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2809/listing/2809_02-2026-09-16-1216.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/2994/gallery/2994_00-2026-09-16-1222.jpg",
@@ -844816,7 +845187,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8313/5519"
   ],
   "vue_le": "2026-11-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -845051,7 +845422,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.630951,
   "lon": 3.045391,
   "altitude": 26.0,
@@ -845092,7 +845463,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3086/3086_16-2026-09-16-1229.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3086/3086_17-2026-09-16-1229.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3086/3086_18-2026-09-16-1229.jpg",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-13-1052.jpg",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-17-2221.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3086/diapo_medium/3086_01-2026-09-16-1229.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3086/listing/3086_02-2026-09-16-1229.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3031/gallery/3031_00-2026-09-16-1224.jpg",
@@ -845103,7 +845474,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8332/5502"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -845153,7 +845524,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 50.630951,
   "lon": 3.045391,
   "altitude": 26.0,
@@ -845189,7 +845560,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3195/3195_11-2026-10-08-1421.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3195/3195_12-2026-10-08-1421.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3195/3195_13-2026-10-08-1421.jpg",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-13-1052.jpg",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/30/30_00-2026-11-17-2221.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3195/diapo_medium/3195_01-2026-10-08-1420.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3195/listing/3195_02-2026-10-08-1421.jpg",
    "https://maps.agence-plus.net/styles/sir-map/14/8191/8191",
@@ -845198,7 +845569,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8192/8192"
   ],
   "vue_le": "2026-10-12",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -845400,7 +845771,7 @@
   "surface_m2": 137.0,
   "terrain_m2": 30.0,
   "pieces": 6,
-  "commune": null,
+  "commune": "Lille",
   "code_postal": "59000",
   "departement": "59",
   "region": "Hauts-de-France",
@@ -845434,13 +845805,26 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 50.630951,
+  "lon": 3.045391,
+  "altitude": 26.0,
+  "densite_hab_km2": 6856.2,
   "dpe": null,
-  "risques": {},
+  "risques": {
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques",
+   "nucleaire_km": 77.2,
+   "nucleaire_nom": "Gravelines"
+  },
   "photos": [
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/3232_00-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/3232_16-2026-11-10-1909.jpg",
@@ -845459,7 +845843,7 @@
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/3232_13-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/3232_14-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/3232_15-2026-11-10-1909.jpg",
-   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/20/20_00-2026-11-13-1052.png",
+   "https://www.nathalieforest-sothebysrealty.com/theme/_siteSIR2021.sirnathfor/datas/negociateurs/images/20/20_00-2026-11-17-2221.png",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/diapo_medium/3232_01-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3232/listing/3232_02-2026-11-10-1909.jpg",
    "https://www.nathalieforest-sothebysrealty.com/datas/biens/images/3024/gallery/3024_00-2026-09-16-1216.jpg",
@@ -845473,7 +845857,7 @@
    "https://maps.agence-plus.net/styles/sir-map/14/8330/5510"
   ],
   "vue_le": "2026-11-14",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846112,7 +846496,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
   "altitude": 122.0,
@@ -846143,7 +846527,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846159,7 +846543,7 @@
   "surface_m2": 134.04,
   "terrain_m2": null,
   "pieces": 5,
-  "commune": null,
+  "commune": "Saint-Romain-de-Colbosc",
   "code_postal": "76430",
   "departement": "76",
   "region": "Normandie",
@@ -846193,15 +846577,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 49.52998,
+  "lon": 0.364753,
+  "altitude": 122.0,
+  "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 41.3,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -846211,7 +846593,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 41.3,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/2018/10/tango.jpg",
@@ -846225,7 +846609,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846488,10 +846872,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
-  "altitude": 122.0,
+  "altitude": 121.0,
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
@@ -846519,7 +846903,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846641,10 +847025,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
-  "altitude": 122.0,
+  "altitude": 121.0,
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
@@ -846673,7 +847057,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846689,7 +847073,7 @@
   "surface_m2": 112.91,
   "terrain_m2": null,
   "pieces": null,
-  "commune": null,
+  "commune": "Saint-Romain-de-Colbosc",
   "code_postal": "76430",
   "departement": "76",
   "region": "Normandie",
@@ -846723,15 +847107,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 49.52998,
+  "lon": 0.364753,
+  "altitude": 122.0,
+  "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 41.3,
-   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -846741,7 +847123,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 41.3,
+   "nucleaire_nom": "Paluel"
   },
   "photos": [
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/2018/10/lounge.jpg",
@@ -846755,7 +847139,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -846876,11 +847260,11 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
   "altitude": 122.0,
-  "densite_hab_km2": null,
+  "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -846904,7 +847288,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -847167,10 +847551,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
-  "altitude": 122.0,
+  "altitude": 121.0,
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
@@ -847199,7 +847583,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -847249,10 +847633,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.52998,
   "lon": 0.364753,
-  "altitude": 122.0,
+  "altitude": 121.0,
   "densite_hab_km2": 407.1,
   "dpe": null,
   "risques": {
@@ -847279,7 +847663,7 @@
    "https://www.normandie-maisons-individuelles.fr/wp-content/uploads/yootheme/cache/8f/finition-bois-gamme-hds2-8f82591c.webp"
   ],
   "vue_le": "2026-10-08",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -847483,7 +847867,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 49.035655,
   "lon": 6.068213,
   "altitude": 203.0,
@@ -847525,7 +847909,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -847613,7 +847997,7 @@
   "surface_m2": 128.0,
   "terrain_m2": 617.0,
   "pieces": 2,
-  "commune": null,
+  "commune": "Saint Aulaye-Puymangou",
   "code_postal": "24410",
   "departement": "24",
   "region": null,
@@ -847647,11 +848031,11 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 45.184694,
+  "lon": 0.123281,
+  "altitude": 122.0,
+  "densite_hab_km2": 31.4,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -847689,7 +848073,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -847996,11 +848380,11 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.688135,
   "lon": 6.171263,
-  "altitude": 221.0,
-  "densite_hab_km2": null,
+  "altitude": 216.0,
+  "densite_hab_km2": 6938.4,
   "dpe": "D",
   "risques": {
    "inondation_commune": true,
@@ -848029,7 +848413,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -848343,7 +848727,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.184694,
   "lon": 0.123281,
   "altitude": 122.0,
@@ -848375,7 +848759,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-29",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 71500,
   "prix_baisse_le": "2026-11-07"
@@ -848391,7 +848775,7 @@
   "surface_m2": 142.0,
   "terrain_m2": 970.0,
   "pieces": 5,
-  "commune": null,
+  "commune": "Morhange",
   "code_postal": "57340",
   "departement": "57",
   "region": "Grand Est",
@@ -848425,11 +848809,11 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 48.927916,
+  "lon": 6.639523,
+  "altitude": 299.0,
+  "densite_hab_km2": 213.4,
   "dpe": "C",
   "risques": {
    "inondation_commune": true,
@@ -848467,7 +848851,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-12",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -848756,7 +849140,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.184694,
   "lon": 0.123281,
   "altitude": 122.0,
@@ -848798,7 +849182,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -848848,7 +849232,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.184694,
   "lon": 0.123281,
   "altitude": 122.0,
@@ -848890,7 +849274,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -849007,7 +849391,7 @@
   "surface_m2": 260.0,
   "terrain_m2": null,
   "pieces": 4,
-  "commune": "Maizeroy",
+  "commune": "Courcelles-Chaussy",
   "code_postal": "57530",
   "departement": "57",
   "region": "Grand Est",
@@ -849041,11 +849425,11 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": 49.087815,
-  "lon": 6.390505,
-  "altitude": 240.0,
-  "densite_hab_km2": 46.9,
+  "viager": 0,
+  "lat": 49.112622,
+  "lon": 6.401768,
+  "altitude": 227.0,
+  "densite_hab_km2": 186.3,
   "dpe": "E",
   "risques": {
    "inondation_commune": true,
@@ -849058,7 +849442,7 @@
    "icpe_commune": false,
    "portee": "commune",
    "source": "georisques",
-   "nucleaire_km": 38.6,
+   "nucleaire_km": 36.3,
    "nucleaire_nom": "Cattenom"
   },
   "photos": [
@@ -849083,7 +849467,7 @@
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg"
   ],
   "vue_le": "2026-10-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -849400,15 +849784,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.898095,
   "lon": 2.202314,
-  "altitude": 33.0,
+  "altitude": 31.0,
   "densite_hab_km2": 7998.7,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 105.5,
-   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -849418,7 +849800,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 105.5,
+   "nucleaire_nom": "Nogent-sur-Seine"
   },
   "photos": [
    "https://www.admin.office-b.fr/wp-content/uploads/2020/12/call-1-24x24.png",
@@ -849461,7 +849845,7 @@
    "https://b.tile.openstreetmap.org/13/4153/2796.png"
   ],
   "vue_le": "2026-09-21",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -849722,15 +850106,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 46.325859,
   "lon": 4.810979,
   "altitude": 233.0,
   "densite_hab_km2": 1298.0,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 68.6,
-   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -849740,7 +850122,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 68.6,
+   "nucleaire_nom": "Bugey"
   },
   "photos": [
    "https://www.admin.office-b.fr/wp-content/uploads/2020/12/call-1-24x24.png",
@@ -849772,7 +850156,7 @@
    "https://c.tile.openstreetmap.org/13/4150/2791.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -850034,15 +850418,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.898095,
   "lon": 2.202314,
-  "altitude": 33.0,
+  "altitude": 31.0,
   "densite_hab_km2": 7998.7,
   "dpe": "D",
   "risques": {
-   "nucleaire_km": 105.5,
-   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -850052,7 +850434,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 105.5,
+   "nucleaire_nom": "Nogent-sur-Seine"
   },
   "photos": [
    "https://www.admin.office-b.fr/wp-content/uploads/2020/12/call-1-24x24.png",
@@ -850078,10 +850462,25 @@
    "https://www.admin.office-b.fr/wp-content/uploads/2022/12/4.jpg",
    "https://www.admin.office-b.fr/wp-content/uploads/2024/07/50816554a.jpg",
    "https://www.admin.office-b.fr/wp-content/uploads/2020/07/email.png",
-   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png"
+   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png",
+   "https://b.tile.openstreetmap.org/13/4151/2795.png",
+   "https://a.tile.openstreetmap.org/13/4151/2794.png",
+   "https://a.tile.openstreetmap.org/13/4150/2795.png",
+   "https://c.tile.openstreetmap.org/13/4152/2795.png",
+   "https://c.tile.openstreetmap.org/13/4151/2796.png",
+   "https://c.tile.openstreetmap.org/13/4150/2794.png",
+   "https://b.tile.openstreetmap.org/13/4152/2794.png",
+   "https://b.tile.openstreetmap.org/13/4150/2796.png",
+   "https://a.tile.openstreetmap.org/13/4152/2796.png",
+   "https://c.tile.openstreetmap.org/13/4149/2795.png",
+   "https://a.tile.openstreetmap.org/13/4153/2795.png",
+   "https://b.tile.openstreetmap.org/13/4149/2794.png",
+   "https://c.tile.openstreetmap.org/13/4153/2794.png",
+   "https://a.tile.openstreetmap.org/13/4149/2796.png",
+   "https://b.tile.openstreetmap.org/13/4153/2796.png"
   ],
   "vue_le": "2026-08-24",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": 250000,
   "prix_baisse_le": "2026-09-29"
@@ -850131,15 +850530,13 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 46.325859,
   "lon": 4.810979,
-  "altitude": 233.0,
+  "altitude": 224.0,
   "densite_hab_km2": 1298.0,
   "dpe": "C",
   "risques": {
-   "nucleaire_km": 68.6,
-   "nucleaire_nom": "Bugey",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -850149,7 +850546,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 68.6,
+   "nucleaire_nom": "Bugey"
   },
   "photos": [
    "https://www.admin.office-b.fr/wp-content/uploads/2020/12/call-1-24x24.png",
@@ -850167,10 +850566,22 @@
    "https://www.admin.office-b.fr/wp-content/uploads/2024/05/image00002-scaled.jpeg",
    "https://www.admin.office-b.fr/wp-content/uploads/2024/02/image00028-scaled.jpeg",
    "https://www.admin.office-b.fr/wp-content/uploads/2020/07/email.png",
-   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png"
+   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png",
+   "https://b.tile.openstreetmap.org/13/4147/2790.png",
+   "https://c.tile.openstreetmap.org/13/4148/2790.png",
+   "https://c.tile.openstreetmap.org/13/4147/2791.png",
+   "https://a.tile.openstreetmap.org/13/4148/2791.png",
+   "https://a.tile.openstreetmap.org/13/4146/2790.png",
+   "https://a.tile.openstreetmap.org/13/4149/2790.png",
+   "https://b.tile.openstreetmap.org/13/4146/2791.png",
+   "https://b.tile.openstreetmap.org/13/4149/2791.png",
+   "https://c.tile.openstreetmap.org/13/4145/2790.png",
+   "https://b.tile.openstreetmap.org/13/4150/2790.png",
+   "https://a.tile.openstreetmap.org/13/4145/2791.png",
+   "https://c.tile.openstreetmap.org/13/4150/2791.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -850321,15 +850732,13 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.898095,
   "lon": 2.202314,
   "altitude": 33.0,
   "densite_hab_km2": 7998.7,
   "dpe": null,
   "risques": {
-   "nucleaire_km": 105.5,
-   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -850339,7 +850748,9 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques"
+   "source": "georisques",
+   "nucleaire_km": 105.5,
+   "nucleaire_nom": "Nogent-sur-Seine"
   },
   "photos": [
    "https://www.admin.office-b.fr/wp-content/uploads/2020/12/call-1-24x24.png",
@@ -850365,10 +850776,25 @@
    "https://www.admin.office-b.fr/wp-content/uploads/2022/12/4.jpg",
    "https://www.admin.office-b.fr/wp-content/uploads/2024/07/50816554a.jpg",
    "https://www.admin.office-b.fr/wp-content/uploads/2020/07/email.png",
-   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png"
+   "https://www.admin.office-b.fr/wp-content/uploads/2020/11/cell-phone.png",
+   "https://b.tile.openstreetmap.org/13/4151/2795.png",
+   "https://a.tile.openstreetmap.org/13/4151/2794.png",
+   "https://a.tile.openstreetmap.org/13/4150/2795.png",
+   "https://c.tile.openstreetmap.org/13/4152/2795.png",
+   "https://c.tile.openstreetmap.org/13/4151/2796.png",
+   "https://c.tile.openstreetmap.org/13/4150/2794.png",
+   "https://b.tile.openstreetmap.org/13/4152/2794.png",
+   "https://b.tile.openstreetmap.org/13/4150/2796.png",
+   "https://a.tile.openstreetmap.org/13/4152/2796.png",
+   "https://c.tile.openstreetmap.org/13/4149/2795.png",
+   "https://a.tile.openstreetmap.org/13/4153/2795.png",
+   "https://b.tile.openstreetmap.org/13/4149/2794.png",
+   "https://c.tile.openstreetmap.org/13/4153/2794.png",
+   "https://a.tile.openstreetmap.org/13/4149/2796.png",
+   "https://b.tile.openstreetmap.org/13/4153/2796.png"
   ],
   "vue_le": "2026-10-03",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -852514,10 +852940,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.901584,
   "lon": 6.125296,
-  "altitude": 457.0,
+  "altitude": 458.0,
   "densite_hab_km2": 1891.0,
   "dpe": null,
   "risques": {
@@ -852540,7 +852966,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzgvNi83LzEvMS82LzEvNTg2NzExNjFjLmpwZz9EQVRFTUFKPTI2LzA5LzIwMjUtMTc6MTE6MjU/BLwIeMej0vQ"
   ],
   "vue_le": "2026-08-15",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -852556,7 +852982,7 @@
   "surface_m2": null,
   "terrain_m2": 64.0,
   "pieces": 3,
-  "commune": null,
+  "commune": "Annecy",
   "code_postal": "74000",
   "departement": "74",
   "region": null,
@@ -852590,11 +853016,11 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 45.901584,
+  "lon": 6.125296,
+  "altitude": 458.0,
+  "densite_hab_km2": 1891.0,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -852616,7 +853042,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzkvNy8xLzMvMS81LzEvNTk3MTMxNTFjLmpwZz9EQVRFTUFKPTEwLzAxLzIwMjYtMTc6MTg6MTM/ualcE3v_8NU"
   ],
   "vue_le": "2026-10-03",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -852666,10 +853092,10 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.901584,
   "lon": 6.125296,
-  "altitude": 457.0,
+  "altitude": 458.0,
   "densite_hab_km2": 1891.0,
   "dpe": null,
   "risques": {
@@ -852692,7 +853118,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzkvNi82LzEvOS80LzQvNTk2NjE5NDRjLmpwZz9EQVRFTUFKPTE4LzEyLzIwMjUtMTA6NDk6MTM/6hnKfXI530E"
   ],
   "vue_le": "2026-10-03",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -852939,7 +853365,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.901584,
   "lon": 6.125296,
   "altitude": 457.0,
@@ -852965,7 +853391,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzgvNy84LzcvOS8wLzkvNTg3ODc5MDljLmpwZz9EQVRFTUFKPTE3LzA3LzIwMjYtMTQ6NTE6MDk/8ICZzb1TjIs"
   ],
   "vue_le": "2026-10-03",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -853091,7 +853517,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.901584,
   "lon": 6.125296,
   "altitude": 457.0,
@@ -853117,7 +853543,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzkvMy8yLzkvMy81LzgvNTkzMjkzNThjLmpwZz9EQVRFTUFKPTA1LzA2LzIwMjYtMDI6MzE6MDU/PsBhWB6lF6o"
   ],
   "vue_le": "2026-09-18",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -853133,7 +853559,7 @@
   "surface_m2": 44.0,
   "terrain_m2": 74.0,
   "pieces": 2,
-  "commune": null,
+  "commune": "Annecy",
   "code_postal": "74000",
   "departement": "74",
   "region": null,
@@ -853167,11 +853593,11 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "viager": 0,
+  "lat": 45.901584,
+  "lon": 6.125296,
+  "altitude": 457.0,
+  "densite_hab_km2": 1891.0,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -853193,7 +853619,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzcvMS85LzQvMy84LzYvNTcxOTQzODZjLmpwZz9EQVRFTUFKPTI2LzAxLzIwMjYtMTE6MTI6MTA/NKwGqDCD78Y"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -853349,7 +853775,7 @@
   "surface_m2": 131.23,
   "terrain_m2": 110.0,
   "pieces": 4,
-  "commune": "Annecy",
+  "commune": null,
   "code_postal": "74000",
   "departement": "74",
   "region": null,
@@ -853383,11 +853809,11 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
-  "lat": 45.901584,
-  "lon": 6.125296,
-  "altitude": 457.0,
-  "densite_hab_km2": 1891.0,
+  "viager": 0,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -853409,7 +853835,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzgvOC81LzEvMS8zLzcvNTg4NTExMzdjLmpwZz9EQVRFTUFKPTE3LzA3LzIwMjUtMTE6MTg6NTQ/J9wKxnYcjw0"
   ],
   "vue_le": "2026-08-07",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -853459,7 +853885,7 @@
   "etat_declare": "sans_travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 45.901584,
   "lon": 6.125296,
   "altitude": 457.0,
@@ -853485,7 +853911,7 @@
    "https://www.oxia.fr/ririmg/aHR0cHM6Ly9tZWRpYS5pbW1vLWZhY2lsZS5jb20vb2ZmaWNlMjAvb3hpYV8yNDExMjIvY2F0YWxvZy9pbWFnZXMvcHJfcC81LzkvNC8yLzEvMC82LzIvNTk0MjEwNjJjLmpwZz9EQVRFTUFKPTEzLzEwLzIwMjYtMDg6NTA6NTE/_MOhp3K6CUY"
   ],
   "vue_le": "2026-10-03",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-18",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -944538,7 +944964,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 117.0,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/10/1710772/7440f3e7cd15d796f78030132d03b922126156de/rg_nobn-2.jpg",
@@ -946224,7 +946660,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 166.7,
-   "nucleaire_nom": "Bugey"
+   "nucleaire_nom": "Bugey",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/23/1623015/9ddfc25ae0471addad7090ad00671c17cc43d890/rg_nobn-2.jpg",
@@ -947679,7 +948125,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 156.7,
-   "nucleaire_nom": "Bugey"
+   "nucleaire_nom": "Bugey",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/78/1678861/a1e0045650ce30729247aef5471c85df97ece16e/rg_nobn.jpg",
@@ -948323,7 +948779,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 118.8,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/93/1593771/0470f4a59663dfeb590d524ae0e5d2b744e47e4b/rg_nobn.jpg",
@@ -948559,7 +949025,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 118.8,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "nucleaire_nom": "Nogent-sur-Seine",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/78/1678141/5922497105277ee3dd90f3b036adbe7c36662ef0/g.jpg",
@@ -949428,7 +949904,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 148.6,
-   "nucleaire_nom": "Bugey"
+   "nucleaire_nom": "Bugey",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/42/1542190/dfda2f455af118a36afcb8f5622f881154aec8e0/rg_nobn-7.jpg",
@@ -950104,7 +950590,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 131.6,
-   "nucleaire_nom": "Bugey"
+   "nucleaire_nom": "Bugey",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/35/1735737/7a6ef1620223268932761b7542382d862f598ed6/rg_nobn-3.jpg",
@@ -1248212,7 +1248708,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/82/1682810/5ff8461a794c9f5db9ff8980b5131c9678b6d5a4/g.jpg",
@@ -1248625,7 +1249131,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 122.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/83/1583013/7d043688f0000b977a35ace9cfa289172c6769d4/g.jpg",
@@ -1248694,7 +1249210,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 154.1,
-   "nucleaire_nom": "Chinon"
+   "nucleaire_nom": "Chinon",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/17/1717622/c867d5655bbbc31776884c19147aeb6c3dde5b0e/rg_nobn-2.jpg",
@@ -1248768,7 +1249294,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/79/1679160/94ac81fc365828f01cfd90c0fb230878a5457865/rg_nobn.jpg",
@@ -1249179,7 +1249715,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 122.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/10/1710342/9673f88771b3ef358ad2705e806bc43798c44a07/rg_nobn-2.jpg",
@@ -1249830,7 +1250376,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 127.2,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/40/1740463/f7893e972d60fad5a3457d1efdadbd7d13d5eebe/rg_nobn.jpg",
@@ -1249990,7 +1250546,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 124.5,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/72/1572775/05d282e6bb9e28cfa2679a39e74703a92735b96d/g.jpg",
@@ -1250692,7 +1251258,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.7,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/38/1738291/51b7a7e86fb0ca019bf369d1c6fce171a10bbf04/g.jpg",
@@ -1250956,7 +1251532,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/76/1676613/e8105a827070f5eacd6205a4a821bd20f7bd9e99/rg_nobn.jpg",
@@ -1252697,7 +1253283,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/45/1645359/b4037716b0ebb56c0a9bcb033e0dfc8ba7432507/rg_nobn.jpg",
@@ -1252771,7 +1253367,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.7,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/07/1707407/a2505281e057d71cb0c6e238445f62ac0ec21b52/rg_nobn.jpg",
@@ -1253335,7 +1253941,17 @@
   "dpe": "C",
   "risques": {
    "nucleaire_km": 126.4,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/18/1718163/c3ca1ca64cd5ee7b8b5c902cfdd7ecce678d5044/g.jpg",
@@ -1253412,7 +1254028,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/94/1594650/6c81667aa655b0b3507ac93c2c16ff784b8eef4c/rg_nobn-4.jpg",
@@ -1253560,7 +1254186,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 122.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/31/1631060/7efbad8cd1f2688ac85a466e2d1e3e39fa0be764/rg_nobn-2.jpg",
@@ -1253956,7 +1254592,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/95/1695568/d86daeb759a66caf1b201bd9429c3d8d9b0025df/rg_nobn.jpg",
@@ -1255412,7 +1256058,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 142.6,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/31/1731592/519af3e76ac61b2d129abd63eaf4d7b8d0af29d5/rg_nobn.jpg",
@@ -1255723,7 +1256379,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 115.1,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/68/1668974/f838d51d662eca0e2d4143752239d82dd3fe3759/rg_nobn-5.jpg",
@@ -1256085,7 +1256751,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 135.6,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/80/1680913/613af29ba2b3debf3e18d5aaf477c37dabdb7888/rg_nobn.jpg",
@@ -1256309,7 +1256985,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 154.1,
-   "nucleaire_nom": "Chinon"
+   "nucleaire_nom": "Chinon",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/45/1545958/4f243b54996433b04d08c70db303ebc96353389c/rg_nobn-2.jpg",
@@ -1257281,7 +1257967,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 137.6,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/40/1740408/983bb7b4461a86ff66d5c668c1630e561751e800/g.jpg",
@@ -1257534,7 +1258230,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/40/1640927/4258296cc729f71df18f3247fc0da731093d00d2/rg_nobn.jpg",
@@ -1257617,7 +1258323,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 108.3,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/32/1732315/0e8234cd3cf51818a907b062e8c10d37ceb8237b/rg_nobn.jpg",
@@ -1258341,7 +1259057,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 122.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/53/1653050/5cbf263be6dadf9b27b99f1e12f6c1ae23d448ca/g.jpg",
@@ -1259390,7 +1260116,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/67/1667603/8474d90e62f310e1af12c0ec717e5691135330b7/rg_nobn-2.jpg",
@@ -1260169,7 +1260905,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/12/1612038/decffd2fcf4366fa699671b4f69b82b527777fa6/rg_nobn.jpg",
@@ -1261103,7 +1261849,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.0,
-   "nucleaire_nom": "Paluel"
+   "nucleaire_nom": "Paluel",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/93/1593722/f077ebf039ef91fd4ee401dc52280f552011637f/rg_nobn.jpg",
@@ -1261257,7 +1262013,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 138.8,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/85/1685010/1a4d0606da88c49d445ae3d1e04cc0449573e6ea/rg_nobn.jpg",
@@ -1261330,7 +1262096,17 @@
   "dpe": "C",
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/74/1574419/d8419a0c284ca1cffcca2ac343efa0bfafac7de5/rg_nobn-2.jpg",
@@ -1261409,7 +1262185,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 154.1,
-   "nucleaire_nom": "Chinon"
+   "nucleaire_nom": "Chinon",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/07/1607314/15bca7f0781f84a70fd944108518629b7dc1793a/g.jpg",
@@ -1261555,7 +1262341,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 150.6,
-   "nucleaire_nom": "Chinon"
+   "nucleaire_nom": "Chinon",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/31/64/1364269/5df9ee144883b318200fb009973566eb149ebd6c/rg_nobn-4.jpg",
@@ -1262343,7 +1263139,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 130.7,
-   "nucleaire_nom": "Flamanville"
+   "nucleaire_nom": "Flamanville",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/70/1670712/24be638ec4d11a891520bcbda9b385dbcb61dc1a/rg_nobn.jpg",
@@ -1263392,7 +1264198,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 134.4,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/00/1700704/bf37e81804e42fcfd01ba100c119e6bb3813c1f5/rg_nobn-2.jpg",
@@ -1267740,7 +1268556,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 48.7,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/40/1740730/c941d64146494386d4adc759d1072d5eb6559c77/g.jpg",
@@ -1270068,7 +1270894,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 45.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/64/1564459/3184cd547b13b3542cf207365adf12b55d4f6d0e/g.jpg",
@@ -1270154,7 +1270990,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 48.1,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/26/1726569/f135d2a8b4c133ad7da18bf47f7f055e066f5c2e/rg_nobn-3.jpg",
@@ -1271093,7 +1271939,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 70.9,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/35/1735467/69924242ff54fa09198b39d3f81ab5a45115ad7f/rg_nobn.jpg",
@@ -1271179,7 +1272035,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 58.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/15/1615617/ad0f3c6b9d0dc0f7254e4d52d224c4a1dbf38b33/rg_nobn-2.jpg",
@@ -1273600,7 +1274466,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 70.3,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/72/1672236/f37c9d20f5f0ef80270d0a29096d794d0a09d9ed/g.jpg",
@@ -1273770,7 +1274646,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 45.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/34/1534803/071eac73ea132df13414a711c235d5b7c3a8039f/g.jpg",
@@ -1274036,7 +1274922,17 @@
   "dpe": "C",
   "risques": {
    "nucleaire_km": 31.2,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/77/1677720/2ce0fd90fc4b0be66762d9c184dfa2ad3f3f2509/rg_nobn.jpg",
@@ -1274823,7 +1275719,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 92.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/38/1738422/58e861545886ade81cf5c383c45682ea9e1d9107/rg_nobn-3.jpg",
@@ -1275095,7 +1276001,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 33.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/09/1709022/9a2d12764380e8bbc7df8a5738e5c58a5c163533/rg_nobn-2.jpg",
@@ -1276177,7 +1277093,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 89.3,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/42/1742149/26b3b04a367f6a133bfb94fc880a7ec6a86e25b8/rg_nobn-2.jpg",
@@ -1277817,7 +1278743,17 @@
   "dpe": "D",
   "risques": {
    "nucleaire_km": 40.4,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/38/1738800/50872102a078fe3b30e15ee42be20e8333e5004a/rg_nobn.jpg",
@@ -1279451,7 +1280387,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 83.1,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/40/1740762/686c429c303625d0032db6423e3e0586f268ab39/rg_nobn.jpg",
@@ -1280188,7 +1281134,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 34.7,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/41/1741095/3cdf6e76898ac91ff34f41745ad778cbd539c136/rg_nobn-2.jpg",
@@ -1281031,7 +1281987,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 45.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/88/1688459/f2b98c0953d3793c5fbceff0b8fd6f22f2863a01/rg_nobn.jpg",
@@ -1281303,7 +1282269,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 88.0,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/85/1685484/a546585edbb64a6469c02235903007dbf3f1dce8/g.jpg",
@@ -1281549,7 +1282525,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 23.3,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/40/1740171/1984fb96f80f5cfa797d031609cb690e49845156/rg_nobn-2.jpg",
@@ -1281980,7 +1282966,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 77.4,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/15/1715887/97c2d2f354a47bc4149ebd98e00eb63c10faa4f4/rg_nobn.jpg",
@@ -1282425,7 +1283421,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 33.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/67/1567258/0158252aff84c83249961d36da83aaa81624b642/rg_nobn.jpg",
@@ -1283018,7 +1284024,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 33.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/58/1658389/c1ef2596c961a1ea124f9609689371161d28e6bb/g.jpg",
@@ -1283356,7 +1284372,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 66.0,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/41/1741614/ef0640cb1e8c8bc41963e23464483d9a796f86f7/rg_nobn.jpg",
@@ -1283805,7 +1284831,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 62.8,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/07/1707077/71c709cfb6895775d5d4a4de6848f23b43df736a/rg_nobn-2.jpg",
@@ -1283894,7 +1284930,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 91.1,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 3,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/41/1741257/d4d5b371bd64f5f79ecb6283f23bafbdc2a5e010/g.jpg",
@@ -1285912,7 +1286958,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 92.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/50/1650108/90995aa0dfaf30f31d080b8b7b558a18e132dc2d/rg_nobn.jpg",
@@ -1286445,7 +1287501,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 79.7,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/94/1694397/dd6c475a71a10157757817bb123de9416cac41d7/g.jpg",
@@ -1286615,7 +1287681,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 89.0,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/51/26/1526189/79b1e06671dba0ce169fb921dc81173e95a2a84b/rg_nobn-3.jpg",
@@ -1286702,7 +1287778,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 92.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/30/1730832/453b46db32933c9ff798e989dd5357ec49156a8b/rg_nobn-6.jpg",
@@ -1286874,7 +1287960,17 @@
   "dpe": "D",
   "risques": {
    "nucleaire_km": 61.7,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/39/1739899/8e9aba13e9c83929925dd250c73647cae105ff75/rg_nobn.jpg",
@@ -1290219,7 +1291315,17 @@
   "dpe": "E",
   "risques": {
    "nucleaire_km": 92.5,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": false,
+   "argile_commune": true,
+   "argile": null,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": true,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/42/1742084/f2abbf3e1bb9159a0c72eab80061e6b94de43430/rg_nobn-2.jpg",
@@ -1291639,7 +1292745,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 61.7,
-   "nucleaire_nom": "Gravelines"
+   "nucleaire_nom": "Gravelines",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 1,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/71/41/1741728/c81dee35c2b597d06e322d1afc02d6d39a88a9b2/rg_nobn.jpg",
@@ -1298224,7 +1299340,17 @@
   "dpe": null,
   "risques": {
    "nucleaire_km": 179.2,
-   "nucleaire_nom": "Cattenom"
+   "nucleaire_nom": "Cattenom",
+   "inondation_commune": true,
+   "argile_commune": true,
+   "argile": 2,
+   "feu_foret_commune": false,
+   "seisme_commune": true,
+   "radon_commune": true,
+   "seveso_km": null,
+   "icpe_commune": false,
+   "portee": "commune",
+   "source": "georisques"
   },
   "photos": [
    "https://cdn.safti.fr/bien-photo/61/87/1687843/f4e07c4f338bda0fd41c1afeb1108fbcf1bb446c/rg_nobn.jpg",
