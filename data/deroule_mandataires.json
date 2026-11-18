@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.0,
+  "seconde": 5.1,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.0,
+  "seconde": 5.1,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,255 +23,234 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.0,
+  "seconde": 5.1,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.6,
+  "seconde": 7.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.2,
+  "seconde": 9.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.8,
+  "seconde": 9.8,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.8,
+  "seconde": 9.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.3,
+  "seconde": 10.2,
   "reseau": "capifrance",
-  "connues": 19887,
-  "ecartees": 3017
+  "connues": 19980,
+  "ecartees": 3058
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.3,
+  "seconde": 10.2,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.7,
+  "seconde": 10.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 16.3,
+  "seconde": 34.4,
   "reseau": "iad",
-  "n": 113035,
+  "n": 112944,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 18.0,
+  "seconde": 35.6,
   "reseau": "iad",
-  "notees": 30
+  "notees": 65
  },
  {
   "etape": "tentative_notee",
-  "seconde": 19.9,
+  "seconde": 36.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 20.4,
+  "seconde": 37.3,
   "reseau": "iad",
-  "connues": 19887,
-  "ecartees": 3017
+  "connues": 19980,
+  "ecartees": 3058
  },
  {
   "etape": "departement",
-  "seconde": 285.5,
+  "seconde": 388.4,
   "reseau": "iad",
-  "departement": "14",
+  "departement": "25",
   "visitees": 50,
-  "gardes": 37,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 37,
-   "vendu": 5,
-   "ecarte": 8,
+   "garde": 24,
+   "vendu": 9,
+   "ecarte": 17,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 3,
-   "location": 1,
-   "prix_trop_haut": 4
+   "hors_perimetre": 15,
+   "outre_mer": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 246 m² à La Boissière (34150)",
-   "location": "Maison 4 pièces de 79 m² à La Rivière-Saint-Sauveur (14600)",
-   "prix_trop_haut": "Demeure 10 pièces de 185 m² à Dives-sur-Mer (14160)"
+   "hors_perimetre": "110 381 biens immobiliers à vendre",
+   "outre_mer": "Maison 14 pièces de 361 m² à Sainte-Anne (97227)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 519.6,
+  "seconde": 612.9,
   "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 32,
+  "departement": "37",
+  "visitees": 34,
+  "gardes": 26,
   "tronquee": true,
   "etats": {
-   "garde": 32,
-   "vendu": 6,
-   "ecarte": 12,
+   "garde": 26,
+   "vendu": 3,
+   "ecarte": 5,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9,
-   "location": 1,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Longère 11 pièces de 270 m² à Saint-Palais (03370)",
-   "location": "Maison 5 pièces de 94 m² à Baugy (60113)",
-   "prix_trop_haut": "Château 12 pièces de 450 m² à Vornay (18130)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 608.3,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 17,
-  "gardes": 14,
-  "tronquee": true,
-  "etats": {
-   "garde": 14,
-   "vendu": 1,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
+   "prix_trop_haut": 4,
    "hors_perimetre": 1
   },
   "exemples": {
-   "prix_trop_haut": "Château 21 pièces de 630 m² à Viévy (21230)",
-   "hors_perimetre": "111 165 biens immobiliers à vendre"
+   "prix_trop_haut": "Maison de ville 13 pièces de 450 m² à Tours (37000)",
+   "hors_perimetre": "Gîte 11 pièces de 371 m² à Souvigné (16240)"
   }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 608.3,
+  "seconde": 612.9,
   "reseau": "safti",
-  "part_secondes": 594
+  "part_secondes": 592
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 608.7,
+  "seconde": 613.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 609.5,
+  "seconde": 614.9,
   "reseau": "safti",
-  "n": 28961,
+  "n": 29068,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 610.3,
+  "seconde": 615.6,
   "reseau": "safti",
-  "notees": 43
+  "notees": 86
  },
  {
   "etape": "tentative_notee",
-  "seconde": 610.9,
+  "seconde": 616.0,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 611.4,
+  "seconde": 616.3,
   "reseau": "safti",
-  "connues": 19910,
-  "ecartees": 3051
+  "connues": 19568,
+  "ecartees": 2660
  },
  {
   "etape": "departement",
-  "seconde": 887.1,
+  "seconde": 879.7,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 4,
-   "ecarte": 6,
+   "garde": 41,
+   "vendu": 2,
+   "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
+   "prix_trop_haut": 2,
    "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à BAGNOLES DE L'ORNE NORMANDIE de 790m²",
-   "hors_perimetre": "Maison à vendre à AUBUSSON de 95m²"
+   "prix_trop_haut": "Maison à vendre à ATHIE de 284m²",
+   "hors_perimetre": "Maison à vendre à BUXEROLLES de 186m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1152.1,
+  "seconde": 1177.9,
   "reseau": "safti",
-  "departement": "62",
+  "departement": "25",
   "visitees": 50,
   "gardes": 43,
   "tronquee": true,
   "etats": {
    "garde": 43,
-   "vendu": 2,
-   "ecarte": 5,
+   "vendu": 1,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5
+   "hors_perimetre": 4,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à ARRAS de 240m²"
+   "hors_perimetre": "Maison à vendre à DANNEMARIE de 110m²",
+   "prix_trop_haut": "Maison à vendre à LE RUSSEY de 805m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1218.7,
+  "seconde": 1206.9,
   "reseau": "safti",
-  "departement": "70",
-  "visitees": 6,
-  "gardes": 6,
+  "departement": "27",
+  "visitees": 9,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 6,
+   "garde": 5,
    "vendu": 0,
-   "ecarte": 0,
+   "ecarte": 4,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "hors_perimetre": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à LA TRINITE de 163m²"
+  }
  },
  {
   "etape": "fin",
-  "seconde": 1218.7,
-  "gardes": 172
+  "seconde": 1206.9,
+  "gardes": 139
  }
 ]
