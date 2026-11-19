@@ -27,157 +27,168 @@ import re
 from . import climat, redaction, seo
 
 _ENTETE_STYLE = """
-:root { color-scheme: light; --focus: #1b4332; --focus-clair: #f4f1e8 }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 3px }
+/* Mêmes polices et mêmes échelles que l'application (docs/CHARTE.md). */
+@font-face { font-family: "Figtree"; src: url("/vendor/fonts/figtree.woff2") format("woff2");
+  font-weight: 300 900; font-style: normal; font-display: swap }
+@font-face { font-family: "Bricolage Grotesque"; src: url("/vendor/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800; font-style: normal; font-display: swap }
+:root { color-scheme: light; --focus: #1b4332; --focus-clair: #f4f1e8;
+  --f-titre: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --f-texte: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --t-12: 12px; --t-14: 14px; --t-16: 16px; --t-18: 18px; --t-20: 20px; --t-24: 24px; --t-32: 32px;
+  --e-4: 4px; --e-8: 8px; --e-12: 12px; --e-16: 16px; --e-24: 24px; --e-32: 32px; --e-48: 48px; --e-64: 64px;
+  --r-6: 6px; --r-10: 10px; --r-14: 14px; --r-pastille: 999px }
+h1, h2, .prix, .score-bloc b, .bande a, .cle b { font-family: var(--f-titre) }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: var(--r-6) }
 .bande :focus-visible { outline-color: var(--focus-clair) }
-body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+body { margin: 0; font: var(--t-16)/1.6 var(--f-texte);
        color: #23301f; background: #f7f6f1 }
-.bande { background: #1b4332; color: #f4f1e8; padding: 14px 20px }
+.bande { background: #1b4332; color: #f4f1e8; padding: var(--e-16) var(--e-24) }
 .bande a { color: #f4f1e8; text-decoration: none; font-weight: 700;
-           display: inline-flex; align-items: center; gap: 9px }
-main { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px }
-h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance }
-h2 { font-size: 19px; margin: 32px 0 8px; text-wrap: balance }
-.chapeau { font-size: 17px; color: #46543f }
-.prix { font-size: 32px; font-weight: 800; color: #1b4332; margin: 0; line-height: 1.1;
+           display: inline-flex; align-items: center; gap: var(--e-8) }
+main { max-width: 760px; margin: 0 auto; padding: var(--e-24) var(--e-24) var(--e-64) }
+h1 { font-size: var(--t-24); line-height: 1.25; margin: 0 0 var(--e-4); text-wrap: balance }
+h2 { font-size: var(--t-20); margin: var(--e-32) 0 var(--e-8); text-wrap: balance }
+.chapeau { font-size: var(--t-18); color: #46543f }
+.prix { font-size: var(--t-32); font-weight: 800; color: #1b4332; margin: 0; line-height: 1.1;
         letter-spacing: -.5px }
 /* Le prix et le score, côte à côte sous la photo : les deux choses qu'on
    vient lire, et la seconde est la seule qu'aucun portail ne donne. */
 .resume { display: flex; align-items: center; justify-content: space-between;
-          gap: 16px; margin: 20px 0 4px }
-.classe-score { margin: 6px 0 0; font-weight: 600; color: #2d6a4f; font-size: 15px }
-.score-bloc { flex: none; min-width: 76px; padding: 10px 12px 8px; border-radius: 14px;
+          gap: var(--e-16); margin: var(--e-16) 0 var(--e-4) }
+.classe-score { margin: var(--e-4) 0 0; font-weight: 600; color: #2d6a4f; font-size: var(--t-16) }
+.score-bloc { flex: none; min-width: 76px; padding: var(--e-12) var(--e-12) var(--e-8); border-radius: var(--r-14);
               display: flex; flex-direction: column; align-items: center; line-height: 1;
               border: 2px solid #1b4332 }
-.score-bloc b { font-size: 30px; font-weight: 800; letter-spacing: -.5px }
-.score-bloc i { font-style: normal; font-size: 11px; font-weight: 700; opacity: .8; margin-top: 2px }
-.score-bloc small { font-size: 11px; font-weight: 600; margin-top: 6px; opacity: .9 }
+.score-bloc b { font-size: var(--t-32); font-weight: 800; letter-spacing: -.5px }
+.score-bloc i { font-style: normal; font-size: var(--t-12); font-weight: 700; opacity: .8; margin-top: 2px }
+.score-bloc small { font-size: var(--t-12); font-weight: 600; margin-top: var(--e-4); opacity: .9 }
 .score-bloc.n1 { background: #c9dcc2; color: #24312a }
 .score-bloc.n2 { background: #7fae84; color: #14281c }
 .score-bloc.n3 { background: #3f7d53; color: #fff }
 .score-bloc.n4 { background: #1b4332; color: #fff }
 .ico { width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em; fill: none;
        stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 }
+.actions { display: flex; flex-wrap: wrap; gap: var(--e-12); margin: var(--e-16) 0 }
 /* Le score critère par critère : nom, jauge, points. */
-.piliers { list-style: none; padding: 0; margin: 12px 0 4px }
-.piliers li { display: grid; grid-template-columns: 220px 1fr 56px; gap: 12px;
-              align-items: center; margin: 0; padding: 8px 0; font-size: 15px }
-.p-nom { display: flex; align-items: center; gap: 8px }
+.piliers { list-style: none; padding: 0; margin: var(--e-12) 0 var(--e-4) }
+.piliers li { display: grid; grid-template-columns: 220px 1fr 56px; gap: var(--e-12);
+              align-items: center; margin: 0; padding: var(--e-8) 0; font-size: var(--t-16) }
+.p-nom { display: flex; align-items: center; gap: var(--e-8) }
 .p-nom .ico { color: #2d6a4f }
-.p-jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden }
-.p-jauge span { display: block; height: 100%; background: #3f7d53; border-radius: 6px; min-width: 2px }
+.p-jauge { height: 12px; background: #ece8dd; border-radius: var(--r-6); overflow: hidden }
+.p-jauge span { display: block; height: 100%; background: #3f7d53; border-radius: var(--r-6); min-width: 2px }
 .p-points { text-align: right; color: #5f6a58; font-variant-numeric: tabular-nums }
 .p-points b { color: #23301f }
-.note-piliers { font-size: 14px; margin: 4px 0 0 }
+.note-piliers { font-size: var(--t-14); margin: var(--e-4) 0 0 }
 .note-piliers a { color: #2d6a4f }
 @media (max-width: 560px) {
-  .piliers li { grid-template-columns: 1fr 56px; row-gap: 4px }
+  .piliers li { grid-template-columns: 1fr 56px; row-gap: var(--e-4) }
   .p-nom { grid-column: 1 / -1 }
 }
 /* Les biens voisins : des liens à la couleur du site, un par ligne, séparés
    d'un filet — et non la liste à puces bleue par défaut du navigateur. */
-.voisins { list-style: none; padding: 0; margin: 8px 0 }
+.voisins { list-style: none; padding: 0; margin: var(--e-8) 0 }
 .voisins li { margin: 0; border-bottom: 1px solid #e4e0d5 }
-.voisins a { display: block; padding: 10px 0; color: #1b4332; text-decoration: none; font-weight: 600 }
+.voisins a { display: block; padding: var(--e-12) 0; color: #1b4332; text-decoration: none; font-weight: 600 }
 .voisins a:hover { text-decoration: underline }
-dl { display: grid; grid-template-columns: minmax(150px, auto) 1fr; gap: 0 18px; margin: 12px 0 }
-dt, dd { padding: 8px 0; border-bottom: 1px solid #e4e0d5 }
+dl { display: grid; grid-template-columns: minmax(150px, auto) 1fr; gap: 0 var(--e-16); margin: var(--e-12) 0 }
+dt, dd { padding: var(--e-8) 0; border-bottom: 1px solid #e4e0d5 }
 dt { color: #5f6a58 } dd { margin: 0; font-weight: 600 }
-ul { padding-left: 20px } li { margin: 3px 0 }
-.faits-courts { list-style: none; padding: 16px 18px; margin: 8px 0 4px; font-size: 16px;
-                background: #fff; border: 1px solid #e4e0d5; border-radius: 12px;
-                display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px }
-.faits-courts li { margin: 0; display: flex; align-items: center; gap: 10px }
+ul { padding-left: var(--e-24) } li { margin: 3px 0 }
+.faits-courts { list-style: none; padding: var(--e-16) var(--e-16); margin: var(--e-8) 0 var(--e-4); font-size: var(--t-16);
+                background: #fff; border: 1px solid #e4e0d5; border-radius: var(--r-14);
+                display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--e-8) var(--e-24) }
+.faits-courts li { margin: 0; display: flex; align-items: center; gap: var(--e-8) }
 .faits-courts .ico { color: #2d6a4f }
 @media (max-width: 560px) { .faits-courts { grid-template-columns: 1fr } }
-.jetons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
-.jetons li { background: #e6ece1; border-radius: 99px; padding: 3px 11px; font-size: 14px }
-.bouton { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-          background: #1b4332; color: #fff; padding: 12px 20px; min-height: 48px;
+.jetons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--e-4) }
+.jetons li { background: #e6ece1; border-radius: var(--r-pastille); padding: 3px var(--e-12); font-size: var(--t-14) }
+.bouton { display: inline-flex; align-items: center; justify-content: center; gap: var(--e-8);
+          background: #1b4332; color: #fff; padding: var(--e-12) var(--e-24); min-height: 48px;
           box-sizing: border-box; border: 1.5px solid #1b4332;
-          border-radius: 10px; text-decoration: none; font-weight: 700; margin: 6px 8px 6px 0 }
+          border-radius: var(--r-10); text-decoration: none; font-weight: 700; margin: var(--e-4) var(--e-8) var(--e-4) 0 }
 .bouton:hover { background: #2d6a4f; border-color: #2d6a4f }
 .bouton.clair { background: #fff; color: #1b4332; border: 1.5px solid #1b4332 }
 .bouton.clair:hover { background: #eaf2ec }
 .actions .bouton { margin: 0 }
 @media (max-width: 560px) { .actions .bouton { flex: 1 1 100% } }
-.fil { font-size: 14px; color: #5f6a58; margin-bottom: 14px }
+.fil { font-size: var(--t-14); color: #5f6a58; margin-bottom: var(--e-12) }
 .fil a { color: #46543f }
-.note { font-size: 14px; color: #5f6a58; border-top: 1px solid #ddd8cc;
-        margin-top: 34px; padding-top: 14px }
-table { border-collapse: collapse; width: 100%; margin: 10px 0 }
-td, th { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e4e0d5 }
-img { max-width: 100%; height: auto; border-radius: 10px }
-figure.aerienne { margin: 14px 0 } 
-figure.aerienne img { width: 100%; border-radius: 10px }
+.note { font-size: var(--t-14); color: #5f6a58; border-top: 1px solid #ddd8cc;
+        margin-top: var(--e-32); padding-top: var(--e-16) }
+table { border-collapse: collapse; width: 100%; margin: var(--e-8) 0 }
+td, th { text-align: left; padding: var(--e-8) var(--e-12); border-bottom: 1px solid #e4e0d5 }
+img { max-width: 100%; height: auto; border-radius: var(--r-10) }
+figure.aerienne { margin: var(--e-12) 0 } 
+figure.aerienne img { width: 100%; border-radius: var(--r-10) }
 /* Le viager n'est pas un défaut du bien : c'est un avertissement sur la
    LECTURE de son prix. D'où le ton d'alerte, juste sous le prix. */
-p.viager { margin: -4px 0 14px; padding: 9px 12px; border-radius: 8px;
+p.viager { margin: calc(-1 * var(--e-4)) 0 var(--e-12); padding: var(--e-8) var(--e-12); border-radius: var(--r-10);
            background: #fbece8; border: 1px solid #efcdc4; color: #8c3325 }
-figure.aerienne figcaption { font-size: 13px; color: #5f6a58; margin-top: 5px }
+figure.aerienne figcaption { font-size: var(--t-14); color: #5f6a58; margin-top: var(--e-4) }
 .manque { color: #9a6a2b; font-style: italic }
-.climat { background: #fff; border: 1px solid #e4e0d5; border-radius: 14px;
-          padding: 18px 18px 14px; margin: 28px 0 }
-.climat h2 { margin: 0 0 12px }
-.climat h3 { font-size: 15px; margin: 18px 0 4px; display: flex; align-items: center; gap: 8px }
+.climat { background: #fff; border: 1px solid #e4e0d5; border-radius: var(--r-14);
+          padding: var(--e-16) var(--e-16) var(--e-16); margin: var(--e-24) 0 }
+.climat h2 { margin: 0 0 var(--e-12) }
+.climat h3 { font-size: var(--t-16); margin: var(--e-16) 0 var(--e-4); display: flex; align-items: center; gap: var(--e-8) }
 .cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-               gap: 10px }
-.cle { border-radius: 10px; padding: 10px 12px; background: #fbf3ec;
+               gap: var(--e-8) }
+.cle { border-radius: var(--r-10); padding: var(--e-12) var(--e-12); background: #fbf3ec;
        border-left: 4px solid #d9622b; display: flex; flex-direction: column }
 .cle.secheresse { background: #fbf6ea; border-left-color: #b5852b }
-.cle b { font-size: 26px; line-height: 1.1; color: #23301f; white-space: nowrap }
-.cle span { font-size: 14px; color: #46543f }
-.cle small { font-size: 12.5px; color: #5f6a58 }
+.cle b { font-size: var(--t-24); line-height: 1.1; color: #23301f; white-space: nowrap }
+.cle span { font-size: var(--t-14); color: #46543f }
+.cle small { font-size: var(--t-12); color: #5f6a58 }
 @media (max-width: 520px) {
-  .cles-climat { grid-template-columns: 1fr; gap: 6px }
-  .cle { display: grid; grid-template-columns: 5.8rem 1fr; column-gap: 12px; align-items: center; padding: 8px 12px }
-  .cle b { grid-row: 1 / 3; font-size: 22px }
+  .cles-climat { grid-template-columns: 1fr; gap: var(--e-4) }
+  .cle { display: grid; grid-template-columns: 5.8rem 1fr; column-gap: var(--e-12); align-items: center; padding: var(--e-8) var(--e-12) }
+  .cle b { grid-row: 1 / 3; font-size: var(--t-24) }
   .cle span, .cle small { grid-column: 2 }
 }
-.ligne-climat { padding: 9px 0; border-bottom: 1px solid #efece4 }
+.ligne-climat { padding: var(--e-8) 0; border-bottom: 1px solid #efece4 }
 .ligne-climat:last-child { border-bottom: 0 }
 .l-tete { display: flex; justify-content: space-between; align-items: baseline;
-          gap: 10px; flex-wrap: wrap }
-.l-nom { font-size: 15px }
+          gap: var(--e-8); flex-wrap: wrap }
+.l-nom { font-size: var(--t-16) }
 .l-nom small { color: #5f6a58 }
-.l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 15px }
+.l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: var(--t-16) }
 .v-ref { color: #5f6a58 }
-.ecart { display: inline-block; margin-left: 6px; font-size: 12.5px; font-weight: 700;
-         padding: 1px 8px; border-radius: 99px; background: #efede6; color: #5c6b60 }
+.ecart { display: inline-block; margin-left: var(--e-4); font-size: var(--t-12); font-weight: 700;
+         padding: 1px var(--e-8); border-radius: var(--r-pastille); background: #efede6; color: #5c6b60 }
 .ecart.pire { background: #fbece8; color: #8c3325 }
 .ecart.mieux { background: #e6f0e8; color: #1b4332 }
-.barres { display: grid; gap: 3px; margin: 7px 0 3px }
-.piste { height: 9px; background: #f2efe7; border-radius: 5px; overflow: hidden }
-.piste span { display: block; height: 100%; border-radius: 5px; min-width: 2px }
+.barres { display: grid; gap: 3px; margin: var(--e-8) 0 3px }
+.piste { height: 9px; background: #f2efe7; border-radius: var(--r-6); overflow: hidden }
+.piste span { display: block; height: 100%; border-radius: var(--r-6); min-width: 2px }
 .b-ref { background: #cfc8b8 }
 .b-fut { background: #d9622b }
 .b-fut.secheresse { background: #b5852b }
 .b-fut.rr_jja { background: #3a7ca5 }
 .b-fut.ifm40d { background: #b33a2a }
-.rang { font-size: 13px; color: #5f6a58 }
-.legende-climat { font-size: 13px; color: #5f6a58; margin: 12px 0 0;
-                  display: flex; gap: 14px; flex-wrap: wrap; align-items: center }
-.legende-climat i { display: inline-block; width: 22px; height: 8px; border-radius: 4px;
-                    margin-right: 6px; vertical-align: 1px }
-.note-climat { font-size: 13px; color: #5f6a58; margin: 8px 0 0; max-width: 68ch }
-.pied { font-size: 13px; color: #5f6a58; margin-top: 10px }
+.rang { font-size: var(--t-14); color: #5f6a58 }
+.legende-climat { font-size: var(--t-14); color: #5f6a58; margin: var(--e-12) 0 0;
+                  display: flex; gap: var(--e-12); flex-wrap: wrap; align-items: center }
+.legende-climat i { display: inline-block; width: 22px; height: 8px; border-radius: var(--r-6);
+                    margin-right: var(--e-4); vertical-align: 1px }
+.note-climat { font-size: var(--t-14); color: #5f6a58; margin: var(--e-8) 0 0; max-width: 68ch }
+.pied { font-size: var(--t-14); color: #5f6a58; margin-top: var(--e-8) }
 .pied a { color: #46543f }
 /* Le bloc professionnel, sur fond blanc : il ne s'adresse pas au même
    visiteur que le reste du pied, et se distingue donc au lieu de se fondre
    dans la liste des mentions. */
-.pied-pro { background: #fff; border: 1px solid #e2e6dc; border-radius: 10px;
-            padding: 12px 16px; margin-top: 14px; font-size: 14px }
+.pied-pro { background: #fff; border: 1px solid #e2e6dc; border-radius: var(--r-10);
+            padding: var(--e-12) var(--e-16); margin-top: var(--e-12); font-size: var(--t-14) }
 .pied-pro a { color: #46543f; font-weight: 600; text-decoration: none }
 .pied-pro a:hover { text-decoration: underline }
 .engagement { background: #fff; border-left: 3px solid #46543f;
-              padding: 12px 16px; border-radius: 0 8px 8px 0 }
-ul.offres { list-style: none; padding: 0; display: grid; gap: 14px }
-ul.offres li { background: #fff; border: 1px solid #e2e6dc; border-radius: 10px;
-               padding: 14px 18px }
-ul.offres h3 { margin: 0 0 6px; font-size: 16px }
-ul.offres p { margin: 0 0 4px }
-.modalite { font-size: 13px; color: #5f6a58; font-style: italic }
+              padding: var(--e-12) var(--e-16); border-radius: 0 var(--r-10) var(--r-10) 0 }
+ul.offres { list-style: none; padding: 0; display: grid; gap: var(--e-12) }
+ul.offres li { background: #fff; border: 1px solid #e2e6dc; border-radius: var(--r-10);
+               padding: var(--e-16) var(--e-16) }
+ul.offres h3 { margin: 0 0 var(--e-4); font-size: var(--t-16) }
+ul.offres p { margin: 0 0 var(--e-4) }
+.modalite { font-size: var(--t-14); color: #5f6a58; font-style: italic }
 """
 
 
@@ -230,6 +241,8 @@ def _document(titre: str, description: str, canonique: str, corps: str,
 {og_image}
 <meta name="twitter:card" content="{'summary_large_image' if image else 'summary'}">
 <link rel="icon" href="{seo.favicon()}">
+<link rel="preload" href="/vendor/fonts/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/vendor/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
 <style>{_ENTETE_STYLE}</style>
 {structure}
 </head>

@@ -52,25 +52,31 @@ NOM = "Refuge Immo"
 # tout le monde, son rendu change d'un système à l'autre — le petit drapeau
 # bleu d'Apple n'est pas la montagne d'Android — et il ne dit rien du projet.
 #
-# Le dessin : un toit OUVERT, deux montants qui ne se referment pas — un abri,
-# pas une boîte — et une feuille centrée là où serait la porte. L'abri protège
-# quelque chose de vivant : c'est tout le propos, et cela se lit à seize
-# pixels comme à quarante-huit.
-def marque_svg(trait: str = "#f2efe6", feuille: str = "#8fb488") -> str:
-    """Le pictogramme seul, sans dimension ni fond : à poser où l'on veut."""
+# Le dessin, depuis novembre 2026 : une maison PLEINE et une feuille en
+# réserve, là où serait la porte. L'abri protège quelque chose de vivant —
+# c'est la même idée que le premier logo (un toit ouvert, deux montants, une
+# feuille), ramenée de quatre éléments à deux. À seize pixels, la taille d'un
+# onglet, les montants et la feuille de l'ancien se touchaient presque ;
+# celui-ci reste net, et se reproduit en une seule couleur.
+#
+# Deux versions, pas plus : crème sur vert (`feuille` = le vert du fond),
+# vert sur crème ou blanc (`feuille` = ce fond). Voir docs/CHARTE.md.
+def marque_svg(trait: str = "#f2efe6", feuille: str = "#1b4332") -> str:
+    """Le pictogramme seul, sans dimension ni fond : à poser où l'on veut.
+
+    `trait` peint la maison ; `feuille` est la couleur du fond sur lequel on
+    la pose, puisque la feuille y est découpée.
+    """
     return (
-        f'<path d="M7.5 25.5 L24 11 L40.5 25.5" fill="none" stroke="{trait}" '
-        f'stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>'
-        f'<path d="M11.5 28.5 L11.5 40 M36.5 28.5 L36.5 40" stroke="{trait}" '
-        f'stroke-width="3.6" stroke-linecap="round"/>'
-        f'<path d="M24 40.5 C 18 36 17 27 24 22 C 31 27 30 36 24 40.5 Z" '
-        f'fill="{feuille}"/>'
-        f'<path d="M24 40.5 L24 27" stroke="{trait}" stroke-width="1.7" '
-        f'stroke-linecap="round" opacity=".45"/>')
+        f'<path d="M24 8.5 40.5 22.5V39a1.5 1.5 0 0 1-1.5 1.5H9A1.5 1.5 0 0 1 '
+        f'7.5 39V22.5z" fill="{trait}" stroke="{trait}" stroke-width="3" '
+        f'stroke-linejoin="round"/>'
+        f'<path d="M24 38c-6.2-4.4-6.6-12 0-17 6.6 5 6.2 12.6 0 17z" '
+        f'fill="{feuille}"/>')
 
 
 def logo(taille: int = 30, trait: str = "#f2efe6",
-         feuille: str = "#8fb488") -> str:
+         feuille: str = "#1b4332") -> str:
     return (f'<svg class="logo" width="{taille}" height="{taille}" '
             f'viewBox="0 0 48 48" role="img" aria-label="Refuge Immo" '
             f'focusable="false">{marque_svg(trait, feuille)}</svg>')

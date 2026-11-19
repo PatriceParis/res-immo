@@ -2,6 +2,15 @@
    Gamme de score séquentielle validée (clair → foncé = score croissant) :
    n1 #C9DCC2 · n2 #7FAE84 · n3 #3F7D53 · n4 #1B4332 */
 
+/* Les deux polices de la marque, hébergées ici (vendor/fonts, licence OFL) :
+   aucun service extérieur, comme pour Leaflet. Sans elles, chaque appareil
+   affichait sa police système — Segoe UI sous Windows, San Francisco sur
+   Mac, Roboto sur Android — et le site n'avait pas le même visage partout. */
+@font-face { font-family: "Figtree"; src: url("vendor/fonts/figtree.woff2") format("woff2");
+  font-weight: 300 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("vendor/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 200 800; font-style: normal; font-display: swap; }
+
 :root {
   --encre: #24312a;
   --encre-2: #5c6b60;
@@ -26,6 +35,14 @@
   --focus-clair: #f2efe6;
   /* L'encre posée sur le vert de marque : l'en-tête et les boutons pleins. */
   --sur-marque: #f2efe6;
+  /* ---- Charte (docs/CHARTE.md) : deux polices, sept tailles, huit pas,
+     quatre arrondis. Toute valeur de texte, d'espacement ou d'arrondi passe
+     par l'un de ces jetons ; un test le vérifie. ---- */
+  --f-titre: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --f-texte: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --t-12: 12px; --t-14: 14px; --t-16: 16px; --t-18: 18px; --t-20: 20px; --t-24: 24px; --t-32: 32px;
+  --e-4: 4px; --e-8: 8px; --e-12: 12px; --e-16: 16px; --e-24: 24px; --e-32: 32px; --e-48: 48px; --e-64: 64px;
+  --r-6: 6px; --r-10: 10px; --r-14: 14px; --r-pastille: 999px;
   color-scheme: light;
 }
 
@@ -34,7 +51,7 @@
 :focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
-  border-radius: 3px;
+  border-radius: var(--r-6);
 }
 .entete :focus-visible, .score-pastille :focus-visible { outline-color: var(--focus-clair); }
 
@@ -53,31 +70,39 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  font-family: var(--f-texte);
   background: var(--fond);
   color: var(--encre);
-  font-size: 15px;
+  font-size: var(--t-16);
   line-height: 1.45;
+}
+
+/* La police des titres est réservée aux titres, au nom du site, aux prix et
+   aux scores. Employée partout, elle fatiguerait : le texte courant, les
+   libellés et les chiffres en ligne restent dans la police de texte. */
+.marque, .filtres h2, #compteur, .fiche .prix, .score-pastille b,
+.modale h2, .modale h3, .prix-modale, .score-bloc b, .climat h3 {
+  font-family: var(--f-titre);
 }
 
 /* ---------- entête ---------- */
 .entete { background: var(--marque); color: var(--sur-marque); }
 .entete-int {
-  max-width: 1280px; margin: 0 auto; padding: 14px 20px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 1280px; margin: 0 auto; padding: var(--e-16) var(--e-24);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--e-16);
   flex-wrap: wrap;
 }
-.marque { font-size: 22px; font-weight: 700; letter-spacing: .3px; }
-.slogan { font-size: 13px; opacity: .85; margin-top: 2px; }
+.marque { font-size: var(--t-24); font-weight: 700; line-height: 1.1; }
+.slogan { font-size: var(--t-14); opacity: .85; margin-top: 2px; }
 .pastille-source {
-  font-size: 12px; padding: 4px 10px; border-radius: 99px;
+  font-size: var(--t-12); padding: var(--e-4) var(--e-12); border-radius: var(--r-pastille);
   background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);
 }
 
 /* ---------- agencement ---------- */
 .agencement {
-  max-width: 1280px; margin: 18px auto; padding: 0 20px;
-  display: grid; grid-template-columns: 290px 1fr; gap: 18px;
+  max-width: 1280px; margin: var(--e-16) auto; padding: 0 var(--e-24);
+  display: grid; grid-template-columns: 290px 1fr; gap: var(--e-16);
   align-items: start;
 }
 /* Sans cela, un enfant de grille ne descend jamais sous la largeur de son
@@ -89,91 +114,91 @@ body {
 /* ---------- filtres ---------- */
 .filtres {
   background: var(--carte-fond); border: 1px solid var(--bordure);
-  border-radius: 12px; padding: 16px; position: sticky; top: 12px;
+  border-radius: var(--r-14); padding: var(--e-16); position: sticky; top: 12px;
 }
-.filtres h2 { margin: 0 0 12px; font-size: 16px; }
-.champ { display: block; margin-bottom: 14px; font-size: 13.5px; }
+.filtres h2 { margin: 0 0 var(--e-12); font-size: var(--t-16); }
+.champ { display: block; margin-bottom: var(--e-12); font-size: var(--t-14); }
 /* Le libellé peut passer à la ligne, la valeur jamais : « Temps de route
    depuis Paris » poussait « sans limite » sur deux lignes, et la colonne de
    filtres se lisait en escalier. */
-.champ > span { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; color: var(--encre); font-weight: 600; }
+.champ > span { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-12); margin-bottom: var(--e-4); color: var(--encre); font-weight: 600; }
 .champ > span > output, .champ > span > .aide-filtre { flex: none; }
 .champ output { font-weight: 600; color: var(--accent); white-space: nowrap; }
 .champ input[type=range] { width: 100%; accent-color: var(--accent); }
 .champ select {
-  width: 100%; padding: 7px 8px; border: 1px solid var(--bordure);
-  border-radius: 8px; background: #fff; font: inherit; color: inherit;
+  width: 100%; padding: var(--e-8) var(--e-8); border: 1px solid var(--bordure);
+  border-radius: var(--r-10); background: #fff; font: inherit; color: inherit;
 }
-.atouts { border: 1px solid var(--bordure); border-radius: 10px; padding: 10px 12px 12px; margin: 0 0 14px; }
-.atouts legend { font-weight: 600; font-size: 13.5px; padding: 0 4px; }
-.atouts label { display: flex; gap: 8px; align-items: center; margin-top: 6px; font-weight: 400; }
+.atouts { border: 1px solid var(--bordure); border-radius: var(--r-10); padding: var(--e-12) var(--e-12) var(--e-12); margin: 0 0 var(--e-12); }
+.atouts legend { font-weight: 600; font-size: var(--t-14); padding: 0 var(--e-4); }
+.atouts label { display: flex; gap: var(--e-8); align-items: center; margin-top: var(--e-4); font-weight: 400; }
 .atouts input { accent-color: var(--accent); width: 15px; height: 15px; }
 .bouton-secondaire {
-  width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--bordure);
+  width: 100%; padding: var(--e-8); border-radius: var(--r-10); border: 1px solid var(--bordure);
   background: var(--fond); color: var(--encre); font: inherit; cursor: pointer;
 }
 .bouton-secondaire:hover { border-color: var(--accent); color: var(--accent); }
 
-.legende-score { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bordure); font-size: 12.5px; color: var(--encre-2); }
-.menu-haut { display: flex; gap: 18px; align-items: center; }
+.legende-score { margin-top: var(--e-16); padding-top: var(--e-12); border-top: 1px solid var(--bordure); font-size: var(--t-12); color: var(--encre-2); }
+.menu-haut { display: flex; gap: var(--e-16); align-items: center; }
 .menu-groupe { position: relative; }
 .menu-groupe > summary {
-  color: var(--fond); font-size: 13.5px; font-weight: 600; opacity: .88;
-  cursor: pointer; list-style: none; padding: 4px 0; white-space: nowrap;
+  color: var(--fond); font-size: var(--t-14); font-weight: 600; opacity: .88;
+  cursor: pointer; list-style: none; padding: var(--e-4) 0; white-space: nowrap;
 }
 .menu-groupe > summary::-webkit-details-marker { display: none; }
 .menu-groupe > summary::after { content: " ▾"; opacity: .7; }
 .menu-groupe[open] > summary { opacity: 1; }
 .menu-groupe > ul {
-  position: absolute; z-index: 900; top: 100%; left: 0; margin: 6px 0 0;
+  position: absolute; z-index: 900; top: 100%; left: 0; margin: var(--e-4) 0 0;
   /* 268px et non 232 : « Lorraine, Champagne et Ardennes » est le plus long
      nom de la liste, et il passait à la ligne à toutes les largeurs. */
-  padding: 8px; min-width: 268px; list-style: none;
+  padding: var(--e-8); min-width: 268px; list-style: none;
   background: var(--carte, #fff); border: 1px solid var(--bordure);
-  border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  border-radius: var(--r-10); box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
 }
 .menu-groupe > ul a {
-  display: block; padding: 7px 10px; border-radius: 7px;
-  color: var(--encre); text-decoration: none; font-size: 13.5px; font-weight: 500;
+  display: block; padding: var(--e-8) var(--e-12); border-radius: var(--r-6);
+  color: var(--encre); text-decoration: none; font-size: var(--t-14); font-weight: 400;
 }
 .menu-groupe > ul a:hover { background: var(--badge-fond, #e6ece1); }
 @media (max-width: 640px) {
-  .menu-haut { gap: 12px; flex-wrap: wrap; }
-  .menu-groupe > summary { font-size: 12.5px; }
+  .menu-haut { gap: var(--e-12); flex-wrap: wrap; }
+  .menu-groupe > summary { font-size: var(--t-12); }
   /* Sur mobile le menu se déplie DANS le flux : une liste flottante sortirait
      de l'écran, et l'en-tête est déjà en plusieurs lignes. */
   .menu-groupe > ul { position: static; min-width: 0; box-shadow: none; }
 }
-.legende-note { margin: 10px 0 0; line-height: 1.45; }
+.legende-note { margin: var(--e-8) 0 0; line-height: 1.45; }
 .legende-note a { color: var(--marque); }
-.legende-score h3 { margin: 0 0 8px; font-size: 12.5px; font-weight: 700; color: var(--encre-2); }
-.legende-score div { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.legende-score h3 { margin: 0 0 var(--e-8); font-size: var(--t-12); font-weight: 700; color: var(--encre-2); }
+.legende-score div { display: flex; align-items: center; gap: var(--e-8); margin-top: var(--e-4); }
 .pastille { width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 2px solid var(--n4); flex: none; }
 .pastille.n1 { background: var(--n1); } .pastille.n2 { background: var(--n2); }
 .pastille.n3 { background: var(--n3); } .pastille.n4 { background: var(--n4); }
 
 /* ---------- résultats ---------- */
 #carte {
-  height: 300px; border-radius: 12px; border: 1px solid var(--bordure);
+  height: 300px; border-radius: var(--r-14); border: 1px solid var(--bordure);
   background: #e9e6dd; overflow: hidden;
 }
 .carte-indispo {
   height: 100%; display: flex; align-items: center; justify-content: center;
-  color: var(--encre-2); font-size: 14px; text-align: center; padding: 20px;
+  color: var(--encre-2); font-size: var(--t-14); text-align: center; padding: var(--e-24);
 }
 .barre-resultats {
-  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
-  margin: 14px 2px 10px; flex-wrap: wrap;
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-12);
+  margin: var(--e-12) 2px var(--e-8); flex-wrap: wrap;
 }
-#compteur { font-weight: 700; font-size: 16px; }
-.note-estimation { font-size: 12px; color: var(--encre-2); }
+#compteur { font-weight: 700; font-size: var(--t-16); }
+.note-estimation { font-size: var(--t-12); color: var(--encre-2); }
 
-.liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+.liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: var(--e-12); }
 
 .fiche {
-  background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: 12px;
-  padding: 14px 16px; cursor: pointer; transition: box-shadow .15s, transform .15s;
-  display: flex; flex-direction: column; gap: 8px;
+  background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: var(--r-14);
+  padding: var(--e-16) var(--e-16); cursor: pointer; transition: box-shadow .15s, transform .15s;
+  display: flex; flex-direction: column; gap: var(--e-8);
 }
 .fiche:hover { box-shadow: 0 4px 16px rgba(27, 67, 50, .14); transform: translateY(-1px); }
 
@@ -182,17 +207,17 @@ body {
    en gras, passe en accroche secondaire — c'est de la prose commerciale, pas
    une donnée. */
 .fiche-corps { display: flex; flex-direction: column; gap: 3px; }
-.ligne-prix { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-.fiche .prix { font-size: 21px; font-weight: 800; letter-spacing: -.3px; line-height: 1.15; }
-.fiche .prix-m2 { font-size: 12.5px; color: var(--encre-2); }
-.fiche .specs { font-size: 14px; margin-top: 4px; color: var(--encre-2); }
+.ligne-prix { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--e-8); }
+.fiche .prix { font-size: var(--t-20); font-weight: 800; letter-spacing: -.3px; line-height: 1.15; }
+.fiche .prix-m2 { font-size: var(--t-12); color: var(--encre-2); }
+.fiche .specs { font-size: var(--t-14); margin-top: var(--e-4); color: var(--encre-2); }
 .fiche .specs b { color: var(--encre); font-weight: 700; }
-.fiche .lieu { font-size: 14px; color: var(--encre-2); }
+.fiche .lieu { font-size: var(--t-14); color: var(--encre-2); }
 .fiche .lieu b { color: var(--encre); font-weight: 600; }
-.fiche .acces { font-size: 12.5px; color: var(--encre-2); margin-top: 1px; }
-.fiche .acces .sep { margin: 0 6px; opacity: .5; }
+.fiche .acces { font-size: var(--t-12); color: var(--encre-2); margin-top: 1px; }
+.fiche .acces .sep { margin: 0 var(--e-4); opacity: .5; }
 .fiche .acces .gare { opacity: .8; }
-.fiche .jetons { margin-top: 8px; }
+.fiche .jetons { margin-top: var(--e-8); }
 .badge.sourd { background: transparent; color: var(--encre-2); }
 
 /* Le score de résilience est notre apport propre : il se pose sur la photo,
@@ -203,37 +228,37 @@ body {
 .score-pastille {
   position: absolute; right: 10px; bottom: 10px; z-index: 2;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-width: 66px; padding: 8px 10px 7px; border-radius: 12px; line-height: 1;
+  min-width: 66px; padding: var(--e-8) var(--e-12) var(--e-8); border-radius: var(--r-14); line-height: 1;
   box-shadow: 0 2px 10px rgba(0,0,0,.3);
   border: 2px solid rgba(255,255,255,.55);
 }
-.score-pastille b { font-size: 27px; font-weight: 800; letter-spacing: -.5px; }
+.score-pastille b { font-size: var(--t-24); font-weight: 800; letter-spacing: -.5px; }
 .score-pastille i {
-  font-style: normal; font-size: 10px; font-weight: 700; opacity: .75; margin-top: 1px;
+  font-style: normal; font-size: var(--t-12); font-weight: 700; opacity: .75; margin-top: 1px;
 }
 .score-pastille small {
-  font-size: 10px; font-weight: 600; opacity: .9; margin-top: 4px;
+  font-size: var(--t-12); font-weight: 600; opacity: .9; margin-top: var(--e-4);
 }
 .score-pastille.n1 { background: var(--n1); color: var(--encre); }
 .score-pastille.n2 { background: var(--n2); color: #14281c; }
 .score-pastille.n3 { background: var(--n3); color: #fff; }
 .score-pastille.n4 { background: var(--n4); color: #fff; }
 
-.fiche h3 { margin: 0; font-size: 15px; line-height: 1.3; }
-.fiche .classe { font-size: 12px; color: var(--accent); font-weight: 600; }
+.fiche h3 { margin: 0; font-size: var(--t-16); line-height: 1.3; }
+.fiche .classe { font-size: var(--t-12); color: var(--accent); font-weight: 600; }
 /* Le nom de l'enseigne, tel qu'elle l'écrit. Les majuscules forcées
    transformaient « IAD France » en « IAD FRANCE » et « Delafosse & Associée »
    en « DELAFOSSE & ASSOCIÉE » : sur un site bâti sur l'attribution honnête,
    déformer le nom de celui qu'on attribue n'est pas un détail de style. */
 .agence-ligne {
-  font-size: 11.5px; color: var(--encre-2); margin-top: 8px;
-  padding-top: 8px; border-top: 1px solid var(--bordure);
+  font-size: var(--t-12); color: var(--encre-2); margin-top: var(--e-8);
+  padding-top: var(--e-8); border-top: 1px solid var(--bordure);
 }
 
-.jetons { display: flex; flex-wrap: wrap; gap: 8px; }
-.modale .jetons .badge, .modale .jetons .alerte { font-size: 13px; padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; }
+.jetons { display: flex; flex-wrap: wrap; gap: var(--e-8); }
+.modale .jetons .badge, .modale .jetons .alerte { font-size: var(--t-14); padding: var(--e-4) var(--e-12); display: inline-flex; align-items: center; gap: var(--e-4); }
 .badge, .alerte {
-  font-size: 11px; padding: 2px 8px; border-radius: 6px; border: 1px solid;
+  font-size: var(--t-12); padding: 2px var(--e-8); border-radius: var(--r-6); border: 1px solid;
 }
 .badge { background: var(--badge-fond); border-color: var(--badge-bord); color: var(--marque); }
 .alerte { background: var(--alerte-fond); border-color: var(--alerte-bord); color: var(--alerte-texte); font-weight: 600; }
@@ -242,52 +267,52 @@ body {
 .voile[hidden] { display: none; }
 .voile {
   position: fixed; inset: 0; background: rgba(20, 30, 24, .55);
-  display: flex; align-items: flex-start; justify-content: center; padding: 4vh 16px;
+  display: flex; align-items: flex-start; justify-content: center; padding: 4vh var(--e-16);
   z-index: 1000; overflow-y: auto;
 }
 .modale {
-  background: var(--carte-fond); border-radius: 14px; max-width: 780px; width: 100%;
-  padding: 22px 26px 24px; position: relative; margin-bottom: 4vh;
+  background: var(--carte-fond); border-radius: var(--r-14); max-width: 780px; width: 100%;
+  padding: var(--e-24) var(--e-24) var(--e-24); position: relative; margin-bottom: 4vh;
 }
 .fermer {
   position: absolute; top: 12px; right: 12px; border: none; z-index: 3;
   width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, .9);
-  box-shadow: 0 1px 5px rgba(20, 30, 24, .2); font-size: 16px; cursor: pointer;
+  box-shadow: 0 1px 5px rgba(20, 30, 24, .2); font-size: var(--t-16); cursor: pointer;
   color: var(--encre); display: flex; align-items: center; justify-content: center; padding: 0;
 }
 .fermer:hover { background: #fff; }
 /* Le titre est le nôtre — le type et le lieu — et il ouvre la fiche. Trois
    niveaux, trois tailles franches : où (18), combien (30), quoi (15). */
 .modale h2 {
-  margin: 0 0 6px; font-size: 18px; font-weight: 700; line-height: 1.3;
+  margin: 0 0 var(--e-4); font-size: var(--t-18); font-weight: 700; line-height: 1.3;
   color: var(--encre); text-wrap: balance;
 }
 .modale h2 .cp { font-weight: 400; color: var(--encre-2); }
 .prix-modale {
-  font-size: 30px; font-weight: 800; letter-spacing: -.5px; line-height: 1.1;
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  font-size: var(--t-32); font-weight: 800; letter-spacing: -.5px; line-height: 1.1;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--e-4) var(--e-8);
 }
 .prix-modale .prix-m2 {
-  font-size: 14px; font-weight: 500; color: var(--encre-2); letter-spacing: 0;
+  font-size: var(--t-14); font-weight: 400; color: var(--encre-2); letter-spacing: 0;
   white-space: nowrap; display: inline-block;   /* « 1 893 » et « €/m² » ne se séparent pas */
 }
-.fiche-entete .specs { font-size: 15px; color: var(--encre-2); margin-top: 8px; }
+.fiche-entete .specs { font-size: var(--t-16); color: var(--encre-2); margin-top: var(--e-8); }
 .fiche-entete .specs b { color: var(--encre); font-weight: 700; }
-.fiche-entete .lieu { font-size: 14px; color: var(--encre-2); margin-top: 2px; }
+.fiche-entete .lieu { font-size: var(--t-14); color: var(--encre-2); margin-top: 2px; }
 .modale .lieu { color: var(--encre-2); }
 /* Les titres de section étaient en 13 px gris : plus petits et plus pâles
    que le texte qu'ils coiffaient, ils ne structuraient rien. */
 .modale h3 {
-  margin: 0 0 12px; font-size: 16px; font-weight: 700; color: var(--encre);
-  display: flex; align-items: baseline; gap: 8px;
+  margin: 0 0 var(--e-12); font-size: var(--t-16); font-weight: 700; color: var(--encre);
+  display: flex; align-items: baseline; gap: var(--e-8);
 }
-.modale h3 .h-note { font-size: 13px; font-weight: 500; color: var(--encre-2); }
-.modale h4 { margin: 18px 0 8px; font-size: 14px; font-weight: 700; color: var(--encre); }
+.modale h3 .h-note { font-size: var(--t-14); font-weight: 400; color: var(--encre-2); }
+.modale h4 { margin: var(--e-16) 0 var(--e-8); font-size: var(--t-14); font-weight: 700; color: var(--encre); }
 
 /* Une section = un bloc, séparé du précédent par un filet et le même blanc.
    Il y avait deux panneaux encadrés et trois sections nues, collées les unes
    aux autres : la dernière ligne des risques touchait le cadre du climat. */
-.modale .bloc { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--bordure); }
+.modale .bloc { margin-top: var(--e-24); padding-top: var(--e-24); border-top: 1px solid var(--bordure); }
 .modale .bloc:empty { display: none; }
 
 /* Les icônes : un trait, de la couleur du texte qu'elles accompagnent. */
@@ -296,9 +321,9 @@ body {
   fill: none; stroke: currentColor; stroke-width: 1.7;
   stroke-linecap: round; stroke-linejoin: round;
 }
-.modale .description { font-size: 14.5px; color: var(--encre); line-height: 1.7; }
-.fiche-source { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--bordure); }
-.modale .source-ligne { margin: 4px 0 0; font-size: 13px; color: var(--encre-2); }
+.modale .description { font-size: var(--t-14); color: var(--encre); line-height: 1.7; }
+.fiche-source { margin-top: var(--e-24); padding-top: var(--e-16); border-top: 1px solid var(--bordure); }
+.modale .source-ligne { margin: var(--e-4) 0 0; font-size: var(--t-14); color: var(--encre-2); }
 .modale .source-ligne a { color: var(--accent); }
 /* Bien non reconstaté depuis longtemps : la collecte passe chez les agences
    à tour de rôle, il a pu être vendu entre-temps. On le dit plutôt que de
@@ -306,33 +331,33 @@ body {
 .modale .source-ligne.perime { color: #8a5a12; font-weight: 600; }
 
 /* entête de la fiche */
-.fiche-entete { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; }
+.fiche-entete { display: flex; gap: var(--e-16); align-items: flex-start; justify-content: space-between; }
 .fiche-titre { min-width: 0; }
 
 /* Le score, à droite du prix : c'est la seconde chose qu'on vient lire ici,
    et la seule qu'aucun portail ne donne. Le chiffre reste écrit à côté de la
    couleur, comme partout. */
 .score-bloc {
-  flex: none; min-width: 76px; padding: 10px 12px 8px; border-radius: 14px;
+  flex: none; min-width: 76px; padding: var(--e-12) var(--e-12) var(--e-8); border-radius: var(--r-14);
   display: flex; flex-direction: column; align-items: center; line-height: 1;
   border: 2px solid var(--n4);
 }
-.score-bloc b { font-size: 30px; font-weight: 800; letter-spacing: -.5px; }
-.score-bloc i { font-style: normal; font-size: 11px; font-weight: 700; opacity: .8; margin-top: 2px; }
-.score-bloc small { font-size: 11px; font-weight: 600; margin-top: 6px; opacity: .9; }
+.score-bloc b { font-size: var(--t-32); font-weight: 800; letter-spacing: -.5px; }
+.score-bloc i { font-style: normal; font-size: var(--t-12); font-weight: 700; opacity: .8; margin-top: 2px; }
+.score-bloc small { font-size: var(--t-12); font-weight: 600; margin-top: var(--e-4); opacity: .9; }
 .score-bloc.n1 { background: var(--n1); color: var(--encre); }
 .score-bloc.n2 { background: var(--n2); color: #14281c; }
 .score-bloc.n3 { background: var(--n3); color: #fff; }
 .score-bloc.n4 { background: var(--n4); color: #fff; }
-.classe-grande { font-weight: 600; color: var(--accent); margin: 12px 0 0; font-size: 14px; }
+.classe-grande { font-weight: 600; color: var(--accent); margin: var(--e-12) 0 0; font-size: var(--t-14); }
 
 /* Les deux actions de la fiche. L'une mène au bien, l'autre non : elles
    n'ont donc pas le même poids. */
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--e-12); margin-top: var(--e-16); }
 .btn-principal, .btn-secondaire {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 48px; padding: 12px 20px; border-radius: 10px;
-  font-weight: 700; font-size: 15px; text-decoration: none; text-align: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--e-8);
+  min-height: 48px; padding: var(--e-12) var(--e-24); border-radius: var(--r-10);
+  font-weight: 700; font-size: var(--t-16); text-decoration: none; text-align: center;
 }
 .btn-principal { background: var(--marque); color: var(--sur-marque); border: 1px solid var(--marque); flex: 1 1 260px; }
 .btn-principal:hover { background: var(--accent); border-color: var(--accent); }
@@ -343,30 +368,30 @@ body {
 
 /* Les faits, une ligne chacun : libellé à gauche, valeur à droite. Deux
    colonnes quand la place le permet, une seule sur téléphone. */
-.faits { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+.faits { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--e-32); }
 .fait {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
-  padding: 10px 0; border-bottom: 1px solid var(--bordure); min-width: 0;
+  display: flex; align-items: baseline; justify-content: space-between; gap: var(--e-16);
+  padding: var(--e-12) 0; border-bottom: 1px solid var(--bordure); min-width: 0;
 }
-.fait dt { color: var(--encre-2); font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.fait dt { color: var(--encre-2); font-size: var(--t-14); display: flex; align-items: center; gap: var(--e-8); }
 .fait dt .ico { vertical-align: 0; }
 .fait dd { margin: 0; text-align: right; min-width: 0; }
-.fait .valeur { display: block; font-weight: 700; font-size: 15px; }
-.fait .sous { display: block; font-size: 12.5px; color: var(--encre-2); margin-top: 2px; }
-.fait .nc { font-weight: 500; color: var(--encre-2); }
+.fait .valeur { display: block; font-weight: 700; font-size: var(--t-16); }
+.fait .sous { display: block; font-size: var(--t-12); color: var(--encre-2); margin-top: 2px; }
+.fait .nc { font-weight: 400; color: var(--encre-2); }
 @media (max-width: 640px) { .faits { grid-template-columns: minmax(0, 1fr); } }
 
 
 /* « TGV » sur la tuile « Paris en train ». Un mot, pas une couleur seule :
    comme la lettre du DPE, il se lit en noir et blanc et par un daltonien. */
 .tgv {
-  display: inline-block; margin-left: 5px; padding: 1px 5px; border-radius: 5px;
+  display: inline-block; margin-left: var(--e-4); padding: 1px var(--e-4); border-radius: var(--r-6);
   background: var(--marque); color: #fff; vertical-align: 2px;
-  font-size: 10.5px; font-weight: 800; letter-spacing: .5px;
+  font-size: var(--t-12); font-weight: 800; letter-spacing: .5px;
 }
 
 /* étiquette DPE (lettre toujours affichée, jamais la couleur seule) */
-.dpe { display: inline-block; min-width: 26px; text-align: center; padding: 1px 7px; border-radius: 6px; font-weight: 800; }
+.dpe { display: inline-block; min-width: 26px; text-align: center; padding: 1px var(--e-8); border-radius: var(--r-6); font-weight: 800; }
 .dpe-A { background: #1e7a46; color: #fff; }
 .dpe-B { background: #4d8337; color: #fff; }  /* assombri : 3,12:1 → 4,55:1 */
 .dpe-C { background: #b8bf2b; color: #24312a; }
@@ -375,49 +400,49 @@ body {
 .dpe-F { background: #b75d20; color: #fff; }  /* assombri : 3,36:1 → 4,57:1 */
 .dpe-G { background: #c0392b; color: #fff; }
 
-.aucun { color: var(--encre-2); font-size: 14px; margin: 4px 0; display: flex; align-items: center; gap: 8px; }
-.note-detail { font-size: 12.5px; color: var(--encre-2); margin: 8px 0 0; }
+.aucun { color: var(--encre-2); font-size: var(--t-14); margin: var(--e-4) 0; display: flex; align-items: center; gap: var(--e-8); }
+.note-detail { font-size: var(--t-12); color: var(--encre-2); margin: var(--e-8) 0 0; }
 
 /* jauges des piliers du score */
-.pilier { margin-top: 12px; font-size: 14px; }
-.pilier-tete { display: grid; grid-template-columns: 200px 1fr 56px; gap: 10px; align-items: center;
+.pilier { margin-top: var(--e-12); font-size: var(--t-14); }
+.pilier-tete { display: grid; grid-template-columns: 200px 1fr 56px; gap: var(--e-8); align-items: center;
   cursor: pointer; list-style: none; }
 .pilier-tete::-webkit-details-marker { display: none; }
-.pilier .nom { color: var(--encre); display: flex; align-items: center; gap: 8px; }
+.pilier .nom { color: var(--encre); display: flex; align-items: center; gap: var(--e-8); }
 .pilier .nom .ico { color: var(--accent); }
-.pilier .info-i { color: var(--encre-2); font-size: 11px; }
+.pilier .info-i { color: var(--encre-2); font-size: var(--t-12); }
 .pilier[open] .info-i { color: var(--accent); }
 .pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
 .pilier .valeur b { color: var(--encre); }
-.pilier-info { margin: 6px 0 2px; padding: 8px 11px; background: var(--badge-fond);
-  border: 1px solid var(--badge-bord); border-radius: 8px; color: var(--encre-2);
-  font-size: 12.5px; line-height: 1.55; }
-.vigilances { margin: 6px 0 0; padding-left: 18px; color: var(--encre-2); font-size: 13px; line-height: 1.6; }
+.pilier-info { margin: var(--e-4) 0 2px; padding: var(--e-8) var(--e-12); background: var(--badge-fond);
+  border: 1px solid var(--badge-bord); border-radius: var(--r-10); color: var(--encre-2);
+  font-size: var(--t-12); line-height: 1.55; }
+.vigilances { margin: var(--e-4) 0 0; padding-left: var(--e-16); color: var(--encre-2); font-size: var(--t-14); line-height: 1.6; }
 .vigilances li { margin-top: 2px; }
-.jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden; }
-.jauge > div { height: 100%; background: var(--n3); border-radius: 6px; min-width: 2px; }
+.jauge { height: 12px; background: #ece8dd; border-radius: var(--r-6); overflow: hidden; }
+.jauge > div { height: 100%; background: var(--n3); border-radius: var(--r-6); min-width: 2px; }
 /* Sur téléphone, le nom du critère prend sa ligne : dans une colonne de
    132 px, « Autonomie alimentaire » se coupait en deux et son ⓘ tombait seul
    sur une troisième. */
 @media (max-width: 600px) {
-  .pilier-tete { grid-template-columns: 1fr 56px; row-gap: 6px; }
+  .pilier-tete { grid-template-columns: 1fr 56px; row-gap: var(--e-4); }
   .pilier .nom { grid-column: 1 / -1; }
 }
 
 /* légende Leaflet */
 .legende-carte {
-  background: #fff; padding: 8px 10px; border-radius: 8px; font-size: 11.5px;
+  background: #fff; padding: var(--e-8) var(--e-12); border-radius: var(--r-10); font-size: var(--t-12);
   border: 1px solid var(--bordure); color: var(--encre); line-height: 1.7;
 }
-.legende-carte .pastille { width: 11px; height: 11px; border-width: 1.5px; margin-right: 5px; vertical-align: -1px; }
+.legende-carte .pastille { width: 11px; height: 11px; border-width: 1.5px; margin-right: var(--e-4); vertical-align: -1px; }
 
 .vide {
   grid-column: 1 / -1; text-align: center; color: var(--encre-2);
-  padding: 40px 20px; background: var(--carte-fond); border: 1px dashed var(--bordure); border-radius: 12px;
+  padding: var(--e-48) var(--e-24); background: var(--carte-fond); border: 1px dashed var(--bordure); border-radius: var(--r-14);
 }
 .btn-reessayer {
-  margin-top: 16px; font: inherit; font-weight: 600; cursor: pointer;
-  padding: 12px 20px; border-radius: 8px;
+  margin-top: var(--e-16); font: inherit; font-weight: 600; cursor: pointer;
+  padding: var(--e-12) var(--e-24); border-radius: var(--r-10);
   border: 1px solid var(--marque); background: var(--marque); color: var(--sur-marque);
 }
 .btn-reessayer:hover { background: var(--accent); border-color: var(--accent); }
@@ -426,11 +451,11 @@ body {
 /* ---------- pagination ---------- */
 .pagination {
   display: flex; align-items: center; justify-content: center;
-  gap: 16px; flex-wrap: wrap; margin: 24px 2px 8px;
+  gap: var(--e-16); flex-wrap: wrap; margin: var(--e-24) 2px var(--e-8);
 }
 .page-btn {
   font: inherit; font-weight: 600; cursor: pointer;
-  padding: 12px 20px; border-radius: 8px; min-height: 44px;
+  padding: var(--e-12) var(--e-24); border-radius: var(--r-10); min-height: 44px;
   border: 1px solid var(--marque); background: var(--marque); color: var(--sur-marque);
 }
 .page-btn:hover:not(:disabled) { background: var(--accent); border-color: var(--accent); }
@@ -438,7 +463,7 @@ body {
 /* Désactivé et non masqué : le bouton garde sa place, donc l'autre ne se
    déplace pas sous le doigt entre la première page et la deuxième. */
 .page-btn:disabled { background: transparent; color: var(--encre-2); border-color: var(--bordure); cursor: default; }
-.page-rang { color: var(--encre-2); font-size: 14px; }
+.page-rang { color: var(--encre-2); font-size: var(--t-14); }
 
 /* ---------- amas de la carte ---------- */
 /* Le chiffre est écrit, pas seulement la couleur : même règle que la pastille
@@ -452,25 +477,25 @@ body {
   font-weight: 800; line-height: 1;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .25);
 }
-.amas b { font-size: 13px; }
-.legende-amas { display: block; margin-top: 7px; padding-top: 7px; max-width: 190px;
-  border-top: 1px solid var(--bordure); color: var(--encre-2); font-size: 11.5px; line-height: 1.35; }
+.amas b { font-size: var(--t-14); }
+.legende-amas { display: block; margin-top: var(--e-8); padding-top: var(--e-8); max-width: 190px;
+  border-top: 1px solid var(--bordure); color: var(--encre-2); font-size: var(--t-12); line-height: 1.35; }
 
 /* ---------- terroirs ciblés (priorisation par région) ---------- */
-.terroirs-bloc { margin: 16px 2px 0; }
-.terroirs-titre { font-size: 12.5px; color: var(--encre-2); font-weight: 700; }
+.terroirs-bloc { margin: var(--e-16) 2px 0; }
+.terroirs-titre { font-size: var(--t-12); color: var(--encre-2); font-weight: 700; }
 .terroirs-titre span { font-weight: 400; }
-.terroirs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.terroirs { display: flex; gap: var(--e-8); flex-wrap: wrap; margin-top: var(--e-8); }
 .terroir {
-  display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font: inherit;
-  font-size: 12.5px; padding: 6px 12px; border: 1px solid var(--bordure);
-  border-radius: 99px; background: #fff; color: var(--encre);
+  display: inline-flex; align-items: center; gap: var(--e-8); cursor: pointer; font: inherit;
+  font-size: var(--t-12); padding: var(--e-8) var(--e-12); border: 1px solid var(--bordure);
+  border-radius: var(--r-pastille); background: #fff; color: var(--encre);
 }
 .terroir:hover { border-color: var(--accent); }
 .terroir.actif { background: var(--marque); border-color: var(--marque); color: #fff; }
 .terroir .idx {
   font-weight: 800; background: var(--badge-fond); color: var(--marque); border-radius: 50%;
-  width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px;
+  width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: var(--t-12);
 }
 .terroir.actif .idx { background: rgba(255,255,255,.25); color: #fff; }
 .terroir .score-terroir { font-weight: 700; color: var(--accent); }
@@ -484,11 +509,11 @@ body {
 /* ---------- photo du bien ---------- */
 .fiche { overflow: hidden; }
 .fiche .photo {
-  height: 178px; margin: -14px -16px 12px; position: relative;
+  height: 178px; margin: calc(-1 * var(--e-12)) calc(-1 * var(--e-16)) var(--e-12); position: relative;
   background: #dfe7df center/cover no-repeat;
 }
 .photo-grande {
-  height: 230px; border-radius: 12px; margin-bottom: 14px; position: relative;
+  height: 230px; border-radius: var(--r-14); margin-bottom: var(--e-12); position: relative;
   background: #dfe7df center/cover no-repeat;
 }
 
@@ -500,10 +525,10 @@ body {
 .vue-ciel { margin: 0 }
 .vue-ciel img {
   width: 100%; height: 200px; object-fit: cover;
-  border-radius: 12px; display: block; background: #dfe7df;
+  border-radius: var(--r-14); display: block; background: #dfe7df;
 }
 .vue-ciel figcaption {
-  font-size: 12.5px; color: #6b7663; margin-top: 6px; line-height: 1.45;
+  font-size: var(--t-12); color: #6b7663; margin-top: var(--e-4); line-height: 1.45;
 }
 
 /* Vraie photo de l'agence, posée sur l'illustration de repli.
@@ -524,39 +549,39 @@ body {
 /* En pied de fiche, sur une ligne : c'est une proposition pour qui n'a pas
    trouvé son bien ici, pas la première chose à lui dire. */
 .alerte-bloc {
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px;
-  margin: 24px 0 0; padding: 16px; border: 1px solid var(--badge-bord);
-  border-radius: 12px; background: var(--badge-fond);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--e-12) var(--e-16);
+  margin: var(--e-24) 0 0; padding: var(--e-16); border: 1px solid var(--badge-bord);
+  border-radius: var(--r-14); background: var(--badge-fond);
 }
-.alerte-bloc > div { display: flex; flex-direction: column; gap: 4px; flex: 1 1 280px; }
-.alerte-bloc strong { font-size: 15px; }
-.alerte-bloc span { font-size: 13px; color: var(--encre-2); line-height: 1.45; }
+.alerte-bloc > div { display: flex; flex-direction: column; gap: var(--e-4); flex: 1 1 280px; }
+.alerte-bloc strong { font-size: var(--t-16); }
+.alerte-bloc span { font-size: var(--t-14); color: var(--encre-2); line-height: 1.45; }
 .btn-alerte {
-  flex: none; padding: 12px 16px; min-height: 44px; display: inline-flex; align-items: center;
-  border-radius: 8px; background: var(--accent); color: #fff;
+  flex: none; padding: var(--e-12) var(--e-16); min-height: 44px; display: inline-flex; align-items: center;
+  border-radius: var(--r-10); background: var(--accent); color: #fff;
   font-weight: 600; text-decoration: none;
 }
 .btn-alerte:hover { background: var(--marque); }
 
 /* ---------- responsive / mobile ---------- */
 html, body { overflow-x: clip; }
-.filtres-tete { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.filtres-tete { display: flex; align-items: center; justify-content: space-between; gap: var(--e-8); }
 .filtres-toggle {
   display: none; border: 1px solid var(--bordure); background: var(--fond);
-  color: var(--encre); font: inherit; font-size: 13px; font-weight: 600;
-  padding: 6px 12px; border-radius: 8px; cursor: pointer;
+  color: var(--encre); font: inherit; font-size: var(--t-14); font-weight: 600;
+  padding: var(--e-8) var(--e-12); border-radius: var(--r-10); cursor: pointer;
 }
 .filtres-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 @media (max-width: 900px) {
-  .agencement { padding: 0 14px; margin: 12px auto; gap: 12px; }
-  .entete-int { padding: 12px 14px; }
-  .slogan { font-size: 12px; }
-  .filtres { position: static; padding: 12px 14px; }
+  .agencement { padding: 0 var(--e-16); margin: var(--e-12) auto; gap: var(--e-12); }
+  .entete-int { padding: var(--e-12) var(--e-16); }
+  .slogan { font-size: var(--t-12); }
+  .filtres { position: static; padding: var(--e-12) var(--e-16); }
   .filtres h2 { margin: 0; }
   .filtres-toggle { display: inline-flex; }
   .filtres.replie .filtres-corps { display: none; }
-  .filtres-corps { margin-top: 12px; }
+  .filtres-corps { margin-top: var(--e-12); }
 
   /* Sur mobile, il fallait faire défiler la carte PUIS six pastilles de
      terroir avant d'apercevoir la première annonce. Un chercheur de maison
@@ -565,38 +590,38 @@ html, body { overflow-x: clip; }
   .resultats { display: flex; flex-direction: column; }
   .barre-resultats { order: 1; margin-top: 0; }
   #liste { order: 2; }
-  #carte { order: 3; height: 320px; margin-top: 18px; }
-  .terroirs-bloc { order: 4; margin-top: 14px; }
+  #carte { order: 3; height: 320px; margin-top: var(--e-16); }
+  .terroirs-bloc { order: 4; margin-top: var(--e-12); }
 
   /* Les terroirs défilent horizontalement au lieu d'empiler six lignes. */
   .terroirs {
-    flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px;
+    flex-wrap: nowrap; overflow-x: auto; padding-bottom: var(--e-8);
     scrollbar-width: thin;
   }
   .terroir { flex: none; }
 }
 
 @media (max-width: 560px) {
-  .marque { font-size: 20px; }
+  .marque { font-size: var(--t-20); }
   .liste { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, 1fr); }
-    .barre-resultats { gap: 6px; }
-  .note-estimation { font-size: 11px; }
-  .modale { padding: 18px 16px 22px; border-radius: 12px; }
-  .modale h2 { font-size: 18px; }
+    .barre-resultats { gap: var(--e-4); }
+  .note-estimation { font-size: var(--t-12); }
+  .modale { padding: var(--e-16) var(--e-16) var(--e-24); border-radius: var(--r-14); }
+  .modale h2 { font-size: var(--t-18); }
   .photo-grande { height: 190px; }
-  .alerte-bloc { padding: 12px; }
-  .fiche-entete { gap: 10px; }
-    .terroir { padding: 6px 10px; }
+  .alerte-bloc { padding: var(--e-12); }
+  .fiche-entete { gap: var(--e-8); }
+    .terroir { padding: var(--e-8) var(--e-12); }
 }
 
 /* Petit ⓘ d'aide à côté d'un filtre peu évident (ex. habitat troglodyte). */
-.aide-filtre { color: var(--encre-2); font-size: 11px; cursor: help; }
+.aide-filtre { color: var(--encre-2); font-size: var(--t-12); cursor: help; }
 
 /* Fraîcheur : ce qui vient d'arriver, et ce dont le prix a baissé. */
 .baisse-prix {
   background: #eaf2ec; border: 1px solid var(--badge-bord); color: var(--marque);
-  font-weight: 700; font-size: 12px; padding: 2px 7px; border-radius: 99px;
+  font-weight: 700; font-size: var(--t-12); padding: 2px var(--e-8); border-radius: var(--r-pastille);
 }
 
 /* La pastille d'écart au prix du secteur a été retirée le 9 août 2026 (voir
@@ -607,11 +632,11 @@ html, body { overflow-x: clip; }
    non construite en JavaScript, parce qu'elle est le seul chemin par lequel
    un robot — et notamment un robot d'IA, qui n'exécute pas de script —
    découvre les pages de terroir puis les fiches. */
-.pied { background: #eceadf; border-top: 1px solid #ddd8cc; margin-top: 40px;
-        padding: 28px 20px 36px; color: #46543f; font-size: 14px; line-height: 1.6 }
-.pied nav h2 { font-size: 15px; margin: 0 0 8px; color: #23301f }
-.pied ul { list-style: none; padding: 0; margin: 0 0 16px;
-           display: flex; flex-wrap: wrap; gap: 8px 18px }
+.pied { background: #eceadf; border-top: 1px solid #ddd8cc; margin-top: var(--e-32);
+        padding: var(--e-32) var(--e-24) var(--e-32); color: #46543f; font-size: var(--t-14); line-height: 1.6 }
+.pied nav h2 { font-size: var(--t-16); margin: 0 0 var(--e-8); color: #23301f }
+.pied ul { list-style: none; padding: 0; margin: 0 0 var(--e-16);
+           display: flex; flex-wrap: wrap; gap: var(--e-8) var(--e-16) }
 .pied a { color: var(--marque, #1b4332); font-weight: 600 }
 .pied p { max-width: 70ch; margin: 0 }
 
@@ -619,17 +644,17 @@ html, body { overflow-x: clip; }
    sans crier. Il ne s'adresse pas au visiteur qui cherche une maison mais à
    l'agence qui en publie — le fondre dans la liste des mentions le rendrait
    invisible pour les uns comme pour les autres. */
-.pied .pied-pro { background: #fff; border: 1px solid #ddd8cc; border-radius: 10px;
-                  padding: 14px 18px; margin-top: 20px; max-width: 70ch;
-                  display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline }
-.pied .pied-pro a { font-size: 15px; text-decoration: none; white-space: nowrap }
+.pied .pied-pro { background: #fff; border: 1px solid #ddd8cc; border-radius: var(--r-10);
+                  padding: var(--e-16) var(--e-16); margin-top: var(--e-16); max-width: 70ch;
+                  display: flex; flex-wrap: wrap; gap: var(--e-4) var(--e-12); align-items: baseline }
+.pied .pied-pro a { font-size: var(--t-16); text-decoration: none; white-space: nowrap }
 .pied .pied-pro a:hover { text-decoration: underline }
-.pied .pied-pro span { color: #6b7663; font-size: 13.5px }
+.pied .pied-pro span { color: #6b7663; font-size: var(--t-14) }
 
 /* La marque : pictogramme + nom, alignés sur la même ligne de base optique.
    Le dessin remplace l'emoji ⛰️, qui appartenait à tout le monde, changeait
    d'aspect d'un système à l'autre et ne disait rien du projet. */
-.marque { display: flex; align-items: center; gap: 10px; }
+.marque { display: flex; align-items: center; gap: var(--e-8); }
 .marque .logo { flex: none; }
 
 /* L'étiquette de la vue aérienne : quand c'est le ciel qui illustre — photo
@@ -638,7 +663,7 @@ html, body { overflow-x: clip; }
 .photo.vue-aerienne::after, .photo-grande.vue-aerienne::after {
   content: "Vue aérienne de la commune · © IGN";
   position: absolute; left: 8px; bottom: 8px; z-index: 2;
-  font-size: 10.5px; letter-spacing: .2px; padding: 3px 9px; border-radius: 99px;
+  font-size: var(--t-12); letter-spacing: .2px; padding: 3px var(--e-8); border-radius: var(--r-pastille);
   background: rgba(20, 30, 24, .62); color: #f2efe6; pointer-events: none;
 }
 
@@ -646,51 +671,51 @@ html, body { overflow-x: clip; }
    Même dessin que la page du bien (app/pages.py, climat_html) : chiffres
    clés, puis par thème une ligne par indicateur avec deux barres — 1976-2005
    en gris, 2050 en couleur — sur une échelle commune à toute la zone. */
-.climat { background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: 12px;
-  padding: 12px 16px 14px; }
+.climat { background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: var(--r-14);
+  padding: var(--e-12) var(--e-16) var(--e-16); }
 .climat h4 { margin-top: 0; }
 .modale .climat { border: 0; padding: 0; background: none; }
-.theme-climat { display: flex; align-items: center; gap: 8px; }
-.modale .theme-climat { margin: 24px 0 4px; font-size: 15px; }
-.theme-climat { font-size: 13.5px; margin: 14px 0 2px; color: var(--encre); }
-.cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-.cle { border-radius: 10px; padding: 8px 11px; background: #fbf3ec; border-left: 4px solid #d9622b;
+.theme-climat { display: flex; align-items: center; gap: var(--e-8); }
+.modale .theme-climat { margin: var(--e-24) 0 var(--e-4); font-size: var(--t-16); }
+.theme-climat { font-size: var(--t-14); margin: var(--e-12) 0 2px; color: var(--encre); }
+.cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--e-8); }
+.cle { border-radius: var(--r-10); padding: var(--e-8) var(--e-12); background: #fbf3ec; border-left: 4px solid #d9622b;
   display: flex; flex-direction: column; }
 .cle.secheresse { background: #fbf6ea; border-left-color: #b5852b; }
-.cle b { font-size: 22px; line-height: 1.15; color: var(--encre); white-space: nowrap; }
-.cle span { font-size: 12.5px; color: var(--encre); }
-.cle small { font-size: 11.5px; color: var(--encre-2); }
+.cle b { font-size: var(--t-24); line-height: 1.15; color: var(--encre); white-space: nowrap; }
+.cle span { font-size: var(--t-12); color: var(--encre); }
+.cle small { font-size: var(--t-12); color: var(--encre-2); }
 @media (max-width: 480px) {
-  .cles-climat { grid-template-columns: 1fr; gap: 6px; }
-  .cle { display: grid; grid-template-columns: 5.2rem 1fr; column-gap: 10px; align-items: center; padding: 7px 10px; }
-  .cle b { grid-row: 1 / 3; font-size: 20px; }
+  .cles-climat { grid-template-columns: 1fr; gap: var(--e-4); }
+  .cle { display: grid; grid-template-columns: 5.2rem 1fr; column-gap: var(--e-8); align-items: center; padding: var(--e-8) var(--e-12); }
+  .cle b { grid-row: 1 / 3; font-size: var(--t-20); }
   .cle span, .cle small { grid-column: 2; }
 }
-.ligne-climat { padding: 7px 0; border-bottom: 1px solid #efece4; font-size: 13px; }
+.ligne-climat { padding: var(--e-8) 0; border-bottom: 1px solid #efece4; font-size: var(--t-14); }
 .ligne-climat:last-of-type { border-bottom: 0; }
-.l-tete { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.l-tete { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-8); flex-wrap: wrap; }
 .l-nom small { color: var(--encre-2); }
 .l-chiffres { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .v-ref { color: var(--encre-2); }
-.ecart { display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 700;
-  padding: 1px 7px; border-radius: 99px; background: #efede6; color: var(--encre-2); }
+.ecart { display: inline-block; margin-left: var(--e-4); font-size: var(--t-12); font-weight: 700;
+  padding: 1px var(--e-8); border-radius: var(--r-pastille); background: #efede6; color: var(--encre-2); }
 .ecart.pire { background: var(--alerte-fond); color: var(--alerte-texte); }
 .ecart.mieux { background: var(--badge-fond); color: var(--marque); }
-.barres { display: grid; gap: 3px; margin: 6px 0 2px; }
-.piste { height: 8px; background: #f2efe7; border-radius: 4px; overflow: hidden; }
-.piste span { display: block; height: 100%; border-radius: 4px; min-width: 2px; }
+.barres { display: grid; gap: 3px; margin: var(--e-4) 0 2px; }
+.piste { height: 8px; background: #f2efe7; border-radius: var(--r-6); overflow: hidden; }
+.piste span { display: block; height: 100%; border-radius: var(--r-6); min-width: 2px; }
 .b-ref { background: #cfc8b8; }
 .b-fut { background: #d9622b; }
 .b-fut.secheresse { background: #b5852b; }
 .b-fut.rr_jja { background: #3a7ca5; }
 .b-fut.ifm40d { background: #b33a2a; }
-.rang { font-size: 12px; color: var(--encre-2); }
-.legende-climat { font-size: 12px; color: var(--encre-2); margin: 10px 0 0; display: flex; gap: 14px;
+.rang { font-size: var(--t-12); color: var(--encre-2); }
+.legende-climat { font-size: var(--t-12); color: var(--encre-2); margin: var(--e-8) 0 0; display: flex; gap: var(--e-12);
   flex-wrap: wrap; align-items: center; }
-.legende-climat i { display: inline-block; width: 20px; height: 8px; border-radius: 4px; margin-right: 6px;
+.legende-climat i { display: inline-block; width: 20px; height: 8px; border-radius: var(--r-6); margin-right: var(--e-4);
   vertical-align: 1px; }
 
 /* Mention de viager. Reprend les couleurs d'alerte : ce n'est pas un défaut
    du bien, c'est un avertissement sur la LECTURE du prix. */
-.alerte.viager { display: block; margin: 6px 0 2px; line-height: 1.45; }
-.alerte.viager.compacte { font-size: .82rem; padding: 3px 8px; }
+.alerte.viager { display: block; margin: var(--e-4) 0 2px; line-height: 1.45; }
+.alerte.viager.compacte { font-size: var(--t-14); padding: 3px var(--e-8); }

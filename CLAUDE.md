@@ -55,6 +55,14 @@ python scripts/enrichir_risques.py  # API Géorisques (réseau requis)
   score en détail, analyse), mêmes icônes au trait : `TRACES` (app.js) et
   `_TRACES` (pages.py) portent les mêmes tracés, un test les compare. Pas
   d'émoji en guise d'icône ; nombres à virgule (`decimal()` / `_virgule()`).
+- Charte graphique : docs/CHARTE.md (la lire avant de toucher au style).
+  Deux polices vendorisées (`app/static/vendor/fonts/`, pas de CDN) :
+  Bricolage Grotesque pour titres/prix/scores (`--f-titre`), Figtree pour le
+  reste (`--f-texte`). Toute taille, tout espacement ≥ 4 px et tout arrondi
+  passent par un jeton (`--t-*`, `--e-*`, `--r-*`), déclarés à l'identique
+  dans style.css et dans la feuille embarquée de pages.py ;
+  tests/test_charte.py refuse le reste. Logo défini une fois dans
+  `seo.marque_svg`, recopié dans index.html.
 - Persona, douleurs, objectifs et modèle économique : docs/PERSONA.md (c'est le
   document qui justifie les choix produit ; le lire avant d'ajouter une feature).
 - Base de données : `data/refuge.db` (gitignorée), surchargeable via
