@@ -303,9 +303,25 @@
   "jour": "2026-11-01",
   "motif": "titre_hors_cible:local commercial"
  },
+ "https://boost-immo.com/biens-vendus/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:nos biens"
+ },
+ "https://boost-immo.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://boost-immo.com/vente/maisons/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:vente de maisons"
+ },
  "https://cabinet-courel.fr/nos-biens-dinvestissement/": {
   "jour": "2026-11-12",
   "motif": "page_catalogue"
+ },
+ "https://cabinet-lebourg.fr/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
  },
  "https://cabinet-lebourg.fr/vente/76-seine-maritime/337-haucourt/5-terrain/4065-une-grange-a-transformer-en-habitation/": {
   "jour": "2026-11-04",
@@ -323,12 +339,28 @@
   "jour": "2026-11-07",
   "motif": "titre_hors_cible:terrain a batir"
  },
+ "https://cabinet-vasse.com/fr/propriete/location+appartement+caen+85697585": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://cabinet-vasse.com/fr/propriete/location+appartement+caen+87168562": {
   "jour": "2026-11-01",
   "motif": "titre_hors_cible:appartement"
  },
  "https://cabinet-vasse.com/fr/propriete/location+appartement+caen+87554715": {
   "jour": "2026-11-07",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://cabinet-vasse.com/fr/propriete/location+maison+montillieres-sur-orne+87493046": {
+  "jour": "2026-11-19",
+  "motif": "location"
+ },
+ "https://cabinet-vasse.com/fr/propriete/vente+appartement+caen+87415466": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://cabinet-vasse.com/fr/propriete/vente+appartement+demouville+87349167": {
+  "jour": "2026-11-19",
   "motif": "titre_hors_cible:appartement"
  },
  "https://centrum-immobilier.fr/biens-renoves/1": {
@@ -1851,6 +1883,10 @@
   "jour": "2026-11-19",
   "motif": "vendu"
  },
+ "https://www.aelion-immobilier.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens a vendre"
+ },
  "https://www.afico.fr/annonce/appt-type-4-tours-sud-avec-balcon-et-park-couvert/": {
   "jour": "2026-11-13",
   "motif": "vendu"
@@ -2193,6 +2229,10 @@
  },
  "https://www.agence-berry-immobilier.fr/vente/1-issoudun/maison/3733-maison-centre-ville": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.agence-berry-immobilier.fr/vente/34-lizeray/maison/3642-maison-de-plain-pied-a-lizeray": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.agence-demonchy.fr/bien_vendus/maison-a-renover-hornoy-le-bourg/": {
@@ -3575,6 +3615,10 @@
   "jour": "2026-11-18",
   "motif": "vendu"
  },
+ "https://www.aude-immo-18.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:51 annonces"
+ },
  "https://www.bagnolesimmo.com/vente/,VA2357": {
   "jour": "2026-11-15",
   "motif": "vendu"
@@ -3667,13 +3711,41 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.bapimmo.fr/vente/entrepot": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:entrepot"
+ },
  "https://www.baudartimmo.fr/../annonces/transaction_____2/vente.html": {
   "jour": "2026-10-30",
   "motif": "titre_hors_cible:a vendre |"
  },
+ "https://www.baudartimmo.fr/annonces/transaction/Vente.html": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.baudartimmo.fr/annonces/transaction/vente.html?manufacturers_id=transaction&language=fr": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.baudartimmo.fr/annonces/transaction/vente.html?manufacturers_id=transaction&page=1&search_id=&sort=0": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.baudartimmo.fr/annonces/transaction/vente.html?manufacturers_id=transaction&page=1&search_id=&sort=PRODUCT_LIST_PRICEa": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.baudartimmo.fr/annonces/transaction/vente.html?manufacturers_id=transaction&page=1&search_id=&sort=PRODUCT_LIST_PRICEd": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
  "https://www.bienchezsoi-immo.com/biens-vendus/1": {
   "jour": "2026-11-15",
   "motif": "vendu"
+ },
+ "https://www.bienchezsoi-immo.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
  },
  "https://www.bienchezsoi-immo.com/vente/10-aube/1-troyes/1-maison/t6/490-troyes-secteur-hopital-maison-pierre-de-taille-130m2-sur-sous-sol-et-4-chambres/": {
   "jour": "2026-10-21",
@@ -3779,6 +3851,10 @@
   "jour": "2026-10-21",
   "motif": "vendu"
  },
+ "https://www.bon-appart.fr/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
  "https://www.bon-appart.fr/vente/54-meurthe-et-moselle/2-homecourt/2-appartement/t3/2374-homecourt/": {
   "jour": "2026-11-04",
   "motif": "titre_hors_cible:appartement"
@@ -3806,6 +3882,10 @@
  "https://www.breville-immobilier.com/biens/vendus/1": {
   "jour": "2026-11-15",
   "motif": "vendu"
+ },
+ "https://www.breville-immobilier.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
  },
  "https://www.breville-immobilier.com/vente/14-calvados/3-trouville-sur-mer/2-appartement/t1/10961-trouville-centre/": {
   "jour": "2026-11-04",
@@ -3858,6 +3938,30 @@
  "https://www.brique-rouge-immobilier.fr/vente/maison/maison-individuelle-semi-plain-pied-parking-garage_33316": {
   "jour": "2026-10-27",
   "motif": "titre_hors_cible:parking"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/chambray-les-tours-37170": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/fondettes-37230": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/la-riche-37520": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/saint-avertin-37550": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/saint-cyr-sur-loire-37540": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
+ },
+ "https://www.brosset-immobilier.fr/achat/maison/tours-37261": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:annonces"
  },
  "https://www.c2s-immo.com/vente/1": {
   "jour": "2026-11-18",
@@ -4043,9 +4147,37 @@
   "jour": "2026-11-07",
   "motif": "vendu"
  },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/fonds-commerce-rouen": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/immobilier-bonsecours": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/immobilier-mesnil-esnard": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/immobilier-mont-saint-aignan": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/immobilier-rouen": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
  "https://www.cabinet-lintot.fr/annonces-immobilieres/maisons": {
   "jour": "2026-11-07",
   "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinet-lintot.fr/annonces-immobilieres/ventes-appartements-rouen": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:biens immobiliers"
+ },
+ "https://www.cabinetquesnee.com/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:53 annonces"
  },
  "https://www.cabinetquesnee.com/vente/452-falaise/maison/t6/879-belle-propriete-6-pieces-epaney/": {
   "jour": "2026-11-15",
@@ -4093,6 +4225,10 @@
  },
  "https://www.cablat-immobilier.com/vente/6-st-menges/maison/t7/1139-maison-st-menges/": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.capimmobilier89.fr/vente/,VM336": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.centrum-immobilier.fr/biens-renoves/1": {
@@ -5879,6 +6015,18 @@
   "jour": "2026-11-17",
   "motif": "vendu"
  },
+ "https://www.de-simencourtimmobilier.fr/vente/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:137 annonces"
+ },
+ "https://www.de-simencourtimmobilier.fr/vente/baie-de-somme/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:23 annonces"
+ },
+ "https://www.de-simencourtimmobilier.fr/vente/maison-villa/1": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:52 annonces"
+ },
  "https://www.delaitreimmobilier.fr/biens/398/mont-saint-aignan-appartement-terrasse-sud-vue-incroyable": {
   "jour": "2026-10-21",
   "motif": "titre_hors_cible:appartement"
@@ -7599,8 +7747,16 @@
   "jour": "2026-11-05",
   "motif": "location"
  },
+ "https://www.immo-ray.com/fr/a/vente/divers/chalonnais/2034/chalon-ssaone-centre-appartement-de-prestige-dans-bel-immeuble-19eme": {
+  "jour": "2026-11-19",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/1982/givry-belle-maison-de-vigneron-en-cote-viticole": {
   "jour": "2026-11-07",
+  "motif": "vendu"
+ },
+ "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2004/proche-givry-agreable-maison-en-cote-chalonnaise": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2010/le-creusot-10-min-belle-demeure-avec-piscine-interieure-sur-1-ha-environ": {
@@ -8067,6 +8223,14 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-5-pieces-le-havre-76620,VM783": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-5-pieces-sainte-adresse-76310,VM1051": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-5-pieces-sainte-adresse-76310,VM660": {
   "jour": "2026-11-15",
   "motif": "vendu"
@@ -8087,6 +8251,14 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-7-pieces-sainte-adresse-76310,VM1017": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-7-pieces-sainte-adresse-76310,VM1115": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-7-pieces-sainte-adresse-76310,VM342": {
   "jour": "2026-11-15",
   "motif": "vendu"
@@ -8103,12 +8275,24 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-ancienne-10-pieces-le-havre-76600,VM1053": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-11-pieces-le-havre-76600,VM974": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-ancienne-4-pieces-le-havre-76620,VM454": {
   "jour": "2026-10-23",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-4-pieces-le-havre-76620,VM781": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-4-pieces-sainte-adresse-76310,VM1099": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-5-pieces-le-havre-76620,VM406": {
@@ -8119,12 +8303,36 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-le-havre-76620,VM793": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-le-havre-76620,VM892": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-le-havre-76620,VM928": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-sainte-adresse-76310,VM1002": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-sainte-adresse-76310,VM1014": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-ancienne-5-pieces-sainte-adresse-76310,VM420": {
   "jour": "2026-11-15",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-5-pieces-sainte-adresse-76310,VM618": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-5-pieces-sainte-adresse-76310,VM896": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-6-pieces-le-havre-76600,VM1545": {
@@ -8139,6 +8347,22 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-ancienne-6-pieces-le-havre-76610,VM847": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-6-pieces-le-havre-76620,VM876": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-6-pieces-le-havre-76620,VM922": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-6-pieces-montivilliers-76290,VM878": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-ancienne-6-pieces-octeville-sur-mer-76930,VM548": {
   "jour": "2026-11-15",
   "motif": "vendu"
@@ -8151,16 +8375,36 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-ancienne-7-pieces-le-havre-76600,VM1043": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-ancienne-7-pieces-le-havre-76600,VM276": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-7-pieces-le-havre-76600,VM812": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-7-pieces-sainte-adresse-76310,VM711": {
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-ancienne-7-pieces-sainte-adresse-76310,VM946": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-7-pieces-sainte-adresse-76310,VM955": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-ancienne-8-pieces-le-havre-76600,VM764": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-ancienne-8-pieces-le-havre-76620,VM1129": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-ancienne-8-pieces-sainte-adresse-76310,VM598": {
@@ -8179,6 +8423,10 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-bourgeoise-10-pieces-sainte-adresse-76310,VM1092": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-bourgeoise-6-pieces-sainte-adresse-76310,VM334": {
   "jour": "2026-11-15",
   "motif": "vendu"
@@ -8195,8 +8443,40 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.immorenard.com/vente/maison-contemporaine-4-pieces-le-havre-76610,VM844": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-5-pieces-octeville-sur-mer-76930,VM784": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-6-pieces-sainte-adresse-76310,VM1095": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
  "https://www.immorenard.com/vente/maison-contemporaine-7-pieces-fontaine-la-mallet-76290,VM703": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-7-pieces-sainte-adresse-76310,VM1065": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-7-pieces-sainte-adresse-76310,VM1167": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-8-pieces-octeville-sur-mer-76930,VM1109": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-8-pieces-octeville-sur-mer-76930,VM874": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-contemporaine-8-pieces-sainte-adresse-76310,VM966": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immorenard.com/vente/maison-individuelle-3-pieces-le-havre-76600,VM722": {
@@ -8209,6 +8489,22 @@
  },
  "https://www.immorenard.com/vente/maison-individuelle-7-pieces-fontaine-la-mallet-76290,VM440": {
   "jour": "2026-11-15",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-manoir-12-pieces-sainte-adresse-76310,VM978": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-mitoyenne-2-cotes-6-pieces-sainte-adresse-76310,VM794": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-traditionnelle-6-pieces-montivilliers-76290,VM804": {
+  "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.immorenard.com/vente/maison-villa-13-pieces-sainte-adresse-76310,VM900": {
+  "jour": "2026-11-19",
   "motif": "vendu"
  },
  "https://www.immoscarponaise.fr/vente/1-dieulouard/maison/4894-maison-dieulouard": {
