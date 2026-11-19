@@ -2741,6 +2741,8 @@
   "densite_hab_km2": 51.2,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 153.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 1,
@@ -2750,9 +2752,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 153.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://abbesses-immo.staticlbi.com/1200xauto/images/biens/1/a70a443667f346280d4c58dba215697a/photo_799db671aafab9680e60a21a538880e1.jpg",
@@ -2842,7 +2842,7 @@
    "https://www.abbesses-immobilier.fr/vente/27-raon-aux-bois/maison/t7/1237-tres-beau-pavillon-soigne-sur-terrain-cloture-avec-dependance/images/modules/partners/vesta.png"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -2899,6 +2899,8 @@
   "densite_hab_km2": 429.9,
   "dpe": "F",
   "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -2908,9 +2910,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 158.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://abbesses-immo.staticlbi.com/1200xauto/images/biens/1/a6e158b39e8904ba1dd2705b3ec32145/photo_ff7e1f1ebeff1aaf553fef5a00640834.jpg",
@@ -3000,7 +3000,7 @@
    "https://www.abbesses-immobilier.fr/vente/4-st-nabord/ferme/t8/1569-grande-ferme-type-f6-gite-4-personnes-sur-1-4-hectare-de-terrain/images/modules/partners/vesta.png"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -3053,7 +3053,7 @@
   "viager": 0,
   "lat": 48.013284,
   "lon": 6.590662,
-  "altitude": 415.0,
+  "altitude": 409.0,
   "densite_hab_km2": 429.9,
   "dpe": "D",
   "risques": {
@@ -3200,7 +3200,7 @@
    "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/maison/t6/1586-jolie-propriete-avec-piscine-dans-quartier-calme/images/modules/partners/vesta.png"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -3325,7 +3325,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -3429,7 +3429,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -3556,7 +3556,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -3656,7 +3656,7 @@
   ],
   "vue_le": "2026-08-22",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -3771,7 +3771,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-08-16",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -3908,7 +3908,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4074,7 +4074,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4195,7 +4195,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4308,7 +4308,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4417,7 +4417,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4508,7 +4508,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4645,7 +4645,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4746,7 +4746,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -4870,6 +4870,124 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
+  "absences": 1,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "abith-a-49fc6b2a4e09",
+  "source": "abith-a",
+  "url": "https://abithea.fr/vente/09-ariege/2596-aleu/1-maison/t6/4447-maison-aleu-6-pieces-180-m/",
+  "titre": "Maison Aleu 6 pièces 180 m²",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 99000,
+  "surface_m2": 180.0,
+  "terrain_m2": 3861.0,
+  "pieces": 6,
+  "commune": "Massat",
+  "code_postal": "09320",
+  "departement": "09",
+  "region": null,
+  "agence": "Abithéa",
+  "agence_url": "https://abithea.fr",
+  "photo": "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021b.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": true,
+   "recuperation_pluie": false,
+   "bois": true,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": true,
+   "serre": false,
+   "grange_dependance": true,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 1,
+  "lat": 42.8846,
+  "lon": 1.358579,
+  "altitude": 648.0,
+  "densite_hab_km2": 16.6,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 142.1,
+   "nucleaire_nom": "Golfech"
+  },
+  "photos": [
+   "https://abithea.staticlbi.com/1200xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/original/37554021a.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021a.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021b.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021c.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021d.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021e.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021f.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021g.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021h.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021i.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021j.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021k.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021l.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021m.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021n.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021o.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021p.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021q.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021a.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021b.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021c.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021d.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021e.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021f.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021g.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021h.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021i.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021j.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021k.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021l.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021m.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021n.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021o.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021p.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021q.jpg",
+   "https://abithea.staticlbi.com/800xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_86585e127937b8775a8d51c425b5e165.jpg",
+   "https://abithea.staticlbi.com/800xauto/images/biens/4/55b8f24a7d0ebda932aa20b264ff74f3/photo_ca52c28694b855876d9afb2c15628002.png",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021a.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021b.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021c.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021d.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021e.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021f.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021g.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021h.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021i.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021j.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021k.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021l.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021m.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021n.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021o.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021p.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/16/fc3944b84662f40db72a203c4dc2dd07/37554021q.jpg",
+   "https://abithea.fr/vente/09-ariege/2596-aleu/1-maison/t6/4447-maison-aleu-6-pieces-180-m/images/modules/partners/interkab.png"
+  ],
+  "vue_le": "2026-11-19",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -4977,7 +5095,7 @@
   ],
   "vue_le": "2026-08-18",
   "revue_le": "2026-08-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5104,7 +5222,7 @@
   ],
   "vue_le": "2026-10-24",
   "revue_le": "2026-10-24",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5207,7 +5325,7 @@
   ],
   "vue_le": "2026-11-03",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5328,7 +5446,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5426,7 +5544,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5563,7 +5681,7 @@
   ],
   "vue_le": "2026-10-22",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5654,7 +5772,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5769,7 +5887,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5878,7 +5996,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -5987,7 +6105,7 @@
   ],
   "vue_le": "2026-10-11",
   "revue_le": "2026-10-18",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": 259990,
   "prix_baisse_le": "2026-10-18"
  },
@@ -6090,7 +6208,7 @@
   ],
   "vue_le": "2026-10-24",
   "revue_le": "2026-10-24",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6211,7 +6329,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6345,7 +6463,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6472,7 +6590,7 @@
   ],
   "vue_le": "2026-10-14",
   "revue_le": "2026-10-14",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6584,7 +6702,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6687,7 +6805,7 @@
   ],
   "vue_le": "2026-10-24",
   "revue_le": "2026-10-24",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6821,7 +6939,7 @@
   ],
   "vue_le": "2026-10-11",
   "revue_le": "2026-10-11",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -6912,7 +7030,7 @@
   ],
   "vue_le": "2026-10-14",
   "revue_le": "2026-10-14",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7030,7 +7148,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7167,7 +7285,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7270,7 +7388,7 @@
   ],
   "vue_le": "2026-10-16",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7382,7 +7500,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7492,7 +7610,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7610,7 +7728,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7710,7 +7828,7 @@
   ],
   "vue_le": "2026-10-30",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7837,7 +7955,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-10-07",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -7964,7 +8082,7 @@
   ],
   "vue_le": "2026-11-06",
   "revue_le": "2026-11-06",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8092,7 +8210,7 @@
   ],
   "vue_le": "2026-10-16",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8223,6 +8341,106 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
+  "absences": 1,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "abith-a-e162953d485e",
+  "source": "abith-a",
+  "url": "https://abithea.fr/vente/16-charente/1910-roumazieres-loubert/1-maison/t5/3095-maison-de-ville-de-97-m2-au-centre-de-roumazieres-loubert-5-piece-s-et-terrain/",
+  "titre": "Maison de ville de 97 m2 au centre de Roumazieres-Loubert 5 pièce(s) et terrain",
+  "description": null,
+  "type_bien": "maison",
+  "prix": 97500,
+  "surface_m2": 97.0,
+  "terrain_m2": 575.0,
+  "pieces": 5,
+  "commune": "Terres-de-Haute-Charente",
+  "code_postal": "16270",
+  "departement": "16",
+  "region": null,
+  "agence": "Abithéa",
+  "agence_url": "https://abithea.fr",
+  "photo": "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cf7ec3e935202f8ca642ed6063c746c9.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": true,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 1,
+  "lat": 45.888917,
+  "lon": 0.59267,
+  "altitude": 205.0,
+  "densite_hab_km2": 43.6,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 63.3,
+   "nucleaire_nom": "Civaux"
+  },
+  "photos": [
+   "https://abithea.staticlbi.com/1200xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_86585e127937b8775a8d51c425b5e165.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_86585e127937b8775a8d51c425b5e165.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cf7ec3e935202f8ca642ed6063c746c9.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_06c4f9f4f20cf8f7c3ffda8594332880.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_78c5fbfe4e2d07cf9f0a1fa0dc3c9153.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_20e71c8f6cd4f9f45317d1ec2f5f2b99.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cdf5c93abaf7c5f49efed1e20f9d7060.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_1faa119e5ffab3fc44e5815a9e9336b9.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_bf57e18c8fc53df1be1ec229ae601449.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_6eb2573acc12c3ddb1adb0094ca53ac6.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_d057c1c114f13bdb18dc0e3047071b67.jpg",
+   "https://abithea.staticlbi.com/1600xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_9c8a76fa423247ba04bfaa74cd972582.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_86585e127937b8775a8d51c425b5e165.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cf7ec3e935202f8ca642ed6063c746c9.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_06c4f9f4f20cf8f7c3ffda8594332880.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_78c5fbfe4e2d07cf9f0a1fa0dc3c9153.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_20e71c8f6cd4f9f45317d1ec2f5f2b99.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cdf5c93abaf7c5f49efed1e20f9d7060.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_1faa119e5ffab3fc44e5815a9e9336b9.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_bf57e18c8fc53df1be1ec229ae601449.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_6eb2573acc12c3ddb1adb0094ca53ac6.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_d057c1c114f13bdb18dc0e3047071b67.jpg",
+   "https://abithea.staticlbi.com/980xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_9c8a76fa423247ba04bfaa74cd972582.jpg",
+   "https://abithea.staticlbi.com/800xauto/images/biens/2/5aad13953454e2953fd8fa20c8b47087/photo_e7c1f9e486d6a3e50b48ac105862f2af.jpg",
+   "https://abithea.staticlbi.com/800xauto/images/biens/2/35946659d4d31448d56315b79a99a332/photo_fbba47eb7cca59800b22f20affde0479.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_86585e127937b8775a8d51c425b5e165.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cf7ec3e935202f8ca642ed6063c746c9.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_06c4f9f4f20cf8f7c3ffda8594332880.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_78c5fbfe4e2d07cf9f0a1fa0dc3c9153.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_20e71c8f6cd4f9f45317d1ec2f5f2b99.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_cdf5c93abaf7c5f49efed1e20f9d7060.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_1faa119e5ffab3fc44e5815a9e9336b9.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_bf57e18c8fc53df1be1ec229ae601449.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_6eb2573acc12c3ddb1adb0094ca53ac6.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_d057c1c114f13bdb18dc0e3047071b67.jpg",
+   "https://abithea.staticlbi.com/580xauto/images/biens/2/5f08ee2bfec0551ced8cb0ec260e7f45/photo_9c8a76fa423247ba04bfaa74cd972582.jpg",
+   "https://abithea.fr/vente/16-charente/1910-roumazieres-loubert/1-maison/t5/3095-maison-de-ville-de-97-m2-au-centre-de-roumazieres-loubert-5-piece-s-et-terrain/images/modules/partners/interkab.png"
+  ],
+  "vue_le": "2026-11-19",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -8314,7 +8532,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-10-18",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8436,7 +8654,7 @@
   ],
   "vue_le": "2026-11-13",
   "revue_le": "2026-11-13",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8552,7 +8770,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8640,7 +8858,7 @@
   ],
   "vue_le": "2026-08-16",
   "revue_le": "2026-10-03",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8735,7 +8953,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8856,7 +9074,7 @@
   ],
   "vue_le": "2026-10-14",
   "revue_le": "2026-10-14",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -8935,7 +9153,7 @@
   ],
   "vue_le": "2026-10-07",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -9050,7 +9268,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-30",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -9187,7 +9405,7 @@
   ],
   "vue_le": "2026-10-20",
   "revue_le": "2026-10-20",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -9290,7 +9508,7 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -9346,6 +9564,8 @@
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 70.2,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -9355,9 +9575,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 70.2,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-01-1024x576.jpg",
@@ -9383,20 +9601,20 @@
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-11-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-12-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-13-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-02.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-03.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2023/09/maison-vente-premesques-lom-39832-jl-jd-photo-11.jpg",
    "https://b.tile.openstreetmap.org/14/8325/5509.png",
    "https://c.tile.openstreetmap.org/14/8326/5509.png",
@@ -9418,7 +9636,7 @@
    "https://c.tile.openstreetmap.org/14/8328/5510.png"
   ],
   "vue_le": "2026-09-26",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -9608,10 +9826,12 @@
   "viager": 0,
   "lat": 50.4756092,
   "lon": 3.2464593,
-  "altitude": 34.0,
+  "altitude": 36.0,
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 98.8,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -9621,9 +9841,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 98.8,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2025/09/maison-vente-orchies-orc-38601-ld-photo-01-1024x768.jpg",
@@ -9642,18 +9860,18 @@
    "https://www.abrinor.fr/wp-content/uploads/2025/09/maison-vente-orchies-orc-38601-ld-photo-05-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/09/maison-vente-orchies-orc-38601-ld-photo-06-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/09/maison-vente-orchies-orc-38601-ld-photo-07-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://b.tile.openstreetmap.org/14/8339/5522.png",
    "https://c.tile.openstreetmap.org/14/8340/5522.png",
    "https://a.tile.openstreetmap.org/14/8339/5521.png",
@@ -9674,7 +9892,7 @@
    "https://c.tile.openstreetmap.org/14/8342/5523.png"
   ],
   "vue_le": "2026-10-16",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -10683,10 +10901,12 @@
   "viager": 0,
   "lat": 50.3419501,
   "lon": 3.5223965,
-  "altitude": 51.0,
+  "altitude": 54.0,
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 94.4,
+   "nucleaire_nom": "Chooz",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -10696,27 +10916,25 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 94.4,
-   "nucleaire_nom": "Chooz"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2025/08/maison-vente-valenciennes-val-38491-im-photo-01-1024x768.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/08/maison-vente-valenciennes-val-38491-im-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/08/maison-vente-valenciennes-val-38491-im-photo-01-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/06/abrinor-lille___main_1142_761.webp",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://c.tile.openstreetmap.org/14/8351/5532.png",
    "https://a.tile.openstreetmap.org/14/8352/5532.png",
    "https://b.tile.openstreetmap.org/14/8351/5531.png",
@@ -10737,7 +10955,7 @@
    "https://a.tile.openstreetmap.org/14/8354/5533.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -11278,6 +11496,8 @@
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 73.2,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -11287,9 +11507,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 73.2,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2025/03/maison-vente-lille-lom-39904-jd-photo-01-1024x768.jpg",
@@ -11310,18 +11528,18 @@
    "https://www.abrinor.fr/wp-content/uploads/2025/03/maison-vente-lille-lom-39904-jd-photo-06-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/03/maison-vente-lille-lom-39904-jd-photo-07-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/03/maison-vente-lille-lom-39904-jd-photo-08-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://b.tile.openstreetmap.org/14/8327/5510.png",
    "https://c.tile.openstreetmap.org/14/8328/5510.png",
    "https://a.tile.openstreetmap.org/14/8327/5509.png",
@@ -11342,7 +11560,7 @@
    "https://c.tile.openstreetmap.org/14/8330/5511.png"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -11987,19 +12205,19 @@
    "https://www.abrinor.fr/wp-content/uploads/2021/11/maison-vente-roubaix-rbx-38800-js-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2021/11/maison-vente-roubaix-rbx-38800-js-photo-02-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2021/11/maison-vente-roubaix-rbx-38800-js-photo-03-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/06/abrinor-roubaix___main_1244_1229.webp",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://b.tile.openstreetmap.org/14/8336/5507.png",
    "https://c.tile.openstreetmap.org/14/8337/5507.png",
    "https://a.tile.openstreetmap.org/14/8336/5506.png",
@@ -12020,7 +12238,7 @@
    "https://c.tile.openstreetmap.org/14/8339/5508.png"
   ],
   "vue_le": "2026-09-26",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -12073,10 +12291,12 @@
   "viager": 0,
   "lat": 50.6301849,
   "lon": 3.0764896,
-  "altitude": 32.0,
+  "altitude": 30.0,
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 79.1,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -12086,9 +12306,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 79.1,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2025/10/maison-vente-lille-stm-38859-jh-photo-01-1024x768.jpg",
@@ -12106,19 +12324,19 @@
    "https://www.abrinor.fr/wp-content/uploads/2025/10/maison-vente-lille-stm-38859-jh-photo-05-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/10/maison-vente-lille-stm-38859-jh-photo-06-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/10/maison-vente-lille-stm-38859-jh-photo-07-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/06/Photo-1.png",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://a.tile.openstreetmap.org/14/8331/5511.png",
    "https://b.tile.openstreetmap.org/14/8332/5511.png",
    "https://c.tile.openstreetmap.org/14/8331/5510.png",
@@ -12139,7 +12357,7 @@
    "https://b.tile.openstreetmap.org/14/8334/5512.png"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -12196,6 +12414,8 @@
   "densite_hab_km2": null,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 98.6,
+   "nucleaire_nom": "Gravelines",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -12205,9 +12425,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 98.6,
-   "nucleaire_nom": "Gravelines"
+   "source": "georisques"
   },
   "photos": [
    "https://www.abrinor.fr/wp-content/uploads/2025/11/maison-vente-mouchin-cys-38992-th-photo-01-1024x576.jpg",
@@ -12241,19 +12459,19 @@
    "https://www.abrinor.fr/wp-content/uploads/2025/11/maison-vente-mouchin-cys-38992-th-photo-13-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/11/maison-vente-mouchin-cys-38992-th-photo-14-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2025/11/maison-vente-mouchin-cys-38992-th-photo-15-640x480.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-640x480.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/06/abrinor-cysoing___main_1185_889.webp",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-armentieres-arm-40308-lb-photo-01.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40306-ec-photo-01-1.jpg",
    "https://a.tile.openstreetmap.org/14/8341/5519.png",
    "https://b.tile.openstreetmap.org/14/8342/5519.png",
    "https://c.tile.openstreetmap.org/14/8341/5518.png",
@@ -12274,7 +12492,7 @@
    "https://b.tile.openstreetmap.org/14/8344/5520.png"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -12404,7 +12622,7 @@
   "description": null,
   "type_bien": "maison",
   "prix": null,
-  "surface_m2": 210.0,
+  "surface_m2": 48.0,
   "terrain_m2": 1286.0,
   "pieces": 8,
   "commune": "Les Ventes-de-Bourse",
@@ -12413,7 +12631,7 @@
   "region": "Normandie",
   "agence": "Abrinor Immobilier",
   "agence_url": "https://abrinor.fr",
-  "photo": "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01-900x604.jpg",
+  "photo": "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01-900x604.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -12445,9 +12663,11 @@
   "lat": 48.509234,
   "lon": 0.279556,
   "altitude": 148.0,
-  "densite_hab_km2": null,
+  "densite_hab_km2": 7.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 130.4,
+   "nucleaire_nom": "Saint-Laurent-des-Eaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -12457,24 +12677,22 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 130.4,
-   "nucleaire_nom": "Saint-Laurent-des-Eaux"
+   "source": "georisques"
   },
   "photos": [
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-00-av-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40313-pj-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-roubaix-rbx-40237-pj-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-ronchin-ft-40328-db-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40329-tg-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-la-chapelle-d-armentieres-arm-40326-lb-photo-01-1-900x604.jpg",
    "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40324-lp-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-lomme-lom-40314-lp-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-lomme-lom-40212-jd-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wattignies-watt-40312-cp-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-roubaix-rbx-40318-jsy-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-cysoing-cys-40321-th-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-wervicq-sud-lin-40218-lm-photo-01-900x604.jpg",
-   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-villeneuve-d-ascq-vda-40315-dv-photo-01-1-900x604.jpg"
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/appartement-vente-marcq-en-baroeul-mb-40330-sas-photo-01-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-faches-thumesnil-ft-40322-db-photo-01-1-900x604.jpg",
+   "https://www.abrinor.fr/wp-content/uploads/2026/11/maison-vente-tourcoing-tcg-40305-pb-photo-01-900x604.jpg"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -18560,7 +18778,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.013284,
   "lon": 6.590662,
   "altitude": 415.0,
@@ -18573,9 +18791,7 @@
   "photos": [
    "https://www.accord-immobilier.net/photo/accord24294p193999hlfwr.jpg",
    "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23271p197995hmgbp.jpg&w=1900&h=1080&zc=1?v=669699",
-   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord6935p61901bjmyx.jpg&w=1900&h=1080&zc=1?v=669699",
    "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23271p197995hmgbp.jpg&w=420&h=300&zc=1",
-   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord6935p61901bjmyx.jpg&w=420&h=300&zc=1",
    "https://www.accord-immobilier.net/pic/880x660/accord24294p193999hlfwr.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24294p194002hhixn.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24294p194000pfeyb.jpg?v=165132132",
@@ -18583,15 +18799,15 @@
    "https://www.accord-immobilier.net/pic/880x660/accord24294p194004jzguw.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24294p194005qwnqh.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24294p194006jhgwa.jpg?v=165132132",
-   "https://www.accord-immobilier.net/pic/420x315/accord224474p203871nrugg.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord4153p203575blovg.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord23886p174627mhhht.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
    "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
    "https://www.accord-immobilier.net/custom/2016//header.png?669699",
    "https://www.accord-immobilier.net/antispam/getimg.php"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-10-28",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -19142,10 +19358,12 @@
   "viager": 0,
   "lat": 48.013284,
   "lon": 6.590662,
-  "altitude": 409.0,
+  "altitude": 415.0,
   "densite_hab_km2": 429.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -19155,9 +19373,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 158.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.accord-immobilier.net/photo/accord24311p193776pjzyy.jpg",
@@ -19168,15 +19384,15 @@
    "https://www.accord-immobilier.net/pic/880x660/accord24311p193769litse.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24311p193683.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24311p193684.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
    "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24497p204943.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24496p204717.jpg",
    "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
    "https://www.accord-immobilier.net/custom/2016//header.png?669699",
    "https://www.accord-immobilier.net/antispam/getimg.php"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -19285,7 +19501,7 @@
   "region": "Grand Est",
   "agence": "Accord Immobilier",
   "agence_url": "https://accord-immobilier.net",
-  "photo": "https://www.accord-immobilier.net/photo/accord23323p145874uqemp.jpg",
+  "photo": "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord24137p186099.jpg&w=1900&h=1080&zc=1?v=669699",
   "features": {
    "cave": false,
    "puits": false,
@@ -20024,6 +20240,83 @@
   "prix_baisse_le": ""
  },
  {
+  "id": "accord-immobilier-792b8a63540b",
+  "source": "accord-immobilier",
+  "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/vecoux/bien/24449/exclu-vecoux-centre-ferme-agrave-r-eacutenover-en-totalit-eacute-.html",
+  "titre": "Exclu VECOUX Centre Ferme à rénover en totalité.",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 100.0,
+  "terrain_m2": 1100.0,
+  "pieces": 8,
+  "commune": "Remiremont",
+  "code_postal": "88200",
+  "departement": "88",
+  "region": "Grand Est",
+  "agence": "Accord Immobilier",
+  "agence_url": "https://accord-immobilier.net",
+  "photo": "https://www.accord-immobilier.net/pic/880x660/accord24449p202562pjcnv.jpg?v=165132132",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": true,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": false,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "travaux",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
+  "lat": 48.013284,
+  "lon": 6.590662,
+  "altitude": 409.0,
+  "densite_hab_km2": 429.9,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom"
+  },
+  "photos": [
+   "https://www.accord-immobilier.net/photo/accord24449p202562pjcnv.jpg",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202562pjcnv.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202563vorzl.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202565ltfsi.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202566lfmtf.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202568fqtrv.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202570fmwri.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24449p202571ixpoe.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
+   "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
+   "https://www.accord-immobilier.net/custom/2016//header.png?669699",
+   "https://www.accord-immobilier.net/antispam/getimg.php"
+  ],
+  "vue_le": "2026-11-19",
+  "revue_le": "2026-11-19",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
   "id": "accord-immobilier-7b3bce66bc33",
   "source": "accord-immobilier",
   "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/24412/exclu-hadol-centre-immeuble-r-eacutecent-agrave-usage-actuel-de-plateaux-sur-3-niveaux-avec-terrasses-expos-eacutee-est-sud-ouest.html",
@@ -20596,7 +20889,7 @@
   "type_bien": "maison",
   "prix": null,
   "surface_m2": 120.0,
-  "terrain_m2": 200.0,
+  "terrain_m2": null,
   "pieces": 6,
   "commune": "Remiremont",
   "code_postal": "88200",
@@ -20632,13 +20925,15 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.013284,
   "lon": 6.590662,
-  "altitude": 409.0,
+  "altitude": 415.0,
   "densite_hab_km2": 429.9,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -20648,9 +20943,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 158.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.accord-immobilier.net/photo/accord23271p197995hmgbp.jpg",
@@ -20663,15 +20956,15 @@
    "https://www.accord-immobilier.net/pic/880x660/accord23271p198001jtfyt.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord23271p198002ulswz.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord23271p198003htdbb.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
    "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24497p204943.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24496p204717.jpg",
    "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
    "https://www.accord-immobilier.net/custom/2016//header.png?669699",
    "https://www.accord-immobilier.net/antispam/getimg.php"
   ],
   "vue_le": "2026-10-22",
-  "revue_le": "2026-11-13",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -20728,6 +21021,8 @@
   "densite_hab_km2": 429.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -20737,9 +21032,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 158.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.accord-immobilier.net/photo/accord24402p199860sdzob.jpg",
@@ -20750,15 +21043,15 @@
    "https://www.accord-immobilier.net/pic/880x660/accord24402p204977jjtgn.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24402p204978latic.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord24402p204979ebvom.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
    "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24497p204943.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24496p204717.jpg",
    "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
    "https://www.accord-immobilier.net/custom/2016//header.png?669699",
    "https://www.accord-immobilier.net/antispam/getimg.php"
   ],
   "vue_le": "2026-10-26",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -21028,7 +21321,7 @@
   "region": "Grand Est",
   "agence": "Accord Immobilier",
   "agence_url": "https://accord-immobilier.net",
-  "photo": "https://www.accord-immobilier.net/photo/accord23323p145874uqemp.jpg",
+  "photo": null,
   "features": {
    "cave": false,
    "puits": false,
@@ -21095,6 +21388,83 @@
   ],
   "vue_le": "2026-11-10",
   "revue_le": "2026-11-10",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "accord-immobilier-bea215221d53",
+  "source": "accord-immobilier",
+  "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/saint-etienne-les-remiremont/bien/24447/exclu-saint-etienne-les-remiremont-maison-individuelle-.html",
+  "titre": "Exclu SAINT ETIENNE LES REMIREMONT : Maison individuelle",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 117.0,
+  "terrain_m2": 1000.0,
+  "pieces": 7,
+  "commune": "Remiremont",
+  "code_postal": "88200",
+  "departement": "88",
+  "region": "Grand Est",
+  "agence": "Accord Immobilier",
+  "agence_url": "https://accord-immobilier.net",
+  "photo": "https://www.accord-immobilier.net/photo/accord24447p202940dcpdr.jpg",
+  "features": {
+   "cave": true,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": true,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": true,
+   "grange_dependance": false,
+   "atelier": true,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
+  "lat": 48.013284,
+  "lon": 6.590662,
+  "altitude": 409.0,
+  "densite_hab_km2": 429.9,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom"
+  },
+  "photos": [
+   "https://www.accord-immobilier.net/photo/accord24447p202940dcpdr.jpg",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202940dcpdr.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202938ibfwf.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202934nxuhw.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202910pjntl.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202912aiysi.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202920agojs.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord24447p202923kcwte.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
+   "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
+   "https://www.accord-immobilier.net/custom/2016//header.png?669699",
+   "https://www.accord-immobilier.net/antispam/getimg.php"
+  ],
+  "vue_le": "2026-11-19",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -21702,7 +22072,7 @@
   "region": "Grand Est",
   "agence": "Accord Immobilier",
   "agence_url": "https://accord-immobilier.net",
-  "photo": "https://www.accord-immobilier.net/pic/880x660/accord224474p203871nrugg.jpg?v=165132132",
+  "photo": "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23909p175883qlgtd.jpg&w=1900&h=1080&zc=1?v=669699",
   "features": {
    "cave": false,
    "puits": false,
@@ -21730,13 +22100,15 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 48.013284,
   "lon": 6.590662,
   "altitude": 409.0,
   "densite_hab_km2": 429.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -21746,9 +22118,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 158.4,
-   "nucleaire_nom": "Cattenom"
+   "source": "georisques"
   },
   "photos": [
    "https://www.accord-immobilier.net/photo/accord224474p203871nrugg.jpg",
@@ -21761,15 +22131,15 @@
    "https://www.accord-immobilier.net/pic/880x660/accord224474p203930goryu.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord224474p203922jriup.jpg?v=165132132",
    "https://www.accord-immobilier.net/pic/880x660/accord224474p203914oqwtn.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
    "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24497p204943.jpg",
-   "https://www.accord-immobilier.net/pic/420x315/accord24496p204717.jpg",
    "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
    "https://www.accord-immobilier.net/custom/2016//header.png?669699",
    "https://www.accord-immobilier.net/antispam/getimg.php"
   ],
   "vue_le": "2026-10-28",
-  "revue_le": "2026-11-13",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -22171,6 +22541,86 @@
   ],
   "vue_le": "2026-10-24",
   "revue_le": "2026-10-24",
+  "absences": 0,
+  "prix_precedent": null,
+  "prix_baisse_le": ""
+ },
+ {
+  "id": "accord-immobilier-fbda90f704dd",
+  "source": "accord-immobilier",
+  "url": "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/23323/remiremont-charmant-f2-avec-ascenseur-lou-eacute-394-euro-mois.html",
+  "titre": "REMIREMONT -Charmant F2 avec ascenseur, loué 394 €/mois.",
+  "description": null,
+  "type_bien": "maison",
+  "prix": null,
+  "surface_m2": 46.0,
+  "terrain_m2": null,
+  "pieces": 2,
+  "commune": "Remiremont",
+  "code_postal": "88200",
+  "departement": "88",
+  "region": "Grand Est",
+  "agence": "Accord Immobilier",
+  "agence_url": "https://accord-immobilier.net",
+  "photo": "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23631p162885mhvfm.jpg&w=1900&h=1080&zc=1?v=669699",
+  "features": {
+   "cave": false,
+   "puits": false,
+   "eau_proximite": false,
+   "recuperation_pluie": false,
+   "bois": false,
+   "poele_de_masse": false,
+   "solaire": false,
+   "verger_potager": false,
+   "serre": true,
+   "grange_dependance": false,
+   "atelier": false,
+   "troglodyte": false,
+   "source": false,
+   "prairie": false,
+   "poulailler": false,
+   "vigne": false,
+   "ruches": false,
+   "pierre": false,
+   "pompe_chaleur": false,
+   "assainissement": false,
+   "isolement": false,
+   "autonomie": false
+  },
+  "etat_declare": "inconnu",
+  "vendu": false,
+  "plusieurs_biens": false,
+  "viager": 0,
+  "lat": 48.013284,
+  "lon": 6.590662,
+  "altitude": 415.0,
+  "densite_hab_km2": 429.9,
+  "dpe": null,
+  "risques": {
+   "nucleaire_km": 158.4,
+   "nucleaire_nom": "Cattenom"
+  },
+  "photos": [
+   "https://www.accord-immobilier.net/photo/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23631p162885mhvfm.jpg&w=1900&h=1080&zc=1?v=669699",
+   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord24426p201474wossc.jpg&w=1900&h=1080&zc=1?v=669699",
+   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord23631p162885mhvfm.jpg&w=420&h=300&zc=1",
+   "https://www.accord-immobilier.net/phpThumb/phpThumb.php?src=../photo/accord24426p201474wossc.jpg&w=420&h=300&zc=1",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145874uqemp.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145878zedxr.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145868rmfvb.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145872jarus.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145875odirv.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/880x660/accord23323p145876vvgkq.jpg?v=165132132",
+   "https://www.accord-immobilier.net/pic/420x315/accord23323p145874uqemp.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord24363p196633wgsbt.jpg",
+   "https://www.accord-immobilier.net/pic/420x315/accord224478p204004.jpg",
+   "https://www.accord-immobilier.net/custom/2016/sn/googleplus.png",
+   "https://www.accord-immobilier.net/custom/2016//header.png?669699",
+   "https://www.accord-immobilier.net/antispam/getimg.php"
+  ],
+  "vue_le": "2026-11-19",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -24744,7 +25194,7 @@
   ],
   "vue_le": "2026-10-14",
   "revue_le": "2026-11-15",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -24756,9 +25206,9 @@
   "description": null,
   "type_bien": "maison",
   "prix": 499000,
-  "surface_m2": 320.0,
+  "surface_m2": 191.0,
   "terrain_m2": 574.0,
-  "pieces": null,
+  "pieces": 3,
   "commune": "Tours",
   "code_postal": "37000",
   "departement": "37",
@@ -24800,6 +25250,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -24809,9 +25261,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3723-770x386.jpg",
@@ -24825,9 +25275,9 @@
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3733-770x386.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3735-770x386.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3729-770x386.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/2026/05/IMG_6519-246x162.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4192-246x162.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/2025/03/IMG_5335-246x162.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/2026/10/IMG_6732-new-246x162.png",
+   "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_3571-246x162.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3085-246x162.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3708-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3717-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3711-82x60.jpg",
@@ -24840,11 +25290,11 @@
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3729-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3723-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/11/IMG_3701-scaled.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/nc.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/dd.jpg"
+   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/cc.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/encours.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -24898,9 +25348,11 @@
   "lat": 47.395476,
   "lon": 0.695848,
   "altitude": 57.0,
-  "densite_hab_km2": null,
+  "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -24910,9 +25362,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4164-770x386.jpg",
@@ -24922,9 +25372,9 @@
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4653-770x386.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4652-770x386.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_3486-770x386.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/2025/05/IMG_3682-246x162.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/2023/02/berthault25-246x162.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2023/01/IMG_43361-246x162.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/2022/09/REDURE16-246x162.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/2022/06/DAVIDJJAURES3-246x162.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4192-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4199-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4210-82x60.jpg",
@@ -24934,12 +25384,11 @@
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4164-82x60.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/2025/04/IMG_4192.jpg",
    "https://www.action-vente37.fr/wp-content/uploads/dep-ges/dd.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/aa.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/cd.jpg",
-   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/db.jpg"
+   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/db.jpg",
+   "https://www.action-vente37.fr/wp-content/uploads/dep-ges/cc.jpg"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -24955,8 +25404,8 @@
   "surface_m2": 138.74,
   "terrain_m2": 1600.0,
   "pieces": 5,
-  "commune": "Neuvy-Saint-Sépulchre",
-  "code_postal": "36230",
+  "commune": "Châteauroux",
+  "code_postal": "36000",
   "departement": "36",
   "region": "Centre-Val de Loire",
   "agence": "AdressImmo",
@@ -24990,12 +25439,14 @@
   "vendu": false,
   "plusieurs_biens": false,
   "viager": 0,
-  "lat": 46.587624,
-  "lon": 1.819564,
-  "altitude": 216.0,
-  "densite_hab_km2": 45.7,
+  "lat": 46.804353,
+  "lon": 1.692994,
+  "altitude": 158.0,
+  "densite_hab_km2": 1680.8,
   "dpe": "E",
   "risques": {
+   "nucleaire_km": 90.4,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -25005,9 +25456,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 90.4,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM272/vente-maison-neuvy-st-sepulchre-1789749249-VM272_23_original.jpg",
@@ -25019,13 +25468,13 @@
    "https://img.netty.immo/product/company57150fls/VM654/vente-maison-neuvy-st-sepulchre-1785013564-VM654_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM360/vente-maison-neuvy-st-sepulchre-1780503997-VM360_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM626/vente-maison-neuvy-st-sepulchre-1786638650-VM626_20_original.jpg",
+   "https://img.netty.immo/product/company57150fls/VM816/vente-maison-chateauroux-1794850664-VM816_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM810/vente-maison-le-poinconnet-1794591504-VM810_9_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM806/vente-maison-deols-1794159448-VM806_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM800/vente-maison-st-gaultier-1793813872-VM800_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM798/vente-maison-argy-1793468231-VM798_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM794/vente-maison-le-poinconnet-1794677897-VM794_8_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM792/vente-maison-chateauroux-1793295490-VM792_1_original.jpg",
-   "https://img.netty.immo/product/company57150fls/VM784/vente-maison-issoudun-1792773388-VM784_1_original.jpg",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.webp",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.png",
    "https://img.netty.immo/company57150fls/assets/6915d77a1775827987@320x320.webp",
@@ -25034,7 +25483,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -25420,6 +25869,8 @@
   "densite_hab_km2": 1680.8,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -25429,9 +25880,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM300/vente-maison-st-aout-1780503826-VM300_2_original.jpg",
@@ -25439,6 +25888,7 @@
    "https://img.netty.immo/product/company57150fls/VM300/vente-maison-st-aout-1780503826-VM300_3_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM300/vente-maison-st-aout-1780503827-VM300_4_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM300/vente-maison-st-aout-1780503827-VM300_5_original.jpg",
+   "https://img.netty.immo/product/company57150fls/VM816/vente-maison-chateauroux-1794850664-VM816_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM810/vente-maison-le-poinconnet-1794591504-VM810_9_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM808/vente-maison-buzancais-1794332222-VM808_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM806/vente-maison-deols-1794159448-VM806_1_original.jpg",
@@ -25448,7 +25898,6 @@
    "https://img.netty.immo/product/company57150fls/VM780/vente-maison-le-poinconnet-1792643639-VM780_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM774/vente-maison-st-maur-1793381960-VM774_15_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM770/vente-maison-chateauroux-1792168537-VM770_10_original.jpg",
-   "https://img.netty.immo/product/company57150fls/VM766/vente-maison-ardentes-1791650048-VM766_9_original.jpg",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.webp",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.png",
    "https://img.netty.immo/company57150fls/assets/6915d77a1775827987@320x320.webp",
@@ -25457,7 +25906,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -25514,6 +25963,8 @@
   "densite_hab_km2": 1680.8,
   "dpe": "F",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -25523,9 +25974,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM286/vente-maison-chateauroux-1791217970-VM286_12_original.jpg",
@@ -25534,6 +25983,7 @@
    "https://img.netty.immo/product/company57150fls/VM286/vente-maison-chateauroux-1791217971-VM286_14_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM286/vente-maison-chateauroux-1791217972-VM286_15_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM286/vente-maison-chateauroux-1791217972-VM286_16_original.jpg",
+   "https://img.netty.immo/product/company57150fls/VM816/vente-maison-chateauroux-1794850664-VM816_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM792/vente-maison-chateauroux-1793295490-VM792_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM772/vente-maison-chateauroux-1793641126-VM772_8_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM758/vente-maison-chateauroux-1794591490-VM758_6_original.jpg",
@@ -25543,7 +25993,6 @@
    "https://img.netty.immo/product/company57150fls/VM594/vente-maison-chateauroux-1790267576-VM594_17_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM570/vente-maison-chateauroux-1781432522-VM570_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM518/vente-maison-chateauroux-1780504475-VM518_1_original.jpg",
-   "https://img.netty.immo/product/company57150fls/VM498/vente-maison-chateauroux-1780504413-VM498_1_original.jpg",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.webp",
    "https://img.netty.immo/company57150fls/assets/56c632641772441416@1280x312.png",
    "https://img.netty.immo/company57150fls/assets/6915d77a1775827987@320x320.webp",
@@ -25552,7 +26001,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -25750,6 +26199,8 @@
   "densite_hab_km2": 1680.8,
   "dpe": "G",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -25759,9 +26210,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM270/vente-maison-cluis-1780494845-VM270_1_original.jpg",
@@ -25778,7 +26227,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -25835,6 +26284,8 @@
   "densite_hab_km2": 1680.8,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -25844,9 +26295,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM298/vente-maison-neuvy-pailloux-1780494938-VM298_1_original.jpg",
@@ -25855,8 +26304,8 @@
    "https://img.netty.immo/product/company57150fls/VM298/vente-maison-neuvy-pailloux-1780494939-VM298_3_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM298/vente-maison-neuvy-pailloux-1780494939-VM298_4_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM298/vente-maison-neuvy-pailloux-1780494940-VM298_5_original.jpg",
-   "https://img.netty.immo/product/company57150fls/VM748/vente-maison-le-poinconnet-1791304434-VM748_8_original.jpg",
-   "https://img.netty.immo/product/company57150fls/VM738/vente-maison-issoudun-1790699632-VM738_12_original.jpg",
+   "https://img.netty.immo/product/company57150fls/VM748/vente-maison-le-poinconnet-1795023571-VM748_15_original.jpg",
+   "https://img.netty.immo/product/company57150fls/VM738/vente-maison-issoudun-1795023564-VM738_23_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM688/vente-maison-diors-1793641134-VM688_6_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM642/vente-maison-azay-le-ferron-1784651247-VM642_1_original.jpg",
    "https://img.netty.immo/product/company57150fls/VM640/vente-maison-valencay-1784305573-VM640_1_original.jpg",
@@ -25873,7 +26322,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -25927,9 +26376,11 @@
   "lat": 46.804353,
   "lon": 1.692994,
   "altitude": 158.0,
-  "densite_hab_km2": null,
+  "densite_hab_km2": 1680.8,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -25939,9 +26390,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM294/vente-maison-reuilly-1780494930-VM294_1_original.jpg",
@@ -25957,7 +26406,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26163,7 +26612,7 @@
    "poulailler": false,
    "vigne": false,
    "ruches": false,
-   "pierre": true,
+   "pierre": false,
    "pompe_chaleur": false,
    "assainissement": false,
    "isolement": false,
@@ -26179,6 +26628,8 @@
   "densite_hab_km2": 128.5,
   "dpe": "G",
   "risques": {
+   "nucleaire_km": 88.3,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -26188,9 +26639,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.3,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM276/vente-maison-arthon-1780494875-VM276_1_original.jpg",
@@ -26216,7 +26665,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26357,10 +26806,12 @@
   "viager": 0,
   "lat": 46.804353,
   "lon": 1.692994,
-  "altitude": 158.0,
+  "altitude": 156.0,
   "densite_hab_km2": 1680.8,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 88.2,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -26370,9 +26821,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 88.2,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/product/company57150fls/VM274/vente-maison-mirecourt-1780494859-VM274_1_original.jpg",
@@ -26389,7 +26838,7 @@
    "https://img.netty.immo/company57150fls/assets/b4c0af841775827968@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26507,10 +26956,12 @@
   "viager": 0,
   "lat": 50.512202,
   "lon": 1.603514,
-  "altitude": 17.0,
+  "altitude": 14.0,
   "densite_hab_km2": 276.0,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 65.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -26520,9 +26971,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company53776ild/2/VM11232/maison-villa-6-pieces-le-touquet-paris-plage-62520-1791889651-VM11232_81_original.jpg",
@@ -26535,7 +26984,7 @@
    "https://img.netty.immo/company53776ild/assets/9bdff9f61762249317@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26588,10 +27037,12 @@
   "viager": 0,
   "lat": 50.512202,
   "lon": 1.603514,
-  "altitude": 14.0,
+  "altitude": 17.0,
   "densite_hab_km2": 276.0,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 65.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -26601,9 +27052,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company53776ild/2/VM11161/maison-mitoyenne-1-cote-5-pieces-cucq-62780-1778417168-VM11161_14_original.jpg",
@@ -26626,7 +27075,7 @@
    "https://img.netty.immo/company53776ild/assets/9bdff9f61762249317@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26683,6 +27132,8 @@
   "densite_hab_km2": 276.0,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 65.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -26692,9 +27143,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company53776ild/2/VM11204/maison-villa-3-pieces-le-touquet-paris-plage-62520-1786363360-VM11204_31_original.jpg",
@@ -26717,7 +27166,7 @@
    "https://img.netty.immo/company53776ild/assets/9bdff9f61762249317@320x320.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -26770,10 +27219,12 @@
   "viager": 0,
   "lat": 50.512202,
   "lon": 1.603514,
-  "altitude": 17.0,
+  "altitude": 14.0,
   "densite_hab_km2": 276.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.8,
+   "nucleaire_nom": "Penly",
    "inondation_commune": true,
    "argile_commune": false,
    "argile": null,
@@ -26783,9 +27234,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.8,
-   "nucleaire_nom": "Penly"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productw/company53776ild/2/VM11202/maison-chalet-4-pieces-le-touquet-paris-plage-62520-1786440016-VM11202_1_original.jpg",
@@ -26793,6 +27242,7 @@
    "https://img.netty.immo/productw/company53776ild/2/VM11202/maison-chalet-4-pieces-le-touquet-paris-plage-62520-1786440022-VM11202_2_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11202/maison-chalet-4-pieces-le-touquet-paris-plage-62520-1786440048-VM11202_3_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11204/maison-villa-3-pieces-le-touquet-paris-plage-62520-1786363360-VM11204_31_original.jpg",
+   "https://img.netty.immo/productw/company53776ild/2/VM11207/maison-villa-8-pieces-le-touquet-paris-plage-62520-1786889509-VM11207_42_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11242/maison-villa-10-pieces-le-touquet-paris-plage-62520-1794760979-VM11242_18_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11244/maison-villa-4-pieces-le-touquet-paris-plage-62520-1794758479-VM11244_18_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11232/maison-villa-6-pieces-le-touquet-paris-plage-62520-1791889651-VM11232_81_original.jpg",
@@ -26801,14 +27251,13 @@
    "https://img.netty.immo/productw/company53776ild/2/VM11222/maison-individuelle-5-pieces-le-touquet-paris-plage-62520-1789634890-VM11222_5_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM3126/maison-villa-6-pieces-le-touquet-paris-plage-62520-1778136476-VM3126_1_original.jpg",
    "https://img.netty.immo/productw/company53776ild/2/VM11169/maison-villa-5-pieces-le-touquet-paris-plage-62520-1779477758-VM11169_1_original.jpg",
-   "https://img.netty.immo/productw/company53776ild/2/VM11145/maison-villa-5-pieces-le-touquet-paris-plage-62520-1778136476-VM11145_3_original.jpg",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.webp",
    "https://img.netty.immo/netty_media/website_gallery/interieurs/chambre/58vc4tglrol0@2560x2560.jpg",
    "https://img.netty.immo/company53776ild/assets/9bdff9f61762249317@320x320.webp",
    "https://img.netty.immo/company53776ild/assets/9bdff9f61762249317@320x320.png"
   ],
   "vue_le": "2026-10-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -27815,6 +28264,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -27824,9 +28275,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.afico.fr/app/uploads/2026/06/60852437a-1673691.jpg",
@@ -27841,12 +28290,12 @@
    "https://www.afico.fr/app/uploads/2026/06/60852437h-1673691.jpg",
    "https://www.afico.fr/app/uploads/2026/06/60852437i-1673691.jpg",
    "https://www.afico.fr/app/uploads/2026/06/60852437j-1673691.jpg",
-   "https://www.afico.fr/app/uploads/2026/09/61508071a-1816678.jpg",
-   "https://www.afico.fr/app/uploads/2026/09/61473266a-1814078.jpg",
-   "https://www.afico.fr/app/uploads/2026/04/60454038a-1567875.jpg"
+   "https://www.afico.fr/app/uploads/2026/06/60818863a-1663931.jpg",
+   "https://www.afico.fr/app/uploads/2026/03/60223628a-1523492.jpg",
+   "https://www.afico.fr/app/uploads/2026/05/60159253a-1628895.jpg"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 575000,
   "prix_baisse_le": "2026-10-03"
@@ -27868,7 +28317,7 @@
   "region": "Centre-Val de Loire",
   "agence": "Agence Afico",
   "agence_url": "https://afico.fr",
-  "photo": "https://www.afico.fr/app/uploads/2026/09/61502112a-1813766.jpg",
+  "photo": "https://www.afico.fr/app/uploads/2026/09/61502112b-1813766.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -27903,6 +28352,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -27912,9 +28363,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.afico.fr/app/uploads/2026/09/61502112a-1813766.jpg",
@@ -27930,12 +28379,12 @@
    "https://www.afico.fr/app/uploads/2026/09/61502112i-1813766.jpg",
    "https://www.afico.fr/app/uploads/2026/09/61502112j-1813766.jpg",
    "https://www.afico.fr/app/uploads/2026/09/61502112k-1813766.jpg",
-   "https://www.afico.fr/app/uploads/2026/05/60159253a-1628895.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/52621511a-1866299.jpg",
-   "https://www.afico.fr/app/uploads/2026/01/54368454a-1435164.jpg"
+   "https://www.afico.fr/app/uploads/2026/06/60818863a-1663931.jpg",
+   "https://www.afico.fr/app/uploads/2026/11/61729766a-1920752.jpg",
+   "https://www.afico.fr/app/uploads/2026/07/61081752a-1718737.jpg"
   ],
   "vue_le": "2026-09-17",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 214948,
   "prix_baisse_le": "2026-10-28"
@@ -27957,7 +28406,7 @@
   "region": "Centre-Val de Loire",
   "agence": "Agence Afico",
   "agence_url": "https://afico.fr",
-  "photo": "https://www.afico.fr/app/uploads/2026/09/61508071b-1816678.jpg",
+  "photo": "https://www.afico.fr/app/uploads/2026/09/61508071a-1816678.jpg",
   "features": {
    "cave": true,
    "puits": false,
@@ -27992,6 +28441,8 @@
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -28001,9 +28452,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.afico.fr/app/uploads/2026/09/61508071a-1816678.jpg",
@@ -28018,103 +28467,15 @@
    "https://www.afico.fr/app/uploads/2026/09/61508071h-1816678.jpg",
    "https://www.afico.fr/app/uploads/2026/09/61508071i-1816678.jpg",
    "https://www.afico.fr/app/uploads/2026/09/61508071j-1816678.jpg",
+   "https://www.afico.fr/app/uploads/2026/09/61473266a-1814078.jpg",
    "https://www.afico.fr/app/uploads/2026/08/61364262a-1765198.jpg",
-   "https://www.afico.fr/app/uploads/2026/11/55636434a-1896068.jpg",
-   "https://www.afico.fr/app/uploads/2026/04/60454038a-1567875.jpg"
+   "https://www.afico.fr/app/uploads/2026/11/60159363a-1917917.jpg"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
- },
- {
-  "id": "agence-afico-72ec188baff6",
-  "source": "agence-afico",
-  "url": "https://www.afico.fr/annonce/maison-82-5-m2-saint-pierre-des-corps/",
-  "titre": "Maison - 82.5 m2 - Saint Pierre Des Corps - Afico",
-  "description": null,
-  "type_bien": "maison",
-  "prix": 205000,
-  "surface_m2": 82.5,
-  "terrain_m2": 214.0,
-  "pieces": null,
-  "commune": null,
-  "code_postal": "37000",
-  "departement": "37",
-  "region": "Centre-Val de Loire",
-  "agence": "Agence Afico",
-  "agence_url": "https://afico.fr",
-  "photo": "https://www.afico.fr/app/uploads/2026/10/61589312a-1867857.jpg",
-  "features": {
-   "cave": false,
-   "puits": false,
-   "eau_proximite": false,
-   "recuperation_pluie": false,
-   "bois": true,
-   "poele_de_masse": false,
-   "solaire": false,
-   "verger_potager": false,
-   "serre": false,
-   "grange_dependance": false,
-   "atelier": true,
-   "troglodyte": false,
-   "source": false,
-   "prairie": false,
-   "poulailler": false,
-   "vigne": false,
-   "ruches": false,
-   "pierre": true,
-   "pompe_chaleur": false,
-   "assainissement": false,
-   "isolement": false,
-   "autonomie": false
-  },
-  "etat_declare": "sans_travaux",
-  "vendu": false,
-  "plusieurs_biens": false,
-  "viager": null,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
-  "dpe": null,
-  "risques": {
-   "inondation_commune": true,
-   "argile_commune": true,
-   "argile": 2,
-   "feu_foret_commune": false,
-   "seisme_commune": true,
-   "radon_commune": true,
-   "seveso_km": null,
-   "icpe_commune": true,
-   "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
-  },
-  "photos": [
-   "https://www.afico.fr/app/uploads/2026/10/61589312a-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2021/09/afico.png",
-   "https://www.afico.fr/app/uploads/2021/09/afico-2.png",
-   "https://www.afico.fr/app/uploads/2026/10/61589312b-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312c-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312d-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312e-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312f-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312g-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312h-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312i-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61589312j-1867857.jpg",
-   "https://www.afico.fr/app/uploads/2026/09/61521231a-1817290.jpg",
-   "https://www.afico.fr/app/uploads/2026/11/61729766a-1920752.jpg",
-   "https://www.afico.fr/app/uploads/2026/05/57803560a-1615582.jpg"
-  ],
-  "vue_le": "2026-10-24",
-  "revue_le": "2026-11-13",
-  "absences": 1,
-  "prix_precedent": 215000,
-  "prix_baisse_le": "2026-11-13"
  },
  {
   "id": "agence-afico-90b16c96e189",
@@ -28126,7 +28487,7 @@
   "prix": 498500,
   "surface_m2": 127.0,
   "terrain_m2": 125.0,
-  "pieces": 6,
+  "pieces": null,
   "commune": "Tours",
   "code_postal": "37000",
   "departement": "37",
@@ -28164,10 +28525,12 @@
   "viager": 0,
   "lat": 47.395476,
   "lon": 0.695848,
-  "altitude": 57.0,
+  "altitude": 59.0,
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -28177,9 +28540,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.afico.fr/app/uploads/2026/08/60597703a-1764387.jpg",
@@ -28195,12 +28556,12 @@
    "https://www.afico.fr/app/uploads/2026/08/60597703i-1764387.jpg",
    "https://www.afico.fr/app/uploads/2026/08/60597703j-1764387.jpg",
    "https://www.afico.fr/app/uploads/2026/08/60597703k-1764387.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/61602579a-1850853.jpg",
-   "https://www.afico.fr/app/uploads/2026/09/61472250a-1813835.jpg",
-   "https://www.afico.fr/app/uploads/2026/05/60696884a-1627288.jpg"
+   "https://www.afico.fr/app/uploads/2026/09/61502112a-1813766.jpg",
+   "https://www.afico.fr/app/uploads/2026/10/61643520a-1871706.jpg",
+   "https://www.afico.fr/app/uploads/2026/05/60159253a-1628895.jpg"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 520000,
   "prix_baisse_le": "2026-10-24"
@@ -28253,10 +28614,12 @@
   "viager": 0,
   "lat": 47.395476,
   "lon": 0.695848,
-  "altitude": 59.0,
+  "altitude": 57.0,
   "densite_hab_km2": 4172.8,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 43.7,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -28266,9 +28629,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 43.7,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.afico.fr/app/uploads/2026/10/59707611a-1877337.jpg",
@@ -28283,12 +28644,12 @@
    "https://www.afico.fr/app/uploads/2026/10/59707611h-1877337.jpg",
    "https://www.afico.fr/app/uploads/2026/10/59707611i-1877337.jpg",
    "https://www.afico.fr/app/uploads/2026/10/59707611j-1877337.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/60963490a-1887957.jpg",
-   "https://www.afico.fr/app/uploads/2026/10/21258938a-1887052.jpg",
-   "https://www.afico.fr/app/uploads/2026/11/60836341a-1900651.jpg"
+   "https://www.afico.fr/app/uploads/2026/10/60684384a-1873490.jpg",
+   "https://www.afico.fr/app/uploads/2026/10/61271054a-1888009.jpg",
+   "https://www.afico.fr/app/uploads/2026/10/60963490a-1887957.jpg"
   ],
   "vue_le": "2026-10-22",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29025,10 +29386,12 @@
   "viager": 0,
   "lat": 49.507345,
   "lon": 0.129995,
-  "altitude": 59.0,
+  "altitude": 58.0,
   "densite_hab_km2": 3140.3,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 53.3,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -29038,9 +29401,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 53.3,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://img.netty.immo/productcw/albert1er/2/VM1181/maison-8-pieces-le-havre-76600-1739617008-VM1181_1_original.jpg",
@@ -29048,7 +29409,7 @@
    "https://img.netty.immo/albert1er/assets/nego/001@979x1280.jpg?cache=1707495214"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29265,6 +29626,8 @@
   "densite_hab_km2": 51.0,
   "dpe": "E",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29274,9 +29637,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/_copie-1_P1757X01.jpg",
@@ -29290,7 +29651,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 199000,
   "prix_baisse_le": "2026-10-30"
@@ -29343,10 +29704,12 @@
   "viager": 0,
   "lat": 48.060334,
   "lon": 3.933529,
-  "altitude": 125.0,
+  "altitude": 119.0,
   "densite_hab_km2": 51.0,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29356,9 +29719,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/P1770X01.jpg",
@@ -29372,7 +29733,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29429,6 +29790,8 @@
   "densite_hab_km2": 51.0,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29438,9 +29801,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/P1783X01.jpg",
@@ -29454,7 +29815,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29507,10 +29868,12 @@
   "viager": 0,
   "lat": 48.060334,
   "lon": 3.933529,
-  "altitude": 119.0,
+  "altitude": 125.0,
   "densite_hab_km2": 51.0,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29520,9 +29883,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/P1780X01.jpg",
@@ -29536,7 +29897,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29589,10 +29950,12 @@
   "viager": 0,
   "lat": 48.060334,
   "lon": 3.933529,
-  "altitude": 125.0,
+  "altitude": 119.0,
   "densite_hab_km2": 51.0,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29602,9 +29965,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/P1779X01.jpg",
@@ -29618,7 +29979,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29675,6 +30036,8 @@
   "densite_hab_km2": 51.0,
   "dpe": "D",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29684,9 +30047,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/_copie-0_P1771X01.jpg",
@@ -29700,7 +30061,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-09-23",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -29757,6 +30118,8 @@
   "densite_hab_km2": 51.0,
   "dpe": "C",
   "risques": {
+   "nucleaire_km": 59.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 3,
@@ -29766,9 +30129,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 59.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://agencearmance.com/uploads/images/annonces/P1790X01.jpg",
@@ -29782,7 +30143,7 @@
    "https://agencearmance.com/media/cache/footer_thumb/assets/images/snpi.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -30008,6 +30369,8 @@
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -30017,9 +30380,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/1601f7c7fa3f4dab742eada5e712ecf8/photo_94600fa6f2dc56d0af2812bb03ba307a.jpg",
@@ -30080,7 +30441,7 @@
    "https://www.agenceblancoise.com/vente/40-prissac/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-11-06",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -30569,6 +30930,8 @@
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -30578,9 +30941,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/ceb8d1a75ee71bf494e09cfbe76117c0/photo_6b28b4ffc0e77d847d98dcc377c4b5fc.jpg",
@@ -30629,7 +30990,7 @@
    "https://www.agenceblancoise.com/vente/40-prissac/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-11-13",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -30682,10 +31043,12 @@
   "viager": 0,
   "lat": 46.580769,
   "lon": 1.496044,
-  "altitude": 172.0,
+  "altitude": 171.0,
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -30695,9 +31058,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/c007c5897f9163612effc973f4ae6809/photo_d8d4ea18fdf28b8ffa746ddd7cd36e4a.jpg",
@@ -30728,7 +31089,7 @@
    "https://www.agenceblancoise.com/vente/134-ceaulmont/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-11-01",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31107,7 +31468,7 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 46.580769,
   "lon": 1.496044,
   "altitude": 172.0,
@@ -31168,7 +31529,7 @@
    "https://www.agenceblancoise.com/vente/3-st-marcel/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-10-22",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31655,6 +32016,8 @@
   "densite_hab_km2": 14.1,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 78.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": false,
    "argile_commune": true,
    "argile": 2,
@@ -31664,9 +32027,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 78.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/2cba0a6fe94a9480799334fb02951289/photo_3b4bbc132167c292ec52e63522bb68ab.jpg",
@@ -31711,7 +32072,7 @@
    "https://www.agenceblancoise.com/vente/128-cuzion/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-10-11",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -31897,6 +32258,8 @@
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -31906,9 +32269,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/a73d10709c02b507f1a8e93e8094fd8b/photo_4d1163050c94f4aac7a87b8b47624692.jpg",
@@ -31975,7 +32336,7 @@
    "https://www.agenceblancoise.com/vente/38-chaillac/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-11-08",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32232,6 +32593,8 @@
   "densite_hab_km2": 163.0,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 65.9,
+   "nucleaire_nom": "Civaux",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -32241,9 +32604,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 65.9,
-   "nucleaire_nom": "Civaux"
+   "source": "georisques"
   },
   "photos": [
    "https://agenceblancoise-new.staticlbi.com/1200xauto/images/biens/1/592367641b2a2ab0553154f130b0cbe8/photo_4ebe6da22dea74f1eef5094ef0c56f0b.jpg",
@@ -32288,7 +32649,7 @@
    "https://www.agenceblancoise.com/vente/1-argenton-sur-creuse/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-11-06",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -32419,7 +32780,7 @@
   "surface_m2": 242.21,
   "terrain_m2": 248.0,
   "pieces": 8,
-  "commune": "Argenton-sur-Creuse",
+  "commune": null,
   "code_postal": "36200",
   "departement": "36",
   "region": "Centre-Val de Loire",
@@ -32454,10 +32815,10 @@
   "vendu": false,
   "plusieurs_biens": false,
   "viager": 0,
-  "lat": 46.580769,
-  "lon": 1.496044,
-  "altitude": 172.0,
-  "densite_hab_km2": 163.0,
+  "lat": null,
+  "lon": null,
+  "altitude": null,
+  "densite_hab_km2": null,
   "dpe": null,
   "risques": {
    "inondation_commune": true,
@@ -32512,7 +32873,7 @@
    "https://www.agenceblancoise.com/vente/1-argenton-sur-creuse/maison/images/modules/partners/amepi.png"
   ],
   "vue_le": "2026-09-11",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 130000,
   "prix_baisse_le": "2026-11-13"
@@ -32729,13 +33090,13 @@
   "id": "agence-creil-immo-466b6c84b840",
   "source": "agence-creil-immo",
   "url": "https://www.creilimmo.fr/vente/60-oise/11-nogent-sur-oise/1-maison/t6/558-pavillon-independant-f6/",
-  "titre": "Maison 6pièce(s) 3chambre(s) 106 m² Nogent-sur-Oise (60180)",
+  "titre": "PAVILLON INDEPENDANT F6",
   "description": null,
-  "type_bien": "maison",
+  "type_bien": "pavillon",
   "prix": 230000,
   "surface_m2": 106.0,
   "terrain_m2": 304.0,
-  "pieces": 6,
+  "pieces": null,
   "commune": "Nogent-sur-Oise",
   "code_postal": "60180",
   "departement": "60",
@@ -32777,6 +33138,8 @@
   "densite_hab_km2": 2958.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 114.2,
+   "nucleaire_nom": "Nogent-sur-Seine",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -32786,9 +33149,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 114.2,
-   "nucleaire_nom": "Nogent-sur-Seine"
+   "source": "georisques"
   },
   "photos": [
    "https://creilimmo.staticlbi.com/600xauto/images/1/70cf88e8922091d6554dfc04b86a63f3/photo_ebe73a0d15a5748307ce03b541f86758.jpg",
@@ -32812,7 +33173,7 @@
    "https://creilimmo.staticlbi.com/580xauto/images/biens/1/70cf88e8922091d6554dfc04b86a63f3/photo_e95d9233062b4e62f55beb73c0c91ed8.jpg"
   ],
   "vue_le": "2026-11-04",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41625,10 +41986,12 @@
   "viager": 0,
   "lat": 49.440051,
   "lon": 1.093912,
-  "altitude": 19.0,
+  "altitude": 24.0,
   "densite_hab_km2": 5502.4,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 57.0,
+   "nucleaire_nom": "Paluel",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -41638,15 +42001,13 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 57.0,
-   "nucleaire_nom": "Paluel"
+   "source": "georisques"
   },
   "photos": [
    "https://doc.logi-pro.net/DataAgence/Gro_98/Offre/1269538/MD_petit_couronne_15_rue_joliot_curie_SCI_JO_mr_NORE_f24e11ce45e74eb19037c0e106d02f70.jpg"
   ],
   "vue_le": "2026-09-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41668,7 +42029,7 @@
   "region": "Centre-Val de Loire",
   "agence": "AJC immobilier",
   "agence_url": "https://ajc-immobilier.com",
-  "photo": "https://www.ajc-immobilier.com/datas/biens/images/48/48_00-2026-10-19-1541.jpg",
+  "photo": "https://www.ajc-immobilier.com/datas/biens/images/48/48_00-2026-11-18-1019.jpg",
   "features": {
    "cave": false,
    "puits": false,
@@ -41703,6 +42064,8 @@
   "densite_hab_km2": 446.7,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 22.8,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 2,
@@ -41712,37 +42075,34 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 22.8,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_00-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_19-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_01-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_02-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_03-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_04-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_05-2026-10-19-1541.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_06-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_07-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_08-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_09-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_10-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_11-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_12-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_13-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_14-2026-10-19-1542.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_00-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_18-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_01-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_02-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_03-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_04-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_05-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_06-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_07-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_08-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_09-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_10-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_11-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_12-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_13-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_14-2026-11-18-1019.jpg",
    "https://www.ajc-immobilier.com/datas/biens/images/48/48_15-2026-10-19-1542.jpg",
    "https://www.ajc-immobilier.com/datas/biens/images/48/48_16-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_17-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/48_18-2026-10-19-1542.jpg",
-   "https://www.ajc-immobilier.com/datas/biens/images/48/d1_small/48_02-2026-10-19-1541.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/48_17-2026-11-18-1019.jpg",
+   "https://www.ajc-immobilier.com/datas/biens/images/48/d1_small/48_02-2026-11-18-1019.jpg",
    "https://www.ajc-immobilier.com/datas/biens/images/12/triptyque/12_00-2026-10-13-1343.jpg",
    "https://www.ajc-immobilier.com/datas/biens/images/43/triptyque/43_00-2026-11-12-1025.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41758,7 +42118,7 @@
   "surface_m2": 130.0,
   "terrain_m2": null,
   "pieces": 2,
-  "commune": null,
+  "commune": "Le Mans",
   "code_postal": "72000",
   "departement": "72",
   "region": "Pays de la Loire",
@@ -41793,12 +42153,14 @@
   "vendu": false,
   "plusieurs_biens": false,
   "viager": 0,
-  "lat": null,
-  "lon": null,
-  "altitude": null,
-  "densite_hab_km2": null,
+  "lat": 47.993335,
+  "lon": 0.191169,
+  "altitude": 49.0,
+  "densite_hab_km2": 2781.3,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 84.8,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 1,
@@ -41808,9 +42170,7 @@
    "seveso_km": null,
    "icpe_commune": true,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 84.8,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/28/28_00-2026-10-13-1352.jpg",
@@ -41839,7 +42199,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/12/triptyque/12_00-2026-10-13-1343.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -41974,6 +42334,8 @@
   "densite_hab_km2": 321.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 35.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -41983,9 +42345,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 35.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/31/31_00-2026-10-13-1353.jpg",
@@ -42004,7 +42364,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/32/triptyque/32_00-2026-10-13-1353.jpg"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42148,10 +42508,12 @@
   "viager": 0,
   "lat": 47.269032,
   "lon": 0.462493,
-  "altitude": 99.0,
+  "altitude": 98.0,
   "densite_hab_km2": 125.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 22.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -42161,9 +42523,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 22.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/29/29_00-2026-10-13-1352.jpg",
@@ -42182,7 +42542,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/29/d1_small/29_02-2026-10-13-1352.jpg"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42239,6 +42599,8 @@
   "densite_hab_km2": 321.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 35.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -42248,9 +42610,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 35.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/12/12_00-2026-10-13-1343.jpg",
@@ -42273,7 +42633,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/43/triptyque/43_00-2026-11-12-1025.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -42905,6 +43265,8 @@
   "densite_hab_km2": 67.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 20.0,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -42914,9 +43276,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 20.0,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/49/49_00-2026-10-30-1324.jpg",
@@ -42943,7 +43303,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/36/triptyque/36_00-2026-11-12-1025.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 649000,
   "prix_baisse_le": "2026-10-28"
@@ -43000,6 +43360,8 @@
   "densite_hab_km2": 67.5,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 20.0,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -43009,9 +43371,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 20.0,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/11/11_00-2026-10-13-1342.jpg",
@@ -43036,7 +43396,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/28/triptyque/28_00-2026-10-13-1352.jpg"
   ],
   "vue_le": "2026-10-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -43676,6 +44036,8 @@
   "densite_hab_km2": 321.9,
   "dpe": null,
   "risques": {
+   "nucleaire_km": 35.5,
+   "nucleaire_nom": "Chinon",
    "inondation_commune": true,
    "argile_commune": true,
    "argile": 3,
@@ -43685,9 +44047,7 @@
    "seveso_km": null,
    "icpe_commune": false,
    "portee": "commune",
-   "source": "georisques",
-   "nucleaire_km": 35.5,
-   "nucleaire_nom": "Chinon"
+   "source": "georisques"
   },
   "photos": [
    "https://www.ajc-immobilier.com/datas/biens/images/32/32_00-2026-10-13-1353.jpg",
@@ -43713,7 +44073,7 @@
    "https://www.ajc-immobilier.com/datas/biens/images/42/triptyque/42_00-2026-10-13-1356.jpg"
   ],
   "vue_le": "2026-10-30",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -66771,7 +67131,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 250000,
   "prix_baisse_le": "2026-10-20"
@@ -66836,7 +67196,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-08-20",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 384900,
   "prix_baisse_le": "2026-11-06"
@@ -66901,7 +67261,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -66966,7 +67326,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-10-07",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -67029,7 +67389,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-08-06",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 332000,
   "prix_baisse_le": "2026-10-20"
@@ -67094,7 +67454,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 283000,
   "prix_baisse_le": "2026-10-24"
@@ -67159,7 +67519,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-10-14",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 395000,
   "prix_baisse_le": "2026-10-28"
@@ -67224,7 +67584,7 @@
    "https://es7o6zzufe8.exactdn.com/wp-content/uploads/2026/10/CAM03501G0-PR0401-STILL014-001-1.jpg?strip=all"
   ],
   "vue_le": "2026-08-18",
-  "revue_le": "2026-11-15",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": 682500,
   "prix_baisse_le": "2026-09-23"
@@ -1424548,7 +1424908,7 @@
   ],
   "vue_le": "2026-08-04",
   "revue_le": "2026-11-14",
-  "absences": 0,
+  "absences": 1,
   "prix_precedent": null,
   "prix_baisse_le": ""
  },
@@ -1424597,7 +1424957,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": 46.301812,
   "lon": 1.66527,
   "altitude": 363.0,
@@ -1424627,7 +1424987,7 @@
    "https://www.squarehabitat.fr/medias/images/m/01a1ab6c-c561-74b8-ac2c-b79077e542fb.webp"
   ],
   "vue_le": "2026-08-04",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1424677,7 +1425037,7 @@
   "etat_declare": "inconnu",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -1424690,10 +1425050,10 @@
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/3_6.jpg?itok=m1C1dOZA",
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/4_3.jpg?itok=8dvvq-b5",
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/5_8.jpg?itok=pav16U-Q",
-   "https://bat.bing.com/action/0?ti=17370627&Ver=2&mid=68d541a2-17f0-4d9b-af7d-0747e3aa4929&bo=1&sid=012ed170ddfa11f18272a303a12614ab&vid=012eedc0ddfa11f19599fb5939fec97a&vids=0&msclkid=N&uach=pv%3D&pi=0&lg=fr-FR&sw=1280&sh=720&sc=24&nwd=1&tl=MAISON%20SPACIEUSE%20DE%20210%20M%C2%B2%20-%2011%20PIECES%20-%20BENFELD%20-%20179%20000%20%E2%82%AC%20FAI%20%7C%20Stradim&p=https%3A%2F%2Fwww.stradim.fr%2Ftransactions%2Fbenfeld%2Fmaison-spacieuse-de-210-m2-11-pieces-benfeld-179-000-eu-fai&r=&lt=530&evt=pageLoad&sv=2&cdb=AQAS&rn=149945"
+   "https://bat.bing.com/action/0?ti=17370627&Ver=2&mid=a8ed8626-283d-448e-8be4-95a4639ce3bc&bo=1&sid=f52b25a0e3b011f1b1c3e5dca33eddec&vid=f52b4b30e3b011f1ae6f4fed93a12ee1&vids=0&msclkid=N&uach=pv%3D&pi=0&lg=fr-FR&sw=1280&sh=720&sc=24&nwd=1&tl=MAISON%20SPACIEUSE%20DE%20210%20M%C2%B2%20-%2011%20PIECES%20-%20BENFELD%20-%20179%20000%20%E2%82%AC%20FAI%20%7C%20Stradim&p=https%3A%2F%2Fwww.stradim.fr%2Ftransactions%2Fbenfeld%2Fmaison-spacieuse-de-210-m2-11-pieces-benfeld-179-000-eu-fai&r=&lt=975&evt=pageLoad&sv=2&cdb=AQAS&rn=503602"
   ],
   "vue_le": "2026-08-09",
-  "revue_le": "2026-11-11",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
@@ -1424743,7 +1425103,7 @@
   "etat_declare": "travaux",
   "vendu": false,
   "plusieurs_biens": false,
-  "viager": null,
+  "viager": 0,
   "lat": null,
   "lon": null,
   "altitude": null,
@@ -1424756,10 +1425116,10 @@
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/photo_43ba934aa27c2e5f12fa7586bf7bb873.jpg?itok=pQsvfgzM",
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/photo_f8cb43b6bfba5201fafff67dd522f4a7.jpg?itok=yftRY52e",
    "https://www.stradim.fr/sites/stradim.fr/files/styles/slideshow/public/photo_5ca20c5b8c2b6018b1b23fdd5e86c897.jpg?itok=ezexTb5h",
-   "https://bat.bing.com/action/0?ti=17370627&Ver=2&mid=d4ca3650-f974-49ea-a6f1-5747811da0fe&bo=1&sid=bcd5aae0e07011f194edb3e6b8f0334a&vid=bcd5bd70e07011f1bf109591530a0c6e&vids=1&msclkid=N&uach=pv%3D&pi=0&lg=fr-FR&sw=1280&sh=720&sc=24&nwd=1&tl=Maison%20T5%20-%2060%20000%E2%82%AC%20FAI%20%7C%20Stradim&p=https%3A%2F%2Fwww.stradim.fr%2Ftransactions%2Ftroyes-hors-agglomeration%2Fmaison-t5-60-000eu-fai&r=&lt=1240&evt=pageLoad&sv=2&cdb=AQAS&rn=586228"
+   "https://bat.bing.com/action/0?ti=17370627&Ver=2&mid=fff27520-713a-4694-984c-c840213009ca&bo=1&sid=f52b25a0e3b011f1b1c3e5dca33eddec&vid=f52b4b30e3b011f1ae6f4fed93a12ee1&vids=1&msclkid=N&uach=pv%3D&pi=0&lg=fr-FR&sw=1280&sh=720&sc=24&nwd=1&tl=Maison%20T5%20-%2060%20000%E2%82%AC%20FAI%20%7C%20Stradim&p=https%3A%2F%2Fwww.stradim.fr%2Ftransactions%2Ftroyes-hors-agglomeration%2Fmaison-t5-60-000eu-fai&r=&lt=1164&evt=pageLoad&sv=2&cdb=AQAS&rn=822769"
   ],
   "vue_le": "2026-09-24",
-  "revue_le": "2026-11-14",
+  "revue_le": "2026-11-19",
   "absences": 0,
   "prix_precedent": null,
   "prix_baisse_le": ""
