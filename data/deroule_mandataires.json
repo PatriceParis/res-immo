@@ -6,15 +6,15 @@
  },
  {
   "etape": "communes",
-  "seconde": 35.3,
-  "departements": 33,
-  "communes": 18698,
+  "seconde": 1.9,
+  "departements": 109,
+  "communes": 36595,
   "anciennes": 2576,
-  "homonymes_ecrases": 0
+  "homonymes_ecrases": 109
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 35.3,
+  "seconde": 2.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,164 +23,129 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 35.3,
+  "seconde": 2.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 37.2,
+  "seconde": 3.8,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 39.2,
+  "seconde": 5.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 39.8,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 39.8,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 40.3,
+  "seconde": 6.5,
   "reseau": "capifrance",
-  "connues": 19497,
-  "ecartees": 2674
+  "connues": 19648,
+  "ecartees": 2747
  },
  {
   "etape": "reseau_debut",
-  "seconde": 40.3,
+  "seconde": 6.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 40.7,
+  "seconde": 7.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 51.6,
+  "seconde": 28.5,
   "reseau": "iad",
-  "n": 112944,
+  "n": 112405,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 53.3,
+  "seconde": 30.7,
   "reseau": "iad",
-  "notees": 32
+  "notees": 82
  },
  {
   "etape": "tentative_notee",
-  "seconde": 55.2,
+  "seconde": 33.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 55.7,
+  "seconde": 34.1,
   "reseau": "iad",
-  "connues": 19497,
-  "ecartees": 2674
+  "connues": 19648,
+  "ecartees": 2747
  },
  {
   "etape": "departement",
-  "seconde": 212.8,
+  "seconde": 293.0,
   "reseau": "iad",
-  "departement": "76",
+  "departement": "36",
   "visitees": 50,
-  "gardes": 29,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 29,
-   "vendu": 5,
-   "ecarte": 16,
+   "garde": 42,
+   "vendu": 4,
+   "ecarte": 4,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:biens immobiliers a vendre": 1,
-   "location": 2,
-   "prix_trop_haut": 8,
-   "hors_perimetre": 5
+   "hors_perimetre": 4
   },
   "exemples": {
-   "titre_hors_cible:biens immobiliers a vendre": "110 617 biens immobiliers à vendre",
-   "location": "Maison de ville 3 pièces de 48 m² à Saint-Étienne-du-Rouvray (76800)",
-   "prix_trop_haut": "Demeure 10 pièces de 385 m² à Bois-Guillaume (76420)",
-   "hors_perimetre": "Ferme 10 pièces de 400 m² à Guerville (78930)"
+   "hors_perimetre": "Maison de ville 2 pièces de 36 m² à Ruffec (16700)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 379.9,
+  "seconde": 570.9,
   "reseau": "iad",
-  "departement": "89",
+  "departement": "54",
   "visitees": 50,
-  "gardes": 31,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 5,
-   "ecarte": 14,
+   "garde": 41,
+   "vendu": 9,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "location": 1,
-   "hors_perimetre": 13
-  },
-  "exemples": {
-   "location": "Maison de ville 3 pièces de 72 m² à Ancy-le-Franc (89160)",
-   "hors_perimetre": "Maison d"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "departement",
-  "seconde": 552.3,
+  "seconde": 606.5,
   "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 29,
+  "departement": "55",
+  "visitees": 5,
+  "gardes": 5,
   "tronquee": true,
   "etats": {
-   "garde": 29,
-   "vendu": 5,
-   "ecarte": 16,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 13,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 218 m² à La Trinité-Porhoët (56490)",
-   "prix_trop_haut": "Demeure 15 pièces de 392 m² à Pressagny-l"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 639.9,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 23,
-  "gardes": 22,
-  "tronquee": true,
-  "etats": {
-   "garde": 22,
-   "vendu": 1,
+   "garde": 5,
+   "vendu": 0,
    "ecarte": 0,
    "illisible": 0
   },
@@ -189,47 +154,47 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 640.0,
+  "seconde": 606.5,
   "reseau": "safti",
   "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 640.3,
+  "seconde": 607.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 642.1,
+  "seconde": 608.8,
   "reseau": "safti",
-  "n": 29068,
+  "n": 28994,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 642.9,
+  "seconde": 609.9,
   "reseau": "safti",
-  "notees": 42
+  "notees": 97
  },
  {
   "etape": "tentative_notee",
-  "seconde": 643.5,
+  "seconde": 610.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 644.0,
+  "seconde": 611.3,
   "reseau": "safti",
-  "connues": 19553,
-  "ecartees": 2736
+  "connues": 19207,
+  "ecartees": 2306
  },
  {
   "etape": "departement",
-  "seconde": 852.4,
+  "seconde": 894.4,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "36",
   "visitees": 50,
   "gardes": 49,
   "tronquee": true,
@@ -244,49 +209,45 @@
  },
  {
   "etape": "departement",
-  "seconde": 1060.2,
+  "seconde": 1161.8,
   "reseau": "safti",
-  "departement": "71",
+  "departement": "37",
   "visitees": 50,
   "gardes": 48,
   "tronquee": true,
   "etats": {
    "garde": 48,
    "vendu": 0,
-   "ecarte": 1,
-   "illisible": 1
+   "ecarte": 2,
+   "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à LAIZY de 499m²"
+   "prix_trop_haut": "Maison à vendre à CHAMBRAY-LES-TOURS de 216m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1239.6,
+  "seconde": 1203.8,
   "reseau": "safti",
-  "departement": "28",
-  "visitees": 46,
-  "gardes": 38,
+  "departement": "55",
+  "visitees": 7,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 38,
+   "garde": 7,
    "vendu": 0,
-   "ecarte": 5,
-   "illisible": 3
+   "ecarte": 0,
+   "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à Bourg-Saint-Christophe de 180m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1239.6,
-  "gardes": 246
+  "seconde": 1203.8,
+  "gardes": 192
  }
 ]
