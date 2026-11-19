@@ -38,7 +38,9 @@ def _fiche() -> str:
     """
     source = APP_JS.read_text(encoding="utf-8")
     debut = source.index("Annonce publiée par")
-    bloc = source[debut:source.index("</section>", debut)]
+    # La provenance est devenue le pied de la fiche (novembre 2026) : elle
+    # se ferme donc par </footer>, et plus par la </section> qui la portait.
+    bloc = source[debut:source.index("</footer>", debut)]
     return re.sub(r"/\*.*?\*/", "", bloc, flags=re.DOTALL)
 
 
@@ -49,6 +51,19 @@ def test_le_lien_de_l_annonce_pointe_sur_l_annonce():
     lien = re.search(r'<a href="\$\{echap\((a\.\w+)\)\}"[^>]*>voir l\'annonce', bloc)
     assert lien and lien.group(1) == "a.url", (
         "le lien vers l'annonce doit utiliser a.url, pas a.agence_url")
+
+
+def test_le_bouton_principal_de_la_fiche_mene_au_bien():
+    """Le lien vers l'annonce n'est plus seulement une ligne en pied de fiche :
+    c'est le bouton principal, en tête. Il promet « l'annonce chez l'agence »,
+    il doit donc porter `a.url` — c'est le défaut d'origine, à la place la
+    plus visible qu'il ait jamais eue."""
+    source = APP_JS.read_text(encoding="utf-8")
+    bouton = re.search(r'<a class="btn-principal" href="\$\{echap\((a\.\w+)\)\}"', source)
+    assert bouton, "la fiche n'a plus de bouton principal"
+    assert bouton.group(1) == "a.url", "le bouton principal doit mener au bien"
+    # et il vient AVANT l'analyse, pas après deux mille pixels de défilement
+    assert source.index('class="btn-principal"') < source.index("Le score en détail")
 
 
 def test_aucun_lien_ne_promet_le_bien_en_pointant_sur_le_site():

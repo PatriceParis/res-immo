@@ -139,7 +139,7 @@ def test_la_fiche_ne_dit_pas_deux_fois_tgv():
                           nom_vers_paris="Vendôme–Villiers-sur-Loir TGV",
                           minutes_paris=42, km_vers_paris=12.3)
     assert phrase.count("TGV") == 1
-    assert phrase == "42 min en TGV depuis Vendôme–Villiers-sur-Loir (à 12.3 km)"
+    assert phrase == "42 min en TGV depuis Vendôme–Villiers-sur-Loir (à 12,3 km)"
 
 
 def test_le_nom_de_la_gare_reste_entier_pour_un_train_classique():
@@ -155,3 +155,53 @@ def test_la_fiche_de_l_application_porte_le_badge():
     assert "sansSuffixeTgv" in SCRIPT
     style = (RACINE / "app" / "static" / "style.css").read_text(encoding="utf-8")
     assert ".tgv {" in style, "un badge sans style est invisible"
+
+
+# --- Le temps de train n'est prêté qu'à la gare qui le porte -----------------
+#
+# Corrigé dans le menu puis sur les tuiles, le défaut restait à trois endroits
+# de la fiche : le badge d'atout, la ligne de faits et la phrase rédigée. Tous
+# trois disaient d'une halte qu'on y rejoignait Paris en 55 minutes, quand ce
+# temps part du Mans, à vingt-trois kilomètres de là.
+
+_HALTE = {"nom": "Écommoy", "km": 14.7, "segment": "C", "minutes_paris": 55,
+          "nom_vers_paris": "Le Mans", "km_vers_paris": 23.6, "grande_vitesse": True}
+
+
+def test_la_phrase_redigee_nomme_la_gare_du_temps():
+    from app import redaction
+    bien = {"train": dict(_HALTE), "commune": "Le Grand-Lucé", "prix": 265000}
+    texte = " ".join(redaction.description_longue(bien, None))
+    assert "d'où Paris se rejoint" not in texte, (
+        "la halte se voit prêter le trajet d'une autre gare")
+    assert "depuis Le Mans" in texte
+
+
+def test_la_phrase_reste_simple_quand_c_est_la_meme_gare():
+    from app import redaction
+    bien = {"train": dict(_HALTE, nom="Le Mans", km=0.7), "commune": "Le Mans",
+            "prix": 265000}
+    texte = " ".join(redaction.description_longue(bien, None))
+    assert "d'où Paris se rejoint en 55 min" in texte
+
+
+def test_la_ligne_de_faits_nomme_la_gare_du_temps():
+    from app import redaction
+    lignes = dict(redaction.bloc_de_faits(
+        {"train": dict(_HALTE), "prix": 265000, "score_total": 59}))
+    assert lignes["🚉"].endswith("Paris en 55 min depuis Le Mans")
+
+
+def test_le_badge_d_atout_mesure_la_gare_du_temps():
+    """« Gare à 14,7 km · Paris en 55 min » : la distance était celle de la
+    halte, le temps celui du Mans. Le badge prend désormais la distance de la
+    gare qui porte le temps — et à 23,6 km, il ne s'affiche plus."""
+    from app import scoring
+    base = {"titre": "Maison", "description": "", "features": {}, "risques": {}}
+    proche = dict(base, train=dict(_HALTE, km_vers_paris=8.4))
+    loin = dict(base, train=dict(_HALTE))
+    def badge(annonce):
+        detail = scoring.calculer_score(annonce)
+        return [b for b in detail["badges"] if b.startswith("Gare à")]
+    assert badge(proche) == ["Gare à 8,4 km · Paris en 55 min"]
+    assert badge(loin) == []

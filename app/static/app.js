@@ -453,33 +453,16 @@ function reinitialiser() {
    l'agence occupait la première place en gros et en gras, et le prix se
    perdait dans une rangée où tout avait le même poids. */
 
-// Titre de l'agence, ramené à une casse lisible.
-// « PROPRIÉTÉ DE GRAND CARACTERE ORIGINE 18ème » : les agences écrivent
-// souvent en capitales, ce qui crie et se lit mal. On repasse en casse de
-// phrase, en rendant sa majuscule à la commune, qui elle est un nom propre.
-function casseNormale(texte, commune) {
-  const t = (texte || "").trim();
-  if (!t) return "";
-  const lettres = t.replace(/[^A-Za-zÀ-ÿ]/g, "");
-  const majuscules = t.replace(/[^A-ZÀ-Þ]/g, "").length;
-  if (!lettres.length || majuscules / lettres.length < 0.6) return t;  // casse normale
-
-  let s = t.toLowerCase().replace(/(^|[.!?…]\s+)([a-zà-ÿ])/g,
-                                  (m, avant, c) => avant + c.toUpperCase());
-  for (const mot of String(commune || "").split(/[\s-]+/)) {
-    if (mot.length < 3) continue;
-    s = s.replace(new RegExp(`\\b${mot.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "gi"),
-                  mot);
-  }
-  return s;
-}
-
 // Ligne de caractéristiques : « Longère · 165 m² · 6 pièces · terrain 7 500 m² ».
 // C'est la ligne que tout acheteur lit en diagonale sur un portail.
-function caracteristiques(a) {
-  const bouts = [];
+function typeBien(a) {
   const type = a.type_bien || "maison";
-  bouts.push(`<b>${echap(type.charAt(0).toUpperCase() + type.slice(1))}</b>`);
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+function caracteristiques(a, sansType) {
+  const bouts = [];
+  if (!sansType) bouts.push(`<b>${echap(typeBien(a))}</b>`);
   if (a.surface_m2) bouts.push(`${nombre(a.surface_m2)} m²`);
   if (a.pieces) bouts.push(`${a.pieces} pièce${a.pieces > 1 ? "s" : ""}`);
   if (a.terrain_m2) {
@@ -506,14 +489,14 @@ const sansSuffixeTgv = (nom) => nom.replace(/\s+TGV$/, "");
 // propre à ce service, il mérite d'être lisible d'un coup d'œil.
 function acces(a) {
   const bouts = [];
-  if (a.temps_voiture_min != null) bouts.push(`🚗 ${fmtTemps(a.temps_voiture_min)}`);
+  if (a.temps_voiture_min != null) bouts.push(`${icone("voiture")} ${fmtTemps(a.temps_voiture_min)}`);
   if (a.train && a.train.minutes_paris != null) {
     // `nom_vers_paris` et non `nom` : depuis l'import du référentiel, la gare
     // la plus proche n'est celle qui porte le temps que dans un cas sur
     // trois. Afficher « 1 h 05 via la halte d'à côté » attribuerait à l'une
     // le trajet de l'autre.
     const gare = a.train.nom_vers_paris || a.train.nom;
-    bouts.push(`🚆 ${fmtTemps(a.train.minutes_paris)} <span class="gare">via ${
+    bouts.push(`${icone("train")} ${fmtTemps(a.train.minutes_paris)} <span class="gare">via ${
       echap(gare)}</span>`);
   }
   return bouts.length ? `<div class="acces">${bouts.join("<span class='sep'>·</span>")}</div>` : "";
@@ -526,7 +509,7 @@ function ficheAnnonce(a) {
   const reste = (a.badges || []).length > 3
     ? `<span class="badge sourd">+${a.badges.length - 3}</span>` : "";
   const alertes = (a.alertes || []).slice(0, 1)
-    .map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
+    .map((al) => `<span class="alerte">${icone("attention")} ${echap(al)}</span>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
 
   return `
@@ -720,9 +703,38 @@ function mentionViager(a, complete) {
 
 /* ---------------- fiche détaillée ---------------- */
 
+// Un seul jeu d'icônes, dessinées au trait. Les émojis qu'elles remplacent
+// changeaient de dessin d'un téléphone à l'autre — une goutte bleue ici, grise
+// là, une carotte en relief ailleurs — et donnaient à la fiche l'allure d'un
+// message plutôt que d'un document. Le trait prend la couleur du texte, donc
+// il se lit sur tous les fonds. Les mêmes tracés servent côté serveur
+// (pages._ICONES) : deux rendus, un seul dessin.
+const TRACES = {
+  lieu: '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  voiture: '<path d="M4 16v-3.5l2-5.5h12l2 5.5V16M4 12.5h16"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/>',
+  train: '<rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 21l1.5-4M15 21l-1.5-4M9.5 14h.01M14.5 14h.01"/>',
+  altitude: '<path d="M3 19l6-10 4 6 2.5-3.5L21 19z"/>',
+  energie: '<path d="M12 3c1 3.5 5 5.5 5 10.5a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-6 1-9z"/>',
+  eau: '<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  abri: '<path d="M4 20V10l8-6 8 6v10zM9.5 20v-6h5v6"/>',
+  alimentation: '<path d="M12 21v-9M12 12c0-3-2.2-5-6-5 0 3.2 2.2 5 6 5zM12 9.5c0-3 2.2-5 6-5 0 3.2-2.2 5-6 5z"/>',
+  risques: '<path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/>',
+  chaleur: '<path d="M10 14.5V5a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/>',
+  dpe: '<path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/>',
+  ok: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  attention: '<path d="M12 4l9 16H3zM12 10v4.5M12 17.3v.2"/>',
+  sortie: '<path d="M14 5h5v5M19 5l-8 8M11 7H6.5A1.5 1.5 0 0 0 5 8.5v9A1.5 1.5 0 0 0 6.5 19h9a1.5 1.5 0 0 0 1.5-1.5V13"/>',
+  cloche: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5h4"/>',
+};
+
+/** Une icône au trait, décorative : le texte qui la suit dit toujours la chose. */
+function icone(nom) {
+  return `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${TRACES[nom] || ""}</svg>`;
+}
+
 const ICONES_PILIERS = {
-  eau: "💧", abri: "📦", energie: "🔥",
-  alimentation: "🥕", risques: "🛡️", situation: "🚗",
+  eau: "eau", abri: "abri", energie: "energie",
+  alimentation: "alimentation", risques: "risques", situation: "voiture",
 };
 
 // Explication de chaque pilier — dépliable en tapant (utile sur mobile, où
@@ -741,7 +753,7 @@ function jaugesPiliers(detail) {
   return Object.entries(detail.piliers).map(([cle, p]) => `
     <details class="pilier">
       <summary class="pilier-tete">
-        <span class="nom">${ICONES_PILIERS[cle] || ""} ${echap(p.libelle)}
+        <span class="nom">${icone(ICONES_PILIERS[cle])} ${echap(p.libelle)}
           <span class="info-i" aria-hidden="true">ⓘ</span></span>
         <div class="jauge" role="meter" aria-valuemin="0" aria-valuemax="${p.max}"
              aria-valuenow="${p.points}" aria-label="${echap(p.libelle)}">
@@ -753,11 +765,23 @@ function jaugesPiliers(detail) {
     </details>`).join("");
 }
 
-function tuile(etiquette, valeur, sous) {
+// Une ligne de fait : l'icône et le libellé à gauche, la valeur à droite, la
+// précision dessous. Elles étaient six tuiles carrées : sur téléphone, trois
+// par rangée, le libellé passait à la ligne, la valeur aussi, et le badge TGV
+// tombait seul sur la sienne. Une ligne par fait se lit d'un trait à toutes
+// les largeurs — c'est la mise en page d'une fiche technique, pas d'un
+// tableau de bord.
+function fait(ico, etiquette, valeur, sous) {
   if (valeur == null || valeur === "") return "";
-  return `<div class="stat"><span class="etiquette">${etiquette}</span>
-    <span class="valeur">${valeur}</span>
-    ${sous ? `<span class="sous">${sous}</span>` : ""}</div>`;
+  return `<div class="fait">
+    <dt>${icone(ico)} ${etiquette}</dt>
+    <dd><span class="valeur">${valeur}</span>${sous ? `<span class="sous">${sous}</span>` : ""}</dd>
+  </div>`;
+}
+
+/** Un nombre à virgule, à la française — « 14,7 » et non « 14.7 ». */
+function decimal(valeur) {
+  return String(valeur).replace(".", ",");
 }
 
 function ouvrirFiche(id) {
@@ -766,8 +790,8 @@ function ouvrirFiche(id) {
   const niveau = niveauScore(a.score_total);
   const detail = a.score_detail || {};
   const listeBadges = a.badges || [];
-  const badges = listeBadges.map((b) => `<span class="badge">✓ ${echap(b)}</span>`).join("");
-  const alertes = (a.alertes || []).map((al) => `<span class="alerte">⚠ ${echap(al)}</span>`).join("");
+  const badges = listeBadges.map((b) => `<span class="badge">${icone("ok")} ${echap(b)}</span>`).join("");
+  const alertes = (a.alertes || []).map((al) => `<span class="alerte">${icone("attention")} ${echap(al)}</span>`).join("");
   const vigilances = ((detail && detail.vigilances) || [])
     .map((v) => `<li>${echap(v)}</li>`).join("");
   const prixM2 = a.prix && a.surface_m2 ? Math.round(a.prix / a.surface_m2) : null;
@@ -780,85 +804,86 @@ function ouvrirFiche(id) {
       ${imgPhoto(a)}
     </div>
     <header class="fiche-entete">
-      <div class="score-jeton grand ${niveau}" title="Score de résilience">${Math.round(a.score_total)}<small>/100</small></div>
-      <div>
-        <!-- Même hiérarchie que la liste : le prix d'abord, puis les
-             caractéristiques, puis le lieu. Le titre de l'agence, ramené en
-             casse lisible, vient après — c'est une accroche, pas une donnée. -->
+      <div class="fiche-titre">
+        <!-- Le titre est le NÔTRE : le type et le lieu. Celui de l'agence
+             (« Acheter maison de 5 pièces 140 m² 265 000 € à … : une annonce
+             … ») redisait le prix, la surface et la commune déjà affichés, sur
+             cinq lignes de téléphone, et c'était le dernier texte d'un tiers
+             encore republié ici depuis le retrait du descriptif. -->
+        <h2 id="modale-titre">${echap(typeBien(a))} à ${echap(a.commune || "")}${
+          a.code_postal ? ` <span class="cp">(${echap(a.code_postal)})</span>` : ""}</h2>
         <div class="prix-modale">${a.prix ? euros(a.prix) : "Prix sur demande"}${
           prixM2 ? ` <span class="prix-m2">${nombre(prixM2)} €/m²</span>` : ""}</div>
         ${mentionViager(a, true)}
-        <div class="specs">${caracteristiques(a)}</div>
-        <div class="lieu">📍 ${echap(a.commune || "")} ${a.code_postal ? `(${echap(a.code_postal)})` : ""}</div>
-        <h2 id="modale-titre">${echap(casseNormale(a.titre, a.commune))}</h2>
-        <div class="classe-grande">${echap(detail.classe || "")}</div>
+        <div class="specs">${caracteristiques(a, true)}</div>
+      </div>
+      <!-- Le score et son appréciation ensemble : « 59 » seul ne dit pas si
+           c'est bien, et « Bien noté » flottait trois lignes plus bas. -->
+      <div class="score-bloc ${niveau}" title="Score de résilience">
+        <b>${Math.round(a.score_total)}</b><i>/100</i>
+        <small>résilience</small>
       </div>
     </header>
+    ${detail.classe ? `<p class="classe-grande">${echap(detail.classe)}</p>` : ""}
 
-    <!-- Prix, surface et terrain sont déjà en tête : les répéter en tuiles
-         faisait dire trois fois la même chose. Ne restent ici que les
+    <!-- Ce qu'on vient faire sur une fiche, c'est aller voir le bien. Le
+         seul lien qui y mène était une ligne soulignée tout en bas, sous
+         deux mille pixels d'analyse, quand « Créer mon alerte » avait son
+         bouton plein en tête. L'ordre est rétabli : l'annonce d'abord. -->
+    <div class="actions">
+      ${a.url ? `<a class="btn-principal" href="${echap(a.url)}" target="_blank" rel="noopener">
+        Voir l'annonce chez ${echap(a.agence || "l'agence")} ${icone("sortie")}</a>` : ""}
+      <a class="btn-secondaire" href="${lienAlerte(a)}">${icone("cloche")} Créer une alerte</a>
+    </div>
+
+    <!-- Prix, surface, pièces et terrain sont déjà en tête : les répéter
+         ici faisait dire trois fois la même chose. Ne restent que les
          informations qu'on ne lit nulle part ailleurs. -->
-    <div class="stats">
-      ${tuile("Pièces", a.pieces)}
-      ${tuile("Paris en voiture", fmtTemps(a.temps_voiture_min),
-              a.distance_km ? "~" + Math.round(a.distance_km * 1.25) + " km · estimé" : "estimé")}
-      ${a.train && a.train.nom
-        ? tuile("Gare la plus proche", echap(a.train.nom),
-                `${a.train.km} km${SEGMENT_GARE[a.train.segment]
-                  ? " · " + SEGMENT_GARE[a.train.segment] : ""}`)
-        : ""}
-      ${a.train && a.train.minutes_paris != null
-        ? tuile("Paris en train",
-                // Le badge répond à la question de qui garde son travail à
-                // Paris : non pas « y a-t-il un train ? » mais « l'aller-retour
-                // tient-il dans la journée ? ». 21 % des biens au temps connu.
-                fmtTemps(a.train.minutes_paris)
-                  + (a.train.grande_vitesse ? ' <span class="tgv">TGV</span>' : ""),
-                a.train.nom_vers_paris && a.train.nom_vers_paris !== a.train.nom
-                  ? `depuis ${echap(a.train.grande_vitesse
-                      ? sansSuffixeTgv(a.train.nom_vers_paris)
-                      : a.train.nom_vers_paris)} · à ${a.train.km_vers_paris} km`
-                  : "depuis cette gare")
-        : ""}
-      ${tuile("Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}
-      ${tuile("DPE", a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>` : "n.c.")}
-    </div>
-
-    <!-- Le bloc de mise en relation a été retiré le 17 août 2026. Il
-         recueillait l'e-mail du visiteur pour le transmettre à l'agence, et
-         l'annonçait lui-même : « rémunéré à la mise en relation qualifiée ».
-         Prêter son concours, même à titre accessoire et contre rémunération,
-         à la recherche d'un immeuble pour autrui, c'est l'activité que la loi
-         Hoguet réserve aux titulaires d'une carte professionnelle. Écrire
-         « nous ne sommes pas une agence » ne change rien à ce qui est fait.
-
-         Ce qui le remplace ne met personne en relation : le visiteur choisit
-         un budget et des terroirs, et c'est NOUS qui lui écrivons. Aucune
-         coordonnée ne part chez une agence, aucune commission n'est perçue,
-         et le lien vers l'annonce d'origine reste le seul chemin vers le
-         vendeur. -->
-    <div class="alerte-bloc">
-      <strong>Soyez alerté des prochaines</strong>
-      <span>Ce bien vous parle ? Choisissez un budget et des terroirs : nous
-        vous prévenons quand une maison y entre au catalogue.</span>
-      <a class="btn-alerte" href="${lienAlerte(a)}">Créer mon alerte</a>
-    </div>
-
-    <section class="panneau">
-      <h4>Le score en détail · ${Math.round(a.score_total)}/100</h4>
-      ${jaugesPiliers(detail)}
+    <section class="bloc">
+      <h3>L'essentiel</h3>
+      <dl class="faits">
+        ${fait("voiture", "Paris en voiture", fmtTemps(a.temps_voiture_min),
+               a.distance_km ? "environ " + Math.round(a.distance_km * 1.25) + " km, estimé" : "estimé")}
+        ${a.train && a.train.minutes_paris != null
+          ? fait("train", "Paris en train",
+                 // Le badge répond à la question de qui garde son travail à
+                 // Paris : non pas « y a-t-il un train ? » mais « l'aller-retour
+                 // tient-il dans la journée ? ». 21 % des biens au temps connu.
+                 fmtTemps(a.train.minutes_paris)
+                   + (a.train.grande_vitesse ? ' <span class="tgv">TGV</span>' : ""),
+                 a.train.nom_vers_paris && a.train.nom_vers_paris !== a.train.nom
+                   ? `depuis ${echap(a.train.grande_vitesse
+                       ? sansSuffixeTgv(a.train.nom_vers_paris)
+                       : a.train.nom_vers_paris)}, à ${decimal(a.train.km_vers_paris)} km`
+                   : "depuis cette gare")
+          : ""}
+        ${a.train && a.train.nom
+          ? fait("lieu", "Gare la plus proche", echap(a.train.nom),
+                 `${SEGMENT_GARE[a.train.segment] ? SEGMENT_GARE[a.train.segment] + ", " : ""}à ${decimal(a.train.km)} km`)
+          : ""}
+        ${fait("altitude", "Altitude", a.altitude != null ? Math.round(a.altitude) + " m" : null)}
+        ${fait("dpe", "Diagnostic énergétique",
+               a.dpe ? `<span class="dpe dpe-${echap(a.dpe)}">${echap(a.dpe)}</span>`
+                     : `<span class="nc">non communiqué</span>`)}
+      </dl>
     </section>
 
-    <section>
-      <h4>Atouts détectés${listeBadges.length ? ` (${listeBadges.length})` : ""}</h4>
+    <section class="bloc">
+      <h3>Le score en détail <span class="h-note">${Math.round(a.score_total)} sur 100</span></h3>
+      ${jaugesPiliers(detail)}
+      <p class="note-detail">Touchez un critère pour lire ce qu'il mesure.</p>
+    </section>
+
+    <section class="bloc">
+      <h3>Atouts détectés${listeBadges.length ? ` <span class="h-note">${listeBadges.length}</span>` : ""}</h3>
       ${badges ? `<div class="jetons">${badges}</div>`
                : `<p class="aucun">Aucun atout particulier détecté dans l'annonce.</p>`}
     </section>
 
-    <section>
-      <h4>Points de vigilance</h4>
+    <section class="bloc">
+      <h3>Points de vigilance</h3>
       ${alertes ? `<div class="jetons">${alertes}</div>`
-                : `<p class="aucun">✓ Aucun point de vigilance détecté sur le bien.</p>`}
+                : `<p class="aucun">${icone("ok")} Aucun point de vigilance détecté sur le bien.</p>`}
       ${nucleaire ? `<p class="note-detail">${nucleaire}</p>` : ""}
       ${vigilances ? `
         <p class="note-detail"><b>Risques recensés sur la commune</b> (source
@@ -868,10 +893,10 @@ function ouvrirFiche(id) {
         <ul class="vigilances">${vigilances}</ul>` : ""}
     </section>
 
-    <section id="climat-2050" data-id="${echap(a.id)}"></section>
+    <section id="climat-2050" class="bloc" data-id="${echap(a.id)}"></section>
 
-    <section>
-      <h4>La commune vue du ciel</h4>
+    <section class="bloc">
+      <h3>La commune vue du ciel</h3>
       ${/* Le descriptif rédigé par l'agence ne s'affiche PLUS ici. C'était le
             seul endroit du site où le texte d'un tiers était republié tel
             quel — les pages servies par le serveur écrivent depuis nos
@@ -899,12 +924,36 @@ function ouvrirFiche(id) {
             « Source : iad-france-27 » disparaît au passage : c'est notre
             identifiant interne, il ne dit rien à personne d'autre. Le nom de
             l'agence, lui, dit d'où vient l'annonce. */""}
+    </section>
+
+    <footer class="fiche-source">
       <p class="source-ligne">Annonce publiée par <b>${echap(a.agence || "l'agence")}</b>${a.url
         ? ` — <a href="${echap(a.url)}" target="_blank" rel="noopener">voir l'annonce d'origine</a>`
-        : ""}</p>
-      ${a.agence_url ? `<p class="source-ligne"><a href="${echap(a.agence_url)}" target="_blank" rel="noopener">Site de l'agence</a></p>` : ""}
+        : ""}${a.agence_url ? ` · <a href="${echap(a.agence_url)}" target="_blank" rel="noopener">site de l'agence</a>` : ""}</p>
       ${fraicheur(a)}
-    </section>`;
+    </footer>
+
+    <!-- Le bloc de mise en relation a été retiré le 17 août 2026. Il
+         recueillait l'e-mail du visiteur pour le transmettre à l'agence, et
+         l'annonçait lui-même : « rémunéré à la mise en relation qualifiée ».
+         Prêter son concours, même à titre accessoire et contre rémunération,
+         à la recherche d'un immeuble pour autrui, c'est l'activité que la loi
+         Hoguet réserve aux titulaires d'une carte professionnelle. Écrire
+         « nous ne sommes pas une agence » ne change rien à ce qui est fait.
+
+         Ce qui le remplace ne met personne en relation : le visiteur choisit
+         un budget et des terroirs, et c'est NOUS qui lui écrivons. Aucune
+         coordonnée ne part chez une agence, aucune commission n'est perçue,
+         et le lien vers l'annonce d'origine reste le seul chemin vers le
+         vendeur. -->
+    <div class="alerte-bloc">
+      <div>
+        <strong>Soyez alerté des prochaines</strong>
+        <span>Ce bien vous parle ? Choisissez un budget et des terroirs : nous
+          vous prévenons quand une maison y entre au catalogue.</span>
+      </div>
+      <a class="btn-alerte" href="${lienAlerte(a)}">Créer mon alerte</a>
+    </div>`;
 
   $("#voile").hidden = false;
   document.body.style.overflow = "hidden";
@@ -938,11 +987,11 @@ function climatHtml(v) {
           ${l.rang ? `<div class="rang">${echap(l.rang)}</div>` : ""}
         </div>`;
     }).join("");
-    return `<h5 class="theme-climat">${echap(t.icone)} ${echap(t.nom)}</h5>${lignes}`;
+    return `<h4 class="theme-climat">${icone(t.code === "chaleur" ? "chaleur" : "eau")} ${echap(t.nom)}</h4>${lignes}`;
   }).join("");
   return `
     <div class="climat">
-      <h4>${echap(v.titre)}</h4>
+      <h3>${echap(v.titre)}</h3>
       <div class="cles-climat">${cles}</div>
       ${themes}
       <p class="legende-climat"><span><i class="b-ref"></i>${echap(v.legende[0])}</span>

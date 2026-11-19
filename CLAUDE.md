@@ -49,6 +49,12 @@ python scripts/enrichir_risques.py  # API Géorisques (réseau requis)
   (extraction `image`/`og:image`), sinon illustration SVG générée côté client
   par type de bien (`visuelBien` dans app.js). Bloc « mise en relation »
   (galerie verrouillée + bouton) = modèle économique — voir docs/PERSONA.md.
+- Fiche d'un bien : deux rendus qui doivent rester jumeaux — la modale
+  (`ouvrirFiche` dans app.js) et la page servie (`page_annonce` dans pages.py).
+  Même ordre de lecture (titre, prix + score, bouton vers l'annonce, faits,
+  score en détail, analyse), mêmes icônes au trait : `TRACES` (app.js) et
+  `_TRACES` (pages.py) portent les mêmes tracés, un test les compare. Pas
+  d'émoji en guise d'icône ; nombres à virgule (`decimal()` / `_virgule()`).
 - Persona, douleurs, objectifs et modèle économique : docs/PERSONA.md (c'est le
   document qui justifie les choix produit ; le lire avant d'ajouter une feature).
 - Base de données : `data/refuge.db` (gitignorée), surchargeable via

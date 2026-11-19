@@ -39,18 +39,69 @@ main { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px }
 h1 { font-size: 26px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance }
 h2 { font-size: 19px; margin: 32px 0 8px; text-wrap: balance }
 .chapeau { font-size: 17px; color: #46543f }
-.prix { font-size: 26px; font-weight: 800; color: #1b4332 }
-dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; margin: 12px 0 }
+.prix { font-size: 32px; font-weight: 800; color: #1b4332; margin: 0; line-height: 1.1;
+        letter-spacing: -.5px }
+/* Le prix et le score, côte à côte sous la photo : les deux choses qu'on
+   vient lire, et la seconde est la seule qu'aucun portail ne donne. */
+.resume { display: flex; align-items: center; justify-content: space-between;
+          gap: 16px; margin: 20px 0 4px }
+.classe-score { margin: 6px 0 0; font-weight: 600; color: #2d6a4f; font-size: 15px }
+.score-bloc { flex: none; min-width: 76px; padding: 10px 12px 8px; border-radius: 14px;
+              display: flex; flex-direction: column; align-items: center; line-height: 1;
+              border: 2px solid #1b4332 }
+.score-bloc b { font-size: 30px; font-weight: 800; letter-spacing: -.5px }
+.score-bloc i { font-style: normal; font-size: 11px; font-weight: 700; opacity: .8; margin-top: 2px }
+.score-bloc small { font-size: 11px; font-weight: 600; margin-top: 6px; opacity: .9 }
+.score-bloc.n1 { background: #c9dcc2; color: #24312a }
+.score-bloc.n2 { background: #7fae84; color: #14281c }
+.score-bloc.n3 { background: #3f7d53; color: #fff }
+.score-bloc.n4 { background: #1b4332; color: #fff }
+.ico { width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em; fill: none;
+       stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 }
+/* Le score critère par critère : nom, jauge, points. */
+.piliers { list-style: none; padding: 0; margin: 12px 0 4px }
+.piliers li { display: grid; grid-template-columns: 220px 1fr 56px; gap: 12px;
+              align-items: center; margin: 0; padding: 8px 0; font-size: 15px }
+.p-nom { display: flex; align-items: center; gap: 8px }
+.p-nom .ico { color: #2d6a4f }
+.p-jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden }
+.p-jauge span { display: block; height: 100%; background: #3f7d53; border-radius: 6px; min-width: 2px }
+.p-points { text-align: right; color: #5f6a58; font-variant-numeric: tabular-nums }
+.p-points b { color: #23301f }
+.note-piliers { font-size: 14px; margin: 4px 0 0 }
+.note-piliers a { color: #2d6a4f }
+@media (max-width: 560px) {
+  .piliers li { grid-template-columns: 1fr 56px; row-gap: 4px }
+  .p-nom { grid-column: 1 / -1 }
+}
+/* Les biens voisins : des liens à la couleur du site, un par ligne, séparés
+   d'un filet — et non la liste à puces bleue par défaut du navigateur. */
+.voisins { list-style: none; padding: 0; margin: 8px 0 }
+.voisins li { margin: 0; border-bottom: 1px solid #e4e0d5 }
+.voisins a { display: block; padding: 10px 0; color: #1b4332; text-decoration: none; font-weight: 600 }
+.voisins a:hover { text-decoration: underline }
+dl { display: grid; grid-template-columns: minmax(150px, auto) 1fr; gap: 0 18px; margin: 12px 0 }
+dt, dd { padding: 8px 0; border-bottom: 1px solid #e4e0d5 }
 dt { color: #5f6a58 } dd { margin: 0; font-weight: 600 }
 ul { padding-left: 20px } li { margin: 3px 0 }
-.faits-courts { list-style: none; padding: 0; margin: 10px 0 4px; font-size: 16px }
-.faits-courts li { margin: 5px 0 }
-.faits-courts span { display: inline-block; width: 24px }
+.faits-courts { list-style: none; padding: 16px 18px; margin: 8px 0 4px; font-size: 16px;
+                background: #fff; border: 1px solid #e4e0d5; border-radius: 12px;
+                display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px }
+.faits-courts li { margin: 0; display: flex; align-items: center; gap: 10px }
+.faits-courts .ico { color: #2d6a4f }
+@media (max-width: 560px) { .faits-courts { grid-template-columns: 1fr } }
 .jetons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px }
 .jetons li { background: #e6ece1; border-radius: 99px; padding: 3px 11px; font-size: 14px }
-.bouton { display: inline-block; background: #1b4332; color: #fff; padding: 11px 20px;
-          border-radius: 8px; text-decoration: none; font-weight: 700; margin: 6px 8px 6px 0 }
+.bouton { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+          background: #1b4332; color: #fff; padding: 12px 20px; min-height: 48px;
+          box-sizing: border-box; border: 1.5px solid #1b4332;
+          border-radius: 10px; text-decoration: none; font-weight: 700; margin: 6px 8px 6px 0 }
+.bouton:hover { background: #2d6a4f; border-color: #2d6a4f }
 .bouton.clair { background: #fff; color: #1b4332; border: 1.5px solid #1b4332 }
+.bouton.clair:hover { background: #eaf2ec }
+.actions .bouton { margin: 0 }
+@media (max-width: 560px) { .actions .bouton { flex: 1 1 100% } }
 .fil { font-size: 14px; color: #5f6a58; margin-bottom: 14px }
 .fil a { color: #46543f }
 .note { font-size: 14px; color: #5f6a58; border-top: 1px solid #ddd8cc;
@@ -69,7 +120,7 @@ figure.aerienne figcaption { font-size: 13px; color: #5f6a58; margin-top: 5px }
 .climat { background: #fff; border: 1px solid #e4e0d5; border-radius: 14px;
           padding: 18px 18px 14px; margin: 28px 0 }
 .climat h2 { margin: 0 0 12px }
-.climat h3 { font-size: 15px; margin: 18px 0 4px; letter-spacing: .2px }
+.climat h3 { font-size: 15px; margin: 18px 0 4px; display: flex; align-items: center; gap: 8px }
 .cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
                gap: 10px }
 .cle { border-radius: 10px; padding: 10px 12px; background: #fbf3ec;
@@ -220,6 +271,81 @@ _LARGEUR_PX, _HAUTEUR_PX = 2048, 1024
 # Ce que le segment DRG du référentiel SNCF veut dire, en clair.
 _SEGMENT_GARE = {"A": "grande gare", "B": "gare régionale", "C": "halte"}
 
+# Les mêmes tracés que app/static/app.js (TRACES) : deux rendus, un seul
+# dessin. Ils remplacent les émojis, dont le dessin changeait d'un appareil à
+# l'autre et donnait à la fiche l'allure d'un message plutôt que d'un document.
+_TRACES = {
+    "lieu": '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    "voiture": '<path d="M4 16v-3.5l2-5.5h12l2 5.5V16M4 12.5h16"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/>',
+    "train": '<rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 11h12M9 21l1.5-4M15 21l-1.5-4M9.5 14h.01M14.5 14h.01"/>',
+    "prix": '<path d="M17 6.5a6.5 6.5 0 1 0 0 11M4.5 10.5H13M4.5 13.5H13"/>',
+    "surface": '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v3M14 4v3M4 9h3M4 14h3"/>',
+    "pieces": '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 4v16M4 12h8"/>',
+    "energie": '<path d="M12 3c1 3.5 5 5.5 5 10.5a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-6 1-9z"/>',
+    "eau": '<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+    "abri": '<path d="M4 20V10l8-6 8 6v10zM9.5 20v-6h5v6"/>',
+    "alimentation": '<path d="M12 21v-9M12 12c0-3-2.2-5-6-5 0 3.2 2.2 5 6 5zM12 9.5c0-3 2.2-5 6-5 0 3.2-2.2 5-6 5z"/>',
+    "risques": '<path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/>',
+    "chaleur": '<path d="M10 14.5V5a2 2 0 0 1 4 0v9.5a4 4 0 1 1-4 0z"/>',
+    "sortie": '<path d="M14 5h5v5M19 5l-8 8M11 7H6.5A1.5 1.5 0 0 0 5 8.5v9A1.5 1.5 0 0 0 6.5 19h9a1.5 1.5 0 0 0 1.5-1.5V13"/>',
+}
+# redaction.bloc_de_faits désigne ses lignes par un pictogramme : la donnée
+# reste ce qu'elle est (et ses tests avec), seul le dessin change au rendu.
+_PICTO_VERS_ICONE = {"📍": "lieu", "💶": "prix", "📐": "surface", "🛏": "pieces",
+                     "🚉": "train", "🚗": "voiture", "🛡": "risques"}
+_ICONES_PILIERS = {"eau": "eau", "abri": "abri", "energie": "energie",
+                   "alimentation": "alimentation", "risques": "risques",
+                   "situation": "voiture"}
+
+
+def _ico(nom: str) -> str:
+    """Une icône au trait, décorative : le texte voisin dit toujours la chose."""
+    trace = _TRACES.get(nom)
+    if not trace:
+        return ""
+    return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{trace}</svg>'
+
+
+def _niveau(score) -> str:
+    """La classe de couleur d'un score — mêmes seuils que niveauScore (app.js)."""
+    score = score or 0
+    return "n4" if score >= 70 else "n3" if score >= 55 else "n2" if score >= 40 else "n1"
+
+
+def _virgule(nombre) -> str:
+    """« 14,7 » et non « 14.7 » : la page est en français."""
+    return str(nombre).replace(".", ",")
+
+
+def _piliers_html(bien: dict) -> str:
+    """Le score, critère par critère.
+
+    La page servie ne montrait le score que comme une ligne de liste et une
+    phrase : ce que le site a de propre — la note, et de quoi elle est faite —
+    n'apparaissait dessiné que dans l'application. C'est pourtant cette page
+    qu'on partage et qu'on trouve depuis un moteur de recherche.
+    """
+    piliers = ((bien.get("score_detail") or {}).get("piliers")) or {}
+    lignes = []
+    for cle, pilier in piliers.items():
+        maxi = pilier.get("max") or 0
+        points = pilier.get("points") or 0
+        if not maxi:
+            continue
+        part = max(0, min(100, round(points / maxi * 100)))
+        points = int(points) if float(points).is_integer() else _virgule(points)
+        lignes.append(
+            f'<li><span class="p-nom">{_ico(_ICONES_PILIERS.get(cle, ""))} {_e(pilier.get("libelle") or cle)}</span>'
+            f'<span class="p-jauge" role="meter" aria-valuemin="0" aria-valuemax="{maxi}" '
+            f'aria-valuenow="{points}" aria-label="{_e(pilier.get("libelle") or cle)}">'
+            f'<span style="width:{part}%"></span></span>'
+            f'<span class="p-points"><b>{points}</b>/{maxi}</span></li>')
+    if not lignes:
+        return ""
+    return (f'<h2>Le score de résilience en détail</h2>'
+            f'<ul class="piliers">{"".join(lignes)}</ul>'
+            f'<p class="note-piliers"><a href="{seo.URL_METHODE}">Comment la note est calculée</a></p>')
+
 # Deux des huit gares à grande vitesse portent « TGV » dans leur nom officiel
 # (Vendôme–Villiers-sur-Loir, Le Creusot–Montceau–Montchanin), et elles pèsent
 # un quart des biens concernés. Écrire « en TGV depuis Vendôme–Villiers-sur-Loir
@@ -240,7 +366,7 @@ def _gare_proche(bien: dict) -> str:
         return ""
     quoi = _SEGMENT_GARE.get(train.get("segment") or "")
     return (f"{train['nom']}{f' ({quoi})' if quoi else ''} "
-            f"à {train.get('km')} km")
+            f"à {_virgule(train.get('km'))} km")
 
 
 def _gare_vers_paris(bien: dict) -> str:
@@ -263,7 +389,7 @@ def _gare_vers_paris(bien: dict) -> str:
     if vite:
         depuis = _SUFFIXE_TGV.sub("", depuis)
     if ailleurs:
-        return f"{temps}{vite} depuis {depuis} (à {train.get('km_vers_paris')} km)"
+        return f"{temps}{vite} depuis {depuis} (à {_virgule(train.get('km_vers_paris'))} km)"
     return f"{temps}{vite} depuis cette gare"
 
 
@@ -350,7 +476,8 @@ def climat_html(v: dict | None) -> str:
                 f'<span class="l-nom">{_e(ligne["libelle"])}{unite}</span>'
                 f'<span class="l-chiffres">{avant}<b>{_e(ligne["horizon"])}</b>{ecart}</span>'
                 f'</div>{barres}{rang}</div>')
-        themes.append(f'<h3>{_e(t["icone"])} {_e(t["nom"])}</h3>{"".join(lignes)}')
+        themes.append(f'<h3>{_ico("chaleur" if t.get("code") == "chaleur" else "eau")} '
+                      f'{_e(t["nom"])}</h3>{"".join(lignes)}')
     legende = (f'<p class="legende-climat"><span><i class="b-ref"></i>{_e(v["legende"][0])}</span>'
                f'<span><i class="b-fut"></i>{_e(v["legende"][1])}</span></p>')
     return (f'<section class="climat"><h2>{_e(v["titre"])}</h2>'
@@ -429,12 +556,31 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
     # Les faits avant la prose : on veut d'abord savoir SI l'on continue à
     # lire. Voir redaction.bloc_de_faits.
     faits_courts = "".join(
-        f'<li><span aria-hidden="true">{_e(picto)}</span> {_e(texte)}</li>'
+        f'<li>{_ico(_PICTO_VERS_ICONE.get(picto, ""))} {_e(texte)}</li>'
         for picto, texte in redaction.bloc_de_faits(bien))
 
     suite = "".join(
         f'<li><a href="{_e(base + seo.url_annonce(v))}">{_e(seo.titre_annonce(v))}</a></li>'
         for v in voisins[:8])
+
+    # Les deux actions de la page. Elles n'existaient qu'en bas, sous quatre
+    # mille pixels d'analyse et de projections climatiques : qui venait pour
+    # l'annonce devait tout faire défiler pour la trouver. Elles sont donc
+    # AUSSI en tête — la section « Comment visiter ce bien ? » garde les
+    # siennes, avec l'explication qui les accompagne.
+    actions = (
+        (f'<a class="bouton" href="{_e(bien.get("url"))}" rel="nofollow noopener">'
+         f'Voir l’annonce chez {_e(bien.get("agence") or "l’agence")} {_ico("sortie")}</a>'
+         if bien.get("url") else "")
+        + f'<a class="bouton clair" href="{_e(base)}/?bien={_e(bien.get("id"))}">'
+          f'Ouvrir la carte et les filtres</a>')
+
+    score = bien.get("score_total")
+    classe = (bien.get("score_detail") or {}).get("classe") or ""
+    bloc_score = (
+        f'<div class="score-bloc {_niveau(score)}" title="Score de résilience">'
+        f'<b>{round(score)}</b><i>/100</i><small>résilience</small></div>'
+    ) if score else ""
 
     # Le climat de 2050 : projections DRIAS de la maille la plus proche. La
     # section n'existe que si les données existent — voir app/climat.py.
@@ -449,15 +595,24 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 <h1>{_e(seo.titre_annonce(bien))}</h1>
 <p class="chapeau">{_e(seo.description_annonce(bien))}</p>
 {f'<img src="{_e(bien["photo"])}" alt="{_e(seo.titre_annonce(bien))}" loading="lazy" onerror="this.remove()">' if bien.get("photo") else ""}
+<div class="resume">
+<div class="resume-texte">
 <p class="prix">{_e(seo._euros(bien.get("prix")) or "Prix sur demande")}</p>
+{f'<p class="classe-score">{_e(classe)}</p>' if classe else ""}
+</div>
+{bloc_score}
+</div>
 {'<p class="viager">Vente en viager : le prix affiché est le <b>bouquet</b>, '
  'pas la valeur du bien. Le prix au m² et la comparaison au marché local ne '
  'valent donc pas pour cette annonce.</p>' if bien.get("viager") else ""}
+<p class="actions">{actions}</p>
 {f'<ul class="faits-courts">{faits_courts}</ul>' if faits_courts else ""}
 
 <h2>Que disent les données sur ce bien ?</h2>
 {prose}
 {aerienne}
+
+{_piliers_html(bien)}
 
 <h2>Caractéristiques et analyse en bref</h2>
 <dl>{"".join(faits)}{"".join(analyse)}</dl>
@@ -469,13 +624,10 @@ def page_annonce(bien: dict, voisins: list[dict], base: str = seo.SITE,
 <p>L'annonce est publiée par <strong>{_e(bien.get("agence") or "une agence partenaire")}</strong>.
 Refuge Immo ne prend pas de mandat : la visite et la transaction se font
 directement avec elle.</p>
-<p>
-{f'<a class="bouton" href="{_e(bien.get("url"))}" rel="nofollow noopener">Voir l’annonce chez {_e(bien.get("agence") or "l’agence")}</a>' if bien.get("url") else ""}
-<a class="bouton clair" href="{_e(base)}/?bien={_e(bien.get("id"))}">Ouvrir la carte et les filtres</a>
-</p>
+<p class="actions">{actions}</p>
 {f'<p class="note">Annonce vérifiée en ligne le {_e(bien.get("revue_le"))}. Un bien peut avoir été vendu depuis.</p>' if bien.get("revue_le") else ""}
 
-{f'<h2>Autres biens du même terroir</h2><ul>{suite}</ul>' if suite else ""}
+{f'<h2>Autres biens du même terroir</h2><ul class="voisins">{suite}</ul>' if suite else ""}
 """
     structure = _jsonld(
         seo.jsonld_annonce(bien, base),

@@ -219,16 +219,6 @@ body {
 .score-pastille.n3 { background: var(--n3); color: #fff; }
 .score-pastille.n4 { background: var(--n4); color: #fff; }
 
-.score-jeton {
-  flex: none; width: 52px; height: 52px; border-radius: 12px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 18px; line-height: 1; border: 2px solid var(--n4);
-}
-.score-jeton small { font-weight: 600; font-size: 10px; opacity: .8; margin-top: 2px; }
-.score-jeton.n1 { background: var(--n1); color: var(--encre); }
-.score-jeton.n2 { background: var(--n2); color: #14281c; }
-.score-jeton.n3 { background: var(--n3); color: #fff; }
-.score-jeton.n4 { background: var(--n4); color: #fff; }
 .fiche h3 { margin: 0; font-size: 15px; line-height: 1.3; }
 .fiche .classe { font-size: 12px; color: var(--accent); font-weight: 600; }
 /* Le nom de l'enseigne, tel qu'elle l'écrit. Les majuscules forcées
@@ -240,7 +230,8 @@ body {
   padding-top: 8px; border-top: 1px solid var(--bordure);
 }
 
-.jetons { display: flex; flex-wrap: wrap; gap: 5px; }
+.jetons { display: flex; flex-wrap: wrap; gap: 8px; }
+.modale .jetons .badge, .modale .jetons .alerte { font-size: 13px; padding: 4px 10px; display: inline-flex; align-items: center; gap: 6px; }
 .badge, .alerte {
   font-size: 11px; padding: 2px 8px; border-radius: 6px; border: 1px solid;
 }
@@ -265,23 +256,49 @@ body {
   color: var(--encre); display: flex; align-items: center; justify-content: center; padding: 0;
 }
 .fermer:hover { background: #fff; }
-/* Le titre de l'agence n'est plus le premier élément de la fiche : il vient
-   après le prix et les caractéristiques, en accroche. */
+/* Le titre est le nôtre — le type et le lieu — et il ouvre la fiche. Trois
+   niveaux, trois tailles franches : où (18), combien (30), quoi (15). */
 .modale h2 {
-  margin: 8px 0 2px; font-size: 15px; font-weight: 600; padding-right: 30px;
-  color: var(--encre-2); line-height: 1.35;
+  margin: 0 0 6px; font-size: 18px; font-weight: 700; line-height: 1.3;
+  color: var(--encre); text-wrap: balance;
 }
-.prix-modale { font-size: 26px; font-weight: 800; letter-spacing: -.4px; line-height: 1.1; }
+.modale h2 .cp { font-weight: 400; color: var(--encre-2); }
+.prix-modale {
+  font-size: 30px; font-weight: 800; letter-spacing: -.5px; line-height: 1.1;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+}
 .prix-modale .prix-m2 {
-  font-size: 13px; font-weight: 500; color: var(--encre-2); margin-left: 6px;
+  font-size: 14px; font-weight: 500; color: var(--encre-2); letter-spacing: 0;
+  white-space: nowrap; display: inline-block;   /* « 1 893 » et « €/m² » ne se séparent pas */
 }
-.fiche-entete .specs { font-size: 14.5px; color: var(--encre-2); margin-top: 4px; }
+.fiche-entete .specs { font-size: 15px; color: var(--encre-2); margin-top: 8px; }
 .fiche-entete .specs b { color: var(--encre); font-weight: 700; }
 .fiche-entete .lieu { font-size: 14px; color: var(--encre-2); margin-top: 2px; }
 .modale .lieu { color: var(--encre-2); }
-.modale h4 { margin: 18px 0 8px; font-size: 13px; font-weight: 700; color: var(--encre-2); }
+/* Les titres de section étaient en 13 px gris : plus petits et plus pâles
+   que le texte qu'ils coiffaient, ils ne structuraient rien. */
+.modale h3 {
+  margin: 0 0 12px; font-size: 16px; font-weight: 700; color: var(--encre);
+  display: flex; align-items: baseline; gap: 8px;
+}
+.modale h3 .h-note { font-size: 13px; font-weight: 500; color: var(--encre-2); }
+.modale h4 { margin: 18px 0 8px; font-size: 14px; font-weight: 700; color: var(--encre); }
+
+/* Une section = un bloc, séparé du précédent par un filet et le même blanc.
+   Il y avait deux panneaux encadrés et trois sections nues, collées les unes
+   aux autres : la dernière ligne des risques touchait le cadre du climat. */
+.modale .bloc { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--bordure); }
+.modale .bloc:empty { display: none; }
+
+/* Les icônes : un trait, de la couleur du texte qu'elles accompagnent. */
+.ico {
+  width: 1.15em; height: 1.15em; flex: none; vertical-align: -.2em;
+  fill: none; stroke: currentColor; stroke-width: 1.7;
+  stroke-linecap: round; stroke-linejoin: round;
+}
 .modale .description { font-size: 14.5px; color: var(--encre); line-height: 1.7; }
-.modale .source-ligne { margin-top: 14px; font-size: 12.5px; color: var(--encre-2); }
+.fiche-source { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--bordure); }
+.modale .source-ligne { margin: 4px 0 0; font-size: 13px; color: var(--encre-2); }
 .modale .source-ligne a { color: var(--accent); }
 /* Bien non reconstaté depuis longtemps : la collecte passe chez les agences
    à tour de rôle, il a pu être vendu entre-temps. On le dit plutôt que de
@@ -289,22 +306,56 @@ body {
 .modale .source-ligne.perime { color: #8a5a12; font-weight: 600; }
 
 /* entête de la fiche */
-.fiche-entete { display: flex; gap: 14px; align-items: flex-start; }
-.score-jeton.grand { width: 64px; height: 64px; font-size: 22px; border-radius: 14px; }
-.classe-grande { font-weight: 700; color: var(--accent); margin-top: 4px; font-size: 13.5px; }
+.fiche-entete { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; }
+.fiche-titre { min-width: 0; }
 
-/* tuiles de chiffres clés */
-.stats {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
-  gap: 8px; margin: 16px 0 4px;
+/* Le score, à droite du prix : c'est la seconde chose qu'on vient lire ici,
+   et la seule qu'aucun portail ne donne. Le chiffre reste écrit à côté de la
+   couleur, comme partout. */
+.score-bloc {
+  flex: none; min-width: 76px; padding: 10px 12px 8px; border-radius: 14px;
+  display: flex; flex-direction: column; align-items: center; line-height: 1;
+  border: 2px solid var(--n4);
 }
-.stat {
-  background: var(--fond); border: 1px solid var(--bordure); border-radius: 10px;
-  padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; min-width: 0;
+.score-bloc b { font-size: 30px; font-weight: 800; letter-spacing: -.5px; }
+.score-bloc i { font-style: normal; font-size: 11px; font-weight: 700; opacity: .8; margin-top: 2px; }
+.score-bloc small { font-size: 11px; font-weight: 600; margin-top: 6px; opacity: .9; }
+.score-bloc.n1 { background: var(--n1); color: var(--encre); }
+.score-bloc.n2 { background: var(--n2); color: #14281c; }
+.score-bloc.n3 { background: var(--n3); color: #fff; }
+.score-bloc.n4 { background: var(--n4); color: #fff; }
+.classe-grande { font-weight: 600; color: var(--accent); margin: 12px 0 0; font-size: 14px; }
+
+/* Les deux actions de la fiche. L'une mène au bien, l'autre non : elles
+   n'ont donc pas le même poids. */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.btn-principal, .btn-secondaire {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 20px; border-radius: 10px;
+  font-weight: 700; font-size: 15px; text-decoration: none; text-align: center;
 }
-.stat .etiquette { font-size: 11.5px; color: var(--encre-2); }
-.stat .valeur { font-weight: 700; font-size: 15px; white-space: nowrap; }
-.stat .sous { font-size: 11px; color: var(--encre-2); }
+.btn-principal { background: var(--marque); color: var(--sur-marque); border: 1px solid var(--marque); flex: 1 1 260px; }
+.btn-principal:hover { background: var(--accent); border-color: var(--accent); }
+.btn-secondaire { background: var(--carte-fond); color: var(--marque); border: 1px solid var(--marque); }
+.btn-secondaire:hover { background: var(--badge-fond); }
+.btn-principal:active, .btn-secondaire:active { transform: translateY(1px); }
+@media (max-width: 640px) { .actions > a { flex: 1 1 100%; } }
+
+/* Les faits, une ligne chacun : libellé à gauche, valeur à droite. Deux
+   colonnes quand la place le permet, une seule sur téléphone. */
+.faits { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+.fait {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 10px 0; border-bottom: 1px solid var(--bordure); min-width: 0;
+}
+.fait dt { color: var(--encre-2); font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.fait dt .ico { vertical-align: 0; }
+.fait dd { margin: 0; text-align: right; min-width: 0; }
+.fait .valeur { display: block; font-weight: 700; font-size: 15px; }
+.fait .sous { display: block; font-size: 12.5px; color: var(--encre-2); margin-top: 2px; }
+.fait .nc { font-weight: 500; color: var(--encre-2); }
+@media (max-width: 640px) { .faits { grid-template-columns: minmax(0, 1fr); } }
+
 
 /* « TGV » sur la tuile « Paris en train ». Un mot, pas une couleur seule :
    comme la lettre du DPE, il se lit en noir et blanc et par un daltonien. */
@@ -324,21 +375,16 @@ body {
 .dpe-F { background: #b75d20; color: #fff; }  /* assombri : 3,36:1 → 4,57:1 */
 .dpe-G { background: #c0392b; color: #fff; }
 
-/* panneau du score */
-.panneau {
-  background: #fbfaf6; border: 1px solid var(--bordure); border-radius: 12px;
-  padding: 12px 16px 14px; margin-top: 14px;
-}
-.panneau h4 { margin-top: 0; }
-.aucun { color: var(--encre-2); font-size: 13px; margin: 4px 0; }
+.aucun { color: var(--encre-2); font-size: 14px; margin: 4px 0; display: flex; align-items: center; gap: 8px; }
 .note-detail { font-size: 12.5px; color: var(--encre-2); margin: 8px 0 0; }
 
 /* jauges des piliers du score */
-.pilier { margin-top: 8px; font-size: 13px; }
+.pilier { margin-top: 12px; font-size: 14px; }
 .pilier-tete { display: grid; grid-template-columns: 200px 1fr 56px; gap: 10px; align-items: center;
   cursor: pointer; list-style: none; }
 .pilier-tete::-webkit-details-marker { display: none; }
-.pilier .nom { color: var(--encre); }
+.pilier .nom { color: var(--encre); display: flex; align-items: center; gap: 8px; }
+.pilier .nom .ico { color: var(--accent); }
 .pilier .info-i { color: var(--encre-2); font-size: 11px; }
 .pilier[open] .info-i { color: var(--accent); }
 .pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
@@ -350,7 +396,13 @@ body {
 .vigilances li { margin-top: 2px; }
 .jauge { height: 12px; background: #ece8dd; border-radius: 6px; overflow: hidden; }
 .jauge > div { height: 100%; background: var(--n3); border-radius: 6px; min-width: 2px; }
-@media (max-width: 600px) { .pilier-tete { grid-template-columns: 132px 1fr 48px; } }
+/* Sur téléphone, le nom du critère prend sa ligne : dans une colonne de
+   132 px, « Autonomie alimentaire » se coupait en deux et son ⓘ tombait seul
+   sur une troisième. */
+@media (max-width: 600px) {
+  .pilier-tete { grid-template-columns: 1fr 56px; row-gap: 6px; }
+  .pilier .nom { grid-column: 1 / -1; }
+}
 
 /* légende Leaflet */
 .legende-carte {
@@ -469,15 +521,18 @@ body {
    Les vignettes verrouillées ont disparu avec le bloc : elles laissaient
    croire que d'autres photos attendaient derrière un e-mail, alors que le
    catalogue ne détient rien de plus que ce qu'il montre. */
+/* En pied de fiche, sur une ligne : c'est une proposition pour qui n'a pas
+   trouvé son bien ici, pas la première chose à lui dire. */
 .alerte-bloc {
-  display: flex; flex-direction: column; gap: 4px;
-  margin: 16px 0 4px; padding: 14px; border: 1px solid var(--badge-bord);
-  border-radius: 12px; background: linear-gradient(180deg, #f3f8f3, #edf3ed);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px;
+  margin: 24px 0 0; padding: 16px; border: 1px solid var(--badge-bord);
+  border-radius: 12px; background: var(--badge-fond);
 }
-.alerte-bloc strong { font-size: 14.5px; }
-.alerte-bloc span { font-size: 12.5px; color: var(--encre-2); }
+.alerte-bloc > div { display: flex; flex-direction: column; gap: 4px; flex: 1 1 280px; }
+.alerte-bloc strong { font-size: 15px; }
+.alerte-bloc span { font-size: 13px; color: var(--encre-2); line-height: 1.45; }
 .btn-alerte {
-  align-self: flex-start; margin-top: 8px; padding: 8px 14px;
+  flex: none; padding: 12px 16px; min-height: 44px; display: inline-flex; align-items: center;
   border-radius: 8px; background: var(--accent); color: #fff;
   font-weight: 600; text-decoration: none;
 }
@@ -525,16 +580,14 @@ html, body { overflow-x: clip; }
   .marque { font-size: 20px; }
   .liste { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, 1fr); }
-  .stat .valeur { font-size: 14px; white-space: normal; }
-  .barre-resultats { gap: 6px; }
+    .barre-resultats { gap: 6px; }
   .note-estimation { font-size: 11px; }
   .modale { padding: 18px 16px 22px; border-radius: 12px; }
   .modale h2 { font-size: 18px; }
   .photo-grande { height: 190px; }
   .alerte-bloc { padding: 12px; }
   .fiche-entete { gap: 10px; }
-  .score-jeton.grand { width: 54px; height: 54px; font-size: 19px; }
-  .terroir { padding: 6px 10px; }
+    .terroir { padding: 6px 10px; }
 }
 
 /* Petit ⓘ d'aide à côté d'un filtre peu évident (ex. habitat troglodyte). */
@@ -596,6 +649,9 @@ html, body { overflow-x: clip; }
 .climat { background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: 12px;
   padding: 12px 16px 14px; }
 .climat h4 { margin-top: 0; }
+.modale .climat { border: 0; padding: 0; background: none; }
+.theme-climat { display: flex; align-items: center; gap: 8px; }
+.modale .theme-climat { margin: 24px 0 4px; font-size: 15px; }
 .theme-climat { font-size: 13.5px; margin: 14px 0 2px; color: var(--encre); }
 .cles-climat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .cle { border-radius: 10px; padding: 8px 11px; background: #fbf3ec; border-left: 4px solid #d9622b;

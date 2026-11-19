@@ -257,10 +257,32 @@ def _acces(bien: dict) -> str:
             phrase += f", à {_distance(train['km'])}"
         if train.get("minutes_paris"):
             heures, reste = divmod(round(train["minutes_paris"]), 60)
-            phrase += (f", d'où Paris se rejoint en "
-                       f"{f'{heures} h {reste:02d}' if heures else f'{reste} min'}")
+            duree = f"{heures} h {reste:02d}" if heures else f"{reste} min"
+            depart = _gare_du_temps(train)
+            if depart:
+                # Le temps part d'une AUTRE gare que la plus proche — deux
+                # fois sur trois depuis l'import du référentiel SNCF. Écrire
+                # « Écommoy, d'où Paris se rejoint en 55 min » prêtait à une
+                # halte le trajet du Mans, à vingt-trois kilomètres de là.
+                phrase += f". Paris se rejoint en {duree} depuis {depart[0]}"
+                if depart[1] is not None:
+                    phrase += f", à {_distance(depart[1])}"
+            else:
+                phrase += f", d'où Paris se rejoint en {duree}"
         phrases.append(phrase + ".")
     return " ".join(phrases)
+
+
+def _gare_du_temps(train: dict) -> tuple[str, float | None] | None:
+    """La gare d'où part le temps vers Paris, si ce n'est pas la plus proche.
+
+    Renvoie (nom, distance) ou None quand les deux gares n'en font qu'une —
+    y compris pour les annonces d'avant l'import, qui n'ont pas le champ.
+    """
+    depart = train.get("nom_vers_paris")
+    if not depart or depart == train.get("nom"):
+        return None
+    return depart, train.get("km_vers_paris")
 
 
 def _vigilance(bien: dict) -> str:
@@ -341,6 +363,9 @@ def bloc_de_faits(bien: dict) -> list[tuple[str, str]]:
             acces += f" à {_distance(train['km'])}"
         if train.get("minutes_paris"):
             acces += f" · Paris en {_heures(train['minutes_paris'])}"
+            depart = _gare_du_temps(train)
+            if depart:
+                acces += f" depuis {depart[0]}"
         lignes.append(("🚉", acces))
     elif bien.get("temps_voiture_min"):
         lignes.append(("🚗", f"Paris en {_heures(bien['temps_voiture_min'])} de route"))

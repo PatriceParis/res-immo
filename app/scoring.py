@@ -384,9 +384,19 @@ def _badges(f: dict, annonce: dict, piliers: dict) -> list[str]:
     if temps is not None and temps <= 120:
         badges.append("À moins de 2 h de Paris")
     train = annonce.get("train")
-    if (train and (train.get("km") if train.get("km") is not None else 99) <= 15
-            and train.get("minutes_paris") is not None):
-        badges.append(f"Gare à {train['km']} km · Paris en {train['minutes_paris']} min")
+    # La distance est celle de la gare QUI PORTE le temps, pas de la plus
+    # proche. Depuis l'import du référentiel SNCF ce sont deux gares
+    # différentes deux fois sur trois, et le badge annonçait « Gare à 14,7 km ·
+    # Paris en 55 min » pour une halte d'où l'on ne rejoint pas Paris en
+    # 55 minutes : ce temps-là part du Mans, à 23,6 km. Même défaut que celui
+    # corrigé dans le menu des gares, resté dans le badge.
+    if train and train.get("minutes_paris") is not None:
+        km_gare = train.get("km_vers_paris")
+        if km_gare is None:               # annonces d'avant l'import, et tests
+            km_gare = train.get("km")
+        if km_gare is not None and km_gare <= 15:
+            badges.append(f"Gare à {str(km_gare).replace('.', ',')} km · "
+                          f"Paris en {train['minutes_paris']} min")
     if piliers["risques"]["points"] >= 18:
         badges.append("Faible exposition aux risques")
     return badges
