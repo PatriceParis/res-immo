@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.9,
+  "seconde": 2.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.0,
+  "seconde": 2.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,290 +23,284 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.0,
+  "seconde": 2.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.9,
+  "seconde": 4.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.5,
+  "seconde": 6.6,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.0,
+  "seconde": 7.1,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.0,
+  "seconde": 7.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.4,
+  "seconde": 7.6,
   "reseau": "capifrance",
-  "connues": 19176,
-  "ecartees": 2233
+  "connues": 19303,
+  "ecartees": 2295
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.4,
+  "seconde": 7.6,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.9,
+  "seconde": 7.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 28.7,
+  "seconde": 26.9,
   "reseau": "iad",
-  "n": 112899,
+  "n": 112109,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 30.0,
+  "seconde": 28.3,
   "reseau": "iad",
-  "notees": 25
+  "notees": 112
  },
  {
   "etape": "tentative_notee",
-  "seconde": 31.6,
+  "seconde": 30.1,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 32.0,
+  "seconde": 30.6,
   "reseau": "iad",
-  "connues": 19176,
-  "ecartees": 2233
+  "connues": 19303,
+  "ecartees": 2295
  },
  {
   "etape": "departement",
-  "seconde": 201.9,
+  "seconde": 194.8,
   "reseau": "iad",
-  "departement": "61",
+  "departement": "52",
   "visitees": 50,
-  "gardes": 31,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 31,
-   "vendu": 9,
-   "ecarte": 10,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 9,
-   "location": 1
-  },
-  "exemples": {
-   "hors_perimetre": "110 293 biens immobiliers à vendre",
-   "location": "Maison de ville 6 pièces de 130 m² à Sainte-Gauburge-Sainte-Colombe (61370)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 375.8,
-  "reseau": "iad",
-  "departement": "62",
-  "visitees": 50,
-  "gardes": 35,
-  "tronquee": true,
-  "etats": {
-   "garde": 35,
+   "garde": 41,
    "vendu": 7,
-   "ecarte": 8,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 4,
-   "prix_trop_haut": 3
+   "hors_perimetre": 1
   },
   "exemples": {
-   "location": "Maison de campagne 3 pièces de 64 m² à Lorgies (62840)",
-   "hors_perimetre": "Maison 5 pièces de 102 m² à Torcy (77200)",
-   "prix_trop_haut": "Maison d"
+   "location": "Maison de village 6 pièces de 141 m² à Viéville (52310)",
+   "hors_perimetre": "Maison 5 pièces de 117 m² à Richebourg (78550)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 536.3,
+  "seconde": 350.1,
   "reseau": "iad",
-  "departement": "02",
+  "departement": "70",
   "visitees": 50,
-  "gardes": 20,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 20,
-   "vendu": 1,
-   "ecarte": 29,
+   "garde": 40,
+   "vendu": 7,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "url_type_exclu": 6,
-   "titre_hors_cible:appartement": 19,
-   "location": 4
+   "hors_perimetre": 3
   },
   "exemples": {
-   "url_type_exclu": "Immeuble de 228 m² à Château-Thierry (02400)",
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 74 m² à CHÂTEAU-THIERRY (02400)",
-   "location": "Maison 2 pièces de 33 m² à CHÂTEAU-THIERRY (02400)"
+   "hors_perimetre": "Pavillon 4 pièces de 90 m² à Flagy (77940)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 604.4,
+  "seconde": 504.0,
   "reseau": "iad",
-  "departement": "51",
-  "visitees": 17,
-  "gardes": 17,
+  "departement": "80",
+  "visitees": 50,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 17,
-   "vendu": 0,
-   "ecarte": 0,
+   "garde": 33,
+   "vendu": 15,
+   "ecarte": 2,
    "illisible": 0
   },
-  "motifs": {},
-  "exemples": {}
+  "motifs": {
+   "outre_mer": 1,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "outre_mer": "Maison 3 pièces de 107 m² à Trois rivières (97114)",
+   "hors_perimetre": "Longère 10 pièces de 266 m² à Berneuil (17460)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 606.0,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 33,
+  "gardes": 24,
+  "tronquee": true,
+  "etats": {
+   "garde": 24,
+   "vendu": 3,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 1 pièce de 270 m² à Sainte Marie (35600)"
+  }
  },
  {
   "etape": "reseau_debut",
-  "seconde": 604.4,
+  "seconde": 606.0,
   "reseau": "safti",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 604.9,
+  "seconde": 606.5,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.3,
+  "seconde": 608.3,
   "reseau": "safti",
-  "n": 29053,
+  "n": 29026,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 607.0,
+  "seconde": 609.1,
   "reseau": "safti",
-  "notees": 52
+  "notees": 100
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.4,
+  "seconde": 609.6,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.8,
+  "seconde": 610.0,
   "reseau": "safti",
-  "connues": 19219,
-  "ecartees": 2284
+  "connues": 19253,
+  "ecartees": 2254
  },
  {
   "etape": "departement",
-  "seconde": 787.9,
+  "seconde": 787.1,
   "reseau": "safti",
-  "departement": "80",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 3,
-   "ecarte": 8,
-   "illisible": 1
+   "garde": 43,
+   "vendu": 0,
+   "ecarte": 7,
+   "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 4
+   "hors_perimetre": 5,
+   "prix_trop_haut": 2
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à SAINT-GRATIEN de 70m²",
-   "prix_trop_haut": "Maison à vendre à ABBEVILLE de 303m²"
+   "hors_perimetre": "Maison à vendre à TERNAY de 78m²",
+   "prix_trop_haut": "Maison à vendre à BLOIS de 360m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 963.5,
+  "seconde": 972.8,
   "reseau": "safti",
-  "departement": "88",
+  "departement": "59",
   "visitees": 50,
-  "gardes": 36,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 36,
-   "vendu": 4,
-   "ecarte": 9,
-   "illisible": 1
+   "garde": 48,
+   "vendu": 1,
+   "ecarte": 1,
+   "illisible": 0
   },
   "motifs": {
-   "ni_surface_ni_prix_credible": 2,
-   "prix_trop_haut": 5,
-   "hors_perimetre": 2
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "ni_surface_ni_prix_credible": "Maison à vendre à GEMMELAINCOURT de 55m²",
-   "prix_trop_haut": "Maison à vendre à BAN-SUR-MEURTHE-CLEFCY de 280m²",
-   "hors_perimetre": "Maison à vendre à LES FORGES de 95m²"
+   "prix_trop_haut": "Maison à vendre à DUNKERQUE de 186m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1151.0,
+  "seconde": 1174.2,
   "reseau": "safti",
-  "departement": "08",
+  "departement": "60",
   "visitees": 50,
   "gardes": 44,
   "tronquee": true,
   "etats": {
    "garde": 44,
-   "vendu": 1,
-   "ecarte": 5,
+   "vendu": 0,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5
+   "prix_trop_haut": 6
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à APREMONT de 95m²"
+   "prix_trop_haut": "Maison à vendre à LAMORLAYE de 255m²"
   }
  },
  {
   "etape": "departement",
   "seconde": 1204.7,
   "reseau": "safti",
-  "departement": "10",
-  "visitees": 12,
-  "gardes": 12,
+  "departement": "45",
+  "visitees": 8,
+  "gardes": 7,
   "tronquee": true,
   "etats": {
-   "garde": 12,
+   "garde": 7,
    "vendu": 0,
    "ecarte": 0,
-   "illisible": 0
+   "illisible": 1
   },
   "motifs": {},
   "exemples": {}
@@ -314,6 +308,6 @@
  {
   "etape": "fin",
   "seconde": 1204.7,
-  "gardes": 233
+  "gardes": 280
  }
 ]
