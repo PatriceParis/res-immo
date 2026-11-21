@@ -2,71 +2,114 @@
  "minutes": 28.1,
  "agences": [
   {
-   "agence": "France4U",
-   "secondes": 52,
-   "pages": 23,
-   "gardes": 4,
+   "agence": "Immobilière Scarponaise",
+   "secondes": 65,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 19,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
+   "adresses_ecartees": 30,
+   "sitemap_dates": 17,
+   "sitemap": "ok 17",
+   "deja_ecartees": 1,
+   "motifs": {
+    "titre_hors_cible:28 annonces": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:28 annonces": {
+     "url": "https://www.immoscarponaise.fr/vente/1",
+     "titre": "28 Annonces de ventes immobilières"
+    }
+   }
+  },
+  {
+   "agence": "Immobilière de France",
+   "secondes": 45,
+   "pages": 10,
+   "gardes": 2,
+   "vendus": 0,
+   "ecartes": 7,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Trouvez le bien de vos rêves avec",
+   "deja_ecartees": 2,
+   "illisible_exemple": {
+    "url": "https://immobilieredefrance.com/fr/propriete/location+appartement+saint-omer+appart-lumineux-2ch-st-omer-centre-ville+83195346",
+    "cause": "aucune annonce lue",
+    "titre": "Appart lumineux 2ch st Omer, centre ville",
+    "octets": 92734
+   },
+   "motifs": {
+    "titre_hors_cible:appartement": 2,
+    "titre_hors_cible:local professionnel": 1,
+    "titre_hors_cible:local commercial": 1,
+    "titre_hors_cible:investissement locatif": 1,
+    "titre_hors_cible:terrain a batir": 1,
+    "titre_hors_cible:studio": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:appartement": {
+     "url": "https://immobilieredefrance.com/fr/propriete/location+appartement+berck+residence-de-standing-bel-appartement-de-41-19m2+83233276",
+     "titre": "Résidence de Standing, bel appartement de 41.19m2"
+    },
+    "titre_hors_cible:local professionnel": {
+     "url": "https://immobilieredefrance.com/fr/propriete/location+commerce+eperlecques+local-professionnel-de-25-m-salle-d-attente-a-eperelecques+87477002",
+     "titre": "Local professionnel de 25 m² + salle d'attente à EPERELECQUES"
+    },
+    "titre_hors_cible:local commercial": {
+     "url": "https://immobilieredefrance.com/fr/propriete/location+commerce+berck+local-commercial-de-52-56-m-berck-plage+85471971",
+     "titre": "Local commercial de 52.56 m² - BERCK PLAGE"
+    },
+    "titre_hors_cible:investissement locatif": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+maison+hesdigneul-les-boulogne+maison-independante-investissement-locatif+85165597",
+     "titre": "Maison indépendante - investissement locatif"
+    },
+    "titre_hors_cible:terrain a batir": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+terrain+lumbres+terrain-a-batir+86185701",
+     "titre": "Terrain à bâtir"
+    },
+    "titre_hors_cible:studio": {
+     "url": "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+studio-avec-jardin+87559380",
+     "titre": "STUDIO avec JARDIN"
+    }
+   }
+  },
+  {
+   "agence": "Immobilière de Lille",
+   "secondes": 8,
+   "pages": 2,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 34,
    "sitemap_dates": 23,
    "sitemap": "ok 23",
+   "deja_ecartees": 21,
    "motifs": {
-    "ni_surface_ni_prix_credible": 19
+    "titre_hors_cible:maisons a vendre": 2
    },
    "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.france4u.eu/property-and-houses-for-sale-in-auvergne.html",
-     "titre": "property and houses for sale in Auvergne"
+    "titre_hors_cible:maisons a vendre": {
+     "url": "https://www.immobiliere-de-lille.fr/vente/maison/mouvaux",
+     "titre": "Découvrez nos 17 maisons à vendre Mouvaux - Immobilière de Lille"
     }
    }
   },
   {
-   "agence": "GIN Immobilier",
-   "secondes": 66,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 114,
-   "sitemap_dates": 194,
-   "sitemap": "ok 194",
-   "deja_ecartees": 4,
-   "motifs": {
-    "titre_hors_cible:terrain a batir": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain a batir": {
-     "url": "https://www.gin-immobilier.com/vente/198-ste-marguerite-sur-duclair/terrain-a-batir/511-exclusivite-sainte-marguerite-sur-duclair",
-     "titre": "Terrain à batir 1 252 m² Sainte-Marguerite-sur-Duclair (76480)"
-    }
-   }
-  },
-  {
-   "agence": "GSM Immobilier",
-   "secondes": 242,
-   "pages": 32,
-   "gardes": 6,
-   "vendus": 26,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 98,
-   "sitemap": "ok 250",
-   "deja_ecartees": 34
-  },
-  {
-   "agence": "Girault Immo",
-   "secondes": 53,
+   "agence": "Indicateur Vendômois",
+   "secondes": 58,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -75,39 +118,14 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 29,
-   "sitemap": "ok 29",
-   "deja_ecartees": 5
+   "adresses_ecartees": 91,
+   "sitemap_dates": 245,
+   "sitemap": "ok 245",
+   "deja_ecartees": 67
   },
   {
-   "agence": "Groupe Centrum",
-   "secondes": 62,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 119,
-   "sitemap_dates": 44,
-   "sitemap": "ok 44",
-   "deja_ecartees": 4,
-   "motifs": {
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.centrum-immobilier.fr/vente/-/villa/t15/87044-villa-de-luxe-en-vente-proche-plage-7-chambres/",
-     "titre": "Villa de luxe en vente, proche plage 7 chambres"
-    }
-   }
-  },
-  {
-   "agence": "Groupe123immo",
-   "secondes": 56,
+   "agence": "Investimmo",
+   "secondes": 54,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -116,70 +134,13 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 81,
-   "sitemap_dates": 223,
-   "sitemap": "ok 223",
-   "deja_ecartees": 16
-  },
-  {
-   "agence": "Gueudry",
-   "secondes": 65,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 165,
-   "sitemap": "ok 165",
-   "deja_ecartees": 1,
-   "illisible_exemple": {
-    "url": "https://www.gueudry.fr/maison-neuve-construction/",
-    "cause": "aucune annonce lue",
-    "titre": "Maison neuve construction : les étapes clés | Gueudry",
-    "octets": 136137
-   }
-  },
-  {
-   "agence": "HF Immobilier",
-   "secondes": 25,
-   "pages": 4,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 6,
-   "sitemap": "ok 6",
+   "adresses_ecartees": 56,
+   "sitemap_dates": 22,
+   "sitemap": "ok 22",
    "deja_ecartees": 2
   },
   {
-   "agence": "Habitat Immobilier",
-   "secondes": 108,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 2,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 62,
-   "sitemap": "ok 133",
-   "illisible_exemple": {
-    "url": "https://www.habitat-immobilier.fr/vente/vente-maison-ver-sur-launette,VM344",
-    "cause": "aucune annonce lue",
-    "titre": "Habitat Immobilier | Agences immobilières Oise &amp; Seine-et-Marne",
-    "octets": 917000
-   }
-  },
-  {
-   "agence": "Hamaris",
+   "agence": "J.B. Immobilier",
    "secondes": 61,
    "pages": 8,
    "gardes": 8,
@@ -189,34 +150,14 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 17,
-   "sitemap": "ok 17"
+   "adresses_ecartees": 16,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 1
   },
   {
-   "agence": "Helman Immobilier",
-   "secondes": 244,
-   "pages": 37,
-   "gardes": 1,
-   "vendus": 35,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "temps de l'agence épuisé",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 89,
-   "sitemap": "ok 460",
-   "deja_ecartees": 215,
-   "illisible_exemple": {
-    "url": "https://www.helman-immobilier.com/vente/entrepot",
-    "cause": "aucune annonce lue",
-    "titre": "Maisons de qualité à vendre à Saint-Omer et les Hauts-de-France chez Helman Immobilier",
-    "octets": 984326
-   }
-  },
-  {
-   "agence": "Human Immobilier",
-   "secondes": 60,
+   "agence": "JF Meyer",
+   "secondes": 66,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -225,104 +166,125 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 6434,
-   "sitemap_dates": 14717,
-   "sitemap": "ok 14737",
+   "adresses_ecartees": 18,
+   "sitemap_dates": 35,
+   "sitemap": "ok 35",
    "deja_ecartees": 1
   },
   {
-   "agence": "ID Immobilier",
-   "secondes": 68,
-   "pages": 12,
+   "agence": "Jacques Klein Immeubles",
+   "secondes": 82,
+   "pages": 11,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 3,
-   "illisibles": 1,
+   "ecartes": 1,
+   "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 121,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
+   "adresses_ecartees": 40,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 3,
    "motifs": {
-    "titre_hors_cible:120 biens": 1,
-    "titre_hors_cible:17 maisons": 1,
-    "titre_hors_cible:terrain a batir": 1
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:120 biens": {
-     "url": "https://www.id-immobilier.com/vente/1",
-     "titre": "120 biens immobiliers à vendre | ID Immobilier"
-    },
-    "titre_hors_cible:17 maisons": {
-     "url": "https://www.id-immobilier.com/vente/maison/1",
-     "titre": "17 Maisons en vente"
-    },
-    "titre_hors_cible:terrain a batir": {
-     "url": "https://www.id-immobilier.com/vente/124-pagny-sur-moselle/terrain-a-batir/48798-projet-9-maisons-a-pagny-sur-moselle",
-     "titre": "Terrain à batir 3 647 m² Pagny-sur-Moselle (54530)"
+    "prix_trop_haut": {
+     "url": "https://jki-immo.fr/annonces/f5-metz-vallieres/",
+     "titre": "F5-METZ VALLIÈRES - Jacques Klein Immobilier"
     }
    },
    "illisible_exemple": {
-    "url": "https://www.id-immobilier.com/biens-vendus/1",
+    "url": "https://jki-immo.fr/annonces/maison-individuelle-metz-queuleu/",
     "cause": "aucune annonce lue",
-    "titre": "Nos biens vendus | ID Immobilier",
-    "octets": 185759
+    "titre": "Maison individuelle - METZ QUEULEU - Jacques Klein Immobilier",
+    "octets": 321923
    }
   },
   {
-   "agence": "Imaj Immobilier",
-   "secondes": 65,
-   "pages": 10,
+   "agence": "Jean Jaurès Immobilier",
+   "secondes": 68,
+   "pages": 11,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
+   "ecartes": 3,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 31,
-   "sitemap_dates": 26,
-   "sitemap": "ok 26",
-   "deja_ecartees": 1,
+   "adresses_ecartees": 48,
+   "sitemap_dates": 92,
+   "sitemap": "ok 92",
+   "deja_ecartees": 11,
    "motifs": {
-    "titre_hors_cible:annonces": 1,
-    "prix_trop_haut": 1
+    "titre_hors_cible:biens immobiliers": 1,
+    "prix_trop_haut": 2
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.immobi.com/vente/1",
-     "titre": "Annonces immobilières | Imaj Immobilier"
+    "titre_hors_cible:biens immobiliers": {
+     "url": "https://www.jean-jaures-immobilier.com/vente/1",
+     "titre": "Biens immobiliers à vendre | Jean Jaurès Immobilier"
     },
     "prix_trop_haut": {
-     "url": "https://www.immobi.com/vente/80-gerardmer/maison/3161-gerardmer",
-     "titre": "GERARDMER"
+     "url": "https://www.jean-jaures-immobilier.com/vente/1-troyes/maison/855-maison-bourgeoise-1879-4-chambres-maison-d-amis-6-stationnements-troyes-prestige",
+     "titre": "Maison 8pièce(s) 5chambre(s) 215 m² Troyes (10000)"
     }
    }
   },
   {
-   "agence": "Immo 3D",
-   "secondes": 24,
-   "pages": 11,
-   "gardes": 0,
+   "agence": "Joubeaux Immobilier",
+   "secondes": 61,
+   "pages": 8,
+   "gardes": 8,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 11,
+   "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 29,
-   "sitemap_dates": 11,
-   "sitemap": "ok 11",
+   "adresses_ecartees": 26,
+   "sitemap_dates": 46,
+   "sitemap": "ok 46",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "Jourdaine Aktion",
+   "secondes": 21,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 8,
+   "sitemap": "ok 10",
+   "deja_ecartees": 7
+  },
+  {
+   "agence": "Julie Étienne Immobilier",
+   "secondes": 131,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 3,
+   "ecartes": 0,
+   "illisibles": 41,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 70",
+   "deja_ecartees": 7,
    "illisible_exemple": {
-    "url": "https://www.immo3d-nancy.fr/annonces-vente/",
+    "url": "https://www.julieetienneimmobilier.fr/index.php/detail-annonce/?id=4",
     "cause": "aucune annonce lue",
-    "titre": "Titre de la page",
-    "octets": 1036
+    "titre": "Détails annonces - Julie Etienne Immobilier",
+    "octets": 58048
    }
   },
   {
-   "agence": "Immo Centre 61",
+   "agence": "L'Agence",
    "secondes": 2,
    "pages": 0,
    "gardes": 0,
@@ -333,186 +295,318 @@
    "robots": "ok",
    "sitemap_statut": 200,
    "adresses_ecartees": 3,
-   "sitemap_dates": 5,
-   "sitemap": "ok 5",
-   "deja_ecartees": 5
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "deja_ecartees": 2
   },
   {
-   "agence": "Immo Conseil Debever",
-   "secondes": 30,
-   "pages": 5,
-   "gardes": 3,
+   "agence": "L'Agence Smith",
+   "secondes": 65,
+   "pages": 9,
+   "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 51,
-   "sitemap_dates": 7,
-   "sitemap": "ok 7",
+   "adresses_ecartees": 23,
+   "sitemap_dates": 174,
+   "sitemap": "ok 176",
    "deja_ecartees": 2,
    "motifs": {
-    "titre_hors_cible:biens immobiliers": 1,
-    "titre_hors_cible:vente de maisons": 1
+    "titre_hors_cible:appartement": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:biens immobiliers": {
-     "url": "https://www.immoconseil-debever.com/vente/1",
-     "titre": "Biens immobiliers à vendre | Immobilier Conseil Debever"
-    },
-    "titre_hors_cible:vente de maisons": {
-     "url": "https://www.immoconseil-debever.com/vente/maisons/1",
-     "titre": "Vente de maisons | Immobilier Conseil Debever"
+    "titre_hors_cible:appartement": {
+     "url": "https://www.agence-smith.com/bien-immobilier/exclusivite-smith-appartement-t2-hypercentre/",
+     "titre": "L'agence Smith - EXCLUSIVITÉ SMITH: APPARTEMENT T2 - HYPERCENTRE"
     }
    }
   },
   {
-   "agence": "Immo Côte d'Opale",
-   "secondes": 28,
-   "pages": 6,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 15,
-   "sitemap": "ok 15",
-   "deja_ecartees": 9,
-   "motifs": {
-    "titre_hors_cible:7 annonces": 1,
-    "prix_trop_haut": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:7 annonces": {
-     "url": "https://www.immocotedopale.com/vente/1",
-     "titre": "7 Annonces de ventes immobilières"
-    },
-    "prix_trop_haut": {
-     "url": "https://www.immocotedopale.com/vente/15-berck/propriete/935-ensemble-immobilier-de-3-maisons-et-un-hangar-dont-une-maison-de-maitre",
-     "titre": "Propriete 11pièce(s) 8chambre(s) 450 m² Berck (62600)"
-    }
-   }
-  },
-  {
-   "agence": "Immo coup de coeur",
-   "secondes": 58,
-   "pages": 9,
+   "agence": "L'Aribout Immobilier",
+   "secondes": 61,
+   "pages": 8,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 58,
-   "sitemap_dates": 47,
-   "sitemap": "ok 47",
-   "deja_ecartees": 3,
-   "motifs": {
-    "titre_hors_cible:annonces": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.immocoupdecoeur3.fr/vente/1",
-     "titre": "Annonces immobilières | Immo Coup De Cœur"
-    }
-   }
-  },
-  {
-   "agence": "Immobilier Center (Fnaim)",
-   "secondes": 107,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 38,
-   "sitemap_dates": 53,
-   "sitemap": "ok 53",
-   "deja_ecartees": 3,
-   "motifs": {
-    "ni_surface_ni_prix_credible": 1
-   },
-   "ecartes_exemples": {
-    "ni_surface_ni_prix_credible": {
-     "url": "https://immobilier-center.fr/property/en-quete-dun-projet-ambitieux/",
-     "titre": "En quête d’un projet ambitieux ? - Immobilier Center - Découvrez un large choix de propriétés immobilières en vente dans"
-    }
-   }
-  },
-  {
-   "agence": "Immobilier ILL",
-   "secondes": 92,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 1,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 47,
-   "sitemap": "ok 96",
-   "deja_ecartees": 32
+   "adresses_ecartees": 7,
+   "sitemap_dates": 21,
+   "sitemap": "ok 21",
+   "deja_ecartees": 1
   },
   {
-   "agence": "Immobilier Saint-Marcouf",
-   "secondes": 63,
-   "pages": 11,
+   "agence": "L'Hôtel Immobilier",
+   "secondes": 53,
+   "pages": 7,
+   "gardes": 7,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 33,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "deja_ecartees": 2
+  },
+  {
+   "agence": "L'Immobilière Conseils",
+   "secondes": 7,
+   "pages": 0,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "L’immobilière Conseils : agence immobilière Noyon, transacti"
+  },
+  {
+   "agence": "L'Immobilière Normande",
+   "secondes": 64,
+   "pages": 8,
    "gardes": 8,
-   "vendus": 1,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 22,
+   "sitemap_dates": 127,
+   "sitemap": "ok 127",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "L'Immobilière du Loison",
+   "secondes": 21,
+   "pages": 3,
+   "gardes": 3,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 3,
+   "sitemap_dates": 4,
+   "sitemap": "ok 4",
+   "deja_ecartees": 1
+  },
+  {
+   "agence": "L'immobilière Guignard",
+   "secondes": 104,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 68,
+   "sitemap": "ok 82"
+  },
+  {
+   "agence": "LH immo.com",
+   "secondes": 56,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 97,
+   "sitemap_dates": 70,
+   "sitemap": "ok 70",
+   "deja_ecartees": 9,
+   "illisible_exemple": {
+    "url": "https://www.lhimmo.com/iwp_offre/vente/",
+    "cause": "aucune annonce lue",
+    "titre": "Archives des Vente - LH immo",
+    "octets": 87510
+   }
+  },
+  {
+   "agence": "LOR Immobilier",
+   "secondes": 105,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 13,
+   "sitemap": "ok 20",
+   "illisible_exemple": {
+    "url": "https://www.lorimmobilier.fr/vente/vente-maison-ansauville,LM288",
+    "cause": "aucune annonce lue",
+    "titre": "404 - Page introuvable",
+    "octets": 47717
+   },
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lorimmobilier.fr/vente/vente-maison-luneville,VM366",
+     "titre": "CHATEAU"
+    }
+   }
+  },
+  {
+   "agence": "La Bonne Adresse",
+   "secondes": 66,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
    "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 70,
-   "sitemap_dates": 157,
-   "sitemap": "ok 157",
-   "deja_ecartees": 1,
+   "adresses_ecartees": 7,
+   "sitemap_dates": 36,
+   "sitemap": "ok 36",
+   "deja_ecartees": 2,
    "motifs": {
-    "titre_hors_cible:appartement": 1,
-    "prix_trop_haut": 1
+    "prix_trop_haut": 2
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/maison/t5/859-commerce-appartement-100m-du-port/",
-     "titre": "Commerce + Appartement - 100m du port !"
-    },
     "prix_trop_haut": {
-     "url": "https://immo-grandcamp.com/vente/1-grandcamp-maisy/propriete/t14/887-propriete-de-390m-grandcamp-maisy-gite/",
-     "titre": "Propriété de 390m² - GRANDCAMP-MAISY - Gite"
+     "url": "https://www.labonneadresseimmo.fr/vente/12-ste-mere-eglise/propriete/t6/664-superbe-propriete-du-18eme-avec-deux-gites-dependances-et-terrain/",
+     "titre": "SUPERBE PROPRIETE DU 18EME AVEC DEUX GITES, DEPENDANCES ET TERRAIN"
     }
    }
   },
   {
-   "agence": "Immobilier du Chêne",
-   "secondes": 54,
-   "pages": 5,
-   "gardes": 4,
+   "agence": "La Cif",
+   "secondes": 42,
+   "pages": 11,
+   "gardes": 5,
    "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 6,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 36,
+   "sitemap_dates": 19,
+   "sitemap": "ok 19",
+   "deja_ecartees": 8,
+   "illisible_exemple": {
+    "url": "https://www.groupecif-normandie.com/vendre-mettre-en-vente/pourquoi-choisir-cif-normandie-mettre-en-vente-vendre-appartements-maisons-havre-1/soyez-recompense-en-parrainant-vos-amis-ou-votre-famille-copie",
+    "cause": "aucune annonce lue",
+    "titre": "Parrainer avec CIF Normandie, c'est simple et rapide !",
+    "octets": 92300
+   }
+  },
+  {
+   "agence": "La Petite Agence.com",
+   "secondes": 66,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 42,
+   "sitemap_dates": 96,
+   "sitemap": "ok 96",
+   "deja_ecartees": 9,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.lapetite-agence.com/vente/26-dun-sur-auron/maison/8069-dun-sur-auron-belle-maison-comprenant-cinq-chambres-edifiee-sur-1570-m-de-terrain-clos-et-arbore-sur-sous-s",
+     "titre": "DUN SUR AURON : Belle maison comprenant cinq chambres édifiée sur 1570 m² de terrain clos et arboré sur sous-s"
+    }
+   }
+  },
+  {
+   "agence": "La Plaine Immobilier",
+   "secondes": 112,
+   "pages": 44,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 44,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "La Plaine Immobilier : agence immobilière Caen, achat immobi",
+   "illisible_exemple": {
+    "url": "https://laplaine-immobilier.com/fr/maison-de-ville-117-m2-3--a-4-chambres",
+    "cause": "aucune annonce lue",
+    "titre": "",
+    "octets": 163244
+   }
+  },
+  {
+   "agence": "La Vaux Immobilier",
+   "secondes": 98,
+   "pages": 12,
+   "gardes": 8,
+   "vendus": 3,
    "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 73,
+   "sitemap": "ok 74",
+   "deja_ecartees": 3,
+   "motifs": {
+    "titre_hors_cible:loft": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:loft": {
+     "url": "https://lavauximmobilier.com/bien/nancy-place-des-vosges-loft-duplex-138-m2-terrasse/",
+     "titre": "NANCY centre, Loft Duplex, 136 m2 au sol, Terrasse."
+    }
+   }
+  },
+  {
+   "agence": "La Voile Immobilier",
+   "secondes": 43,
+   "pages": 5,
+   "gardes": 2,
+   "vendus": 0,
+   "ecartes": 3,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 42,
-   "sitemap": "ok 119",
-   "deja_ecartees": 13,
+   "adresses_ecartees": 33,
+   "sitemap": "ok 29",
+   "deja_ecartees": 3,
    "motifs": {
-    "titre_hors_cible:local commercial": 1
+    "prix_trop_haut": 3
    },
    "ecartes_exemples": {
-    "titre_hors_cible:local commercial": {
-     "url": "https://www.immobilier-du-chene.com/vente/maison-individuelle-10-pieces-saint-germain-70200,VM286",
-     "titre": "Ensemble immobilier avec local commercial (restaurant) + logement - murs uniquement"
+    "prix_trop_haut": {
+     "url": "https://www.lavoileimmobilier.fr/vente/maison-individuelle-10-pieces-caen-14000,VM290",
+     "titre": "QUARTIER HASTINGS"
     }
    }
   }
