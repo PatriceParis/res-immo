@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.0,
+  "seconde": 2.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.0,
+  "seconde": 2.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,257 +23,112 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.0,
+  "seconde": 2.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.9,
+  "seconde": 4.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.4,
+  "seconde": 6.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.9,
+  "seconde": 6.6,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.9,
+  "seconde": 6.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.4,
+  "seconde": 7.1,
   "reseau": "capifrance",
-  "connues": 19280,
-  "ecartees": 2263
+  "connues": 19411,
+  "ecartees": 2308
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.4,
+  "seconde": 7.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.9,
+  "seconde": 7.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.6,
+  "seconde": 26.4,
   "reseau": "iad",
-  "n": 112109,
+  "n": 111926,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 28.3,
+  "seconde": 27.8,
   "reseau": "iad",
-  "notees": 86
+  "notees": 110
  },
  {
   "etape": "tentative_notee",
-  "seconde": 30.2,
+  "seconde": 29.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 30.7,
+  "seconde": 30.0,
   "reseau": "iad",
-  "connues": 19280,
-  "ecartees": 2263
+  "connues": 19411,
+  "ecartees": 2308
  },
  {
   "etape": "departement",
-  "seconde": 219.3,
+  "seconde": 190.3,
   "reseau": "iad",
-  "departement": "10",
+  "departement": "18",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 4,
+   "garde": 33,
+   "vendu": 11,
    "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "titre_hors_cible:appartement": 1,
-   "location": 1,
-   "hors_perimetre": 4
+   "hors_perimetre": 6
   },
   "exemples": {
-   "titre_hors_cible:appartement": "Appartement 6 pièces de 122 m² à Brienne-le-Château (10500)",
-   "location": "Maison de ville 6 pièces de 114 m² à Sainte-Savine (10300)",
-   "hors_perimetre": "Ferme 10 pièces de 270 m² à Poligny (77167)"
+   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 399.5,
+  "seconde": 351.4,
   "reseau": "iad",
-  "departement": "53",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 35,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 8,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "url_type_exclu": 1,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "url_type_exclu": "Divers Commerces de 110 m² à Château-Gontier (53200)",
-   "prix_trop_haut": "Maison de ville 10 pièces de 317 m² à Laval (53000)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 562.0,
-  "reseau": "iad",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 30,
-  "tronquee": true,
-  "etats": {
-   "garde": 30,
-   "vendu": 7,
-   "ecarte": 13,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 12,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 3 pièces de 60 m² à Sainte-Foy (85150)",
-   "prix_trop_haut": "Château 18 pièces de 500 m² à Laizy (71190)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 608.0,
-  "reseau": "iad",
-  "departement": "14",
-  "visitees": 11,
-  "gardes": 11,
-  "tronquee": true,
-  "etats": {
-   "garde": 11,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 608.0,
-  "reseau": "safti",
-  "part_secondes": 594
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 608.7,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 610.5,
-  "reseau": "safti",
-  "n": 29026,
-  "complet": true
- },
- {
-  "etape": "absentes_du_sitemap",
-  "seconde": 611.3,
-  "reseau": "safti",
-  "notees": 44
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 612.0,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 612.4,
-  "reseau": "safti",
-  "connues": 19308,
-  "ecartees": 2301
- },
- {
-  "etape": "departement",
-  "seconde": 809.8,
-  "reseau": "safti",
-  "departement": "50",
-  "visitees": 50,
-  "gardes": 49,
-  "tronquee": true,
-  "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 1
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 988.9,
-  "reseau": "safti",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 40,
-  "tronquee": true,
-  "etats": {
-   "garde": 40,
-   "vendu": 1,
-   "ecarte": 8,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 5,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à MORANGIS de 195m²",
-   "prix_trop_haut": "Maison à vendre à BEZANNES de 485m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1093.8,
-  "reseau": "safti",
-  "departement": "52",
-  "visitees": 29,
-  "gardes": 24,
-  "tronquee": true,
-  "etats": {
-   "garde": 24,
-   "vendu": 0,
+   "garde": 35,
+   "vendu": 10,
    "ecarte": 5,
    "illisible": 0
   },
@@ -281,19 +136,139 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à BOURG de 113m²"
+   "hors_perimetre": "Maison d"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1207.2,
-  "reseau": "safti",
-  "departement": "89",
-  "visitees": 25,
-  "gardes": 25,
+  "seconde": 519.3,
+  "reseau": "iad",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 25,
+   "garde": 41,
+   "vendu": 8,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 6 pièces de 195 m² à Fours (33390)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 609.8,
+  "reseau": "iad",
+  "departement": "72",
+  "visitees": 24,
+  "gardes": 22,
+  "tronquee": true,
+  "etats": {
+   "garde": 22,
+   "vendu": 2,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 609.8,
+  "reseau": "safti",
+  "part_secondes": 592
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 610.1,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 611.6,
+  "reseau": "safti",
+  "n": 28964,
+  "complet": true
+ },
+ {
+  "etape": "absentes_du_sitemap",
+  "seconde": 612.3,
+  "reseau": "safti",
+  "notees": 80
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 612.9,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 613.3,
+  "reseau": "safti",
+  "connues": 19349,
+  "ecartees": 2251
+ },
+ {
+  "etape": "departement",
+  "seconde": 866.0,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 1,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 7
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à ARROMANCHES-LES-BAINS de 260m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1111.9,
+  "reseau": "safti",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 0,
+   "ecarte": 7,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à ACHERES de 62m²",
+   "prix_trop_haut": "Maison à vendre à CHATEAUMEILLANT de 357m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1204.2,
+  "reseau": "safti",
+  "departement": "53",
+  "visitees": 22,
+  "gardes": 22,
+  "tronquee": true,
+  "etats": {
+   "garde": 22,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -303,7 +278,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1207.2,
-  "gardes": 259
+  "seconde": 1204.3,
+  "gardes": 237
  }
 ]
