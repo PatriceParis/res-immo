@@ -81,7 +81,7 @@
     <div class="filtres-tete">
       <h2>Affiner la recherche</h2>
       <button class="filtres-toggle" id="filtres-toggle" type="button"
-              aria-controls="filtres-corps" aria-expanded="true">Filtres &amp; tri ▾</button>
+              aria-controls="filtres-corps" aria-expanded="true">Filtres &amp; tri <span class="chevron" aria-hidden="true"></span></button>
     </div>
     <div class="filtres-corps" id="filtres-corps">
 
@@ -91,7 +91,7 @@
     </label>
 
     <label class="champ">
-      <span>Temps de route depuis Paris <output id="aff-temps">sans limite</output></span>
+      <span>Paris en voiture <output id="aff-temps">sans limite</output></span>
       <input type="range" id="f-temps" min="45" max="240" step="15" value="240">
     </label>
 
@@ -105,7 +105,7 @@
          passer une ignorance pour une desserte. L'aide le dit. -->
     <label class="champ">
       <span>Paris en train <output id="aff-train">sans limite</output>
-        <span class="aide-filtre" title="Depuis la gare la plus proche du bien, en liaison directe courante. Fixer une limite écarte les biens dont aucune gare n'est connue.">ⓘ</span></span>
+        <span class="aide-filtre" title="Depuis la gare la plus proche du bien, en liaison directe courante. Fixer une limite écarte les biens dont aucune gare n'est connue."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.7v.3"/></svg></span></span>
       <input type="range" id="f-train" min="30" max="150" step="15" value="150">
     </label>
 
@@ -116,7 +116,7 @@
          cela de leur gare. -->
     <label class="champ">
       <span>Gare la plus proche <output id="aff-gare-km">sans limite</output>
-        <span class="aide-filtre" title="Distance à vol d'oiseau jusqu'à la gare la plus proche. Fixer une limite écarte les biens dont aucune gare n'est connue.">ⓘ</span></span>
+        <span class="aide-filtre" title="Distance à vol d'oiseau jusqu'à la gare la plus proche. Fixer une limite écarte les biens dont aucune gare n'est connue."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.7v.3"/></svg></span></span>
       <input type="range" id="f-gare-km" min="2" max="25" step="1" value="25">
     </label>
 
@@ -146,7 +146,7 @@
     <fieldset class="champ atouts">
       <legend>Atouts indispensables</legend>
       <label><input type="checkbox" id="f-cave"> Cave ou sous-sol</label>
-      <label><input type="checkbox" id="f-troglodyte"> Habitat troglodyte <span class="aide-filtre" title="Creusé dans la roche ou le coteau (tuffeau) : frais l'été, tempéré l'hiver, cellier naturel.">ⓘ</span></label>
+      <label><input type="checkbox" id="f-troglodyte"> Habitat troglodyte <span class="aide-filtre" title="Creusé dans la roche ou le coteau (tuffeau) : frais l'été, tempéré l'hiver, cellier naturel."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.7v.3"/></svg></span></label>
       <label><input type="checkbox" id="f-puits"> Puits ou forage</label>
       <label><input type="checkbox" id="f-bois"> Chauffage au bois</label>
       <label><input type="checkbox" id="f-solaire"> Panneaux solaires</label>
@@ -199,7 +199,7 @@
 
     <div class="barre-resultats">
       <span id="compteur">Chargement…</span>
-      <span class="note-estimation">Temps de route estimés à vol d'oiseau corrigé — à vérifier avant visite.</span>
+      <span class="note-estimation">Temps de route estimés à vol d'oiseau corrigé — à vérifier avant visite</span>
     </div>
     <div id="liste" class="liste"></div>
     <nav id="pagination" class="pagination" aria-label="Pages de résultats"></nav>
@@ -210,7 +210,7 @@
 <!-- Fiche détaillée d'un bien -->
 <div id="voile" class="voile" hidden>
   <div class="modale" role="dialog" aria-modal="true" aria-labelledby="modale-titre">
-    <button class="fermer" id="modale-fermer" aria-label="Fermer">✕</button>
+    <button class="fermer" id="modale-fermer" aria-label="Fermer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     <div id="modale-contenu"></div>
   </div>
 </div>

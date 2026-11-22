@@ -127,7 +127,7 @@ figure.aerienne img { width: 100%; border-radius: var(--r-10) }
 p.viager { margin: calc(-1 * var(--e-4)) 0 var(--e-12); padding: var(--e-8) var(--e-12); border-radius: var(--r-10);
            background: #fbece8; border: 1px solid #efcdc4; color: #8c3325 }
 figure.aerienne figcaption { font-size: var(--t-14); color: #5f6a58; margin-top: var(--e-4) }
-.manque { color: #9a6a2b; font-style: italic }
+.manque { color: #8a5a12 }
 .climat { background: #fff; border: 1px solid #e4e0d5; border-radius: var(--r-14);
           padding: var(--e-16) var(--e-16) var(--e-16); margin: var(--e-24) 0 }
 .climat h2 { margin: 0 0 var(--e-12) }
@@ -188,7 +188,7 @@ ul.offres li { background: #fff; border: 1px solid #e2e6dc; border-radius: var(-
                padding: var(--e-16) var(--e-16) }
 ul.offres h3 { margin: 0 0 var(--e-4); font-size: var(--t-16) }
 ul.offres p { margin: 0 0 var(--e-4) }
-.modalite { font-size: var(--t-14); color: #5f6a58; font-style: italic }
+.modalite { font-size: var(--t-14); color: #5f6a58 }
 """
 
 

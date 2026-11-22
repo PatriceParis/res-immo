@@ -43,6 +43,8 @@
   --t-12: 12px; --t-14: 14px; --t-16: 16px; --t-18: 18px; --t-20: 20px; --t-24: 24px; --t-32: 32px;
   --e-4: 4px; --e-8: 8px; --e-12: 12px; --e-16: 16px; --e-24: 24px; --e-32: 32px; --e-48: 48px; --e-64: 64px;
   --r-6: 6px; --r-10: 10px; --r-14: 14px; --r-pastille: 999px;
+  /* Une seule courbe et une seule durée pour tout ce qui réagit au survol. */
+  --courbe: cubic-bezier(0.22, 1, 0.36, 1); --duree: 150ms;
   color-scheme: light;
 }
 
@@ -75,6 +77,9 @@ body {
   color: var(--encre);
   font-size: var(--t-16);
   line-height: 1.45;
+  /* Des chiffres de même largeur partout : les prix, les distances et les
+     points s'alignent d'une ligne à l'autre sans y penser. */
+  font-variant-numeric: tabular-nums;
 }
 
 /* La police des titres est réservée aux titres, au nom du site, aux prix et
@@ -94,10 +99,7 @@ body {
 }
 .marque { font-size: var(--t-24); font-weight: 700; line-height: 1.1; }
 .slogan { font-size: var(--t-14); opacity: .85; margin-top: 2px; }
-.pastille-source {
-  font-size: var(--t-12); padding: var(--e-4) var(--e-12); border-radius: var(--r-pastille);
-  background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);
-}
+.pastille-source { font-size: var(--t-14); opacity: .85; }
 
 /* ---------- agencement ---------- */
 .agencement {
@@ -147,7 +149,11 @@ body {
   cursor: pointer; list-style: none; padding: var(--e-4) 0; white-space: nowrap;
 }
 .menu-groupe > summary::-webkit-details-marker { display: none; }
-.menu-groupe > summary::after { content: " ▾"; opacity: .7; }
+.menu-groupe > summary::after, .chevron {
+  content: ""; display: inline-block; width: 6px; height: 6px; margin-left: var(--e-8);
+  border-right: 1.7px solid currentColor; border-bottom: 1.7px solid currentColor;
+  transform: translateY(-3px) rotate(45deg); opacity: .8;
+}
 .menu-groupe[open] > summary { opacity: 1; }
 .menu-groupe > ul {
   position: absolute; z-index: 900; top: 100%; left: 0; margin: var(--e-4) 0 0;
@@ -197,16 +203,20 @@ body {
 
 .fiche {
   background: var(--carte-fond); border: 1px solid var(--bordure); border-radius: var(--r-14);
-  padding: var(--e-16) var(--e-16); cursor: pointer; transition: box-shadow .15s, transform .15s;
+  padding: var(--e-16) var(--e-16); cursor: pointer; transition: box-shadow var(--duree) var(--courbe), transform var(--duree) var(--courbe);
   display: flex; flex-direction: column; gap: var(--e-8);
 }
-.fiche:hover { box-shadow: 0 4px 16px rgba(27, 67, 50, .14); transform: translateY(-1px); }
+.fiche:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, .06); transform: translateY(-1px); }
 
 /* Hiérarchie de portail immobilier : le prix domine, puis les
    caractéristiques, puis le lieu. Le titre de l'agence, autrefois en tête et
    en gras, passe en accroche secondaire — c'est de la prose commerciale, pas
    une donnée. */
-.fiche-corps { display: flex; flex-direction: column; gap: 3px; }
+/* Le corps prend toute la hauteur restante : l'enseigne, poussée en bas par
+   son `margin-top: auto`, se pose alors au pied de la vignette. Sans cela,
+   deux vignettes voisines de contenus inégaux finissaient à des hauteurs
+   différentes — l'une avec un point de vigilance, l'autre avec du vide. */
+.fiche-corps { display: flex; flex-direction: column; gap: 3px; flex: 1; }
 .ligne-prix { display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--e-8); }
 .fiche .prix { font-size: var(--t-20); font-weight: 800; letter-spacing: -.3px; line-height: 1.15; }
 .fiche .prix-m2 { font-size: var(--t-12); color: var(--encre-2); }
@@ -251,7 +261,7 @@ body {
    en « DELAFOSSE & ASSOCIÉE » : sur un site bâti sur l'attribution honnête,
    déformer le nom de celui qu'on attribue n'est pas un détail de style. */
 .agence-ligne {
-  font-size: var(--t-12); color: var(--encre-2); margin-top: var(--e-8);
+  font-size: var(--t-12); color: var(--encre-2); margin-top: auto;
   padding-top: var(--e-8); border-top: 1px solid var(--bordure);
 }
 
@@ -276,7 +286,7 @@ body {
 }
 .fermer {
   position: absolute; top: 12px; right: 12px; border: none; z-index: 3;
-  width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, .9);
+  width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, .9);
   box-shadow: 0 1px 5px rgba(20, 30, 24, .2); font-size: var(--t-16); cursor: pointer;
   color: var(--encre); display: flex; align-items: center; justify-content: center; padding: 0;
 }
@@ -410,7 +420,7 @@ body {
 .pilier-tete::-webkit-details-marker { display: none; }
 .pilier .nom { color: var(--encre); display: flex; align-items: center; gap: var(--e-8); }
 .pilier .nom .ico { color: var(--accent); }
-.pilier .info-i { color: var(--encre-2); font-size: var(--t-12); }
+.pilier .info-i { color: var(--encre-2); font-size: var(--t-14); display: inline-flex; }
 .pilier[open] .info-i { color: var(--accent); }
 .pilier .valeur { text-align: right; color: var(--encre-2); font-variant-numeric: tabular-nums; }
 .pilier .valeur b { color: var(--encre); }
@@ -455,6 +465,7 @@ body {
 }
 .page-btn {
   font: inherit; font-weight: 600; cursor: pointer;
+  display: inline-flex; align-items: center; gap: var(--e-8);
   padding: var(--e-12) var(--e-24); border-radius: var(--r-10); min-height: 44px;
   border: 1px solid var(--marque); background: var(--marque); color: var(--sur-marque);
 }
@@ -528,7 +539,7 @@ body {
   border-radius: var(--r-14); display: block; background: #dfe7df;
 }
 .vue-ciel figcaption {
-  font-size: var(--t-12); color: #6b7663; margin-top: var(--e-4); line-height: 1.45;
+  font-size: var(--t-12); color: var(--encre-2); margin-top: var(--e-4); line-height: 1.45;
 }
 
 /* Vraie photo de l'agence, posée sur l'illustration de repli.
@@ -590,6 +601,9 @@ html, body { overflow-x: clip; }
   .resultats { display: flex; flex-direction: column; }
   .barre-resultats { order: 1; margin-top: 0; }
   #liste { order: 2; }
+  /* La pagination suit la liste. Ajoutée sans rang, elle passait en tête
+     sur téléphone : « Précédents / Suivants » avant le premier résultat. */
+  #pagination { order: 2; }
   #carte { order: 3; height: 320px; margin-top: var(--e-16); }
   .terroirs-bloc { order: 4; margin-top: var(--e-12); }
 
@@ -616,13 +630,13 @@ html, body { overflow-x: clip; }
 }
 
 /* Petit ⓘ d'aide à côté d'un filtre peu évident (ex. habitat troglodyte). */
-.aide-filtre { color: var(--encre-2); font-size: var(--t-12); cursor: help; }
+.aide-filtre { color: var(--encre-2); font-size: var(--t-14); cursor: help; display: inline-flex; }
 
 /* Fraîcheur : ce qui vient d'arriver, et ce dont le prix a baissé. */
 .baisse-prix {
   background: #eaf2ec; border: 1px solid var(--badge-bord); color: var(--marque);
   font-weight: 700; font-size: var(--t-12); padding: 2px var(--e-8); border-radius: var(--r-pastille);
-}
+ display: inline-flex; align-items: center; gap: var(--e-4);}
 
 /* La pastille d'écart au prix du secteur a été retirée le 9 août 2026 (voir
    app.js). Son habillage part avec elle : une règle CSS orpheline finit par
@@ -632,9 +646,14 @@ html, body { overflow-x: clip; }
    non construite en JavaScript, parce qu'elle est le seul chemin par lequel
    un robot — et notamment un robot d'IA, qui n'exécute pas de script —
    découvre les pages de terroir puis les fiches. */
-.pied { background: #eceadf; border-top: 1px solid #ddd8cc; margin-top: var(--e-32);
-        padding: var(--e-32) var(--e-24) var(--e-32); color: #46543f; font-size: var(--t-14); line-height: 1.6 }
-.pied nav h2 { font-size: var(--t-16); margin: 0 0 var(--e-8); color: #23301f }
+/* Le pied partait du bord de la fenêtre quand tout le reste tient dans une
+   colonne de 1280 px : son texte commençait 80 px à gauche de l'en-tête et
+   des filtres. Il prend la même colonne. */
+.pied { background: #eceadf; border-top: 1px solid var(--bordure); margin-top: var(--e-32);
+        padding: var(--e-32) var(--e-24) var(--e-32);
+        display: grid; grid-template-columns: minmax(0, 1232px); justify-content: center;
+        color: var(--encre-2); font-size: var(--t-14); line-height: 1.6 }
+.pied nav h2 { font-size: var(--t-16); margin: 0 0 var(--e-8); color: var(--encre) }
 .pied ul { list-style: none; padding: 0; margin: 0 0 var(--e-16);
            display: flex; flex-wrap: wrap; gap: var(--e-8) var(--e-16) }
 .pied a { color: var(--marque, #1b4332); font-weight: 600 }
@@ -644,12 +663,12 @@ html, body { overflow-x: clip; }
    sans crier. Il ne s'adresse pas au visiteur qui cherche une maison mais à
    l'agence qui en publie — le fondre dans la liste des mentions le rendrait
    invisible pour les uns comme pour les autres. */
-.pied .pied-pro { background: #fff; border: 1px solid #ddd8cc; border-radius: var(--r-10);
+.pied .pied-pro { background: #fff; border: 1px solid var(--bordure); border-radius: var(--r-10);
                   padding: var(--e-16) var(--e-16); margin-top: var(--e-16); max-width: 70ch;
                   display: flex; flex-wrap: wrap; gap: var(--e-4) var(--e-12); align-items: baseline }
 .pied .pied-pro a { font-size: var(--t-16); text-decoration: none; white-space: nowrap }
 .pied .pied-pro a:hover { text-decoration: underline }
-.pied .pied-pro span { color: #6b7663; font-size: var(--t-14) }
+.pied .pied-pro span { color: var(--encre-2); font-size: var(--t-14) }
 
 /* La marque : pictogramme + nom, alignés sur la même ligne de base optique.
    Le dessin remplace l'emoji ⛰️, qui appartenait à tout le monde, changeait

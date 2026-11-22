@@ -154,3 +154,15 @@ def test_la_carte_ne_suit_pas_la_pagination():
     bloc = SCRIPT[SCRIPT.index("async function rendreCarte()"):]
     bloc = bloc[:bloc.index("// Un bien seul")]
     assert "etat.page" not in bloc and "offset" not in bloc
+
+
+def test_sur_telephone_la_pagination_vient_apres_la_liste():
+    """Défaut livré avec la pagination et vu une semaine plus tard, sur une
+    capture : sur téléphone les blocs sont réordonnés (la liste d'abord, la
+    carte ensuite), et la pagination, ajoutée sans rang, remontait en tête —
+    « Précédents / Suivants » au-dessus du premier résultat. Les mesures de
+    hauteur de l'époque étaient justes ; personne n'avait regardé l'ordre."""
+    import re
+    style = (RACINE / "app" / "static" / "style.css").read_text(encoding="utf-8")
+    rangs = dict(re.findall(r"(#liste|#pagination|#carte|\.barre-resultats)\s*\{\s*order:\s*(\d)", style))
+    assert rangs[".barre-resultats"] < rangs["#liste"] <= rangs["#pagination"] < rangs["#carte"]

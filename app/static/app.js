@@ -241,7 +241,7 @@ function baisse(a) {
   if (!a.prix_precedent || !a.prix || a.prix >= a.prix_precedent) return "";
   const ecart = Math.round(100 * (a.prix_precedent - a.prix) / a.prix_precedent);
   return `<span class="baisse-prix" title="Ancien prix : ${euros(a.prix_precedent)}">
-    ↓ ${ecart} %</span>`;
+    ${icone("baisse")} ${ecart} %</span>`;
 }
 
 // L'écart au prix du secteur n'est plus affiché — retiré le 9 août 2026.
@@ -587,10 +587,10 @@ function initCarte() {
   legende.onAdd = () => {
     const div = L.DomUtil.create("div", "legende-carte");
     div.innerHTML = `<b>Score de résilience</b><br>
-      <span class="pastille n4"></span>70–100 · excellent<br>
-      <span class="pastille n3"></span>55–69 · bon<br>
-      <span class="pastille n2"></span>40–54 · moyen<br>
-      <span class="pastille n1"></span>0–39 · limité
+      <span class="pastille n4"></span>70–100 · très bien noté<br>
+      <span class="pastille n3"></span>55–69 · bien noté<br>
+      <span class="pastille n2"></span>40–54 · moyennement noté<br>
+      <span class="pastille n1"></span>0–39 · faiblement noté
       <span class="legende-amas">Un cercle chiffré regroupe plusieurs biens —
         zoomez pour les séparer.</span>`;
     return div;
@@ -725,6 +725,11 @@ const TRACES = {
   attention: '<path d="M12 4l9 16H3zM12 10v4.5M12 17.3v.2"/>',
   sortie: '<path d="M14 5h5v5M19 5l-8 8M11 7H6.5A1.5 1.5 0 0 0 5 8.5v9A1.5 1.5 0 0 0 6.5 19h9a1.5 1.5 0 0 0 1.5-1.5V13"/>',
   cloche: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20.5h4"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.7v.3"/>',
+  fermer: '<path d="M6 6l12 12M18 6 6 18"/>',
+  precedent: '<path d="M19 12H5M11 6l-6 6 6 6"/>',
+  suivant: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  baisse: '<path d="M12 5v14M6 13l6 6 6-6"/>',
 };
 
 /** Une icône au trait, décorative : le texte qui la suit dit toujours la chose. */
@@ -754,7 +759,7 @@ function jaugesPiliers(detail) {
     <details class="pilier">
       <summary class="pilier-tete">
         <span class="nom">${icone(ICONES_PILIERS[cle])} ${echap(p.libelle)}
-          <span class="info-i" aria-hidden="true">ⓘ</span></span>
+          <span class="info-i">${icone("info")}</span></span>
         <div class="jauge" role="meter" aria-valuemin="0" aria-valuemax="${p.max}"
              aria-valuenow="${p.points}" aria-label="${echap(p.libelle)}">
           <div style="width:${Math.min(100, (p.points / p.max) * 100)}%"></div>
@@ -871,7 +876,7 @@ function ouvrirFiche(id) {
     <section class="bloc">
       <h3>Le score en détail <span class="h-note">${Math.round(a.score_total)} sur 100</span></h3>
       ${jaugesPiliers(detail)}
-      <p class="note-detail">Touchez un critère pour lire ce qu'il mesure.</p>
+      <p class="note-detail">Touchez un critère pour lire ce qu'il mesure</p>
     </section>
 
     <section class="bloc">
@@ -1105,10 +1110,10 @@ function rendrePagination() {
     `<button type="button" class="page-btn ${classe || ""}" data-page="${page}"
        ${desactive ? "disabled" : ""}>${libelle}</button>`;
   nav.innerHTML =
-    bouton("← Précédents", etat.page - 1, etat.page === 0)
+    bouton(`${icone("precedent")} Précédents`, etat.page - 1, etat.page === 0)
     + `<span class="page-rang">Page ${nombre(etat.page + 1)}
          sur ${nombre(pages)}</span>`
-    + bouton("Suivants →", etat.page + 1, etat.page >= pages - 1);
+    + bouton(`Suivants ${icone("suivant")}`, etat.page + 1, etat.page >= pages - 1);
   for (const b of nav.querySelectorAll(".page-btn")) {
     b.addEventListener("click", () => allerPage(+b.dataset.page));
   }
