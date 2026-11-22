@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.2,
+  "seconde": 4.0,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.2,
+  "seconde": 4.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,112 +23,265 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.2,
+  "seconde": 4.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.2,
+  "seconde": 6.2,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.2,
+  "seconde": 8.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.6,
+  "seconde": 8.9,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.7,
+  "seconde": 8.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 7.1,
+  "seconde": 9.3,
   "reseau": "capifrance",
-  "connues": 19411,
-  "ecartees": 2308
+  "connues": 19285,
+  "ecartees": 2264
  },
  {
   "etape": "reseau_debut",
-  "seconde": 7.1,
+  "seconde": 9.3,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.3,
+  "seconde": 9.8,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 26.4,
+  "seconde": 20.1,
   "reseau": "iad",
   "n": 111926,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 27.8,
+  "seconde": 21.6,
   "reseau": "iad",
-  "notees": 110
+  "notees": 23
  },
  {
   "etape": "tentative_notee",
-  "seconde": 29.6,
+  "seconde": 23.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 30.0,
+  "seconde": 23.7,
   "reseau": "iad",
-  "connues": 19411,
-  "ecartees": 2308
+  "connues": 19285,
+  "ecartees": 2264
  },
  {
   "etape": "departement",
-  "seconde": 190.3,
+  "seconde": 192.4,
   "reseau": "iad",
-  "departement": "18",
+  "departement": "88",
   "visitees": 50,
-  "gardes": 33,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 33,
-   "vendu": 11,
-   "ecarte": 6,
+   "garde": 43,
+   "vendu": 7,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "departement",
+  "seconde": 352.8,
+  "reseau": "iad",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 34,
+  "tronquee": true,
+  "etats": {
+   "garde": 34,
+   "vendu": 5,
+   "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 6
+   "outre_mer": 4,
+   "titre_hors_cible:appartement": 1,
+   "location": 1,
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison de ville 10 pièces de 316 m² à Civray (86400)"
+   "outre_mer": "Maison 4 pièces de 133 m² à Sainte-Anne (97180)",
+   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
+   "location": "Maison de ville 6 pièces de 198 m² à Blâmont (54450)",
+   "hors_perimetre": "Maison de campagne 10 pièces de 235 m² à Saint-Hippolyte (12140)",
+   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 351.4,
+  "seconde": 506.0,
   "reseau": "iad",
-  "departement": "21",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 35,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 35,
-   "vendu": 10,
+   "garde": 34,
+   "vendu": 11,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "prix_trop_haut": 2,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 85 m² à Cormeilles (27260)",
+   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)",
+   "hors_perimetre": "Maison 2 pièces de 38 m² à La Chapelle-Gauthier (77720)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 608.4,
+  "reseau": "iad",
+  "departement": "28",
+  "visitees": 31,
+  "gardes": 23,
+  "tronquee": true,
+  "etats": {
+   "garde": 23,
+   "vendu": 5,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3
+  },
+  "exemples": {
+   "location": "Maison 2 pièces de 60 m² à Chuisnes (28190)"
+  }
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 608.4,
+  "reseau": "safti",
+  "part_secondes": 596
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 608.8,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 610.5,
+  "reseau": "safti",
+  "n": 28964,
+  "complet": true
+ },
+ {
+  "etape": "absentes_du_sitemap",
+  "seconde": 611.2,
+  "reseau": "safti",
+  "notees": 37
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 611.8,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 612.1,
+  "reseau": "safti",
+  "connues": 19320,
+  "ecartees": 2311
+ },
+ {
+  "etape": "departement",
+  "seconde": 811.8,
+  "reseau": "safti",
+  "departement": "61",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 4,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à ORGERES de 107m²",
+   "prix_trop_haut": "Maison à vendre à BAGNOLES DE L'ORNE NORMANDIE de 790m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1028.2,
+  "reseau": "safti",
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 49,
+  "tronquee": true,
+  "etats": {
+   "garde": 49,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à GROFFLIERS de 266m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1205.9,
+  "reseau": "safti",
+  "departement": "70",
+  "visitees": 46,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 1,
    "ecarte": 5,
    "illisible": 0
   },
@@ -136,149 +289,12 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison d"
+   "hors_perimetre": "Maison à vendre à BUTHIERS de 236m²"
   }
- },
- {
-  "etape": "departement",
-  "seconde": 519.3,
-  "reseau": "iad",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 8,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 6 pièces de 195 m² à Fours (33390)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 609.8,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 24,
-  "gardes": 22,
-  "tronquee": true,
-  "etats": {
-   "garde": 22,
-   "vendu": 2,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 609.8,
-  "reseau": "safti",
-  "part_secondes": 592
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 610.1,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 611.6,
-  "reseau": "safti",
-  "n": 28964,
-  "complet": true
- },
- {
-  "etape": "absentes_du_sitemap",
-  "seconde": 612.3,
-  "reseau": "safti",
-  "notees": 80
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 612.9,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 613.3,
-  "reseau": "safti",
-  "connues": 19349,
-  "ecartees": 2251
- },
- {
-  "etape": "departement",
-  "seconde": 866.0,
-  "reseau": "safti",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 42,
-  "tronquee": true,
-  "etats": {
-   "garde": 42,
-   "vendu": 1,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 7
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à ARROMANCHES-LES-BAINS de 260m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1111.9,
-  "reseau": "safti",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 42,
-  "tronquee": true,
-  "etats": {
-   "garde": 42,
-   "vendu": 0,
-   "ecarte": 7,
-   "illisible": 1
-  },
-  "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à ACHERES de 62m²",
-   "prix_trop_haut": "Maison à vendre à CHATEAUMEILLANT de 357m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1204.2,
-  "reseau": "safti",
-  "departement": "53",
-  "visitees": 22,
-  "gardes": 22,
-  "tronquee": true,
-  "etats": {
-   "garde": 22,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1204.3,
-  "gardes": 237
+  "seconde": 1205.9,
+  "gardes": 263
  }
 ]
