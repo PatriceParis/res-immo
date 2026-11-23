@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 4.0,
+  "seconde": 4.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 4.0,
+  "seconde": 4.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,7 +23,7 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 4.0,
+  "seconde": 4.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
@@ -35,79 +35,144 @@
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 8.4,
+  "seconde": 7.7,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 8.9,
+  "seconde": 8.3,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 8.9,
+  "seconde": 8.3,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 9.3,
+  "seconde": 8.8,
   "reseau": "capifrance",
-  "connues": 19285,
-  "ecartees": 2264
+  "connues": 19439,
+  "ecartees": 2318
  },
  {
   "etape": "reseau_debut",
-  "seconde": 9.3,
+  "seconde": 8.8,
   "reseau": "iad",
-  "part_secondes": 597
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 9.8,
+  "seconde": 9.4,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 20.1,
+  "seconde": 30.9,
   "reseau": "iad",
-  "n": 111926,
+  "n": 111448,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 21.6,
+  "seconde": 32.5,
   "reseau": "iad",
-  "notees": 23
+  "notees": 40
  },
  {
   "etape": "tentative_notee",
-  "seconde": 23.3,
+  "seconde": 34.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.7,
+  "seconde": 34.9,
   "reseau": "iad",
-  "connues": 19285,
-  "ecartees": 2264
+  "connues": 19439,
+  "ecartees": 2318
  },
  {
   "etape": "departement",
-  "seconde": 192.4,
+  "seconde": 208.7,
   "reseau": "iad",
-  "departement": "88",
+  "departement": "37",
   "visitees": 50,
-  "gardes": 43,
+  "gardes": 33,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 7,
+   "garde": 33,
+   "vendu": 9,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 2,
+   "prix_trop_haut": 6
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 85 m² à Betz-le-Château (37600)",
+   "prix_trop_haut": "Demeure 10 pièces de 304 m² à Azay-sur-Cher (37270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 387.1,
+  "reseau": "iad",
+  "departement": "76",
+  "visitees": 50,
+  "gardes": 40,
+  "tronquee": true,
+  "etats": {
+   "garde": 40,
+   "vendu": 8,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 7 pièces de 129 m² à Guerville (78930)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 558.0,
+  "reseau": "iad",
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 39,
+  "tronquee": true,
+  "etats": {
+   "garde": 39,
+   "vendu": 10,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de ville 3 pièces de 51 m² à Saint-Martin-du-Tertre (95270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 609.8,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 13,
+  "gardes": 13,
+  "tronquee": true,
+  "etats": {
+   "garde": 13,
+   "vendu": 0,
    "ecarte": 0,
    "illisible": 0
   },
@@ -115,152 +180,100 @@
   "exemples": {}
  },
  {
-  "etape": "departement",
-  "seconde": 352.8,
-  "reseau": "iad",
-  "departement": "25",
-  "visitees": 50,
-  "gardes": 34,
-  "tronquee": true,
-  "etats": {
-   "garde": 34,
-   "vendu": 5,
-   "ecarte": 11,
-   "illisible": 0
-  },
-  "motifs": {
-   "outre_mer": 4,
-   "titre_hors_cible:appartement": 1,
-   "location": 1,
-   "hors_perimetre": 4,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "outre_mer": "Maison 4 pièces de 133 m² à Sainte-Anne (97180)",
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 68 m² à Montferrand-le-Château (25320)",
-   "location": "Maison de ville 6 pièces de 198 m² à Blâmont (54450)",
-   "hors_perimetre": "Maison de campagne 10 pièces de 235 m² à Saint-Hippolyte (12140)",
-   "prix_trop_haut": "Domaine 34 pièces de 805 m² à Le Russey (25210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 506.0,
-  "reseau": "iad",
-  "departement": "27",
-  "visitees": 50,
-  "gardes": 34,
-  "tronquee": true,
-  "etats": {
-   "garde": 34,
-   "vendu": 11,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 2,
-   "prix_trop_haut": 2,
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "location": "Maison 4 pièces de 85 m² à Cormeilles (27260)",
-   "prix_trop_haut": "Péniche 10 pièces de 287 m² à Vernon (27200)",
-   "hors_perimetre": "Maison 2 pièces de 38 m² à La Chapelle-Gauthier (77720)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 608.4,
-  "reseau": "iad",
-  "departement": "28",
-  "visitees": 31,
-  "gardes": 23,
-  "tronquee": true,
-  "etats": {
-   "garde": 23,
-   "vendu": 5,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 3
-  },
-  "exemples": {
-   "location": "Maison 2 pièces de 60 m² à Chuisnes (28190)"
-  }
- },
- {
   "etape": "reseau_debut",
-  "seconde": 608.4,
+  "seconde": 609.8,
   "reseau": "safti",
-  "part_secondes": 596
+  "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 608.8,
+  "seconde": 610.3,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 610.5,
+  "seconde": 611.7,
   "reseau": "safti",
-  "n": 28964,
+  "n": 29002,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 611.2,
+  "seconde": 612.5,
   "reseau": "safti",
-  "notees": 37
+  "notees": 58
  },
  {
   "etape": "tentative_notee",
-  "seconde": 611.8,
+  "seconde": 613.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 612.1,
+  "seconde": 613.6,
   "reseau": "safti",
-  "connues": 19320,
-  "ecartees": 2311
+  "connues": 19377,
+  "ecartees": 2259
  },
  {
   "etape": "departement",
-  "seconde": 811.8,
+  "seconde": 798.5,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "21",
   "visitees": 50,
-  "gardes": 40,
+  "gardes": 41,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 4,
+   "garde": 41,
+   "vendu": 2,
    "ecarte": 6,
-   "illisible": 0
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à FRESNES de 199m²",
+   "prix_trop_haut": "Maison à vendre à ATHIE de 284m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 985.4,
+  "reseau": "safti",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 43,
+  "tronquee": true,
+  "etats": {
+   "garde": 43,
+   "vendu": 0,
+   "ecarte": 6,
+   "illisible": 1
   },
   "motifs": {
    "hors_perimetre": 5,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à ORGERES de 107m²",
-   "prix_trop_haut": "Maison à vendre à BAGNOLES DE L'ORNE NORMANDIE de 790m²"
+   "hors_perimetre": "Maison à vendre à BONNEVAUX de 32m²",
+   "prix_trop_haut": "Maison à vendre à LE RUSSEY de 805m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1028.2,
+  "seconde": 1191.6,
   "reseau": "safti",
-  "departement": "62",
+  "departement": "27",
   "visitees": 50,
-  "gardes": 49,
+  "gardes": 48,
   "tronquee": true,
   "etats": {
-   "garde": 49,
-   "vendu": 0,
+   "garde": 48,
+   "vendu": 1,
    "ecarte": 1,
    "illisible": 0
   },
@@ -268,33 +281,29 @@
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à GROFFLIERS de 266m²"
+   "prix_trop_haut": "Maison à vendre à Bézu-Saint-Éloi de 365m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1205.9,
+  "seconde": 1204.5,
   "reseau": "safti",
-  "departement": "70",
-  "visitees": 46,
-  "gardes": 40,
+  "departement": "28",
+  "visitees": 3,
+  "gardes": 3,
   "tronquee": true,
   "etats": {
-   "garde": 40,
-   "vendu": 1,
-   "ecarte": 5,
+   "garde": 3,
+   "vendu": 0,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à BUTHIERS de 236m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1205.9,
-  "gardes": 263
+  "seconde": 1204.6,
+  "gardes": 260
  }
 ]
