@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.1,
+  "seconde": 12.5,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.1,
+  "seconde": 12.5,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,156 +23,143 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.1,
+  "seconde": 12.5,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.0,
+  "seconde": 14.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.5,
+  "seconde": 16.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.2,
+  "seconde": 16.5,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.2,
+  "seconde": 16.5,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.8,
+  "seconde": 16.9,
   "reseau": "capifrance",
-  "connues": 19398,
-  "ecartees": 2271
+  "connues": 19408,
+  "ecartees": 2211
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.9,
+  "seconde": 16.9,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.4,
+  "seconde": 17.1,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.9,
+  "seconde": 36.4,
   "reseau": "iad",
-  "n": 111448,
+  "n": 112190,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 20.0,
+  "seconde": 37.8,
   "reseau": "iad",
-  "notees": 16
+  "notees": 50
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.6,
+  "seconde": 39.6,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 23.2,
+  "seconde": 40.0,
   "reseau": "iad",
-  "connues": 19398,
-  "ecartees": 2271
+  "connues": 19408,
+  "ecartees": 2211
  },
  {
   "etape": "departement",
-  "seconde": 270.7,
+  "seconde": 254.7,
   "reseau": "iad",
-  "departement": "39",
+  "departement": "60",
   "visitees": 50,
-  "gardes": 22,
+  "gardes": 31,
   "tronquee": true,
   "etats": {
-   "garde": 22,
-   "vendu": 17,
+   "garde": 31,
+   "vendu": 7,
+   "ecarte": 12,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 3,
+   "prix_trop_haut": 7,
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "location": "Maison 10 pièces de 295 m² à Rantigny (60290)",
+   "prix_trop_haut": "Maison de campagne 10 pièces de 270 m² à Gerberoy (60380)",
+   "hors_perimetre": "Maison 10 pièces de 230 m² à Jonquières (84150)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 487.7,
+  "reseau": "iad",
+  "departement": "02",
+  "visitees": 50,
+  "gardes": 33,
+  "tronquee": true,
+  "etats": {
+   "garde": 33,
+   "vendu": 6,
    "ecarte": 11,
    "illisible": 0
   },
   "motifs": {
-   "outre_mer": 5,
-   "hors_perimetre": 3,
-   "prix_trop_haut": 3
+   "url_type_exclu": 2,
+   "location": 1,
+   "prix_trop_haut": 3,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "outre_mer": "Maison 3 pièces de 66 m² à Saint-Pierre (97432)",
-   "hors_perimetre": "Maison 9 pièces de 211 m² à Marigny (03210)",
-   "prix_trop_haut": "Maison de campagne 11 pièces de 405 m² à Les Rousses (39220)"
+   "url_type_exclu": "Immeuble de 124 m² à Château-Thierry (02400)",
+   "location": "Maison 4 pièces de 90 m² à CHARLY-SUR-MARNE (02310)",
+   "prix_trop_haut": "Domaine 10 pièces de 327 m² à Château-Thierry (02400)",
+   "hors_perimetre": "Domaine 14 pièces de 334 m² à Pleine-Selve (33820)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 446.4,
+  "seconde": 624.8,
   "reseau": "iad",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 43,
+  "departement": "45",
+  "visitees": 20,
+  "gardes": 17,
   "tronquee": true,
   "etats": {
-   "garde": 43,
-   "vendu": 7,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 603.3,
-  "reseau": "iad",
-  "departement": "54",
-  "visitees": 50,
-  "gardes": 34,
-  "tronquee": true,
-  "etats": {
-   "garde": 34,
-   "vendu": 8,
-   "ecarte": 8,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 6,
-   "prix_trop_haut": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 218 m² à Andilly (95580)",
-   "prix_trop_haut": "Demeure 12 pièces de 340 m² à Hussigny-Godbrange (54590)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 607.0,
-  "reseau": "iad",
-  "departement": "55",
-  "visitees": 1,
-  "gardes": 1,
-  "tronquee": true,
-  "etats": {
-   "garde": 1,
-   "vendu": 0,
+   "garde": 17,
+   "vendu": 3,
    "ecarte": 0,
    "illisible": 0
   },
@@ -181,53 +168,76 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 607.1,
+  "seconde": 624.8,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 588
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.4,
+  "seconde": 625.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 608.9,
+  "seconde": 627.3,
   "reseau": "safti",
   "n": 28979,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 610.0,
+  "seconde": 628.0,
   "reseau": "safti",
-  "notees": 78
+  "notees": 57
  },
  {
   "etape": "tentative_notee",
-  "seconde": 610.8,
+  "seconde": 628.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 611.4,
+  "seconde": 628.9,
   "reseau": "safti",
-  "connues": 19328,
-  "ecartees": 2208
+  "connues": 19440,
+  "ecartees": 2250
  },
  {
   "etape": "departement",
-  "seconde": 786.9,
+  "seconde": 954.8,
   "reseau": "safti",
-  "departement": "54",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 47,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 47,
+   "garde": 40,
    "vendu": 2,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5,
+   "prix_trop_haut": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à ROSAY de 67m²",
+   "prix_trop_haut": "Maison à vendre à LAJOUX de 215m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1221.0,
+  "reseau": "safti",
+  "departement": "55",
+  "visitees": 45,
+  "gardes": 44,
+  "tronquee": true,
+  "etats": {
+   "garde": 44,
+   "vendu": 0,
    "ecarte": 1,
    "illisible": 0
   },
@@ -235,63 +245,12 @@
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à EULMONT de 240m²"
+   "prix_trop_haut": "Maison à vendre à Bar-le-Duc de 631m²"
   }
  },
  {
-  "etape": "departement",
-  "seconde": 967.7,
-  "reseau": "safti",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1138.6,
-  "reseau": "safti",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1203.3,
-  "reseau": "safti",
-  "departement": "37",
-  "visitees": 18,
-  "gardes": 18,
-  "tronquee": true,
-  "etats": {
-   "garde": 18,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
   "etape": "fin",
-  "seconde": 1203.4,
-  "gardes": 265
+  "seconde": 1221.0,
+  "gardes": 165
  }
 ]
