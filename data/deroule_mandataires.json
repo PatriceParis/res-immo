@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.2,
+  "seconde": 1.8,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.2,
+  "seconde": 1.8,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,159 +23,178 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.2,
+  "seconde": 1.8,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.3,
+  "seconde": 3.7,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 6.4,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.9,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.9,
+  "seconde": 5.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 7.3,
+  "seconde": 6.3,
   "reseau": "capifrance",
-  "connues": 19674,
-  "ecartees": 2345
+  "connues": 19612,
+  "ecartees": 2324
  },
  {
   "etape": "reseau_debut",
-  "seconde": 7.3,
+  "seconde": 6.3,
   "reseau": "iad",
-  "part_secondes": 597
+  "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 8.0,
+  "seconde": 6.5,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 29.7,
+  "seconde": 22.1,
   "reseau": "iad",
   "n": 112443,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 31.0,
+  "seconde": 23.4,
   "reseau": "iad",
-  "notees": 85
+  "notees": 27
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.5,
+  "seconde": 24.8,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 32.9,
+  "seconde": 25.2,
   "reseau": "iad",
-  "connues": 19674,
-  "ecartees": 2345
+  "connues": 19612,
+  "ecartees": 2324
  },
  {
   "etape": "departement",
-  "seconde": 200.1,
+  "seconde": 164.8,
   "reseau": "iad",
-  "departement": "62",
+  "departement": "52",
+  "visitees": 50,
+  "gardes": 36,
+  "tronquee": true,
+  "etats": {
+   "garde": 36,
+   "vendu": 10,
+   "ecarte": 4,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "prix_trop_haut": "Château 11 pièces de 352 m² à Autigny le grand (52300)",
+   "hors_perimetre": "Maison 5 pièces de 137 m² à Richebourg (78550)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 299.3,
+  "reseau": "iad",
+  "departement": "53",
   "visitees": 50,
   "gardes": 37,
   "tronquee": true,
   "etats": {
    "garde": 37,
-   "vendu": 8,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 3 pièces de 48 m² à Gommecourt (78270)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 379.1,
-  "reseau": "iad",
-  "departement": "08",
-  "visitees": 50,
-  "gardes": 34,
-  "tronquee": true,
-  "etats": {
-   "garde": 34,
    "vendu": 10,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "outre_mer": 1,
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "outre_mer": "Maison traditionnelle 5 pièces de 162 m² à STE SUZANNE (97441)",
-   "hors_perimetre": "Maison 3 pièces de 103 m² à Machault (77133)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 554.7,
-  "reseau": "iad",
-  "departement": "10",
-  "visitees": 50,
-  "gardes": 42,
-  "tronquee": true,
-  "etats": {
-   "garde": 42,
-   "vendu": 5,
    "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "prix_trop_haut": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 3
   },
   "exemples": {
-   "location": "Maison 4 pièces de 93 m² à Avant-lès-Marcilly (10400)",
-   "prix_trop_haut": "Domaine 38 pièces de 1 540 m² à Vanlay (10210)",
-   "hors_perimetre": "Maison 4 pièces de 83 m² à Poligny (77167)"
+   "hors_perimetre": "110 030 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 608.9,
+  "seconde": 446.7,
   "reseau": "iad",
-  "departement": "14",
-  "visitees": 13,
-  "gardes": 13,
+  "departement": "70",
+  "visitees": 50,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 13,
+   "garde": 40,
+   "vendu": 4,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 8 pièces de 200 m² à Buthiers (77760)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 587.2,
+  "reseau": "iad",
+  "departement": "71",
+  "visitees": 50,
+  "gardes": 33,
+  "tronquee": true,
+  "etats": {
+   "garde": 33,
+   "vendu": 8,
+   "ecarte": 9,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 8,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de campagne 4 pièces de 124 m² à Sainte-Foy (85150)",
+   "prix_trop_haut": "Demeure 19 pièces de 500 m² à Palinges (71430)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 606.6,
+  "reseau": "iad",
+  "departement": "80",
+  "visitees": 6,
+  "gardes": 6,
+  "tronquee": true,
+  "etats": {
+   "garde": 6,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -185,112 +204,139 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 609.0,
+  "seconde": 606.6,
   "reseau": "safti",
-  "part_secondes": 593
+  "part_secondes": 595
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 609.4,
+  "seconde": 607.2,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 610.8,
+  "seconde": 608.7,
   "reseau": "safti",
   "n": 29086,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 611.6,
+  "seconde": 609.4,
   "reseau": "safti",
-  "notees": 96
+  "notees": 41
  },
  {
   "etape": "tentative_notee",
-  "seconde": 612.0,
+  "seconde": 609.8,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 612.4,
+  "seconde": 610.2,
   "reseau": "safti",
-  "connues": 19639,
-  "ecartees": 2314
+  "connues": 19655,
+  "ecartees": 2378
  },
  {
   "etape": "departement",
-  "seconde": 796.2,
+  "seconde": 762.0,
   "reseau": "safti",
-  "departement": "10",
+  "departement": "80",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 0,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à AULNAY de 154m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 994.3,
-  "reseau": "safti",
-  "departement": "58",
-  "visitees": 50,
-  "gardes": 48,
-  "tronquee": true,
-  "etats": {
-   "garde": 48,
-   "vendu": 0,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à VARENNES-VAUZELLES de 640m²",
-   "hors_perimetre": "Maison à vendre à SAINT-MARTIN-DU-PUY de 168m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1202.9,
-  "reseau": "safti",
-  "departement": "76",
-  "visitees": 48,
-  "gardes": 35,
-  "tronquee": true,
-  "etats": {
-   "garde": 35,
-   "vendu": 2,
-   "ecarte": 11,
+   "garde": 38,
+   "vendu": 3,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
    "hors_perimetre": 5,
-   "prix_trop_haut": 6
+   "prix_trop_haut": 4
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à Freneuse de 130m²",
-   "prix_trop_haut": "Maison à vendre à BOIS-GUILLAUME de 365m²"
+   "hors_perimetre": "Maison à vendre à DEVISE de 62m²",
+   "prix_trop_haut": "Maison à vendre à ABBEVILLE de 303m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 912.3,
+  "reseau": "safti",
+  "departement": "88",
+  "visitees": 50,
+  "gardes": 38,
+  "tronquee": true,
+  "etats": {
+   "garde": 38,
+   "vendu": 4,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 5,
+   "ni_surface_ni_prix_credible": 1,
+   "hors_perimetre": 2
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à BAN-SUR-MEURTHE-CLEFCY de 280m²",
+   "ni_surface_ni_prix_credible": "Maison à vendre à GEMMELAINCOURT de 55m²",
+   "hors_perimetre": "Maison à vendre à LES FORGES de 95m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1068.7,
+  "reseau": "safti",
+  "departement": "41",
+  "visitees": 50,
+  "gardes": 43,
+  "tronquee": true,
+  "etats": {
+   "garde": 43,
+   "vendu": 0,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5,
+   "prix_trop_haut": 2
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à LISLE de 137m²",
+   "prix_trop_haut": "Maison à vendre à BLOIS de 360m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1205.1,
+  "reseau": "safti",
+  "departement": "45",
+  "visitees": 45,
+  "gardes": 37,
+  "tronquee": true,
+  "etats": {
+   "garde": 37,
+   "vendu": 0,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 4,
+   "prix_trop_haut": 4
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à BELLEGARDE de 64m²",
+   "prix_trop_haut": "Maison à vendre à LORCY de 371m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.9,
-  "gardes": 254
+  "seconde": 1205.2,
+  "gardes": 308
  }
 ]
