@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.4,
+  "seconde": 2.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.4,
+  "seconde": 2.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,293 +23,91 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.4,
+  "seconde": 2.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.1,
+  "seconde": 4.3,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.5,
+  "seconde": 6.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.3,
+  "seconde": 6.9,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.3,
+  "seconde": 6.9,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.9,
+  "seconde": 7.3,
   "reseau": "capifrance",
-  "connues": 19477,
-  "ecartees": 2255
+  "connues": 19674,
+  "ecartees": 2345
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.9,
+  "seconde": 7.3,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.2,
+  "seconde": 8.0,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 20.0,
+  "seconde": 29.7,
   "reseau": "iad",
-  "n": 112190,
+  "n": 112443,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 22.2,
+  "seconde": 31.0,
   "reseau": "iad",
-  "notees": 47
+  "notees": 85
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.8,
+  "seconde": 32.5,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.4,
+  "seconde": 32.9,
   "reseau": "iad",
-  "connues": 19477,
-  "ecartees": 2255
+  "connues": 19674,
+  "ecartees": 2345
  },
  {
   "etape": "departement",
-  "seconde": 148.2,
+  "seconde": 200.1,
   "reseau": "iad",
-  "departement": "50",
+  "departement": "62",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 37,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 16,
-   "ecarte": 4,
-   "illisible": 0
-  },
-  "motifs": {
-   "outre_mer": 1,
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "outre_mer": "Maison 3 pièces de 110 m² à Saint-Joseph (97480)",
-   "hors_perimetre": "Maison 4 pièces de 87 m² à SAVIGNY (69210)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 270.4,
-  "reseau": "iad",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 31,
-  "tronquee": true,
-  "etats": {
-   "garde": 31,
-   "vendu": 5,
-   "ecarte": 14,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 7,
-   "location": 3,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "110 593 biens immobiliers à vendre",
-   "location": "Maison de ville 4 pièces de 100 m² à Châlons-en-Champagne (51000)",
-   "prix_trop_haut": "Maison 11 pièces de 328 m² à Cormontreuil (51350)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 391.8,
-  "reseau": "iad",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 32,
-  "tronquee": true,
-  "etats": {
-   "garde": 32,
-   "vendu": 18,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 516.9,
-  "reseau": "iad",
-  "departement": "59",
-  "visitees": 50,
-  "gardes": 30,
-  "tronquee": true,
-  "etats": {
-   "garde": 30,
-   "vendu": 6,
-   "ecarte": 14,
-   "illisible": 0
-  },
-  "motifs": {
-   "location": 9,
-   "prix_trop_haut": 5
-  },
-  "exemples": {
-   "location": "Maison 1 pièce de 130 m² à Anzin (59410)",
-   "prix_trop_haut": "Maison 10 pièces de 290 m² à Wasquehal (59290)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 604.4,
-  "reseau": "iad",
-  "departement": "61",
-  "visitees": 33,
-  "gardes": 27,
-  "tronquee": true,
-  "etats": {
-   "garde": 27,
-   "vendu": 4,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 2
-  },
-  "exemples": {
-   "hors_perimetre": "Longère 6 pièces de 158 m² à Le Châtellier (35133)"
-  }
- },
- {
-  "etape": "reseau_debut",
-  "seconde": 604.5,
-  "reseau": "safti",
-  "part_secondes": 597
- },
- {
-  "etape": "sitemaps_declares",
-  "seconde": 604.7,
-  "reseau": "safti",
-  "n": 15
- },
- {
-  "etape": "adresses_du_sitemap",
-  "seconde": 606.0,
-  "reseau": "safti",
-  "n": 28979,
-  "complet": true
- },
- {
-  "etape": "absentes_du_sitemap",
-  "seconde": 607.1,
-  "reseau": "safti",
-  "notees": 56
- },
- {
-  "etape": "tentative_notee",
-  "seconde": 607.9,
-  "reseau": "safti",
-  "departements": 33
- },
- {
-  "etape": "catalogue_relu",
-  "seconde": 608.5,
-  "reseau": "safti",
-  "connues": 19547,
-  "ecartees": 2333
- },
- {
-  "etape": "departement",
-  "seconde": 761.0,
-  "reseau": "safti",
-  "departement": "57",
-  "visitees": 50,
-  "gardes": 44,
-  "tronquee": true,
-  "etats": {
-   "garde": 44,
-   "vendu": 5,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à CREHANGE de 1635m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 922.2,
-  "reseau": "safti",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1079.6,
-  "reseau": "safti",
-  "departement": "02",
-  "visitees": 50,
-  "gardes": 50,
-  "tronquee": true,
-  "etats": {
-   "garde": 50,
-   "vendu": 0,
-   "ecarte": 0,
-   "illisible": 0
-  },
-  "motifs": {},
-  "exemples": {}
- },
- {
-  "etape": "departement",
-  "seconde": 1202.6,
-  "reseau": "safti",
-  "departement": "08",
-  "visitees": 40,
-  "gardes": 33,
-  "tronquee": true,
-  "etats": {
-   "garde": 33,
-   "vendu": 2,
+   "garde": 37,
+   "vendu": 8,
    "ecarte": 5,
    "illisible": 0
   },
@@ -317,12 +115,182 @@
    "hors_perimetre": 5
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à PERTHES de 162m²"
+   "hors_perimetre": "Maison de village 3 pièces de 48 m² à Gommecourt (78270)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 379.1,
+  "reseau": "iad",
+  "departement": "08",
+  "visitees": 50,
+  "gardes": 34,
+  "tronquee": true,
+  "etats": {
+   "garde": 34,
+   "vendu": 10,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "outre_mer": 1,
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "outre_mer": "Maison traditionnelle 5 pièces de 162 m² à STE SUZANNE (97441)",
+   "hors_perimetre": "Maison 3 pièces de 103 m² à Machault (77133)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 554.7,
+  "reseau": "iad",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 5,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "prix_trop_haut": 1,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 93 m² à Avant-lès-Marcilly (10400)",
+   "prix_trop_haut": "Domaine 38 pièces de 1 540 m² à Vanlay (10210)",
+   "hors_perimetre": "Maison 4 pièces de 83 m² à Poligny (77167)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 608.9,
+  "reseau": "iad",
+  "departement": "14",
+  "visitees": 13,
+  "gardes": 13,
+  "tronquee": true,
+  "etats": {
+   "garde": 13,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
+  "etape": "reseau_debut",
+  "seconde": 609.0,
+  "reseau": "safti",
+  "part_secondes": 593
+ },
+ {
+  "etape": "sitemaps_declares",
+  "seconde": 609.4,
+  "reseau": "safti",
+  "n": 15
+ },
+ {
+  "etape": "adresses_du_sitemap",
+  "seconde": 610.8,
+  "reseau": "safti",
+  "n": 29086,
+  "complet": true
+ },
+ {
+  "etape": "absentes_du_sitemap",
+  "seconde": 611.6,
+  "reseau": "safti",
+  "notees": 96
+ },
+ {
+  "etape": "tentative_notee",
+  "seconde": 612.0,
+  "reseau": "safti",
+  "departements": 33
+ },
+ {
+  "etape": "catalogue_relu",
+  "seconde": 612.4,
+  "reseau": "safti",
+  "connues": 19639,
+  "ecartees": 2314
+ },
+ {
+  "etape": "departement",
+  "seconde": 796.2,
+  "reseau": "safti",
+  "departement": "10",
+  "visitees": 50,
+  "gardes": 45,
+  "tronquee": true,
+  "etats": {
+   "garde": 45,
+   "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à AULNAY de 154m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 994.3,
+  "reseau": "safti",
+  "departement": "58",
+  "visitees": 50,
+  "gardes": 48,
+  "tronquee": true,
+  "etats": {
+   "garde": 48,
+   "vendu": 0,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à VARENNES-VAUZELLES de 640m²",
+   "hors_perimetre": "Maison à vendre à SAINT-MARTIN-DU-PUY de 168m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1202.9,
+  "reseau": "safti",
+  "departement": "76",
+  "visitees": 48,
+  "gardes": 35,
+  "tronquee": true,
+  "etats": {
+   "garde": 35,
+   "vendu": 2,
+   "ecarte": 11,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5,
+   "prix_trop_haut": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à Freneuse de 130m²",
+   "prix_trop_haut": "Maison à vendre à BOIS-GUILLAUME de 365m²"
   }
  },
  {
   "etape": "fin",
-  "seconde": 1202.6,
-  "gardes": 327
+  "seconde": 1202.9,
+  "gardes": 254
  }
 ]
