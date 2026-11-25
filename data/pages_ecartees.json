@@ -495,12 +495,20 @@
   "jour": "2026-11-07",
   "motif": "titre_hors_cible:droit au bail"
  },
+ "https://agenceducentre.net/biens-vendus/1": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://agenceducentre.net/vente/1": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:56 biens"
+ },
+ "https://agenceducentre.net/vente/maison/1": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:29 maisons"
+ },
  "https://angledroit.immo/annonce/f2-meuble-n7-charleville-mezieres-2-2-2-2/": {
   "jour": "2026-11-19",
-  "motif": "location"
- },
- "https://angledroit.immo/annonce/f2-renove-centre-ville-de-sedan/": {
-  "jour": "2026-10-25",
   "motif": "location"
  },
  "https://aureliebonnet.fr/annonce/ensemble-immobilier-centre-ville-lisieux-special-investisseur/": {
@@ -923,17 +931,9 @@
   "jour": "2026-11-14",
   "motif": "titre_hors_cible:appartement"
  },
- "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-t3+86135930": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:appartement"
- },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+appartement-t3-cabine-terrasse-cour-et-garage+86997984": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
- },
- "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+studio+87250918": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:studio"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+berck+studio-avec-jardin+87559380": {
   "jour": "2026-11-21",
@@ -945,10 +945,6 @@
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-3-chambres-en-residence-avec-ascenseur+83193252": {
   "jour": "2026-11-14",
-  "motif": "titre_hors_cible:appartement"
- },
- "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-duplex-85-m-residence-recente-avec-ascenseur-boulogne-sur-mer+86775425": {
-  "jour": "2026-10-25",
   "motif": "titre_hors_cible:appartement"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+appartement+boulogne-sur-mer+appartement-duplex-de-caractere-en-plein-centre-ville+87253379": {
@@ -969,10 +965,6 @@
  },
  "https://immobilieredefrance.com/fr/propriete/vente+commerce+boulogne-sur-mer+local-commercial-avec-belles-vitrines-loue+83192847": {
   "jour": "2026-10-28",
-  "motif": "titre_hors_cible:local commercial"
- },
- "https://immobilieredefrance.com/fr/propriete/vente+commerce+boulogne-sur-mer+local-commercial-avec-bonne-visibilite+83194140": {
-  "jour": "2026-10-25",
   "motif": "titre_hors_cible:local commercial"
  },
  "https://immobilieredefrance.com/fr/propriete/vente+commerce+saint-omer+86973019": {
@@ -1283,10 +1275,6 @@
   "jour": "2026-11-20",
   "motif": "titre_hors_cible:annonces"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t10/132-superbe-propriete-19eme-sur-terrain-de-1800m-paysage-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t10/337-propriete-d-exception-au-coeur-du-bouchon-prestige/": {
   "jour": "2026-11-04",
   "motif": "vendu"
@@ -1315,10 +1303,6 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t10/87-maison-avec-jardin-au-coeur-du-bouchon/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t11/473-superbe-propriete-type-11-au-coeur-du-bouchon-prestige/": {
   "jour": "2026-11-20",
   "motif": "vendu"
@@ -1327,16 +1311,8 @@
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t12/136-hotel-particulier-de-340m-situe-au-coeur-du-bouchon-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t14/490-troyes-coeur-historique-bijoux-d-architecture-17eme-prestige/": {
   "jour": "2026-11-22",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t4/326-maison-t4-avec-jardin/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t4/460-troyes-limite-saint-julien-maison-debut-20eme-pleine-de-charme/": {
@@ -1363,10 +1339,6 @@
   "jour": "2026-10-27",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t5/331-troyes-secteur-cinema-maison-de-174m-avec-garage-et-jardin/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t5/498-maison-annees-30-a-moins-de-10-minutes-du-bouchon/": {
   "jour": "2026-11-22",
   "motif": "vendu"
@@ -1383,20 +1355,12 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t5/88-maison-de-ville-pleine-de-charme-a-troyes/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t6/169-maison-offrant-six-pieces-a-proximite-immediate-du-centre-ville/": {
   "jour": "2026-10-27",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t6/208-troyes-maison-de-caractere-5-chambres/": {
   "jour": "2026-10-27",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t6/252-secteur-cathedrale-vente-d-une-maison-type-6-prestige/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t6/458-troyes-maison-1930-en-excellent-etat/": {
@@ -1409,18 +1373,6 @@
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t6/555-maison-debut-20eme-proche-gare/": {
   "jour": "2026-11-22",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t7/224-vente-d-une-maison-type-7-au-coeur-du-bouchon/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t7/265-vente-d-une-belle-propriete-18eme-avec-dependance-au-coeur-du-bouchon/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t7/310-secteur-paix-maison-19eme-en-parfait-etat-prestige/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t7/480-troyes-secteur-prise-maison-bourgeoise-prestige/": {
@@ -1455,14 +1407,6 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t9/127-troyes-vente-d-une-maison-contemporaine-de-neuf-pieces-situee-a-deux-pas-du-centre/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t9/130-propriete-d-exception-a-troyes-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/1-maison/t9/417-maison-de-ville-t9-a-troyes-prestige/": {
   "jour": "2026-11-20",
   "motif": "vendu"
@@ -1475,14 +1419,6 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t2/299-au-coeur-du-bouchon-joli-f2-en-duplex/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t3/318-hyper-centre-joli-t3-refait-a-neuf-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t4/199-troyes-vente-d-un-appartement-de-80m-avec-terrasse-et-garage/": {
   "jour": "2026-10-27",
   "motif": "vendu"
@@ -1491,32 +1427,12 @@
   "jour": "2026-10-27",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t4/279-troyes-proche-hopital-appartement-t4/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t4/304-troyes-appartement-t4/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t4/306-troyes-t4-traversant-dans-copropriete-de-standing/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t5/193-hyper-centre-appartement-en-duplex/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t5/234-troyes-vente-d-un-appartement-avec-terrasse-et-garage-prestige/": {
   "jour": "2026-10-27",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t5/254-troyes-limite-bouchon-vente-d-un-appartement-type-5/": {
   "jour": "2026-10-27",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/1-troyes/2-appartement/t7/287-hyper-centre-appartement-de-caractere-type-sept/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/101-montgueux/1-maison/t7/524-propriete-18eme-a-montgueux-prestige/": {
@@ -1559,24 +1475,12 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/21-ruvigny/1-maison/t5/117-maison-de-plain-pied-offrant-quatre-chambres/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/21-ruvigny/1-maison/t5/557-ruvigny-maison-de-plain-pied-avec-jardin-paysage-et-dependances/": {
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/22-st-andre-les-vergers/1-maison/t10/263-agglo-vente-d-une-maison-d-achitecte-type10-avec-piscine-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/22-st-andre-les-vergers/1-maison/t5/288-saint-andre-les-vergers-maison-t5/": {
   "jour": "2026-11-22",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/22-st-andre-les-vergers/1-maison/t7/100-maison-de-caractere-a-proximite-du-centre-ville-de-troyes/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/22-st-andre-les-vergers/2-appartement/t2/176-saint-andre-les-vergers-type-2-de-48-61m/": {
@@ -1601,14 +1505,6 @@
  },
  "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/543-sainte-savine-maison-avec-jardin-quartier-de-l-art-deco/": {
   "jour": "2026-11-20",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t10/139-vente-d-une-maison-19eme-a-sainte-savine-prestige/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t4/341-sainte-savine-maison-1900-avec-jardin/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t4/476-maison-debut-20eme-au-coeur-de-sainte-savine/": {
@@ -1637,10 +1533,6 @@
  },
  "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t6/162-sainte-savine-maison-offrant-quatre-chambres/": {
   "jour": "2026-10-27",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t6/191-sainte-savine-vente-d-une-propriete-de-plus-de-200m-habitables-au-coeur-d-un-parc-arbore-prestige/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/25-ste-savine/1-maison/t6/269-sainte-savine-maison-annees-30-avec-joli-jardin/": {
@@ -1675,10 +1567,6 @@
   "jour": "2026-10-27",
   "motif": "vendu"
  },
- "https://www.aandbimmobilier.com/vente/10-aube/40-la-riviere-de-corps/1-maison/t7/286-la-riviere-de-corps-secteur-calme-belle-maison-t7/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.aandbimmobilier.com/vente/10-aube/43-st-germain/1-maison/t5/542-saint-germain-maison-de-type-5-avec-jardin-et-garage-double-a-10-minutes-de-l-hyper-centre-de-troyes/": {
   "jour": "2026-11-20",
   "motif": "vendu"
@@ -1693,10 +1581,6 @@
  },
  "https://www.aandbimmobilier.com/vente/10-aube/47-torvilliers/1-maison/t6/505-maison-d-architecte-de-2016-a-un-quart-d-heure-de-la-gare-prestige/": {
   "jour": "2026-11-20",
-  "motif": "vendu"
- },
- "https://www.aandbimmobilier.com/vente/10-aube/56-st-lye/1-maison/t7/153-proche-agglo-maison-type-sept-au-coeur-d-un-parc-arbore/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.aandbimmobilier.com/vente/10-aube/57-villechetif/1-maison/t6/534-propriete-de-charme-troyes-est-prestige/": {
@@ -1747,6 +1631,14 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t3/1162-remiremont-quartier-recherche-acces-facile-a-toutes-les-commodites-maison-de-plain-pied-de-type-f3/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t3/1332-en-exclusivite-remiremont-quartier-residentiel-calme-pavillon-individuel-de-2008/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t4/321-ref-212-vm-remiremont-maison-de-plain-pied-sur-sous-sol-comprenant-entree-couloir-de-degagement/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -1765,6 +1657,10 @@
  },
  "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t5/1131-remiremont-maison-f5-situee-dans-un-quartier-calme-et-recherche/": {
   "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t5/1259-remiremont-maison-individuelle-entierement-renovee-en-2023/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.abbesses-immobilier.fr/vente/1-remiremont/maison/t5/1396-en-exclusivite-remiremont-maison-individuelle/": {
@@ -1831,6 +1727,10 @@
   "jour": "2026-11-19",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/16-vecoux/maison/t10/1242-en-exclusivite-vecoux-maison-mitoyenne-f6-un-appartement-f5-loue-650-euros/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/2-st-ame/maison/t4/40-en-exclusivite-saint-ame-maison-mitoyenne-env-110m-par-un-cote/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -1869,6 +1769,10 @@
  },
  "https://www.abbesses-immobilier.fr/vente/27-raon-aux-bois/maison/t6/1048-raon-aux-bois-pavillon-individuel-tres-bien-entretenu/": {
   "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/27-raon-aux-bois/maison/t6/1447-en-exclusivite-raon-aux-bois-agreable-pavillon-de-2006-avec-4-chambres-et-piscine/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.abbesses-immobilier.fr/vente/3-thiefosse/maison/t5/1643-en-exclusivite-thiefosse-maison-f5-avec-vue-imprenable/": {
@@ -1935,6 +1839,10 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/4-st-nabord/maison/t7/1301-en-exclusivite-saint-nabord-tres-jolie-vue-et-belle-exposition-pour-cette-maison/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/4-st-nabord/maison/t7/754-en-exclusivite-saint-nabord-charmante-propriete-tres-bien-entretenue-avec-piscine/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -1967,6 +1875,10 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/55-la-bresse/maison/t7/1183-la-bresse-pavillon-individuel-de-2019/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/6-rupt-sur-moselle/maison/t4/171-rupt-s-mlle-pavillon-plain-pied-de-2013-d-une-superficie-hab-d-env-120m/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -1977,6 +1889,10 @@
  },
  "https://www.abbesses-immobilier.fr/vente/6-rupt-sur-moselle/maison/t6/1122-rupt-sur-moselle-charmant-pavillon-tres-bien-entretenu/": {
   "jour": "2026-11-22",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/7-le-syndicat/chalet/t6/1509-le-syndicat-chalet-de-2001-vendu-meuble/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.abbesses-immobilier.fr/vente/7-le-syndicat/maison/t4/1018-en-exclusivite-le-syndicat-pavillon-individuel/": {
@@ -1995,8 +1911,16 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/maison/t5/1143-saint-etienne-les-remiremont-pavillon-tres-soigne-avec-joli-terrain-arbore/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/maison/t5/1254-en-exclusivite-saint-etienne-les-remiremont-maison-mitoyenne-f5-avec-jardin-et-depend/": {
   "jour": "2026-11-22",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/maison/t5/1274-en-exclusivite-saint-etienne-les-remiremont-maison-f5-a-renover/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.abbesses-immobilier.fr/vente/8-st-etienne-les-remiremont/maison/t5/1412-en-exclusivite-secteur-remiremont-pavillon-individuel-de-plain-pied-sur-sous-sol/": {
@@ -2039,6 +1963,18 @@
   "jour": "2026-11-22",
   "motif": "vendu"
  },
+ "https://www.abbesses-immobilier.fr/vente/9-dommartin-les-remiremont/maison/t3/1247-dommartin-les-remiremont-joli-pavillon-de-plain-pied-de-2010-2-chbres-secteur-calme/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/9-dommartin-les-remiremont/maison/t6/1193-dommartin-les-remiremont-pavillon-des-annees-2000/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.abbesses-immobilier.fr/vente/92-le-menil/maison/t6/1399-en-exclusivite-le-menil-charmante-maison-de-plain-pied-f6/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.abbesses-immobilier.fr/vente/95-xertigny/ferme/t5/722-a-20-min-d-epinal-belle-ferme-endroit-calme-proche-foret/": {
   "jour": "2026-11-22",
   "motif": "vendu"
@@ -2079,6 +2015,10 @@
   "jour": "2026-10-28",
   "motif": "vendu"
  },
+ "https://www.abrinor.fr/annonce/vente-maison-orchies-59310-orc-38980-ld/": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:appartements"
+ },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/arches/bien/24186/exclu-arches-appart-ou-plateau-en-duplex-agrave-achever-d-039une-surface-de-8288-m-sup2-carrez--11-m-sup2-de-m-eacutezzanine.html": {
   "jour": "2026-11-10",
   "motif": "titre_hors_cible:appart"
@@ -2099,6 +2039,10 @@
   "jour": "2026-11-10",
   "motif": "titre_hors_cible:recherche"
  },
+ "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/epinal/bien/24458/exclu-epinal-st-laurent-appartement-type-f3-libre-de-suite.html": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/la-bresse/bien/23340/exclu-la-bresse-appartement-de-7033-m-sup2-carrez-situ-eacute-agrave-2-pas-du-centre-ville-.html": {
   "jour": "2026-11-08",
   "motif": "titre_hors_cible:appartement"
@@ -2113,6 +2057,10 @@
  },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/23770/remiremont-centre-ville-appartement-t4-avec-parquet-de-ch-egravene.html": {
   "jour": "2026-11-22",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/23888/remiremont--centre-ville--appartement-4-pi-egraveces--3-chambres.html": {
+  "jour": "2026-11-25",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/24269/exclu-remiremont-hyper-centre-an-ccedilien-appartement-agrave-am-eacutenager.html": {
@@ -2153,6 +2101,10 @@
  },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/24509/exclu-remiremont-centre-ville-3-appartements-lou-eacutes-146596-euro--mois-type-f3-en-bon-eacutetat.html": {
   "jour": "2026-11-22",
+  "motif": "titre_hors_cible:appartements"
+ },
+ "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/remiremont/bien/24509/exclu-remiremont-centre-ville-3-appartements-lou-eacutes-148596-euro--mois-type-f3-en-bon-eacutetat.html": {
+  "jour": "2026-11-25",
   "motif": "titre_hors_cible:appartements"
  },
  "https://www.accord-immobilier.net/fr/annonces-immobilieres/offre/rupt-sur-moselle/bien/24242/rupt-sur-moselle-appart-f3-en-duplex-avec-jardin-2-caves-2-stationnements-.html": {
@@ -2299,6 +2251,10 @@
   "jour": "2026-11-01",
   "motif": "vendu"
  },
+ "https://www.afico.fr/annonce/maison-110-m%c2%b2-tours/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.afico.fr/annonce/maison-113m%c2%b2-cinq-mars-la-pile/": {
   "jour": "2026-11-04",
   "motif": "vendu"
@@ -2363,6 +2319,10 @@
   "jour": "2026-11-19",
   "motif": "vendu"
  },
+ "https://www.afico.fr/annonce/maison-150-m%c2%b2-tours/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.afico.fr/annonce/maison-158-m%c2%b2-tours/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -2383,6 +2343,10 @@
   "jour": "2026-11-19",
   "motif": "vendu"
  },
+ "https://www.afico.fr/annonce/maison-174-m2-saint-avertin/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.afico.fr/annonce/maison-180-m%c2%b2-sonzay/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -2397,6 +2361,18 @@
  },
  "https://www.afico.fr/annonce/maison-180-m%c2%b2-tours/": {
   "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.afico.fr/annonce/maison-185-m%c2%b2-saint-cyr-sur-loire/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.afico.fr/annonce/maison-194-m%c2%b2-tours/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.afico.fr/annonce/maison-204-m2-tours/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.afico.fr/annonce/maison-216-m%c2%b2-tours/": {
@@ -2467,6 +2443,10 @@
   "jour": "2026-11-15",
   "motif": "vendu"
  },
+ "https://www.afico.fr/annonce/maison-89-m%c2%b2-joue-les-tours/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.afico.fr/annonce/maison-90-m%c2%b2-saint-pierre-des-corps/": {
   "jour": "2026-11-19",
   "motif": "vendu"
@@ -2477,6 +2457,14 @@
  },
  "https://www.afico.fr/annonce/maison-de-ville-135m%c2%b2-tours/": {
   "jour": "2026-10-26",
+  "motif": "vendu"
+ },
+ "https://www.afico.fr/annonce/maison-de-ville-142-m%c2%b2-tours/": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
+ "https://www.afico.fr/annonce/maison-de-ville-84m%c2%b2-tours/": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.afico.fr/annonce/maison-meublee-84-m%c2%b2-fondettes/": {
@@ -3179,8 +3167,16 @@
   "jour": "2026-11-19",
   "motif": "vendu"
  },
+ "https://www.agencealbert1er.fr/vente/maison-individuelle-6-pieces-sainte-adresse-76310,VM1506": {
+  "jour": "2026-11-25",
+  "motif": "vendu"
+ },
  "https://www.agencealbert1er.fr/vente/maison-individuelle-8-pieces-le-havre-76620,VM1217": {
   "jour": "2026-11-19",
+  "motif": "vendu"
+ },
+ "https://www.agencealbert1er.fr/vente/maison-mitoyenne-1-cote-5-pieces-saint-romain-de-colbosc-76430,VM1504": {
+  "jour": "2026-11-25",
   "motif": "vendu"
  },
  "https://www.agencealbert1er.fr/vente/maison-traditionnelle-4-pieces-montivilliers-76290,VM1324": {
@@ -3233,10 +3229,6 @@
  },
  "https://www.agencecbi.com/vente/1-vendome/maison/t9/2796-maison-de-charme/": {
   "jour": "2026-11-05",
-  "motif": "vendu"
- },
- "https://www.agencecbi.com/vente/1-vendome/propriete/t9/2-12-km-vendome-elegance-et-charme-prestige/": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.agencecbi.com/vente/107-vievy-le-raye/maison/t4/14-proche-oucques-pavillon-plain-pied/": {
@@ -3347,12 +3339,20 @@
   "jour": "2026-11-22",
   "motif": "page_catalogue"
  },
+ "https://www.agenceduterroir.com/maison-a-vendre-perche-bouffry-1835.html": {
+  "jour": "2026-11-25",
+  "motif": "page_catalogue"
+ },
  "https://www.agenceduterroir.com/maison-a-vendre-perche-boursay-1057.html": {
   "jour": "2026-11-22",
   "motif": "vendu"
  },
  "https://www.agenceduterroir.com/maison-a-vendre-perche-boursay-1386.html": {
   "jour": "2026-11-22",
+  "motif": "page_catalogue"
+ },
+ "https://www.agenceduterroir.com/maison-a-vendre-perche-boursay-1387.html": {
+  "jour": "2026-11-25",
   "motif": "page_catalogue"
  },
  "https://www.agenceduterroir.com/maison-a-vendre-perche-boursay-1618.html": {
@@ -3429,6 +3429,10 @@
  },
  "https://www.agenceduterroir.com/maison-a-vendre-perche-cormenon-1706.html": {
   "jour": "2026-11-22",
+  "motif": "page_catalogue"
+ },
+ "https://www.agenceduterroir.com/maison-a-vendre-perche-cormenon-1742.html": {
+  "jour": "2026-11-25",
   "motif": "page_catalogue"
  },
  "https://www.agenceduterroir.com/maison-a-vendre-perche-cormenon-1848.html": {
@@ -4351,21 +4355,9 @@
   "jour": "2026-10-27",
   "motif": "titre_hors_cible:batir"
  },
- "https://www.brique-rouge-immobilier.fr/vente/maison/haubourdin-jolie-semi-indivi-de-plus-150m-grand-jardin_18240": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.brique-rouge-immobilier.fr/vente/maison/ideal-investisseur-ou-primo-accedant_26866": {
   "jour": "2026-10-30",
   "motif": "titre_hors_cible:primo accedant"
- },
- "https://www.brique-rouge-immobilier.fr/vente/maison/loos-3mn-chr-maison-recente-t4-exterieur-parking-privatif_32390": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:parking"
- },
- "https://www.brique-rouge-immobilier.fr/vente/maison/maison-batir-3-chambres-avec-jardin_32000": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:batir"
  },
  "https://www.brique-rouge-immobilier.fr/vente/maison/maison-individuelle-semi-plain-pied-parking-garage_33316": {
   "jour": "2026-10-27",
@@ -6518,10 +6510,6 @@
  "https://www.ducotedechezvous-immo.com/vente/1": {
   "jour": "2026-11-20",
   "motif": "titre_hors_cible:biens immobiliers"
- },
- "https://www.ducotedechezvous-immo.com/vente/10-aube/220-chamoy/1-maison/t8/2115-/": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
  },
  "https://www.ducotedechezvous-immo.com/vente/10-aube/242-isle-aumont/1-maison/t5/2172-maison-a-acheter-a-isle-aumont-proche-troyes/": {
   "jour": "2026-11-04",
@@ -8763,10 +8751,6 @@
   "jour": "2026-11-04",
   "motif": "vendu"
  },
- "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2017/chalon-sur-saone-20-min-manoir-origine-17eme-sur-1-hectare": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2021/givry-belle-demeure-en-pierre-entierement-renovee": {
   "jour": "2026-11-04",
   "motif": "vendu"
@@ -8777,10 +8761,6 @@
  },
  "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2029/proche-buxy-propriete-de-famille-avec-parc": {
   "jour": "2026-11-07",
-  "motif": "vendu"
- },
- "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2032/st-gengoux-le-national-maison-de-village": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.immo-ray.com/fr/a/vente/maisons/chalonnais/2033/givry-belle-maison-de-village-avec-logement-independant": {
@@ -10411,10 +10391,6 @@
   "jour": "2026-11-22",
   "motif": "titre_hors_cible:appartement"
  },
- "https://www.lapetiteagencecaen.com/biens-a-la-vente/appartement-neuf/%C3%A9pron": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:appartement"
- },
  "https://www.lapetiteagencecaen.com/biens-a-la-vente/loft-%C3%A0-r%C3%A9nover-int%C3%A9gralement/caen": {
   "jour": "2026-11-14",
   "motif": "titre_hors_cible:loft"
@@ -11803,10 +11779,6 @@
   "jour": "2026-11-18",
   "motif": "vendu"
  },
- "https://www.lelievre-immobilier.com/vente/stationnement-nantes-ref-62311": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:parking"
- },
  "https://www.lemaistre-immo.fr/fr/biens-archives.htm": {
   "jour": "2026-11-18",
   "motif": "vendu"
@@ -11874,10 +11846,6 @@
  "https://www.lemercier-immobilier.com/vente/91-valenciennes/duplex/t5/13391-magnifique-appartement-duplex-en-plein-coeur-de-valenciennes/": {
   "jour": "2026-11-18",
   "motif": "titre_hors_cible:appartement"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-3-pieces-croix-59170,VM1036": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-3-pieces-croix-59170,VM403": {
   "jour": "2026-11-20",
@@ -11947,10 +11915,6 @@
   "jour": "2026-11-23",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-croix-59170,VM993": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-leers-59115,VM742": {
   "jour": "2026-11-23",
   "motif": "vendu"
@@ -11995,20 +11959,12 @@
   "jour": "2026-11-23",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-wasquehal-59290,VM1006": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-wasquehal-59290,VM372": {
   "jour": "2026-11-20",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-4-pieces-wasquehal-59290,VM803": {
   "jour": "2026-11-23",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-croix-59170,VM1007": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-croix-59170,VM284": {
@@ -12041,22 +11997,6 @@
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-croix-59170,VM688": {
   "jour": "2026-11-23",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-croix-59170,VM969": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-lambersart-59130,VM1119": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-lambersart-59130,VM943": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-lambersart-59130,VM977": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-5-pieces-leers-59115,VM1138": {
@@ -12099,18 +12039,6 @@
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-6-pieces-roubaix-59100,VM991": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-7-pieces-croix-59170,VM959": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-8-pieces-toufflers-59390,VM1105": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-ancienne-5-pieces-lille-59260,VM338": {
   "jour": "2026-11-20",
   "motif": "vendu"
@@ -12135,20 +12063,12 @@
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-6-pieces-croix-59170,VM961": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-6-pieces-roubaix-59100,VM393": {
   "jour": "2026-11-20",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-6-pieces-roubaix-59100,VM790": {
   "jour": "2026-11-23",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-6-pieces-roubaix-59100,VM933": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-7-pieces-roubaix-59100,VM1145": {
@@ -12167,10 +12087,6 @@
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-bourgeoise-9-pieces-roubaix-59100,VM1063": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-contemporaine-5-pieces-roubaix-59100,VM910": {
   "jour": "2026-11-23",
   "motif": "vendu"
@@ -12179,20 +12095,8 @@
   "jour": "2026-11-23",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-4-pieces-tourcoing-59200,VM1100": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-4-pieces-wasquehal-59290,VM929": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-6-pieces-bousbecque-59166,VM430": {
   "jour": "2026-11-20",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-6-pieces-tourcoing-59200,VM939": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-1-cote-2-pieces-hem-59510,VM686": {
@@ -12201,10 +12105,6 @@
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-1-cote-3-pieces-tourcoing-59200,VM724": {
   "jour": "2026-11-23",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-1-cote-4-pieces-croix-59170,VM1050": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-1-cote-4-pieces-lille-59000,VM474": {
@@ -12239,10 +12139,6 @@
   "jour": "2026-11-20",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-croix-59170,VM1021": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-croix-59170,VM1079": {
   "jour": "2026-11-03",
   "motif": "vendu"
@@ -12251,24 +12147,12 @@
   "jour": "2026-11-23",
   "motif": "vendu"
  },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-lille-59260,VM989": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-lille-59800,VM606": {
   "jour": "2026-11-23",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-roubaix-59100,VM1127": {
   "jour": "2026-10-28",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-roubaix-59100,VM963": {
-  "jour": "2026-10-25",
-  "motif": "vendu"
- },
- "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-4-pieces-tourcoing-59200,VM1085": {
-  "jour": "2026-10-25",
   "motif": "vendu"
  },
  "https://www.lesnouvellespepitesimmo.fr/vente/maison-mitoyenne-2-cotes-5-pieces-croix-59170,VM532": {
@@ -12599,12 +12483,24 @@
   "jour": "2026-11-13",
   "motif": "titre_hors_cible:appartement"
  },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4890-exclusivite-magnifique-4-pieces-contemporain-a-la-vue-mer-epoustouflante": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:appartement"
+ },
  "https://www.michaelzingraf.com/fr/vente/MZICC4892-exceptionnel-appartement-raffine-a-la-vue-mer-panoramique": {
   "jour": "2026-11-09",
   "motif": "titre_hors_cible:appartement"
  },
- "https://www.michaelzingraf.com/fr/vente/MZIMC1329-vivre-au-fil-de-leau-a-riviere-noire": {
-  "jour": "2026-10-25",
+ "https://www.michaelzingraf.com/fr/vente/MZICC4896-appartement-contemporain-idealement-situe-en-basse-californie": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4899-exclusivite-superbe-penthouse-au-coeur-dune-copropriete-intimiste": {
+  "jour": "2026-11-25",
+  "motif": "titre_hors_cible:appartement"
+ },
+ "https://www.michaelzingraf.com/fr/vente/MZICC4900-superbe-appartement-bourgeois": {
+  "jour": "2026-11-25",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.michaelzingraf.com/fr/vente/MZIMC1355-ile-maurice-appartement-dexception-de-4-chambres-a-belle-vue": {
@@ -12614,10 +12510,6 @@
  "https://www.michaelzingraf.com/fr/vente/MZIMC1392-elegance-art-de-vivre-appartement-4-chambres-avec-jardin-privatif-belle-vue": {
   "jour": "2026-10-28",
   "motif": "titre_hors_cible:appartement"
- },
- "https://www.michaelzingraf.com/fr/vente/MZIMC1417-loft-contemporain-au-coeur-de-cap-tamarin": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:studio"
  },
  "https://www.michaelzingraf.com/fr/vente/MZIMC1489-villa-meublee-avec-piscine-un-art-de-vivre-a-grand-baie": {
   "jour": "2026-11-09",
@@ -12655,10 +12547,6 @@
   "jour": "2026-11-03",
   "motif": "titre_hors_cible:appartement"
  },
- "https://www.michaelzingraf.com/fr/vente/MZINC635-exclusivite-nice-centre-a-proximite-du-carre-dor-3-pieces-78-m2-etage-eleve": {
-  "jour": "2026-10-25",
-  "motif": "titre_hors_cible:appartement"
- },
  "https://www.michaelzingraf.com/fr/vente/MZIOP1369-les-hauts-de-vaugrenier-appartement-5-pieces-avec-vue-mer-panoramique": {
   "jour": "2026-11-16",
   "motif": "titre_hors_cible:appartement"
@@ -12681,10 +12569,6 @@
  },
  "https://www.michaelzingraf.com/fr/vente/MZIPB438-cannes-croisette-studio-dexception-de-53-m2-face-au-port-canto": {
   "jour": "2026-11-03",
-  "motif": "titre_hors_cible:appartement"
- },
- "https://www.michaelzingraf.com/fr/vente/MZIPB441-cannes-croisette-elegant-3-pieces-renove-avec-terrasses-et-vue-mer": {
-  "jour": "2026-10-25",
   "motif": "titre_hors_cible:appartement"
  },
  "https://www.michaelzingraf.com/fr/vente/MZIPB442-palm-beach-appartement-3-pieces-avec-jardin-privatif-et-piscine": {
