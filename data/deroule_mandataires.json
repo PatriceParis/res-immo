@@ -29,79 +29,146 @@
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.7,
+  "seconde": 3.5,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.4,
+  "seconde": 5.2,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.9,
+  "seconde": 5.7,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.9,
+  "seconde": 5.7,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.3,
+  "seconde": 6.1,
   "reseau": "capifrance",
-  "connues": 19612,
-  "ecartees": 2324
+  "connues": 19768,
+  "ecartees": 2381
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.3,
+  "seconde": 6.1,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.5,
+  "seconde": 6.2,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 22.1,
+  "seconde": 17.7,
   "reseau": "iad",
-  "n": 112443,
+  "n": 111913,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 23.4,
+  "seconde": 19.1,
   "reseau": "iad",
-  "notees": 27
+  "notees": 70
  },
  {
   "etape": "tentative_notee",
-  "seconde": 24.8,
+  "seconde": 20.9,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 25.2,
+  "seconde": 21.3,
   "reseau": "iad",
-  "connues": 19612,
-  "ecartees": 2324
+  "connues": 19768,
+  "ecartees": 2381
  },
  {
   "etape": "departement",
-  "seconde": 164.8,
+  "seconde": 154.2,
   "reseau": "iad",
-  "departement": "52",
+  "departement": "18",
+  "visitees": 50,
+  "gardes": 32,
+  "tronquee": true,
+  "etats": {
+   "garde": 32,
+   "vendu": 11,
+   "ecarte": 7,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 6,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 4 pièces de 72 m² à SAINT-JUST (35550)",
+   "prix_trop_haut": "Domaine 5 pièces de 306 m² à Arcomps (18200)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 303.8,
+  "reseau": "iad",
+  "departement": "21",
+  "visitees": 50,
+  "gardes": 43,
+  "tronquee": true,
+  "etats": {
+   "garde": 43,
+   "vendu": 1,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 6
+  },
+  "exemples": {
+   "hors_perimetre": "Maison de village 13 pièces de 320 m² à Saint-Martin-du-Mont (01160)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 432.4,
+  "reseau": "iad",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 30,
+  "tronquee": true,
+  "etats": {
+   "garde": 30,
+   "vendu": 10,
+   "ecarte": 10,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 9,
+   "titre_hors_cible:appartement": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison 10 pièces de 367 m² à SAINTE COLOMBE (17210)",
+   "titre_hors_cible:appartement": "Appartement 3 pièces de 79 m² à Montferrand-le-Château (25320)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 568.7,
+  "reseau": "iad",
+  "departement": "27",
   "visitees": 50,
   "gardes": 36,
   "tronquee": true,
@@ -112,89 +179,24 @@
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 3
+   "location": 2,
+   "hors_perimetre": 2
   },
   "exemples": {
-   "prix_trop_haut": "Château 11 pièces de 352 m² à Autigny le grand (52300)",
-   "hors_perimetre": "Maison 5 pièces de 137 m² à Richebourg (78550)"
+   "location": "Maison de ville 2 pièces de 45 m² à Breteuil (27160)",
+   "hors_perimetre": "Maison traditionnelle 11 pièces de 281 m² à Bois-le-Roi (77590)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 299.3,
+  "seconde": 605.2,
   "reseau": "iad",
-  "departement": "53",
-  "visitees": 50,
-  "gardes": 37,
+  "departement": "28",
+  "visitees": 13,
+  "gardes": 13,
   "tronquee": true,
   "etats": {
-   "garde": 37,
-   "vendu": 10,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "hors_perimetre": "110 030 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 446.7,
-  "reseau": "iad",
-  "departement": "70",
-  "visitees": 50,
-  "gardes": 40,
-  "tronquee": true,
-  "etats": {
-   "garde": 40,
-   "vendu": 4,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 6
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 8 pièces de 200 m² à Buthiers (77760)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 587.2,
-  "reseau": "iad",
-  "departement": "71",
-  "visitees": 50,
-  "gardes": 33,
-  "tronquee": true,
-  "etats": {
-   "garde": 33,
-   "vendu": 8,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 8,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de campagne 4 pièces de 124 m² à Sainte-Foy (85150)",
-   "prix_trop_haut": "Demeure 19 pièces de 500 m² à Palinges (71430)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 606.6,
-  "reseau": "iad",
-  "departement": "80",
-  "visitees": 6,
-  "gardes": 6,
-  "tronquee": true,
-  "etats": {
-   "garde": 6,
+   "garde": 13,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -204,139 +206,148 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 606.6,
+  "seconde": 605.2,
   "reseau": "safti",
-  "part_secondes": 595
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 607.2,
+  "seconde": 605.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 608.7,
+  "seconde": 606.2,
   "reseau": "safti",
-  "n": 29086,
+  "n": 29071,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 609.4,
+  "seconde": 607.0,
   "reseau": "safti",
-  "notees": 41
+  "notees": 84
  },
  {
   "etape": "tentative_notee",
-  "seconde": 609.8,
+  "seconde": 607.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 610.2,
+  "seconde": 607.9,
   "reseau": "safti",
-  "connues": 19655,
-  "ecartees": 2378
+  "connues": 19740,
+  "ecartees": 2357
  },
  {
   "etape": "departement",
-  "seconde": 762.0,
+  "seconde": 750.9,
   "reseau": "safti",
-  "departement": "80",
+  "departement": "50",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 47,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 3,
-   "ecarte": 9,
+   "garde": 47,
+   "vendu": 0,
+   "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5,
-   "prix_trop_haut": 4
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à DEVISE de 62m²",
-   "prix_trop_haut": "Maison à vendre à ABBEVILLE de 303m²"
+   "prix_trop_haut": "Maison à vendre à PICAUVILLE de 1560m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 912.3,
+  "seconde": 891.8,
   "reseau": "safti",
-  "departement": "88",
+  "departement": "51",
   "visitees": 50,
-  "gardes": 38,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 38,
-   "vendu": 4,
+   "garde": 42,
+   "vendu": 0,
    "ecarte": 8,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 5,
-   "ni_surface_ni_prix_credible": 1,
-   "hors_perimetre": 2
+   "hors_perimetre": 5,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à BAN-SUR-MEURTHE-CLEFCY de 280m²",
-   "ni_surface_ni_prix_credible": "Maison à vendre à GEMMELAINCOURT de 55m²",
-   "hors_perimetre": "Maison à vendre à LES FORGES de 95m²"
+   "hors_perimetre": "Maison à vendre à MORANGIS de 95m²",
+   "prix_trop_haut": "Maison à vendre à BEZANNES de 485m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1068.7,
+  "seconde": 971.0,
   "reseau": "safti",
-  "departement": "41",
-  "visitees": 50,
-  "gardes": 43,
+  "departement": "52",
+  "visitees": 28,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 43,
+   "garde": 23,
    "vendu": 0,
+   "ecarte": 5,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à BOURG de 232m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1145.7,
+  "reseau": "safti",
+  "departement": "59",
+  "visitees": 50,
+  "gardes": 41,
+  "tronquee": true,
+  "etats": {
+   "garde": 41,
+   "vendu": 2,
    "ecarte": 7,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 5,
-   "prix_trop_haut": 2
+   "prix_trop_haut": 7
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à LISLE de 137m²",
-   "prix_trop_haut": "Maison à vendre à BLOIS de 360m²"
+   "prix_trop_haut": "Maison à vendre à BRAY-DUNES de 187m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1205.1,
+  "seconde": 1203.5,
   "reseau": "safti",
-  "departement": "45",
-  "visitees": 45,
-  "gardes": 37,
+  "departement": "60",
+  "visitees": 14,
+  "gardes": 14,
   "tronquee": true,
   "etats": {
-   "garde": 37,
+   "garde": 14,
    "vendu": 0,
-   "ecarte": 8,
+   "ecarte": 0,
    "illisible": 0
   },
-  "motifs": {
-   "hors_perimetre": 4,
-   "prix_trop_haut": 4
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à BELLEGARDE de 64m²",
-   "prix_trop_haut": "Maison à vendre à LORCY de 371m²"
-  }
+  "motifs": {},
+  "exemples": {}
  },
  {
   "etape": "fin",
-  "seconde": 1205.2,
-  "gardes": 308
+  "seconde": 1203.5,
+  "gardes": 321
  }
 ]
