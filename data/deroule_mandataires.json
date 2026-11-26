@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.8,
+  "seconde": 1.7,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.8,
+  "seconde": 1.7,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,180 +23,178 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.8,
+  "seconde": 1.7,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.5,
+  "seconde": 3.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.2,
+  "seconde": 4.5,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.7,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.7,
+  "seconde": 5.0,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.1,
+  "seconde": 5.5,
   "reseau": "capifrance",
-  "connues": 19768,
-  "ecartees": 2381
+  "connues": 19785,
+  "ecartees": 2374
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.1,
+  "seconde": 5.5,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 6.2,
+  "seconde": 5.7,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 17.7,
+  "seconde": 19.4,
   "reseau": "iad",
   "n": 111913,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 19.1,
+  "seconde": 20.8,
   "reseau": "iad",
-  "notees": 70
+  "notees": 39
  },
  {
   "etape": "tentative_notee",
-  "seconde": 20.9,
+  "seconde": 22.3,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 21.3,
+  "seconde": 22.8,
   "reseau": "iad",
-  "connues": 19768,
-  "ecartees": 2381
+  "connues": 19785,
+  "ecartees": 2374
  },
  {
   "etape": "departement",
-  "seconde": 154.2,
+  "seconde": 148.7,
   "reseau": "iad",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 32,
-  "tronquee": true,
-  "etats": {
-   "garde": 32,
-   "vendu": 11,
-   "ecarte": 7,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 6,
-   "prix_trop_haut": 1
-  },
-  "exemples": {
-   "hors_perimetre": "Maison 4 pièces de 72 m² à SAINT-JUST (35550)",
-   "prix_trop_haut": "Domaine 5 pièces de 306 m² à Arcomps (18200)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 303.8,
-  "reseau": "iad",
-  "departement": "21",
-  "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
-   "vendu": 1,
-   "ecarte": 6,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 6
-  },
-  "exemples": {
-   "hors_perimetre": "Maison de village 13 pièces de 320 m² à Saint-Martin-du-Mont (01160)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 432.4,
-  "reseau": "iad",
-  "departement": "25",
+  "departement": "58",
   "visitees": 50,
   "gardes": 30,
   "tronquee": true,
   "etats": {
    "garde": 30,
-   "vendu": 10,
-   "ecarte": 10,
+   "vendu": 18,
+   "ecarte": 2,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 9,
-   "titre_hors_cible:appartement": 1
+   "url_type_exclu": 1,
+   "hors_perimetre": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison 10 pièces de 367 m² à SAINTE COLOMBE (17210)",
-   "titre_hors_cible:appartement": "Appartement 3 pièces de 79 m² à Montferrand-le-Château (25320)"
+   "url_type_exclu": "Immeuble de 266 m² à CHATEAU CHINON (VILLE) (58120)",
+   "hors_perimetre": "Maison de village 5 pièces de 90 m² à Saint-Sulpice (46160)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 568.7,
+  "seconde": 279.7,
   "reseau": "iad",
-  "departement": "27",
+  "departement": "72",
   "visitees": 50,
-  "gardes": 36,
+  "gardes": 38,
   "tronquee": true,
   "etats": {
-   "garde": 36,
-   "vendu": 10,
-   "ecarte": 4,
+   "garde": 38,
+   "vendu": 11,
+   "ecarte": 1,
    "illisible": 0
   },
   "motifs": {
-   "location": 2,
-   "hors_perimetre": 2
+   "hors_perimetre": 1
   },
   "exemples": {
-   "location": "Maison de ville 2 pièces de 45 m² à Breteuil (27160)",
-   "hors_perimetre": "Maison traditionnelle 11 pièces de 281 m² à Bois-le-Roi (77590)"
+   "hors_perimetre": "110 500 biens immobiliers à vendre"
   }
  },
  {
   "etape": "departement",
-  "seconde": 605.2,
+  "seconde": 427.3,
   "reseau": "iad",
-  "departement": "28",
-  "visitees": 13,
-  "gardes": 13,
+  "departement": "88",
+  "visitees": 50,
+  "gardes": 43,
   "tronquee": true,
   "etats": {
-   "garde": 13,
+   "garde": 43,
+   "vendu": 4,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison traditionnelle 3 pièces de 80 m² à Les Forges (79340)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 594.0,
+  "reseau": "iad",
+  "departement": "36",
+  "visitees": 50,
+  "gardes": 41,
+  "tronquee": true,
+  "etats": {
+   "garde": 41,
+   "vendu": 1,
+   "ecarte": 8,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 7
+  },
+  "exemples": {
+   "location": "Maison 6 pièces de 140 m² à Rivarennes (37190)",
+   "hors_perimetre": "Maison 2 pièces de 34 m² à Ruffec (16700)"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 611.5,
+  "reseau": "iad",
+  "departement": "37",
+  "visitees": 3,
+  "gardes": 3,
+  "tronquee": true,
+  "etats": {
+   "garde": 3,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -206,53 +204,74 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 605.2,
+  "seconde": 611.5,
   "reseau": "safti",
-  "part_secondes": 597
+  "part_secondes": 590
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 605.4,
+  "seconde": 612.0,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 606.2,
+  "seconde": 612.9,
   "reseau": "safti",
   "n": 29071,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 607.0,
+  "seconde": 613.7,
   "reseau": "safti",
-  "notees": 84
+  "notees": 43
  },
  {
   "etape": "tentative_notee",
-  "seconde": 607.5,
+  "seconde": 614.1,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 607.9,
+  "seconde": 614.6,
   "reseau": "safti",
-  "connues": 19740,
-  "ecartees": 2357
+  "connues": 19809,
+  "ecartees": 2402
  },
  {
   "etape": "departement",
-  "seconde": 750.9,
+  "seconde": 811.9,
   "reseau": "safti",
-  "departement": "50",
+  "departement": "89",
   "visitees": 50,
-  "gardes": 47,
+  "gardes": 45,
   "tronquee": true,
   "etats": {
-   "garde": 47,
-   "vendu": 0,
+   "garde": 45,
+   "vendu": 2,
+   "ecarte": 3,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 3
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à Les Ormes de 178m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 980.4,
+  "reseau": "safti",
+  "departement": "14",
+  "visitees": 50,
+  "gardes": 46,
+  "tronquee": true,
+  "etats": {
+   "garde": 46,
+   "vendu": 1,
    "ecarte": 3,
    "illisible": 0
   },
@@ -260,84 +279,42 @@
    "prix_trop_haut": 3
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à PICAUVILLE de 1560m²"
+   "prix_trop_haut": "Maison à vendre à HOULGATE de 158m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 891.8,
+  "seconde": 1130.0,
   "reseau": "safti",
-  "departement": "51",
-  "visitees": 50,
-  "gardes": 42,
-  "tronquee": true,
-  "etats": {
-   "garde": 42,
-   "vendu": 0,
-   "ecarte": 8,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5,
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à MORANGIS de 95m²",
-   "prix_trop_haut": "Maison à vendre à BEZANNES de 485m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 971.0,
-  "reseau": "safti",
-  "departement": "52",
-  "visitees": 28,
-  "gardes": 23,
-  "tronquee": true,
-  "etats": {
-   "garde": 23,
-   "vendu": 0,
-   "ecarte": 5,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à BOURG de 232m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1145.7,
-  "reseau": "safti",
-  "departement": "59",
+  "departement": "18",
   "visitees": 50,
   "gardes": 41,
   "tronquee": true,
   "etats": {
    "garde": 41,
-   "vendu": 2,
-   "ecarte": 7,
+   "vendu": 0,
+   "ecarte": 9,
    "illisible": 0
   },
   "motifs": {
-   "prix_trop_haut": 7
+   "prix_trop_haut": 4,
+   "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à BRAY-DUNES de 187m²"
+   "prix_trop_haut": "Maison à vendre à SAINT-DOULCHARD de 420m²",
+   "hors_perimetre": "Maison à vendre à ACHERES de 123m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1203.5,
+  "seconde": 1204.1,
   "reseau": "safti",
-  "departement": "60",
-  "visitees": 14,
-  "gardes": 14,
+  "departement": "53",
+  "visitees": 23,
+  "gardes": 23,
   "tronquee": true,
   "etats": {
-   "garde": 14,
+   "garde": 23,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -347,7 +324,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1203.5,
-  "gardes": 321
+  "seconde": 1204.1,
+  "gardes": 310
  }
 ]
