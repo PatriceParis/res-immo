@@ -76,3 +76,27 @@ def test_sans_surface_le_prix_du_titre_est_accepte():
         "prix": None, "pieces": 4, "code_postal": "71210",
     })
     assert prepare["prix"] == 175000
+
+
+def test_un_prix_par_piece_invraisemblable_n_est_pas_un_prix():
+    """26 novembre 2026 : un château de vingt pièces affiché à 25 910 €, par
+    trois bureaux de la même agence, quand l'agence écrit « Prix sur
+    demande ». Sa surface de 833 m² dépassait la borne de l'habitable : le
+    contrôle du prix au m² ne pouvait pas jouer. Sur les 5 184 biens servis de
+    six pièces ou plus, rien d'autre ne tombait sous 2 000 € la pièce."""
+    chateau = preparer_annonce({
+        "titre": "Vente Château Giel-Courteilles 20 Pièces 833 m²",
+        "prix": 25910, "pieces": 20, "surface_m2": None, "code_postal": "61210",
+    })
+    assert chateau["prix"] is None
+    # Une maison à rénover bon marché reste ce qu'elle est.
+    maison = preparer_annonce({
+        "titre": "Maison 6 pièces de 100 m² à Châteauvillain (52120)",
+        "prix": 35000, "pieces": 6, "surface_m2": 100, "code_postal": "52120",
+    })
+    assert maison["prix"] == 35000
+    # Sous six pièces, le compte est trop fragile pour juger.
+    petite = preparer_annonce({
+        "titre": "Maison à rénover", "prix": 15000, "pieces": 5, "code_postal": "36800",
+    })
+    assert petite["prix"] == 15000

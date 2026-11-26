@@ -22,6 +22,16 @@ from .qualite import PRIX_MINI, est_bien_valide, est_viager
 # une demeure aux très grands volumes reste sous 120 m² par pièce.
 MAX_M2_PAR_PIECE = 120
 
+# En deçà, le montant ne peut pas être le prix de tant de pièces. Mesuré le
+# 26 novembre 2026 sur les 5 184 biens servis de six pièces ou plus : un
+# château de vingt pièces à 25 910 € (« Prix sur demande » chez l'agence,
+# repris par ses trois bureaux), à 1 296 € la pièce, puis plus rien sous
+# 2 143 € ; les vraies maisons commencent vers 3 800 € la pièce. Le garde-fou
+# du prix au m² ne pouvait rien : la surface de 833 m² dépasse la borne de
+# l'habitable et n'était pas retenue.
+PRIX_MINI_PAR_PIECE = 2_000
+PIECES_POUR_JUGER = 6
+
 
 def preparer_annonce(brut: dict) -> dict:
     # Les identifiants d'autrui sortent AVANT tout le reste : une clé d'API
@@ -63,6 +73,14 @@ def preparer_annonce(brut: dict) -> dict:
         if retrouve and extraction.prix_m2_credible(retrouve,
                                                     annonce.get("surface_m2")):
             annonce["prix"] = retrouve
+
+    # Prix par pièce invraisemblable : le montant lu n'est pas le prix du bien
+    # (voir PRIX_MINI_PAR_PIECE). « Prix sur demande » plutôt qu'un château à
+    # 25 910 €. Jugé après la relecture du titre, pour ne rien ressusciter.
+    prix, pieces = annonce.get("prix"), annonce.get("pieces")
+    if (prix and pieces and pieces >= PIECES_POUR_JUGER
+            and prix / pieces < PRIX_MINI_PAR_PIECE):
+        annonce["prix"] = None
 
     # Nombre de pièces invraisemblable au regard de la surface. Sauté aux yeux
     # sur la première fiche du site : « Maison · 520 m² · 1 pièce ». Personne
