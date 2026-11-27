@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 2.2,
+  "seconde": 2.0,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 2.2,
+  "seconde": 2.0,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,114 +23,116 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 2.2,
+  "seconde": 2.0,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 4.0,
+  "seconde": 4.4,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 5.4,
+  "seconde": 6.0,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 6.1,
+  "seconde": 6.8,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 6.1,
+  "seconde": 6.8,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 6.8,
+  "seconde": 7.4,
   "reseau": "capifrance",
-  "connues": 19937,
-  "ecartees": 2417
+  "connues": 19924,
+  "ecartees": 2404
  },
  {
   "etape": "reseau_debut",
-  "seconde": 6.8,
+  "seconde": 7.4,
   "reseau": "iad",
-  "part_secondes": 598
+  "part_secondes": 597
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 7.3,
+  "seconde": 7.6,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 27.9,
+  "seconde": 16.9,
   "reseau": "iad",
   "n": 112422,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 30.1,
+  "seconde": 19.1,
   "reseau": "iad",
-  "notees": 80
+  "notees": 44
  },
  {
   "etape": "tentative_notee",
-  "seconde": 32.7,
+  "seconde": 21.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 33.3,
+  "seconde": 22.3,
   "reseau": "iad",
-  "connues": 19937,
-  "ecartees": 2417
+  "connues": 19924,
+  "ecartees": 2404
  },
  {
   "etape": "departement",
-  "seconde": 245.7,
+  "seconde": 226.8,
   "reseau": "iad",
-  "departement": "76",
+  "departement": "39",
   "visitees": 50,
-  "gardes": 36,
+  "gardes": 24,
   "tronquee": true,
   "etats": {
-   "garde": 36,
-   "vendu": 11,
-   "ecarte": 3,
+   "garde": 24,
+   "vendu": 13,
+   "ecarte": 13,
    "illisible": 0
   },
   "motifs": {
-   "location": 1,
-   "hors_perimetre": 2
+   "outre_mer": 5,
+   "hors_perimetre": 5,
+   "prix_trop_haut": 3
   },
   "exemples": {
-   "location": "Maison de ville 3 pièces de 60 m² à Sotteville-lès-Rouen (76300)",
-   "hors_perimetre": "Maison de campagne 14 pièces de 290 m² à Guerville (78930)"
+   "outre_mer": "Maison de ville 4 pièces de 80 m² à Saint-Pierre (97410)",
+   "hors_perimetre": "Maison 6 pièces de 108 m² à Bellefontaine (95270)",
+   "prix_trop_haut": "Ferme 13 pièces de 373 m² à Les Rousses (39220)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 429.5,
+  "seconde": 393.6,
   "reseau": "iad",
-  "departement": "89",
+  "departement": "41",
   "visitees": 50,
-  "gardes": 44,
+  "gardes": 42,
   "tronquee": true,
   "etats": {
-   "garde": 44,
-   "vendu": 6,
+   "garde": 42,
+   "vendu": 8,
    "ecarte": 0,
    "illisible": 0
   },
@@ -139,140 +141,163 @@
  },
  {
   "etape": "departement",
-  "seconde": 607.8,
+  "seconde": 552.2,
   "reseau": "iad",
-  "departement": "02",
-  "visitees": 46,
-  "gardes": 41,
+  "departement": "45",
+  "visitees": 50,
+  "gardes": 34,
   "tronquee": true,
   "etats": {
-   "garde": 41,
-   "vendu": 3,
-   "ecarte": 2,
+   "garde": 34,
+   "vendu": 10,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
    "location": 1,
-   "hors_perimetre": 1
+   "hors_perimetre": 4,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "location": "Maison 4 pièces de 96 m² à ROZOY-BELLEVALLE (02540)",
-   "hors_perimetre": "Maison de village 4 pièces de 130 m² à Saint-Michel (31220)"
+   "location": "Maison 6 pièces de 160 m² à Saint-Denis-en-Val (45560)",
+   "hors_perimetre": "Domaine 11 pièces de 250 m² à Bellegarde (30127)",
+   "prix_trop_haut": "Domaine 26 pièces de 1 500 m² à Gy-les-Nonains (45220)"
   }
  },
  {
+  "etape": "departement",
+  "seconde": 605.7,
+  "reseau": "iad",
+  "departement": "50",
+  "visitees": 16,
+  "gardes": 16,
+  "tronquee": true,
+  "etats": {
+   "garde": 16,
+   "vendu": 0,
+   "ecarte": 0,
+   "illisible": 0
+  },
+  "motifs": {},
+  "exemples": {}
+ },
+ {
   "etape": "reseau_debut",
-  "seconde": 607.9,
+  "seconde": 605.7,
   "reseau": "safti",
-  "part_secondes": 594
+  "part_secondes": 596
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 608.6,
+  "seconde": 606.4,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 610.6,
+  "seconde": 608.3,
   "reseau": "safti",
   "n": 29030,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 611.7,
+  "seconde": 609.4,
   "reseau": "safti",
-  "notees": 98
+  "notees": 55
  },
  {
   "etape": "tentative_notee",
-  "seconde": 612.5,
+  "seconde": 610.2,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 613.2,
+  "seconde": 610.8,
   "reseau": "safti",
-  "connues": 19913,
-  "ecartees": 2397
+  "connues": 19947,
+  "ecartees": 2435
  },
  {
   "etape": "departement",
-  "seconde": 807.4,
+  "seconde": 773.6,
   "reseau": "safti",
-  "departement": "61",
+  "departement": "25",
+  "visitees": 50,
+  "gardes": 42,
+  "tronquee": true,
+  "etats": {
+   "garde": 42,
+   "vendu": 2,
+   "ecarte": 6,
+   "illisible": 0
+  },
+  "motifs": {
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à LE VAL de 105m²",
+   "prix_trop_haut": "Maison à vendre à LE RUSSEY de 805m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 935.3,
+  "reseau": "safti",
+  "departement": "27",
   "visitees": 50,
   "gardes": 40,
   "tronquee": true,
   "etats": {
    "garde": 40,
-   "vendu": 4,
+   "vendu": 3,
    "ecarte": 6,
-   "illisible": 0
+   "illisible": 1
   },
   "motifs": {
-   "prix_trop_haut": 1,
-   "hors_perimetre": 5
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à BAGNOLES DE L'ORNE NORMANDIE de 790m²",
-   "hors_perimetre": "Maison à vendre à AUBUSSON de 95m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1005.6,
-  "reseau": "safti",
-  "departement": "62",
-  "visitees": 50,
-  "gardes": 49,
-  "tronquee": true,
-  "etats": {
-   "garde": 49,
-   "vendu": 0,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
+   "hors_perimetre": 5,
    "prix_trop_haut": 1
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à ECURIE de 212m²"
+   "hors_perimetre": "Maison à vendre à Charleval de 90m²",
+   "prix_trop_haut": "Maison à vendre à Bézu-Saint-Éloi de 365m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1199.7,
+  "seconde": 1101.7,
   "reseau": "safti",
-  "departement": "70",
+  "departement": "28",
   "visitees": 50,
   "gardes": 43,
   "tronquee": true,
   "etats": {
    "garde": 43,
-   "vendu": 1,
-   "ecarte": 5,
+   "vendu": 0,
+   "ecarte": 6,
    "illisible": 1
   },
   "motifs": {
-   "hors_perimetre": 5
+   "hors_perimetre": 5,
+   "prix_trop_haut": 1
   },
   "exemples": {
-   "hors_perimetre": "Maison à vendre à La Rochelle de 110m²"
+   "hors_perimetre": "Maison à vendre à ALLONNES de 120m²",
+   "prix_trop_haut": "Maison à vendre à TILLAY-LE-PENEUX de 280m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1203.1,
+  "seconde": 1202.6,
   "reseau": "safti",
-  "departement": "21",
-  "visitees": 1,
-  "gardes": 1,
+  "departement": "36",
+  "visitees": 29,
+  "gardes": 29,
   "tronquee": true,
   "etats": {
-   "garde": 1,
+   "garde": 29,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -282,7 +307,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1203.1,
-  "gardes": 254
+  "seconde": 1202.6,
+  "gardes": 270
  }
 ]
