@@ -6,7 +6,7 @@
  },
  {
   "etape": "communes",
-  "seconde": 1.7,
+  "seconde": 2.2,
   "departements": 109,
   "communes": 36595,
   "anciennes": 2576,
@@ -14,7 +14,7 @@
  },
  {
   "etape": "ordre_des_reseaux",
-  "seconde": 1.7,
+  "seconde": 2.2,
   "ordre": [
    "capifrance",
    "iad",
@@ -23,179 +23,114 @@
  },
  {
   "etape": "reseau_debut",
-  "seconde": 1.7,
+  "seconde": 2.2,
   "reseau": "capifrance",
   "part_secondes": 400
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 3.0,
+  "seconde": 4.0,
   "reseau": "capifrance",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 4.5,
+  "seconde": 5.4,
   "reseau": "capifrance",
   "n": 0,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 5.0,
+  "seconde": 6.1,
   "reseau": "capifrance",
   "notees": 0
  },
  {
   "etape": "tentative_notee",
-  "seconde": 5.0,
+  "seconde": 6.1,
   "reseau": "capifrance",
   "departements": 0
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 5.5,
+  "seconde": 6.8,
   "reseau": "capifrance",
-  "connues": 19785,
-  "ecartees": 2374
+  "connues": 19937,
+  "ecartees": 2417
  },
  {
   "etape": "reseau_debut",
-  "seconde": 5.5,
+  "seconde": 6.8,
   "reseau": "iad",
   "part_secondes": 598
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 5.7,
+  "seconde": 7.3,
   "reseau": "iad",
   "n": 1
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 19.4,
+  "seconde": 27.9,
   "reseau": "iad",
-  "n": 111913,
+  "n": 112422,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 20.8,
+  "seconde": 30.1,
   "reseau": "iad",
-  "notees": 39
+  "notees": 80
  },
  {
   "etape": "tentative_notee",
-  "seconde": 22.3,
+  "seconde": 32.7,
   "reseau": "iad",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 22.8,
+  "seconde": 33.3,
   "reseau": "iad",
-  "connues": 19785,
-  "ecartees": 2374
+  "connues": 19937,
+  "ecartees": 2417
  },
  {
   "etape": "departement",
-  "seconde": 148.7,
+  "seconde": 245.7,
   "reseau": "iad",
-  "departement": "58",
+  "departement": "76",
   "visitees": 50,
-  "gardes": 30,
+  "gardes": 36,
   "tronquee": true,
   "etats": {
-   "garde": 30,
-   "vendu": 18,
-   "ecarte": 2,
-   "illisible": 0
-  },
-  "motifs": {
-   "url_type_exclu": 1,
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "url_type_exclu": "Immeuble de 266 m² à CHATEAU CHINON (VILLE) (58120)",
-   "hors_perimetre": "Maison de village 5 pièces de 90 m² à Saint-Sulpice (46160)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 279.7,
-  "reseau": "iad",
-  "departement": "72",
-  "visitees": 50,
-  "gardes": 38,
-  "tronquee": true,
-  "etats": {
-   "garde": 38,
+   "garde": 36,
    "vendu": 11,
-   "ecarte": 1,
-   "illisible": 0
-  },
-  "motifs": {
-   "hors_perimetre": 1
-  },
-  "exemples": {
-   "hors_perimetre": "110 500 biens immobiliers à vendre"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 427.3,
-  "reseau": "iad",
-  "departement": "88",
-  "visitees": 50,
-  "gardes": 43,
-  "tronquee": true,
-  "etats": {
-   "garde": 43,
-   "vendu": 4,
    "ecarte": 3,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison traditionnelle 3 pièces de 80 m² à Les Forges (79340)"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 594.0,
-  "reseau": "iad",
-  "departement": "36",
-  "visitees": 50,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 1,
-   "ecarte": 8,
-   "illisible": 0
-  },
-  "motifs": {
    "location": 1,
-   "hors_perimetre": 7
+   "hors_perimetre": 2
   },
   "exemples": {
-   "location": "Maison 6 pièces de 140 m² à Rivarennes (37190)",
-   "hors_perimetre": "Maison 2 pièces de 34 m² à Ruffec (16700)"
+   "location": "Maison de ville 3 pièces de 60 m² à Sotteville-lès-Rouen (76300)",
+   "hors_perimetre": "Maison de campagne 14 pièces de 290 m² à Guerville (78930)"
   }
  },
  {
   "etape": "departement",
-  "seconde": 611.5,
+  "seconde": 429.5,
   "reseau": "iad",
-  "departement": "37",
-  "visitees": 3,
-  "gardes": 3,
+  "departement": "89",
+  "visitees": 50,
+  "gardes": 44,
   "tronquee": true,
   "etats": {
-   "garde": 3,
-   "vendu": 0,
+   "garde": 44,
+   "vendu": 6,
    "ecarte": 0,
    "illisible": 0
   },
@@ -203,118 +138,141 @@
   "exemples": {}
  },
  {
+  "etape": "departement",
+  "seconde": 607.8,
+  "reseau": "iad",
+  "departement": "02",
+  "visitees": 46,
+  "gardes": 41,
+  "tronquee": true,
+  "etats": {
+   "garde": 41,
+   "vendu": 3,
+   "ecarte": 2,
+   "illisible": 0
+  },
+  "motifs": {
+   "location": 1,
+   "hors_perimetre": 1
+  },
+  "exemples": {
+   "location": "Maison 4 pièces de 96 m² à ROZOY-BELLEVALLE (02540)",
+   "hors_perimetre": "Maison de village 4 pièces de 130 m² à Saint-Michel (31220)"
+  }
+ },
+ {
   "etape": "reseau_debut",
-  "seconde": 611.5,
+  "seconde": 607.9,
   "reseau": "safti",
-  "part_secondes": 590
+  "part_secondes": 594
  },
  {
   "etape": "sitemaps_declares",
-  "seconde": 612.0,
+  "seconde": 608.6,
   "reseau": "safti",
   "n": 15
  },
  {
   "etape": "adresses_du_sitemap",
-  "seconde": 612.9,
+  "seconde": 610.6,
   "reseau": "safti",
-  "n": 29071,
+  "n": 29030,
   "complet": true
  },
  {
   "etape": "absentes_du_sitemap",
-  "seconde": 613.7,
+  "seconde": 611.7,
   "reseau": "safti",
-  "notees": 43
+  "notees": 98
  },
  {
   "etape": "tentative_notee",
-  "seconde": 614.1,
+  "seconde": 612.5,
   "reseau": "safti",
   "departements": 33
  },
  {
   "etape": "catalogue_relu",
-  "seconde": 614.6,
+  "seconde": 613.2,
   "reseau": "safti",
-  "connues": 19809,
-  "ecartees": 2402
+  "connues": 19913,
+  "ecartees": 2397
  },
  {
   "etape": "departement",
-  "seconde": 811.9,
+  "seconde": 807.4,
   "reseau": "safti",
-  "departement": "89",
+  "departement": "61",
   "visitees": 50,
-  "gardes": 45,
+  "gardes": 40,
   "tronquee": true,
   "etats": {
-   "garde": 45,
-   "vendu": 2,
-   "ecarte": 3,
+   "garde": 40,
+   "vendu": 4,
+   "ecarte": 6,
    "illisible": 0
   },
   "motifs": {
-   "hors_perimetre": 3
-  },
-  "exemples": {
-   "hors_perimetre": "Maison à vendre à Les Ormes de 178m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 980.4,
-  "reseau": "safti",
-  "departement": "14",
-  "visitees": 50,
-  "gardes": 46,
-  "tronquee": true,
-  "etats": {
-   "garde": 46,
-   "vendu": 1,
-   "ecarte": 3,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 3
-  },
-  "exemples": {
-   "prix_trop_haut": "Maison à vendre à HOULGATE de 158m²"
-  }
- },
- {
-  "etape": "departement",
-  "seconde": 1130.0,
-  "reseau": "safti",
-  "departement": "18",
-  "visitees": 50,
-  "gardes": 41,
-  "tronquee": true,
-  "etats": {
-   "garde": 41,
-   "vendu": 0,
-   "ecarte": 9,
-   "illisible": 0
-  },
-  "motifs": {
-   "prix_trop_haut": 4,
+   "prix_trop_haut": 1,
    "hors_perimetre": 5
   },
   "exemples": {
-   "prix_trop_haut": "Maison à vendre à SAINT-DOULCHARD de 420m²",
-   "hors_perimetre": "Maison à vendre à ACHERES de 123m²"
+   "prix_trop_haut": "Maison à vendre à BAGNOLES DE L'ORNE NORMANDIE de 790m²",
+   "hors_perimetre": "Maison à vendre à AUBUSSON de 95m²"
   }
  },
  {
   "etape": "departement",
-  "seconde": 1204.1,
+  "seconde": 1005.6,
   "reseau": "safti",
-  "departement": "53",
-  "visitees": 23,
-  "gardes": 23,
+  "departement": "62",
+  "visitees": 50,
+  "gardes": 49,
   "tronquee": true,
   "etats": {
-   "garde": 23,
+   "garde": 49,
+   "vendu": 0,
+   "ecarte": 1,
+   "illisible": 0
+  },
+  "motifs": {
+   "prix_trop_haut": 1
+  },
+  "exemples": {
+   "prix_trop_haut": "Maison à vendre à ECURIE de 212m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1199.7,
+  "reseau": "safti",
+  "departement": "70",
+  "visitees": 50,
+  "gardes": 43,
+  "tronquee": true,
+  "etats": {
+   "garde": 43,
+   "vendu": 1,
+   "ecarte": 5,
+   "illisible": 1
+  },
+  "motifs": {
+   "hors_perimetre": 5
+  },
+  "exemples": {
+   "hors_perimetre": "Maison à vendre à La Rochelle de 110m²"
+  }
+ },
+ {
+  "etape": "departement",
+  "seconde": 1203.1,
+  "reseau": "safti",
+  "departement": "21",
+  "visitees": 1,
+  "gardes": 1,
+  "tronquee": true,
+  "etats": {
+   "garde": 1,
    "vendu": 0,
    "ecarte": 0,
    "illisible": 0
@@ -324,7 +282,7 @@
  },
  {
   "etape": "fin",
-  "seconde": 1204.1,
-  "gardes": 310
+  "seconde": 1203.1,
+  "gardes": 254
  }
 ]
