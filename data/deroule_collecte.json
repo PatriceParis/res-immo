@@ -1,116 +1,68 @@
 {
- "minutes": 28.0,
+ "minutes": 28.1,
  "agences": [
   {
-   "agence": "Century 21",
-   "secondes": 44,
-   "pages": 10,
+   "agence": "Loft & House",
+   "secondes": 30,
+   "pages": 9,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
+   "ecartes": 0,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 64,
-   "sitemap": "ok 64",
-   "deja_ecartees": 13,
-   "motifs": {
-    "titre_hors_cible:appartement": 2
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-bertin-caen.com/trouver_logement/detail/17107781802/",
-     "titre": "Appartement F4 à vendre - 4 pièces - 85.06 m2 - IFS - 14 - BASSE-NORMANDIE - Century 21 Bertin Immobilier"
-    }
+   "adresses_ecartees": 45,
+   "sitemap_dates": 50,
+   "sitemap": "ok 50",
+   "illisible_exemple": {
+    "url": "https://www.lofthouseimmo.fr/bien-immobilier/maison-6-pieces-122-m2-bretteville-l-orgueilleuse-61708454/",
+    "cause": "aucune annonce lue",
+    "titre": "Maison de 6&nbsp;pièces de 122&nbsp;m² à BRETTEVILLE L ORGUEILLEUSE - Loft&nbsp;&amp;&nbsp;House",
+    "octets": 124950
    }
   },
   {
-   "agence": "Century 21",
-   "secondes": 43,
-   "pages": 9,
-   "gardes": 8,
+   "agence": "Logehome",
+   "secondes": 4,
+   "pages": 1,
+   "gardes": 0,
    "vendus": 0,
    "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 95,
-   "sitemap": "ok 95",
+   "sitemap_dates": 2,
+   "sitemap": "ok 2",
+   "deja_ecartees": 1,
    "motifs": {
-    "titre_hors_cible:annonces": 1
+    "ni_surface_ni_prix_credible": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:annonces": {
-     "url": "https://www.century21agencedeleurope.com/trouver_logement/detail/15395544226/",
-     "titre": "Achat de maison à Le magny – C21 – Consultez nos annonces de ventes de maison à Le magny"
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.logehome.fr/vendre-mon-bien",
+     "titre": "Vendre mon bien, le HOMEPACK de logéhome"
     }
    }
   },
   {
-   "agence": "Century 21",
-   "secondes": 66,
-   "pages": 20,
+   "agence": "Logia",
+   "secondes": 54,
+   "pages": 8,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 12,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 6,
-   "sitemap_dates": 224,
-   "sitemap": "ok 225",
-   "deja_ecartees": 61,
-   "motifs": {
-    "titre_hors_cible:appartement": 11,
-    "titre_hors_cible:parking": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/15866942533/",
-     "titre": "Appartement F1 à louer - 1 pièce - 28.12 m2 - NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
-    },
-    "titre_hors_cible:parking": {
-     "url": "https://www.century21-joelpierre-nancy.com/trouver_logement/detail/16595468947/",
-     "titre": "parking à louer - 12.0 m2 - NANCY - 54 - LORRAINE - Century 21 Joël Pierre Immobilier"
-    }
-   }
+   "sitemap_statut": 202,
+   "sitemap": "HTTP 202",
+   "index_statut": 202,
+   "index_titre": "Loading https://www.les-agents.com/"
   },
   {
-   "agence": "Century 21",
-   "secondes": 62,
-   "pages": 20,
-   "gardes": 8,
-   "vendus": 1,
-   "ecartes": 11,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 87,
-   "sitemap": "ok 88",
-   "deja_ecartees": 39,
-   "motifs": {
-    "titre_hors_cible:parking": 3,
-    "titre_hors_cible:appartement": 8
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:parking": {
-     "url": "https://www.century21-po-st-max.com/trouver_logement/detail/17168091144/",
-     "titre": "parking à louer - 15.0 m2 - ST MAX - 54 - LORRAINE - Century 21 Les Portes D"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-po-st-max.com/trouver_logement/detail/17167818556/",
-     "titre": "Appartement Duplex à louer - 2 pièces - 36.0 m2 - NANCY - 54 - LORRAINE - Century 21 Les Portes D"
-    }
-   }
-  },
-  {
-   "agence": "Century 21",
+   "agence": "Logimmo Conseil",
    "secondes": 38,
    "pages": 8,
    "gardes": 8,
@@ -120,329 +72,280 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
+   "adresses_ecartees": 112,
+   "sitemap_dates": 48,
+   "sitemap": "ok 48",
    "deja_ecartees": 4
   },
   {
-   "agence": "Century 21",
-   "secondes": 38,
-   "pages": 8,
-   "gardes": 8,
+   "agence": "Square Habitat",
+   "secondes": 18,
+   "pages": 3,
+   "gardes": 2,
    "vendus": 0,
    "ecartes": 0,
-   "illisibles": 0,
+   "illisibles": 1,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "sitemap_dates": 21,
-   "sitemap": "ok 21",
-   "deja_ecartees": 11
-  },
-  {
-   "agence": "Century 21",
-   "secondes": 39,
-   "pages": 9,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 39,
-   "sitemap": "ok 40",
-   "deja_ecartees": 9,
-   "motifs": {
-    "titre_hors_cible:terrain": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:terrain": {
-     "url": "https://www.century21estagence.com/trouver_logement/detail/17154386631/",
-     "titre": "terrain à vendre - 1015.0 m2 - SAULX - 70 - FRANCHE-COMTE - Century 21 Est Agence"
-    }
+   "adresses_ecartees": 1,
+   "sitemap_dates": 3,
+   "sitemap": "ok 3",
+   "illisible_exemple": {
+    "url": "https://www.squarehabitat.fr/prix-immobilier/hauts-de-france/somme/maison-ponthieu-80150",
+    "cause": "aucune annonce lue",
+    "titre": "Prix m2 immobilier Maison-Ponthieu (80150) en octobre 2026",
+    "octets": 717466
    }
   },
   {
-   "agence": "Century 21",
-   "secondes": 38,
-   "pages": 9,
-   "gardes": 8,
+   "agence": "Stradim",
+   "secondes": 91,
+   "pages": 8,
+   "gardes": 2,
    "vendus": 0,
    "ecartes": 1,
-   "illisibles": 0,
+   "illisibles": 5,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 2,
-   "sitemap_dates": 31,
-   "sitemap": "ok 31",
-   "deja_ecartees": 6,
+   "adresses_ecartees": 1,
+   "sitemap_dates": 9,
+   "sitemap": "ok 9",
+   "deja_ecartees": 1,
    "motifs": {
-    "titre_hors_cible:appartement": 1
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
-    "titre_hors_cible:appartement": {
-     "url": "https://www.century21-guyon-epinal.com/trouver_logement/detail/17160702213/",
-     "titre": "Appartement Studio à vendre - 1 pièce - 32.0 m2 - EPINAL - 88 - LORRAINE - Century 21 Guyon Immobilier"
+    "prix_trop_haut": {
+     "url": "http://www.stradim.fr/transactions/troyes-hors-agglomeration/maison-t7-990-000eu-fai",
+     "titre": "Maison T7 - 990 000€ FAI"
     }
+   },
+   "illisible_exemple": {
+    "url": "http://www.stradim.fr/vendre-mon-terrain/estimer-son-terrain",
+    "cause": "aucune annonce lue",
+    "titre": "Estimer son terrain | Stradim",
+    "octets": 32988
    }
   },
   {
-   "agence": "Champanelle Immobilier",
-   "secondes": 34,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 19,
-   "sitemap": "ok 19",
-   "deja_ecartees": 3
-  },
-  {
-   "agence": "Château-Thierry Immobilier",
+   "agence": "Thierry Langlois Immobilier",
    "secondes": 0,
+   "pages": 0,
+   "gardes": 0,
+   "fin": "robots.txt interdit",
+   "robots": "interdit"
+  },
+  {
+   "agence": "Thillard & Duhamel",
+   "secondes": 46,
+   "pages": 23,
+   "gardes": 0,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 23,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 77,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "illisible_exemple": {
+    "url": "https://www.thillard-duhamel.com/vendre-ou-louer-mon-bien-1",
+    "cause": "aucune annonce lue",
+    "titre": "Vendre ou louer mon bien",
+    "octets": 15877
+   }
+  },
+  {
+   "agence": "Timer Immobilier",
+   "secondes": 6,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
-   "robots": "illisible",
-   "sitemap": "injoignable (ConnectionError)",
-   "index_statut": "Error"
+   "robots": "ok",
+   "sitemap_statut": 503,
+   "sitemap": "HTTP 503",
+   "index_statut": 503,
+   "index_titre": "Timer Immobilier - Maintenance"
   },
   {
-   "agence": "Clic house",
-   "secondes": 39,
+   "agence": "Topaze immobilier",
+   "secondes": 69,
    "pages": 9,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 1,
+   "vendus": 1,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 44,
-   "sitemap_dates": 58,
-   "sitemap": "ok 58",
-   "deja_ecartees": 4,
-   "motifs": {
-    "titre_hors_cible:maison neuve": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:maison neuve": {
-     "url": "https://www.clichouse.fr/vente/14-calvados/7-blainville-sur-orne/a-vendre-exclusivite-chez-clic-house-maison-neuve-a-blainville-sur-orne-de-123-m2-4-chambres/6853-maison",
-     "titre": "A VENDRE - EXCLUSIVITE CHEZ CLIC HOUSE ! Maison Neuve à BLAINVILLE-SUR-ORNE de 123 m2 - 4 Chambres"
-    }
+   "adresses_ecartees": 67,
+   "sitemap": "ok 70",
+   "deja_ecartees": 24
+  },
+  {
+   "agence": "Toul’immo",
+   "secondes": 38,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 33,
+   "sitemap_dates": 63,
+   "sitemap": "ok 63"
+  },
+  {
+   "agence": "Toutabitat",
+   "secondes": 36,
+   "pages": 6,
+   "gardes": 0,
+   "vendus": 5,
+   "ecartes": 0,
+   "illisibles": 1,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap": "ok 94",
+   "deja_ecartees": 88,
+   "illisible_exemple": {
+    "url": "https://www.toutabitat.com/immobiliers/ardennes/maison-type-4-hyper-centre-charleville-4340",
+    "cause": "aucune annonce lue",
+    "titre": "MAISON TYPE 4 HYPER CENTRE CHARLEVILLE | Toutabitat",
+    "octets": 295223
    }
   },
   {
-   "agence": "Concept Immo 54",
-   "secondes": 40,
-   "pages": 8,
-   "gardes": 6,
+   "agence": "Transacom",
+   "secondes": 77,
+   "pages": 45,
+   "gardes": 0,
    "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 45,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 27,
+   "sitemap": "ok 78",
+   "deja_ecartees": 26,
+   "illisible_exemple": {
+    "url": "http://www.transacom.com/biens/pdf/1045",
+    "cause": "aucune annonce lue",
+    "titre": "",
+    "octets": 1230
+   }
+  },
+  {
+   "agence": "Triplex",
+   "secondes": 47,
+   "pages": 13,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 5,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 75,
+   "sitemap_dates": 182,
+   "sitemap": "ok 182",
+   "deja_ecartees": 6,
+   "illisible_exemple": {
+    "url": "https://tripleximmobilier.fr/property/t2-a-renover-quartier-oberlin/",
+    "cause": "aucune annonce lue",
+    "titre": "Page Not Found - Triplex immobilier",
+    "octets": 111921
+   }
+  },
+  {
+   "agence": "Trybe Immobilier",
+   "secondes": 76,
+   "pages": 45,
+   "gardes": 0,
+   "vendus": 43,
    "ecartes": 0,
    "illisibles": 2,
    "fin": "terminée",
    "robots": "ok",
-   "sitemap_statut": 500,
-   "sitemap": "HTTP 500",
-   "index_statut": 200,
-   "index_titre": "Agence immobilière à Toul et Saizerais | Concept Immo 54",
-   "deja_ecartees": 2,
+   "sitemap_statut": 200,
+   "sitemap_dates": 738,
+   "sitemap": "ok 738",
+   "deja_ecartees": 298,
    "illisible_exemple": {
-    "url": "https://concept-immo54.fr/biens-loues/1",
+    "url": "https://www.trybe.immo/biens/amiyft7992",
     "cause": "aucune annonce lue",
-    "titre": "Biens immobiliers déjà loués | Concept Immo 54",
-    "octets": 578110
+    "titre": "99 Rue Pierre Corneille, 76300 Sotteville-lès-Rouen",
+    "octets": 109732
    }
   },
   {
-   "agence": "Concordis",
-   "secondes": 71,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
+   "agence": "Ulyssimmo",
+   "secondes": 243,
+   "pages": 40,
+   "gardes": 0,
+   "vendus": 40,
    "ecartes": 0,
    "illisibles": 0,
-   "fin": "terminée",
+   "fin": "temps de l'agence épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 106,
-   "sitemap": "ok 92",
-   "deja_ecartees": 2
+   "adresses_ecartees": 33,
+   "sitemap": "ok 332",
+   "deja_ecartees": 146
   },
   {
-   "agence": "Delafosse & Associée",
-   "secondes": 49,
-   "pages": 11,
-   "gardes": 8,
-   "vendus": 1,
+   "agence": "VAI LPI",
+   "secondes": 12,
+   "pages": 3,
+   "gardes": 1,
+   "vendus": 0,
    "ecartes": 2,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 168,
-   "sitemap_dates": 431,
-   "sitemap": "ok 431",
-   "deja_ecartees": 4,
+   "adresses_ecartees": 48,
+   "sitemap_dates": 10,
+   "sitemap": "ok 10",
+   "deja_ecartees": 7,
    "motifs": {
     "prix_trop_haut": 2
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://delafosse.immo/annonces/demeure-de-caractere-avec-jardin/",
-     "titre": "DEMEURE DE CARACTÈRE AVEC JARDIN - Delafosse & Associée"
+     "url": "https://www.lorrainepierresimmobilier.fr/vente/1-nancy/maison/t9/286-casa-felice/",
+     "titre": "Maison 9pièce(s) 6chambre(s) 250,02 m² Nancy (54000)"
     }
    }
   },
   {
-   "agence": "Delaitre immobilier",
-   "secondes": 157,
-   "pages": 12,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 4,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 12,
-   "sitemap_dates": 347,
-   "sitemap": "ok 348",
-   "deja_ecartees": 32,
-   "motifs": {
-    "prix_trop_haut": 1,
-    "ni_surface_ni_prix_credible": 1,
-    "titre_hors_cible:appartement": 2
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.delaitreimmobilier.fr/biens/402/bien-exceptionnel-sur-site-exceptionnel-maison-ancienne-renovee-avec-vue-incroyable",
-     "titre": "Bien exceptionnel sur site exceptionnel, maison ancienne rénovée avec vue incroyable , stationnements, jardin"
-    },
-    "ni_surface_ni_prix_credible": {
-     "url": "https://www.delaitreimmobilier.fr/biens/427/mont-saint-aignan-maison-de-qualite-calme-lumineuse-de-170-m2",
-     "titre": "mont Saint Aignan Maison de qualité calme, lumineuse de 170 m2"
-    },
-    "titre_hors_cible:appartement": {
-     "url": "https://www.delaitreimmobilier.fr/biens/398/mont-saint-aignan-appartement-terrasse-sud-vue-incroyable",
-     "titre": "Mont Saint Aignan appartement terrasse sud vue incroyable ."
-    }
-   }
-  },
-  {
-   "agence": "Deletan Immobilier",
-   "secondes": 52,
-   "pages": 18,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 9,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 34",
-   "adresses_ecartees": 2,
-   "sitemap_dates": 34,
-   "deja_ecartees": 1,
-   "motifs": {
-    "prix_trop_haut": 9
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://deletang-immobilier.com/nos-biens/contemporaine-de-plain-pied-d-rsquo-architecte-parc-1-hectare-7-120",
-     "titre": "Deletang Immobilier : des demeures d"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://deletang-immobilier.com/nos-biens/hyper-centre-tours-appartement-t2-de-charme-129",
-    "cause": "aucune annonce lue",
-    "titre": "Deletang Immobilier : des demeures d'exception",
-    "octets": 72431
-   }
-  },
-  {
-   "agence": "Demeures du Perche et de Normandie",
-   "secondes": 67,
+   "agence": "VIP Immobilier",
+   "secondes": 51,
    "pages": 10,
-   "gardes": 2,
-   "vendus": 0,
-   "ecartes": 5,
-   "illisibles": 3,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap_dates": 30,
-   "sitemap": "ok 30",
-   "deja_ecartees": 20,
-   "motifs": {
-    "prix_trop_haut": 5
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://demeures-perche-normandie.fr/demeures/propriete-a-vendre-mortagne-au-perche/",
-     "titre": "Propriété familiale à vendre Mortagne-au-Perche"
-    }
-   },
-   "illisible_exemple": {
-    "url": "https://demeures-perche-normandie.fr/le-perche/maison-de-campagne/",
-    "cause": "navigation : Error",
-    "titre": "",
-    "octets": 0
-   }
-  },
-  {
-   "agence": "Demonchy",
-   "secondes": 72,
-   "pages": 9,
    "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 28,
-   "sitemap": "ok 68",
-   "deja_ecartees": 24,
-   "illisible_exemple": {
-    "url": "https://www.agence-demonchy.fr/nos-biens-vendus/",
-    "cause": "aucune annonce lue",
-    "titre": "appartements, maisons, terrains vendu à Aumale,Poix de Picardie | %site_title%",
-    "octets": 155154
-   }
-  },
-  {
-   "agence": "Dorimmo",
-   "secondes": 38,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
+   "vendus": 2,
    "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 10,
-   "sitemap_dates": 209,
-   "sitemap": "ok 209",
-   "deja_ecartees": 2
+   "adresses_ecartees": 98,
+   "sitemap_dates": 210,
+   "sitemap": "ok 210",
+   "deja_ecartees": 43
   },
   {
-   "agence": "Du Côté de Chez Vous",
-   "secondes": 42,
+   "agence": "VIP Immobilier",
+   "secondes": 71,
    "pages": 9,
    "gardes": 8,
    "vendus": 0,
@@ -451,158 +354,100 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 173,
-   "sitemap_dates": 333,
-   "sitemap": "ok 333",
-   "deja_ecartees": 6,
+   "adresses_ecartees": 81,
+   "sitemap": "ok 115",
+   "deja_ecartees": 18,
    "motifs": {
-    "titre_hors_cible:parking": 1
-   },
-   "ecartes_exemples": {
-    "titre_hors_cible:parking": {
-     "url": "https://www.ducotedechezvous-immo.com/vente/10-aube/10-troyes/1-maison/t3/2237-maison-2-chambres-avec-cour-et-parking-a-troyes/",
-     "titre": "Maison 2 chambres avec cour et parking à Troyes"
-    }
-   }
-  },
-  {
-   "agence": "E&B Immo",
-   "secondes": 35,
-   "pages": 8,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 103,
-   "sitemap_dates": 62,
-   "sitemap": "ok 62"
-  },
-  {
-   "agence": "Echinard",
-   "secondes": 7,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 404,
-   "sitemap": "HTTP 404",
-   "index_statut": 429,
-   "index_titre": ""
-  },
-  {
-   "agence": "Eco Immo 60",
-   "secondes": 28,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 19,
-   "sitemap_dates": 25,
-   "sitemap": "ok 25",
-   "deja_ecartees": 3
-  },
-  {
-   "agence": "Ernoult Immobilier",
-   "secondes": 42,
-   "pages": 5,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 1,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 18,
-   "sitemap": "ok 60",
-   "deja_ecartees": 55,
-   "illisible_exemple": {
-    "url": "https://www.ernoult-immobilier.fr/vente/,VM382",
-    "cause": "aucune annonce lue",
-    "titre": "FREDERIQUE ERNOULT IMMOBILIER",
-    "octets": 855923
-   }
-  },
-  {
-   "agence": "Espace Pro",
-   "secondes": 54,
-   "pages": 10,
-   "gardes": 8,
-   "vendus": 0,
-   "ecartes": 2,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 96,
-   "sitemap_dates": 194,
-   "sitemap": "ok 194",
-   "deja_ecartees": 15,
-   "motifs": {
-    "prix_trop_haut": 1,
-    "titre_hors_cible:viager": 1
+    "prix_trop_haut": 1
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.espacepro-immobilier.fr/propriete/maison-a-vendre-beaumont-en-auge/",
-     "titre": "Maison à vendre Beaumont-en-Auge"
-    },
-    "titre_hors_cible:viager": {
-     "url": "https://www.espacepro-immobilier.fr/propriete/maison-en-viager/",
-     "titre": "Maison en viager"
+     "url": "https://www.vipimmobilier.fr/vente/maison-villa-14-pieces-lambersart-59130,VM388",
+     "titre": "MAISON BOURGEOISE DE 224 M2 HAB 290 M2 UTILES + ATELIER 210 M2 soit 500 m2 construit"
     }
    }
   },
   {
-   "agence": "Espaces Atypiques",
-   "secondes": 61,
-   "pages": 11,
-   "gardes": 4,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 7,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 9,
-   "sitemap_dates": 31,
-   "sitemap": "ok 30",
-   "deja_ecartees": 19,
-   "illisible_exemple": {
-    "url": "https://www.espaces-atypiques.com/architecture-et-inspiration/maison-atypique-cap-ferret-renovation/",
-    "cause": "aucune annonce lue",
-    "titre": "Visite d'une maison atypique rénovée au Cap Ferret par un architecte",
-    "octets": 170806
-   }
-  },
-  {
-   "agence": "Estime",
-   "secondes": 36,
-   "pages": 8,
+   "agence": "Vacherand Immobilier - Vauban / Nationale",
+   "secondes": 34,
+   "pages": 9,
    "gardes": 8,
    "vendus": 0,
-   "ecartes": 0,
+   "ecartes": 1,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 129,
-   "sitemap_dates": 60,
-   "sitemap": "ok 60",
-   "deja_ecartees": 2
+   "adresses_ecartees": 214,
+   "sitemap": "ok 224",
+   "deja_ecartees": 18,
+   "motifs": {
+    "titre_hors_cible:local commercial": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:local commercial": {
+     "url": "https://www.vacherand.fr/immobilier/vente-locaux-commerciaux-lille/ref-AB878056-VACHERAND",
+     "titre": "Vente Immeuble mixte à vendre – Local commercial de 450 m² et deux - Annonce immobilière AB878056-VACHERAND"
+    }
+   }
   },
   {
-   "agence": "Flix'immo",
-   "secondes": 6,
+   "agence": "Valoire Habîtat",
+   "secondes": 41,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 62,
+   "sitemap": "ok 62",
+   "deja_ecartees": 27,
+   "motifs": {
+    "titre_hors_cible:maison neuve": 1
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:maison neuve": {
+     "url": "https://www.valloire-habitat.com/programme_neuf_grp/maison-neuve-t3-t4-saint-jean-de-la-ruelle-ds-169-000/",
+     "titre": "Maison neuve T3/T4 – Saint-Jean-de-la-Ruelle – dès 169 000 € - Valloire Habitat"
+    }
+   }
+  },
+  {
+   "agence": "Versus Immobilier",
+   "secondes": 94,
+   "pages": 45,
+   "gardes": 1,
+   "vendus": 40,
+   "ecartes": 4,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 56,
+   "sitemap_dates": 55,
+   "sitemap": "ok 55",
+   "deja_ecartees": 8,
+   "motifs": {
+    "titre_hors_cible:vente de maisons": 1,
+    "prix_trop_haut": 3
+   },
+   "ecartes_exemples": {
+    "titre_hors_cible:vente de maisons": {
+     "url": "https://www.versus-immobilier.com/vente/maison/1",
+     "titre": "Vente de maisons | Versus Immobilier"
+    },
+    "prix_trop_haut": {
+     "url": "https://www.versus-immobilier.com/vente/196-chaligny/maison/14064-a-vendre-maison-avec-jardin-garage-et-dependance-a-chaligny",
+     "titre": "À vendre – Maison avec jardin, garage et dépendance à Chaligny"
+    }
+   }
+  },
+  {
+   "agence": "Vivest",
+   "secondes": 12,
    "pages": 1,
    "gardes": 0,
    "vendus": 0,
@@ -614,40 +459,52 @@
    "sitemap_dates": 1,
    "sitemap": "ok 1",
    "illisible_exemple": {
-    "url": "https://www.flix-immo.fr/fr/annonces-immobilieres",
+    "url": "https://vivest.fr/devenir-proprietaire/vente-programmes-a-venir/",
     "cause": "aucune annonce lue",
-    "titre": "Annonces immobilières Flixecourt – Flix’Immo",
-    "octets": 69523
+    "titre": "Nos programmes en vente à venir - Vivest",
+    "octets": 666798
    }
   },
   {
-   "agence": "Flo Immobilier",
-   "secondes": 44,
-   "pages": 12,
-   "gardes": 8,
+   "agence": "action immo",
+   "secondes": 8,
+   "pages": 0,
+   "gardes": 0,
    "vendus": 0,
-   "ecartes": 4,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 115,
-   "sitemap_dates": 32,
-   "sitemap": "ok 32",
+   "sitemap": "aucune page de bien",
+   "index_statut": 200,
+   "index_titre": "Agences immobilières ACTION IMMOBILIER - Transactions immobi"
+  },
+  {
+   "agence": "ilm Immobilier",
+   "secondes": 10,
+   "pages": 4,
+   "gardes": 0,
+   "vendus": 2,
+   "ecartes": 0,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 5,
+   "sitemap_dates": 24,
+   "sitemap": "ok 24",
    "deja_ecartees": 20,
-   "motifs": {
-    "prix_trop_haut": 4
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://flo-immobilier.fr/vente/14-calvados/13-bieville-beuville/maison-a-vendre-bieville-beuville/623-maison",
-     "titre": "Maison à vendre Biéville-Beuville"
-    }
+   "illisible_exemple": {
+    "url": "https://www.ilm-immobilier.com/vente-maison-appartement-auxerre/ref-nv43-1784/vente-maison-29-pieces-23-chambres-soucy-89100/",
+    "cause": "aucune annonce lue",
+    "titre": "Vente Maison Soucy 89100 GARE &amp; SORTIE A5 — ILM Immoblier",
+    "octets": 66897
    }
   },
   {
-   "agence": "Foch immobilier",
-   "secondes": 31,
+   "agence": "Coup de Coeur Immo",
+   "secondes": 34,
    "pages": 8,
    "gardes": 8,
    "vendus": 0,
@@ -656,13 +513,84 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 1,
-   "sitemap": "ok 50",
-   "deja_ecartees": 2
+   "adresses_ecartees": 17,
+   "sitemap_dates": 16,
+   "sitemap": "ok 16",
+   "deja_ecartees": 6
   },
   {
-   "agence": "France Pro Immobilier",
-   "secondes": 1,
+   "agence": "Cv Immobilier",
+   "secondes": 40,
+   "pages": 11,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 2,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 15,
+   "sitemap_dates": 46,
+   "sitemap": "ok 46",
+   "deja_ecartees": 1,
+   "illisible_exemple": {
+    "url": "https://www.cvimmobilier.fr/biens-vendus/1",
+    "cause": "aucune annonce lue",
+    "titre": "0 biens vendus | CV Immobilier",
+    "octets": 187507
+   },
+   "motifs": {
+    "ni_surface_ni_prix_credible": 1
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.cvimmobilier.fr/nos-actualites/vendre-sa-maison-a-louviers-les-7-erreurs-de-renovation-qui-peuvent-vous-couter-cher.html",
+     "titre": "Selling your house in Louviers: 7 renovation mistakes that can cost you early"
+    }
+   }
+  },
+  {
+   "agence": "Cyril Thienpont Immobilier",
+   "secondes": 67,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 35,
+   "sitemap": "ok 104",
+   "deja_ecartees": 13
+  },
+  {
+   "agence": "Côté Ouest Immobilier",
+   "secondes": 77,
+   "pages": 10,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 2,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 74,
+   "sitemap": "ok 83",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 2
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.cote-ouest-immo.fr/vente/maison-7-pieces-saint-martin-du-manoir-76290,VM4952",
+     "titre": "SAINT MARTIN DU MANOIR"
+    }
+   }
+  },
+  {
+   "agence": "Damonte Immobilier",
+   "secondes": 8,
    "pages": 0,
    "gardes": 0,
    "vendus": 0,
@@ -671,45 +599,38 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 4,
-   "sitemap_dates": 2,
-   "sitemap": "ok 2",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Frère Immobilier",
-   "secondes": 6,
-   "pages": 2,
-   "gardes": 0,
-   "vendus": 2,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap_dates": 39,
-   "sitemap": "ok 52",
-   "deja_ecartees": 50
-  },
-  {
-   "agence": "Graupera Immobilier",
-   "secondes": 7,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 5,
-   "sitemap": "aucune page de bien",
+   "sitemap": "sans <loc>",
    "index_statut": 200,
-   "index_titre": "Immobilière Graupera"
+   "index_titre": "Agence immobilière à Troyes depuis 1965 | Groupe Damonte"
   },
   {
-   "agence": "Homeloop",
-   "secondes": 45,
+   "agence": "De Noray Immobilier",
+   "secondes": 41,
+   "pages": 9,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 1,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 38,
+   "sitemap_dates": 90,
+   "sitemap": "ok 90",
+   "deja_ecartees": 5,
+   "motifs": {
+    "prix_trop_haut": 1
+   },
+   "ecartes_exemples": {
+    "prix_trop_haut": {
+     "url": "https://www.denoray-immobilier.com/vente/1755-amboise/maison/t10/4989-propriete-avec-piscine-tennis-et-gites-sur-2-7-hectares/",
+     "titre": "propriété avec piscine , tennis et gites sur 2,7 hectares."
+    }
+   }
+  },
+  {
+   "agence": "Fontette Immobilier",
+   "secondes": 85,
    "pages": 11,
    "gardes": 8,
    "vendus": 0,
@@ -718,82 +639,72 @@
    "fin": "terminée",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 125,
-   "sitemap_dates": 84,
-   "sitemap": "ok 84",
-   "deja_ecartees": 3,
+   "adresses_ecartees": 44,
+   "sitemap": "ok 74",
+   "deja_ecartees": 6,
    "motifs": {
     "prix_trop_haut": 3
    },
    "ecartes_exemples": {
     "prix_trop_haut": {
-     "url": "https://www.homeloop.fr/fr/immobilier/vente/maison/messimy/propriete-de-caractere-de-1807-12-hectares-deux-habitations-messimy/123632",
-     "titre": "Propriété de caractère de 1807 – 12 hectares – Deux habitations – Messimy"
+     "url": "https://www.fontette-immobilier.fr/vente/maison-individuelle-8-pieces-caen-14000,VM296",
+     "titre": "Maison individuelle à vendre, 8 pièces - Caen 14000"
     }
    }
   },
   {
-   "agence": "Hoste Immobilier",
-   "secondes": 33,
-   "pages": 6,
-   "gardes": 6,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "adresses_ecartees": 11,
-   "sitemap_dates": 6,
-   "sitemap": "ok 8",
-   "deja_ecartees": 2
-  },
-  {
-   "agence": "Ideal",
-   "secondes": 3,
-   "pages": 0,
-   "gardes": 0,
-   "vendus": 0,
-   "ecartes": 0,
-   "illisibles": 0,
-   "fin": "terminée",
-   "robots": "ok",
-   "sitemap_statut": 200,
-   "sitemap": "ok 4",
-   "sitemap_dates": 4,
-   "deja_ecartees": 4
-  },
-  {
-   "agence": "Ifc Conseils",
-   "secondes": 0,
-   "pages": 0,
-   "gardes": 0,
-   "fin": "robots.txt interdit",
-   "robots": "interdit"
-  },
-  {
-   "agence": "Les nouvelles pépites",
-   "secondes": 209,
-   "pages": 32,
+   "agence": "France4U",
+   "secondes": 49,
+   "pages": 23,
    "gardes": 4,
-   "vendus": 25,
-   "ecartes": 3,
+   "vendus": 0,
+   "ecartes": 19,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "sitemap_dates": 23,
+   "sitemap": "ok 23",
+   "motifs": {
+    "ni_surface_ni_prix_credible": 19
+   },
+   "ecartes_exemples": {
+    "ni_surface_ni_prix_credible": {
+     "url": "https://www.france4u.eu/property-and-houses-for-sale-in-auvergne.html",
+     "titre": "property and houses for sale in Auvergne"
+    }
+   }
+  },
+  {
+   "agence": "GIN Immobilier",
+   "secondes": 35,
+   "pages": 8,
+   "gardes": 8,
+   "vendus": 0,
+   "ecartes": 0,
+   "illisibles": 0,
+   "fin": "terminée",
+   "robots": "ok",
+   "sitemap_statut": 200,
+   "adresses_ecartees": 117,
+   "sitemap_dates": 197,
+   "sitemap": "ok 197",
+   "deja_ecartees": 6
+  },
+  {
+   "agence": "GSM Immobilier",
+   "secondes": 42,
+   "pages": 5,
+   "gardes": 5,
+   "vendus": 0,
+   "ecartes": 0,
    "illisibles": 0,
    "fin": "budget global épuisé",
    "robots": "ok",
    "sitemap_statut": 200,
-   "adresses_ecartees": 87,
-   "sitemap": "ok 176",
-   "deja_ecartees": 80,
-   "motifs": {
-    "prix_trop_haut": 3
-   },
-   "ecartes_exemples": {
-    "prix_trop_haut": {
-     "url": "https://www.lesnouvellespepitesimmo.fr/vente/maison-individuelle-5-pieces-wasquehal-59290,VM1043",
-     "titre": "Maison individuelle 177 m² – 5 pièces – Jardin 1800 m² – Garages & stationnements privatifs – Wasquehal Boers"
-    }
-   }
+   "adresses_ecartees": 100,
+   "sitemap": "ok 253",
+   "deja_ecartees": 68
   }
  ]
 }
